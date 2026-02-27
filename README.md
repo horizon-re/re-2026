@@ -2,7 +2,6 @@
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/Python-3.8+-green.svg)](https://www.python.org/)
-[![Paper](https://img.shields.io/badge/Paper-RE%202026-orange.svg)](main.tex)
 
 This repository contains the complete research artifact for **"Towards Improving Sentence-Level Requirements Identification through Explicit Local Context Modeling"** submitted to IEEE RE 2026.
 
