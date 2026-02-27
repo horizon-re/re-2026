@@ -1,0 +1,110 @@
+run_name: v1_hybrid_rc_tagger
+seed: 42
+device: cuda_if_available
+
+paths:
+  train_jsonl: data/train/train.jsonl
+  dev_jsonl: data/dev/dev.jsonl
+  ctd_alias: data/ctd/alias_tag.json
+  domain_proto: data/proto/domains.json
+  subdomain_proto: data/proto/subdomains.json
+  out_dir: outputs/v1
+
+encoder:
+  name: sentence-transformers/all-MiniLM-L6-v2
+  pooling: mean
+  max_len: 512
+  normalize: true
+  cache: .cache/sentencetransformers
+
+features:
+  use_structure: true
+  use_vagueness: true
+  use_scope: true
+
+schema:
+  labels:
+    requirement_type: ["Industry Structured","Messy","One-Liner","Changes","Refactoring","New Feature","Single Feature","Short Messy","Phone Recording"]
+    scope: ["Short","Medium","Broad"]
+    priority: ["Low","Medium","High"]
+    kinds: ["Functional","Non-Functional","Human-Centric"]
+    domains: ["SaaS","FinTech","General"]
+  max_tags: 6
+  complexity_range: [0.0, 10.0]
+
+heads:
+  requirement_type:
+    model: logistic_ovr
+    C: 2.0
+    class_weight: balanced
+    calibrate: platt
+  structureness:
+    model: lgbm_reg
+    params:
+      n_estimators: 300
+      learning_rate: 0.05
+      num_leaves: 31
+      monotone_constraints: [1, 1, 1, -1]  # headings, bullet_density, para_count, para_len_var
+    calibrate: isotonic
+  vagueness:
+    model: elasticnet
+    params: { alpha: 0.0005, l1_ratio: 0.6 }
+    calibrate: isotonic
+  scope:
+    model: ordinal_logit  # Short < Medium < Broad
+    regularization: 1.0
+  domain_router:
+    model: prototypical
+    k: 5
+    distance: cosine
+    unknown_threshold: 0.35
+  subdomain_router:
+    model: prototypical
+    k: 5
+    distance: cosine
+    unknown_threshold: 0.35
+  kinds:
+    model: multilabel_logreg
+    C: 1.5
+  priority:
+    model: lgbm_cls
+    params:
+      n_estimators: 300
+      learning_rate: 0.05
+      num_leaves: 31
+      monotone_constraints_method: basic
+    calibrate: isotonic
+  complexity:
+    model: lgbm_reg
+    params:
+      n_estimators: 300
+      learning_rate: 0.05
+      num_leaves: 31
+    calibrate: isotonic
+  tagger:
+    model: multilabel_linear_probe
+    top_k: 10         # internal shortlist
+    max_emit: 6       # schema.max_tags
+    min_score: 0.35
+    rationale_spans: true
+
+thresholds:
+  auto_accept_priority_conf: 0.75
+  auto_accept_type_conf: 0.70
+  tag_precision_gate: 0.90
+  domain_unknown_delta: 0.10   # require margin to 2nd-best
+
+governance:
+  canonicalize_tags: true
+  drop_oov_tags: true
+  allow_alias_backfill: true
+
+summary:
+  method: extractive_mmr
+  top_sentences: 2
+  mmr_lambda: 0.7
+
+logging:
+  save_feature_tables: true
+  save_shap: true
+  save_explanations: true

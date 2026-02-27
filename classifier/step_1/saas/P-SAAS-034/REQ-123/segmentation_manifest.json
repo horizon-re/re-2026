@@ -1,0 +1,9 @@
+{
+  "req_id": "REQ-123",
+  "doc_id": "53006f51-c770-53b2-a826-c3298b2eb7bd",
+  "num_spacy": 6,
+  "num_stanza": 6,
+  "num_merged": 6,
+  "agreement_ok": true,
+  "timestamp": 1768691476.035851
+}

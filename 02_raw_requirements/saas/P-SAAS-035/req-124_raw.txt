@@ -1,0 +1,1 @@
+hey, urgent – gateway keeps crashing, payments failing esp for multi-tenant setups. need stability fix ASAP. pls do blue/green deploy w/ auto-failover in under 2 min. also add retry queue w/ idempotent keys so we don’t double-charge. on-call pager needs to get alert if queue spikes. ping back w/ status update in 1 hr max 🙏

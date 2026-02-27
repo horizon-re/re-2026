@@ -1,0 +1,127 @@
+{
+  "doc_id": "13ba7ebb-73e0-5fa7-90a8-30c92fb04b4c",
+  "req_key": "fintech::P-FT-035::REQ-044",
+  "req_id": "REQ-044",
+  "domain": "fintech",
+  "prompt_id": "P-FT-035",
+  "source": {
+    "raw_path": "02_raw_requirements/fintech/P-FT-035/req-044_raw.txt",
+    "refined_path": "03_refined_json_normalized/fintech/P-FT-035/req-044_refined.json",
+    "origin": "both"
+  },
+  "text": "The ACH retry engine must implement a structured retry mechanism for failed debit transactions, adhering to a maximum of three retry attempts per failure, utilizing exponential backoff beginning with a 4-hour delay. Retries must be disabled for any account marked with the risk_tier field set to \"high\". A dedicated retry window is enforced over weekends, specifically from Saturday 06:00 UTC to Sunday 22:00 UTC, during which retries may be scheduled and executed. For each failed retry attempt, the engine must POST a failure notification within two minutes to https://ops.webhook.company/retry_failed, ensuring the JSON payload includes the keys txnId, attempt, and reason. The ach_retry_weekend feature must be controlled via a feature flag, defaulting to OFF in production environments, and may only be enabled upon formal QA approval and sign-off to ensure stability and compliance with operational policies.",
+  "structured_data": [
+    {
+      "id": "REQ-044-HLJ-Chunk_1-Item_1-v1.0",
+      "domain": "fintech",
+      "summary": "Retry failed debits up to three times using exponential backoff",
+      "priority": "High",
+      "tags": [
+        "retry_mechanism",
+        "debit_transactions",
+        "exponential_backoff"
+      ],
+      "subdomain": "payments",
+      "difficulty": 3,
+      "additionalNotes": "Initial backoff delay must start at 4 hours",
+      "source_hlj_id": "REQ 001-001",
+      "domain_id": "P-FT-035"
+    },
+    {
+      "id": "REQ-044-HLJ-Chunk_1-Item_2-v1.0",
+      "domain": "fintech",
+      "summary": "Block retries for accounts with risk_tier set to 'high'",
+      "priority": "High",
+      "tags": [
+        "risk_management",
+        "retry_logic",
+        "account_filtering"
+      ],
+      "subdomain": "fraud_detection",
+      "difficulty": 2,
+      "additionalNotes": "Retry suppression based on account risk level",
+      "source_hlj_id": "REQ 001-002",
+      "domain_id": "P-FT-035"
+    },
+    {
+      "id": "REQ-044-HLJ-Chunk_1-Item_3-v1.0",
+      "domain": "fintech",
+      "summary": "Restrict retries to weekend window from Sat 06:00 to Sun 22:00 UTC",
+      "priority": "Medium",
+      "tags": [
+        "retry_window",
+        "scheduling",
+        "weekend_operations"
+      ],
+      "subdomain": "payments",
+      "difficulty": 3,
+      "additionalNotes": "Retries outside this window are disallowed",
+      "source_hlj_id": "REQ 001-003",
+      "domain_id": "P-FT-035"
+    },
+    {
+      "id": "REQ-044-HLJ-Chunk_1-Item_4-v1.0",
+      "domain": "fintech",
+      "summary": "Send POST to webhook for each failed retry within two minutes",
+      "priority": "High",
+      "tags": [
+        "notification",
+        "webhook",
+        "retry_failure"
+      ],
+      "subdomain": "monitoring",
+      "difficulty": 2,
+      "additionalNotes": "Must include txnId, attempt, and reason in JSON payload",
+      "source_hlj_id": "REQ 001-004",
+      "domain_id": "P-FT-035"
+    },
+    {
+      "id": "REQ-044-HLJ-Chunk_1-Item_5-v1.0",
+      "domain": "fintech",
+      "summary": "Control weekend retry feature using feature flag defaulted to OFF",
+      "priority": "High",
+      "tags": [
+        "feature_flag",
+        "environment_control",
+        "retry_feature"
+      ],
+      "subdomain": "configuration",
+      "difficulty": 2,
+      "additionalNotes": "Feature flag must be toggled only after QA approval",
+      "source_hlj_id": "REQ 001-005",
+      "domain_id": "P-FT-035"
+    },
+    {
+      "id": "REQ-044-HLJ-Chunk_1-Item_6-v1.0",
+      "domain": "fintech",
+      "summary": "Allow retry feature activation only after formal QA approval",
+      "priority": "Medium",
+      "tags": [
+        "qa_approval",
+        "feature_activation",
+        "stability_control"
+      ],
+      "subdomain": "compliance",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied – Derived from production readiness and stability requirements",
+      "source_hlj_id": "REQ 001-006",
+      "domain_id": "P-FT-035"
+    },
+    {
+      "id": "REQ-044-HLJ-Chunk_1-Item_7-v1.0",
+      "domain": "fintech",
+      "summary": "Ensure retry behavior complies with operational policies",
+      "priority": "Low",
+      "tags": [
+        "compliance",
+        "operational_policy",
+        "retry_logic"
+      ],
+      "subdomain": "compliance",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied – Compliance implied by QA sign-off requirement",
+      "source_hlj_id": "REQ 001-007",
+      "domain_id": "P-FT-035"
+    }
+  ]
+}

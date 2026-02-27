@@ -1,0 +1,143 @@
+{
+  "doc_id": "1c41bae5-3fb5-59b3-b411-42f628ba6828",
+  "req_key": "saas::P-SAAS-041::REQ-130",
+  "req_id": "REQ-130",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-041",
+  "source": {
+    "raw_path": "02_raw_requirements/saas/P-SAAS-041/req-130_raw.txt",
+    "refined_path": "03_refined_json_normalized/saas/P-SAAS-041/req-130_refined.json",
+    "origin": "both"
+  },
+  "text": "**Objective**  \nImplement an automated incident classification system that categorizes events as Low, Medium, or High severity within 30 seconds of log ingestion. This rapid triaging will streamline incident response and reduce noise for security teams.\n\n**Classification Engine**  \nThe AI-powered engine ingests three primary inputs: log severity (e.g., error level, frequency), source IP reputation (internal threat intel scores), and an anomaly score derived from behavior baselines. Severity thresholds are dynamically tuned using a feedback loop informed by incident resolution data and false-positive rates, ensuring adaptive precision over time.\n\n**Alert Routing**  \nClassified alerts are routed based on severity:  \n- **Low** ➜ Added to the Jira security backlog for periodic review.  \n- **Medium** ➜ Posted in Slack `#sec-ops` for real-time triage by analysts.  \n- **High** ➜ Triggered as a PagerDuty \"P1\" alert, with immediate escalation.\n\n**SLA & Metrics**  \nSystem must maintain ≥ 95% classification accuracy. Alerts should be delivered within 60 seconds for 95% of cases (P95 latency).\n\n**Audit & Reporting**  \nEach classification is logged in the `incident_audit` table with original log content, predicted severity, and the model version used. Records are retained for a minimum of one year to support compliance and post-incident reviews.",
+  "structured_data": [
+    {
+      "id": "REQ-130-HLJ-Chunk_1-Item_1-v1.0",
+      "domain": "saas",
+      "summary": "Auto-classify incidents within 30 seconds of ingestion",
+      "priority": "High",
+      "tags": [
+        "incident_classification",
+        "log_ingestion",
+        "automation"
+      ],
+      "subdomain": "incident_response",
+      "difficulty": 3,
+      "additionalNotes": "System must support rapid classification to reduce analyst workload",
+      "source_hlj_id": "REQ 001-001",
+      "domain_id": "P-SAAS-041"
+    },
+    {
+      "id": "REQ-130-HLJ-Chunk_1-Item_2-v1.0",
+      "domain": "saas",
+      "summary": "Use severity, IP reputation, and anomaly score as inputs",
+      "priority": "High",
+      "tags": [
+        "ai_model",
+        "log_analysis",
+        "security_signals"
+      ],
+      "subdomain": "incident_response",
+      "difficulty": 3,
+      "additionalNotes": "Classification engine relies on a combination of these signals",
+      "source_hlj_id": "REQ 001-002",
+      "domain_id": "P-SAAS-041"
+    },
+    {
+      "id": "REQ-130-HLJ-Chunk_1-Item_3-v1.0",
+      "domain": "saas",
+      "summary": "Dynamically tune severity thresholds over time",
+      "priority": "Medium",
+      "tags": [
+        "model_tuning",
+        "adaptive_system",
+        "feedback_loop"
+      ],
+      "subdomain": "incident_response",
+      "difficulty": 4,
+      "additionalNotes": "Thresholds should adapt based on resolution and false positive data",
+      "source_hlj_id": "REQ 001-003",
+      "domain_id": "P-SAAS-041"
+    },
+    {
+      "id": "REQ-130-HLJ-Chunk_1-Item_4-v1.0",
+      "domain": "saas",
+      "summary": "Route low severity to Jira backlog",
+      "priority": "Medium",
+      "tags": [
+        "alert_routing",
+        "jira_integration",
+        "low_priority"
+      ],
+      "subdomain": "incident_response",
+      "difficulty": 2,
+      "additionalNotes": "Low-priority incidents do not require immediate action",
+      "source_hlj_id": "REQ 001-004",
+      "domain_id": "P-SAAS-041"
+    },
+    {
+      "id": "REQ-130-HLJ-Chunk_1-Item_5-v1.0",
+      "domain": "saas",
+      "summary": "Route medium severity to Slack #sec-ops",
+      "priority": "Medium",
+      "tags": [
+        "alert_routing",
+        "slack_integration",
+        "real_time"
+      ],
+      "subdomain": "incident_response",
+      "difficulty": 2,
+      "additionalNotes": "Medium-severity alerts must reach analysts in near real time",
+      "source_hlj_id": "REQ 001-005",
+      "domain_id": "P-SAAS-041"
+    },
+    {
+      "id": "REQ-130-HLJ-Chunk_1-Item_6-v1.0",
+      "domain": "saas",
+      "summary": "Route high severity to PagerDuty P1",
+      "priority": "High",
+      "tags": [
+        "alert_routing",
+        "pagerduty",
+        "critical_alert"
+      ],
+      "subdomain": "incident_response",
+      "difficulty": 2,
+      "additionalNotes": "High-severity incidents demand immediate escalation",
+      "source_hlj_id": "REQ 001-006",
+      "domain_id": "P-SAAS-041"
+    },
+    {
+      "id": "REQ-130-HLJ-Chunk_1-Item_7-v1.0",
+      "domain": "saas",
+      "summary": "Ensure ≥95% classification accuracy",
+      "priority": "High",
+      "tags": [
+        "accuracy",
+        "sla",
+        "ai_model"
+      ],
+      "subdomain": "incident_response",
+      "difficulty": 4,
+      "additionalNotes": "Model should be regularly evaluated for performance",
+      "source_hlj_id": "REQ 001-007",
+      "domain_id": "P-SAAS-041"
+    },
+    {
+      "id": "REQ-130-HLJ-Chunk_1-Item_8-v1.0",
+      "domain": "saas",
+      "summary": "Log original data, prediction, and model version",
+      "priority": "Medium",
+      "tags": [
+        "audit_log",
+        "compliance",
+        "model_tracking"
+      ],
+      "subdomain": "incident_response",
+      "difficulty": 3,
+      "additionalNotes": "origin: implied – Required for compliance and traceability audits",
+      "source_hlj_id": "REQ 001-008",
+      "domain_id": "P-SAAS-041"
+    }
+  ]
+}

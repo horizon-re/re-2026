@@ -1,0 +1,36 @@
+{
+  "metadata": {
+    "timestamp": "20260213_172508",
+    "test_data": "classifier\\outputs\\splits\\train_40.jsonl",
+    "n_samples": 2212,
+    "n_positive": 1259,
+    "n_negative": 953
+  },
+  "results": [
+    {
+      "model": "DeBERTa-base (Full FT)",
+      "model_path": "classifier\\models\\deberta_full_finetune\\20260213_010841_deberta-v3-base",
+      "config": {
+        "run_id": "20260213_010841",
+        "output_dir": "classifier\\models\\deberta_full_finetune\\20260213_010841_deberta-v3-base"
+      },
+      "metrics": {
+        "accuracy": 0.8684448462929476,
+        "precision": 0.8954248366013072,
+        "recall": 0.8705321683876092,
+        "f1": 0.882803060813532,
+        "roc_auc": 0.9329753372777909,
+        "pr_auc": 0.9420825402577759,
+        "tp": 1096,
+        "fp": 128,
+        "tn": 825,
+        "fn": 163,
+        "n_samples": 2212,
+        "n_positive": 1259,
+        "n_negative": 953
+      },
+      "predictions": [
+        {
+          "sent_id": "REQ-010::s003",
+          "sentence": "It will highlight invoice/expense tracking, tax support, forecasting, and banking integrations\u2014with an emphasis on automation, user experience, and intelligent features.",
+          "true_label": 

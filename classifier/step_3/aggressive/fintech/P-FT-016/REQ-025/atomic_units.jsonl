@@ -1,0 +1,2 @@
+{"unit_id": "REQ-025::au001", "req_id": "REQ-025", "doc_id": "4857e3f1-9bba-5cf4-abc4-2c4fc6bfa2e8", "parent_sent_id": "REQ-025::s010", "order": 1, "text": "Acceptance Criteria : \n\t • \t Apply after score > threshold \n\t • \t @dev Add region check logic \n\t • \t TBD …"}
+{"unit_id": "REQ-025::au002", "req_id": "REQ-025", "doc_id": "4857e3f1-9bba-5cf4-abc4-2c4fc6bfa2e8", "parent_sent_id": "REQ-025::s010", "order": 2, "text": "score > threshold \n\t • \t @dev Add region check logic \n\t • \t TBD"}

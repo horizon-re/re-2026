@@ -1,0 +1,541 @@
+{
+  "doc_id": "c3260077-d87f-5b81-96ec-08e6932b154d",
+  "req_key": "saas::P-SAAS-069::REQ-158",
+  "req_id": "REQ-158",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-069",
+  "source": {
+    "raw_path": "02_raw_requirements/saas/P-SAAS-069/req-158_raw.txt",
+    "refined_path": "03_refined_json_normalized/saas/P-SAAS-069/req-158_refined.json",
+    "origin": "both"
+  },
+  "text": "Great. I’ll produce a 1,100–1,300 word requirements specification document for a Python-based QASM 2.0 parser. It will cover scope, grammar rules, static analysis including checks for common gate errors and undeclared qubits, a GitHub Actions-based CI integration setup, error taxonomy, and a development roadmap with phases and estimated timelines.\n\nI’ll get back to you shortly with the complete specification.\n\n# QASM 2.0 Parser and Static Analyzer – Requirements Specification\n\n## Scope  \nThis tool is a Python-based static **parser and analyzer** for the OpenQASM 2.0 language. It will read QASM 2.0 source files (including any included libraries) and perform syntactic and semantic validation without executing the program. Primary functions include constructing an abstract syntax tree (AST) of the QASM program, building symbol tables for quantum and classical registers and user-defined gates, and performing static checks to catch errors. The tool should report clear error messages and warnings for invalid QASM constructs. **Out of scope** features include any runtime execution or simulation of quantum circuits, optimization or translation of QASM to another form, and support for newer languages like OpenQASM 3.0. The focus is entirely on *parsing* QASM 2.0 and *static analysis* of the code for correctness.\n\n## Grammar Rules  \nThe analyzer must implement the full OpenQASM 2.0 grammar as specified by IBM’s QASM reference ([openqasm/spec/qasm2.rst at master · Mezantrop74/openqasm · GitHub](https://github.com/Mezantrop74/openqasm/blob/master/spec/qasm2.rst#:~:text=The%20syntax%20of%20the%20human,relative%20to%20the%20current%20working)) ([openqasm/spec/qasm2.rst at master · Mezantrop74/openqasm · GitHub](https://github.com/Mezantrop74/openqasm/blob/master/spec/qasm2.rst#:~:text=%2F%2F%20comment%20gate%20name,body)). Key elements to parse include:\n\n- **Version Declaration:** The first non-comment line must be `OPENQASM M.m;` with `M.m` the version (here `2.0`) ([openqasm/spec/qasm2.rst at master · Mezantrop74/openqasm · GitHub](https://github.com/Mezantrop74/openqasm/blob/master/spec/qasm2.rst#:~:text=The%20syntax%20of%20the%20human,relative%20to%20the%20current%20working)). Only one version statement is allowed and it must appear first. Statements are separated by semicolons; whitespace is ignored. Comments begin with `//` and run to end-of-line ([openqasm/spec/qasm2.rst at master · Mezantrop74/openqasm · GitHub](https://github.com/Mezantrop74/openqasm/blob/master/spec/qasm2.rst#:~:text=The%20syntax%20of%20the%20human,relative%20to%20the%20current%20working)).  \n- **Include Statements:** Lines of the form `include \"filename\";` must be parsed so that the specified file is opened and its contents processed in place ([openqasm/spec/qasm2.rst at master · Mezantrop74/openqasm · GitHub](https://github.com/Mezantrop74/openqasm/blob/master/spec/qasm2.rst#:~:text=The%20syntax%20of%20the%20human,relative%20to%20the%20current%20working)). The include path is relative to the current working directory.  \n- **Registers:** Support declarations `qreg name[size];` and `creg name[size];` for quantum and classical registers ([openqasm/spec/qasm2.rst at master · Mezantrop74/openqasm · GitHub](https://github.com/Mezantrop74/openqasm/blob/master/spec/qasm2.rst#:~:text=The%20only%20storage%20types%20of,to%20a%20bit%20of%20this)). Identifier names start with a lowercase letter and may contain alphanumeric characters or underscores ([openqasm/spec/qasm2.rst at master · Mezantrop74/openqasm · GitHub](https://github.com/Mezantrop74/openqasm/blob/master/spec/qasm2.rst#:~:text=The%20only%20storage%20types%20of,to%20a%20bit%20of%20this)). For `qreg name[N]`, the elements `name[j]` for `0 ≤ j < N` denote individual qubits initialized to |0〉; similarly `creg name[N]` defines bits `name[j]` initialized to 0 ([openqasm/spec/qasm2.rst at master · Mezantrop74/openqasm · GitHub](https://github.com/Mezantrop74/openqasm/blob/master/spec/qasm2.rst#:~:text=The%20only%20storage%20types%20of,to%20a%20bit%20of%20this)).  \n- **Built-in Gates:** Handle all built-in quantum instructions in QASM 2.0:\n  - `U(theta,phi,lambda) q;` applies a parameterized single-qubit unitary to `q` (or applies in parallel over a quantum register) ([openqasm/spec/qasm2.rst at master · Mezantrop74/openqasm · GitHub](https://github.com/Mezantrop74/openqasm/blob/master/spec/qasm2.rst#:~:text=The%20single,the%20qubits%20of%20the%20register)). The parameters are real-valued expressions (angles) appearing in parentheses.  \n  - `CX q1,q2;` applies a CNOT gate with control `q1` and target `q2` ([openqasm/spec/qasm2.rst at master · Mezantrop74/openqasm · GitHub](https://github.com/Mezantrop74/openqasm/blob/master/spec/qasm2.rst#:~:text=The%20built,quantum%20register%20and%20vice%20versa)). If the arguments are quantum registers of equal size, it is implicitly parallelized elementwise ([openqasm/spec/qasm2.rst at master · Mezantrop74/openqasm · GitHub](https://github.com/Mezantrop74/openqasm/blob/master/spec/qasm2.rst#:~:text=The%20built,quantum%20register%20and%20vice%20versa)) ([openqasm/spec/qasm2.rst at master · Mezantrop74/openqasm · GitHub](https://github.com/Mezantrop74/openqasm/blob/master/spec/qasm2.rst#:~:text=called%20the%20controlled,index%20j%20into%20register%20a)).  \n  - `measure q -> c;` measures qubit(s) `q` (single qubit or register) into classical bit(s) `c` ([openqasm/spec/qasm2.rst at master · Mezantrop74/openqasm · GitHub](https://github.com/Mezantrop74/openqasm/blob/master/spec/qasm2.rst#:~:text=U%28theta%2Cphi%2Clambda%29%20qubit%7Cqreg%3B%20Apply%20built,c)). `q` must be qubit(s) and `c` must be bit(s); the arrow `->` syntax is required.  \n  - `reset q;` resets qubit(s) `q` to the |0〉 state ([openqasm/spec/qasm2.rst at master · Mezantrop74/openqasm · GitHub](https://github.com/Mezantrop74/openqasm/blob/master/spec/qasm2.rst#:~:text=U%28theta%2Cphi%2Clambda%29%20qubit%7Cqreg%3B%20Apply%20built,c)).  \n  - `barrier q1,q2,...;` is a compiler barrier (no-op) applying to listed qubits or registers ([openqasm/spec/qasm2.rst at master · Mezantrop74/openqasm · GitHub](https://github.com/Mezantrop74/openqasm/blob/master/spec/qasm2.rst#:~:text=gatename%28params%29%20qargs%3B%20Apply%20a%20user,1)). It prevents reordering across the barrier.  \n- **Gate Definitions:** Support user-defined gate (subroutine) syntax as per the QASM 2.0 spec ([openqasm/spec/qasm2.rst at master · Mezantrop74/openqasm · GitHub](https://github.com/Mezantrop74/openqasm/blob/master/spec/qasm2.rst#:~:text=%2F%2F%20comment%20gate%20name,body)):\n  - **Named Gates:** `gate name(params) qargs { body }`. Here `params` is an optional comma-separated list of parameter identifiers, and `qargs` is a comma-separated list of qubit identifiers ([openqasm/spec/qasm2.rst at master · Mezantrop74/openqasm · GitHub](https://github.com/Mezantrop74/openqasm/blob/master/spec/qasm2.rst#:~:text=%2F%2F%20comment%20gate%20name,body)). The body is a block of existing gate calls (built-in or previously defined gates) and barrier statements ([openqasm/spec/qasm2.rst at master · Mezantrop74/openqasm · GitHub](https://github.com/Mezantrop74/openqasm/blob/master/spec/qasm2.rst#:~:text=%2F%2F%20comment%20gate%20name,body)) ([openqasm/spec/qasm2.rst at master · Mezantrop74/openqasm · GitHub](https://github.com/Mezantrop74/openqasm/blob/master/spec/qasm2.rst#:~:text=Only%20built,The%20quantum%20circuit%20given%20by)). The parentheses around `params` are optional if empty. Each `qarg` is a local symbol for a qubit argument; it **cannot** be indexed inside the gate body ([openqasm/spec/qasm2.rst at master · Mezantrop74/openqasm · GitHub](https://github.com/Mezantrop74/openqasm/blob/master/spec/qasm2.rst#:~:text=where%20the%20optional%20parameter%20list,body%20of%20the%20gate%20definition)).  \n  - **Opaque Gates:** `opaque name(params) qargs;` declares a gate whose implementation is unspecified (no body) ([openqasm/spec/qasm2.rst at master · Mezantrop74/openqasm · GitHub](https://github.com/Mezantrop74/openqasm/blob/master/spec/qasm2.rst#:~:text=computationally%20challenging%20to%20estimate,declaration%20but%20without%20a%20body)). The syntax is the same as a `gate` declaration but without the `{ body }`.  \n  In definitions, built-in or previously-defined gates and barriers are the only allowed statements (no measurements or resets inside a gate body). Subroutines (gates) must be declared before use and cannot be recursive ([openqasm/spec/qasm2.rst at master · Mezantrop74/openqasm · GitHub](https://github.com/Mezantrop74/openqasm/blob/master/spec/qasm2.rst#:~:text=Only%20built,The%20quantum%20circuit%20given%20by)).  \n\nThe parser should faithfully implement the QASM 2.0 grammar for all of the above constructs, reporting syntax errors (e.g. missing semicolons, mismatched parentheses, invalid tokens) as parsing failures. In particular, it should enforce that the version statement occurs only once at the top and that all statements end with semicolons as required ([openqasm/spec/qasm2.rst at master · Mezantrop74/openqasm · GitHub](https://github.com/Mezantrop74/openqasm/blob/master/spec/qasm2.rst#:~:text=The%20syntax%20of%20the%20human,relative%20to%20the%20current%20working)) ([openqasm/spec/qasm2.rst at master · Mezantrop74/openqasm · GitHub](https://github.com/Mezantrop74/openqasm/blob/master/spec/qasm2.rst#:~:text=%2F%2F%20comment%20gate%20name,body)).\n\n## Static Analysis  \nAfter syntactic parsing, the tool performs semantic and static checks on the AST. Key checks include:\n\n- **Symbol Table and Declarations:** Build symbol tables for quantum registers, classical registers, and gates. Report an error if a qubit or bit is referenced (e.g. in a gate call or index) without a prior `qreg` or `creg` declaration, or if a gate is called without a prior `gate` or `opaque` declaration. Similarly, flag duplicate declarations of registers or gates.  \n- **Index Bounds and Uniqueness:** Ensure that any indexed reference `name[i]` uses `0 ≤ i < size(name)` as declared ([openqasm/spec/qasm2.rst at master · Mezantrop74/openqasm · GitHub](https://github.com/Mezantrop74/openqasm/blob/master/spec/qasm2.rst#:~:text=The%20only%20storage%20types%20of,to%20a%20bit%20of%20this)). Flag out-of-range indices as errors. For multi-qubit gates (like `CX q1,q2`), check that the same qubit is not used twice (for example, `CX q[0],q[0]` is invalid); the QASM spec explicitly forbids the same qubit in both roles ([openqasm/spec/qasm2.rst at master · Mezantrop74/openqasm · GitHub](https://github.com/Mezantrop74/openqasm/blob/master/spec/qasm2.rst#:~:text=called%20the%20controlled,register%20and%20b%20is%20a)). In general, if a parallel operation is applied to quantum registers, they must have matching sizes.  \n- **Type and Context Checks:** Verify operand types for each operation. For example, a unitary `U` or custom gate must take quantum arguments (qubit or qreg), not classical bits, and `measure` must map qubits to bits ([openqasm/spec/qasm2.rst at master · Mezantrop74/openqasm · GitHub](https://github.com/Mezantrop74/openqasm/blob/master/spec/qasm2.rst#:~:text=U%28theta%2Cphi%2Clambda%29%20qubit%7Cqreg%3B%20Apply%20built,c)). The `if` statement syntax `if(creg==int) qop;` must use a classical register on the left of `==` and an integer literal on the right. Applying a gate to a classical register, or a measurement target that is not a classical bit, should be flagged. Likewise, verify that classical constructs (constants, integer expressions) are not misused in quantum contexts.  \n- **Gate Arity and Parameters:** Check that gate invocations have the correct number of arguments. For built-in gates, `CX` must have exactly two quantum arguments ([openqasm/spec/qasm2.rst at master · Mezantrop74/openqasm · GitHub](https://github.com/Mezantrop74/openqasm/blob/master/spec/qasm2.rst#:~:text=The%20built,quantum%20register%20and%20vice%20versa)), and `U` must have three real-parameter arguments. For user-defined gates, ensure that the number of provided qubit arguments matches its declaration, and that the number of parameter expressions matches the declared parameters. Type-check parameter expressions (e.g. they must be numeric expressions involving constants or π, not bits). Report mismatches or missing parameters.  \n- **Gate Definition Constraints:** In gate definitions, ensure bodies follow spec rules ([openqasm/spec/qasm2.rst at master · Mezantrop74/openqasm · GitHub](https://github.com/Mezantrop74/openqasm/blob/master/spec/qasm2.rst#:~:text=Only%20built,The%20quantum%20circuit%20given%20by)). For example, parameter names and qubit arguments should be properly scoped, and only allowed statements (gates, barrier) appear. Detect recursive definitions (a gate calling itself) and flag as invalid.  \n- **Unused Symbols and Logical Warnings:** As a courtesy, warn about unreferenced entities (defined gates or registers that are never used). Also, flag potential logical issues: e.g., calling a quantum gate on a qubit after that qubit has been measured (without an intervening `reset`) ([Analyzing Quantum Programs with LintQ: A Static Analysis Framework for Qiskit](https://software-lab.org/publications/fse2024_LintQ.pdf#:~:text=analysis%20aimed%20at%20warning%20about,10%20operate%20on%20the%20same)), or `if` conditions that are constant-false/true and thus dead code. These are not syntax errors but potential logic bugs, and should be reported as warnings.  \n\nCollectively, these checks will catch common QASM mistakes such as undeclared qubits, duplicate registers, wrong gate arity, type errors, and unreachable or ill-formed code. For example, if a gate name is undefined, the analyzer should produce a compile-time error (“gate X undefined”) ([Support `extern` gate declarations  · Issue #507 · openqasm/openqasm · GitHub](https://github.com/openqasm/openqasm/issues/507#:~:text=In%20this%20case%2C%20long%20before,them%20available%20to%20the%20user)) rather than silently proceeding. This ensures that the QASM program is well-formed before any execution attempt.\n\n## CI Integration  \nThe project will use **GitHub Actions** for continuous integration (CI) to ensure code quality and reliability. A typical workflow includes:\n\n- **Automated Tests:** On each push or pull request, the pipeline checks out the code, sets up a Python environment (e.g. via `actions/setup-python`), installs dependencies, and runs the test suite using `pytest` ([Building and testing Python - GitHub Docs](https://docs.github.com/en/actions/use-cases-and-examples/building-and-testing/building-and-testing-python#:~:text=steps%3A%20,r%20requirements.txt)). Tests should cover parsing of valid QASM examples, detection of error conditions, and the static analysis checks. Pytest is configured with coverage measurement (`pytest-cov`) to generate coverage reports (XML/HTML).  \n- **Linting and Formatting:** The CI pipeline runs code linters and formatters. For example, a step installing and running `ruff` (or `flake8`/`pylint`) ensures adherence to style and catches common Python issues ([Building and testing Python - GitHub Docs](https://docs.github.com/en/actions/use-cases-and-examples/building-and-testing/building-and-testing-python#:~:text=Using%20Ruff%20to%20lint%20and%2For,format%20code)). Any linting errors should fail the build. Code formatting (e.g. via `black`) can be enforced either on commit or in CI.  \n- **Coverage Reporting:** The coverage output is published, for instance using Codecov or GitHub’s coverage reporting, to track test coverage over time. The CI can fail if coverage drops below a threshold.  \n- **Version Tagging and Releases:** On creating a new Git tag (e.g. `v1.0.0`), a release workflow should run (with tests) and then automatically package the tool (e.g. build a Python wheel). Semantic versioning is adopted, and the CI may automate bumping the version and creating a GitHub Release. (For example, actions like “actions/create-release” or semantic-release could be used.) The CI logs should clearly show version tags and changelogs.  \n- **Multi-Version Testing:** Optionally, the workflow can test against multiple Python versions (3.8, 3.9, 3.10, etc.) and on multiple OS (Linux, macOS) using matrix builds. This ensures broad compatibility.  \n\nEach of these CI steps references standard examples from GitHub documentation ([Building and testing Python - GitHub Docs](https://docs.github.com/en/actions/use-cases-and-examples/building-and-testing/building-and-testing-python#:~:text=steps%3A%20,r%20requirements.txt)) ([Building and testing Python - GitHub Docs](https://docs.github.com/en/actions/use-cases-and-examples/building-and-testing/building-and-testing-python#:~:text=Using%20Ruff%20to%20lint%20and%2For,format%20code)). For instance, the pytest step might run commands like `pip install pytest pytest-cov` followed by `pytest --cov=src --cov-report=xml` ([Building and testing Python - GitHub Docs](https://docs.github.com/en/actions/use-cases-and-examples/building-and-testing/building-and-testing-python#:~:text=steps%3A%20,r%20requirements.txt)), and the lint step might run `pip install ruff` then `ruff check .` ([Building and testing Python - GitHub Docs](https://docs.github.com/en/actions/use-cases-and-examples/building-and-testing/building-and-testing-python#:~:text=Using%20Ruff%20to%20lint%20and%2For,format%20code)). The CI configuration should be documented in the repository (e.g. `.github/workflows/ci.yml`).\n\n## Error Taxonomy  \nErrors and warnings generated by the parser/analyzer are classified as follows:\n\n- **Syntax Errors:** These are violations of the QASM grammar detected by the parser. Examples include a missing semicolon, unmatched brackets, malformed `if` or `include` syntax, or using a keyword incorrectly. A syntax error halts parsing and reports the offending line and expected tokens. For instance, writing `qreg q[3]` without a semicolon would be a syntax error.  \n- **Semantic Errors:** These occur after parsing, during symbol resolution and type checking. They include using an undeclared register or gate, referencing an out-of-bounds index, duplicating a declaration name, or mismatching gate arity/types. For example, calling `CX q[0], c[0]` (using a classical bit as a CX argument) or invoking a gate with too many parameters would be semantic errors. Undefined-gate errors are semantic; as one report notes, “the frontend will record an error saying that the gate `cx` is undefined” when it cannot find a gate symbol ([Support `extern` gate declarations  · Issue #507 · openqasm/openqasm · GitHub](https://github.com/openqasm/openqasm/issues/507#:~:text=In%20this%20case%2C%20long%20before,them%20available%20to%20the%20user)). Semantic errors prevent code generation or further analysis.  \n- **Logical (Design) Warnings:** These are issues that do not violate syntax or basic semantics but likely indicate a logical flaw. Examples include gates or registers that are defined but never used (dead code), or operations on a qubit after it has been measured without reset (since the qubit’s state is no longer well-defined) ([Analyzing Quantum Programs with LintQ: A Static Analysis Framework for Qiskit](https://software-lab.org/publications/fse2024_LintQ.pdf#:~:text=analysis%20aimed%20at%20warning%20about,10%20operate%20on%20the%20same)). Another example is a constant condition in `if` that always skips or always executes a branch, which could indicate a mistake. These do not stop compilation but are flagged to the user for review.  \n- **Runtime-Preventable Logical Errors:** In the context of static analysis, we aim to catch as many potential bugs as possible before runtime. This includes checks like ensuring that two-qubit gates are not applied to the same qubit (caught as semantic) and warnings if the programmer’s stated intent (e.g. parallel gate application) might break if gates do not commute. Any error that can be detected without running the circuit is reported. \n\nThis structured error taxonomy (syntax vs semantic vs logical) helps users understand the nature of an issue: syntax and semantic errors must be fixed, while logical warnings may highlight inefficiencies or non-critical problems.\n\n## Roadmap  \nThe project can be developed in phased sprints, each delivering an incremental component:\n\n1. **Grammar Engine (Weeks 1–3):** Implement the lexer/parser for QASM 2.0 using a Python parsing library (e.g. PLY, Lark, or ANTLR). Support all grammar rules outlined above, including version, registers, includes, built-in statements, and gate definitions ([openqasm/spec/qasm2.rst at master · Mezantrop74/openqasm · GitHub](https://github.com/Mezantrop74/openqasm/blob/master/spec/qasm2.rst#:~:text=The%20syntax%20of%20the%20human,relative%20to%20the%20current%20working)) ([openqasm/spec/qasm2.rst at master · Mezantrop74/openqasm · GitHub](https://github.com/Mezantrop74/openqasm/blob/master/spec/qasm2.rst#:~:text=%2F%2F%20comment%20gate%20name,body)). On successful parsing, generate an AST. Error reporting for syntax issues is implemented at this stage. *Deliverable:* a parser module that reads `.qasm` files and outputs an AST or parse errors.\n\n2. **Semantic Analysis (Weeks 3–5):** Build symbol tables and perform semantic checks. Verify declarations (registers, gates), scoping, and basic type consistency. Implement arity checks and index bounds. At this stage, most semantic errors (undeclared names, type mismatches, duplicate definitions) should be detected. *Deliverable:* a semantic analyzer that annotates the AST and reports semantic errors, with corresponding unit tests.\n\n3. **Static Analysis (Weeks 5–7):** Add more advanced static checks as listed above: ensure built-in gate usage is correct, apply rules about unique qubit usage (e.g. no same qubit twice) ([openqasm/spec/qasm2.rst at master · Mezantrop74/openqasm · GitHub](https://github.com/Mezantrop74/openqasm/blob/master/spec/qasm2.rst#:~:text=called%20the%20controlled,register%20and%20b%20is%20a)), validate `if` statements, and implement logical warnings (unused definitions, post-measure use) ([Analyzing Quantum Programs with LintQ: A Static Analysis Framework for Qiskit](https://software-lab.org/publications/fse2024_LintQ.pdf#:~:text=analysis%20aimed%20at%20warning%20about,10%20operate%20on%20the%20same)). Refine error messages and possibly add error codes. *Deliverable:* a static analyzer module that runs on the AST to enforce all rules and emits warnings.\n\n4. **CI Integration and Automation (Weeks 2–7, overlapping):** Set up the GitHub repository with a proper structure (`src/`, `tests/`, etc.). Configure GitHub Actions workflows for testing and linting ([Building and testing Python - GitHub Docs](https://docs.github.com/en/actions/use-cases-and-examples/building-and-testing/building-and-testing-python#:~:text=steps%3A%20,r%20requirements.txt)) ([Building and testing Python - GitHub Docs](https://docs.github.com/en/actions/use-cases-and-examples/building-and-testing/building-and-testing-python#:~:text=Using%20Ruff%20to%20lint%20and%2For,format%20code)). Develop unit tests throughout, and ensure that CI pipelines are green. Implement version tagging on releases. *Deliverable:* Continuous integration YAML files and passing build on GitHub.\n\n5. **Finalization (Weeks 8–9):** Polish documentation (README with usage examples, developer docs), finalize command-line interface or API, and prepare a first release (PyPI packaging if desired). *Deliverable:* Version 1.0.0 release with complete documentation, and CI badges reflecting build status/coverage.\n\nIn total, this plan spans roughly 2–3 months of development time, assuming one sprint per week. Adjustments can be made based on team size and progress. Each phase includes code reviews and testing. The phases overlap somewhat (e.g. CI setup starts early and continues throughout). By the end, the team will have a fully tested QASM 2.0 parsing and analysis toolkit, with continuous integration ensuring quality and facilitating future maintenance. \n\n**Sources:** The above requirements draw on the OpenQASM 2.0 specification ([openqasm/spec/qasm2.rst at master · Mezantrop74/openqasm · GitHub](https://github.com/Mezantrop74/openqasm/blob/master/spec/qasm2.rst#:~:text=The%20syntax%20of%20the%20human,relative%20to%20the%20current%20working)) ([openqasm/spec/qasm2.rst at master · Mezantrop74/openqasm · GitHub](https://github.com/Mezantrop74/openqasm/blob/master/spec/qasm2.rst#:~:text=%2F%2F%20comment%20gate%20name,body)), QASM user guides ([openqasm/spec/qasm2.rst at master · Mezantrop74/openqasm · GitHub](https://github.com/Mezantrop74/openqasm/blob/master/spec/qasm2.rst#:~:text=Open%20QASM%20language%20statements%20,in%20single%20qubit%20gate%28s)) ([openqasm/spec/qasm2.rst at master · Mezantrop74/openqasm · GitHub](https://github.com/Mezantrop74/openqasm/blob/master/spec/qasm2.rst#:~:text=U%28theta%2Cphi%2Clambda%29%20qubit%7Cqreg%3B%20Apply%20built,c)), and examples of static analysis in quantum programs ([Support `extern` gate declarations  · Issue #507 · openqasm/openqasm · GitHub](https://github.com/openqasm/openqasm/issues/507#:~:text=In%20this%20case%2C%20long%20before,them%20available%20to%20the%20user)) ([Analyzing Quantum Programs with LintQ: A Static Analysis Framework for Qiskit](https://software-lab.org/publications/fse2024_LintQ.pdf#:~:text=analysis%20aimed%20at%20warning%20about,10%20operate%20on%20the%20same)), as well as standard Python CI practices ([Building and testing Python - GitHub Docs](https://docs.github.com/en/actions/use-cases-and-examples/building-and-testing/building-and-testing-python#:~:text=steps%3A%20,r%20requirements.txt)) ([Building and testing Python - GitHub Docs](https://docs.github.com/en/actions/use-cases-and-examples/building-and-testing/building-and-testing-python#:~:text=Using%20Ruff%20to%20lint%20and%2For,format%20code)).",
+  "structured_data": [
+    {
+      "id": "REQ-158-HLJ-Chunk_1-Item_1-v1.0",
+      "domain": "unknown",
+      "summary": "Implement QASM 2.0 grammar parser in Python",
+      "priority": "High",
+      "tags": [
+        "qasm_parsing",
+        "grammar_engine",
+        "python"
+      ],
+      "subdomain": "quantum_parsing",
+      "difficulty": 4,
+      "additionalNotes": "Must support full QASM 2.0 syntax per IBM specification.",
+      "source_hlj_id": "REQ 001-001",
+      "domain_id": "P-SAAS-069"
+    },
+    {
+      "id": "REQ-158-HLJ-Chunk_1-Item_2-v1.0",
+      "domain": "unknown",
+      "summary": "Parse and process include statements inline",
+      "priority": "High",
+      "tags": [
+        "qasm_parser",
+        "file_inclusion",
+        "relative_paths"
+      ],
+      "subdomain": "quantum_parsing",
+      "difficulty": 3,
+      "additionalNotes": "Includes must be resolved from working directory.",
+      "source_hlj_id": "REQ 001-002",
+      "domain_id": "P-SAAS-069"
+    },
+    {
+      "id": "REQ-158-HLJ-Chunk_1-Item_3-v1.0",
+      "domain": "unknown",
+      "summary": "Parse qreg and creg declarations",
+      "priority": "High",
+      "tags": [
+        "quantum_register",
+        "classical_register",
+        "declarations"
+      ],
+      "subdomain": "quantum_parsing",
+      "difficulty": 3,
+      "additionalNotes": "Build register symbol tables and initialize sizes.",
+      "source_hlj_id": "REQ 001-003",
+      "domain_id": "P-SAAS-069"
+    },
+    {
+      "id": "REQ-158-HLJ-Chunk_1-Item_4-v1.0",
+      "domain": "unknown",
+      "summary": "Support parsing of all built-in gates",
+      "priority": "High",
+      "tags": [
+        "built_in_gates",
+        "unitary",
+        "cnot"
+      ],
+      "subdomain": "quantum_parsing",
+      "difficulty": 3,
+      "additionalNotes": "Must include U, CX, measure, reset, barrier.",
+      "source_hlj_id": "REQ 001-004",
+      "domain_id": "P-SAAS-069"
+    },
+    {
+      "id": "REQ-158-HLJ-Chunk_1-Item_5-v1.0",
+      "domain": "unknown",
+      "summary": "Enforce version declaration at file start",
+      "priority": "Medium",
+      "tags": [
+        "version_check",
+        "syntax_validation"
+      ],
+      "subdomain": "quantum_parsing",
+      "difficulty": 2,
+      "additionalNotes": "Only one version line allowed at top of file.",
+      "source_hlj_id": "REQ 001-005",
+      "domain_id": "P-SAAS-069"
+    },
+    {
+      "id": "REQ-158-HLJ-Chunk_1-Item_6-v1.0",
+      "domain": "unknown",
+      "summary": "Support user-defined and opaque gate parsing",
+      "priority": "High",
+      "tags": [
+        "gate_definition",
+        "opaque_gates",
+        "custom_gates"
+      ],
+      "subdomain": "quantum_parsing",
+      "difficulty": 4,
+      "additionalNotes": "Gate definitions must match QASM spec including optional parameters.",
+      "source_hlj_id": "REQ 001-006",
+      "domain_id": "P-SAAS-069"
+    },
+    {
+      "id": "REQ-158-HLJ-Chunk_1-Item_7-v1.0",
+      "domain": "unknown",
+      "summary": "Validate symbols against declarations",
+      "priority": "High",
+      "tags": [
+        "symbol_table",
+        "undeclared_error",
+        "gate_resolution"
+      ],
+      "subdomain": "semantic_analysis",
+      "difficulty": 4,
+      "additionalNotes": "Raise error for undefined gates, registers, or duplicate names.",
+      "source_hlj_id": "REQ 001-007",
+      "domain_id": "P-SAAS-069"
+    },
+    {
+      "id": "REQ-158-HLJ-Chunk_1-Item_8-v1.0",
+      "domain": "unknown",
+      "summary": "Check register index bounds during analysis",
+      "priority": "High",
+      "tags": [
+        "index_bounds",
+        "register_access"
+      ],
+      "subdomain": "semantic_analysis",
+      "difficulty": 3,
+      "additionalNotes": "Detect out-of-bound qubit/bit index usage.",
+      "source_hlj_id": "REQ 001-008",
+      "domain_id": "P-SAAS-069"
+    },
+    {
+      "id": "REQ-158-HLJ-Chunk_1-Item_9-v1.0",
+      "domain": "unknown",
+      "summary": "Disallow duplicate register and gate declarations",
+      "priority": "Medium",
+      "tags": [
+        "duplicate_check",
+        "declaration_error"
+      ],
+      "subdomain": "semantic_analysis",
+      "difficulty": 3,
+      "additionalNotes": "Raise semantic errors for reused names.",
+      "source_hlj_id": "REQ 001-009",
+      "domain_id": "P-SAAS-069"
+    },
+    {
+      "id": "REQ-158-HLJ-Chunk_1-Item_10-v1.0",
+      "domain": "unknown",
+      "summary": "Detect invalid operand types for gates",
+      "priority": "High",
+      "tags": [
+        "type_checking",
+        "semantic_validation"
+      ],
+      "subdomain": "semantic_analysis",
+      "difficulty": 4,
+      "additionalNotes": "Gate operations must only apply to valid quantum types.",
+      "source_hlj_id": "REQ 001-010",
+      "domain_id": "P-SAAS-069"
+    },
+    {
+      "id": "REQ-158-HLJ-Chunk_1-Item_11-v1.0",
+      "domain": "unknown",
+      "summary": "Validate correct mapping of measure operations",
+      "priority": "High",
+      "tags": [
+        "measure_check",
+        "qubit_bit_mapping"
+      ],
+      "subdomain": "semantic_analysis",
+      "difficulty": 3,
+      "additionalNotes": "Measure source must be qubit(s), target must be bit(s).",
+      "source_hlj_id": "REQ 001-011",
+      "domain_id": "P-SAAS-069"
+    },
+    {
+      "id": "REQ-158-HLJ-Chunk_1-Item_12-v1.0",
+      "domain": "unknown",
+      "summary": "Verify arity and parameters in gate calls",
+      "priority": "High",
+      "tags": [
+        "arity_check",
+        "gate_call_validation"
+      ],
+      "subdomain": "semantic_analysis",
+      "difficulty": 4,
+      "additionalNotes": "Parameters and qubit arguments must match declaration.",
+      "source_hlj_id": "REQ 001-012",
+      "domain_id": "P-SAAS-069"
+    },
+    {
+      "id": "REQ-158-HLJ-Chunk_1-Item_13-v1.0",
+      "domain": "unknown",
+      "summary": "Prevent gate reuse of the same qubit",
+      "priority": "Medium",
+      "tags": [
+        "unique_qubit_check",
+        "semantic_error"
+      ],
+      "subdomain": "semantic_analysis",
+      "difficulty": 3,
+      "additionalNotes": "E.g. CX q[0],q[0] is invalid and must be flagged.",
+      "source_hlj_id": "REQ 001-013",
+      "domain_id": "P-SAAS-069"
+    },
+    {
+      "id": "REQ-158-HLJ-Chunk_1-Item_14-v1.0",
+      "domain": "unknown",
+      "summary": "Scope parameters and qargs inside gates",
+      "priority": "Medium",
+      "tags": [
+        "gate_scoping",
+        "parameter_scope"
+      ],
+      "subdomain": "semantic_analysis",
+      "difficulty": 3,
+      "additionalNotes": "Prevent index access and ensure isolation of gate params.",
+      "source_hlj_id": "REQ 001-014",
+      "domain_id": "P-SAAS-069"
+    },
+    {
+      "id": "REQ-158-HLJ-Chunk_1-Item_15-v1.0",
+      "domain": "unknown",
+      "summary": "Detect recursion in user-defined gates",
+      "priority": "Medium",
+      "tags": [
+        "recursion_check",
+        "gate_definition"
+      ],
+      "subdomain": "semantic_analysis",
+      "difficulty": 3,
+      "additionalNotes": "Gate definitions must not be self-referential.",
+      "source_hlj_id": "REQ 001-015",
+      "domain_id": "P-SAAS-069"
+    },
+    {
+      "id": "REQ-158-HLJ-Chunk_1-Item_16-v1.0",
+      "domain": "unknown",
+      "summary": "Warn on unused gates or registers",
+      "priority": "Low",
+      "tags": [
+        "dead_code",
+        "static_warning"
+      ],
+      "subdomain": "static_analysis",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied – Detect and report unused definitions for clarity.",
+      "source_hlj_id": "REQ 001-016",
+      "domain_id": "P-SAAS-069"
+    },
+    {
+      "id": "REQ-158-HLJ-Chunk_1-Item_17-v1.0",
+      "domain": "unknown",
+      "summary": "Warn if gates used after measurement",
+      "priority": "Low",
+      "tags": [
+        "post_measure_use",
+        "qubit_lifecycle"
+      ],
+      "subdomain": "static_analysis",
+      "difficulty": 3,
+      "additionalNotes": "origin: implied – Gate applied to measured qubit is flagged.",
+      "source_hlj_id": "REQ 001-017",
+      "domain_id": "P-SAAS-069"
+    },
+    {
+      "id": "REQ-158-HLJ-Chunk_1-Item_18-v1.0",
+      "domain": "unknown",
+      "summary": "Warn on constant-value if conditions",
+      "priority": "Low",
+      "tags": [
+        "if_statement",
+        "dead_branch"
+      ],
+      "subdomain": "static_analysis",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied – Flags if conditions that always evaluate to true/false.",
+      "source_hlj_id": "REQ 001-018",
+      "domain_id": "P-SAAS-069"
+    },
+    {
+      "id": "REQ-158-HLJ-Chunk_1-Item_19-v1.0",
+      "domain": "unknown",
+      "summary": "Emit specific error types and messages",
+      "priority": "High",
+      "tags": [
+        "error_reporting",
+        "error_classification"
+      ],
+      "subdomain": "error_handling",
+      "difficulty": 3,
+      "additionalNotes": "Distinguish between syntax, semantic, and logical errors clearly.",
+      "source_hlj_id": "REQ 001-019",
+      "domain_id": "P-SAAS-069"
+    },
+    {
+      "id": "REQ-158-HLJ-Chunk_1-Item_20-v1.0",
+      "domain": "unknown",
+      "summary": "Validate QASM syntax via grammar rules",
+      "priority": "High",
+      "tags": [
+        "syntax_validation",
+        "grammar_engine"
+      ],
+      "subdomain": "quantum_parsing",
+      "difficulty": 3,
+      "additionalNotes": "Catch malformed syntax like missing semicolons or tokens.",
+      "source_hlj_id": "REQ 001-020",
+      "domain_id": "P-SAAS-069"
+    },
+    {
+      "id": "REQ-158-HLJ-Chunk_1-Item_21-v1.0",
+      "domain": "unknown",
+      "summary": "Implement CI pipeline using GitHub Actions",
+      "priority": "High",
+      "tags": [
+        "ci_cd",
+        "github_actions",
+        "automation"
+      ],
+      "subdomain": "devops",
+      "difficulty": 3,
+      "additionalNotes": "Includes setup of automated builds, tests, and linters.",
+      "source_hlj_id": "REQ 001-021",
+      "domain_id": "P-SAAS-069"
+    },
+    {
+      "id": "REQ-158-HLJ-Chunk_1-Item_22-v1.0",
+      "domain": "unknown",
+      "summary": "Run pytest with coverage tracking in CI",
+      "priority": "High",
+      "tags": [
+        "ci_testing",
+        "pytest",
+        "coverage"
+      ],
+      "subdomain": "devops",
+      "difficulty": 3,
+      "additionalNotes": "Use pytest-cov and ensure test coverage is monitored.",
+      "source_hlj_id": "REQ 001-022",
+      "domain_id": "P-SAAS-069"
+    },
+    {
+      "id": "REQ-158-HLJ-Chunk_1-Item_23-v1.0",
+      "domain": "unknown",
+      "summary": "Fail CI build on linting errors",
+      "priority": "Medium",
+      "tags": [
+        "linting",
+        "ci_check",
+        "code_quality"
+      ],
+      "subdomain": "devops",
+      "difficulty": 2,
+      "additionalNotes": "Configure ruff or flake8 to block merges with style violations.",
+      "source_hlj_id": "REQ 001-023",
+      "domain_id": "P-SAAS-069"
+    },
+    {
+      "id": "REQ-158-HLJ-Chunk_1-Item_24-v1.0",
+      "domain": "unknown",
+      "summary": "Enforce code formatting in CI using black",
+      "priority": "Medium",
+      "tags": [
+        "code_formatting",
+        "black",
+        "ci"
+      ],
+      "subdomain": "devops",
+      "difficulty": 2,
+      "additionalNotes": "Automatically check Python formatting compliance.",
+      "source_hlj_id": "REQ 001-024",
+      "domain_id": "P-SAAS-069"
+    },
+    {
+      "id": "REQ-158-HLJ-Chunk_1-Item_25-v1.0",
+      "domain": "unknown",
+      "summary": "Publish coverage reports via Codecov or GitHub",
+      "priority": "Low",
+      "tags": [
+        "coverage_reporting",
+        "codecov",
+        "ci_metrics"
+      ],
+      "subdomain": "devops",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied – Ensure visibility of test coverage over time.",
+      "source_hlj_id": "REQ 001-025",
+      "domain_id": "P-SAAS-069"
+    },
+    {
+      "id": "REQ-158-HLJ-Chunk_1-Item_26-v1.0",
+      "domain": "unknown",
+      "summary": "Run multi-version Python matrix builds in CI",
+      "priority": "Low",
+      "tags": [
+        "python_matrix",
+        "multi_version",
+        "ci_compatibility"
+      ],
+      "subdomain": "devops",
+      "difficulty": 3,
+      "additionalNotes": "origin: implied – Support Python 3.8 to 3.10 and multiple OS.",
+      "source_hlj_id": "REQ 001-026",
+      "domain_id": "P-SAAS-069"
+    },
+    {
+      "id": "REQ-158-HLJ-Chunk_1-Item_27-v1.0",
+      "domain": "unknown",
+      "summary": "Generate release package on Git tag",
+      "priority": "Medium",
+      "tags": [
+        "semantic_versioning",
+        "release_workflow"
+      ],
+      "subdomain": "devops",
+      "difficulty": 3,
+      "additionalNotes": "CI should build and publish a wheel on version tag push.",
+      "source_hlj_id": "REQ 001-027",
+      "domain_id": "P-SAAS-069"
+    },
+    {
+      "id": "REQ-158-HLJ-Chunk_1-Item_28-v1.0",
+      "domain": "unknown",
+      "summary": "Adopt semantic versioning for releases",
+      "priority": "Low",
+      "tags": [
+        "versioning",
+        "semver",
+        "release_management"
+      ],
+      "subdomain": "devops",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied – Use MAJOR.MINOR.PATCH format for version control.",
+      "source_hlj_id": "REQ 001-028",
+      "domain_id": "P-SAAS-069"
+    },
+    {
+      "id": "REQ-158-HLJ-Chunk_1-Item_29-v1.0",
+      "domain": "unknown",
+      "summary": "Document CI setup in the repo",
+      "priority": "Low",
+      "tags": [
+        "ci_documentation",
+        "repo_setup"
+      ],
+      "subdomain": "documentation",
+      "difficulty": 1,
+      "additionalNotes": "origin: implied – Include .github/workflows and usage notes.",
+      "source_hlj_id": "REQ 001-029",
+      "domain_id": "P-SAAS-069"
+    },
+    {
+      "id": "REQ-158-HLJ-Chunk_1-Item_30-v1.0",
+      "domain": "unknown",
+      "summary": "Classify all reported errors by type",
+      "priority": "High",
+      "tags": [
+        "error_taxonomy",
+        "syntax_error",
+        "semantic_error"
+      ],
+      "subdomain": "error_handling",
+      "difficulty": 3,
+      "additionalNotes": "Group errors into syntax, semantic, logical warning categories.",
+      "source_hlj_id": "REQ 001-030",
+      "domain_id": "P-SAAS-069"
+    },
+    {
+      "id": "REQ-158-HLJ-Chunk_1-Item_31-v1.0",
+      "domain": "unknown",
+      "summary": "Show line and token in parse error messages",
+      "priority": "Medium",
+      "tags": [
+        "error_detail",
+        "line_number",
+        "token_highlighting"
+      ],
+      "subdomain": "error_handling",
+      "difficulty": 2,
+      "additionalNotes": "Improves debug usability during development.",
+      "source_hlj_id": "REQ 001-031",
+      "domain_id": "P-SAAS-069"
+    },
+    {
+      "id": "REQ-158-HLJ-Chunk_1-Item_32-v1.0",
+      "domain": "unknown",
+      "summary": "Raise semantic error on gate use before declaration",
+      "priority": "High",
+      "tags": [
+        "semantic_check",
+        "declaration_order"
+      ],
+      "subdomain": "semantic_analysis",
+      "difficulty": 3,
+      "additionalNotes": "Disallow use-before-declare for custom and opaque gates.",
+      "source_hlj_id": "REQ 001-032",
+      "domain_id": "P-SAAS-069"
+    },
+    {
+      "id": "REQ-158-HLJ-Chunk_1-Item_33-v1.0",
+      "domain": "unknown",
+      "summary": "Add command-line interface for analysis tool",
+      "priority": "Low",
+      "tags": [
+        "cli",
+        "user_interface"
+      ],
+      "subdomain": "tooling",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied – Allow CLI usage like `python qcheck file.qasm`.",
+      "source_hlj_id": "REQ 001-033",
+      "domain_id": "P-SAAS-069"
+    },
+    {
+      "id": "REQ-158-HLJ-Chunk_1-Item_34-v1.0",
+      "domain": "unknown",
+      "summary": "Build PyPI package for public distribution",
+      "priority": "Low",
+      "tags": [
+        "packaging",
+        "pypi",
+        "distribution"
+      ],
+      "subdomain": "release",
+      "difficulty": 3,
+      "additionalNotes": "origin: implied – Allow installation via pip install qasm-analyzer.",
+      "source_hlj_id": "REQ 001-034",
+      "domain_id": "P-SAAS-069"
+    }
+  ]
+}

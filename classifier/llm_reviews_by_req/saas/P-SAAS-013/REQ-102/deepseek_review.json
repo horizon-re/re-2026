@@ -1,0 +1,98 @@
+{
+  "req_id": "REQ-102",
+  "doc_id": "6dbdc3a6-a71c-58d6-885a-df498f9d405e",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-013",
+  "model": "deepseek-r1:7b",
+  "review_timestamp": "2026-01-20T23:17:11.758417+00:00",
+  "counts": {
+    "total": 8,
+    "llm_neg": 7,
+    "pipe_pos": 2,
+    "flip_pos_to_neg": 1,
+    "llm_pos": 1,
+    "pipe_neg": 6
+  },
+  "reviews": [
+    {
+      "sent_id": "REQ-102::s001",
+      "order": 1,
+      "text": "Hey @dev-team, we need to get a centralized microservices health-check dashboard up ASAP.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Request for an action without enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-102::s002",
+      "order": 2,
+      "text": "Being on call tonight has highlighted the need for better visibility into our services.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Expresses a need for better visibility but no enforceable action."
+    },
+    {
+      "sent_id": "REQ-102::s003",
+      "order": 3,
+      "text": "Ideally, it should display key metrics like CPU%, memory%, restart count, and latency for all our microservices.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Contains 'ideally' and uses 'should,' indicating a preference rather than enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-102::s004",
+      "order": 4,
+      "text": "Let's aim for a refresh interval of 30 seconds and include a \"last updated\" timestamp on each panel.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Implies a target without enforcing an action."
+    },
+    {
+      "sent_id": "REQ-102::s005",
+      "order": 5,
+      "text": "We also need an alert rule configured: if any service restarts more than 5 times within a 10-minute window, it should automatically post a notification to the #devops channel.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Imposes an enforceable alert rule with a specific condition and action."
+    },
+    {
+      "sent_id": "REQ-102::s006",
+      "order": 6,
+      "text": "I've linked some example Grafana panels here: [Link to Grafana examples] and the backlog ticket for this task is here: [Link to Backlog Ticket].",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Provides instructions for creating something non-enforceable."
+    },
+    {
+      "sent_id": "REQ-102::s007",
+      "order": 7,
+      "text": "Let's prioritize this tomorrow morning.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Sets a priority without enforceable action."
+    },
+    {
+      "sent_id": "REQ-102::s008",
+      "order": 8,
+      "text": "Thanks!",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.5,
+      "reason_code": "EXAMPLE_OR_EXPLANATION",
+      "reason_text": "An acknowledgment with an example provided."
+    }
+  ]
+}

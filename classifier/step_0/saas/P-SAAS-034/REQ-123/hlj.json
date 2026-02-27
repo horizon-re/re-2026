@@ -1,0 +1,95 @@
+{
+  "doc_id": "53006f51-c770-53b2-a826-c3298b2eb7bd",
+  "req_key": "saas::P-SAAS-034::REQ-123",
+  "req_id": "REQ-123",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-034",
+  "source": {
+    "raw_path": "02_raw_requirements/saas/P-SAAS-034/req-123_raw.txt",
+    "refined_path": "03_refined_json_normalized/saas/P-SAAS-034/req-123_refined.json",
+    "origin": "both"
+  },
+  "text": "Noted — this is the third merge-tag failure this month. We need to address this head-on: please implement regression tests specifically for the merge-tag parser to prevent recurrence. Also set up real-time monitoring of email render errors, with auto-alerts to #email-ops if the failure rate exceeds 0.1%. This will ensure rapid awareness and triage. Finally, the fix must be developed, tested, and deployed no later than Friday 18:00 UTC. Let’s close this loop properly — confirm ownership and ETA by EOD.",
+  "structured_data": [
+    {
+      "id": "REQ-123-HLJ-Chunk_1-Item_1-v1.0",
+      "domain": "saas",
+      "summary": "Address merge-tag parser failure by implementing regression tests",
+      "priority": "High",
+      "tags": [
+        "testing",
+        "merge_tag",
+        "parser"
+      ],
+      "subdomain": "quality_assurance",
+      "difficulty": 4,
+      "additionalNotes": "Regression tests are needed to prevent future merge-tag failures",
+      "source_hlj_id": "REQ 001-001",
+      "domain_id": "P-SAAS-034"
+    },
+    {
+      "id": "REQ-123-HLJ-Chunk_1-Item_2-v1.0",
+      "domain": "saas",
+      "summary": "Set up real-time error monitoring for email renders",
+      "priority": "High",
+      "tags": [
+        "monitoring",
+        "email_render",
+        "real_time"
+      ],
+      "subdomain": "monitoring_alerting",
+      "difficulty": 4,
+      "additionalNotes": "Monitor email render failures continuously to enable quick issue detection",
+      "source_hlj_id": "REQ 001-002",
+      "domain_id": "P-SAAS-034"
+    },
+    {
+      "id": "REQ-123-HLJ-Chunk_1-Item_3-v1.0",
+      "domain": "saas",
+      "summary": "Alert #email-ops on failure rate > 0.1%",
+      "priority": "High",
+      "tags": [
+        "alerting",
+        "email_ops",
+        "failure_rate"
+      ],
+      "subdomain": "monitoring_alerting",
+      "difficulty": 3,
+      "additionalNotes": "Ensure real-time alerts for email rendering issues",
+      "source_hlj_id": "REQ 001-003",
+      "domain_id": "P-SAAS-034"
+    },
+    {
+      "id": "REQ-123-HLJ-Chunk_1-Item_4-v1.0",
+      "domain": "saas",
+      "summary": "Fix merge-tag parser issue by Friday 18:00 UTC",
+      "priority": "High",
+      "tags": [
+        "deployment",
+        "fix",
+        "merge_tag"
+      ],
+      "subdomain": "development",
+      "difficulty": 5,
+      "additionalNotes": "Fix must be developed, tested, and deployed before the deadline",
+      "source_hlj_id": "REQ 001-004",
+      "domain_id": "P-SAAS-034"
+    },
+    {
+      "id": "REQ-123-HLJ-Chunk_1-Item_5-v1.0",
+      "domain": "saas",
+      "summary": "Confirm ownership and ETA by EOD",
+      "priority": "High",
+      "tags": [
+        "communication",
+        "ownership",
+        "timeline"
+      ],
+      "subdomain": "project_management",
+      "difficulty": 2,
+      "additionalNotes": "Confirm responsibility and estimated completion time to ensure accountability",
+      "source_hlj_id": "REQ 001-005",
+      "domain_id": "P-SAAS-034"
+    }
+  ]
+}

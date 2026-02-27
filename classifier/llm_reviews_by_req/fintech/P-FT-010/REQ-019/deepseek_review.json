@@ -1,0 +1,829 @@
+{
+  "req_id": "REQ-019",
+  "doc_id": "a14c6bf3-ff29-5ca8-811e-626fdb8ca9b1",
+  "domain": "fintech",
+  "prompt_id": "P-FT-010",
+  "model": "deepseek-r1:7b",
+  "review_timestamp": "2026-01-20T22:17:06.756568+00:00",
+  "counts": {
+    "total": 81,
+    "llm_pos": 43,
+    "pipe_pos": 19,
+    "llm_neg": 38,
+    "flip_pos_to_neg": 4,
+    "pipe_neg": 62,
+    "flip_neg_to_pos": 28
+  },
+  "reviews": [
+    {
+      "sent_id": "REQ-019::s001",
+      "order": 1,
+      "text": "AI-Powered Stock Market Prediction and Automated Trading System: A Comprehensive Analysis1.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "System analysis title."
+    },
+    {
+      "sent_id": "REQ-019::s002",
+      "order": 2,
+      "text": "Executive SummaryThe concept of an AI-driven system capable of analyzing real-time stock market data, predicting price movements through machine learning, and executing trades automatically presents a compelling vision for the future of investing.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Automated trading based on ML models"
+    },
+    {
+      "sent_id": "REQ-019::s003",
+      "order": 3,
+      "text": "Such a system promises to leverage the power of artificial intelligence to identify complex patterns invisible to human analysts, potentially leading to enhanced investment returns and streamlined trading processes.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "PERFORMANCE_REQUIREMENT",
+      "reason_text": "Promises enhanced investment returns and streamlined trading."
+    },
+    {
+      "sent_id": "REQ-019::s004",
+      "order": 4,
+      "text": "This report delves into the feasibility and critical considerations surrounding the development of such a system, examining the necessary data infrastructure, suitable machine learning techniques, regulatory landscape, user interface design, and inherent limitations.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Feasibility discussion"
+    },
+    {
+      "sent_id": "REQ-019::s005",
+      "order": 5,
+      "text": "While the potential benefits are significant, the development of a reliable and effective AI trading system involves navigating substantial challenges, including data acquisition costs, the inherent unpredictability of financial markets, and the need for stringent risk management and regulatory compliance.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Data acquisition costs and market unpredictability"
+    },
+    {
+      "sent_id": "REQ-019::s006",
+      "order": 6,
+      "text": "This analysis provides a roadmap of the key aspects to consider, offering insights into the journey from the initial concept to a potentially functional and responsible AI-powered trading platform.2.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.5,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Development steps"
+    },
+    {
+      "sent_id": "REQ-019::s007",
+      "order": 7,
+      "text": "Deconstructing the VisionThe user's description outlines a sophisticated AI trading system with several key components.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.4,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Customization options"
+    },
+    {
+      "sent_id": "REQ-019::s008",
+      "order": 8,
+      "text": "At its core lies the ability to ingest real-time stock market data directly from various APIs, including potentially premium sources like Bloomberg [user query].",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.7,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "ML engine for predictions"
+    },
+    {
+      "sent_id": "REQ-019::s009",
+      "order": 9,
+      "text": "This constant stream of information would then be fed into a machine learning engine, trained on extensive historical data to discern patterns and predict future stock price fluctuations [user query].",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Optimal times to buy or sell"
+    },
+    {
+      "sent_id": "REQ-019::s010",
+      "order": 10,
+      "text": "The system envisions providing timely notifications to users, suggesting optimal times to buy or sell stocks, and ultimately automating the trading process by connecting to brokerage accounts",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Automating the trading process"
+    },
+    {
+      "sent_id": "REQ-019::s011",
+      "order": 11,
+      "text": "[user query].",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.3,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Customization options for risk and sector focus"
+    },
+    {
+      "sent_id": "REQ-019::s012",
+      "order": 12,
+      "text": "To enhance user experience, the platform would feature intuitive dashboards with visualizations of predictions, confidence scores for trades, and a user-friendly interface [user query].",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "EXAMPLE_OR_EXPLANATION",
+      "reason_text": "Describes platform features without enforcing behavior."
+    },
+    {
+      "sent_id": "REQ-019::s013",
+      "order": 13,
+      "text": "Furthermore, the user envisions customization options for risk tolerance and sector focus, with future aspirations to expand into options and cryptocurrency trading [user query].Underlying this vision are several implicit requirements and key questions.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Risk tolerance and sector focus"
+    },
+    {
+      "sent_id": "REQ-019::s014",
+      "order": 14,
+      "text": "The desire for high accuracy in predictions and seamless automation of trading activities are evident.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "High accuracy in predictions"
+    },
+    {
+      "sent_id": "REQ-019::s015",
+      "order": 15,
+      "text": "The emphasis on a slick, user-friendly interface suggests a need for accessibility and ease of use for a broad audience.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "User-friendly interface"
+    },
+    {
+      "sent_id": "REQ-019::s016",
+      "order": 16,
+      "text": "The ambition to eventually handle options and cryptocurrency indicates a forward-looking perspective and a desire for a comprehensive investment tool.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Handling options and crypto trading"
+    },
+    {
+      "sent_id": "REQ-019::s017",
+      "order": 17,
+      "text": "This report will address critical questions such as the availability and cost of real-time Canadian stock data, the most appropriate machine learning algorithms for this task, the realistic accuracy levels achievable in stock market prediction, the regulatory hurdles for automated trading in Canada, and the design considerations for a user-centric and customizable platform.3.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Lists topics for analysis, not enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-019::s018",
+      "order": 18,
+      "text": "The Data Pipeline: Fueling the AI EngineA foundational element of the envisioned AI trading system is the acquisition of real-time stock market data.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Real-time data acquisition"
+    },
+    {
+      "sent_id": "REQ-019::s019",
+      "order": 19,
+      "text": "For Canadian markets, several providers offer APIs that deliver this crucial information.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Historical data access"
+    },
+    {
+      "sent_id": "REQ-019::s020",
+      "order": 20,
+      "text": "TMX Infoservices, the data arm of the Toronto Stock Exchange (TSX) and TSX Venture Exchange (TSXV), provides real-time data feeds for all listed instruments, including equities, ETFs, options, and more.1",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.75,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Canadian exchanges data"
+    },
+    {
+      "sent_id": "REQ-019::s021",
+      "order": 21,
+      "text": "These feeds encompass both Level 1 (top-of-book) and Level 2 (market depth) data, offering a comprehensive view of market activity.1",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Level 1 and Level 2 data"
+    },
+    {
+      "sent_id": "REQ-019::s022",
+      "order": 22,
+      "text": "Similarly, the Canadian Securities Exchange (CSE) also offers a real-time market data feed covering all trading activity on its exchange, including CSE-listed and TSX/TSXV-listed securities.3 Beyond the exchanges themselves, other vendors like LSEG (London Stock Exchange Group) provide real-time data services for the Toronto Stock Exchange, with various delivery mechanisms including APIs and cloud platforms.1 Marketstack offers worldwide stock market data, including support for over 70 exchanges such as the Canadian Securities Exchange (XCNQ) and the Toronto Stock Exchange (XTSE).4 Polygon.io also provides institutional-grade, real-time market data via RESTful APIs and WebSockets, with coverage that extends to Canadian markets.5 Cboe Canada delivers real-time pricing data for all Canadian listed companies across its four trading venues.6These APIs offer a rich set of features and data points essential for building a sophisticated trading system.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.75,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Market depth data"
+    },
+    {
+      "sent_id": "REQ-019::s023",
+      "order": 23,
+      "text": "Beyond real-time pricing, many providers also offer access to historical data, which is crucial for training machine learning models.1 The data is typically delivered through various mechanisms, including RESTful APIs for on-demand requests, WebSockets for streaming real-time updates, and cloud-based platforms for scalable access.1 While some providers offer free plans with limitations, reliable access to real-time data often requires paid subscriptions.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Historical data via APIs"
+    },
+    {
+      "sent_id": "REQ-019::s024",
+      "order": 24,
+      "text": "For instance, Marketstack's real-time and intraday data starts at a certain price point 4, and accessing real-time data from the CSE involves specific fees.3 TMX Infoservices' real-time data products are available through subscriptions, with pricing details obtainable by contacting them directly or through their webstore.2For premium data, the Bloomberg Terminal stands as a comprehensive source, offering real-time and historical data across a vast array of financial instruments.9",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.75,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Pricing and historical data from providers"
+    },
+    {
+      "sent_id": "REQ-019::s025",
+      "order": 25,
+      "text": "However, this comes at a significant cost, with annual subscriptions per user ranging from approximately $24,000 to $30,000.9 While the Bloomberg Terminal includes API access, it may involve additional fees.13 Given the high cost, alternatives such as Koyfin, FactSet, and YCharts offer a range of financial data and analytics at potentially more accessible price points.10 Providers like FinPricing also offer financial market data via APIs.11 Additionally, for specific Canadian macroeconomic data, the Bank of Canada provides free access to information such as the Canadian Overnight Repo Rate Average (CORRA).14 This freely available data can be valuable for incorporating broader economic indicators into the AI trading system.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.7,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Cost implications of platform alternatives."
+    },
+    {
+      "sent_id": "REQ-019::s026",
+      "order": 26,
+      "text": "Table 1: Comparison of Real-Time Stock Market Data API Providers in CanadaProvider NameCanadian Market CoverageData GranularityDelivery MechanismsKey FeaturesPricingDocumentation/Pricing LinkTMX InfoservicesTSX, TSXV, TSX Alpha, MXLevel 1 & 2, Trades, Quotes, Reference DataAPI, Cloud, Desktop, etc.Real-time, Delayed, Historical, Benchmarks, Indices, Normalized DataPaid Subscription(https://www.tmxinfoservices.com/),(https://www.tmxwebstore.com/)MarketstackCSE (XCNQ), TSX (XTSE), and 70+ global exchangesReal-time, Intraday, End-of-Day, HistoricalREST API30,000+ worldwide tickers (Real-time), 500,000+ tickers (EOD), Free PlanFree (up to 100 requests/month), Paid plans from $9.99/monthMarketstack Documentation, Marketstack PricingPolygon.ioCanadian Markets included in global coverageReal-time, HistoricalREST API, WebSocket, SQL, Flat FilesInstitutional-grade data, Low latency (<20ms), Clean & NormalizedSimple & Transparent Monthly PricingPolygon.ioCanadian Securities Exchange (CSE)CSEReal-time (Trades, Bid/Offer, Orders), HistoricalMarket Data FeedReal-time broadcast of all trading activity, Bulletins, Market SummariesFees apply(https://thecse.com/trading/market-data/),(https://thecse.com/content/CSE_Market_Access_and_Data_Fee_Schedule_Jan_1_2024.pdf,(https://thecse.com/content/CSE_Market_Access_and_Data_Fee_Schedule_Jan_1_2024.pdf))LSEGTSXUltra-low, Low-latency, Consolidated Feeds, HistoricalAPI, Cloud, Desktop, etc.Level 1 & 2, Benchmarks, Indices, Normalized Trade DataPaid Subscription(https://www.lseg.com/en/data-analytics)Cboe CanadaAll Canadian listed securities (NEO-L, NEO-N, NEO-D, MATCHNow)Real-time, Historical, Reference DataMulticast Channel, Major Data DistributorsFull depth order book information, Trades, StatisticsReal-time data free for retail investors via platforms(https://www.cboe.com/market_data_services/ca/equities/)4.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describes API features without enforcing behavior."
+    },
+    {
+      "sent_id": "REQ-019::s027",
+      "order": 27,
+      "text": "The Predictive Powerhouse: Applying Machine LearningOnce the data pipeline is established, the core of the AI trading system lies in its ability to predict stock market movements using machine learning.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Imposes enforceable AI trading behavior using machine learning."
+    },
+    {
+      "sent_id": "REQ-019::s028",
+      "order": 28,
+      "text": "A variety of algorithms can be employed for this task, each with its own strengths and weaknesses.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Explains algorithms without enforcing specific usage."
+    },
+    {
+      "sent_id": "REQ-019::s029",
+      "order": 29,
+      "text": "Time series analysis techniques, such as ARIMA (Autoregressive Integrated Moving Average), are traditionally used for forecasting based on historical data patterns and can be effective for capturing linear dependencies and short-term fluctuations in stock prices.15Beyond traditional time series methods, a wide array of machine learning algorithms has been successfully applied to stock market forecasting.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Discusses methods for forecasting, not enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-019::s030",
+      "order": 30,
+      "text": "These include regression-based methods like Linear Regression, tree-based models such as Decision Trees and Random Forests, and instance-based learners like K-Nearest Neighbors (KNN).15 Support Vector Machines (SVM), known for their effectiveness in classification and regression tasks, have also shown promise in predicting stock price directions.15 Ensemble methods like Random Forests and boosting algorithms like XGBoost are also frequently used and can offer high accuracy.15In recent years, deep learning techniques have gained significant traction in financial forecasting.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Mentions specific models used in prediction, imposing behavior."
+    },
+    {
+      "sent_id": "REQ-019::s031",
+      "order": 31,
+      "text": "Long Short-Term Memory (LSTM) networks, a type of Recurrent Neural Network (RNN), are particularly well-suited for analyzing sequential data like stock prices and can capture long-term dependencies.15 Other deep learning architectures, such as Convolutional Neural Networks (CNNs) and Gated Recurrent Units (GRUs), are also being explored for their ability to extract complex patterns from financial data.30Training these machine learning models effectively requires access to substantial amounts of historical stock data, typically spanning several years and including features like Open, Close, High, Low prices, and trading volume.16",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Explains data processing without enforcing methods."
+    },
+    {
+      "sent_id": "REQ-019::s032",
+      "order": 32,
+      "text": "The quality and quantity of this data are paramount for building a reliable prediction model.15 Feature engineering plays a crucial role in enhancing model accuracy.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Discusses data quality but doesn't enforce it."
+    },
+    {
+      "sent_id": "REQ-019::s033",
+      "order": 33,
+      "text": "This involves creating relevant features from the raw data, such as moving averages, technical indicators (e.g., MACD 25), volatility measures, and even incorporating external factors like sentiment analysis derived from news articles and social media.27 Including data from global markets can also provide valuable context for predicting domestic stock movements.29 Before deploying any model for live trading, rigorous backtesting on historical data (data not used during training) is essential to evaluate its performance and identify potential pitfalls like overfitting.16",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.5,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Explains feature creation, not enforcing it."
+    },
+    {
+      "sent_id": "REQ-019::s034",
+      "order": 34,
+      "text": "Furthermore, engaging in paper trading, which simulates real-time trading without using actual capital, is a critical step to validate the model's effectiveness in a live market environment.47Evaluating the accuracy of stock prediction models involves using various metrics depending on the specific task.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describes validation but doesn't enforce it."
+    },
+    {
+      "sent_id": "REQ-019::s035",
+      "order": 35,
+      "text": "For regression tasks (predicting the actual price), common metrics include Mean Squared Error (MSE), Root Mean Squared Error (RMSE), Mean Absolute Error (MAE), and Mean Absolute Percentage Error (MAPE).15 For classification tasks (predicting the direction of price movement), accuracy, F1 score, and ROC-AUC are frequently used.31",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Explains evaluation metrics, not enforcing use."
+    },
+    {
+      "sent_id": "REQ-019::s036",
+      "order": 36,
+      "text": "It is important to recognize the inherent limitations of stock market prediction.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.5,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Discusses limitations without enforcing behavior."
+    },
+    {
+      "sent_id": "REQ-019::s037",
+      "order": 37,
+      "text": "The market is characterized by volatility, noise, non-linear behavior, and is susceptible to unpredictable events often referred to as \"black swan\"",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describes market dynamics, not enforcing action."
+    },
+    {
+      "sent_id": "REQ-019::s038",
+      "order": 38,
+      "text": "events.16 Achieving consistently high prediction accuracy, such as above 60-70%, is a significant challenge.34 Models can easily overfit to historical data, performing well in the past but failing to generalize to future market conditions.40 Additionally, market dynamics are constantly evolving, leading to a phenomenon known as model drift, where the model's performance degrades over time.15Table 2: Comparison of Machine Learning Algorithms for Stock Market PredictionAlgorithm NameTypeKey StrengthsKey WeaknessesTypical Accuracy Range (Direction Prediction)Data RequirementsARIMATime",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Mentions challenges without enforcing solutions."
+    },
+    {
+      "sent_id": "REQ-019::s039",
+      "order": 39,
+      "text": "SeriesHandles time series data, effective for linear dependencies and short-term trendsAssumes stationarity, struggles with non-linear data and long-term predictionsVaries significantly based on market and parametersHistorical price dataLinear RegressionRegressionSimple to implement and interpretAssumes linear relationships, may not capture market complexitiesGenerally lowerHistorical price dataDecision TreesRegression/ClassificationHandles both numerical and categorical data, robust to outliersCan be prone to overfittingModerateHistorical price dataRandom ForestsRegression/ClassificationHigh accuracy, robust to outliers, handles large datasetsCan be prone to overfitting if not properly tunedHigh (can reach 80-90% in some studies)Historical price dataSVMRegression/ClassificationEffective in high-dimensional spaces, high accuracy for classificationComputationally intensive, challenging to interpretModerate to High (can reach 70-80%+)Historical price dataKNNRegression/ClassificationEasy to understand and implementComputationally intensive for large datasets, sensitive to feature scalingLower to ModerateHistorical price dataXGBoostRegression/ClassificationHigh accuracy, includes regularization to prevent overfittingCan be complex to tuneHigh (similar to or better than Random Forests)Historical price dataLSTMDeep LearningCaptures long-term dependencies in time series data, effective for non-linear patternsRequires large datasets, computationally expensive to trainModerate to High (can reach 60-80%+)Historical price dataNote: Accuracy ranges are indicative and can vary greatly depending on the specific stock, time period, features used, and model parameters.5.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "PERFORMANCE_REQUIREMENT",
+      "reason_text": "Accuracy ranges for AI models."
+    },
+    {
+      "sent_id": "REQ-019::s040",
+      "order": 40,
+      "text": "Automation in Action: Implementing the Trading SystemTo realize the vision of automated trading, the AI system needs to integrate with brokerage platforms that offer this functionality.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.75,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Integration with brokerage platforms."
+    },
+    {
+      "sent_id": "REQ-019::s041",
+      "order": 41,
+      "text": "Several Canadian online brokers provide platforms that could potentially be used for this purpose, including TD Direct Investing, RBC Direct Investing, Questrade, Scotia iTRADE, CIBC Investor's Edge, and",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Lists brokers, not enforcing specific usage."
+    },
+    {
+      "sent_id": "REQ-019::s042",
+      "order": 42,
+      "text": "Wealthsimple.57",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.5,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Repeats information without new enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-019::s043",
+      "order": 43,
+      "text": "Among these, Interactive Brokers Canada is particularly popular for algorithmic trading due to its robust Application Programming Interface (API).7 Many brokers offer APIs that allow for programmatic access to trading functionalities, enabling the AI system to automatically place orders, manage positions, and stream real-time market data.7",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Discusses platform features, not enforcing them."
+    },
+    {
+      "sent_id": "REQ-019::s044",
+      "order": 44,
+      "text": "These platforms also offer various features relevant to automated trading, such as advanced order types (e.g., stop-loss, limit orders), real-time data feeds, and some even provide backtesting environments.57",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Mentions API features that could impose behavior."
+    },
+    {
+      "sent_id": "REQ-019::s045",
+      "order": 45,
+      "text": "The specific features and capabilities of each platform's API will influence the design and complexity of the automated trading system.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Influence on system design."
+    },
+    {
+      "sent_id": "REQ-019::s046",
+      "order": 46,
+      "text": "Operating an automated trading system in Ontario necessitates careful consideration of the regulatory landscape overseen by the Ontario Securities Commission (OSC).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Mentions regulatory actions, imposing enforcement."
+    },
+    {
+      "sent_id": "REQ-019::s047",
+      "order": 47,
+      "text": "The OSC is the primary regulatory body for securities markets in Ontario, responsible for enforcing securities laws and regulating exchanges, alternative trading systems (ATSs), and self-regulatory organizations (SROs) like IIROC (Investment Industry Regulatory Organization of Canada).62 Individuals or firms providing advice or trading in securities within Ontario are required to register with the OSC.64 Therefore, depending on the nature and scope of the AI trading system, especially if it is intended for use by others, registration with the OSC might be a necessary step.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.75,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Registration with OSC."
+    },
+    {
+      "sent_id": "REQ-019::s048",
+      "order": 48,
+      "text": "Furthermore, any automated trading system must adhere to the rules and regulations of the specific marketplaces (exchanges, ATSs) on which it is executing trades.62 Compliance with these regulations is crucial for the legal and proper operation of the automated system.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Compliance with market regulations."
+    },
+    {
+      "sent_id": "REQ-019::s049",
+      "order": 49,
+      "text": "Ensuring responsible automation is paramount.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Imposes responsible automation behavior."
+    },
+    {
+      "sent_id": "REQ-019::s050",
+      "order": 50,
+      "text": "Before deploying the AI trading system with real capital, extensive paper trading in a simulated environment is absolutely essential.16",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describes paper trading but doesn't enforce it."
+    },
+    {
+      "sent_id": "REQ-019::s051",
+      "order": 51,
+      "text": "This allows for thorough testing of the system's logic, identification of potential errors, and evaluation of its performance under various market conditions without financial risk.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Enables thorough testing of system logic for error identification and performance evaluation under various market conditions."
+    },
+    {
+      "sent_id": "REQ-019::s052",
+      "order": 52,
+      "text": "Moreover, implementing robust risk management controls within the automated system is critical.15",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Imposes the requirement for implementing robust risk management controls."
+    },
+    {
+      "sent_id": "REQ-019::s053",
+      "order": 53,
+      "text": "This includes setting stop-loss orders to limit potential losses, carefully defining position sizes to manage capital exposure, and continuously monitoring overall portfolio risk.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Sets enforceable stop-loss orders and defines position sizes for capital exposure management."
+    },
+    {
+      "sent_id": "REQ-019::s054",
+      "order": 54,
+      "text": "The platform should also provide users with the ability to customize their risk tolerance levels, ensuring that the automated trading aligns with their individual investment profiles and risk appetites.616.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Risk tolerance customization."
+    },
+    {
+      "sent_id": "REQ-019::s055",
+      "order": 55,
+      "text": "User-Centric Design:",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-019::s056",
+      "order": 56,
+      "text": "Building an Intuitive PlatformA successful AI trading system must prioritize user experience through an intuitive and informative interface.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Intuitive user interface."
+    },
+    {
+      "sent_id": "REQ-019::s057",
+      "order": 57,
+      "text": "Effective dashboards and data visualizations are crucial for presenting complex information in an accessible manner.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Requires effective dashboards and data visualizations for presenting complex information."
+    },
+    {
+      "sent_id": "REQ-019::s058",
+      "order": 58,
+      "text": "Key performance indicators (KPIs) relevant to the system's operation, such as prediction accuracy, the AI's confidence scores for trades, open positions, overall profit and loss, and various risk metrics, should be clearly displayed.72 Utilizing charts, graphs, and other visual elements can effectively communicate predictions, historical performance trends, and current risk levels, making it easier for users to understand the system's behavior and make informed decisions.72 Clearly presenting the AI's confidence level for each trade recommendation or prediction is also vital for building user trust and guiding their decisions on whether to follow the system's signals",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.75,
+      "reason_code": "PERFORMANCE_REQUIREMENT",
+      "reason_text": "KPI display and risk metrics."
+    },
+    {
+      "sent_id": "REQ-019::s059",
+      "order": 59,
+      "text": "[user query].Timely notifications and alerts are another essential component of a user-friendly AI trading platform.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-019::s060",
+      "order": 60,
+      "text": "The system should provide real-time notifications for potential buy or sell signals generated by the AI, allowing users to react promptly to identified trading opportunities [user query].",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Real-time notifications."
+    },
+    {
+      "sent_id": "REQ-019::s061",
+      "order": 61,
+      "text": "Furthermore, offering customization options for these notifications will enhance the user experience.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Customization options."
+    },
+    {
+      "sent_id": "REQ-019::s062",
+      "order": 62,
+      "text": "This could include allowing users to specify the types of alerts they wish to receive, the specific assets they are interested in tracking, and their preferred method of delivery, such as email or mobile push notifications [user query].Tailoring the trading experience to individual user preferences is also key.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-019::s063",
+      "order": 63,
+      "text": "Enabling users to define their risk tolerance levels is crucial for responsible investing.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Requires enabling user-defined risk tolerance levels for responsible investing."
+    },
+    {
+      "sent_id": "REQ-019::s064",
+      "order": 64,
+      "text": "The AI system should then consider these defined risk parameters when generating trading recommendations or automating trades.61 This customization could be implemented through risk tolerance questionnaires or by allowing users to directly adjust risk-related parameters.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Risk parameter customization."
+    },
+    {
+      "sent_id": "REQ-019::s065",
+      "order": 65,
+      "text": "Additionally, providing options for users to focus their trading activities on specific sectors of the market, such as technology, healthcare, or energy, will allow them to align their trading with their knowledge, interests, or investment strategies.77Looking towards future expansion, incorporating options and cryptocurrency trading presents both opportunities and complexities.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.75,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Sector focus options."
+    },
+    {
+      "sent_id": "REQ-019::s066",
+      "order": 66,
+      "text": "Options trading, with its intricate pricing models and risk profiles, would require more sophisticated AI models and robust risk management strategies within the system.46 Cryptocurrency markets, characterized by high volatility, 24/7 trading cycles, and distinct data sources, also offer potential for AI-driven trading strategies.67 However, the unique characteristics of these asset classes would necessitate careful design and implementation considerations within the AI trading platform.7.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-019::s067",
+      "order": 67,
+      "text": "The Reality Check: Challenges and ConsiderationsDespite the exciting potential of an AI-powered stock market prediction and automated trading system, it is crucial to acknowledge the inherent challenges and limitations.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-019::s068",
+      "order": 68,
+      "text": "Predicting the stock market with absolute certainty, even with the most advanced AI, remains an unattainable goal.16 Financial markets are inherently unpredictable, and sudden market swings and unforeseen events can significantly impact the accuracy of even the most sophisticated models.15 Therefore, it is essential to manage user expectations and emphasize that the AI system should be viewed as a tool to aid in investment decisions, not a guaranteed path to profit.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Uncertainty about stock market predictability."
+    },
+    {
+      "sent_id": "REQ-019::s069",
+      "order": 69,
+      "text": "The performance of the AI model is not static.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-019::s070",
+      "order": 70,
+      "text": "Financial markets are constantly evolving, requiring continuous monitoring of the model's predictions and periodic retraining with new data to maintain its effectiveness.15 This ongoing maintenance is crucial for the system to adapt to changing market dynamics and avoid performance degradation over time.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Continuous model monitoring."
+    },
+    {
+      "sent_id": "REQ-019::s071",
+      "order": 71,
+      "text": "Developing an AI trading system also raises important ethical considerations.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Imposes the requirement for real-time data APIs to function effectively."
+    },
+    {
+      "sent_id": "REQ-019::s072",
+      "order": 72,
+      "text": "Potential biases in the training data could lead to unfair or skewed trading recommendations.40 There are also concerns about algorithmic trading potentially contributing to market instability or even manipulation.50 Ensuring transparency in how the AI makes its decisions and establishing clear lines of accountability are crucial for building trust and mitigating ethical risks.40Financial markets are dynamic and constantly adapting to new information and events.27",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-019::s073",
+      "order": 73,
+      "text": "Therefore, the AI trading system must be designed with adaptability in mind, capable of learning from new patterns and adjusting its strategies accordingly.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.75,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Adaptability in strategy learning."
+    },
+    {
+      "sent_id": "REQ-019::s074",
+      "order": 74,
+      "text": "Incorporating user feedback into the development process will also be invaluable for improving the platform's usability, features, and overall effectiveness",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-019::s075",
+      "order": 75,
+      "text": "[user query].8.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Requires compliance with regulatory standards for security and financial law."
+    },
+    {
+      "sent_id": "REQ-019::s076",
+      "order": 76,
+      "text": "Conclusion and RecommendationsIn conclusion, the development of an AI-powered stock market prediction and automated trading system for the Canadian market is a complex but potentially rewarding endeavor.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Imposes the requirement for an ethical AI trading system."
+    },
+    {
+      "sent_id": "REQ-019::s077",
+      "order": 77,
+      "text": "The availability of real-time data APIs from various providers, coupled with the advancements in machine learning algorithms, makes the core functionality feasible.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-019::s078",
+      "order": 78,
+      "text": "However, achieving consistently high prediction accuracy remains a significant challenge due to the inherent unpredictability of financial markets.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Requires high prediction accuracy despite market unpredictability."
+    },
+    {
+      "sent_id": "REQ-019::s079",
+      "order": 79,
+      "text": "Navigating the regulatory landscape in Ontario and ensuring compliance with securities laws is also crucial.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-019::s080",
+      "order": 80,
+      "text": "To move this project forward, the following recommendations are provided:\nConduct thorough research on the available real-time data APIs for Canadian markets, paying close attention to the cost, data coverage, and delivery mechanisms offered by different providers like TMX Infoservices, Marketstack, Polygon.io, CSE, and LSEG.1\nBegin experimenting with various machine learning algorithms, including time series models like ARIMA and deep learning models like LSTM, alongside traditional machine learning algorithms such as Random Forest and SVM, using historical Canadian stock market data to understand their predictive capabilities.15\nPrioritize the development of a robust backtesting framework to rigorously evaluate the performance of different models on historical data and identify potential issues like overfitting.16\nExplore Canadian brokerage platforms that offer API access for automated trading, such as Interactive Brokers Canada, and carefully review their terms, conditions, and available functionalities.7\nConsult with legal and financial professionals specializing in securities law in Ontario to ensure full compliance with regulations set forth by the OSC and relevant self-regulatory organizations like IIROC.62\nFocus on creating a user-friendly and intuitive interface for the platform, incorporating clear data visualizations, customizable notifications, and options for adjusting risk tolerance and selecting specific market sectors.61\nBegin with extensive paper trading using the automated system before deploying it with real capital to thoroughly test its performance and identify any potential issues in a risk-free environment.16\nImplement strong risk management controls within the system, including stop-loss orders and position sizing, and provide users with the ability to customize their risk tolerance levels.15\nMaintain realistic expectations regarding the accuracy of stock market predictions and plan for continuous monitoring of the model's performance and periodic retraining with new data to ensure its ongoing effectiveness.15\nConsider the ethical implications of AI-driven trading, strive for fairness and transparency in the system's design and operation, and be mindful of potential biases in the data and algorithms.40\nWhile the path to building a fully autonomous and highly accurate AI trading system is fraught with challenges, the potential to leverage artificial intelligence for enhanced investment strategies is undeniable.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-019::s081",
+      "order": 81,
+      "text": "A responsible and informed approach, focusing on robust data, rigorous testing, regulatory compliance, and user-centric design, will be crucial for realizing this vision.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.95,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "The approach focuses on specific behaviors and capabilities."
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "fintech": {
+    "sentences": 3089,
+    "acceptance_rate": 0.333
+  },
+  "saas": {
+    "sentences": 2412,
+    "acceptance_rate": 0.333
+  }
+}

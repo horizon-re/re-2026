@@ -1,0 +1,1 @@
+The micro-investing app must implement an AI-powered feature (flagged as aiPicksV1) launching 1 June 2025, that surfaces no more than five plain-language, emoji-free stock ideas daily—each passing FINRA “communication with the public” standards and logged in compliance_feed_audit—with the feed accessible exclusively to verified users aged 18–30.

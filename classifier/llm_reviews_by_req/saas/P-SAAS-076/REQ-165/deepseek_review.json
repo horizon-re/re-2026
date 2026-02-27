@@ -1,0 +1,77 @@
+{
+  "req_id": "REQ-165",
+  "doc_id": "f797c6c3-7ee6-523f-bb5b-3629040b2925",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-076",
+  "model": "deepseek-r1:7b",
+  "review_timestamp": "2026-01-21T00:20:06.955345+00:00",
+  "counts": {
+    "total": 6,
+    "llm_neg": 5,
+    "pipe_neg": 6,
+    "llm_pos": 1,
+    "flip_neg_to_pos": 1
+  },
+  "reviews": [
+    {
+      "sent_id": "REQ-165::s001",
+      "order": 1,
+      "text": "```\nIF TLON = ∞ OR TLON",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Code snippet with incomplete condition."
+    },
+    {
+      "sent_id": "REQ-165::s002",
+      "order": 2,
+      "text": "= NaN",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Code snippet with value assignment only."
+    },
+    {
+      "sent_id": "REQ-165::s003",
+      "order": 3,
+      "text": "THEN\n    SEND ERR_406;\n    LOG \"TLON value is invalid\" TO orbit_ep_nulls;\nEND IF;",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 1.0,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Conditional logic that sends an error and logs invalid input."
+    },
+    {
+      "sent_id": "REQ-165::s004",
+      "order": 4,
+      "text": "IF TLON < -180 OR TLON >",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Code snippet with incomplete condition."
+    },
+    {
+      "sent_id": "REQ-165::s005",
+      "order": 5,
+      "text": "180 THEN\n    SEND ERR_406;\n    LOG \"TLON value out of range: \" + TLON TO orbit_ep_nulls;",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Code snippet without action following IF statement."
+    },
+    {
+      "sent_id": "REQ-165::s006",
+      "order": 6,
+      "text": "END IF;\n```",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "EXAMPLE_OR_EXPLANATION",
+      "reason_text": "Code block with no accompanying sentence."
+    }
+  ]
+}

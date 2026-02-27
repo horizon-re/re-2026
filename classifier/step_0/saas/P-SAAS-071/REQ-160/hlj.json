@@ -1,0 +1,111 @@
+{
+  "doc_id": "66a72b42-7cbc-5792-a516-fe09a04ca47e",
+  "req_key": "saas::P-SAAS-071::REQ-160",
+  "req_id": "REQ-160",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-071",
+  "source": {
+    "raw_path": "02_raw_requirements/saas/P-SAAS-071/req-160_raw.txt",
+    "refined_path": "03_refined_json_normalized/saas/P-SAAS-071/req-160_refined.json",
+    "origin": "both"
+  },
+  "text": "Bug Title: Swagger-UI Incorrectly Accepts 0-Byte CSV Upload with Success Indicator\n\nDescription:\nWhen uploading a 0-byte CSV file via Swagger-UI, the UI incorrectly displays a success checkmark (✅), suggesting the file was ingested successfully. However, an empty CSV is invalid input and should be rejected at the API level. This leads to misleading feedback for users and allows for invalid ingestion attempts to go unnoticed.\n\nExpected Behavior:\n\t•\tThe backend should validate that uploaded CSV files are larger than 0 bytes.\n\t•\tThe content-type must be explicitly validated (e.g., text/csv).\n\t•\tIf an uploaded file is empty or improperly formatted, the API must return a 400 Bad Request response with a clear error message.\n\t•\tThe incident should be logged in the ingest_failures log with relevant metadata (timestamp, user ID, endpoint, reason).\n\nAcceptance Criteria:\n\t•\tAdd backend checks for file size (> 0 bytes) and correct content-type.\n\t•\tUpdate the API to respond with HTTP 400 on invalid CSV uploads.\n\t•\tCreate a Cypress test to simulate 0-byte upload and assert failure behavior.\n\t•\tEnsure logs are correctly populated in ingest_failures.\n\nPriority: Medium\nImpact: Affects data integrity and user trust during ingestion.",
+  "structured_data": [
+    {
+      "id": "REQ-160-HLJ-Chunk_1-Item_1-v1.0",
+      "domain": "saas",
+      "summary": "Validate that uploaded CSV files are larger than 0 bytes",
+      "priority": "Medium",
+      "tags": [
+        "csv_upload",
+        "file_size_validation",
+        "backend_validation"
+      ],
+      "subdomain": "unknown",
+      "difficulty": 2,
+      "additionalNotes": "Check file.size attribute before processing",
+      "source_hlj_id": "REQ 001-001",
+      "domain_id": "P-SAAS-071"
+    },
+    {
+      "id": "REQ-160-HLJ-Chunk_1-Item_2-v1.0",
+      "domain": "saas",
+      "summary": "Validate the content-type of uploaded files is text/csv",
+      "priority": "Medium",
+      "tags": [
+        "csv_upload",
+        "content_type_validation",
+        "backend_validation"
+      ],
+      "subdomain": "unknown",
+      "difficulty": 2,
+      "additionalNotes": "Verify HTTP Content-Type header equals text/csv",
+      "source_hlj_id": "REQ 001-002",
+      "domain_id": "P-SAAS-071"
+    },
+    {
+      "id": "REQ-160-HLJ-Chunk_1-Item_3-v1.0",
+      "domain": "saas",
+      "summary": "Return HTTP 400 Bad Request for empty or improperly formatted CSV uploads",
+      "priority": "Medium",
+      "tags": [
+        "api_response",
+        "error_handling",
+        "csv_upload"
+      ],
+      "subdomain": "unknown",
+      "difficulty": 2,
+      "additionalNotes": "Return 400 with clear error message on invalid CSV",
+      "source_hlj_id": "REQ 001-003",
+      "domain_id": "P-SAAS-071"
+    },
+    {
+      "id": "REQ-160-HLJ-Chunk_1-Item_4-v1.0",
+      "domain": "saas",
+      "summary": "Log ingestion failures in ingest_failures with timestamp, user ID, endpoint, and reason",
+      "priority": "Medium",
+      "tags": [
+        "logging",
+        "ingest_failures",
+        "metadata"
+      ],
+      "subdomain": "unknown",
+      "difficulty": 3,
+      "additionalNotes": "Include metadata fields: timestamp, user ID, endpoint, and reason",
+      "source_hlj_id": "REQ 001-004",
+      "domain_id": "P-SAAS-071"
+    },
+    {
+      "id": "REQ-160-HLJ-Chunk_1-Item_5-v1.0",
+      "domain": "saas",
+      "summary": "Create Cypress test to simulate 0-byte CSV upload and assert failure behavior",
+      "priority": "Medium",
+      "tags": [
+        "testing",
+        "cypress",
+        "e2e_test"
+      ],
+      "subdomain": "unknown",
+      "difficulty": 3,
+      "additionalNotes": "Simulate 0-byte upload via Cypress and assert API failure",
+      "source_hlj_id": "REQ 001-005",
+      "domain_id": "P-SAAS-071"
+    },
+    {
+      "id": "REQ-160-HLJ-Chunk_1-Item_6-v1.0",
+      "domain": "saas",
+      "summary": "Ensure ingest_failures log entries are correctly populated for invalid uploads",
+      "priority": "Medium",
+      "tags": [
+        "logging",
+        "ingest_failures",
+        "log_validation"
+      ],
+      "subdomain": "unknown",
+      "difficulty": 3,
+      "additionalNotes": "Verify ingest_failures table entry fields",
+      "source_hlj_id": "REQ 001-006",
+      "domain_id": "P-SAAS-071"
+    }
+  ]
+}

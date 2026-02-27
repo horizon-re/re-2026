@@ -1,0 +1,79 @@
+{
+  "doc_id": "9b4b4165-219e-5cca-9907-c138f7330f4d",
+  "req_key": "saas::P-SAAS-033::REQ-122",
+  "req_id": "REQ-122",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-033",
+  "source": {
+    "raw_path": "02_raw_requirements/saas/P-SAAS-033/req-122_raw.txt",
+    "refined_path": "03_refined_json_normalized/saas/P-SAAS-033/req-122_refined.json",
+    "origin": "both"
+  },
+  "text": "🚫 Blocking merge until EU auth latency is addressed. Current benchmark (auth_eu_p95 = 812 ms) exceeds our SLA target of 500 ms. Before this PR can proceed, please:\n\t1.\tRoll out Redis-based session caching to reduce DB roundtrips.\n\t2.\tImplement edge token validation to cut request latency.\n\t3.\tAttach a rollback plan in case the cache rollout introduces regressions.\n\nApply these optimizations and re-run the benchmark. Once auth_eu_p95 < 500 ms, remove the needs-perf-fix label and tag reviewers for re-approval. Performance SLAs are non-negotiable for login-critical flows.",
+  "structured_data": [
+    {
+      "id": "REQ-122-HLJ-Chunk_1-Item_1-v1.0",
+      "domain": "saas",
+      "summary": "Ensure auth_eu_p95 is below 500 ms SLA threshold",
+      "priority": "High",
+      "tags": [
+        "performance_sla",
+        "authentication_latency",
+        "eu_region"
+      ],
+      "subdomain": "user_authentication",
+      "difficulty": 3,
+      "additionalNotes": "Performance must meet login SLA for EU users to ensure reliable access.",
+      "source_hlj_id": "REQ 001-001",
+      "domain_id": "P-SAAS-033"
+    },
+    {
+      "id": "REQ-122-HLJ-Chunk_1-Item_2-v1.0",
+      "domain": "saas",
+      "summary": "Roll out Redis session caching to reduce DB latency",
+      "priority": "High",
+      "tags": [
+        "session_cache",
+        "redis",
+        "db_performance"
+      ],
+      "subdomain": "user_authentication",
+      "difficulty": 3,
+      "additionalNotes": "Minimizes roundtrips for active session lookup by caching session state in Redis.",
+      "source_hlj_id": "REQ 001-002",
+      "domain_id": "P-SAAS-033"
+    },
+    {
+      "id": "REQ-122-HLJ-Chunk_1-Item_3-v1.0",
+      "domain": "saas",
+      "summary": "Implement edge token validation for faster auth",
+      "priority": "High",
+      "tags": [
+        "edge_validation",
+        "token_auth",
+        "latency_optimization"
+      ],
+      "subdomain": "user_authentication",
+      "difficulty": 3,
+      "additionalNotes": "Improves performance by validating access tokens at the edge before backend routing.",
+      "source_hlj_id": "REQ 001-003",
+      "domain_id": "P-SAAS-033"
+    },
+    {
+      "id": "REQ-122-HLJ-Chunk_1-Item_4-v1.0",
+      "domain": "saas",
+      "summary": "Provide rollback plan for session cache deployment",
+      "priority": "Medium",
+      "tags": [
+        "rollback_plan",
+        "deployment_safety",
+        "session_cache"
+      ],
+      "subdomain": "user_authentication",
+      "difficulty": 2,
+      "additionalNotes": "Ensures safe fallback if Redis-based caching introduces regressions in production.",
+      "source_hlj_id": "REQ 001-004",
+      "domain_id": "P-SAAS-033"
+    }
+  ]
+}

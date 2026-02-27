@@ -1,0 +1,14 @@
+**Scope**  
+The data export feature allows users to download all of their personal data in both JSON and CSV formats within 24 hours of request submission. This functionality ensures transparency and aligns with data portability regulations.
+
+**Request Flow**  
+Users initiate the export process via an in-app “Export My Data” button. Once the request is submitted, a confirmation email is sent to the registered address. Upon user confirmation, a secure export link is generated and shared via email. The link remains valid for 72 hours before expiration.
+
+**Data Coverage**  
+The exported package includes comprehensive user data such as profile information, activity logs, and billing history. Internal analytics, system logs, and non-user-facing metadata are deliberately excluded to protect proprietary insights and maintain relevance to the user.
+
+**Security & Compliance**  
+All exported data is bundled in AES-256 encrypted ZIP files. Access is granted via time-bound, signed URLs to ensure secure delivery. Consent and access logs related to export requests are stored for five years to support compliance with privacy regulations such as GDPR and CCPA.
+
+**Scalability**  
+The system is engineered to handle up to 1,000 concurrent export requests. A backend job queue architecture supports export generation, with automatic retry mechanisms to handle failures and ensure reliable delivery at scale.

@@ -1,0 +1,3 @@
+{"unit_id": "REQ-140::au001", "req_id": "REQ-140", "doc_id": "951b75df-a0d4-59e2-9a84-0f6622c127d0", "parent_sent_id": "REQ-140::s002", "order": 1, "text": "The layout must fully mirror all anchor positions for RTL orientation"}
+{"unit_id": "REQ-140::au002", "req_id": "REQ-140", "doc_id": "951b75df-a0d4-59e2-9a84-0f6622c127d0", "parent_sent_id": "REQ-140::s002", "order": 2, "text": "The layout must fully mirror all anchor positions for RTL orientation — emoji 🎉 remains at the end of the line regardless of direction ."}
+{"unit_id": "REQ-140::au003", "req_id": "REQ-140", "doc_id": "951b75df-a0d4-59e2-9a84-0f6622c127d0", "parent_sent_id": "REQ-140::s003", "order": 3, "text": "QA testing must be completed on HoloLens 2 ."}

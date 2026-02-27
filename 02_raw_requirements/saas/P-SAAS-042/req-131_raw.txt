@@ -1,0 +1,7 @@
+In our recent development discussion, the team addressed the need for a unified deployment pipeline capable of supporting microservices across both AWS and GCP. This need arises from our goal to ensure multi-cloud compatibility, reduce infrastructure fragmentation, and streamline our CI/CD processes.
+
+Two primary options were evaluated. Option A proposed using managed Kubernetes services (EKS on AWS and GKE on GCP) in combination with ArgoCD for GitOps-style deployment. Option B considered adopting Acme Orchestrator, a proprietary orchestration platform offering simplified deployment workflows but with limited community support and potential vendor lock-in.
+
+After careful consideration, we decided to proceed with Option A. The choice was driven by the advantages of open standards, strong community support, lower long-term costs, and existing team familiarity with Kubernetes and Helm. Although ArgoCD introduces a steeper learning curve and configuring multi-cluster IAM will require some effort, the benefits of standardized, portable infrastructure across providers outweigh the challenges.
+
+The next steps involve building a proof-of-concept deployment in AWS’s us-east-1 and GCP’s europe-west-1 regions. We'll also update our Terraform modules to reflect this architecture and set a milestone review for May 30, 2025. This decision positions us well for scalable, cloud-agnostic deployments moving forward.

@@ -1,0 +1,1 @@
+{"unit_id": "REQ-163::cu001", "req_id": "REQ-163", "doc_id": "d15ddb71-fa30-5c93-b910-ca3febef40ff", "parent_sent_id": "REQ-163::s004", "order": 1, "text": "The legacy COBOL subroutine CHK3SUM must be adapted to interface with the existing IoT bridge, enabling seamless checksum verification across both legacy and modern systems."}

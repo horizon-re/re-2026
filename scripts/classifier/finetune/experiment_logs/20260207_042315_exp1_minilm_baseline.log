@@ -1,0 +1,25 @@
+Traceback (most recent call last):
+  File "scripts\classifier\finetune\train_multitask_deberta.py", line 36, in <module>
+    from sklearn.model_selection import StratifiedShuffleSplit
+  File "C:\Dvip\plantric-root\venv\lib\site-packages\sklearn\model_selection\__init__.py", line 3, in <module>
+    from ._plot import LearningCurveDisplay, ValidationCurveDisplay
+  File "C:\Dvip\plantric-root\venv\lib\site-packages\sklearn\model_selection\_plot.py", line 7, in <module>
+    from ._validation import learning_curve, validation_curve
+  File "C:\Dvip\plantric-root\venv\lib\site-packages\sklearn\model_selection\_validation.py", line 29, in <module>
+    from ..metrics import check_scoring, get_scorer_names
+  File "C:\Dvip\plantric-root\venv\lib\site-packages\sklearn\metrics\__init__.py", line 7, in <module>
+    from . import cluster
+  File "C:\Dvip\plantric-root\venv\lib\site-packages\sklearn\metrics\cluster\__init__.py", line 25, in <module>
+    from ._unsupervised import (
+  File "C:\Dvip\plantric-root\venv\lib\site-packages\sklearn\metrics\cluster\_unsupervised.py", line 22, in <module>
+    from ..pairwise import _VALID_METRICS, pairwise_distances, pairwise_distances_chunked
+  File "C:\Dvip\plantric-root\venv\lib\site-packages\sklearn\metrics\pairwise.py", line 44, in <module>
+    from ._pairwise_distances_reduction import ArgKmin
+  File "C:\Dvip\plantric-root\venv\lib\site-packages\sklearn\metrics\_pairwise_distances_reduction\__init__.py", line 89, in <module>
+    from ._dispatcher import (
+  File "C:\Dvip\plantric-root\venv\lib\site-packages\sklearn\metrics\_pairwise_distances_reduction\_dispatcher.py", line 18, in <module>
+    from ._radius_neighbors import (
+  File "sklearn\metrics\_pairwise_distances_reduction\_radius_neighbors.pyx", line 1, in init sklearn.metrics._pairwise_distances_reduction._radius_neighbors
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load
+KeyboardInterrupt
+^C

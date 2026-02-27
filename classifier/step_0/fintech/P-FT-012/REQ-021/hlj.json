@@ -1,0 +1,191 @@
+{
+  "doc_id": "c1faa32e-c2c9-537e-8327-9f79165d1f97",
+  "req_key": "fintech::P-FT-012::REQ-021",
+  "req_id": "REQ-021",
+  "domain": "fintech",
+  "prompt_id": "P-FT-012",
+  "source": {
+    "raw_path": "02_raw_requirements/fintech/P-FT-012/req-021_raw.txt",
+    "refined_path": "03_refined_json_normalized/fintech/P-FT-012/req-021_refined.json",
+    "origin": "both"
+  },
+  "text": "Subject: Reimbursement Tool – Initial Thoughts & Scope Overview\n\nHey team,\n\nThanks again for jumping on this! Here’s a rough overview of what we’re looking to build for Reimbursely’s new expense reimbursement platform. We’re aiming to simplify the messy, manual process employees currently go through with spreadsheets and email approvals.\n\nVision\nWe want a simple, mobile-friendly tool that automates out-of-pocket expense claims, approvals, and reimbursements—while staying fully compliant with EU tax rules, GDPR, and ISO‑27001 standards.\n\nUser Roles\n\t•\tEmployees: Upload receipts (photo or PDF), fill basic details, submit.\n\t•\tFinance Managers: Review and approve claims, flag policy issues.\n\t•\tAuditors: View a read-only log of approvals, payouts, and receipts.\n\nCore Functional Requirements\n\t•\tReceipt upload (drag & drop, phone camera).\n\t•\tOCR auto-fill for merchant, date, and amount.\n\t•\tReal-time policy checks (e.g. taxi limit is €50/day).\n\t•\tMulti-currency support with auto-conversion.\n\t•\tSlack notifications for claim status.\n\t•\tInstant suggestions for reclaimable VAT.\n\nNon-Functional & Compliance\n\t•\tFull audit trail on every action.\n\t•\tAll data encrypted at rest and in transit.\n\t•\tGDPR consent flow and data export/deletion options.\n\t•\tHosted in EU-region AWS.\n\nOpen Questions\n\t•\tShould managers get email or Slack alerts by default?\n\t•\tDo we need integrations with accounting tools from MVP?\n\nLet me know what’s missing!\n—Lena",
+  "structured_data": [
+    {
+      "id": "REQ-021-HLJ-Chunk_1-Item_1-v1.0",
+      "domain": "saas",
+      "summary": "Run a scheduled job every Friday at 17:00 local time",
+      "priority": "High",
+      "tags": [
+        "scheduled_job",
+        "automation",
+        "reporting"
+      ],
+      "subdomain": "reporting",
+      "difficulty": 2,
+      "additionalNotes": "Weekly automation required to eliminate manual effort",
+      "source_hlj_id": "REQ 001-001",
+      "domain_id": "P-FT-012"
+    },
+    {
+      "id": "REQ-021-HLJ-Chunk_1-Item_2-v1.0",
+      "domain": "saas",
+      "summary": "Generate KPI reports in CSV and branded PDF formats",
+      "priority": "High",
+      "tags": [
+        "csv_export",
+        "pdf_generation",
+        "reporting"
+      ],
+      "subdomain": "reporting",
+      "difficulty": 3,
+      "additionalNotes": "Output formats must suit both data analysts and executives",
+      "source_hlj_id": "REQ 001-002",
+      "domain_id": "P-FT-012"
+    },
+    {
+      "id": "REQ-021-HLJ-Chunk_1-Item_3-v1.0",
+      "domain": "saas",
+      "summary": "Implement retry logic and audit logging for compliance",
+      "priority": "High",
+      "tags": [
+        "reliability",
+        "audit_logging",
+        "compliance"
+      ],
+      "subdomain": "governance",
+      "difficulty": 4,
+      "additionalNotes": "Logging must support SOC 2 auditing",
+      "source_hlj_id": "REQ 001-003",
+      "domain_id": "P-FT-012"
+    },
+    {
+      "id": "REQ-021-HLJ-Chunk_1-Item_4-v1.0",
+      "domain": "saas",
+      "summary": "Send Slack alerts on job success or failure",
+      "priority": "Medium",
+      "tags": [
+        "slack_notification",
+        "observability",
+        "ops_alerts"
+      ],
+      "subdomain": "monitoring",
+      "difficulty": 2,
+      "additionalNotes": "Use #ops-alerts channel for visibility into report delivery",
+      "source_hlj_id": "REQ 001-004",
+      "domain_id": "P-FT-012"
+    },
+    {
+      "id": "REQ-021-HLJ-Chunk_1-Item_5-v1.0",
+      "domain": "saas",
+      "summary": "Email reports to designated recipients using SES or SMTP",
+      "priority": "High",
+      "tags": [
+        "email_delivery",
+        "smtp",
+        "ses"
+      ],
+      "subdomain": "communication",
+      "difficulty": 2,
+      "additionalNotes": "Reports should reach ops, finance, and C-suite weekly",
+      "source_hlj_id": "REQ 001-005",
+      "domain_id": "P-FT-012"
+    },
+    {
+      "id": "REQ-021-HLJ-Chunk_1-Item_6-v1.0",
+      "domain": "saas",
+      "summary": "Enable one-click 'Email KPI Pack' function for users",
+      "priority": "High",
+      "tags": [
+        "user_experience",
+        "one_click",
+        "reporting"
+      ],
+      "subdomain": "ux",
+      "difficulty": 3,
+      "additionalNotes": "Must be simple enough for non-technical users",
+      "source_hlj_id": "REQ 001-006",
+      "domain_id": "P-FT-012"
+    },
+    {
+      "id": "REQ-021-HLJ-Chunk_1-Item_7-v1.0",
+      "domain": "saas",
+      "summary": "Avoid disrupting existing analytics tools like Domo or Looker",
+      "priority": "Medium",
+      "tags": [
+        "integration",
+        "tool_compatibility",
+        "non_disruptive"
+      ],
+      "subdomain": "integration",
+      "difficulty": 3,
+      "additionalNotes": "Must work alongside existing tools, not replace them",
+      "source_hlj_id": "REQ 001-007",
+      "domain_id": "P-FT-012"
+    },
+    {
+      "id": "REQ-021-HLJ-Chunk_1-Item_8-v1.0",
+      "domain": "saas",
+      "summary": "Ensure robustness against data inconsistencies or generation failures",
+      "priority": "High",
+      "tags": [
+        "error_handling",
+        "data_quality",
+        "robustness"
+      ],
+      "subdomain": "reliability",
+      "difficulty": 4,
+      "additionalNotes": "Failures should be handled gracefully to ensure delivery",
+      "source_hlj_id": "REQ 001-008",
+      "domain_id": "P-FT-012"
+    },
+    {
+      "id": "REQ-021-HLJ-Chunk_1-Item_9-v1.0",
+      "domain": "saas",
+      "summary": "Support branded PDF layout with company design elements",
+      "priority": "Low",
+      "tags": [
+        "branding",
+        "pdf_formatting",
+        "visual_design"
+      ],
+      "subdomain": "design",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied – PDF should reflect corporate branding",
+      "source_hlj_id": "REQ 001-009",
+      "domain_id": "P-FT-012"
+    },
+    {
+      "id": "REQ-021-HLJ-Chunk_1-Item_10-v1.0",
+      "domain": "saas",
+      "summary": "Separate or merge CSV and PDF as per recipient preference",
+      "priority": "Low",
+      "tags": [
+        "file_format",
+        "user_preference",
+        "report_delivery"
+      ],
+      "subdomain": "reporting",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied – clarify delivery format based on preferences",
+      "source_hlj_id": "REQ 001-010",
+      "domain_id": "P-FT-012"
+    },
+    {
+      "id": "REQ-021-HLJ-Chunk_1-Item_11-v1.0",
+      "domain": "saas",
+      "summary": "Support additional security requirements beyond SOC 2 if needed",
+      "priority": "Low",
+      "tags": [
+        "security",
+        "compliance",
+        "soc2"
+      ],
+      "subdomain": "governance",
+      "difficulty": 3,
+      "additionalNotes": "origin: implied – solution should be flexible to meet evolving security standards",
+      "source_hlj_id": "REQ 001-011",
+      "domain_id": "P-FT-012"
+    }
+  ]
+}

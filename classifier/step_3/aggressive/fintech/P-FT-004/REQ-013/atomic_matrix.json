@@ -1,0 +1,9 @@
+{
+  "req_id": "REQ-013",
+  "mode": "aggressive",
+  "num_parent_sentences": 166,
+  "num_atomic_units": 503,
+  "avg_units_per_sentence": 3.03,
+  "max_units_from_single_sentence": 9,
+  "split_rate": 0.898
+}

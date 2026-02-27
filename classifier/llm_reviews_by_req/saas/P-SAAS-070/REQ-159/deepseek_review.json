@@ -1,0 +1,1579 @@
+{
+  "req_id": "REQ-159",
+  "doc_id": "ba74f2ad-8bdd-5f9c-8fc0-5b70e483d81b",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-070",
+  "model": "deepseek-r1:7b",
+  "review_timestamp": "2026-01-21T00:17:44.521902+00:00",
+  "counts": {
+    "total": 156,
+    "llm_pos": 80,
+    "pipe_pos": 33,
+    "llm_neg": 76,
+    "flip_pos_to_neg": 19,
+    "pipe_neg": 123,
+    "flip_neg_to_pos": 66
+  },
+  "reviews": [
+    {
+      "sent_id": "REQ-159::s001",
+      "order": 1,
+      "text": "Great, I’ll write a security mitigation plan for an enterprise IoT deployment, addressing both network and identifier collisions.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "PERFORMANCE_REQUIREMENT",
+      "reason_text": "Write a security plan addressing network and identifier collisions."
+    },
+    {
+      "sent_id": "REQ-159::s002",
+      "order": 2,
+      "text": "It will propose a probabilistic fix using 128-bit UIDs, include a migration strategy, and cover testing, validation, monitoring, and rollback mechanisms.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "EXAMPLE_OR_EXPLANATION",
+      "reason_text": "Proposes a probabilistic fix using 128-bit UIDs and outlines mechanisms for migration, validation, testing."
+    },
+    {
+      "sent_id": "REQ-159::s003",
+      "order": 3,
+      "text": "I’ll get back to you shortly with the completed plan.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Awaiting completion of plan, not a requirement."
+    },
+    {
+      "sent_id": "REQ-159::s004",
+      "order": 4,
+      "text": "# IoT Network Collision Security Mitigation Plan\n\n## Threat Overview  \nIoT deployments rely on unique identifiers to distinguish devices; collisions occur when two or more devices share the same ID at any layer.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describes IoT deployments relying on unique IDs, context only."
+    },
+    {
+      "sent_id": "REQ-159::s005",
+      "order": 5,
+      "text": "**Identifier collisions** (e.g. duplicate device IDs, client IDs or certificates) can cause session confusion or device takeovers.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Identifier collisions cause session confusion or device takeovers."
+    },
+    {
+      "sent_id": "REQ-159::s006",
+      "order": 6,
+      "text": "For example, if two IoT sensors connect with the same MQTT client ID, one will repeatedly knock the other offline ([Conflicting MQTT client IDs - AWS IoT Device Defender](https://docs.aws.amazon.com/iot-device-defender/latest/devguide/audit-chk-conflicting-client-ids.html#:~:text=Why%20it%20matters)).",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Provides an example of potential conflicts but does not impose enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-159::s007",
+      "order": 7,
+      "text": "Such conflicts force constant reconnections, lost messages or even device lockout (a de-facto DoS)",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Conflicts force reconnections, lost messages or device lockouts."
+    },
+    {
+      "sent_id": "REQ-159::s008",
+      "order": 8,
+      "text": "([Conflicting MQTT client IDs - AWS IoT Device Defender](https://docs.aws.amazon.com/iot-device-defender/latest/devguide/audit-chk-conflicting-client-ids.html#:~:text=Why%20it%20matters)).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Mentions AWS resource, not requirement itself."
+    },
+    {
+      "sent_id": "REQ-159::s009",
+      "order": 9,
+      "text": "The AWS IoT Defender notes that duplicate client IDs often indicate credential compromise or a DDoS attempt ([Conflicting MQTT client IDs - AWS IoT Device Defender](https://docs.aws.amazon.com/iot-device-defender/latest/devguide/audit-chk-conflicting-client-ids.html#:~:text=Devices%20with%20conflicting%20IDs%20are,a%20device%20unable%20to%20connect)).",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Explains AWS Defender's warnings but does not set enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-159::s010",
+      "order": 10,
+      "text": "IoT standards bodies similarly warn that reusing identifiers causes “unpredictable behavior” – akin to having two devices with the same MAC on one LAN ([](https://lora-alliance.org/wp-content/uploads/2020/11/la_faq_security_0220_v1.2_0.pdf#:~:text=No.%20Please%20see%20question%20,attached%20to%20the%20same%20LAN)).",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Discusses standards body warnings but does not enforce behavior."
+    },
+    {
+      "sent_id": "REQ-159::s011",
+      "order": 11,
+      "text": "In practice, UID collisions can enable **impersonation** (an attacker mimics a legitimate device’s ID) or **data confusion** (sensor data routed to the wrong endpoint).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SECURITY_REQUIREMENT",
+      "reason_text": "Impersonation and data confusion from UID collisions."
+    },
+    {
+      "sent_id": "REQ-159::s012",
+      "order": 12,
+      "text": "**Network/MAC-layer collisions** occur when two devices share a network address.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describes MAC-layer collisions as a network behavior."
+    },
+    {
+      "sent_id": "REQ-159::s013",
+      "order": 13,
+      "text": "Duplicate MAC addresses on a switched LAN make the switch’s MAC table oscillate: each new frame forces the switch to relearn the source port, causing traffic for that MAC to flap between ports ([networking - Duplicate MAC address on the same LAN possible?",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Explains the effect of duplicate MAC addresses but does not enforce a behavior."
+    },
+    {
+      "sent_id": "REQ-159::s014",
+      "order": 14,
+      "text": "- Server Fault](https://serverfault.com/questions/462178/duplicate-mac-address-on-the-same-lan-possible#:~:text=So%20if%20there%20are%20two,and%20off%20and%20be%20inconsistent)).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Link to Q&A about duplicate MACs, providing context."
+    },
+    {
+      "sent_id": "REQ-159::s015",
+      "order": 15,
+      "text": "This breaks connectivity for both hosts.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Explains connectivity issues caused by MAC collisions."
+    },
+    {
+      "sent_id": "REQ-159::s016",
+      "order": 16,
+      "text": "In switching networks a duplicate MAC “makes switching unreliable” and can disrupt ARP/NDP mappings ([How to solve problem with two devices with the same MAC address, connected to the switch?",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Details the effect of switching unreliable due to MAC duplicates."
+    },
+    {
+      "sent_id": "REQ-159::s017",
+      "order": 17,
+      "text": "- Network Engineering Stack Exchange](https://networkengineering.stackexchange.com/questions/83041/how-to-solve-problem-with-two-devices-with-the-same-mac-address-connected-to-th#:~:text=You%20can%27t%20have%20two%20devices,like%20with%20ARP%20or%20NDP)).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Link to Q&A about handling duplicate MAC addresses."
+    },
+    {
+      "sent_id": "REQ-159::s018",
+      "order": 18,
+      "text": "In severe cases, managed switches trigger port-security or even shut down a port when detecting a duplicate MAC on multiple ports ([networking - Duplicate MAC address on the same LAN possible?",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Explains how multiple port detection issues occur."
+    },
+    {
+      "sent_id": "REQ-159::s019",
+      "order": 19,
+      "text": "- Server Fault](https://serverfault.com/questions/462178/duplicate-mac-address-on-the-same-lan-possible#:~:text=So%20if%20there%20are%20two,and%20off%20and%20be%20inconsistent))",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Link to Q&A about duplicate MAC addresses."
+    },
+    {
+      "sent_id": "REQ-159::s020",
+      "order": 20,
+      "text": "([How to solve problem with two devices with the same MAC address, connected to the switch?",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "EXAMPLE_OR_EXPLANATION",
+      "reason_text": "Direct statement of the effect but not enforcing a requirement."
+    },
+    {
+      "sent_id": "REQ-159::s021",
+      "order": 21,
+      "text": "- Network Engineering Stack Exchange](https://networkengineering.stackexchange.com/questions/83041/how-to-solve-problem-with-two-devices-with-the-same-mac-address-connected-to-th#:~:text=You%20can%27t%20have%20two%20devices,like%20with%20ARP%20or%20NDP)).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Link to Q&A about handling duplicate MAC addresses."
+    },
+    {
+      "sent_id": "REQ-159::s022",
+      "order": 22,
+      "text": "Similarly, duplicate IP addresses can cause address conflicts and ARP storming, leading to network outages.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.7,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Describes a potential constraint on network address uniqueness."
+    },
+    {
+      "sent_id": "REQ-159::s023",
+      "order": 23,
+      "text": "Both MAC and IP collisions can thus result in **denial-of-service** or enable a malicious host to intercept or drop traffic meant for another device.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "States how MAC and IP collisions can result in denial-of-service."
+    },
+    {
+      "sent_id": "REQ-159::s024",
+      "order": 24,
+      "text": "**Physical/MAC collisions and interference** at the radio level are another threat.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Describes a potential physical layer behavior issue."
+    },
+    {
+      "sent_id": "REQ-159::s025",
+      "order": 25,
+      "text": "In wireless IoT networks, heavy traffic or jamming causes repeated packet collisions and retransmissions.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.7,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Explains how wireless traffic issues can affect network performance."
+    },
+    {
+      "sent_id": "REQ-159::s026",
+      "order": 26,
+      "text": "This drives devices to continually retransmit, rapidly draining batteries.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.7,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "States the impact of repeated packet collisions on battery drain."
+    },
+    {
+      "sent_id": "REQ-159::s027",
+      "order": 27,
+      "text": "As one study observes, repeated retransmission collisions in IoT MAC protocols lead to high “energy exhaustion” (battery drain), amounting to a powerful DoS attack ([](https://www.ijcst.org/Volume13/Issue2/p1_13_2.pdf#:~:text=%E2%80%A2%20Exhaustion%20Attack%20Jamming%20or,way%20to%20lessen%20the%20network)).",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Mentions high energy exhaustion due to collisions, which could be a system behavior constraint."
+    },
+    {
+      "sent_id": "REQ-159::s028",
+      "order": 28,
+      "text": "In summary, collisions at any level – logical ID or network address – undermine device trust, data integrity, and availability in an enterprise IoT deployment.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.7,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Summarizes the impact of collisions on device trust and availability."
+    },
+    {
+      "sent_id": "REQ-159::s029",
+      "order": 29,
+      "text": "## Collision Analysis  \n**Root causes** of collisions include weak or non-unique ID schemes and malicious actions.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.7,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Details root causes of collisions, including duplicates and mistakes."
+    },
+    {
+      "sent_id": "REQ-159::s030",
+      "order": 30,
+      "text": "In some cases, identifiers are accidentally duplicated (e.g. two devices hardcoded or pre-configured with the same ID).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.7,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Explains potential reasons for duplicate MAC addresses in manufacturing."
+    },
+    {
+      "sent_id": "REQ-159::s031",
+      "order": 31,
+      "text": "A switch vendor notes that identical MACs can arise “due to spoofing, a mistake during manufacturing, or willful negligence” ([networking - Duplicate MAC address on the same LAN possible?",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Describes potential vendor notes on MAC duplication issues."
+    },
+    {
+      "sent_id": "REQ-159::s032",
+      "order": 32,
+      "text": "- Server Fault](https://serverfault.com/questions/462178/duplicate-mac-address-on-the-same-lan-possible#:~:text=It%27s%20possible%20for%20two%20hosts,So)).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Link to Q&A about handling duplicate MAC addresses."
+    },
+    {
+      "sent_id": "REQ-159::s033",
+      "order": 33,
+      "text": "Virtualized systems and cloned hardware can inadvertently ship with duplicate MACs if not reprogrammed ([networking - Duplicate MAC address on the same LAN possible?",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Impacts system behavior by allowing unintended duplicate MACs which can lead to network issues."
+    },
+    {
+      "sent_id": "REQ-159::s034",
+      "order": 34,
+      "text": "- Server Fault](https://serverfault.com/questions/462178/duplicate-mac-address-on-the-same-lan-possible#:~:text=It%27s%20possible%20for%20two%20hosts,So)).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Link only, not a requirement."
+    },
+    {
+      "sent_id": "REQ-159::s035",
+      "order": 35,
+      "text": "On higher layers, a poorly designed registry might hand out short or incremental IDs without global checking, so large fleets naturally collide via the birthday paradox.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.7,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Describes system constraint regarding ID uniqueness to prevent collisions."
+    },
+    {
+      "sent_id": "REQ-159::s036",
+      "order": 36,
+      "text": "Attackers can also create collisions intentionally: by spoofing a legitimate device’s ID (session or network) an attacker can hijack its session or inject false data.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "States how attackers can intentionally cause collisions."
+    },
+    {
+      "sent_id": "REQ-159::s037",
+      "order": 37,
+      "text": "Best practices warn that sharing a certificate or device ID across devices is a red flag for compromise ([Best Practice 1.1 – Assign unique identities to each IoT device - IoT Lens Checklist](https://docs.aws.amazon.com/wellarchitected/latest/iot-lens-checklist/best-practice-1-1.html#:~:text=principals%2C%20such%20as%20certificates%2C%20should,to%20further%20compromise%20the%20system)).",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "EXAMPLE_OR_EXPLANATION",
+      "reason_text": "Best practices are given but do not set enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-159::s038",
+      "order": 38,
+      "text": "**Impact examples:** Collision effects vary by layer.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Link only, not a requirement."
+    },
+    {
+      "sent_id": "REQ-159::s039",
+      "order": 39,
+      "text": "If two edge sensors share a device ID, they may overwrite each other’s data on the server, corrupt logs, or trigger replay of stale data.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describes potential data issues but does not impose enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-159::s040",
+      "order": 40,
+      "text": "In MQTT (a common IoT protocol), as AWS reports, a new connection using an existing client ID will “knock the previous one off” ([Conflicting MQTT client IDs - AWS IoT Device Defender](https://docs.aws.amazon.com/iot-device-defender/latest/devguide/audit-chk-conflicting-client-ids.html#:~:text=Why%20it%20matters)).",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Explains MQTT connection issues but does not enforce behavior."
+    },
+    {
+      "sent_id": "REQ-159::s041",
+      "order": 41,
+      "text": "This can cause critical messages to drop or IoT control loops to break.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.7,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Impacts system behavior by causing message drops."
+    },
+    {
+      "sent_id": "REQ-159::s042",
+      "order": 42,
+      "text": "At Layer 2, duplicate MACs “cause a constantly changing switching table” ([networking - Duplicate MAC address on the same LAN possible?",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Link only, not a requirement."
+    },
+    {
+      "sent_id": "REQ-159::s043",
+      "order": 43,
+      "text": "- Server Fault](https://serverfault.com/questions/462178/duplicate-mac-address-on-the-same-lan-possible#:~:text=3,a%20constantly%20changing%20switching%20table)).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Describes system behavior with changing switching tables."
+    },
+    {
+      "sent_id": "REQ-159::s044",
+      "order": 44,
+      "text": "The switch alternately routes frames to whichever port last communicated, so both devices become unreachable unpredictably ([networking - Duplicate MAC address on the same LAN possible?",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.7,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "States unpredictable unreachable devices due to MAC collisions."
+    },
+    {
+      "sent_id": "REQ-159::s045",
+      "order": 45,
+      "text": "- Server Fault](https://serverfault.com/questions/462178/duplicate-mac-address-on-the-same-lan-possible#:~:text=So%20if%20there%20are%20two,and%20off%20and%20be%20inconsistent)).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Link only, not a requirement."
+    },
+    {
+      "sent_id": "REQ-159::s046",
+      "order": 46,
+      "text": "This condition can affect hundreds of devices at once if a malicious host floods with spoofed MAC traffic.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Describes potential for massive device collisions."
+    },
+    {
+      "sent_id": "REQ-159::s047",
+      "order": 47,
+      "text": "Moreover, network-layer collisions can aid lateral movement: for instance, if an attacker spoofs a gateway’s MAC, other devices may mistakenly send traffic to the intruder.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Discusses network collisions aiding attacks but does not enforce behavior."
+    },
+    {
+      "sent_id": "REQ-159::s048",
+      "order": 48,
+      "text": "Finally, physical-layer collisions result in **battery exhaustion**: a constant stream of conflicting frames triggers retransmissions, draining device power and crippling the network ([](https://www.ijcst.org/Volume13/Issue2/p1_13_2.pdf#:~:text=%E2%80%A2%20Exhaustion%20Attack%20Jamming%20or,way%20to%20lessen%20the%20network)).",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Mentions battery exhaustion from collisions but does not enforce behavior."
+    },
+    {
+      "sent_id": "REQ-159::s049",
+      "order": 49,
+      "text": "In sum, collisions can lead to data loss, device unavailability, and even serve as precursors to larger attacks.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Summarizes impact of collisions on system functionality."
+    },
+    {
+      "sent_id": "REQ-159::s050",
+      "order": 50,
+      "text": "## Probabilistic Fix (128-bit UID)  \nTo virtually eliminate identifier collisions, this plan mandates using **128-bit universally unique IDs (UUIDs)** for all device identities.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Mandates UUID use to eliminate collisions."
+    },
+    {
+      "sent_id": "REQ-159::s051",
+      "order": 51,
+      "text": "As standardized in RFC 4122, UUIDs are 128-bit values designed to be globally unique without a central authority ([](https://nostarch.com/download/EngineeringSecureDevices_Chapter6.pdf#:~:text=clear,Linux%20RNG%2C%20as%20shown%20in)).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describes standard UUID usage for device identities."
+    },
+    {
+      "sent_id": "REQ-159::s052",
+      "order": 52,
+      "text": "In practice the collision probability is astronomically small.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "States low collision probability with UUIDs."
+    },
+    {
+      "sent_id": "REQ-159::s053",
+      "order": 53,
+      "text": "For truly random (version-4) 128-bit UUIDs, the number needed for a 50% collision chance is on the order of 2.7×10^18 ([Universally unique identifier - Wikipedia](https://en.wikipedia.org/wiki/Universally_unique_identifier#:~:text=For%20example%2C%20the%20number%20of,27)).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Calculates needed for 50% collision chance."
+    },
+    {
+      "sent_id": "REQ-159::s054",
+      "order": 54,
+      "text": "That equals generating one billion UUIDs per second for 86 years ([Universally unique identifier - Wikipedia](https://en.wikipedia.org/wiki/Universally_unique_identifier#:~:text=For%20example%2C%20the%20number%20of,27)).",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Provides UUID generation statistics without enforcing behavior."
+    },
+    {
+      "sent_id": "REQ-159::s055",
+      "order": 55,
+      "text": "Even generating 10^15 UUIDs yields only a 10^-9 collision probability ([Universally unique identifier - Wikipedia](https://en.wikipedia.org/wiki/Universally_unique_identifier#:~:text=%7B1%7D%7B1)).",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Discusses collision probability calculations but does not enforce behavior."
+    },
+    {
+      "sent_id": "REQ-159::s056",
+      "order": 56,
+      "text": "Thus, using 128-bit IDs makes accidental collisions effectively impossible in any realistic fleet size.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Mandates UUID use for near-zero collisions."
+    },
+    {
+      "sent_id": "REQ-159::s057",
+      "order": 57,
+      "text": "(By comparison, a 48-bit MAC address space is only ~2.8×10^14 large – much smaller – and is already known to produce occasional duplicates.)",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Compares UUID size with MAC address issues."
+    },
+    {
+      "sent_id": "REQ-159::s058",
+      "order": 58,
+      "text": "Technically, each device’s identity record will use a UUID4 value as its primary key.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Explains UUID4 structure without enforcing behavior."
+    },
+    {
+      "sent_id": "REQ-159::s059",
+      "order": 59,
+      "text": "Generation should be backed by a cryptographically-secure RNG to ensure full 128-bit entropy.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Mandates use of cryptographically secure RNG for entropy."
+    },
+    {
+      "sent_id": "REQ-159::s060",
+      "order": 60,
+      "text": "This probabilistic fix **dramatically shrinks collision risk**: even under worst-case birthday estimates, an attacker or error would need to generate on the order of 2^64 IDs before seeing a collision ([random - UUID collisions - Software Engineering Stack Exchange](https://softwareengineering.stackexchange.com/questions/130261/uuid-collisions#:~:text=A%20suggestion%3A%20tread%20very%20carefully,of%20entropy%20in%20each%20key))",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describes probabilistic fixes reducing collision risk to a low level."
+    },
+    {
+      "sent_id": "REQ-159::s061",
+      "order": 61,
+      "text": "(and only if the RNG were perfect).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-159::s062",
+      "order": 62,
+      "text": "In practice, security analysis regards such collisions as “very close to zero” ([](https://nostarch.com/download/EngineeringSecureDevices_Chapter6.pdf#:~:text=clear,Linux%20RNG%2C%20as%20shown%20in)).",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Mentions negligible collision risks from security analysis."
+    },
+    {
+      "sent_id": "REQ-159::s063",
+      "order": 63,
+      "text": "An added benefit is that UUIDs need no centralized assignment, simplifying provisioning.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Enhances system stability through UUID usage."
+    },
+    {
+      "sent_id": "REQ-159::s064",
+      "order": 64,
+      "text": "By contrast, legacy short IDs or serial numbers are susceptible to duplication under load or attack.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "States an enforceable behavior regarding the susceptibility of legacy IDs to duplication."
+    },
+    {
+      "sent_id": "REQ-159::s065",
+      "order": 65,
+      "text": "Hence transitioning to 128-bit UIDs provides a robust uniqueness guarantee and thwarts spoofing based solely on ID collisions.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Imposes a constraint on system behavior by transitioning to 128-bit UIDs for uniqueness."
+    },
+    {
+      "sent_id": "REQ-159::s066",
+      "order": 66,
+      "text": "## Migration Strategy  \nMigrating an existing IoT fleet to 128-bit UIDs must be carefully phased to ensure continuity.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Imposes careful migration to avoid device connectivity issues."
+    },
+    {
+      "sent_id": "REQ-159::s067",
+      "order": 67,
+      "text": "First, perform a **device inventory and ID audit**: catalogue all current identifiers (MACs, serials, client IDs, etc.) and their usage contexts.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Implements an audit of current identifiers as part of system analysis."
+    },
+    {
+      "sent_id": "REQ-159::s068",
+      "order": 68,
+      "text": "Design a new UID scheme (e.g. UUID4) and plan how each old ID maps to a new one.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "ARCHITECTURE_DESCRIPTION",
+      "reason_text": "Describes the design of a new UID scheme and mapping process."
+    },
+    {
+      "sent_id": "REQ-159::s069",
+      "order": 69,
+      "text": "In the registry or device firmware, the new 128-bit ID should become the primary identifier; the old ID can be stored as a legacy field for a transition period.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Requires legacy fields for device identifier transition."
+    },
+    {
+      "sent_id": "REQ-159::s070",
+      "order": 70,
+      "text": "Key steps include:\n- **Dual-run period**: Implement dual recognition in systems so that both old IDs and new UIDs are accepted simultaneously.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-159::s071",
+      "order": 71,
+      "text": "For example, devices might announce themselves with both identifiers during handshake, or gateways translate old IDs to UIDs.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-159::s072",
+      "order": 72,
+      "text": "This allows old and new devices to coexist.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "States that old and new devices can coexist."
+    },
+    {
+      "sent_id": "REQ-159::s073",
+      "order": 73,
+      "text": "- **Firmware/Software updates**: Roll out firmware updates to IoT devices that generate and use the new UID.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "PERFORMANCE_REQUIREMENT",
+      "reason_text": "Imposes the need for firmware updates to support new UID handling."
+    },
+    {
+      "sent_id": "REQ-159::s074",
+      "order": 74,
+      "text": "This can be done in stages (e.g. pilot groups first).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "ARCHITECTURE_DESCRIPTION",
+      "reason_text": "Details the plan for rolling out firmware updates."
+    },
+    {
+      "sent_id": "REQ-159::s075",
+      "order": 75,
+      "text": "Devices incapable of updating immediately should be confined to isolated subnets or given temporary proxy IDs.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Mandates isolation or temporary proxies for devices with update issues."
+    },
+    {
+      "sent_id": "REQ-159::s076",
+      "order": 76,
+      "text": "- **Registry synchronization**: Update backend databases and access-control lists to accept 128-bit IDs.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Requires updating databases and access-control lists."
+    },
+    {
+      "sent_id": "REQ-159::s077",
+      "order": 77,
+      "text": "Ensure IAM policies or certificates reference the new IDs.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "COMPLIANCE_REQUIREMENT",
+      "reason_text": "Ensures IAM policies reference new UIDs."
+    },
+    {
+      "sent_id": "REQ-159::s078",
+      "order": 78,
+      "text": "Where possible, link the new UID record to existing access policies tied to the old ID.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Links new UIDs to existing policies for enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-159::s079",
+      "order": 79,
+      "text": "- **Compatibility layers**: For protocols like MQTT, plan how client IDs are changed.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "ARCHITECTURE_DESCRIPTION",
+      "reason_text": "Describes compatibility layers for MQTT clients."
+    },
+    {
+      "sent_id": "REQ-159::s080",
+      "order": 80,
+      "text": "For instance, use the UUID as the MQTT client ID or as a prefix in device credentials.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Explains how to update client IDs in MQTT."
+    },
+    {
+      "sent_id": "REQ-159::s081",
+      "order": 81,
+      "text": "For devices that cannot be changed immediately, the cloud service could translate their existing IDs to dummy UUIDs internally.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Translates existing IDs internally without affecting functionality."
+    },
+    {
+      "sent_id": "REQ-159::s082",
+      "order": 82,
+      "text": "- **Cutover plan**: Once majority of devices support UUIDs, schedule a controlled cutover.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "ARCHITECTURE_DESCRIPTION",
+      "reason_text": "Outlines a cutover plan."
+    },
+    {
+      "sent_id": "REQ-159::s083",
+      "order": 83,
+      "text": "Old ID usage can be deprecated: for example, disable legacy ID logging or after verifying traffic, retire the old registry fields.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Deprecates old ID usage via specific actions."
+    },
+    {
+      "sent_id": "REQ-159::s084",
+      "order": 84,
+      "text": "During cutover, carefully monitor for any orphaned devices.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Requires careful monitoring during cutover."
+    },
+    {
+      "sent_id": "REQ-159::s085",
+      "order": 85,
+      "text": "Throughout migration, maintain fallbacks.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Maintains fallbacks for devices failing to adopt new IDs."
+    },
+    {
+      "sent_id": "REQ-159::s086",
+      "order": 86,
+      "text": "For any device failing to adopt a new ID, revert its communication through legacy handlers.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Requires reversing communication for failing devices."
+    },
+    {
+      "sent_id": "REQ-159::s087",
+      "order": 87,
+      "text": "Document each change and update network diagrams.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Documents changes in network diagrams as part of implementation."
+    },
+    {
+      "sent_id": "REQ-159::s088",
+      "order": 88,
+      "text": "The goal is zero downtime: by carefully coordinating dual-use IDs and ensuring no mismatch between device and network expectations, the network continues uninterrupted while gradually shifting to 128-bit identities.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Imposes zero downtime as an enforceable system behavior."
+    },
+    {
+      "sent_id": "REQ-159::s089",
+      "order": 89,
+      "text": "## Testing & Validation  \nA rigorous testing plan ensures the new UID system is reliable and secure before full deployment.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "The testing plan sets enforceable reliability and security behavior for deployment."
+    },
+    {
+      "sent_id": "REQ-159::s090",
+      "order": 90,
+      "text": "The process includes **unit, integration, and system tests** in a lab environment, followed by staged field trials:\n\n- **ID Generation Test**: Confirm the UUID generator produces truly random 128-bit values with no bias.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describes testing process without enforcing behavior."
+    },
+    {
+      "sent_id": "REQ-159::s091",
+      "order": 91,
+      "text": "Use statistical tests or built-in RNG entropy checks.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Recommendation for tests, not enforceable requirement."
+    },
+    {
+      "sent_id": "REQ-159::s092",
+      "order": 92,
+      "text": "Verify that no collisions occur in a large sample (e.g. generate millions of IDs in a test harness) before field rollout.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describes testing criteria for collision avoidance, not enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-159::s093",
+      "order": 93,
+      "text": "- **Protocol/Functionality Test**: In a dedicated testbed, update a representative set of devices to use the new ID and verify end-to-end communication.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Imposes a protocol test as enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-159::s094",
+      "order": 94,
+      "text": "Check that each protocol (MQTT, CoAP, HTTP, etc.) properly accepts the 128-bit ID.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Details protocol functionality, not enforceable requirement."
+    },
+    {
+      "sent_id": "REQ-159::s095",
+      "order": 95,
+      "text": "Test access controls and authentication to confirm devices with new IDs are recognized and authorized.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Imposes access control as an enforceable constraint."
+    },
+    {
+      "sent_id": "REQ-159::s096",
+      "order": 96,
+      "text": "- **Backward Compatibility Test**: Simulate a mixed network with old-ID devices and new-UID devices.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Details test scenarios, not enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-159::s097",
+      "order": 97,
+      "text": "Verify that services (registries, brokers, management consoles) handle both transparently.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Imposes backward compatibility handling as enforceable constraint."
+    },
+    {
+      "sent_id": "REQ-159::s098",
+      "order": 98,
+      "text": "Specifically, attempt to connect an old-ID-only device and ensure it still gains access via the compatibility layer.  \n- **Security Test**: Execute threat modeling and penetration tests focusing on ID-related attacks.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Imposes threat modeling as an enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-159::s099",
+      "order": 99,
+      "text": "For example, attempt to inject a duplicate UID to test collision resilience and ensure the system flags or rejects it.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Imposes collision resilience as an enforceable constraint."
+    },
+    {
+      "sent_id": "REQ-159::s100",
+      "order": 100,
+      "text": "Test certificate renewals, provisioning, and authentication flows to ensure the new IDs have not inadvertently weakened identity binding.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.7,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Imposes authentication flow enforcement as a requirement."
+    },
+    {
+      "sent_id": "REQ-159::s101",
+      "order": 101,
+      "text": "- **Performance Test**: Measure the overhead of handling 128-bit IDs in databases and network messages.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Details performance testing, not enforceable requirement."
+    },
+    {
+      "sent_id": "REQ-159::s102",
+      "order": 102,
+      "text": "Ensure that larger identifiers do not introduce latency beyond acceptable limits.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Imposes latency constraint as an enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-159::s103",
+      "order": 103,
+      "text": "If using protocols with limited payloads, verify that ID encoding still fits.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Details encoding limits, not enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-159::s104",
+      "order": 104,
+      "text": "Load-test the IoT registry with a realistic number of devices to ensure lookup and logging scales with 128-bit keys.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Imposes scaling constraint as an enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-159::s105",
+      "order": 105,
+      "text": "- **Pilot Deployment**:",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Details deployment process, not enforceable requirement."
+    },
+    {
+      "sent_id": "REQ-159::s106",
+      "order": 106,
+      "text": "Release the new UID system to a small subset of production devices (e.g. one building or department).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Imposes operational monitoring as an enforceable requirement."
+    },
+    {
+      "sent_id": "REQ-159::s107",
+      "order": 107,
+      "text": "Monitor logs and metrics to validate normal operation.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Details monitoring implementation, not enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-159::s108",
+      "order": 108,
+      "text": "Compare connectivity rates and error logs to baseline.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Details comparison metrics, not enforceable requirement."
+    },
+    {
+      "sent_id": "REQ-159::s109",
+      "order": 109,
+      "text": "Only after pilot success should rollout proceed fleet-wide.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "This is an operational decision after a pilot, not enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-159::s110",
+      "order": 110,
+      "text": "Each test phase should have defined success criteria (e.g. “no unhandled collisions detected”, “device authentication passes 100% of time”, “latency within X ms”).",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Define success criteria for testing phase."
+    },
+    {
+      "sent_id": "REQ-159::s111",
+      "order": 111,
+      "text": "Use continuous integration tooling where possible to automate ID-related tests.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describes an operational procedure without enforcing system behavior."
+    },
+    {
+      "sent_id": "REQ-159::s112",
+      "order": 112,
+      "text": "Document all test cases and results.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "States documentation but lacks enforceable action."
+    },
+    {
+      "sent_id": "REQ-159::s113",
+      "order": 113,
+      "text": "Successful testing will demonstrate that the new UID scheme works reliably and that the transition preserves functionality.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Demonstrate new UID scheme reliability and preserve functionality."
+    },
+    {
+      "sent_id": "REQ-159::s114",
+      "order": 114,
+      "text": "## Monitoring & Rollback Plan  \nOnce deployed, we will implement **continuous monitoring** to detect any UID-related anomalies.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "ARCHITECTURE_DESCRIPTION",
+      "reason_text": "Describes monitoring plan after deployment, not enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-159::s115",
+      "order": 115,
+      "text": "Monitoring includes:  \n\n- **Connection Logs**: Track device connect/disconnect patterns.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describes monitoring without enforcing behavior."
+    },
+    {
+      "sent_id": "REQ-159::s116",
+      "order": 116,
+      "text": "Repeated disconnects or re-authentications (as seen with MQTT ID conflicts ([Conflicting MQTT client IDs - AWS IoT Device Defender](https://docs.aws.amazon.com/iot-device-defender/latest/devguide/audit-chk-conflicting-client-ids.html#:~:text=Why%20it%20matters))) should trigger alerts.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Implement monitoring to detect UID anomalies."
+    },
+    {
+      "sent_id": "REQ-159::s117",
+      "order": 117,
+      "text": "A surge of authentication failures for a UID may indicate a collision or mis-configuration.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Trigger alerts on authentication failures due to collisions or misconfigurations."
+    },
+    {
+      "sent_id": "REQ-159::s118",
+      "order": 118,
+      "text": "- **ID Collision Alerts**: Instrument the device registry or broker to detect attempts to register the same UID twice.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Indicates action but doesn't enforce it."
+    },
+    {
+      "sent_id": "REQ-159::s119",
+      "order": 119,
+      "text": "Any duplicate registration attempts (even unlikely) should raise immediate alarms.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Raise alarms on duplicate registration attempts."
+    },
+    {
+      "sent_id": "REQ-159::s120",
+      "order": 120,
+      "text": "The system can log the source IP/MAC to assist investigation.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Log source IP/MAC for investigation purposes, not enforceable."
+    },
+    {
+      "sent_id": "REQ-159::s121",
+      "order": 121,
+      "text": "- **Network Traffic Analysis**: Use network monitoring tools to watch for duplicate MAC or IP addresses.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describes monitoring without enforcing action."
+    },
+    {
+      "sent_id": "REQ-159::s122",
+      "order": 122,
+      "text": "Switch port-security logs and DHCP server logs should be inspected: duplicate MAC/IP warnings there indicate problems.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Inspect logs for warnings about MAC/IP duplicates, not enforceable."
+    },
+    {
+      "sent_id": "REQ-159::s123",
+      "order": 123,
+      "text": "- **Anomaly Detection**: Apply anomaly-detection algorithms on IoT telemetry.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describes anomaly detection without enforcing it."
+    },
+    {
+      "sent_id": "REQ-159::s124",
+      "order": 124,
+      "text": "If two devices suddenly exhibit identical network fingerprints (e.g. identical MAC on different ports), or if a device’s traffic pattern shifts suspiciously, flag for review.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Implements a flagging action but doesn't enforce it."
+    },
+    {
+      "sent_id": "REQ-159::s125",
+      "order": 125,
+      "text": "- **Performance Metrics**: Continuously measure system performance (latency, throughput) to catch subtle issues introduced by the new ID format.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describes measurement without enforcing action."
+    },
+    {
+      "sent_id": "REQ-159::s126",
+      "order": 126,
+      "text": "Any degradation beyond threshold may require investigation.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Investigate beyond threshold may require action, not enforceable."
+    },
+    {
+      "sent_id": "REQ-159::s127",
+      "order": 127,
+      "text": "If monitoring identifies a critical issue attributable to the new UID system, a **rollback plan** must be ready.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "PERFORMANCE_REQUIREMENT",
+      "reason_text": "States an enforceable behavior: monitoring for issues."
+    },
+    {
+      "sent_id": "REQ-159::s128",
+      "order": 128,
+      "text": "Rollback procedures include:  \n\n1.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describes a procedure without enforcing action."
+    },
+    {
+      "sent_id": "REQ-159::s129",
+      "order": 129,
+      "text": "**Rollback Trigger**: Define specific criteria (e.g., loss of connectivity for >X% devices, security breaches) that necessitate rollback.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "COMPLIANCE_REQUIREMENT",
+      "reason_text": "Imposes a necessary condition: rollback trigger."
+    },
+    {
+      "sent_id": "REQ-159::s130",
+      "order": 130,
+      "text": "2. **Reverting Service Configurations**: The system should support quickly reverting to the legacy ID recognition mode.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Revert service config mode after deployment, not enforceable."
+    },
+    {
+      "sent_id": "REQ-159::s131",
+      "order": 131,
+      "text": "This could mean re-enabling old-ID-only authentication or restoring device registries from a snapshot.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describes procedures without enforcing action."
+    },
+    {
+      "sent_id": "REQ-159::s132",
+      "order": 132,
+      "text": "Because the migration uses dual recognition, rollback can often be done by simply re-activating the old authentication path.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "States an action but lacks enforcement."
+    },
+    {
+      "sent_id": "REQ-159::s133",
+      "order": 133,
+      "text": "3.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describes data management without enforcing action."
+    },
+    {
+      "sent_id": "REQ-159::s134",
+      "order": 134,
+      "text": "**Device Firmware**: If a firmware upgrade to a device caused issues, maintain the previous firmware image.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "States procedures without enforcement."
+    },
+    {
+      "sent_id": "REQ-159::s135",
+      "order": 135,
+      "text": "Use over-the-air rollback mechanisms to flash affected devices back to pre-migration firmware.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describes an action but lacks enforceability."
+    },
+    {
+      "sent_id": "REQ-159::s136",
+      "order": 136,
+      "text": "4. **Data Synchronization**: If new UIDs were written to a central registry, be prepared to purge or ignore those entries and restore old IDs from backups.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Implements a procedure without enforcing action."
+    },
+    {
+      "sent_id": "REQ-159::s137",
+      "order": 137,
+      "text": "Maintain a clear separation of old/new records so that rollback is an automated database transaction.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "States actions without enforceability."
+    },
+    {
+      "sent_id": "REQ-159::s138",
+      "order": 138,
+      "text": "5. **Communication**: Immediately notify stakeholders (ops teams, device owners) of the rollback and its impact.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describes notification but lacks enforcement."
+    },
+    {
+      "sent_id": "REQ-159::s139",
+      "order": 139,
+      "text": "Provide a temporary hold on any new ID assignments until issues are resolved.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "PERFORMANCE_REQUIREMENT",
+      "reason_text": "States an enforceable behavior: temporary hold."
+    },
+    {
+      "sent_id": "REQ-159::s140",
+      "order": 140,
+      "text": "6.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.2,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Just a number indicating line 6 in the document."
+    },
+    {
+      "sent_id": "REQ-159::s141",
+      "order": 141,
+      "text": "**Root-Cause Analysis**: After rollback, analyze logs to understand the failure (e.g. faulty RNG, a code bug, or an untested edge case).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.2,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describes an action but does not state enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-159::s142",
+      "order": 142,
+      "text": "Fix the issue in a non-production environment, then retest the migration plan before a new deployment attempt.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.2,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Outlines steps to follow rather than a requirement itself."
+    },
+    {
+      "sent_id": "REQ-159::s143",
+      "order": 143,
+      "text": "With these controls in place, the enterprise can detect any problems with the 128-bit UID system early and safely revert to the known-good state.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Sets expectation for the system's behavior in detecting and reverting issues."
+    },
+    {
+      "sent_id": "REQ-159::s144",
+      "order": 144,
+      "text": "Rigorous monitoring and a clear rollback path ensure that even if unforeseen failures occur, they can be contained without extended outage or loss of device security.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Imposes a constraint on system failure containment."
+    },
+    {
+      "sent_id": "REQ-159::s145",
+      "order": 145,
+      "text": "**Sources:** Authoritative sources and industry best practices have been used throughout this plan ([Conflicting MQTT client IDs - AWS IoT Device Defender](https://docs.aws.amazon.com/iot-device-defender/latest/devguide/audit-chk-conflicting-client-ids.html#:~:text=Why%20it%20matters))",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Source authoritative documents, not requirement itself."
+    },
+    {
+      "sent_id": "REQ-159::s146",
+      "order": 146,
+      "text": "([](https://lora-alliance.org/wp-content/uploads/2020/11/la_faq_security_0220_v1.2_0.pdf#:~:text=No.%20Please%20see%20question%20,attached%20to%20the%20same%20LAN))",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.2,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Only contains an attachment without content."
+    },
+    {
+      "sent_id": "REQ-159::s147",
+      "order": 147,
+      "text": "([How to solve problem with two devices with the same MAC address, connected to the switch?",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.2,
+      "reason_code": "EXAMPLE_OR_EXPLANATION",
+      "reason_text": "A question seeking information, not enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-159::s148",
+      "order": 148,
+      "text": "- Network Engineering Stack Exchange](https://networkengineering.stackexchange.com/questions/83041/how-to-solve-problem-with-two-devices-with-the-same-mac-address-connected-to-th#:~:text=You%20can%27t%20have%20two%20devices,like%20with%20ARP%20or%20NDP))",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.2,
+      "reason_code": "EXAMPLE_OR_EXPLANATION",
+      "reason_text": "Refers to an external resource for help."
+    },
+    {
+      "sent_id": "REQ-159::s149",
+      "order": 149,
+      "text": "([networking - Duplicate MAC address on the same LAN possible?",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.2,
+      "reason_code": "EXAMPLE_OR_EXPLANATION",
+      "reason_text": "Another question seeking information."
+    },
+    {
+      "sent_id": "REQ-159::s150",
+      "order": 150,
+      "text": "- Server Fault](https://serverfault.com/questions/462178/duplicate-mac-address-on-the-same-lan-possible#:~:text=It%27s%20possible%20for%20two%20hosts,So))",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Imposes a constraint on network security actions."
+    },
+    {
+      "sent_id": "REQ-159::s151",
+      "order": 151,
+      "text": "([](https://www.ijcst.org/Volume13/Issue2/p1_13_2.pdf#:~:text=%E2%80%A2%20Exhaustion%20Attack%20Jamming%20or,way%20to%20lessen%20the%20network))",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Sets expectation for system resilience against attacks."
+    },
+    {
+      "sent_id": "REQ-159::s152",
+      "order": 152,
+      "text": "([Best Practice 1.1 – Assign unique identities to each IoT device - IoT Lens Checklist](https://docs.aws.amazon.com/wellarchitected/latest/iot-lens-checklist/best-practice-1-1.html#:~:text=principals%2C%20such%20as%20certificates%2C%20should,to%20further%20compromise%20the%20system))",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Imposes a constraint on IoT identity management."
+    },
+    {
+      "sent_id": "REQ-159::s153",
+      "order": 153,
+      "text": "([](https://nostarch.com/download/EngineeringSecureDevices_Chapter6.pdf#:~:text=clear,Linux%20RNG%2C%20as%20shown%20in))",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Sets expectation for RNG handling."
+    },
+    {
+      "sent_id": "REQ-159::s154",
+      "order": 154,
+      "text": "([Universally unique identifier - Wikipedia](https://en.wikipedia.org/wiki/Universally_unique_identifier#:~:text=For%20example%2C%20the%20number%20of,27))",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.2,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Explains a concept without enforceable action."
+    },
+    {
+      "sent_id": "REQ-159::s155",
+      "order": 155,
+      "text": "([Universally unique identifier - Wikipedia](https://en.wikipedia.org/wiki/Universally_unique_identifier#:~:text=%7B1%7D%7B1))",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.2,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Another explanation of the same concept without actions."
+    },
+    {
+      "sent_id": "REQ-159::s156",
+      "order": 156,
+      "text": "to ensure technical accuracy and credibility of the recommendations.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.2,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describes a guideline for credibility rather than enforceable action."
+    }
+  ]
+}

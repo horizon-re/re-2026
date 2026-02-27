@@ -1,0 +1,83 @@
+[CRM‑201] Lead scoring algorithm prototype
+
+Description: Begin tuning model for sales-qualified vs. non-qualified leads.
+Acceptance Criteria:
+	•	Train on past 12 months of conversion data
+	•	☑ Export leads above 70% likelihood to SDR dashboard
+	•	TBD…
+Notes: @dev @data needed for historical conversion dump
+
+[CRM‑202] Email cadence scheduler (MVP)
+
+Description: Allow users to create multi-step email drip sequences.
+Acceptance Criteria:
+	•	Create/send/edit cadences via UI
+	•	☐ Show basic email stats (opens, clicks) per step
+	•	TBD…
+Notes: @designer to finalize template UI
+
+[CRM‑203] Auto-log email engagement
+
+Description: Automatically capture opens and link clicks in timeline.
+Acceptance Criteria:
+	•	Add event stream for opens
+	•	☑ Include timestamped click-through tracking
+	•	TBD…
+
+[CRM‑204] Contact enrichment via AI signals
+
+Description: Detect job changes, company size shifts from public data.
+Acceptance Criteria:
+	•	Match updates against LinkedIn profiles
+	•	Flag major firmographic shifts ☑
+	•	TBD…
+
+[CRM‑205] Dashboard metrics: email activity
+
+Description: Prototype bar chart of daily open/click rates.
+Acceptance Criteria:
+	•	Show last 14 days’ activity
+	•	☐ Toggle per cadence
+	•	TBD…
+Notes: Basic metrics only, not funnel deep dive yet
+
+[CRM‑206] Scoring rules editor
+
+Description: UI to adjust AI scoring thresholds and rules.
+Acceptance Criteria:
+	•	Modify lead type weightings
+	•	Save/publish rules to backend ☑
+	•	TBD…
+
+[CRM‑207] Smart lead routing rules
+
+Description: Route high-score leads to assigned rep based on region.
+Acceptance Criteria:
+	•	Apply after score > threshold
+	•	@dev Add region check logic
+	•	TBD…
+
+[CRM‑208] AI assist: next-best-action prompt
+
+Description: Suggest next action based on contact history and score.
+Acceptance Criteria:
+	•	Trigger when lead is inactive 7+ days
+	•	Recommend call/email nudge
+	•	TBD…
+
+[CRM‑209] Track reply rates for cadences
+
+Description: Capture replies, calculate % per email step.
+Acceptance Criteria:
+	•	Detect reply-to on outgoing emails ☑
+	•	Show per-step %
+	•	TBD…
+
+[CRM‑210] Admin controls for feature access
+
+Description: Enable/disable enrichment and scoring tools per org.
+Acceptance Criteria:
+	•	Toggle via admin dashboard
+	•	☐ Log changes for audit
+	•	TBD…
+Notes: @dev permission schema draft in progress

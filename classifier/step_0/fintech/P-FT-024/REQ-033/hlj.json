@@ -1,0 +1,14 @@
+{
+  "doc_id": "c09f2060-0b95-5901-a709-cd2cbab7af9d",
+  "req_key": "fintech::P-FT-024::REQ-033",
+  "req_id": "REQ-033",
+  "domain": "fintech",
+  "prompt_id": "P-FT-024",
+  "source": {
+    "raw_path": "02_raw_requirements/fintech/P-FT-024/req-033_raw.txt",
+    "refined_path": null,
+    "origin": "raw_only"
+  },
+  "text": "14:07 Carlo: Spent all weekend chasing that billing permissions bug 😡 Our RBAC ballooned to 420 lines of nested ifs.\n14:08 Sasha: Ugh, brutal. I saw a demo of an LLM generating RBAC rules from route metadata—basically an AI policy generator. Worth trying?\n14:09 Carlo: So just throw AI at it? I doubt an LLM can cover our edge cases.\n14:10 Sasha: It's risky, but doing nothing is worse. The AI approach could give us a starting point.\n14:11 Carlo: If AI gets a permission wrong, we'll be firefighting again. I'm not comfortable with a black-box controlling prod access.\n14:12 Sasha: We won't accept its output blindly; we'll vet every rule. Think of the time we'd save.\n14:13 Carlo: Rewriting it is brutal. Either months of refactoring or gambling on AI.\n14:14 Sasha: Leadership expects a plan by Friday. A full rewrite is huge. An AI-assisted path might be quicker.\n14:15 Carlo: [TODO] rewrite RBAC\n14:16 Sasha: I'll bring up the rewrite. Either way, we can't keep firefighting.",
+  "structured_data": null
+}

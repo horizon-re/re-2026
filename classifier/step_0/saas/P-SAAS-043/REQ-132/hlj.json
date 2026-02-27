@@ -1,0 +1,175 @@
+{
+  "doc_id": "6bb5d24b-5f96-5477-8722-6469202c1df6",
+  "req_key": "saas::P-SAAS-043::REQ-132",
+  "req_id": "REQ-132",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-043",
+  "source": {
+    "raw_path": "02_raw_requirements/saas/P-SAAS-043/req-132_raw.txt",
+    "refined_path": "03_refined_json_normalized/saas/P-SAAS-043/req-132_refined.json",
+    "origin": "both"
+  },
+  "text": "**Scope**  \nThe data export feature allows users to download all of their personal data in both JSON and CSV formats within 24 hours of request submission. This functionality ensures transparency and aligns with data portability regulations.\n\n**Request Flow**  \nUsers initiate the export process via an in-app “Export My Data” button. Once the request is submitted, a confirmation email is sent to the registered address. Upon user confirmation, a secure export link is generated and shared via email. The link remains valid for 72 hours before expiration.\n\n**Data Coverage**  \nThe exported package includes comprehensive user data such as profile information, activity logs, and billing history. Internal analytics, system logs, and non-user-facing metadata are deliberately excluded to protect proprietary insights and maintain relevance to the user.\n\n**Security & Compliance**  \nAll exported data is bundled in AES-256 encrypted ZIP files. Access is granted via time-bound, signed URLs to ensure secure delivery. Consent and access logs related to export requests are stored for five years to support compliance with privacy regulations such as GDPR and CCPA.\n\n**Scalability**  \nThe system is engineered to handle up to 1,000 concurrent export requests. A backend job queue architecture supports export generation, with automatic retry mechanisms to handle failures and ensure reliable delivery at scale.",
+  "structured_data": [
+    {
+      "id": "REQ-132-HLJ-Chunk_1-Item_1-v1.0",
+      "domain": "unknown",
+      "summary": "Allow users to export personal data in JSON and CSV",
+      "priority": "High",
+      "tags": [
+        "data_export",
+        "json_format",
+        "csv_format"
+      ],
+      "subdomain": "data_portability",
+      "difficulty": 2,
+      "additionalNotes": "Supports regulatory compliance for data access and portability",
+      "source_hlj_id": "REQ 001-001",
+      "domain_id": "P-SAAS-043"
+    },
+    {
+      "id": "REQ-132-HLJ-Chunk_1-Item_2-v1.0",
+      "domain": "unknown",
+      "summary": "Ensure export is completed within 24 hours of request",
+      "priority": "High",
+      "tags": [
+        "sla",
+        "data_portability",
+        "time_bound"
+      ],
+      "subdomain": "data_portability",
+      "difficulty": 3,
+      "additionalNotes": "Strict deadline to meet user expectations and compliance",
+      "source_hlj_id": "REQ 001-002",
+      "domain_id": "P-SAAS-043"
+    },
+    {
+      "id": "REQ-132-HLJ-Chunk_1-Item_3-v1.0",
+      "domain": "unknown",
+      "summary": "Trigger export via in-app button and email confirmation",
+      "priority": "High",
+      "tags": [
+        "user_flow",
+        "confirmation",
+        "export_trigger"
+      ],
+      "subdomain": "user_interface",
+      "difficulty": 2,
+      "additionalNotes": "Requires double opt-in to prevent unauthorized exports",
+      "source_hlj_id": "REQ 001-003",
+      "domain_id": "P-SAAS-043"
+    },
+    {
+      "id": "REQ-132-HLJ-Chunk_1-Item_4-v1.0",
+      "domain": "unknown",
+      "summary": "Expire export link 72 hours after email delivery",
+      "priority": "Medium",
+      "tags": [
+        "link_expiry",
+        "security",
+        "access_control"
+      ],
+      "subdomain": "security",
+      "difficulty": 2,
+      "additionalNotes": "Enhances security by limiting download window",
+      "source_hlj_id": "REQ 001-004",
+      "domain_id": "P-SAAS-043"
+    },
+    {
+      "id": "REQ-132-HLJ-Chunk_1-Item_5-v1.0",
+      "domain": "unknown",
+      "summary": "Exclude internal analytics and system logs from export",
+      "priority": "Medium",
+      "tags": [
+        "data_exclusion",
+        "privacy",
+        "internal_logs"
+      ],
+      "subdomain": "data_scope",
+      "difficulty": 1,
+      "additionalNotes": "Prevents exposure of internal operational data",
+      "source_hlj_id": "REQ 001-005",
+      "domain_id": "P-SAAS-043"
+    },
+    {
+      "id": "REQ-132-HLJ-Chunk_1-Item_6-v1.0",
+      "domain": "unknown",
+      "summary": "Encrypt export files using AES-256 encryption",
+      "priority": "High",
+      "tags": [
+        "encryption",
+        "data_security",
+        "aes_256"
+      ],
+      "subdomain": "security",
+      "difficulty": 3,
+      "additionalNotes": "Fulfills security best practices for data handling",
+      "source_hlj_id": "REQ 001-006",
+      "domain_id": "P-SAAS-043"
+    },
+    {
+      "id": "REQ-132-HLJ-Chunk_1-Item_7-v1.0",
+      "domain": "unknown",
+      "summary": "Provide access via time-bound, signed URLs",
+      "priority": "High",
+      "tags": [
+        "signed_urls",
+        "temporary_access",
+        "secure_links"
+      ],
+      "subdomain": "security",
+      "difficulty": 3,
+      "additionalNotes": "Minimizes unauthorized access risks",
+      "source_hlj_id": "REQ 001-007",
+      "domain_id": "P-SAAS-043"
+    },
+    {
+      "id": "REQ-132-HLJ-Chunk_1-Item_8-v1.0",
+      "domain": "unknown",
+      "summary": "Store consent and export logs for five years",
+      "priority": "Medium",
+      "tags": [
+        "compliance",
+        "audit_logs",
+        "consent_tracking"
+      ],
+      "subdomain": "compliance",
+      "difficulty": 2,
+      "additionalNotes": "Supports long-term compliance audits",
+      "source_hlj_id": "REQ 001-008",
+      "domain_id": "P-SAAS-043"
+    },
+    {
+      "id": "REQ-132-HLJ-Chunk_1-Item_9-v1.0",
+      "domain": "unknown",
+      "summary": "Support 1,000 concurrent export requests",
+      "priority": "Medium",
+      "tags": [
+        "scalability",
+        "concurrency",
+        "performance"
+      ],
+      "subdomain": "performance",
+      "difficulty": 4,
+      "additionalNotes": "origin: implied – inferred from system capacity requirements",
+      "source_hlj_id": "REQ 001-009",
+      "domain_id": "P-SAAS-043"
+    },
+    {
+      "id": "REQ-132-HLJ-Chunk_1-Item_10-v1.0",
+      "domain": "unknown",
+      "summary": "Use job queue and retry mechanism for exports",
+      "priority": "Low",
+      "tags": [
+        "backend_jobs",
+        "retry_policy",
+        "resilience"
+      ],
+      "subdomain": "architecture",
+      "difficulty": 3,
+      "additionalNotes": "origin: implied – ensures reliable export handling under load",
+      "source_hlj_id": "REQ 001-010",
+      "domain_id": "P-SAAS-043"
+    }
+  ]
+}

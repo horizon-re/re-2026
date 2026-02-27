@@ -1,0 +1,1 @@
+Directive: If pressure_kPa < 0 while altimeter="sea-level", flag as PRES_ANOM. Controller must recalculate depth using backup sonar; if discrepancy (delta) exceeds 2 meters, immediately halt dive. Log full anomaly details to rov_anom_ice.csv with UTC timestamp. Notify ops via #ice-ops Slack channel.

@@ -1,0 +1,3 @@
+{"unit_id": "REQ-135::cu001", "req_id": "REQ-135", "doc_id": "2afdf0bd-55bf-5a76-9957-fa1a74f0e6d3", "parent_sent_id": "REQ-135::s010", "order": 1, "text": "Firstly, our platform supports **role-based data masking**, ensuring that users only see data relevant to their access level."}
+{"unit_id": "REQ-135::cu002", "req_id": "REQ-135", "doc_id": "2afdf0bd-55bf-5a76-9957-fa1a74f0e6d3", "parent_sent_id": "REQ-135::s019", "order": 2, "text": "The core application stack follows a * * microservices architecture * * , where each service is independently deployable and loosely coupled ."}
+{"unit_id": "REQ-135::cu003", "req_id": "REQ-135", "doc_id": "2afdf0bd-55bf-5a76-9957-fa1a74f0e6d3", "parent_sent_id": "REQ-135::s019", "order": 3, "text": "loosely coupled"}

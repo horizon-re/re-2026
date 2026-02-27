@@ -1,0 +1,2683 @@
+{
+  "n_context": 2,
+  "total_errors": 108,
+  "false_positives": 31,
+  "false_negatives": 77,
+  "errors": [
+    {
+      "sent_id": "REQ-010::s007",
+      "sentence": "photo \u2013 Office Image on Unsplash](https://unsplash.com/photos/business-woman-financing-accounting-banking-concept-businesswoman-doing-finances-and-calculate-about-cost-to-real-estate-investment-and-in-other-tax-system-HwsvKRpmhPo))Our cloud-based finance platform will serve small and medium businesses worldwide.",
+      "context_before": [
+        "I\u2019ll get that ready for you shortly.",
+        "# Global Cloud FinTech SaaS Platform \u2013 Early Requirements\n\n## Overview / Business Context\n ([Business Woman Financing Accounting Banking Concept, businesswoman doing finances and calculate about cost to real estate investment and in other, tax system."
+      ],
+      "context_after": [
+        "SMBs represent over 90% of global businesses ([Smart SMB Cash Flow Management Tips for Success](https://www.ccmonet.ai/blog-posts-new/smart-smb-cash-flow-management-tips-for-success#:~:text=Cash%20forecasting%20and%20financial%20planning,for%20their%20growth%20and%20sustainability)), and many are already adopting cloud accounting solutions.",
+        "In a recent UK study, 87% of SMB cloud accounting users say it gives them better visibility into their finances ([How small businesses are benefiting from open banking-driven cloud accountancy - Open Banking](https://www.openbanking.org.uk/insights/how-small-businesses-are-benefiting-from-open-banking-driven-cloud-accountancy/#:~:text=Snapshot%20of%20financial%20position%20We,result%20of%20using%20these%20services)), yet manual tasks persist: 60% of invoices still require manual entry ([2025 Accounts Payable Automation Trends Report: Key Takeaways | SAP Concur](https://www.concur.com/blog/article/2025-accounts-payable-automation-trends-report-key-takeaways#:~:text=Since%202023%2C%20there%E2%80%99s%20been%20a,just%20a%20year%20ago))."
+      ],
+      "true_label": 1,
+      "true_labels": [
+        "requirement",
+        "non_functional",
+        "non_ambiguous"
+      ],
+      "predicted_label": 0,
+      "predicted_class": "non_requirement",
+      "prob_requirement": 0.0012675075558945537,
+      "prob_non_requirement": 0.9987325072288513,
+      "confidence": 0.9987325072288513,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-010::s012",
+      "sentence": "By integrating real-time data and analytics, we\u2019ll help SMB users stay ahead of cash needs and compliance while minimizing manual effort.",
+      "context_before": [
+        "Leading products like FreshBooks and Wave cover basics (invoicing, expenses), but often lack advanced automation or built\u2011in intelligence.",
+        "Our platform will combine core functions with modern UX and smart automation \u2013 for example, automating invoice processing to cut workload (akin to how 52% of finance teams now spend under 10h/week on AP after adopting automation ([2025 Accounts Payable Automation Trends Report: Key Takeaways | SAP Concur](https://www.concur.com/blog/article/2025-accounts-payable-automation-trends-report-key-takeaways#:~:text=Takeaway%20,efficiency%20gains)))."
+      ],
+      "context_after": [
+        "The platform will emphasize ease-of-use for non-technical users.",
+        "Business owners and finance staff can start with simple setup (importing data from banks/CRMs) and immediately see clear dashboards."
+      ],
+      "true_label": 1,
+      "true_labels": [
+        "requirement",
+        "functional",
+        "non_ambiguous"
+      ],
+      "predicted_label": 0,
+      "predicted_class": "non_requirement",
+      "prob_requirement": 0.018547939136624336,
+      "prob_non_requirement": 0.9814520478248596,
+      "confidence": 0.9814520478248596,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-010::s059",
+      "sentence": "These features guide decision-making without requiring separate spreadsheets.",
+      "context_before": [
+        "Predictive tools (for example, projecting next-quarter cash flow) will use past trends and open invoices; as noted, 72% of firms prioritize cash forecasting ([Smart SMB Cash Flow Management Tips for Success](https://www.ccmonet.ai/blog-posts-new/smart-smb-cash-flow-management-tips-for-success#:~:text=Forecasting%20predicts%20future%20finances%20using,organizations%20prioritize%20cash%20flow%20forecasting)).",
+        "Scenario planning (such as \u201creduce expenses by 10%\u201d or \u201cadd a new revenue stream\u201d) will help managers see financial impacts."
+      ],
+      "context_after": [
+        "- **Multi-currency Support:**",
+        "Seamless handling of international transactions."
+      ],
+      "true_label": 1,
+      "true_labels": [
+        "requirement",
+        "functional",
+        "with_context",
+        "non_ambiguous"
+      ],
+      "predicted_label": 0,
+      "predicted_class": "non_requirement",
+      "prob_requirement": 0.0015573574928566813,
+      "prob_non_requirement": 0.9984427094459534,
+      "confidence": 0.9984427094459534,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-011::s125",
+      "sentence": "These actions require no manual effort from the user, and they are backed by research showing that automated reminders improve on-time payments ([Freelance invoice software: Benefits, features, and which should you choose?",
+      "context_before": [
+        "If the invoice due date passes with no payment, the system triggers an automated reminder (e.g. a polite follow-up email).",
+        "If still unpaid after a second interval, an escalation reminder or a custom message is sent."
+      ],
+      "context_after": [
+        "| Remote](https://remote.com/blog/freelance-invoice-software#:~:text=Accuracy%2C%20professionalism%2C%20and%20timeliness%20are,ensuring%20freelancers%20are%20paid%20promptly)).",
+        "The user is alerted: \u201cClient *XYZ Corp.* has not paid Invoice #123."
+      ],
+      "true_label": 1,
+      "true_labels": [
+        "requirement",
+        "functional",
+        "with_context",
+        "non_ambiguous"
+      ],
+      "predicted_label": 0,
+      "predicted_class": "non_requirement",
+      "prob_requirement": 0.0012508926447480917,
+      "prob_non_requirement": 0.9987491369247437,
+      "confidence": 0.9987491369247437,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-011::s091",
+      "sentence": "This ensures there is a record to resolve any billing disputes later.",
+      "context_before": [
+        "If a client disputes a charge, the freelancer can upload documentation or chat in-app, and the entire thread is stored for reference.",
+        "All communications (emails sent, reminders, client responses) are logged in the audit trail."
+      ],
+      "context_after": [
+        "- **Internationalization & Localization.",
+        "*"
+      ],
+      "true_label": 0,
+      "true_labels": [
+        "non_requirement",
+        "non_ambiguous"
+      ],
+      "predicted_label": 1,
+      "predicted_class": "requirement",
+      "prob_requirement": 0.9992890357971191,
+      "prob_non_requirement": 0.000710929452907294,
+      "confidence": 0.9992890357971191,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-011::s111",
+      "sentence": "Access controls prevent unauthorized data access.",
+      "context_before": [
+        "The platform uses modern, secure sign-in methods (OAuth2 and passwordless \u201cMagic Link\u201d emails) so freelancers don\u2019t have to remember another password.",
+        "User data and credentials are encrypted in transit and at rest."
+      ],
+      "context_after": [
+        "(Sensitive financial operations are always double-checked and logged.)",
+        "# Workflow Scenarios & Alerts  \n- **Onboarding & Setup:**"
+      ],
+      "true_label": 1,
+      "true_labels": [
+        "requirement",
+        "non_functional",
+        "non_ambiguous"
+      ],
+      "predicted_label": 0,
+      "predicted_class": "non_requirement",
+      "prob_requirement": 0.027445262297987938,
+      "prob_non_requirement": 0.9725546836853027,
+      "confidence": 0.9725546836853027,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-012::s216",
+      "sentence": "This is supported by modern issuer processors; e.g., **Lithic\u2019s API allows issuing cards with customizable spend limits and controls for security ([Card Issuing](https://www.lithic.com/card-issuing#:~:text=Virtual%20Cards))",
+      "context_before": [
+        "Virtual cards can be displayed in the client\u2019s app for the user to copy or add to Apple/Google Pay.",
+        "We will support setting **dynamic spend controls** on these cards \u2013 for instance, the client can specify a monthly spending limit, or restrict the card to certain merchant categories, etc., via our API."
+      ],
+      "context_after": [
+        "*",
+        "*."
+      ],
+      "true_label": 1,
+      "true_labels": [
+        "non_requirement",
+        "with_context",
+        "non_ambiguous"
+      ],
+      "predicted_label": 0,
+      "predicted_class": "non_requirement",
+      "prob_requirement": 0.0019386163912713528,
+      "prob_non_requirement": 0.9980613589286804,
+      "confidence": 0.9980613589286804,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-012::s281",
+      "sentence": "By leveraging a processor for cards and banking APIs for transfers, we cover the essential use cases so that a client could, for example, build a fully functional neobank or a payments app on top of our infrastructure.",
+      "context_before": [
+        "Clients can thereby enable their users to **store money (in FDIC-insured accounts via our partner bank), spend it via branded payment cards, and move it through various payment rails** \u2013 all through our unified API.",
+        "This breadth of services (from ACH to card swipes) is what makes the platform valuable, as clients get an out-of-the-box solution for payments."
+      ],
+      "context_after": [
+        "All of this will be delivered under the client\u2019s branding (cards, statements, etc.), reinforcing the **white-label nature** of the platform.",
+        "Meanwhile, our system ensures the behind-the-scenes operations (authorization, settlement, ledger entries, etc.) are handled accurately, securely, and in compliance with regulations.\n\n## 6."
+      ],
+      "true_label": 1,
+      "true_labels": [
+        "requirement",
+        "functional",
+        "non_ambiguous"
+      ],
+      "predicted_label": 0,
+      "predicted_class": "non_requirement",
+      "prob_requirement": 0.0015134772984310985,
+      "prob_non_requirement": 0.9984865188598633,
+      "confidence": 0.9984865188598633,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-012::s399",
+      "sentence": "Importantly, a multi-tenant cluster allows us to **avoid spinning up new infrastructure for each client, which reduces management overhead and allows instantly onboarding new tenants without waiting for new deployments ([Cluster multi-tenancy \u00a0|\u00a0 Google Kubernetes Engine (GKE) \u00a0|\u00a0 Google Cloud](https://cloud.google.com/kubernetes-engine/docs/concepts/multitenancy-overview#:~:text=Operating%20a%20multi,tenant%20clusters))",
+      "context_before": [
+        "For now, a powerful single PostgreSQL instance can host multiple tenants, but we keep an eye on performance.",
+        "Caching layers (like Redis) will be introduced to reduce database load for frequent queries (with tenant-specific cache keys)."
+      ],
+      "context_after": [
+        "*",
+        "*."
+      ],
+      "true_label": 1,
+      "true_labels": [
+        "requirement",
+        "non_functional",
+        "non_ambiguous"
+      ],
+      "predicted_label": 0,
+      "predicted_class": "non_requirement",
+      "prob_requirement": 0.004420483019202948,
+      "prob_non_requirement": 0.9955795407295227,
+      "confidence": 0.9955795407295227,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-012::s529",
+      "sentence": "This will help us iterate on DX \u2013 for instance, if multiple developers struggle with a particular API or concept, we might simplify the API or improve the docs.",
+      "context_before": [
+        "- **Developer Feedback Loop:**",
+        "We will have mechanisms to gather feedback from developers using the platform (surveys, feedback forms in the portal, or informal conversations)."
+      ],
+      "context_after": [
+        "Continuous improvement of DX is expected as we scale.",
+        "In conclusion, the developer experience should enable a client\u2019s engineering team to go from zero to a fully integrated embedded finance solution quickly and with confidence."
+      ],
+      "true_label": 1,
+      "true_labels": [
+        "requirement",
+        "functional",
+        "ambiguous",
+        "with_context"
+      ],
+      "predicted_label": 0,
+      "predicted_class": "non_requirement",
+      "prob_requirement": 0.0019182412652298808,
+      "prob_non_requirement": 0.9980818033218384,
+      "confidence": 0.9980818033218384,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-012::s081",
+      "sentence": "*",
+      "context_before": [
+        "In the backend, all data queries will be scoped by an Org ID to enforce this isolation.",
+        "This is critical for security and privacy, ensuring that even if multiple clients are hosted on the same infrastructure, **each tenant\u2019s data remains logically separated ([Vodeno - Solutions](https://vodeno.com/vodeno-cloud-platform/#:~:text=Multi))"
+      ],
+      "context_after": [
+        "*.",
+        "We may implement this via separate database schemas or a tenant identifier column on shared tables, combined with application-layer access control."
+      ],
+      "true_label": 1,
+      "true_labels": [
+        "non_requirement",
+        "with_context",
+        "non_ambiguous"
+      ],
+      "predicted_label": 0,
+      "predicted_class": "non_requirement",
+      "prob_requirement": 0.0013208179734647274,
+      "prob_non_requirement": 0.9986792206764221,
+      "confidence": 0.9986792206764221,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-012::s153",
+      "sentence": "** \u2013 the heavy lifting (bank backend communication) is abstracted away by our platform.",
+      "context_before": [
+        "The onboarding API response to the client\u2019s app will indicate that the user is fully onboarded, along with their new account details (or an error/denial if they failed KYC).",
+        "**Through the BaaS API, users can open digital bank accounts directly in the client\u2019s platform ([BaaS API: How to Integrate, Use Cases & Costs](https://itexus.com/baas-api-how-to-integrate-use-cases-costs/#:~:text=1,financial%20infrastructure%20behind%20the%20scenes))"
+      ],
+      "context_after": [
+        "We will ensure this step is **transactional** and reliable \u2013 either the account is created successfully or appropriate rollback occurs if something fails, so we don\u2019t end up in partial states.",
+        "5."
+      ],
+      "true_label": 0,
+      "true_labels": [
+        "non_requirement",
+        "non_ambiguous"
+      ],
+      "predicted_label": 1,
+      "predicted_class": "requirement",
+      "prob_requirement": 0.9993695616722107,
+      "prob_non_requirement": 0.0006304822745732963,
+      "confidence": 0.9993695616722107,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-012::s237",
+      "sentence": "*",
+      "context_before": [
+        "Our card issuance partner likely handles the tokenization process, but our platform will expose APIs to, for example, provision a card to Apple Wallet (this may involve passing along device info to the processor).",
+        "This is a modern expectation for cards, though not explicitly required \u2013 we note it for completeness given **some issuer APIs advertise support for tokenized & digital wallet cards ([Card Issuing](https://www.lithic.com/card-issuing#:~:text=Issuing%20%202Debit%20%204Virtual,6Tokenized%20%26%20Digital%20Wallet%20Cards))"
+      ],
+      "context_after": [
+        "*.  \n\n  White-label cards are a significant revenue opportunity (interchange income) for our clients, and a key part of our offering.",
+        "We will treat this module with high importance, ensuring it meets **PCI DSS compliance** (secure handling of PAN data \u2013 likely we will not store full PANs, instead rely on tokens and let the issuer handle sensitive data to reduce our scope)."
+      ],
+      "true_label": 1,
+      "true_labels": [
+        "non_requirement",
+        "with_context",
+        "non_ambiguous"
+      ],
+      "predicted_label": 0,
+      "predicted_class": "non_requirement",
+      "prob_requirement": 0.0013213431229814887,
+      "prob_non_requirement": 0.9986786246299744,
+      "confidence": 0.9986786246299744,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-012::s346",
+      "sentence": "- **Data Protection and Privacy:**",
+      "context_before": [
+        "Additionally, we should prepare for examinations or due diligence by partner banks and regulators.",
+        "The platform should have reporting capabilities to show compliance metrics (e.g. KYC completion rates, fraud incidents, uptime reports, etc.)."
+      ],
+      "context_after": [
+        "All customer-sensitive data (PII, account info, transaction details) will be protected not just by encryption but also by access policy.",
+        "For example, within our organization, only those with a need (like a compliance officer investigating fraud) should be able to access raw personal data, and even then through audited means."
+      ],
+      "true_label": 1,
+      "true_labels": [
+        "non_requirement",
+        "non_ambiguous",
+        "with_context"
+      ],
+      "predicted_label": 0,
+      "predicted_class": "non_requirement",
+      "prob_requirement": 0.018268775194883347,
+      "prob_non_requirement": 0.9817312955856323,
+      "confidence": 0.9817312955856323,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-012::s377",
+      "sentence": "By architecting it this way, we avoid spinning up a full stack per client (which would be costly and hard to maintain), while still ensuring isolation through software.",
+      "context_before": [
+        "([Technical Features - Arttha - Unified Banking Platform](https://www.puresoftware.com/arttha/technical-features#:~:text=Manage%20multiple%20deployments%20through%20a,single%20instance))",
+        "**."
+      ],
+      "context_after": [
+        "We will also ensure that any one tenant\u2019s heavy usage (like a big data report) does not overly impact others \u2013 through query optimization, indexing, and perhaps workload isolation for expensive operations (maybe we run certain large analytics in an async manner per tenant).",
+        "- **Kubernetes-Based Isolation and Scaling:*"
+      ],
+      "true_label": 1,
+      "true_labels": [
+        "non_requirement",
+        "with_context",
+        "non_ambiguous"
+      ],
+      "predicted_label": 0,
+      "predicted_class": "non_requirement",
+      "prob_requirement": 0.0017061230028048158,
+      "prob_non_requirement": 0.998293936252594,
+      "confidence": 0.998293936252594,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-012::s397",
+      "sentence": "For now, a powerful single PostgreSQL instance can host multiple tenants, but we keep an eye on performance.",
+      "context_before": [
+        "As transaction volume increases, we will scale the database (vertical scaling to a point, and partitioning or read replicas for horizontal scaling as needed).",
+        "We might adopt a sharding strategy for the database once tenants exceed a certain count or size, perhaps sharding by tenant ranges or by functionality."
+      ],
+      "context_after": [
+        "Caching layers (like Redis) will be introduced to reduce database load for frequent queries (with tenant-specific cache keys).",
+        "Importantly, a multi-tenant cluster allows us to **avoid spinning up new infrastructure for each client, which reduces management overhead and allows instantly onboarding new tenants without waiting for new deployments ([Cluster multi-tenancy \u00a0|\u00a0 Google Kubernetes Engine (GKE) \u00a0|\u00a0 Google Cloud](https://cloud.google.com/kubernetes-engine/docs/concepts/multitenancy-overview#:~:text=Operating%20a%20multi,tenant%20clusters))"
+      ],
+      "true_label": 0,
+      "true_labels": [
+        "non_requirement",
+        "non_ambiguous"
+      ],
+      "predicted_label": 1,
+      "predicted_class": "requirement",
+      "prob_requirement": 0.655491292476654,
+      "prob_non_requirement": 0.34450864791870117,
+      "confidence": 0.655491292476654,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-012::s516",
+      "sentence": "This ensures fewer issues in production and gives developers a structured process.",
+      "context_before": [
+        "They can test these and perhaps submit results or we verify via logs.",
+        "Only then do we promote their API keys to production."
+      ],
+      "context_after": [
+        "M2P\u2019s client journey included compliance checks before production ([M2P Fintech API Banking Platform Teardown | Strategy Analysis - NextSprints](https://nextsprints.com/guide/m2p-fintech-api-banking-platform-product-teardown-analysis#:~:text=1,checks%20before%20transitioning%20to%20production)) \u2013 similarly, we may require that certain compliance-related aspects (like displaying terms to users) are verified before flipping the switch.",
+        "This is as much about ensuring end-users have a good experience as it is about safety."
+      ],
+      "true_label": 0,
+      "true_labels": [
+        "non_requirement",
+        "non_ambiguous"
+      ],
+      "predicted_label": 1,
+      "predicted_class": "requirement",
+      "prob_requirement": 0.7427931427955627,
+      "prob_non_requirement": 0.25720682740211487,
+      "confidence": 0.7427931427955627,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-013::s009",
+      "sentence": "An automated platform allows handling more applications in parallel, improving throughput.",
+      "context_before": [
+        "Lenders dealing with high volumes of SME loan applications need a scalable process.",
+        "Manual reviews don\u2019t easily scale \u2013 increasing loan volume traditionally meant hiring more underwriters, which eats into profit margins\u200b\nlendfusion.com\n."
+      ],
+      "context_after": [
+        "For example, one SME lender cut approval times from weeks to hours and tripled its loan processing capacity without adding staff by adopting automated underwriting\u200b\nlendfusion.com\n.",
+        "This illustrates the efficiency gains our platform targets."
+      ],
+      "true_label": 1,
+      "true_labels": [
+        "requirement",
+        "functional",
+        "with_context",
+        "ambiguous"
+      ],
+      "predicted_label": 0,
+      "predicted_class": "non_requirement",
+      "prob_requirement": 0.0013652796624228358,
+      "prob_non_requirement": 0.9986347556114197,
+      "confidence": 0.9986347556114197,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-013::s003",
+      "sentence": "This slows down access to funds and drives up operational costs for lenders.",
+      "context_before": [
+        "FinTech Platform for Automated SME Credit Risk Assessment \u2013 Planning Document\nBusiness Context & Lending Use Case\nSmall and medium-sized enterprises (SMEs) often face lengthy and complex loan approval processes.",
+        "Traditional manual underwriting can take weeks, requiring extensive paperwork and human review."
+      ],
+      "context_after": [
+        "In today\u2019s competitive market, nearly half of SMEs seek faster credit decisions and a smoother borrowing experience\u200b\ney.com\n.",
+        "FinTech innovations offer a solution: by automating credit risk assessment, lenders can expedite decisions without sacrificing risk controls."
+      ],
+      "true_label": 1,
+      "true_labels": [
+        "non_requirement",
+        "with_context",
+        "non_ambiguous"
+      ],
+      "predicted_label": 0,
+      "predicted_class": "non_requirement",
+      "prob_requirement": 0.0019116218900308013,
+      "prob_non_requirement": 0.9980883002281189,
+      "confidence": 0.9980883002281189,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-013::s049",
+      "sentence": "This streamlined workflow ensures efficiency while keeping experienced eyes on the riskiest or most exceptional cases.",
+      "context_before": [
+        "Feedback from these analysts will be incorporated to continuously improve the credit scoring logic.",
+        "In summary, an application flows through the system with automated scoring and rule-based decisions first, then to underwriters for any needed human review, and up to managers for high-level approvals \u2013 with each step supported by a unified platform interface."
+      ],
+      "context_after": [
+        "Data Sources & Required Integrations\nEffective SME credit risk assessment requires aggregating data from multiple sources.",
+        "Our platform will integrate a broad range of financial data inputs, ensuring a holistic view of each applicant\u2019s creditworthiness."
+      ],
+      "true_label": 1,
+      "true_labels": [
+        "requirement",
+        "functional",
+        "ambiguous",
+        "with_context"
+      ],
+      "predicted_label": 0,
+      "predicted_class": "non_requirement",
+      "prob_requirement": 0.0016515683382749557,
+      "prob_non_requirement": 0.9983484745025635,
+      "confidence": 0.9983484745025635,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-013::s103",
+      "sentence": "In practice, the combined logic works like: model produces a baseline risk score and recommendation, then policy rules are applied to adjust the outcome (auto-approve, refer, or auto-decline) according to institutional risk appetite.",
+      "context_before": [
+        "The platform allows configuring these rules so that the risk team can adjust criteria without rewriting code.",
+        "These rule outcomes are straightforward to explain (e.g. \u201cApplication declined due to recent bankruptcy record\u201d), and the system will show these alongside the score."
+      ],
+      "context_after": [
+        "Explainability Mechanisms: Every credit decision generated by the platform will come with a clear explanation.",
+        "The system will present the key factors influencing the score and decision in an easily digestible format for underwriters and even for communication to borrowers as needed."
+      ],
+      "true_label": 1,
+      "true_labels": [
+        "requirement",
+        "functional",
+        "non_ambiguous"
+      ],
+      "predicted_label": 0,
+      "predicted_class": "non_requirement",
+      "prob_requirement": 0.11908816546201706,
+      "prob_non_requirement": 0.8809118270874023,
+      "confidence": 0.8809118270874023,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-013::s135",
+      "sentence": "This saves the user from hunting through data \u2013 the most pertinent information for decision-making is aggregated in one place.",
+      "context_before": [
+        "The summary will highlight critical facts such as annual revenue, profitability, existing debt, and recent cash flow trends, so the user immediately gets a 360-degree snapshot of the borrower\u2019s financial health.",
+        "Any alerts or flags (for example, \u201cMissing tax return document\u201d or \u201cHigh volatility in bank account balance detected\u201d) will also be shown prominently."
+      ],
+      "context_after": [
+        "Drill-Down Financial Analysis: From the summary, the underwriter can drill deeper into various sections.",
+        "The dashboard will have tabs or expandable sections for:\nFinancial Statements & Documents: A section where extracted financial metrics are displayed in table form (e.g., income statement and balance sheet line items for the past 2-3 years)."
+      ],
+      "true_label": 1,
+      "true_labels": [
+        "requirement",
+        "functional",
+        "with_context",
+        "non_ambiguous"
+      ],
+      "predicted_label": 0,
+      "predicted_class": "non_requirement",
+      "prob_requirement": 0.0019745822064578533,
+      "prob_non_requirement": 0.9980254173278809,
+      "confidence": 0.9980254173278809,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-013::s144",
+      "sentence": "These tools help underwriters perform what would traditionally be a labor-intensive review of bank statements in just minutes, focusing on trends that matter.",
+      "context_before": [
+        "This might include charts of daily balance over time, cash inflows vs. outflows per month, and detection of any anomalies (like sudden drops, frequent overdrafts, etc.).",
+        "The user can filter transactions (e.g., to see all payments to certain creditors, or all instances of returned payments) and the system will have calculated metrics like average monthly inflow, largest expense categories, etc., to support credit analysis."
+      ],
+      "context_after": [
+        "Credit History & External Data: If credit bureau data or other external data was pulled, the dashboard will present that as well \u2013 for instance, a credit score of an owner, any outstanding loans or delinquencies, public records like liens or judgments, etc.",
+        "Having this in one place means the underwriter doesn\u2019t need to run separate reports; the platform consolidates it."
+      ],
+      "true_label": 1,
+      "true_labels": [
+        "requirement",
+        "functional",
+        "ambiguous",
+        "with_context"
+      ],
+      "predicted_label": 0,
+      "predicted_class": "non_requirement",
+      "prob_requirement": 0.001588420826010406,
+      "prob_non_requirement": 0.9984115362167358,
+      "confidence": 0.9984115362167358,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-014::s028",
+      "sentence": "By using our platform, a client can quickly launch integrated financial features, **offering a fully branded banking experience to their users while we ensure security and regulatory compliance in the background**.\n\n## 2.",
+      "context_before": [
+        "The aim is to let clients **\u201cembed these experiences via API\u201d** within their own product\u2019s UI/UX, with us handling the underlying bank partnerships and regulatory compliance ([](https://www.fisglobal.com/-/media/fisglobal/files/PDF/tip-sheet/Fact-Sheet-Banking-as-a-Service-Fintechs.pdf#:~:text=Leverage%20our%20banking%20partners%20to,Card%20Issuing%20Remote%20Deposit%20Capture))",
+        "([](https://www.fisglobal.com/-/media/fisglobal/files/PDF/tip-sheet/Fact-Sheet-Banking-as-a-Service-Fintechs.pdf#:~:text=Account%20Opening%20Balance%20Inquiry%20Debit,Payments%20Bill%20Pay))."
+      ],
+      "context_after": [
+        "API-First Architecture Expectations\n\nThe platform will adopt an **API-first architecture**, meaning all core functionality is exposed via well-designed APIs before anything else.",
+        "Every service \u2013 from customer onboarding to transaction processing \u2013 will be accessible through RESTful API endpoints."
+      ],
+      "true_label": 1,
+      "true_labels": [
+        "requirement",
+        "functional",
+        "non_functional",
+        "with_context",
+        "ambiguous"
+      ],
+      "predicted_label": 0,
+      "predicted_class": "non_requirement",
+      "prob_requirement": 0.001336477231234312,
+      "prob_non_requirement": 0.9986635446548462,
+      "confidence": 0.9986635446548462,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-014::s108",
+      "sentence": "We will treat the terms *organization*, *tenant*, and *client* synonymously in this context.",
+      "context_before": [
+        "This ties into our auditability goals (see Security & Compliance section) \u2013 effectively each org might have their own slice of audit logs.",
+        "Also, if applicable, the client may have multiple sub-organizations or business units; however, initially we assume one organization equals one client company."
+      ],
+      "context_after": [
+        "In summary, **multi-tenant organization management** is about giving each client company a secure, isolated space with self-service control over their users and settings.",
+        "The platform will implement robust RBAC so that within a tenant, roles and privileges are clearly defined and can be managed easily ([Multi-tenancy Meets Simplicity | Cohesity](https://www.cohesity.com/blogs/multi-tenancy-meets-simplicity/#:~:text=Service%20providers%20can%20configure%20role,how%20roles%20are%20assigned%20privileges))."
+      ],
+      "true_label": 0,
+      "true_labels": [
+        "non_requirement",
+        "non_ambiguous"
+      ],
+      "predicted_label": 1,
+      "predicted_class": "requirement",
+      "prob_requirement": 0.9993701577186584,
+      "prob_non_requirement": 0.0006298081134445965,
+      "confidence": 0.9993701577186584,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-014::s080",
+      "sentence": "This is critical for security and privacy, ensuring that even if multiple clients are hosted on the same infrastructure, **each tenant\u2019s data remains logically separated ([Vodeno - Solutions](https://vodeno.com/vodeno-cloud-platform/#:~:text=Multi))",
+      "context_before": [
+        "Each client organization is a separate tenant context \u2013 they will have segregated data (customer records, transactions, API keys, etc.) and cannot access any other organization\u2019s data.",
+        "In the backend, all data queries will be scoped by an Org ID to enforce this isolation."
+      ],
+      "context_after": [
+        "*",
+        "*."
+      ],
+      "true_label": 1,
+      "true_labels": [
+        "non_requirement",
+        "with_context",
+        "non_ambiguous"
+      ],
+      "predicted_label": 0,
+      "predicted_class": "non_requirement",
+      "prob_requirement": 0.004057134967297316,
+      "prob_non_requirement": 0.9959428906440735,
+      "confidence": 0.9959428906440735,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-014::s388",
+      "sentence": "If we have particularly large enterprise clients, one strategy is to deploy a dedicated instance of certain services for them (a form of *hybrid multi-tenancy*), but that would be an exception rather than the norm.",
+      "context_before": [
+        "**.",
+        "Each tenant\u2019s requests and workloads run in the same app instances but logical separation is maintained in code."
+      ],
+      "context_after": [
+        "Generally, we want high utilization by sharing infrastructure while isolating tenants in software.",
+        "We will also isolate environment configurations: for instance, each tenant will have their own API keys and credentials for third-party integrations (like if one client has a custom KYC flow) \u2013 these will be kept in separate config maps/secrets in Kubernetes, not accessible across tenants."
+      ],
+      "true_label": 1,
+      "true_labels": [
+        "requirement",
+        "functional",
+        "ambiguous"
+      ],
+      "predicted_label": 0,
+      "predicted_class": "non_requirement",
+      "prob_requirement": 0.0017882533138617873,
+      "prob_non_requirement": 0.9982117414474487,
+      "confidence": 0.9982117414474487,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-014::s420",
+      "sentence": "This ensures that testing by one client does not affect production and that mistakes in sandbox don\u2019t have serious consequences.",
+      "context_before": [
+        "These environments are separate.",
+        "The sandbox will run on a separate set of infrastructure (or logically separated within the cluster) and use test data (not real money)."
+      ],
+      "context_after": [
+        "We\u2019ll use Kubernetes and modern CI/CD (**GitOps**) to manage environment deployments \u2013 for example, when we update the platform, we can roll it out to sandbox clusters first, then production.",
+        "Environment isolation is also critical for compliance \u2013 no test data mixing with prod, and possible to simulate various scenarios."
+      ],
+      "true_label": 0,
+      "true_labels": [
+        "non_requirement",
+        "non_ambiguous"
+      ],
+      "predicted_label": 1,
+      "predicted_class": "requirement",
+      "prob_requirement": 0.9993395209312439,
+      "prob_non_requirement": 0.0006604634691029787,
+      "confidence": 0.9993395209312439,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-014::s494",
+      "sentence": "We cater to both.",
+      "context_before": [
+        "We may also have Postman collections and maybe a command-line tool for interacting with the platform (for quick tests or scripting).",
+        "The idea is to meet developers where they are: some prefer copy-paste examples, others prefer formal libraries."
+      ],
+      "context_after": [
+        "This ties in with the fact that many modern startups adopt an **API-first approach and thus treat developer experience as key \u2013 providing high-quality docs, SDKs, and clear roadmaps to help integration ([\n\t5 Key Trends in API Development | SwaggerHub\n](https://swagger.io/blog/5-key-trends-fintech-api-development/?sbsearch=protocols#:~:text=Given%20the%20central%20role%20of,and%20maintain%20the%20API%20connections))",
+        "*"
+      ],
+      "true_label": 1,
+      "true_labels": [
+        "non_requirement",
+        "with_context",
+        "non_ambiguous"
+      ],
+      "predicted_label": 0,
+      "predicted_class": "non_requirement",
+      "prob_requirement": 0.001263018581084907,
+      "prob_non_requirement": 0.9987370371818542,
+      "confidence": 0.9987370371818542,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-014::s526",
+      "sentence": "Essentially, we treat the developer integrating our platform as a first-class user of our product, designing everything to cater to their needs.",
+      "context_before": [
+        "Also, idempotency in endpoints (especially for money movement) will prevent headaches with duplicate operations \u2013 we\u2019ll document how to use idempotency keys.",
+        "We will also emphasize in docs the **best practices** (for example, how to securely store API keys, how to handle webhooks retries idempotently, etc.)."
+      ],
+      "context_after": [
+        "- **Developer Feedback Loop:**",
+        "We will have mechanisms to gather feedback from developers using the platform (surveys, feedback forms in the portal, or informal conversations)."
+      ],
+      "true_label": 1,
+      "true_labels": [
+        "requirement",
+        "non_functional",
+        "ambiguous"
+      ],
+      "predicted_label": 0,
+      "predicted_class": "non_requirement",
+      "prob_requirement": 0.006042654160410166,
+      "prob_non_requirement": 0.9939572811126709,
+      "confidence": 0.9939572811126709,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-015::s138",
+      "sentence": "\u2014 Vintti](https://www.vintti.com/blog/wave-vs-quickbooks-online-which-is-best-for-international-users#:~:text=match%20at%20L460%20Wave%20also,converting%20amounts%20into%20the%20home))\u3011 \u2013 meaning it can tell you exactly how a \u20ac1,000 invoice translated into USD after the exchange rate and fees.",
+      "context_before": [
+        "You can invoice in dozens of currencies, and when you record payment, Wave will calculate the conversion to your home currency.",
+        "In fact, Wave automatically tracks exchange rate differences and posts gains/losses so your accounts stay accurat ([Wave vs QuickBooks: Best for Global Users?"
+      ],
+      "context_after": [
+        "This directly tackles your \u201cwhere did the money go\u201d black hole problem.",
+        "One caveat: Wave\u2019s tax features are basic."
+      ],
+      "true_label": 1,
+      "true_labels": [
+        "requirement",
+        "functional",
+        "non_ambiguous"
+      ],
+      "predicted_label": 0,
+      "predicted_class": "non_requirement",
+      "prob_requirement": 0.0024750446900725365,
+      "prob_non_requirement": 0.9975249171257019,
+      "confidence": 0.9975249171257019,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-015::s164",
+      "sentence": "That could satisfy your tax wish, as it will say \u201cBased on your income, you should set aside $X for taxes.\u201d",
+      "context_before": [
+        "Also, many of the cooler features (like multi-currency) are locked behind higher-priced plans \u2013 QuickBooks Online\u2019s \u201cAdvanced\u201d plan (needed for multi-currency) can run around $200+ a mont ([6+ Best Multi-currency Accounting Software [2025]](https://www.ecaplabs.com/blogs/multi-currency-accounting-software#:~:text=Pricing%3A%20QuickBooks%20Online%20Advanced%20starts,at%20%24235%20per%20month))\u3011, which is overkill for a freelancer.",
+        "Intuit does have a product called **QuickBooks Self-Employed** (often ~$15/month) aimed at freelancers, which is much simpler and *does* do nifty things like automatically track mileage, categorize expenses, and estimate quarterly taxes for you."
+      ],
+      "context_after": [
+        "**But** QuickBooks Self-Employed has downsides: it doesn\u2019t handle multiple currencies or more complex invoicing needs (it\u2019s pretty US-centric), and it\u2019s actually separate from the main QuickBooks Online (which can be confusing if you ever upgrade).",
+        "In summary, QuickBooks as a whole could tick many of your boxes \u2013 especially if paired with the upcoming AI assistant (Intuit Assist) to add that \u201csmart buddy\u201d element \u2013 but it might feel less \u201cchill\u201d and more like traditional software."
+      ],
+      "true_label": 1,
+      "true_labels": [
+        "requirement",
+        "functional",
+        "with_context",
+        "non_ambiguous"
+      ],
+      "predicted_label": 0,
+      "predicted_class": "non_requirement",
+      "prob_requirement": 0.0013139384100213647,
+      "prob_non_requirement": 0.9986860156059265,
+      "confidence": 0.9986860156059265,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-015::s093",
+      "sentence": "The key is that it feels professional and **easy for the client to pay** (no unnecessary signup steps), which means you get your money faster and with less back-and-forth.",
+      "context_before": [
+        "When you email an invoice from platforms like FreshBooks, Wave, or Zoho, you can include a link or button for the client to pay online via Stripe, PayPal, etc ([The Best Accounting Software for Small Businesses in 2025 | PCMag](https://www.pcmag.com/picks/the-best-small-business-accounting-software#:~:text=How%20Do%20Accounting%20Apps%20Handle,Completed%20Transactions))\u3011.",
+        "The dream system would perhaps even allow saving client payment info for recurring charges (with permission, of course) so that your retainer clients get auto-charged \u2013 truly \u201cset it and forget it\u201d for you."
+      ],
+      "context_after": [
+        "- **Personality and Personalization",
+        ":**"
+      ],
+      "true_label": 1,
+      "true_labels": [
+        "requirement",
+        "non_functional",
+        "ambiguous"
+      ],
+      "predicted_label": 0,
+      "predicted_class": "non_requirement",
+      "prob_requirement": 0.00300182169303298,
+      "prob_non_requirement": 0.9969981908798218,
+      "confidence": 0.9969981908798218,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-015::s096",
+      "sentence": "This one\u2019s more abstract, but basically you wish the app felt like a **finance-savvy buddy** rather than a cold piece of software.",
+      "context_before": [
+        "- **Personality and Personalization",
+        ":**"
+      ],
+      "context_after": [
+        "In practice, this could mean a chat-based assistant in the app that gives you updates or even pokes fun at you when you slack off.",
+        "While we\u2019re not quite there yet in mainstream tools, there are hints of this on the horizon."
+      ],
+      "true_label": 1,
+      "true_labels": [
+        "requirement",
+        "non_functional",
+        "ambiguous",
+        "with_context"
+      ],
+      "predicted_label": 0,
+      "predicted_class": "non_requirement",
+      "prob_requirement": 0.003876199247315526,
+      "prob_non_requirement": 0.9961238503456116,
+      "confidence": 0.9961238503456116,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-015::s114",
+      "sentence": "It also integrates online payments: you can set up a client to pay via credit card or Apple Pay right on the invoice (FreshBooks uses Stripe and other gateways behind the scenes).",
+      "context_before": [
+        "([6+ Best Multi-currency Accounting Software [2025]](https://www.ecaplabs.com/blogs/multi-currency-accounting-software#:~:text=making%20multi,border%20payments))\u3011.",
+        "It will automatically handle currency conversions at current exchange rates."
+      ],
+      "context_after": [
+        "On the expense side, it connects to your bank to import transactions and uses **automated categorization** to sort expenses for yo ([Invoice and Accounting Software for Small Businesses - FreshBooks](https://www.freshbooks.com/#:~:text=Invoicing%20Create%20professional%20invoices%20in,accounting%20tools%2C%20powerful%20financial%20reports))\u3011",
+        "\u2013"
+      ],
+      "true_label": 0,
+      "true_labels": [
+        "non_requirement",
+        "non_ambiguous"
+      ],
+      "predicted_label": 1,
+      "predicted_class": "requirement",
+      "prob_requirement": 0.9950271248817444,
+      "prob_non_requirement": 0.0049728513695299625,
+      "confidence": 0.9950271248817444,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-015::s157",
+      "sentence": "* because of its depth.",
+      "context_before": [
+        "The online version (QuickBooks Online) is incredibly feature-rich and can do almost everything: invoicing, bills, payroll, inventory, reports, multi-currency, you name it.",
+        "**It\u2019s often considered \u201cBest Overall\u201d for small business accountin ([The Best Accounting Software for Small Businesses in 2025 | PCMag](https://www.pcmag.com/picks/the-best-small-business-accounting-software#:~:text=Best%20Overall))\u3011*"
+      ],
+      "context_after": [
+        "QuickBooks Online certainly can meet a lot of your functional needs: it supports over 100 currencies with automatic exchange rate update ([6+ Best Multi-currency Accounting Software [2025]](https://www.ecaplabs.com/blogs/multi-currency-accounting-software#:~:text=QuickBooks%2C%20particularly%20its%20Online%20Advanced,generate%20reports%20in%20multiple%20currencies))\u3011, handles international sales tax/VAT in higher tiers, and has tons of integrations (including PayPal, Stripe, etc., for payments).",
+        "However, all that power comes at the cost of complexity *and* cost."
+      ],
+      "true_label": 1,
+      "true_labels": [
+        "non_requirement",
+        "with_context",
+        "non_ambiguous"
+      ],
+      "predicted_label": 0,
+      "predicted_class": "non_requirement",
+      "prob_requirement": 0.0011298798490315676,
+      "prob_non_requirement": 0.9988700747489929,
+      "confidence": 0.9988700747489929,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-016::s122",
+      "sentence": "Dividends: The comprehensive dividend tracking of getquin 98 and the projection capabilities of Stock Rover 99 offer strong models for this feature.",
+      "context_before": [
+        "FOMO Control: The innovative approach of Mogo's \"Buffett Mode\" 76 and the broader principles of behavioral nudges 44 can guide the implementation of features designed to curb impulsive trading.",
+        "Taxes: The tax information resources of Schwab Intelligent Portfolios 96 and the user-friendly interface of tax software like TurboTax 90 can inspire the development of simplified tax guidance within the app."
+      ],
+      "context_after": [
+        "User Experience: The focus on beginner-friendly design evident in apps like those highlighted in the research 46 should be a guiding principle throughout the development process.",
+        "Conclusion: Empowering the Everyday InvestorBy focusing on the specific needs and frustrations articulated by everyday investors, it is possible to develop a trading application that stands apart from the often-intimidating platforms currently available."
+      ],
+      "true_label": 0,
+      "true_labels": [
+        "non_requirement"
+      ],
+      "predicted_label": 1,
+      "predicted_class": "requirement",
+      "prob_requirement": 0.9983417987823486,
+      "prob_non_requirement": 0.0016581463860347867,
+      "confidence": 0.9983417987823486,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-017::s110",
+      "sentence": "Gamification elements, such as rewards (e.g., points redeemable for in-app benefits or discounts), badges for achieving specific financial milestones or app usage goals, progress tracking to visualize savings or payment habits, and leaderboards for friendly competition among opted-in users, can significantly enhance user engagement and encourage positive financial behaviors.110Beyond basic transaction sharing, the new application can explore a range of social features.",
+      "context_before": [
+        "Incorporating Innovative Social and Gamification Features: Lessons from Financial and Non-Financial AppsTo further enhance user engagement and differentiate the new application, incorporating innovative social and gamification features should be considered.",
+        "Lessons can be drawn from both successful financial and non-financial applications."
+      ],
+      "context_after": [
+        "These could include the ability for users to create private groups for managing shared expenses, complete with dedicated chat functionalities to discuss bills and payments.78 Customizable user profiles, allowing individuals to personalize their app experience and potentially share limited information with friends, can also foster a sense of community.78 Drawing inspiration from social media platforms, the app could offer options for peer-to-peer support or advice within a controlled environment, allowing users to help each other with app features or financial tips.78Learning from non-financial apps about creating engaging content feeds is also crucial.116 The new application could offer a feed that goes beyond just transactions, potentially including curated content related to shared activities, local events (if users opt-in to share location), or even financial literacy tips relevant to the user's network.",
+        "Fostering a sense of community can be achieved through features like in-app forums for discussions on relevant topics, real-time chats within groups, and the ability for users to create and share content related to their experiences or interests (within appropriate boundaries).79The key to successfully integrating social and gamification features lies in thoughtful implementation that enhances the core functionality of the app without feeling intrusive or forced."
+      ],
+      "true_label": 1,
+      "true_labels": [
+        "requirement",
+        "functional",
+        "ambiguous"
+      ],
+      "predicted_label": 0,
+      "predicted_class": "non_requirement",
+      "prob_requirement": 0.004079123958945274,
+      "prob_non_requirement": 0.9959208965301514,
+      "confidence": 0.9959208965301514,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-017::s017",
+      "sentence": "However, perceived weaknesses in their user interface and overall experience present avenues for a new application to differentiate itself by prioritizing a sleek, intuitive design and potentially a more focused feature set tailored to the core P2P payment experience.",
+      "context_before": [
+        "The user's description of Cash App as \"ugly\" underscores a significant opportunity for a new application to excel in visual design and user appeal.",
+        "Both Venmo and Cash App provide the fundamental functionalities of user-to-user transfers, bill splitting, and group payments as requested by the user."
+      ],
+      "context_after": [
+        "User Interface and Experience Analysis: Transaction History and Mobile Wallet ViewsVenmo allows users to view their transaction history within the application, organized chronologically by year, with options to filter transactions by name and payment type.21",
+        "The app offers distinct \"wallet\" and \"transactions\" views, although some users have reported frustration with the app's tendency to automatically toggle between these screens.21 While transaction details are visible, the specific payment amount is hidden from users who were not directly involved in the transaction when viewing public feeds, with payments clearly indicated in green or red.23 To address privacy concerns related to the default public sharing of transactions, Venmo provides users with the ability to make their past transactions private.24 Despite these features, the social-first approach of Venmo, which extends to its transaction history being linked to the social feed, can contribute to a cluttered user experience and raise privacy anxieties for some individuals 22, even with the availability of privacy settings.27Cash App provides comprehensive options for viewing transaction history, accessible both within the mobile application via the Activity tab (indicated by a clock icon) and online.31 Users can easily scroll through their transaction history and tap on any specific payment to access more detailed information.31 Additionally, Cash App offers monthly account statements that include starting and ending balances, fees, transaction history, and account details, available both in-app (through the Profile, Documents, and Account Statements sections) and online (at cash.app/account under Documents).33 To facilitate efficient review of transaction history, Cash App includes search and filter functionalities within the Activity tab, allowing users to locate specific transactions by recipient name, payment type, date, or amount.31 Cash App's design prioritizes providing comprehensive financial information; however, its presentation might lack the visual appeal and intuitive organization that the user envisions for the new application, indicating an opportunity for a more user-friendly and aesthetically pleasing display of financial data."
+      ],
+      "true_label": 1,
+      "true_labels": [
+        "requirement",
+        "functional",
+        "non_functional",
+        "with_context",
+        "non_ambiguous"
+      ],
+      "predicted_label": 0,
+      "predicted_class": "non_requirement",
+      "prob_requirement": 0.0038248796481639147,
+      "prob_non_requirement": 0.9961750507354736,
+      "confidence": 0.9961750507354736,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-017::s075",
+      "sentence": "The app could also consider features that foster positive interactions and a sense of community while respecting user privacy preferences.",
+      "context_before": [
+        "Creating a Truly Engaging Social Feed: Beyond Transaction SharingTo create a social feed that is \"actually engaging, maybe even fun,\" moving beyond the \"cringe 'paid for pizza' nonsense\" [User Query], the new application should explore options for richer content beyond basic transaction descriptions.",
+        "This could include the ability for users to optionally share photos, location tags (with user consent), or integrate with other social platforms, providing a more holistic view of shared activities."
+      ],
+      "context_after": [
+        "This might involve the ability to create private groups for shared expenses with dedicated chat functionalities 78, or curated content related to shared experiences and activities.",
+        "Reimagining the social feed to be genuinely engaging without feeling forced or intrusive is a significant opportunity for differentiation."
+      ],
+      "true_label": 0,
+      "true_labels": [
+        "non_requirement"
+      ],
+      "predicted_label": 1,
+      "predicted_class": "requirement",
+      "prob_requirement": 0.9983629584312439,
+      "prob_non_requirement": 0.0016369957011193037,
+      "confidence": 0.9983629584312439,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-018::s072",
+      "sentence": "The key to effectively implementing the \"gentle tap on the shoulder\" lies in the careful selection of language and framing used in the alerts, shifting from negative and accusatory tones to those that are positive and supportive, ultimately fostering a more constructive response to overspending.",
+      "context_before": [
+        "The integration of SMART goals and the broader philosophy of \"soft savings\" directly addresses the user's desire for flexible and less anxiety-provoking goal-setting mechanisms.",
+        "This approach recognizes that life and financial priorities can evolve, enabling users to adapt their goals without experiencing a sense of failure."
+      ],
+      "context_after": [
+        "Cultivating Financial Wellness:",
+        "Beyond Numbers to Emotional Well-beingThe proposed budgeting tool can significantly contribute to a user's sense of financial wellness by actively working to reduce anxiety and promote a feeling of confidence in managing their finances.32 Financial wellness applications like Good With specifically focus on alleviating money-related anxieties and building financial confidence through the application of principles from Cognitive Behavioral Therapy (CBT).33"
+      ],
+      "true_label": 1,
+      "true_labels": [
+        "requirement",
+        "non_functional",
+        "non_ambiguous"
+      ],
+      "predicted_label": 0,
+      "predicted_class": "non_requirement",
+      "prob_requirement": 0.004119588062167168,
+      "prob_non_requirement": 0.9958803653717041,
+      "confidence": 0.9958803653717041,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-019::s014",
+      "sentence": "The desire for high accuracy in predictions and seamless automation of trading activities are evident.",
+      "context_before": [
+        "To enhance user experience, the platform would feature intuitive dashboards with visualizations of predictions, confidence scores for trades, and a user-friendly interface [user query].",
+        "Furthermore, the user envisions customization options for risk tolerance and sector focus, with future aspirations to expand into options and cryptocurrency trading [user query].Underlying this vision are several implicit requirements and key questions."
+      ],
+      "context_after": [
+        "The emphasis on a slick, user-friendly interface suggests a need for accessibility and ease of use for a broad audience.",
+        "The ambition to eventually handle options and cryptocurrency indicates a forward-looking perspective and a desire for a comprehensive investment tool."
+      ],
+      "true_label": 0,
+      "true_labels": [
+        "non_requirement",
+        "non_ambiguous"
+      ],
+      "predicted_label": 1,
+      "predicted_class": "requirement",
+      "prob_requirement": 0.9683691263198853,
+      "prob_non_requirement": 0.031630903482437134,
+      "confidence": 0.9683691263198853,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-020::s010",
+      "sentence": "The user's frustration with these manual processes is evident in the desire for intelligent automation that can handle routine tasks like expense categorization.",
+      "context_before": [
+        "This process is not only tedious and time-consuming but also highly susceptible to human errors, such as incorrect data input or miscategorization of expenses.",
+        "Furthermore, the physical handling of receipts can lead to loss or damage, making reimbursement and accurate record-keeping difficult.3"
+      ],
+      "context_after": [
+        "The scenario of \"lunch with client\" requiring manual selection from numerous options highlights the inefficiency the user seeks to overcome.4\nThe need for a system that flags \"anything weird\" without requiring a detailed review of every transaction, such as a coffee receipt, underscores the desire for intelligent oversight.",
+        "Manually scrutinizing every expense report for potential discrepancies or policy violations can be an overwhelming task, especially for busy managers."
+      ],
+      "true_label": 1,
+      "true_labels": [
+        "requirement",
+        "functional",
+        "non_ambiguous"
+      ],
+      "predicted_label": 0,
+      "predicted_class": "non_requirement",
+      "prob_requirement": 0.4613399803638458,
+      "prob_non_requirement": 0.5386600494384766,
+      "confidence": 0.5386600494384766,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-020::s027",
+      "sentence": "This feature can significantly reduce the workload for approvers by automatically approving low-risk, compliant expenses.",
+      "context_before": [
+        "This simple action should be readily accessible to approvers, minimizing the time and effort required to review and process expense reports.",
+        "Additionally, the system should support the configuration of automated approval rules for expenses that fall below a certain threshold.4"
+      ],
+      "context_after": [
+        "For more complex organizational structures, the system should also allow for the creation of customizable approval workflows that can be tailored to different spending categories, amounts, or employee roles, ensuring that expenses are routed to the appropriate individuals for review and authorization.5",
+        "The availability of one-click approval and automated workflows directly addresses the user's need for a fast and efficient system that minimizes the time spent on manual review."
+      ],
+      "true_label": 1,
+      "true_labels": [
+        "requirement",
+        "functional",
+        "non_ambiguous"
+      ],
+      "predicted_label": 0,
+      "predicted_class": "non_requirement",
+      "prob_requirement": 0.0037297140806913376,
+      "prob_non_requirement": 0.9962702989578247,
+      "confidence": 0.9962702989578247,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-021::s015",
+      "sentence": "\u2022\tDo we need integrations with accounting tools from MVP?\n\nLet me know what\u2019s missing!\n\u2014Lena",
+      "context_before": [
+        "\u2022\tHosted in EU-region AWS.",
+        "Open Questions\n\t\u2022\tShould managers get email or Slack alerts by default?"
+      ],
+      "context_after": [],
+      "true_label": 1,
+      "true_labels": [
+        "non_requirement",
+        "with_context",
+        "non_ambiguous"
+      ],
+      "predicted_label": 0,
+      "predicted_class": "non_requirement",
+      "prob_requirement": 0.1102064773440361,
+      "prob_non_requirement": 0.8897935748100281,
+      "confidence": 0.8897935748100281,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-028::s023",
+      "sentence": "Upgrades\n   - Users struggle to find upgrade options easily.\n   - Simplify with a prominent \"Upgrade Now\" button.",
+      "context_before": [
+        "Imagine the time saved if customers could just get answers right away, without calling in.",
+        "## Emerging Themes\n1."
+      ],
+      "context_after": [
+        "2.",
+        "Cancellations\n   - Current process requires unnecessary steps."
+      ],
+      "true_label": 1,
+      "true_labels": [
+        "requirement",
+        "functional",
+        "non_ambiguous"
+      ],
+      "predicted_label": 0,
+      "predicted_class": "non_requirement",
+      "prob_requirement": 0.0017627227352932096,
+      "prob_non_requirement": 0.9982372522354126,
+      "confidence": 0.9982372522354126,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-043::s007",
+      "sentence": "Migrating your existing funds will be straightforward\u2014simply confirm the transfer within your account dashboard when prompted, and your current savings will automatically carry over to the new CAD account.",
+      "context_before": [
+        "To ensure a smooth transition, we\u2019ll be offering early beta access starting next week, and we\u2019d love to have you participate.",
+        "You\u2019ll receive a follow-up email with detailed instructions on how to opt in."
+      ],
+      "context_after": [
+        "If you have any further questions or need assistance during this process, feel free to reach out.",
+        "Warm regards,  \nThe SaveRound Team  \nsupport@saveround.io"
+      ],
+      "true_label": 1,
+      "true_labels": [
+        "requirement",
+        "functional",
+        "non_ambiguous"
+      ],
+      "predicted_label": 0,
+      "predicted_class": "non_requirement",
+      "prob_requirement": 0.00481126643717289,
+      "prob_non_requirement": 0.9951887130737305,
+      "confidence": 0.9951887130737305,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-043::s004",
+      "sentence": "I'm happy to share that we\u2019re firmly committed to enabling CAD round-up accounts by 1 July 2025.",
+      "context_before": [
+        "Hi Karen,\n\nThanks so much for your patience regarding the rollout of our CAD round-up feature\u2014I apologize for the unexpected delay.",
+        "Your feedback has been invaluable, and we sincerely appreciate your understanding as we work diligently to get everything right."
+      ],
+      "context_after": [
+        "To ensure a smooth transition, we\u2019ll be offering early beta access starting next week, and we\u2019d love to have you participate.",
+        "You\u2019ll receive a follow-up email with detailed instructions on how to opt in."
+      ],
+      "true_label": 1,
+      "true_labels": [
+        "requirement",
+        "functional",
+        "non_ambiguous"
+      ],
+      "predicted_label": 0,
+      "predicted_class": "non_requirement",
+      "prob_requirement": 0.004540601279586554,
+      "prob_non_requirement": 0.9954593777656555,
+      "confidence": 0.9954593777656555,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-053::s011",
+      "sentence": "\u2022\tGoals: Integrate forecasting into her product to enable customers to predict delivery times and demand surges.",
+      "context_before": [
+        "3.",
+        "Priya Patel \u2014 Product Manager\n\t\u2022\tBackground: PM for an AI-first logistics platform."
+      ],
+      "context_after": [
+        "\u2022\tFrustrations: API-based tools without clean documentation or rate limits that throttle at peak times.\n\n\u2e3b\n\nFunctional Requirements\n\nCore Forecasting\n\t\u2022\tProvide time-series forecasting for numeric KPIs (inventory, revenue, usage metrics).",
+        "\u2022\tAllow users to input historical data manually or via integrations."
+      ],
+      "true_label": 1,
+      "true_labels": [
+        "requirement",
+        "functional",
+        "ambiguous",
+        "with_context"
+      ],
+      "predicted_label": 0,
+      "predicted_class": "non_requirement",
+      "prob_requirement": 0.0021288087591528893,
+      "prob_non_requirement": 0.9978711605072021,
+      "confidence": 0.9978711605072021,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-090::s062",
+      "sentence": "By employing industry-standard algorithms, the platform leverages well-established and vetted cryptographic methods, providing a strong level of assurance regarding the protection of sensitive data.",
+      "context_before": [
+        "Data Encryption at RestTo ensure the confidentiality and security of data, the platform will encrypt data at rest using industry-standard encryption algorithms.",
+        "Encryption at rest is a fundamental security measure that protects data from unauthorized access even if the physical storage media were to be compromised."
+      ],
+      "context_after": [
+        "This commitment to encryption is a crucial security best practice and provides tenants with confidence in the platform's ability to safeguard their information.4.3.",
+        "Failover MechanismsThe platform architecture will incorporate robust failover mechanisms to ensure business continuity in the event of regional outages or disasters."
+      ],
+      "true_label": 1,
+      "true_labels": [
+        "requirement",
+        "non_functional",
+        "non_ambiguous"
+      ],
+      "predicted_label": 0,
+      "predicted_class": "non_requirement",
+      "prob_requirement": 0.0071257115341722965,
+      "prob_non_requirement": 0.992874264717102,
+      "confidence": 0.992874264717102,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-090::s139",
+      "sentence": "The robust RBAC system, with its provision for both standard and custom roles, along with admin override workflows and audit trails, demonstrates a strong focus on security and compliance.",
+      "context_before": [
+        "Recommendations and ConclusionThe proposed multi-tenant CRM platform, as outlined in the BRD, exhibits several key strengths.",
+        "The hierarchical account structure with inheritance rules appears well-suited to accommodate organizations with complex internal arrangements, offering a balance between centralized control and decentralized flexibility."
+      ],
+      "context_after": [
+        "The commitment to multi-region data storage addresses critical data residency requirements and enhances business continuity through failover mechanisms.",
+        "The comprehensive audit logging framework provides detailed tracking of user and system activities, crucial for security monitoring and regulatory compliance."
+      ],
+      "true_label": 0,
+      "true_labels": [
+        "non_requirement",
+        "non_ambiguous"
+      ],
+      "predicted_label": 1,
+      "predicted_class": "requirement",
+      "prob_requirement": 0.9930846691131592,
+      "prob_non_requirement": 0.00691536208614707,
+      "confidence": 0.9930846691131592,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-090::s017",
+      "sentence": "Furthermore, the platform's support for multiple levels of Org Units within an Account introduces a significant degree of flexibility.",
+      "context_before": [
+        "This isolation is a standard and critical element of multi-tenant architectures, as it ensures that the data of one subscribing organization remains entirely separate and inaccessible to other tenants, thereby upholding data privacy and security.",
+        "This architectural decision also simplifies processes such as data backup and recovery, as these operations can be performed independently for each tenant."
+      ],
+      "context_after": [
+        "This capability is particularly beneficial for larger and more complex organizations that require fine-grained control over how data is accessed and by whom within different parts of their operational structure.",
+        "The ability to represent intricate internal reporting lines and departmental divisions within the CRM enhances its utility for organizations with sophisticated operational frameworks.2.2."
+      ],
+      "true_label": 1,
+      "true_labels": [
+        "requirement",
+        "functional",
+        "with_context",
+        "ambiguous"
+      ],
+      "predicted_label": 0,
+      "predicted_class": "non_requirement",
+      "prob_requirement": 0.004231937695294619,
+      "prob_non_requirement": 0.9957680702209473,
+      "confidence": 0.9957680702209473,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-090::s067",
+      "sentence": "The implementation of such mechanisms is critical for ensuring the platform's high availability and minimizing potential downtime, which is a key requirement for enterprise-grade CRM systems.",
+      "context_before": [
+        "This will involve replicating data across multiple availability zones within the chosen region and potentially across secondary regions.",
+        "This redundancy allows for automatic failover to a healthy instance of the platform with minimal disruption in service."
+      ],
+      "context_after": [
+        "Cloud infrastructure, while generally reliable, can experience outages, and having redundant systems in geographically diverse locations ensures that the CRM remains accessible even if a primary location fails.4.4.",
+        "Transparency and DocumentationThe BRD emphasizes the commitment to providing clear documentation to tenants regarding data storage locations and failover procedures."
+      ],
+      "true_label": 1,
+      "true_labels": [
+        "requirement",
+        "non_functional",
+        "non_ambiguous"
+      ],
+      "predicted_label": 0,
+      "predicted_class": "non_requirement",
+      "prob_requirement": 0.004851092584431171,
+      "prob_non_requirement": 0.9951489567756653,
+      "confidence": 0.9951489567756653,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-090::s129",
+      "sentence": "This ensures a smoother and more efficient onboarding experience for new tenants.",
+      "context_before": [
+        "Automated Notification TriggersAutomated notification triggers will keep administrators informed of the progress of the onboarding process and alert them to any issues that require attention.",
+        "Proactive notifications provide valuable real-time updates on the onboarding status, allowing administrators to promptly address any problems or roadblocks that may occur."
+      ],
+      "context_after": [
+        "Keeping administrators informed reduces uncertainty and allows for quick resolution of any issues, minimizing delays in the onboarding process.7.4.",
+        "Clear and Intuitive GuidanceThe platform will provide clear and intuitive guidance to new tenants throughout the onboarding process, including setup wizards and helpful documentation."
+      ],
+      "true_label": 1,
+      "true_labels": [
+        "non_requirement",
+        "with_context",
+        "non_ambiguous"
+      ],
+      "predicted_label": 0,
+      "predicted_class": "non_requirement",
+      "prob_requirement": 0.004164305981248617,
+      "prob_non_requirement": 0.9958356618881226,
+      "confidence": 0.9958356618881226,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-091::s036",
+      "sentence": "Monitoring these key metrics in real-time will provide invaluable data for understanding the platform's overall performance, identifying areas that require improvement, and making informed decisions to optimize customer service delivery.",
+      "context_before": [
+        "The platform will monitor a range of critical customer support metrics in real-time, offering a dynamic view of the system's effectiveness.",
+        "These metrics will include Response Time, such as First Response Time (the time taken for the initial response to a customer inquiry) and Average Reply Time (the average time between subsequent replies).32 Resolution Rate will also be tracked, encompassing First Contact Resolution (the percentage of issues resolved in the customer's initial contact) and Overall Resolution Rate (the percentage of all issues resolved within a defined period).32 Customer satisfaction will be measured through Customer Satisfaction (CSAT) scores, gathered via surveys and feedback mechanisms 31, and Customer Effort Score (CES), which quantifies the ease of the customer's interaction with the platform.32 Additionally, the platform will track Net Promoter Score (NPS) to gauge customer loyalty and their likelihood to recommend the service.31 Ticket Volume by Channel will provide insights into the distribution of inquiries across different support channels such as chat, email, and phone.31 Agent Performance Metrics, including Average Handle Time, Resolution Rate per agent, and CSAT per agent, will be monitored for both human and AI agents.31 Specific metrics related to AI agent performance, such as AI Agent Usage and Resolution Rate, as well as the Handoff Rate (the frequency with which AI agents escalate conversations), will also be tracked to assess the effectiveness and efficiency of the AI component of the platform."
+      ],
+      "context_after": [
+        "The insights derived from these real-time metrics will be presented through a comprehensive analytics dashboard.46 This dashboard will feature several key components designed to provide a clear and actionable overview of support performance.",
+        "Real-time KPI displays will showcase the current values of the most critical metrics, offering an immediate snapshot of the system's status.42 Trend charts will visualize how these metrics are evolving over time, enabling stakeholders to identify patterns and assess the impact of changes or interventions.31 Agent performance leaderboards will provide a comparative view of both human and AI agent productivity and quality.48 Channel-specific breakdowns will illustrate performance across the various support channels, allowing for targeted analysis and optimization.42"
+      ],
+      "true_label": 0,
+      "true_labels": [
+        "non_requirement",
+        "non_ambiguous"
+      ],
+      "predicted_label": 1,
+      "predicted_class": "requirement",
+      "prob_requirement": 0.809183657169342,
+      "prob_non_requirement": 0.19081632792949677,
+      "confidence": 0.809183657169342,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-091::s100",
+      "sentence": "Larger language models possess the inherent ability to retain conversational context, building upon previous exchanges to maintain coherence and understanding.20 The design of chatbot context management involves the fundamental principle of remembering and effectively utilizing past interactions to inform current and future engagements.19 Ensuring robust context carry-over is paramount to avoid the common frustration experienced by customers when they have to repeat their issues or information to a different agent.8 By providing human agents with a comprehensive understanding of the customer's prior interaction with the AI, the platform aims to enhance agent efficiency and deliver more relevant and effective support without burdening the customer with redundant explanations.3.",
+      "context_before": [
+        "This context must encompass the complete history of the interaction, including all previous messages exchanged, any information that has already been gathered by the AI agent, and the intent that has been identified.",
+        "This transfer of context will be facilitated through dedicated mechanisms within the handoff API (detailed in Section 6) and by ensuring that all relevant contextual data is stored and accessible through the session state."
+      ],
+      "context_after": [
+        "Intent Detection EngineAt the core of the Agentic AI Support Platform lies the Intent Detection Engine, a critical component responsible for deciphering the underlying purpose behind customer inquiries.",
+        "This section outlines the specific requirements for this engine, including the types of inputs it will process, the criteria for classifying intents based on confidence levels, and the data necessary for training the model to achieve high accuracy."
+      ],
+      "true_label": 1,
+      "true_labels": [
+        "requirement",
+        "functional",
+        "with_context",
+        "non_ambiguous"
+      ],
+      "predicted_label": 0,
+      "predicted_class": "non_requirement",
+      "prob_requirement": 0.0024664695374667645,
+      "prob_non_requirement": 0.9975335597991943,
+      "confidence": 0.9975335597991943,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-091::s102",
+      "sentence": "This section outlines the specific requirements for this engine, including the types of inputs it will process, the criteria for classifying intents based on confidence levels, and the data necessary for training the model to achieve high accuracy.",
+      "context_before": [
+        "Larger language models possess the inherent ability to retain conversational context, building upon previous exchanges to maintain coherence and understanding.20 The design of chatbot context management involves the fundamental principle of remembering and effectively utilizing past interactions to inform current and future engagements.19 Ensuring robust context carry-over is paramount to avoid the common frustration experienced by customers when they have to repeat their issues or information to a different agent.8 By providing human agents with a comprehensive understanding of the customer's prior interaction with the AI, the platform aims to enhance agent efficiency and deliver more relevant and effective support without burdening the customer with redundant explanations.3.",
+        "Intent Detection EngineAt the core of the Agentic AI Support Platform lies the Intent Detection Engine, a critical component responsible for deciphering the underlying purpose behind customer inquiries."
+      ],
+      "context_after": [
+        "The Intent Detection Engine will be designed to accept and process a variety of customer input modalities, including text-based queries, spoken language (in the event that voice support is implemented within the platform), and potentially additional contextual information that can aid in understanding the customer's goal.21",
+        "This contextual data might include the specific page or section of the platform the user is currently interacting with, or a history of their recent interactions."
+      ],
+      "true_label": 1,
+      "true_labels": [
+        "requirement",
+        "functional",
+        "non_functional",
+        "non_ambiguous"
+      ],
+      "predicted_label": 0,
+      "predicted_class": "non_requirement",
+      "prob_requirement": 0.012472309172153473,
+      "prob_non_requirement": 0.9875276684761047,
+      "confidence": 0.9875276684761047,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-091::s113",
+      "sentence": "Monitoring these key metrics in real-time will provide invaluable data for understanding the platform's overall performance, identifying areas that require improvement, and making informed decisions to optimize customer service delivery.",
+      "context_before": [
+        "The platform will monitor a range of critical customer support metrics in real-time, offering a dynamic view of the system's effectiveness.",
+        "These metrics will include Response Time, such as First Response Time (the time taken for the initial response to a customer inquiry) and Average Reply Time (the average time between subsequent replies).32 Resolution Rate will also be tracked, encompassing First Contact Resolution (the percentage of issues resolved in the customer's initial contact) and Overall Resolution Rate (the percentage of all issues resolved within a defined period).32 Customer satisfaction will be measured through Customer Satisfaction (CSAT) scores, gathered via surveys and feedback mechanisms 31, and Customer Effort Score (CES), which quantifies the ease of the customer's interaction with the platform.32 Additionally, the platform will track Net Promoter Score (NPS) to gauge customer loyalty and their likelihood to recommend the service.31 Ticket Volume by Channel will provide insights into the distribution of inquiries across different support channels such as chat, email, and phone.31 Agent Performance Metrics, including Average Handle Time, Resolution Rate per agent, and CSAT per agent, will be monitored for both human and AI agents.31 Specific metrics related to AI agent performance, such as AI Agent Usage and Resolution Rate, as well as the Handoff Rate (the frequency with which AI agents escalate conversations), will also be tracked to assess the effectiveness and efficiency of the AI component of the platform."
+      ],
+      "context_after": [
+        "The insights derived from these real-time metrics will be presented through a comprehensive analytics dashboard.46 This dashboard will feature several key components designed to provide a clear and actionable overview of support performance.",
+        "Real-time KPI displays will showcase the current values of the most critical metrics, offering an immediate snapshot of the system's status.42 Trend charts will visualize how these metrics are evolving over time, enabling stakeholders to identify patterns and assess the impact of changes or interventions.31 Agent performance leaderboards will provide a comparative view of both human and AI agent productivity and quality.48 Channel-specific breakdowns will illustrate performance across the various support channels, allowing for targeted analysis and optimization.42"
+      ],
+      "true_label": 0,
+      "true_labels": [
+        "non_requirement",
+        "non_ambiguous"
+      ],
+      "predicted_label": 1,
+      "predicted_class": "requirement",
+      "prob_requirement": 0.809183657169342,
+      "prob_non_requirement": 0.19081632792949677,
+      "confidence": 0.809183657169342,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-091::s140",
+      "sentence": "Clear visual indicators will help customers understand the nature of their interaction and adjust their communication accordingly.",
+      "context_before": [
+        "Additionally, the platform may employ notifications to inform the user explicitly that they are being connected with a human support agent.78",
+        "Providing this transparency is essential for managing customer expectations and fostering trust in the support process."
+      ],
+      "context_after": [
+        "When a conversation is transferred from an AI agent to a human agent, it is imperative that the human agent receives the complete transcript of the prior interaction in a clear and easily readable format.79 The transcript format should include detailed timestamps for each message, clear identifiers indicating whether the message was sent by the AI or the customer, and the full content of every message exchanged.",
+        "This transcript should be readily accessible to the human agent within their standard interface, ensuring that they have all the necessary context to understand the issue and continue the conversation effectively without requiring the customer to repeat information."
+      ],
+      "true_label": 0,
+      "true_labels": [
+        "non_requirement",
+        "non_ambiguous"
+      ],
+      "predicted_label": 1,
+      "predicted_class": "requirement",
+      "prob_requirement": 0.9987213015556335,
+      "prob_non_requirement": 0.0012786696897819638,
+      "confidence": 0.9987213015556335,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-091::s101",
+      "sentence": "Intent Detection EngineAt the core of the Agentic AI Support Platform lies the Intent Detection Engine, a critical component responsible for deciphering the underlying purpose behind customer inquiries.",
+      "context_before": [
+        "This transfer of context will be facilitated through dedicated mechanisms within the handoff API (detailed in Section 6) and by ensuring that all relevant contextual data is stored and accessible through the session state.",
+        "Larger language models possess the inherent ability to retain conversational context, building upon previous exchanges to maintain coherence and understanding.20 The design of chatbot context management involves the fundamental principle of remembering and effectively utilizing past interactions to inform current and future engagements.19 Ensuring robust context carry-over is paramount to avoid the common frustration experienced by customers when they have to repeat their issues or information to a different agent.8 By providing human agents with a comprehensive understanding of the customer's prior interaction with the AI, the platform aims to enhance agent efficiency and deliver more relevant and effective support without burdening the customer with redundant explanations.3."
+      ],
+      "context_after": [
+        "This section outlines the specific requirements for this engine, including the types of inputs it will process, the criteria for classifying intents based on confidence levels, and the data necessary for training the model to achieve high accuracy.",
+        "The Intent Detection Engine will be designed to accept and process a variety of customer input modalities, including text-based queries, spoken language (in the event that voice support is implemented within the platform), and potentially additional contextual information that can aid in understanding the customer's goal.21"
+      ],
+      "true_label": 0,
+      "true_labels": [
+        "non_requirement",
+        "non_ambiguous"
+      ],
+      "predicted_label": 1,
+      "predicted_class": "requirement",
+      "prob_requirement": 0.991010308265686,
+      "prob_non_requirement": 0.008989675901830196,
+      "confidence": 0.991010308265686,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-091::s149",
+      "sentence": "The audit trail also ensures accountability and provides a valuable resource for reporting and compliance purposes.",
+      "context_before": [
+        "Maintaining such a detailed record of all handoffs is crucial for several reasons.",
+        "It allows for effective monitoring of the platform's performance, providing data that can be analyzed to identify trends and areas for improvement in both AI and human agent workflows."
+      ],
+      "context_after": [
+        "By tracking the frequency, reasons, and outcomes of handoffs, the platform administrators can gain valuable insights into the effectiveness of the AI agents and the efficiency of the overall support process.",
+        "ConclusionsThe Agentic AI Support Platform aims to revolutionize customer service by creating a synergistic partnership between autonomous AI agents and skilled human support personnel."
+      ],
+      "true_label": 0,
+      "true_labels": [
+        "non_requirement",
+        "non_ambiguous"
+      ],
+      "predicted_label": 1,
+      "predicted_class": "requirement",
+      "prob_requirement": 0.996260404586792,
+      "prob_non_requirement": 0.0037396191619336605,
+      "confidence": 0.996260404586792,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-091::s150",
+      "sentence": "By tracking the frequency, reasons, and outcomes of handoffs, the platform administrators can gain valuable insights into the effectiveness of the AI agents and the efficiency of the overall support process.",
+      "context_before": [
+        "It allows for effective monitoring of the platform's performance, providing data that can be analyzed to identify trends and areas for improvement in both AI and human agent workflows.",
+        "The audit trail also ensures accountability and provides a valuable resource for reporting and compliance purposes."
+      ],
+      "context_after": [
+        "ConclusionsThe Agentic AI Support Platform aims to revolutionize customer service by creating a synergistic partnership between autonomous AI agents and skilled human support personnel.",
+        "This Functional Specification Document has outlined the key functionalities required for the platform, covering the system architecture, conversation management, intent detection, real-time analytics, AI workflows, and the critical human-AI handoff process."
+      ],
+      "true_label": 0,
+      "true_labels": [
+        "non_requirement",
+        "non_ambiguous"
+      ],
+      "predicted_label": 1,
+      "predicted_class": "requirement",
+      "prob_requirement": 0.9958373308181763,
+      "prob_non_requirement": 0.0041627283208072186,
+      "confidence": 0.9958373308181763,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-092::s006",
+      "sentence": "This Request for Proposal (RFP) outlines the critical requirements for such a platform, encompassing real-time collaborative editing, versioning and rollback capabilities, third-party cloud storage integrations, advanced permission schemes, multi-format export options, and stringent scalability and performance targets.2.",
+      "context_before": [
+        "The primary objective is to empower employees with immediate access to the most current versions of documents, thereby reducing confusion and miscommunication.1 By facilitating faster feedback loops through real-time commenting and approval workflows, the platform aims to expedite decision-making processes and eliminate unnecessary project bottlenecks.1",
+        "Furthermore, a modern document collaboration suite should foster a more inclusive work environment by ensuring that all team members can contribute, suggest edits, and participate in discussions.1 Ultimately, the platform should break down organizational silos by providing all departments with access to shared knowledge and resources, fostering cross-team cooperation.1"
+      ],
+      "context_after": [
+        "Real-Time Collaborative EditingA fundamental requirement of the document collaboration suite is the ability for multiple users to work on the same document simultaneously, with all contributions and modifications visible in real time.3",
+        "This core functionality should include collaborative cursors, allowing users to see where other team members are actively editing within the document.5"
+      ],
+      "true_label": 1,
+      "true_labels": [
+        "requirement",
+        "functional",
+        "non_functional",
+        "non_ambiguous"
+      ],
+      "predicted_label": 0,
+      "predicted_class": "non_requirement",
+      "prob_requirement": 0.0019491524435579777,
+      "prob_non_requirement": 0.9980508089065552,
+      "confidence": 0.9980508089065552,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-093::s160",
+      "sentence": "Implementing a separate data warehouse ensures that analytical queries, which can be resource-intensive, do not negatively impact the performance of the transactional systems used by the core HR modules.",
+      "context_before": [
+        "Indexing and partitioning strategies will be employed to optimize query speeds and ensure efficient data retrieval.",
+        "Furthermore, data security and compliance requirements will be strictly enforced within the data warehouse environment."
+      ],
+      "context_after": [
+        "This separation of concerns is crucial for maintaining the responsiveness and stability of the platform's operational functionalities.",
+        "The design of the data warehouse should prioritize data quality and data governance to ensure the accuracy and reliability of the analytics and reports generated."
+      ],
+      "true_label": 1,
+      "true_labels": [
+        "requirement",
+        "non_functional",
+        "non_ambiguous"
+      ],
+      "predicted_label": 0,
+      "predicted_class": "non_requirement",
+      "prob_requirement": 0.004674743860960007,
+      "prob_non_requirement": 0.9953252077102661,
+      "confidence": 0.9953252077102661,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-100::s057",
+      "sentence": "This combination is powerful for complex monitoring scenarios but may require more technical expertise to set up and manage.",
+      "context_before": [
+        "Datadog is a comprehensive monitoring platform known for its end-to-end observability across cloud environments, including APIs.38 It offers real-time metrics, distributed tracing, log management, and robust alerting features, making it ideal for enterprises needing full-stack observability.",
+        "Prometheus, often paired with Alertmanager, provides a highly customizable open-source monitoring and alerting solution.37 Prometheus excels at collecting and storing time-series data, while Alertmanager handles the routing, grouping, and delivery of alerts to various notification channels.61"
+      ],
+      "context_after": [
+        "AlertSite by SmartBear focuses specifically on API performance and availability monitoring.39 It offers features for monitoring API transactions, alerting the right teams immediately upon degradation, and monitoring both public and private APIs.",
+        "AlertSite can also reuse existing SoapUI functional tests or Swagger/OpenAPI files to automate monitor creation."
+      ],
+      "true_label": 1,
+      "true_labels": [
+        "non_requirement",
+        "with_context",
+        "non_ambiguous"
+      ],
+      "predicted_label": 0,
+      "predicted_class": "non_requirement",
+      "prob_requirement": 0.002749861218035221,
+      "prob_non_requirement": 0.9972501397132874,
+      "confidence": 0.9972501397132874,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-100::s063",
+      "sentence": "Additionally, integration with incident management platforms like Jira or ServiceNow can help streamline the incident response workflow by automatically creating tickets or triggering other actions when API throttling alerts are received.",
+      "context_before": [
+        "Most offer integrations with popular notification channels such as Slack, email, SMS, PagerDuty, and generic webhooks.8",
+        "This ensures that alerts are delivered through the communication platforms that teams already use."
+      ],
+      "context_after": [
+        "Tool NameKey FeaturesProsConsStarting Price (approx.)Relevant Snippet IDsMoesifUser behavior analytics, real-time logging, advanced alerting, API governanceDetailed insights, user-centric metrics, integrates with API gatewaysMay have a steeper learning curve for some usersPay-as-you-go37Postman API MonitorsAutomated API testing, scheduled monitoring, customizable alerts, CI/CD integrationEasy to use for existing Postman users, good for development workflowsMay lack deep analytics compared to dedicated monitoring toolsFree tier available, premium plans from $12/month35DatadogReal-time metrics, distributed tracing, log management, robust alerting, full-stack observabilityComprehensive monitoring, integrations with many cloud servicesCan be expensive for large-scale deployments$15/host/month38Prometheus (with Alertmanager)Open-source, highly customizable metrics collection and alerting, powerful query language (PromQL)Flexible, scalable, large community supportRequires technical expertise to set up and manageFree37-67AlertSiteAPI transaction monitoring, granular alert targeting, SLA reporting, private API monitoringFocuses on API performance and availability, detailed alerting optionsPricing may be higher and less transparentLikely expensive - pricing hidden39",
+        "Forecasting API Usage for Effective Alert Threshold DefinitionSetting effective alert thresholds requires an understanding of future API usage."
+      ],
+      "true_label": 1,
+      "true_labels": [
+        "requirement",
+        "functional",
+        "ambiguous",
+        "with_context"
+      ],
+      "predicted_label": 0,
+      "predicted_class": "non_requirement",
+      "prob_requirement": 0.052836544811725616,
+      "prob_non_requirement": 0.947163462638855,
+      "confidence": 0.947163462638855,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-100::s011",
+      "sentence": "The difference in their temporal scope necessitates distinct approaches to setting alert thresholds and notification frequencies.",
+      "context_before": [
+        "On the other hand, monthly quotas represent the total allowable requests over the course of a calendar month.18 Exceeding these quotas can result in service blocks or additional charges.",
+        "An effective alerting strategy must consider both the immediate constraints imposed by rate limits and the longer-term consumption tracked by monthly quotas to provide comprehensive protection against service interruptions and unexpected costs."
+      ],
+      "context_after": [
+        "API providers employ various throttling algorithms and techniques to enforce these limits.",
+        "Understanding these mechanisms is crucial for designing an appropriate alerting strategy."
+      ],
+      "true_label": 1,
+      "true_labels": [
+        "requirement",
+        "functional",
+        "with_context",
+        "non_ambiguous"
+      ],
+      "predicted_label": 0,
+      "predicted_class": "non_requirement",
+      "prob_requirement": 0.09844287484884262,
+      "prob_non_requirement": 0.9015571475028992,
+      "confidence": 0.9015571475028992,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-100::s032",
+      "sentence": "Strategies for Monitoring Current API UsageEffective management of API throttling requires robust monitoring of current usage patterns.",
+      "context_before": [
+        "Finally, the distinction between hard and soft throttling lies in how limits are enforced: hard throttling immediately rejects requests exceeding the threshold 2, while soft throttling might delay the requests, providing a more gradual approach to managing traffic.2Throttling can also be enforced at various levels, including per individual user or application (user-level), based on unique API keys (API key-based), by the originating IP address (IP address-based), or at the overall system level to protect backend services.1",
+        "The choice of throttling level depends on the API provider's specific needs and the desired granularity of control."
+      ],
+      "context_after": [
+        "This involves leveraging the tools and metrics that provide visibility into API traffic and consumption.",
+        "Many API providers offer built-in dashboards that allow users to track their API usage directly.20 For instance, Amazon API Gateway provides a dashboard to view metrics related to API requests and latency.30 Similarly, Google Cloud APIs offer an API Dashboard and integration with Cloud Monitoring to track usage, quota, and billing information.32 Platforms like Zendesk offer an API usage dashboard within the Admin Center, providing insights into request volume and error rates.27 Zoho CRM features an API dashboard that allows users to view usage statistics based on modules, IP addresses, methods, users, or time.28 OpenAI also provides a Usage Dashboard to monitor API activity and costs.26 These provider-specific dashboards often offer a convenient starting point for monitoring API consumption and may include basic alerting features."
+      ],
+      "true_label": 1,
+      "true_labels": [
+        "requirement",
+        "functional",
+        "non_ambiguous"
+      ],
+      "predicted_label": 0,
+      "predicted_class": "non_requirement",
+      "prob_requirement": 0.05920074135065079,
+      "prob_non_requirement": 0.9407992362976074,
+      "confidence": 0.9407992362976074,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-100::s037",
+      "sentence": "The total number of API calls provides a fundamental measure of consumption.1 Monitoring error rates, particularly the occurrence of 429 \"Too Many Requests\" errors, indicates when throttling limits are being hit.1 Request latency and response times can also be indicators of potential throttling or performance degradation under heavy load.34 Throughput, measured as the number of requests processed per unit of time (e.g., per second, minute, or hour), helps understand the volume of API traffic.34 Finally, tracking quota usage against the defined limits, whether rate limits or monthly quotas, is essential for proactive management.20",
+      "context_before": [
+        "Beyond built-in tools, third-party API monitoring tools offer more advanced functionalities and often support monitoring across multiple API providers.34 Tools like Moesif provide detailed API analytics and user behavior insights 37, while Postman API Monitors allow for automated testing and monitoring.35 Datadog offers comprehensive monitoring across infrastructure, logs, and applications, including detailed API performance metrics.38 Prometheus, an open-source monitoring solution, is often used in conjunction with Alertmanager for robust alerting in complex environments.37 Uptrends focuses on API uptime and performance monitoring with global checkpoint coverage.45 These third-party solutions often provide greater flexibility in creating custom dashboards, setting up sophisticated alerts, and integrating with a wider range of notification systems.",
+        "To effectively manage throttling, it is crucial to track specific key metrics related to API usage."
+      ],
+      "context_after": [
+        "By consistently monitoring these metrics, users can gain valuable insights into their API consumption patterns and identify potential issues before they lead to service disruptions.",
+        "Exploring Built-in Alerting Capabilities from API ProvidersMany API providers offer built-in alerting capabilities that can be configured to notify users when their API usage approaches or exceeds defined thresholds."
+      ],
+      "true_label": 1,
+      "true_labels": [
+        "requirement",
+        "functional",
+        "non_ambiguous"
+      ],
+      "predicted_label": 0,
+      "predicted_class": "non_requirement",
+      "prob_requirement": 0.01173974759876728,
+      "prob_non_requirement": 0.9882602691650391,
+      "confidence": 0.9882602691650391,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-104::s033",
+      "sentence": "The specific definition will depend on the nature of the platform and how value is delivered to the user.",
+      "context_before": [
+        "This knowledge can then be leveraged to make informed decisions about pricing, potentially leading to the introduction of new pricing tiers or add-ons focused on these popular features.",
+        "For this visualization to be effective, it is essential to have a clear definition of what constitutes an \"endpoint\".11 This could refer to various aspects of platform usage, such as the number of API calls made, specific features accessed, the volume of data processed, or the number of transactions completed."
+      ],
+      "context_after": [
+        "Consistent and well-defined metrics for each endpoint are necessary to ensure the accuracy and interpretability of the data presented in the bar chart.",
+        "The insights gained from this visualization can also guide product development efforts by highlighting areas of the platform that are heavily utilized and potentially warrant further investment or optimization."
+      ],
+      "true_label": 0,
+      "true_labels": [
+        "non_requirement",
+        "non_ambiguous"
+      ],
+      "predicted_label": 1,
+      "predicted_class": "requirement",
+      "prob_requirement": 0.9950527548789978,
+      "prob_non_requirement": 0.004947241395711899,
+      "confidence": 0.9950527548789978,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-104::s111",
+      "sentence": "It's important to strike a balance between having sufficiently detailed segments to derive actionable insights and avoiding excessive fragmentation that makes it difficult to identify meaningful patterns.",
+      "context_before": [
+        "The optimal level of granularity will depend on the specific pricing and engagement strategies the business intends to implement.",
+        "More granular segmentation allows for highly targeted approaches and personalized experiences but also increases the complexity of managing and analyzing a larger number of segments.30"
+      ],
+      "context_after": [
+        "Behavioral segmentation, which focuses on users' actions and patterns of activity within the product, is particularly relevant for a usage-based pricing model.12 By analyzing how users interact with the platform, businesses can create segments based on actual usage behavior, leading to more effective and relevant strategies for pricing and customer engagement.",
+        "V. Incorporating Benchmarking and Historical Data Retention Considerations\n\nA. Benchmarking (Implicit):"
+      ],
+      "true_label": 0,
+      "true_labels": [
+        "non_requirement",
+        "non_ambiguous"
+      ],
+      "predicted_label": 1,
+      "predicted_class": "requirement",
+      "prob_requirement": 0.6491206288337708,
+      "prob_non_requirement": 0.35087934136390686,
+      "confidence": 0.6491206288337708,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-105::s019",
+      "sentence": "Understanding the typical range and variability of reputation scores from both platforms will be important to fine-tune this alerting threshold and avoid excessive or insufficient notifications.4.",
+      "context_before": [
+        "This threshold of 5 points suggests a predefined level of risk tolerance, indicating that drops of this magnitude are considered significant enough to warrant immediate attention.",
+        "The selection of Slack as the notification channel reflects the team's established communication workflow for critical operational alerts."
+      ],
+      "context_after": [
+        "Dashboard Widget for Reputation Trends:A dedicated dashboard widget is required to visually represent the historical trends of our email sending reputation.",
+        "This widget should display reputation scores over time, allowing us to easily identify patterns, track improvements resulting from any remediation efforts, and proactively detect potential long-term issues."
+      ],
+      "true_label": 1,
+      "true_labels": [
+        "requirement",
+        "functional",
+        "ambiguous",
+        "with_context"
+      ],
+      "predicted_label": 0,
+      "predicted_class": "non_requirement",
+      "prob_requirement": 0.01205181609839201,
+      "prob_non_requirement": 0.9879482388496399,
+      "confidence": 0.9879482388496399,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-106::s046",
+      "sentence": "Communications related to a specific business activity or project at UWRF may be retained for six months after the completion of the activity or project.30 Records pertaining to audits or reviews, especially under regulations like SOX, often require retention for five to seven years.5 When determining message retention periods, organizations must prioritize legal and regulatory requirements, particularly those applicable to industries like finance or healthcare.",
+      "context_before": [
+        "The impact of a user's subscription status on the retention of their profile data will be explored in greater detail in Section 8.4.3 Messages:The retention periods for messages are also diverse, influenced by the type of message, relevant legal requirements, and the organization's internal business communication policies.5 The transient nature of certain messages, such as informal chats, might permit shorter retention periods compared to more formal business correspondence or records that are mandated for compliance purposes.",
+        "For example, in Genesys Cloud, collaborate chat messages have a retention period ranging from 10 days to 10 years, with a default setting of 10 years.27 Microsoft Teams chat messages can have retention periods from 30 days, as seen in a University of Washington example, to indefinite retention depending on the organization's specific policies.24 Notably, some organizations, particularly those in regulated industries, may be required to retain such communications for as long as seven years to meet legal obligations.28 Employee correspondence, such as emails, might have a retention period of two years.29 Transitory communications, defined as having short-term business value, might be deleted after as little as seven days, as per a University of Wisconsin-River Falls (UWRF) policy.30"
+      ],
+      "context_after": [
+        "Additionally, business needs for maintaining communication history and internal record-keeping, along with established internal policies, play a significant role in setting these timelines.5 Compliance needs, especially in heavily regulated sectors, frequently necessitate longer retention periods for messages to ensure adherence to legal and industry standards.5.",
+        "Technical Implementation of Data Deletion Processes:5.1"
+      ],
+      "true_label": 1,
+      "true_labels": [
+        "requirement",
+        "functional",
+        "non_functional",
+        "non_ambiguous"
+      ],
+      "predicted_label": 0,
+      "predicted_class": "non_requirement",
+      "prob_requirement": 0.0023245278280228376,
+      "prob_non_requirement": 0.9976754784584045,
+      "confidence": 0.9976754784584045,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-106::s115",
+      "sentence": "Stripe cancels test mode subscriptions created at least 90 days ago and then deletes them 30 days after cancellation, unless they are marked as exempt.118 The process for deleting user account data after a subscription ends should be clearly defined and communicated to users to manage expectations and ensure transparency.108 Organizations should also consider offering users the option to delete their data immediately upon cancellation if they wish, while still adhering to any legal or regulatory obligations that might mandate certain retention periods.108 Finally, it is essential to ensure that all related data associated with a terminated subscription, such as logs, messages, and profiles, are also subject to the defined retention policy for inactive users.8.3 Technical Implementation for Subscription-Based Retention:The technical implementation of subscription-based data retention requires modifications to the data model and the data deletion process.",
+      "context_before": [
+        "For example, Microsoft 365 retains customer data for 90 days after a paid subscription ends to allow the subscriber to extract their data.110 Google One and Google Drive retain files for a limited time after a plan is cancelled or expires, after which Google may delete them, and the user's storage reverts to the free 15GB plan.112 Dropbox does not delete files when a subscription expires; however, if the user is over their storage limit, they will not be able to sync new files, but the existing files remain accessible through the website.",
+        "Deleting the Dropbox account, however, does remove all data.114 ContractSafe retains user data for 30 days after subscription termination.115 For Cytobank Premium users, data is deleted 90 days after subscription expiration, while Enterprise users' accounts enter a read-only mode indefinitely.116 Salesforce Marketing Cloud Engagement will retain subscriber engagement data for 180 days for accounts with contract dates after April 10, 2024.117"
+      ],
+      "context_after": [
+        "The data model should include a field that accurately reflects the user's current subscription status, such as \"active,\" \"inactive,\" or \"cancelled.\"",
+        "The automated data deletion process, when it runs, should query this subscription status field to determine whether the standard 90-day retention period should be applied to a particular user's data."
+      ],
+      "true_label": 1,
+      "true_labels": [
+        "requirement",
+        "functional",
+        "with_context",
+        "ambiguous"
+      ],
+      "predicted_label": 0,
+      "predicted_class": "non_requirement",
+      "prob_requirement": 0.03674439713358879,
+      "prob_non_requirement": 0.9632556438446045,
+      "confidence": 0.9632556438446045,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-106::s034",
+      "sentence": "For instance, security logs, which contain information about system access and potential threats, often have longer retention periods, typically ranging from one to seven years.",
+      "context_before": [
+        "Common Data Retention Periods for Different User Data Types:4.1",
+        "Logs:The duration for which logs are retained varies considerably depending on the specific type of log, the applicable compliance requirements, and the organization's operational needs.13 A uniform retention period across all log types is generally not advisable, as different logs serve distinct purposes and are subject to varying regulatory obligations."
+      ],
+      "context_after": [
+        "This duration is frequently dictated by compliance frameworks such as HIPAA, which requires retention for six years, PCI DSS for one year, NIST recommending three years, SOX mandating seven years, and GLBA requiring six years.13 Application logs, used primarily for debugging and development purposes, may have shorter retention periods, often between 14 and 90 days.13",
+        "Similarly, system logs, which record operating system events, might be retained for 30 to 180 days.13 Audit logs, crucial for tracking system activities and ensuring accountability, typically have retention periods aligned with regulatory requirements, often ranging from one to seven years, with SOX requiring seven years for financial audit logs.13 Network logs, which capture network traffic data, are often kept for 30 to 365 days.13 Web server logs and firewall logs commonly have retention periods ranging from 30 days to one year and two months to one year, respectively.14 Organizations must carefully consider the trade-offs between storage costs, the need for accessibility for troubleshooting and incident response, and the complexities of adhering to diverse regulatory mandates when determining log retention periods.13 Classifying logs based on their business criticality and the specific compliance obligations they relate to is essential for optimizing retention strategies.13 Implementing tiered storage solutions, such as hot storage for recent logs, warm storage for occasionally accessed logs, and cold storage or archival for long-term retention, can help manage the costs associated with retaining large volumes of log data while ensuring accessibility when needed.134.2 User Profiles:The retention periods for user profile data exhibit significant variability, ranging from a few weeks to indefinite storage, depending on the specific purpose of the data and the applicable legal obligations.3"
+      ],
+      "true_label": 1,
+      "true_labels": [
+        "requirement",
+        "non_functional",
+        "non_ambiguous"
+      ],
+      "predicted_label": 0,
+      "predicted_class": "non_requirement",
+      "prob_requirement": 0.3838260769844055,
+      "prob_non_requirement": 0.6161739230155945,
+      "confidence": 0.6161739230155945,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-106::s049",
+      "sentence": "Soft Delete:",
+      "context_before": [
+        "Additionally, business needs for maintaining communication history and internal record-keeping, along with established internal policies, play a significant role in setting these timelines.5 Compliance needs, especially in heavily regulated sectors, frequently necessitate longer retention periods for messages to ensure adherence to legal and industry standards.5.",
+        "Technical Implementation of Data Deletion Processes:5.1"
+      ],
+      "context_after": [
+        "Soft deletion is a widely adopted strategy in database management where records are marked for deletion at a logical level without being physically removed from the database.33",
+        "This approach offers the significant advantage of allowing for data recovery in case of accidental deletion, maintaining referential integrity between related data, and facilitating comprehensive audit trails.33 Soft deletion can be implemented through various methods, the most common being the addition of an \"IsDeleted\" boolean column to the database table, where a \"true\" value indicates the record is marked as deleted.33 Another frequent method involves adding a \"DeletedDate\" or \"DeletedAt\" timestamp column; the presence of a timestamp in this column signifies that the record has been soft-deleted, and the timestamp itself records when this occurred.33 Some systems might also employ a status column with a specific value, such as \"Deleted,\" to indicate the logical deletion of a record.44 The benefits of soft deletion extend to easy restoration of data, which is particularly valuable for rectifying user errors or"
+      ],
+      "true_label": 1,
+      "true_labels": [
+        "non_requirement",
+        "with_context",
+        "non_ambiguous"
+      ],
+      "predicted_label": 0,
+      "predicted_class": "non_requirement",
+      "prob_requirement": 0.0017874942859634757,
+      "prob_non_requirement": 0.9982125759124756,
+      "confidence": 0.9982125759124756,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-106::s058",
+      "sentence": "This is typically achieved using the DELETE Structured Query Language (SQL) command.36",
+      "context_before": [
+        "This can sometimes be mitigated by using database views that automatically exclude soft-deleted records.40 Managing unique data constraints becomes more complex with soft deletion, as records marked as deleted might still violate uniqueness constraints when new, similar records are created.33 Solutions to this include using partial indexing in the database or incorporating the soft delete marker (e.g., the timestamp) into the unique key definition.33 Soft deletion can also lead to potential performance issues due to increased table sizes and the inclusion of deleted records in indexes, although filtered indexes can help address this.38",
+        "Moreover, the implementation of soft delete often requires revisiting standard database and Object-Relational Mapping (ORM) features to ensure they correctly handle logically deleted records.33 Finally, there is a risk of data leaks if developers inadvertently forget to apply the necessary filters, leading to soft-deleted data being exposed in the application.33 Successful implementation of soft delete necessitates careful consideration of database support for handling unique keys in the context of soft deletion, robust application-level support for consistently filtering out deleted records, and a thorough review of how standard database APIs are used throughout the application.335.2 Hard Delete:Hard deletion refers to the process of permanently removing records from the database, rendering the data irrecoverable without restoration from backups.33"
+      ],
+      "context_after": [
+        "Hard deletion is essential in certain scenarios, such as complying with regulations like GDPR's \"right to be forgotten,\" which mandates the permanent erasure of personal data upon user request, and for optimizing storage space by removing data that is no longer required.33 The primary advantages of hard deletion include freeing up valuable storage space and simplifying database management by reducing the overall volume of data.1 Additionally, it eliminates any potential confusion that might arise from users encountering records that have been marked as \"deleted\" but are still present in the system.37However, hard deletion also carries significant drawbacks.",
+        "Once data is hard-deleted, it is permanently lost and can only be recovered if a recent backup exists.36 This method also results in a lack of historical records, which can be problematic for auditing purposes or for tracking changes made to the data over time.37"
+      ],
+      "true_label": 0,
+      "true_labels": [
+        "non_requirement",
+        "non_ambiguous"
+      ],
+      "predicted_label": 1,
+      "predicted_class": "requirement",
+      "prob_requirement": 0.9949052333831787,
+      "prob_non_requirement": 0.005094756837934256,
+      "confidence": 0.9949052333831787,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-106::s066",
+      "sentence": "When scheduling automated tasks like data deletion, using UTC is crucial for ensuring consistent timing regardless of the server's physical location or the local time zones of users.52",
+      "context_before": [
+        "This often involves techniques such as comparing current data with previous snapshots or implementing change data capture mechanisms to identify records that have been permanently removed.506.",
+        "Scheduling Automated Deletion Tasks in UTC:6.1 Importance of UTC:Coordinated Universal Time (UTC) is the standard time zone used as the basis for civil time today."
+      ],
+      "context_after": [
+        "This is particularly important for a daily purge scheduled at 02:00 UTC, as it guarantees that this deletion process occurs at the same absolute point in time globally, avoiding the complexities and potential errors associated with daylight saving time transitions and the multitude of regional time zones.",
+        "By adhering to UTC, organizations can establish a reliable and predictable schedule for their data deletion activities, which is essential for maintaining data privacy and compliance.6.2 Methods for Scheduling in UTC:Several methods can be employed to schedule automated data deletion tasks to run at 02:00 UTC."
+      ],
+      "true_label": 1,
+      "true_labels": [
+        "requirement",
+        "non_functional",
+        "non_ambiguous"
+      ],
+      "predicted_label": 0,
+      "predicted_class": "non_requirement",
+      "prob_requirement": 0.007220454979687929,
+      "prob_non_requirement": 0.992779552936554,
+      "confidence": 0.992779552936554,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-106::s081",
+      "sentence": "Libraries such as Quartz for Java, Celery for Python, and node-cron for Node.js often provide functionalities to schedule tasks and specify the time zone, including UTC.596.3 Best Practices for UTC Scheduling:When scheduling automated tasks in UTC, it is essential to always explicitly configure the scheduler to use UTC to avoid any ambiguity.",
+      "context_before": [
+        "In Linux environments, cron remains the primary tool for scheduling.",
+        "Finally, if the data deletion process is implemented within a specific application, application-level scheduling libraries can be used."
+      ],
+      "context_after": [
+        "If the initial requirement for the schedule was given in a local time zone, it is crucial to carefully translate that time to its corresponding UTC equivalent for the 02:00 UTC purge.",
+        "After configuration, thorough testing of the scheduled task in a staging or non-production environment is necessary to verify that it runs at the intended time in UTC."
+      ],
+      "true_label": 1,
+      "true_labels": [
+        "requirement",
+        "non_functional",
+        "non_ambiguous"
+      ],
+      "predicted_label": 0,
+      "predicted_class": "non_requirement",
+      "prob_requirement": 0.0017303884960711002,
+      "prob_non_requirement": 0.9982695579528809,
+      "confidence": 0.9982695579528809,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-106::s093",
+      "sentence": "This formal document communicates the obligation to preserve potentially relevant evidence to the identified custodians.84 A well-drafted notice contextualizes the issue, provides a detailed description of the time requirements and types of data to be preserved, and includes contact information for any questions.84 Managing the custodian responses is also crucial, involving tracking acknowledgments of receipt and understanding of the legal hold",
+      "context_before": [
+        "Furthermore, the repercussions extend beyond the courtroom, with the potential for increased legal fees, intensified discovery efforts, and further sanctions, all of which can escalate costs and strain an organization's resources.101 Additionally, companies risk substantial reputational damage if they mishandle the legal hold process, potentially undermining client trust and business relationships.1017.3 Processes for Implementing Data Legal Holds:The implementation of data legal holds involves a series of critical steps.",
+        "The process typically begins with a triggering event, such as the anticipation of litigation, the receipt of a notice of a lawsuit or legal claim, or the initiation of an internal investigation.85 Following this, the organization must identify custodians, which are individuals within the company who possess or control potentially relevant information.85 This often requires close collaboration between the legal, HR, and IT teams to ensure all key employees with relevant knowledge and access are identified.85 Next, the legal team must define the scope of the legal hold, specifying the topic or project covered, the relevant time frame, and the types of electronic or physical records that need to be preserved.85 Once the custodians and scope are defined, a legal hold notice is issued."
+      ],
+      "context_after": [
+        "notice.85 It is important to follow up with any custodians who do not respond to ensure compliance.88 The next step is the actual preservation of data, which involves ensuring that the identified data is not deleted or altered.",
+        "This often requires suspending the organization's routine data deletion policies and implementing measures such as in-place holds on electronic data or copying data to a secure location.84"
+      ],
+      "true_label": 0,
+      "true_labels": [
+        "non_requirement",
+        "non_ambiguous"
+      ],
+      "predicted_label": 1,
+      "predicted_class": "requirement",
+      "prob_requirement": 0.9971411228179932,
+      "prob_non_requirement": 0.0028589635621756315,
+      "confidence": 0.9971411228179932,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-106::s106",
+      "sentence": "This requirement is logical as maintaining data for users with active subscriptions ensures continuity of service and allows them uninterrupted access to their information.",
+      "context_before": [
+        "Conditional Data Retention: The Role of User Subscription Status:8.1",
+        "Using Subscription Status as a Condition:The user query specifies that user data associated with active subscriptions should be retained beyond the standard 90-day retention period."
+      ],
+      "context_after": [
+        "To implement this, the organization's systems must accurately track the subscription status of each user.",
+        "The data retention policies should then incorporate logic that checks this subscription status before marking any user data for deletion."
+      ],
+      "true_label": 1,
+      "true_labels": [
+        "non_requirement",
+        "with_context",
+        "non_ambiguous"
+      ],
+      "predicted_label": 0,
+      "predicted_class": "non_requirement",
+      "prob_requirement": 0.003015997353941202,
+      "prob_non_requirement": 0.9969839453697205,
+      "confidence": 0.9969839453697205,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-106::s122",
+      "sentence": "Organizations might also consider implementing a grace period after a subscription officially expires before the data deletion countdown begins, providing a window for users to renew their subscription without losing their data immediately.9.",
+      "context_before": [
+        "This timestamp will serve as the starting point for the 90-day retention countdown.",
+        "After 90 days from this timestamp, the user's data would then become eligible for the automated deletion process."
+      ],
+      "context_after": [
+        "Implementing Automated Alerts for Deletion Process Failures:9.1",
+        "Importance of Alerting:Implementing automated alerts for failures in the data deletion process is crucial for ensuring the integrity and reliability of the system, as well as maintaining data privacy and compliance.120 Immediate notification of any failures allows for prompt investigation and resolution of the underlying issues, preventing potential data breaches due to the unintended retention of data beyond the stipulated period."
+      ],
+      "true_label": 0,
+      "true_labels": [
+        "non_requirement",
+        "non_ambiguous"
+      ],
+      "predicted_label": 1,
+      "predicted_class": "requirement",
+      "prob_requirement": 0.999090313911438,
+      "prob_non_requirement": 0.0009097189176827669,
+      "confidence": 0.999090313911438,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-108::s003",
+      "sentence": "This enables real-time customization of data visualizations, facilitating a deeper exploration and understanding of key metrics.1",
+      "context_before": [
+        "Interactive Dashboard Embedding: A Consultant-Style Scope DocumentOverviewThe implementation of an interactive data dashboard represents a strategic move towards enhancing data understanding and analysis within organizations.",
+        "This digital interface is designed to display data and information in a dynamic and human-friendly manner, empowering users to actively engage with the data to extract meaningful insights.1 Unlike traditional static reports that present a fixed view of information, an interactive dashboard allows users to manipulate data through elements such as charts, graphs, filters, and buttons."
+      ],
+      "context_after": [
+        "The primary objective of such a dashboard is to provide actionable insights that support informed decision-making across various levels of an organization.1Interactive dashboards serve several crucial goals.",
+        "They enable users to delve into the granular details of data, offering both macro and micro perspectives on business performance.3"
+      ],
+      "true_label": 1,
+      "true_labels": [
+        "requirement",
+        "functional",
+        "non_ambiguous"
+      ],
+      "predicted_label": 0,
+      "predicted_class": "non_requirement",
+      "prob_requirement": 0.0026611085049808025,
+      "prob_non_requirement": 0.9973388314247131,
+      "confidence": 0.9973388314247131,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-108::s013",
+      "sentence": "Furthermore, education and distance learning platforms can embed dashboards to track student engagement and performance, offering educators valuable insights into learning patterns and areas for potential intervention.13",
+      "context_before": [
+        "Independent Software Vendors (ISVs) can embed dashboards into their SaaS applications to offer built-in BI reporting capabilities, thereby increasing user engagement and the overall value proposition of their products.9 For enterprise software solutions, organizations can integrate dashboards within their ERP, CRM, and HRM systems, enabling users at all levels to track critical KPIs in real-time within their operational systems.9 Customer-facing portals can also benefit from embedded dashboards, allowing businesses to share personalized insights with their clients, which fosters transparency and enhances customer satisfaction.9 In the realm of e-commerce, online retail platforms can embed dashboards to monitor vital metrics such as inventory levels, customer journey analytics, and overall sales performance, facilitating quicker responses to market dynamics and customer behavior.9",
+        "The healthcare industry can leverage embedded dashboards for monitoring patient outcomes and ensuring compliance with healthcare regulations, contributing to improved patient care and operational efficiency.9 Similarly, financial institutions can track transaction data and regulatory adherence through embedded dashboards, which is critical for risk management and fraud detection.9 Project management tools can integrate dashboards to provide project managers with immediate visibility into project progress and the allocation of resources, improving project delivery and resource management.11 Marketing teams can monitor the performance of their campaigns directly within their existing marketing automation platforms, allowing for data-driven adjustments to strategies and improved return on investment.11 Event management companies can embed dashboards to provide both attendees and organizers with valuable insights into event engagement and outcomes, which can be used to optimize future events.13"
+      ],
+      "context_after": [
+        "The increasing adoption of embedded interactive dashboards across diverse industries underscores a significant trend towards making data-driven insights more accessible and actionable within various applications and user experiences.",
+        "Core FeaturesThe interactive dashboard will incorporate a range of core features designed to facilitate effective data exploration and analysis."
+      ],
+      "true_label": 0,
+      "true_labels": [
+        "non_requirement",
+        "non_ambiguous"
+      ],
+      "predicted_label": 1,
+      "predicted_class": "requirement",
+      "prob_requirement": 0.8641839027404785,
+      "prob_non_requirement": 0.13581612706184387,
+      "confidence": 0.8641839027404785,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-108::s072",
+      "sentence": "Identifying peak customer activity times by hour and day, visualizing website engagement by page....",
+      "context_before": [
+        "Tracking customer conversion rates through different stages of a sales process.",
+        "HeatmapUses color intensity to represent data values in a matrix."
+      ],
+      "context_after": [
+        "(Other types)......FeatureIframe EmbeddingSDK-Based EmbeddingEase of ImplementationRelatively simple, uses HTML iframe tag.",
+        "Requires more development effort, involves using JavaScript libraries."
+      ],
+      "true_label": 1,
+      "true_labels": [
+        "requirement",
+        "functional",
+        "non_ambiguous"
+      ],
+      "predicted_label": 0,
+      "predicted_class": "non_requirement",
+      "prob_requirement": 0.004088719841092825,
+      "prob_non_requirement": 0.9959113597869873,
+      "confidence": 0.9959113597869873,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-109::s015",
+      "sentence": "Identifying next steps in meeting minutes helps to maintain momentum and plan future activities.1\nUpdate documentation.",
+      "context_before": [
+        "Schedule a policy review.",
+        "This review will involve relevant stakeholders to ensure the implemented custom roles and inheritance rules adhere to the organization's broader security and compliance requirements."
+      ],
+      "context_after": [
+        "Comprehensive documentation of the new custom roles and inheritance model will be necessary to ensure clarity for all users and administrators of the system.",
+        "This step is crucial for knowledge sharing and long-term maintainability.1"
+      ],
+      "true_label": 1,
+      "true_labels": [
+        "non_requirement",
+        "with_context",
+        "non_ambiguous"
+      ],
+      "predicted_label": 0,
+      "predicted_class": "non_requirement",
+      "prob_requirement": 0.001493874122388661,
+      "prob_non_requirement": 0.9985061287879944,
+      "confidence": 0.9985061287879944,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-126::s001",
+      "sentence": "If your platform can schedule posts but still can\u2019t auto-tag them with 90%+ accuracy, what are we even doing??",
+      "context_before": [],
+      "context_after": [
+        "I\u2019m DONE wasting time manually tagging every post.",
+        "Fix it now or I\u2019m finding a platform that respects my sanity next month."
+      ],
+      "true_label": 1,
+      "true_labels": [
+        "requirement",
+        "functional",
+        "non_functional",
+        "non_ambiguous"
+      ],
+      "predicted_label": 0,
+      "predicted_class": "non_requirement",
+      "prob_requirement": 0.002136443741619587,
+      "prob_non_requirement": 0.9978635907173157,
+      "confidence": 0.9978635907173157,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-131::s001",
+      "sentence": "In our recent development discussion, the team addressed the need for a unified deployment pipeline capable of supporting microservices across both AWS and GCP.",
+      "context_before": [],
+      "context_after": [
+        "This need arises from our goal to ensure multi-cloud compatibility, reduce infrastructure fragmentation, and streamline our CI/CD processes.",
+        "Two primary options were evaluated."
+      ],
+      "true_label": 1,
+      "true_labels": [
+        "requirement",
+        "functional",
+        "with_context",
+        "non_ambiguous"
+      ],
+      "predicted_label": 0,
+      "predicted_class": "non_requirement",
+      "prob_requirement": 0.0033508562482893467,
+      "prob_non_requirement": 0.9966490864753723,
+      "confidence": 0.9966490864753723,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-134::s012",
+      "sentence": "This phased rollout will allow time for iterative tuning before full deployment.",
+      "context_before": [
+        "May 5, 2025  \n- **Pilot Results:**",
+        "May 26, 2025"
+      ],
+      "context_after": [],
+      "true_label": 1,
+      "true_labels": [
+        "requirement",
+        "non_functional",
+        "non_ambiguous"
+      ],
+      "predicted_label": 0,
+      "predicted_class": "non_requirement",
+      "prob_requirement": 0.005817455239593983,
+      "prob_non_requirement": 0.9941825270652771,
+      "confidence": 0.9941825270652771,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-135::s031",
+      "sentence": "Our internal policies and training programs are continuously updated to reflect best practices and regulatory shifts.",
+      "context_before": [
+        "In parallel, we have initiated preparations for an **ISO/IEC 27001** audit, the international standard for information security management systems (ISMS).",
+        "We are on track for the formal audit in **Q4 2025**, supported by a dedicated compliance team, risk register, asset classification framework, and documented ISMS processes."
+      ],
+      "context_after": [
+        "Employees undergo mandatory annual training on data protection, secure coding, and incident response, with refresher modules tied to observed policy breaches or changes in compliance requirements.\n\n---\n\n### Risk & Mitigation\n\nWe maintain a proactive, multi-layered strategy to identify, mitigate, and recover from risks across our infrastructure.",
+        "Our first layer of defense includes **DDoS shielding** using a combination of upstream rate-limiting, WAF rulesets, and integration with CDN providers like Cloudflare and AWS Shield Advanced."
+      ],
+      "true_label": 0,
+      "true_labels": [
+        "non_requirement",
+        "non_ambiguous"
+      ],
+      "predicted_label": 1,
+      "predicted_class": "requirement",
+      "prob_requirement": 0.5132272839546204,
+      "prob_non_requirement": 0.48677265644073486,
+      "confidence": 0.5132272839546204,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-137::s002",
+      "sentence": "Policies and Procedures- Fintech\n\nID: AS_POL_001Description: Develop, implement, and maintain written policies and procedures to prevent, detect, contain, and correct security violations.",
+      "context_before": [
+        "HIPAA Compliance ChecklistAdministrative Safeguards \u2013 policies, training, BAAs."
+      ],
+      "context_after": [
+        "This encompasses the establishment of a security management process that includes risk analysis, risk management, sanction policies, and information system activity review.1",
+        "The creation of these documented guidelines forms the bedrock of an organization's HIPAA compliance efforts."
+      ],
+      "true_label": 1,
+      "true_labels": [
+        "requirement",
+        "non_functional",
+        "non_ambiguous"
+      ],
+      "predicted_label": 0,
+      "predicted_class": "non_requirement",
+      "prob_requirement": 0.019016629084944725,
+      "prob_non_requirement": 0.9809834361076355,
+      "confidence": 0.9809834361076355,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-137::s127",
+      "sentence": "This adds an extra layer of security beyond basic credentials.",
+      "context_before": [
+        "API Authorization\n\nID: EHR_API_001Description: Implement secure API authorization protocols, such as OAuth 2.0, to control access to Electronic Health Record (EHR) data during integration with other systems, ensuring that only authenticated and authorized applications or users can interact with the EHR.44Expected Evidence: Documentation of API authorization protocols used, configuration settings for authentication mechanisms.",
+        "ID: EHR_API_002Description: Utilize strong authentication methods, such as multi-factor authentication (MFA), for API access to verify the identity of integrating systems or users.44"
+      ],
+      "context_after": [
+        "Expected Evidence: Records of MFA implementation for API access, policies requiring MFA for integration.",
+        "ID: EHR_API_003Description: Ensure that only authorized applications and users are granted access to specific EHR data and functionalities through APIs, based on the principle of least privilege.44 Access should be limited to what is necessary for the integration's purpose."
+      ],
+      "true_label": 1,
+      "true_labels": [
+        "non_requirement",
+        "with_context",
+        "non_ambiguous"
+      ],
+      "predicted_label": 0,
+      "predicted_class": "non_requirement",
+      "prob_requirement": 0.002985564060509205,
+      "prob_non_requirement": 0.9970144033432007,
+      "confidence": 0.9970144033432007,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-137::s148",
+      "sentence": "This ensures that the contractual obligations related to PHI protection are documented for the required period.",
+      "context_before": [
+        "ID: REP_RET_003Description:",
+        "Maintain Business Associate Agreements (BAAs) in compliance with the HIPAA Security Rule, generally for at least six years after the termination of the agreement.7"
+      ],
+      "context_after": [
+        "Expected Evidence: Records of all active and terminated BAAs, with dates of agreement and termination, and adherence to the six-year retention period post-termination.",
+        "ID: REP_RET_004Description: Retain documentation related to breach notifications, including the details of the breach incident, the risk assessment conducted to determine the probability of compromise, and copies of the notifications sent to affected individuals and the Department of Health and Human Services (HHS), for at least six years.23Expected Evidence: Records of all reported breaches, including incident reports, risk assessments, notification letters, and confirmation of submission to HHS."
+      ],
+      "true_label": 0,
+      "true_labels": [
+        "non_requirement",
+        "non_ambiguous"
+      ],
+      "predicted_label": 1,
+      "predicted_class": "requirement",
+      "prob_requirement": 0.8497567772865295,
+      "prob_non_requirement": 0.15024323761463165,
+      "confidence": 0.8497567772865295,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-139::s060",
+      "sentence": "The typical timeline for software pilot programs can vary, ranging from a few weeks to several months, depending on the complexity of the solution and the scope of testing required.104 Key milestones for the pilot program will include clearly defining the metrics that will determine the success of the pilot, carefully selecting representative enterprise clients to participate, developing a comprehensive onboarding plan to ensure smooth integration and user adoption, executing the pilot program by deploying the solution and closely monitoring its performance in real-world scenarios, gathering detailed feedback from pilot users through surveys, interviews, and analysis of usage data, thoroughly analyzing the results of the pilot to identify lessons learned and areas for improvement, and iterating on the product based on the feedback received to refine its features and functionality.100ConclusionThe fleet management market presents a compelling and rapidly growing opportunity for an intelligent, integrated solution.",
+      "context_before": [
+        "awareness.92 Building strong, mutually beneficial relationships with partners will be a priority, achieved through clear and consistent communication, regular training sessions to keep partners updated on product developments and sales techniques, and performance recognition programs to incentivize engagement and reward success.93A pilot program with select enterprise clients will be a crucial step in validating the solution's value proposition and gathering valuable user feedback before a full-scale market launch.91",
+        "Pilot programs help mitigate risks, identify potential issues, and ensure the product effectively meets the needs of target customers.91"
+      ],
+      "context_after": [
+        "This strategic plan outlines a clear vision for a leading platform that combines the power of fleet control, OTA updates, and predictive maintenance AI to address the evolving needs of fleet operators globally.",
+        "The analysis of the market indicates a strong demand for such a solution, driven by factors like e-commerce growth, regulatory pressures, and the increasing focus on efficiency and sustainability."
+      ],
+      "true_label": 1,
+      "true_labels": [
+        "requirement",
+        "functional",
+        "non_ambiguous"
+      ],
+      "predicted_label": 0,
+      "predicted_class": "non_requirement",
+      "prob_requirement": 0.001717946259304881,
+      "prob_non_requirement": 0.9982820749282837,
+      "confidence": 0.9982820749282837,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-139::s026",
+      "sentence": "This proactive approach enables fleet managers to schedule maintenance at optimal times, preventing unexpected breakdowns that can disrupt operations and lead to costly emergency repairs.18 By identifying potential issues early, such as unusual vibrations, temperature fluctuations, or declining battery efficiency, predictive maintenance allows for timely interventions before problems escalate into major failures.18 This not only reduces downtime but also contributes to extending the lifespan of vehicle components by ensuring that maintenance is performed at the right time.18",
+      "context_before": [
+        "A secure boot process ensures that only trusted and verified software is loaded during the vehicle's startup, preventing the execution of malicious software.45 Firmware validation techniques verify the integrity of the firmware before and after an OTA update, preventing unauthorized modifications.45 Implementing redundancy and fail-safe mechanisms allows vehicles to revert to a previous software version if an update fails or is interrupted, minimizing potential disruptions.45 Utilizing Transport Layer Security (TLS) public key authentication, signed certificates containing the public keys of the entities requesting the update, and performing hostname verification further enhance the security of the OTA update process by ensuring secure connections to verified servers.46 To minimize disruptions and potential hazards, OTA updates should be carefully designed to avoid interfering with critical vehicle operations and should ideally occur during non-critical times, such as outside of operating hours.46 Digital signatures are indispensable for verifying the authenticity and integrity of update packages, assuring the vehicle that the software has not been tampered with during transmission.45",
+        "The vehicle's system must be capable of verifying these digital signatures before initiating the installation process.45 Employing X.509 certificates provides a standardized and effective method for managing the public keys associated with digital signatures, allowing for control over the validity period of the signatures and facilitating certificate revocation if necessary.53The application of predictive maintenance AI in vehicle fleets offers significant advantages in terms of reducing downtime and optimizing performance.18 AI-powered predictive maintenance systems analyze vast amounts of historical data and real-time performance metrics collected from vehicle sensors to forecast when maintenance will be required.18"
+      ],
+      "context_after": [
+        "Furthermore, AI-driven maintenance for trucks can help optimize resource allocation by predicting when spare parts will be needed, preventing over- or under-stocking and improving decision-making in part procurement.25",
+        "The effectiveness of predictive maintenance AI is evident in the transportation sector, where companies implementing such systems have reported significant reductions in downtime and maintenance costs.20 Leading automotive companies like Tesla, General Motors, BMW, and Daimler have already recognized the value of integrating AI for predictive maintenance and OTA updates into their vehicles.18 AI can also automate the creation and dispatch of maintenance work orders based on predictive analytics and real-time asset performance monitoring, further streamlining the maintenance process and improving overall fleet utilization.20Security & ComplianceEnsuring strong device identity and authentication is critical for the security of connected vehicle systems."
+      ],
+      "true_label": 0,
+      "true_labels": [
+        "non_requirement",
+        "non_ambiguous"
+      ],
+      "predicted_label": 1,
+      "predicted_class": "requirement",
+      "prob_requirement": 0.9938672184944153,
+      "prob_non_requirement": 0.006132780108600855,
+      "confidence": 0.9938672184944153,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-139::s032",
+      "sentence": "OTA software updates using digital signatures is a fundamental security practice.",
+      "context_before": [
+        "Biometric authentication, such as fingerprint scanning or facial recognition, and digital keys stored on smartphones can prevent unauthorized physical access to vehicles.55 Multi-factor authentication adds an extra layer of security by requiring users to provide multiple forms of verification before granting access.45 Digital certificates and Public Key Infrastructure (PKI) are fundamental for establishing the identity of devices and encrypting communication within the connected vehicle ecosystem.58 Digital certificates function as virtual ID cards, verifying the identity of users, devices, or entities in digital interactions, while PKI provides the framework for managing and distributing these certificates.58 This ensures that only authorized devices and software can communicate with the vehicle, preventing unauthorized access and control.58 Proper device identity management is particularly important for mobility services like car-sharing, as it helps protect the personal data of users and reduces the risk of data breaches.55 By securely identifying and authenticating both the user and the device, manufacturers can minimize the risk of fraud and unauthorized vehicle access.57Compliance with data privacy regulations such as the General Data Protection Regulation (GDPR) in Europe and the California Consumer Privacy Act (CCPA) in the United States is essential for any fleet management system that collects personal data.61",
+        "These regulations mandate transparency regarding the types of data collected, the purposes for which it is collected, and how it is used.61 Organizations must obtain explicit consent from drivers and other data subjects before collecting any personal information and clearly communicate how this data will be processed and protected.61 Implementing robust security measures is crucial, including encrypting data both during storage and transmission to protect it from unauthorized access and potential breaches.61 Access to sensitive data should be limited to authorized personnel only, using role-based access controls.61 Regular audits of data collection, storage, and processing practices should be conducted to ensure ongoing compliance with privacy regulations.61 Adhering to the principle of data minimization, which involves collecting only the essential data necessary for operations, helps reduce the potential exposure of personal information.61 Establishing clear data retention policies that specify how long data will be stored and when it will be securely disposed of is also a critical aspect of GDPR and CCPA compliance.61 Transparency and accountability are paramount, requiring organizations to be upfront and honest with individuals about how their personal data is being handled.62Securing"
+      ],
+      "context_after": [
+        "Every OTA update should be digitally signed by the vehicle manufacturer or a trusted authority to guarantee its authenticity and integrity.45 This digital signature acts as a tamper-proof seal, verifying that the software update originates from a legitimate source and has not been altered or corrupted during transmission.45 Before installing any OTA update, the vehicle's onboard system must be capable of verifying the digital signature using a corresponding public key.45",
+        "If the signature verification fails, indicating that the update may be from an untrusted source or has been tampered with, the installation process should be aborted to prevent the introduction of malicious software or compromised code.45 To effectively manage the cryptographic keys and control the validity period of digital signatures, the use of X.509 certificates is highly recommended.53 These certificates provide a standardized format for public key certificates, including information about the certificate holder, the issuing authority, and the validity period, allowing for better management and revocation of keys if necessary.53Scalability RoadmapTo ensure the solution can handle a growing number of connected vehicles and increasing data volumes, a robust scalability roadmap is essential."
+      ],
+      "true_label": 0,
+      "true_labels": [
+        "non_requirement",
+        "non_ambiguous"
+      ],
+      "predicted_label": 1,
+      "predicted_class": "requirement",
+      "prob_requirement": 0.994397759437561,
+      "prob_non_requirement": 0.005602261517196894,
+      "confidence": 0.994397759437561,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-139::s042",
+      "sentence": "It improves overall scalability by distributing the load across multiple brokers and regions, preventing any single broker from becoming a bottleneck.80 It reduces latency for geographically distributed fleets by connecting vehicles to the nearest regional broker, resulting in faster message delivery times.80",
+      "context_before": [
+        "MQTT is a lightweight publish/subscribe messaging protocol that is ideally suited for IoT deployments due to its efficiency and ability to handle a large number of connected devices with minimal resource consumption.77 A multi-region MQTT broker architecture involves deploying MQTT brokers in multiple geographically distinct locations.80",
+        "This approach offers several key benefits for scalability."
+      ],
+      "context_after": [
+        "Furthermore, it enhances fault tolerance and high availability; if one region experiences an outage, the brokers in other regions can continue to operate, ensuring uninterrupted communication.80 Multi-region MQTT deployments can be configured using either a single MQTT broker instance with region-specific topic prefixes to logically separate message flows, or by deploying multiple independent MQTT broker instances, one for each region, which offers better isolation and scalability but may increase operational complexity.81 Cloud platforms like Azure IoT Operations provide enterprise-grade, scalable, and highly available MQTT brokers that can be horizontally scaled by adding more frontend replicas to handle client connections and backend partitions for storing and delivering messages.80 This simplifies the deployment and management of",
+        "a robust and scalable messaging infrastructure for the fleet management solution."
+      ],
+      "true_label": 1,
+      "true_labels": [
+        "requirement",
+        "non_functional",
+        "with_context",
+        "non_ambiguous"
+      ],
+      "predicted_label": 0,
+      "predicted_class": "non_requirement",
+      "prob_requirement": 0.0019405382918193936,
+      "prob_non_requirement": 0.9980594515800476,
+      "confidence": 0.9980594515800476,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-142::s006",
+      "sentence": "All reviewers should verify boundary cases before approving.",
+      "context_before": [
+        "As part of the code-freeze policy, the PR is gated\u2014**next evaluated trigger must resolve to `2025-02-28 00:00 UTC`**, with proof via test output or logs.",
+        "Please coordinate with the scheduler maintainer if changes affect adjacent jobs."
+      ],
+      "context_after": [],
+      "true_label": 1,
+      "true_labels": [
+        "requirement",
+        "functional",
+        "non_ambiguous"
+      ],
+      "predicted_label": 0,
+      "predicted_class": "non_requirement",
+      "prob_requirement": 0.024717865511775017,
+      "prob_non_requirement": 0.9752820730209351,
+      "confidence": 0.9752820730209351,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-152::s001",
+      "sentence": "**Schema Update Note \u2013 Spec v3 Migration**\n\nEffective immediately, the schema for Spec v3 will adopt `snake_case` naming conventions for all field identifiers.",
+      "context_before": [],
+      "context_after": [
+        "This update aligns with broader industry practices and improves consistency across internal systems.",
+        "All new fields added to Spec v3 will follow `snake_case` naming."
+      ],
+      "true_label": 1,
+      "true_labels": [
+        "requirement",
+        "non_functional",
+        "non_ambiguous"
+      ],
+      "predicted_label": 0,
+      "predicted_class": "non_requirement",
+      "prob_requirement": 0.06264176964759827,
+      "prob_non_requirement": 0.9373582005500793,
+      "confidence": 0.9373582005500793,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-157::s016",
+      "sentence": "**\u65e5\u672c\u8a9e:** \u5f0a\u793e\u304c\u63d0\u6848\u3059\u308b\u4f01\u696d\u5411\u3051\u7814\u4fee\u30bd\u30ea\u30e5\u30fc\u30b7\u30e7\u30f3\u306f\u3001\u8981\u6c42\u4e8b\u9805\u3092\u3059\u3079\u3066\u6e80\u305f\u3059\u5305\u62ec\u7684\u306a\u30af\u30e9\u30a6\u30c9\u30d9\u30fc\u30b9\u306e\u30d7\u30e9\u30c3\u30c8\u30d5\u30a9\u30fc\u30e0\u3067\u3059\u3002SCORM\u00a01.2\u304a\u3088\u3073xAPI\u5f62\u5f0f\u306ee\u30e9\u30fc\u30cb\u30f3\u30b0\u30b3\u30f3\u30c6\u30f3\u30c4\u3092\u30b7\u30fc\u30e0\u30ec\u30b9\u306b\u63d0\u4f9b\u3057\u307e\u3059\u3002\u672c\u30bd\u30ea\u30e5\u30fc\u30b7\u30e7\u30f3\u306f\u30b5\u30fc\u30d0\u30fc\u30b5\u30a4\u30c9\u30ec\u30f3\u30c0\u30ea\u30f3\u30b0\uff08SSR\uff09\u3068WebAssembly\u306e\u6280\u8853\u3092\u6d3b\u7528\u3057\u3001\u30af\u30e9\u30a4\u30a2\u30f3\u30c8\u5074\u3067\u306eJavaScript\u3092\u4e00\u5207\u4f7f\u7528\u305b\u305a\u306b\u30a4\u30f3\u30bf\u30e9\u30af\u30c6\u30a3\u30d6\u306a\u30b3\u30f3\u30c6\u30f3\u30c4\u3092\u5b9f\u73fe\u3057\u307e\u3059\u3002\u3053\u308c\u306b\u3088\u308a\u3001\u30bb\u30ad\u30e5\u30ea\u30c6\u30a3\u8981\u4ef6\u306e\u53b3\u3057\u3044\u74b0\u5883\u3067\u3082\u52d5\u4f5c\u3057\u3001\u30c7\u30d0\u30a4\u30b9\u3092\u554f\u308f\u305a\u5b89\u5b9a\u3057\u305f\u30d1\u30d5\u30a9\u30fc\u30de\u30f3\u30b9\u3092\u767a\u63ee\u3057\u307e\u3059\u3002\u3053\u306e\u624b\u6cd5\u3067\u306f\u52d5\u7684\u306ae\u30e9\u30fc\u30cb\u30f3\u30b0\u30b3\u30f3\u30c6\u30f3\u30c4\u306e\u51e6\u7406\u3092\u3059\u3079\u3066\u30b5\u30fc\u30d0\u30fc\u5074\u3067\u884c\u3044\u3001\u30e6\u30fc\u30b6\u30fc\u306b\u306f\u5b89\u5168\u304b\u3064\u5236\u5fa1\u3055\u308c\u305f\u9ad8\u6027\u80fd\u306a\u5b66\u7fd2\u4f53\u9a13\u3092\u63d0\u4f9b\u3057\u307e\u3059\u3002\n\n\u672c\u30bd\u30ea\u30e5\u30fc\u30b7\u30e7\u30f3\u306f\u3001\u5b9f\u7e3e\u3042\u308be\u30e9\u30fc\u30cb\u30f3\u30b0\u6a19\u6e96\u3078\u306e\u6e96\u62e0\u3068\u9769\u65b0\u7684\u306a\u6280\u8853\u3092\u7d44\u307f\u5408\u308f\u305b\u3066\u3044\u307e\u3059\u3002SCORM\u00a01.2\u304a\u3088\u3073xAPI\u306e\u6a19\u6e96\u306b\u6e96\u62e0\u3057\u3001\u30b3\u30f3\u30c6\u30f3\u30c4\u306e\u76f8\u4e92\u904b\u7528\u6027\u3068\u7814\u4fee\u7d50\u679c\u306e\u30c8\u30e9\u30c3\u30ad\u30f3\u30b0\u3092\u78ba\u5b9f\u306b\u884c\u3044\u307e\u3059\u3002\u30af\u30e9\u30a6\u30c9\u4e0a\u3067WebAssembly\u3092\u6d3b\u7528\u3059\u308b\u3053\u3068\u306b\u3088\u308a\u3001\u8907\u96d1\u306a\u7814\u4fee\u30e2\u30b8\u30e5\u30fc\u30eb\u3084\u30b7\u30df\u30e5\u30ec\u30fc\u30b7\u30e7\u30f3\u3092\u30b5\u30fc\u30d0\u30fc\u4e0a\u3067\u5b9f\u884c\u3057\u3001\u30e6\u30fc\u30b6\u30fc\u306e\u30d6\u30e9\u30a6\u30b6\u306b\u306f\u5fc5\u8981\u306aHTML\u3060\u3051\u3092\u9001\u4fe1\u3057\u307e\u3059\u3002\u305d\u306e\u7d50\u679c\u3001\u30e6\u30fc\u30b6\u30fc\u306e\u7aef\u672b\u306b\u306f\u7279\u5225\u306a\u30bd\u30d5\u30c8\u30a6\u30a7\u30a2\u3084\u30b9\u30af\u30ea\u30d7\u30c8\u304c\u4e0d\u8981\u3068\u306a\u308a\u3001\u4fe1\u983c\u6027\u304c\u9ad8\u304f\u5feb\u9069\u306a\u5b66\u7fd2\u74b0\u5883\u304c\u5b9f\u73fe\u3057\u307e\u3059\u3002\u672c\u63d0\u6848\u66f8\u3067\u306f\u3001\u696d\u754c\u6a19\u6e96\u3078\u306e\u9069\u5408\u6027\u3001\u6700\u65b0\u30a2\u30fc\u30ad\u30c6\u30af\u30c1\u30e3\u306e\u6982\u8981\u3001\u73fe\u5b9f\u7684\u306a\u5b9f\u65bd\u30b9\u30b1\u30b8\u30e5\u30fc\u30eb\u3001\u304a\u3088\u3073\u30e9\u30a4\u30bb\u30f3\u30b9\u30fb\u5c0e\u5165\u30fb\u30b5\u30dd\u30fc\u30c8\u3092\u7db2\u7f85\u3057\u305f\u660e\u78ba\u306a\u4fa1\u683c\u30e2\u30c7\u30eb\u306b\u3064\u3044\u3066\u8a73\u8ff0\u3044\u305f\u3057\u307e\u3059\u3002\n\n## Compliance / \u30b3\u30f3\u30d7\u30e9\u30a4\u30a2\u30f3\u30b9\n\n**English:**",
+      "context_before": [
+        "This results in a robust training environment that requires no special software or scripts on the user\u2019s device.",
+        "Our proposal includes details on standards compliance, a modern architecture overview, a realistic implementation timeline, and a transparent pricing model covering licensing, deployment, and ongoing support."
+      ],
+      "context_after": [
+        "Our solution is designed in compliance with all relevant corporate training standards and best practices:\n\n- **SCORM\u00a01.2 Compliance:**",
+        "The platform fully adheres to the SCORM\u00a01.2 specification, ensuring all SCORM content packages are supported."
+      ],
+      "true_label": 1,
+      "true_labels": [
+        "requirement",
+        "functional",
+        "non_functional",
+        "non_ambiguous"
+      ],
+      "predicted_label": 0,
+      "predicted_class": "non_requirement",
+      "prob_requirement": 0.0020563958678394556,
+      "prob_non_requirement": 0.9979435801506042,
+      "confidence": 0.9979435801506042,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-157::s032",
+      "sentence": "The solution\u2019s deployment model and end-to-end operation are outlined below:\n\n1.",
+      "context_before": [
+        "The cloud environment is compliant with industry security standards, and we ensure user data privacy in accordance with data privacy regulations (e.g., GDPR).",
+        "**\u65e5\u672c\u8a9e:** \u672c\u30bd\u30ea\u30e5\u30fc\u30b7\u30e7\u30f3\u306f\u3001\u4f01\u696d\u7814\u4fee\u306b\u95a2\u308f\u308b\u3042\u3089\u3086\u308b\u95a2\u9023\u6a19\u6e96\u304a\u3088\u3073\u30d9\u30b9\u30c8\u30d7\u30e9\u30af\u30c6\u30a3\u30b9\u306b\u6e96\u62e0\u3057\u3066\u8a2d\u8a08\u3055\u308c\u3066\u3044\u307e\u3059\u3002\n\n- **SCORM\u00a01.2\u6e96\u62e0:** \u30d7\u30e9\u30c3\u30c8\u30d5\u30a9\u30fc\u30e0\u306fSCORM\u00a01.2\u4ed5\u69d8\u306b\u5b8c\u5168\u6e96\u62e0\u3057\u3066\u304a\u308a\u3001\u3059\u3079\u3066\u306eSCORM\u30b3\u30f3\u30c6\u30f3\u30c4\u30d1\u30c3\u30b1\u30fc\u30b8\u3092\u30b5\u30dd\u30fc\u30c8\u3057\u307e\u3059\u3002\u30b5\u30fc\u30d0\u30fc\u5074\u74b0\u5883\u306b\u304a\u3044\u3066\u30b3\u30fc\u30b9\u3092\u8d77\u52d5\u30fb\u8ffd\u8de1\u30fb\u5831\u544a\u3057\u3001\u5b8c\u4e86\u30b9\u30c6\u30fc\u30bf\u30b9\u3001\u30b9\u30b3\u30a2\u3001\u5b66\u7fd2\u6642\u9593\u3001\u30a4\u30f3\u30bf\u30e9\u30af\u30b7\u30e7\u30f3\u30c7\u30fc\u30bf\u3092\u6b63\u78ba\u306b\u53d6\u5f97\u3057\u307e\u3059\u3002\n- **xAPI\uff08Tin Can\uff09\u5bfe\u5fdc:** Experience API\uff08xAPI\uff09\u6a19\u6e96\u3092\u5b8c\u5168\u306b\u30b5\u30dd\u30fc\u30c8\u3057\u3066\u304a\u308a\u3001\u8a73\u7d30\u306a\u5b66\u7fd2\u4f53\u9a13\u306e\u30c8\u30e9\u30c3\u30ad\u30f3\u30b0\u304c\u53ef\u80fd\u3067\u3059\u3002\u30b7\u30b9\u30c6\u30e0\u306f\u4e92\u63db\u6027\u306e\u3042\u308bLearning Record Store\uff08LRS\uff09\u306bxAPI\u30b9\u30c6\u30fc\u30c8\u30e1\u30f3\u30c8\u3092\u751f\u6210\u30fb\u9001\u4fe1\u3067\u304d\u3001\u5f93\u6765\u306e\u30b3\u30fc\u30b9\u69cb\u9020\u5916\u306e\u30a4\u30f3\u30d5\u30a9\u30fc\u30de\u30eb\u306a\u5b66\u7fd2\u3084\u30b7\u30df\u30e5\u30ec\u30fc\u30b7\u30e7\u30f3\u306a\u3069\u306e\u7814\u4fee\u30c7\u30fc\u30bf\u3082\u8a18\u9332\u3057\u307e\u3059\u3002\n- **\u30a2\u30af\u30bb\u30b7\u30d3\u30ea\u30c6\u30a3:** \u30d7\u30e9\u30c3\u30c8\u30d5\u30a9\u30fc\u30e0\u306e\u30e6\u30fc\u30b6\u30fc\u30a4\u30f3\u30bf\u30fc\u30d5\u30a7\u30fc\u30b9\u306f\u3001\u3059\u3079\u3066\u306e\u53d7\u8b1b\u8005\u304c\u5229\u7528\u3057\u3084\u3059\u3044\u3088\u3046\u8a2d\u8a08\u3055\u308c\u3066\u3044\u307e\u3059\u3002WCAG\u00a02.1\u30ec\u30d9\u30ebAA\u7b49\u306e\u30a2\u30af\u30bb\u30b7\u30d3\u30ea\u30c6\u30a3\u6a19\u6e96\u306b\u6e96\u62e0\u3057\u3001\u969c\u304c\u3044\u306e\u3042\u308b\u30e6\u30fc\u30b6\u30fc\u306b\u3082\u5bfe\u5fdc\u3057\u3066\u3044\u307e\u3059\u3002\u672c\u30bd\u30ea\u30e5\u30fc\u30b7\u30e7\u30f3\u306f\u30ad\u30fc\u30dc\u30fc\u30c9\u64cd\u4f5c\u3001\u30b9\u30af\u30ea\u30fc\u30f3\u30ea\u30fc\u30c0\u30fc\u306a\u3069\u306e\u652f\u63f4\u6280\u8853\u3092\u30b5\u30dd\u30fc\u30c8\u3057\u3066\u304a\u308a\u3001\u4f01\u696d\u306e\u30a2\u30af\u30bb\u30b7\u30d3\u30ea\u30c6\u30a3\u65b9\u91dd\uff08\u7c73\u56fd\u306eSection\u00a0508\u7b49\uff09\u306b\u3082\u9069\u5408\u3057\u3066\u3044\u307e\u3059\u3002\n- **\u30bb\u30ad\u30e5\u30ea\u30c6\u30a3\u3068\u30d7\u30e9\u30a4\u30d0\u30b7\u30fc:** \u5f53\u30bd\u30ea\u30e5\u30fc\u30b7\u30e7\u30f3\u306f\u4f01\u696d\u306eIT\u30bb\u30ad\u30e5\u30ea\u30c6\u30a3\u306e\u30d9\u30b9\u30c8\u30d7\u30e9\u30af\u30c6\u30a3\u30b9\u306b\u5247\u3063\u3066\u3044\u307e\u3059\u3002\u3059\u3079\u3066\u306e\u30c7\u30fc\u30bf\u306f\u901a\u4fe1\u6642\u304a\u3088\u3073\u4fdd\u7ba1\u6642\u306b\u6697\u53f7\u5316\u3055\u308c\u3001\u30e6\u30fc\u30b6\u30fc\u8a8d\u8a3c\u306f\u30b7\u30f3\u30b0\u30eb\u30b5\u30a4\u30f3\u30aa\u30f3\uff08SAML\u00a02.0\u3084OAuth\uff09\u3068\u9023\u643a\u53ef\u80fd\u3067\u5b89\u5168\u306a\u30a2\u30af\u30bb\u30b9\u3092\u5b9f\u73fe\u3057\u307e\u3059\u3002\u30af\u30e9\u30a6\u30c9\u74b0\u5883\u306f\u696d\u754c\u306e\u30bb\u30ad\u30e5\u30ea\u30c6\u30a3\u57fa\u6e96\u306b\u6e96\u62e0\u3057\u3066\u304a\u308a\u3001GDPR\u306a\u3069\u306e\u898f\u5236\u306b\u5247\u3063\u305f\u30e6\u30fc\u30b6\u30fc\u30c7\u30fc\u30bf\u306e\u30d7\u30e9\u30a4\u30d0\u30b7\u30fc\u4fdd\u8b77\u3092\u5fb9\u5e95\u3057\u3066\u3044\u307e\u3059\u3002\n\n## Architecture / \u30a2\u30fc\u30ad\u30c6\u30af\u30c1\u30e3\n\n**English:**"
+      ],
+      "context_after": [
+        "**Cloud Deployment:**",
+        "The system is deployed on a scalable cloud infrastructure, ensuring high availability and performance."
+      ],
+      "true_label": 0,
+      "true_labels": [
+        "non_requirement",
+        "non_ambiguous"
+      ],
+      "predicted_label": 1,
+      "predicted_class": "requirement",
+      "prob_requirement": 0.8943346738815308,
+      "prob_non_requirement": 0.10566528141498566,
+      "confidence": 0.8943346738815308,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-157::s033",
+      "sentence": "**Cloud Deployment:**",
+      "context_before": [
+        "**\u65e5\u672c\u8a9e:** \u672c\u30bd\u30ea\u30e5\u30fc\u30b7\u30e7\u30f3\u306f\u3001\u4f01\u696d\u7814\u4fee\u306b\u95a2\u308f\u308b\u3042\u3089\u3086\u308b\u95a2\u9023\u6a19\u6e96\u304a\u3088\u3073\u30d9\u30b9\u30c8\u30d7\u30e9\u30af\u30c6\u30a3\u30b9\u306b\u6e96\u62e0\u3057\u3066\u8a2d\u8a08\u3055\u308c\u3066\u3044\u307e\u3059\u3002\n\n- **SCORM\u00a01.2\u6e96\u62e0:** \u30d7\u30e9\u30c3\u30c8\u30d5\u30a9\u30fc\u30e0\u306fSCORM\u00a01.2\u4ed5\u69d8\u306b\u5b8c\u5168\u6e96\u62e0\u3057\u3066\u304a\u308a\u3001\u3059\u3079\u3066\u306eSCORM\u30b3\u30f3\u30c6\u30f3\u30c4\u30d1\u30c3\u30b1\u30fc\u30b8\u3092\u30b5\u30dd\u30fc\u30c8\u3057\u307e\u3059\u3002\u30b5\u30fc\u30d0\u30fc\u5074\u74b0\u5883\u306b\u304a\u3044\u3066\u30b3\u30fc\u30b9\u3092\u8d77\u52d5\u30fb\u8ffd\u8de1\u30fb\u5831\u544a\u3057\u3001\u5b8c\u4e86\u30b9\u30c6\u30fc\u30bf\u30b9\u3001\u30b9\u30b3\u30a2\u3001\u5b66\u7fd2\u6642\u9593\u3001\u30a4\u30f3\u30bf\u30e9\u30af\u30b7\u30e7\u30f3\u30c7\u30fc\u30bf\u3092\u6b63\u78ba\u306b\u53d6\u5f97\u3057\u307e\u3059\u3002\n- **xAPI\uff08Tin Can\uff09\u5bfe\u5fdc:** Experience API\uff08xAPI\uff09\u6a19\u6e96\u3092\u5b8c\u5168\u306b\u30b5\u30dd\u30fc\u30c8\u3057\u3066\u304a\u308a\u3001\u8a73\u7d30\u306a\u5b66\u7fd2\u4f53\u9a13\u306e\u30c8\u30e9\u30c3\u30ad\u30f3\u30b0\u304c\u53ef\u80fd\u3067\u3059\u3002\u30b7\u30b9\u30c6\u30e0\u306f\u4e92\u63db\u6027\u306e\u3042\u308bLearning Record Store\uff08LRS\uff09\u306bxAPI\u30b9\u30c6\u30fc\u30c8\u30e1\u30f3\u30c8\u3092\u751f\u6210\u30fb\u9001\u4fe1\u3067\u304d\u3001\u5f93\u6765\u306e\u30b3\u30fc\u30b9\u69cb\u9020\u5916\u306e\u30a4\u30f3\u30d5\u30a9\u30fc\u30de\u30eb\u306a\u5b66\u7fd2\u3084\u30b7\u30df\u30e5\u30ec\u30fc\u30b7\u30e7\u30f3\u306a\u3069\u306e\u7814\u4fee\u30c7\u30fc\u30bf\u3082\u8a18\u9332\u3057\u307e\u3059\u3002\n- **\u30a2\u30af\u30bb\u30b7\u30d3\u30ea\u30c6\u30a3:** \u30d7\u30e9\u30c3\u30c8\u30d5\u30a9\u30fc\u30e0\u306e\u30e6\u30fc\u30b6\u30fc\u30a4\u30f3\u30bf\u30fc\u30d5\u30a7\u30fc\u30b9\u306f\u3001\u3059\u3079\u3066\u306e\u53d7\u8b1b\u8005\u304c\u5229\u7528\u3057\u3084\u3059\u3044\u3088\u3046\u8a2d\u8a08\u3055\u308c\u3066\u3044\u307e\u3059\u3002WCAG\u00a02.1\u30ec\u30d9\u30ebAA\u7b49\u306e\u30a2\u30af\u30bb\u30b7\u30d3\u30ea\u30c6\u30a3\u6a19\u6e96\u306b\u6e96\u62e0\u3057\u3001\u969c\u304c\u3044\u306e\u3042\u308b\u30e6\u30fc\u30b6\u30fc\u306b\u3082\u5bfe\u5fdc\u3057\u3066\u3044\u307e\u3059\u3002\u672c\u30bd\u30ea\u30e5\u30fc\u30b7\u30e7\u30f3\u306f\u30ad\u30fc\u30dc\u30fc\u30c9\u64cd\u4f5c\u3001\u30b9\u30af\u30ea\u30fc\u30f3\u30ea\u30fc\u30c0\u30fc\u306a\u3069\u306e\u652f\u63f4\u6280\u8853\u3092\u30b5\u30dd\u30fc\u30c8\u3057\u3066\u304a\u308a\u3001\u4f01\u696d\u306e\u30a2\u30af\u30bb\u30b7\u30d3\u30ea\u30c6\u30a3\u65b9\u91dd\uff08\u7c73\u56fd\u306eSection\u00a0508\u7b49\uff09\u306b\u3082\u9069\u5408\u3057\u3066\u3044\u307e\u3059\u3002\n- **\u30bb\u30ad\u30e5\u30ea\u30c6\u30a3\u3068\u30d7\u30e9\u30a4\u30d0\u30b7\u30fc:** \u5f53\u30bd\u30ea\u30e5\u30fc\u30b7\u30e7\u30f3\u306f\u4f01\u696d\u306eIT\u30bb\u30ad\u30e5\u30ea\u30c6\u30a3\u306e\u30d9\u30b9\u30c8\u30d7\u30e9\u30af\u30c6\u30a3\u30b9\u306b\u5247\u3063\u3066\u3044\u307e\u3059\u3002\u3059\u3079\u3066\u306e\u30c7\u30fc\u30bf\u306f\u901a\u4fe1\u6642\u304a\u3088\u3073\u4fdd\u7ba1\u6642\u306b\u6697\u53f7\u5316\u3055\u308c\u3001\u30e6\u30fc\u30b6\u30fc\u8a8d\u8a3c\u306f\u30b7\u30f3\u30b0\u30eb\u30b5\u30a4\u30f3\u30aa\u30f3\uff08SAML\u00a02.0\u3084OAuth\uff09\u3068\u9023\u643a\u53ef\u80fd\u3067\u5b89\u5168\u306a\u30a2\u30af\u30bb\u30b9\u3092\u5b9f\u73fe\u3057\u307e\u3059\u3002\u30af\u30e9\u30a6\u30c9\u74b0\u5883\u306f\u696d\u754c\u306e\u30bb\u30ad\u30e5\u30ea\u30c6\u30a3\u57fa\u6e96\u306b\u6e96\u62e0\u3057\u3066\u304a\u308a\u3001GDPR\u306a\u3069\u306e\u898f\u5236\u306b\u5247\u3063\u305f\u30e6\u30fc\u30b6\u30fc\u30c7\u30fc\u30bf\u306e\u30d7\u30e9\u30a4\u30d0\u30b7\u30fc\u4fdd\u8b77\u3092\u5fb9\u5e95\u3057\u3066\u3044\u307e\u3059\u3002\n\n## Architecture / \u30a2\u30fc\u30ad\u30c6\u30af\u30c1\u30e3\n\n**English:**",
+        "The solution\u2019s deployment model and end-to-end operation are outlined below:\n\n1."
+      ],
+      "context_after": [
+        "The system is deployed on a scalable cloud infrastructure, ensuring high availability and performance.",
+        "All components run on the server side in the cloud, and the environment utilizes load balancing and auto-scaling to handle varying user traffic."
+      ],
+      "true_label": 0,
+      "true_labels": [
+        "non_requirement",
+        "non_ambiguous"
+      ],
+      "predicted_label": 1,
+      "predicted_class": "requirement",
+      "prob_requirement": 0.8842531442642212,
+      "prob_non_requirement": 0.11574683338403702,
+      "confidence": 0.8842531442642212,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-157::s071",
+      "sentence": "Gather detailed requirements from stakeholders and define success criteria and deliverables.",
+      "context_before": [
+        "**\u30bb\u30ad\u30e5\u30ea\u30c6\u30a3\u3068\u30b9\u30b1\u30fc\u30e9\u30d3\u30ea\u30c6\u30a3:** \u3059\u3079\u3066\u306e\u30c7\u30fc\u30bf\u901a\u4fe1\u306fSSL\u6697\u53f7\u5316\u306b\u3088\u308a\u4fdd\u8b77\u3055\u308c\u3066\u3044\u307e\u3059\u3002\u672c\u30d7\u30e9\u30c3\u30c8\u30d5\u30a9\u30fc\u30e0\u306f\u30bb\u30ad\u30e5\u30a2\u306a\u30af\u30e9\u30a6\u30c9\u30cd\u30c3\u30c8\u30ef\u30fc\u30af\u74b0\u5883\uff08\u4f8b\u3048\u3070\u30a2\u30af\u30bb\u30b9\u5236\u9650\u3055\u308c\u305fVPC\u5185\uff09\u3067\u7a3c\u50cd\u3057\u3066\u3044\u307e\u3059\u3002\u5404\u30b3\u30f3\u30dd\u30fc\u30cd\u30f3\u30c8\u306f\u30b3\u30f3\u30c6\u30ca\u5316\u3055\u308c\u3066\u304a\u308a\u3001\u5b89\u5b9a\u6027\u3092\u4fdd\u3061\u306a\u304c\u3089\u30e6\u30fc\u30b6\u30fc\u6570\u306b\u5fdc\u3058\u3066\u6c34\u5e73\u30b9\u30b1\u30fc\u30ea\u30f3\u30b0\u304c\u53ef\u80fd\u3067\u3059\u3002\u30c8\u30ec\u30fc\u30cb\u30f3\u30b0\u306e\u30ed\u30b8\u30c3\u30af\u3092\u30b5\u30fc\u30d0\u30fc\u4e0a\u306eWebAssembly\u3067\u5b9f\u884c\u3059\u308b\u3053\u3068\u3067\u3001\u30b5\u30f3\u30c9\u30dc\u30c3\u30af\u30b9\u5316\u306b\u3088\u308b\u8ffd\u52a0\u306e\u30bb\u30ad\u30e5\u30ea\u30c6\u30a3\u5c64\u3092\u63d0\u4f9b\u3057\u307e\u3059\u3002\u3055\u3089\u306b\u3001\u30b5\u30fc\u30d0\u30fc\u30b5\u30a4\u30c9\u30ec\u30f3\u30c0\u30ea\u30f3\u30b0\u306b\u3088\u308a\u30af\u30e9\u30a4\u30a2\u30f3\u30c8\u5074\u306b\u9732\u51fa\u3059\u308b\u30c7\u30fc\u30bf\u3092\u6700\u5c0f\u9650\u306b\u6291\u3048\u3066\u3044\u307e\u3059\u3002\u672c\u30a2\u30fc\u30ad\u30c6\u30af\u30c1\u30e3\u306f\u9ad8\u53ef\u7528\u6027\u3068\u969c\u5bb3\u5fa9\u65e7\u306b\u3082\u5bfe\u5fdc\u3057\u3066\u304a\u308a\u3001\u5b9a\u671f\u30d0\u30c3\u30af\u30a2\u30c3\u30d7\u3084\u30d5\u30a7\u30a4\u30eb\u30aa\u30fc\u30d0\u30fc\u6a5f\u80fd\u306b\u3088\u3063\u3066\u30b5\u30fc\u30d3\u30b9\u7d99\u7d9a\u6027\u3092\u78ba\u4fdd\u3057\u307e\u3059\u3002\n\n## Timeline / \u5b9f\u65bd\u30b9\u30b1\u30b8\u30e5\u30fc\u30eb\n\n**English:**\n\n1.",
+        "**Phase 1: Project Kickoff and Requirements (Weeks\u00a01\u20132):** Kick off the project with initial meetings to confirm scope and objectives."
+      ],
+      "context_after": [
+        "Establish a communication plan and project schedule.",
+        "2. **Phase 2: Design and Architecture Setup (Weeks\u00a03\u20134):**"
+      ],
+      "true_label": 0,
+      "true_labels": [
+        "non_requirement",
+        "non_ambiguous"
+      ],
+      "predicted_label": 1,
+      "predicted_class": "requirement",
+      "prob_requirement": 0.8343366980552673,
+      "prob_non_requirement": 0.16566333174705505,
+      "confidence": 0.8343366980552673,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-157::s092",
+      "sentence": "**\u30d5\u30a7\u30fc\u30ba3\uff1a\u958b\u767a\u3068\u69cb\u6210 (\u90315\u301c8):** \u30d7\u30e9\u30c3\u30c8\u30d5\u30a9\u30fc\u30e0\u306e\u5404\u30e2\u30b8\u30e5\u30fc\u30eb\u3092\u8a2d\u5b9a\u3057\u3001WebAssembly\u30b3\u30f3\u30c6\u30f3\u30c4\u30a8\u30f3\u30b8\u30f3\u304a\u3088\u3073SSR\u30d5\u30ed\u30f3\u30c8\u30a8\u30f3\u30c9\u30b3\u30f3\u30dd\u30fc\u30cd\u30f3\u30c8\u3092\u69cb\u7bc9\u3057\u307e\u3059\u3002\u5fc5\u8981\u306b\u5fdc\u3058\u3066\u30ab\u30b9\u30bf\u30e0\u6a5f\u80fd\u3084\u7d71\u5408\u6a5f\u80fd\uff08\u4f8b\uff1aSSO\u9023\u643a\u3084\u30ab\u30b9\u30bf\u30e0\u30ec\u30dd\u30fc\u30c8\uff09\u3092\u958b\u767a\u3057\u307e\u3059\u3002SCORM\u00a01.2\u30b3\u30fc\u30b9\u306e\u30b5\u30f3\u30d7\u30eb\u3092\u5c0e\u5165\u3057\u3001xAPI\u30a8\u30f3\u30c9\u30dd\u30a4\u30f3\u30c8\u3068LRS\u306e\u8a2d\u5b9a\u3092\u884c\u3044\u307e\u3059\u3002\n4.",
+      "context_before": [
+        "\u521d\u56de\u306e\u6253\u3061\u5408\u308f\u305b\u3067\u30d7\u30ed\u30b8\u30a7\u30af\u30c8\u306e\u7bc4\u56f2\u3068\u76ee\u6a19\u3092\u78ba\u8a8d\u3057\u307e\u3059\u3002\u30b9\u30c6\u30fc\u30af\u30db\u30eb\u30c0\u30fc\u304b\u3089\u8a73\u7d30\u306a\u8981\u4ef6\u3092\u53ce\u96c6\u3057\u3001\u6210\u529f\u57fa\u6e96\u3068\u6210\u679c\u7269\u3092\u5b9a\u7fa9\u3057\u307e\u3059\u3002\u30b3\u30df\u30e5\u30cb\u30b1\u30fc\u30b7\u30e7\u30f3\u8a08\u753b\u3068\u30d7\u30ed\u30b8\u30a7\u30af\u30c8\u30b9\u30b1\u30b8\u30e5\u30fc\u30eb\u3092\u7b56\u5b9a\u3057\u307e\u3059\u3002\n2. *",
+        "*\u30d5\u30a7\u30fc\u30ba2\uff1a\u8a2d\u8a08\u304a\u3088\u3073\u30a2\u30fc\u30ad\u30c6\u30af\u30c1\u30e3\u8a2d\u5b9a (\u90313\u301c4):** \u30b7\u30b9\u30c6\u30e0\u306e\u8a2d\u8a08\u3068\u30a2\u30fc\u30ad\u30c6\u30af\u30c1\u30e3\u3092\u78ba\u5b9a\u3057\u307e\u3059\u3002\u30af\u30e9\u30a6\u30c9\u74b0\u5883\u3092\u30bb\u30c3\u30c8\u30a2\u30c3\u30d7\u3057\uff08\u30b5\u30fc\u30d0\u30fc\u3001\u30c7\u30fc\u30bf\u30d9\u30fc\u30b9\u3001\u30b5\u30fc\u30d3\u30b9\u306e\u30d7\u30ed\u30d3\u30b8\u30e7\u30cb\u30f3\u30b0\uff09\u3001\u30b3\u30f3\u30c6\u30f3\u30c4\u914d\u4fe1\u306e\u6e96\u5099\u3092\u884c\u3044\u307e\u3059\u3002SCORM\u304a\u3088\u3073xAPI\u30b3\u30f3\u30c6\u30f3\u30c4\u306e\u69cb\u6210\u3068\u30a2\u30af\u30bb\u30b9\u65b9\u6cd5\u3092\u8a08\u753b\u3057\u307e\u3059\u3002\n3."
+      ],
+      "context_after": [
+        "**\u30d5\u30a7\u30fc\u30ba4\uff1a\u30c6\u30b9\u30c8\u3068\u54c1\u8cea\u4fdd\u8a3c (\u90319\u301c12):** \u30b7\u30b9\u30c6\u30e0\u306e\u5fb9\u5e95\u7684\u306a\u30c6\u30b9\u30c8\u3092\u5b9f\u65bd\u3057\u307e\u3059\u3002SCORM\u304a\u3088\u3073xAPI\u306e\u6a5f\u80fd\u306b\u95a2\u3059\u308b\u30e6\u30cb\u30c3\u30c8\u30c6\u30b9\u30c8\u30fb\u7d71\u5408\u30c6\u30b9\u30c8\u306b\u52a0\u3048\u3001\u30d1\u30a4\u30ed\u30c3\u30c8\u30e6\u30fc\u30b6\u30fc\u306b\u3088\u308b\u53d7\u5165\u30c6\u30b9\u30c8\u3092\u884c\u3044\u307e\u3059\u3002\u30af\u30e9\u30a4\u30a2\u30f3\u30c8\u5074\u30b9\u30af\u30ea\u30d7\u30c8\u306a\u3057\u3067\u30b3\u30f3\u30c6\u30f3\u30c4\u304c\u6b63\u3057\u304f\u52d5\u4f5c\u3057\u3001\u3059\u3079\u3066\u306e\u30c8\u30e9\u30c3\u30ad\u30f3\u30b0\u30c7\u30fc\u30bf\uff08SCORM\u3068xAPI\uff09\u304c\u6b63\u78ba\u306b\u8a18\u9332\u3055\u308c\u308b\u3053\u3068\u3092\u78ba\u8a8d\u3057\u307e\u3059\u3002\u691c\u51fa\u3055\u308c\u305f\u554f\u984c\u3092\u4fee\u6b63\u3057\u3001\u30d1\u30d5\u30a9\u30fc\u30de\u30f3\u30b9\u3092\u6700\u9069\u5316\u3057\u307e\u3059\u3002\n5. *",
+        "*\u30d5\u30a7\u30fc\u30ba5\uff1a\u672c\u756a\u5c55\u958b\u3068\u30ed\u30fc\u30f3\u30c1 (\u903113\u301c14):** \u672c\u756a\u30af\u30e9\u30a6\u30c9\u74b0\u5883\u306b\u30bd\u30ea\u30e5\u30fc\u30b7\u30e7\u30f3\u3092\u30c7\u30d7\u30ed\u30a4\u3057\u3001\u6700\u7d42\u78ba\u8a8d\u3092\u5b9f\u65bd\u3057\u307e\u3059\u3002\u5fc5\u8981\u306b\u5fdc\u3058\u3066\u4e00\u90e8\u30e6\u30fc\u30b6\u30fc\u3067\u306e\u30bd\u30d5\u30c8\u30ed\u30fc\u30f3\u30c1\u3092\u884c\u3044\u307e\u3059\u3002\u7ba1\u7406\u8005\uff08\u304a\u3088\u3073\u8a72\u5f53\u3059\u308b\u5834\u5408\u306f\u30a4\u30f3\u30b9\u30c8\u30e9\u30af\u30bf\u30fc\uff09\u306b\u65b0\u30b7\u30b9\u30c6\u30e0\u306e\u5229\u7528\u65b9\u6cd5\u306b\u3064\u3044\u3066\u30c8\u30ec\u30fc\u30cb\u30f3\u30b0\u3092\u63d0\u4f9b\u3057\u307e\u3059\u3002\u5b89\u5b9a\u6027\u3092\u78ba\u8a8d\u3057\u305f\u5f8c\u3001\u5168\u30e6\u30fc\u30b6\u30fc\u306b\u30d7\u30e9\u30c3\u30c8\u30d5\u30a9\u30fc\u30e0\u3092\u672c\u683c\u5c55\u958b\u3057\u307e\u3059\u3002\n\n## Pricing / \u4fa1\u683c\n\n**English:**\n\n- **Licensing:**"
+      ],
+      "true_label": 1,
+      "true_labels": [
+        "requirement",
+        "functional",
+        "non_ambiguous"
+      ],
+      "predicted_label": 0,
+      "predicted_class": "non_requirement",
+      "prob_requirement": 0.09802788496017456,
+      "prob_non_requirement": 0.9019721746444702,
+      "confidence": 0.9019721746444702,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-157::s095",
+      "sentence": "We offer an annual subscription license for the platform, scaled to the number of learners (with flexible tiered or per-user pricing).",
+      "context_before": [
+        "**\u30d5\u30a7\u30fc\u30ba4\uff1a\u30c6\u30b9\u30c8\u3068\u54c1\u8cea\u4fdd\u8a3c (\u90319\u301c12):** \u30b7\u30b9\u30c6\u30e0\u306e\u5fb9\u5e95\u7684\u306a\u30c6\u30b9\u30c8\u3092\u5b9f\u65bd\u3057\u307e\u3059\u3002SCORM\u304a\u3088\u3073xAPI\u306e\u6a5f\u80fd\u306b\u95a2\u3059\u308b\u30e6\u30cb\u30c3\u30c8\u30c6\u30b9\u30c8\u30fb\u7d71\u5408\u30c6\u30b9\u30c8\u306b\u52a0\u3048\u3001\u30d1\u30a4\u30ed\u30c3\u30c8\u30e6\u30fc\u30b6\u30fc\u306b\u3088\u308b\u53d7\u5165\u30c6\u30b9\u30c8\u3092\u884c\u3044\u307e\u3059\u3002\u30af\u30e9\u30a4\u30a2\u30f3\u30c8\u5074\u30b9\u30af\u30ea\u30d7\u30c8\u306a\u3057\u3067\u30b3\u30f3\u30c6\u30f3\u30c4\u304c\u6b63\u3057\u304f\u52d5\u4f5c\u3057\u3001\u3059\u3079\u3066\u306e\u30c8\u30e9\u30c3\u30ad\u30f3\u30b0\u30c7\u30fc\u30bf\uff08SCORM\u3068xAPI\uff09\u304c\u6b63\u78ba\u306b\u8a18\u9332\u3055\u308c\u308b\u3053\u3068\u3092\u78ba\u8a8d\u3057\u307e\u3059\u3002\u691c\u51fa\u3055\u308c\u305f\u554f\u984c\u3092\u4fee\u6b63\u3057\u3001\u30d1\u30d5\u30a9\u30fc\u30de\u30f3\u30b9\u3092\u6700\u9069\u5316\u3057\u307e\u3059\u3002\n5. *",
+        "*\u30d5\u30a7\u30fc\u30ba5\uff1a\u672c\u756a\u5c55\u958b\u3068\u30ed\u30fc\u30f3\u30c1 (\u903113\u301c14):** \u672c\u756a\u30af\u30e9\u30a6\u30c9\u74b0\u5883\u306b\u30bd\u30ea\u30e5\u30fc\u30b7\u30e7\u30f3\u3092\u30c7\u30d7\u30ed\u30a4\u3057\u3001\u6700\u7d42\u78ba\u8a8d\u3092\u5b9f\u65bd\u3057\u307e\u3059\u3002\u5fc5\u8981\u306b\u5fdc\u3058\u3066\u4e00\u90e8\u30e6\u30fc\u30b6\u30fc\u3067\u306e\u30bd\u30d5\u30c8\u30ed\u30fc\u30f3\u30c1\u3092\u884c\u3044\u307e\u3059\u3002\u7ba1\u7406\u8005\uff08\u304a\u3088\u3073\u8a72\u5f53\u3059\u308b\u5834\u5408\u306f\u30a4\u30f3\u30b9\u30c8\u30e9\u30af\u30bf\u30fc\uff09\u306b\u65b0\u30b7\u30b9\u30c6\u30e0\u306e\u5229\u7528\u65b9\u6cd5\u306b\u3064\u3044\u3066\u30c8\u30ec\u30fc\u30cb\u30f3\u30b0\u3092\u63d0\u4f9b\u3057\u307e\u3059\u3002\u5b89\u5b9a\u6027\u3092\u78ba\u8a8d\u3057\u305f\u5f8c\u3001\u5168\u30e6\u30fc\u30b6\u30fc\u306b\u30d7\u30e9\u30c3\u30c8\u30d5\u30a9\u30fc\u30e0\u3092\u672c\u683c\u5c55\u958b\u3057\u307e\u3059\u3002\n\n## Pricing / \u4fa1\u683c\n\n**English:**\n\n- **Licensing:**"
+      ],
+      "context_after": [
+        "This fee covers full use of the SCORM\u00a01.2 and xAPI content delivery engine and all platform features.",
+        "Enterprise options such as an unlimited user license or multi-year discounts are available for larger deployments."
+      ],
+      "true_label": 0,
+      "true_labels": [
+        "non_requirement",
+        "non_ambiguous"
+      ],
+      "predicted_label": 1,
+      "predicted_class": "requirement",
+      "prob_requirement": 0.8694026470184326,
+      "prob_non_requirement": 0.130597323179245,
+      "confidence": 0.8694026470184326,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-159::s037",
+      "sentence": "Best practices warn that sharing a certificate or device ID across devices is a red flag for compromise ([Best Practice 1.1 \u2013 Assign unique identities to each IoT device - IoT Lens Checklist](https://docs.aws.amazon.com/wellarchitected/latest/iot-lens-checklist/best-practice-1-1.html#:~:text=principals%2C%20such%20as%20certificates%2C%20should,to%20further%20compromise%20the%20system)).",
+      "context_before": [
+        "On higher layers, a poorly designed registry might hand out short or incremental IDs without global checking, so large fleets naturally collide via the birthday paradox.",
+        "Attackers can also create collisions intentionally: by spoofing a legitimate device\u2019s ID (session or network) an attacker can hijack its session or inject false data."
+      ],
+      "context_after": [
+        "**Impact examples:** Collision effects vary by layer.",
+        "If two edge sensors share a device ID, they may overwrite each other\u2019s data on the server, corrupt logs, or trigger replay of stale data."
+      ],
+      "true_label": 1,
+      "true_labels": [
+        "requirement",
+        "non_functional",
+        "non_ambiguous"
+      ],
+      "predicted_label": 0,
+      "predicted_class": "non_requirement",
+      "prob_requirement": 0.001764568849466741,
+      "prob_non_requirement": 0.9982354640960693,
+      "confidence": 0.9982354640960693,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-159::s014",
+      "sentence": "- Server Fault](https://serverfault.com/questions/462178/duplicate-mac-address-on-the-same-lan-possible#:~:text=So%20if%20there%20are%20two,and%20off%20and%20be%20inconsistent)).",
+      "context_before": [
+        "**Network/MAC-layer collisions** occur when two devices share a network address.",
+        "Duplicate MAC addresses on a switched LAN make the switch\u2019s MAC table oscillate: each new frame forces the switch to relearn the source port, causing traffic for that MAC to flap between ports ([networking - Duplicate MAC address on the same LAN possible?"
+      ],
+      "context_after": [
+        "This breaks connectivity for both hosts.",
+        "In switching networks a duplicate MAC \u201cmakes switching unreliable\u201d and can disrupt ARP/NDP mappings ([How to solve problem with two devices with the same MAC address, connected to the switch?"
+      ],
+      "true_label": 1,
+      "true_labels": [
+        "non_requirement",
+        "with_context",
+        "non_ambiguous"
+      ],
+      "predicted_label": 0,
+      "predicted_class": "non_requirement",
+      "prob_requirement": 0.0013977255439385772,
+      "prob_non_requirement": 0.9986023306846619,
+      "confidence": 0.9986023306846619,
+      "correct": false,
+      "n_context": 2
+    },
+    {
+      "sent_id": "REQ-170::s007",
+      "sentence": "This conversion ensures that data integrity is maintained while accommodating systems that require tab-delimited formats for efficient processing.",
+      "context_before": [
+        "The next phase involves converting CSV (Comma-Separated Values) files to TSV (Tab-Separated Values) format to facilitate better compatibility with downstream systems and tools.",
+        "Special care will be taken to escape any existing tab characters within fields to prevent misinterpretation during parsing."
+      ],
+      "context_after": [
+        "**Validation**  \nPost-conversion, each row will undergo checksum validation to verify data integrity and detect any potential transmission errors or data corruption.",
+        "Rows failing the checksum validation will be logged to the `hieroglyph_etl.err` file for further investigation and remediation."
+      ],
+      "true_label": 1,
+      "true_labels": [
+        "requirement",
+        "functional",
+        "non_ambiguous"
+      ],
+      "predicted_label": 0,
+      "predicted_class": "non_requirement",
+      "prob_requirement": 0.0025239393580704927,
+      "prob_non_requirement": 0.9974760413169861,
+      "confidence": 0.9974760413169861,
+      "correct": false,
+      "n_context": 2
+    }
+  ]
+}

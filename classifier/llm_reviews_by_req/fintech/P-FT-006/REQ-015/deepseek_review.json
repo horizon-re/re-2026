@@ -1,0 +1,2889 @@
+{
+  "req_id": "REQ-015",
+  "doc_id": "6a4174a0-f0ff-5d56-b32d-5aaf8421e592",
+  "domain": "fintech",
+  "prompt_id": "P-FT-006",
+  "model": "deepseek-r1:7b",
+  "review_timestamp": "2026-01-20T21:57:44.113195+00:00",
+  "counts": {
+    "total": 287,
+    "llm_neg": 192,
+    "pipe_pos": 41,
+    "flip_pos_to_neg": 26,
+    "llm_pos": 95,
+    "pipe_neg": 246,
+    "flip_neg_to_pos": 80
+  },
+  "reviews": [
+    {
+      "sent_id": "REQ-015::s001",
+      "order": 1,
+      "text": "Perfect — I’ll craft a beautifully chaotic and realistic stakeholder rant that reflects the frustrations and dreams of freelancers in the US, Canada, and EU.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "EXAMPLE_OR_EXPLANATION",
+      "reason_text": "Creative writing prompt, not enforceable requirement."
+    },
+    {
+      "sent_id": "REQ-015::s002",
+      "order": 2,
+      "text": "It’ll blend the vibe of a late-night Slack message, a messy email, and an unfiltered chat — just the way real-world requirements usually come in.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describes how requirements are typically gathered, not enforceable."
+    },
+    {
+      "sent_id": "REQ-015::s003",
+      "order": 3,
+      "text": "# Wanted: An Accounting App That Doesn’t Make You Cry\n\n## Why Traditional Accounting Apps Feel So Painful\nMost small-business and freelance accounting tools weren’t exactly designed for simplicity.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "COMPLIANCE_REQUIREMENT",
+      "reason_text": "Expresses a requirement for an accounting app."
+    },
+    {
+      "sent_id": "REQ-015::s004",
+      "order": 4,
+      "text": "**Financial bookkeeping is complicated and time-consuming** by nature ([The Best Accounting Software for Small Businesses in 2025 | PCMag](https://www.pcmag.com/picks/the-best-small-business-accounting-software#:~:text=Financial%20bookkeeping%20is%20complicated%20and,the%20required%20tax%20payments%20on)), and many software packages overwhelm users with jargon and features meant for accountants.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-015::s005",
+      "order": 5,
+      "text": "It’s no wonder you feel like you need an MBA to send a simple invoice.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "COMPLIANCE_REQUIREMENT",
+      "reason_text": "Expresses a desire for simplicity."
+    },
+    {
+      "sent_id": "REQ-015::s006",
+      "order": 6,
+      "text": "Software like QuickBooks and Xero are powerful, but they can intimidate the average user with their **complex setup and accounting-speak** (think “Chart of Accounts” and “Accounts Receivable”) instead of plain language.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.7,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Points out complexity in current apps."
+    },
+    {
+      "sent_id": "REQ-015::s007",
+      "order": 7,
+      "text": "Modern providers *have* tried to make interfaces as simple and pleasant as possible ([The Best Accounting Software for Small Businesses in 2025 | PCMag](https://www.pcmag.com/picks/the-best-small-business-accounting-software#:~:text=Accounting%20can%20be%20complicated%2C%20and,easiest%20accounting%20programs%20to%20use)), but many freelancers still find themselves drowning in what feels like spreadsheet hell.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-015::s008",
+      "order": 8,
+      "text": "Your frustration is shared by many solo entrepreneurs who just want to **invoice clients and track income without a headache**.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "PERFORMANCE_REQUIREMENT",
+      "reason_text": "Describes user frustration with complexity."
+    },
+    {
+      "sent_id": "REQ-015::s009",
+      "order": 9,
+      "text": "Typical pain points include: multi-step invoice creation, confusing settings for things like taxes or currencies, and clunky workflows to record payments or expenses.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Lists pain points leading to design requirements."
+    },
+    {
+      "sent_id": "REQ-015::s010",
+      "order": 10,
+      "text": "On top of that, keeping tabs on cross-border finances – like getting paid in euros or pounds when your base is USD – often turns into a black hole of manual conversions and fee tracking.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "COMPLIANCE_REQUIREMENT",
+      "reason_text": "Mentions complex workflows and conversions."
+    },
+    {
+      "sent_id": "REQ-015::s011",
+      "order": 11,
+      "text": "In short, the “industry-standard” accounting apps pack in tons of functionality (great for accountants), but **they often fail at being intuitive** for a one-person business that needs speed and clarity over complexity.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-015::s012",
+      "order": 12,
+      "text": "## The Dream Tool: Features on Your Wish List\nYou’ve practically sketched out the **ultimate user-friendly finance app**.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Describes a feature wish list for an ideal app."
+    },
+    {
+      "sent_id": "REQ-015::s013",
+      "order": 13,
+      "text": "Let’s break down that wish list, because it’s a tall order – but not impossible – and see which features are must-haves:\n\n- **Simple Recurring Invoices & One-Click Billing:**",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Lists specific features as must-haves, such as simple invoices and one-click billing."
+    },
+    {
+      "sent_id": "REQ-015::s014",
+      "order": 14,
+      "text": "You want to set an invoice once and have it fire off every month automatically – no extra effort.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "States a requirement for automated reminders."
+    },
+    {
+      "sent_id": "REQ-015::s015",
+      "order": 15,
+      "text": "In an ideal app, setting up a recurring invoice would be as easy as flipping a switch (“send this same thing every month, cool?",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Expresses a desire for easy setup of recurring invoices."
+    },
+    {
+      "sent_id": "REQ-015::s016",
+      "order": 16,
+      "text": "Yes.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-015::s017",
+      "order": 17,
+      "text": "Done.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-015::s018",
+      "order": 18,
+      "text": "Boom.”).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-015::s019",
+      "order": 19,
+      "text": "Many modern invoicing tools do offer recurring billing; for example, Zoho Books’ free tier supports recurring invoices and even **automatic payment reminders** out of the box ([The Best Accounting Software for Small Businesses in 2025 | PCMag](https://www.pcmag.com/picks/the-best-small-business-accounting-software#:~:text=Zoho%20Books%20has%20a%20surprisingly,connections%20to%20your%20financial%20institutions)).",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "PERFORMANCE_REQUIREMENT",
+      "reason_text": "Mentions recurring invoices and automatic reminders, which are enforceable features."
+    },
+    {
+      "sent_id": "REQ-015::s020",
+      "order": 20,
+      "text": "The key is a *streamlined* interface where creating a professional invoice (with your logo and correct taxes) takes seconds, not an hour of tweaking.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-015::s021",
+      "order": 21,
+      "text": "And if you’re billing multiple clients regularly, you shouldn’t have to duplicate and manual-send each time.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-015::s022",
+      "order": 22,
+      "text": "- **Automated (and Maybe Snarky) Payment Reminders:**",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-015::s023",
+      "order": 23,
+      "text": "Chasing late payments is the worst, so the app should handle follow-ups for you.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.7,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Implies handling follow-ups automatically, suggesting a necessary system feature."
+    },
+    {
+      "sent_id": "REQ-015::s024",
+      "order": 24,
+      "text": "The dream system would automatically nudge clients who are late – possibly even with a bit of personality in the message (“Hi, just checking in **again** 🙂…”).",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.6,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Suggests a feature with an optional personality, indicating it should be part of the system."
+    },
+    {
+      "sent_id": "REQ-015::s025",
+      "order": 25,
+      "text": "Most invoicing apps today can send polite late payment reminders; for instance, FreshBooks and others let you enable emails to clients when an invoice is overdu ([Invoice and Accounting Software for Small Businesses - FreshBooks](https://www.freshbooks.com/#:~:text=Invoicing%20Create%20professional%20invoices%20in,accounting%20tools%2C%20powerful%20financial%20reports))】.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-015::s026",
+      "order": 26,
+      "text": "Ideally, you’d want to customize those messages to fit your tone.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-015::s027",
+      "order": 27,
+      "text": "While no major software currently comes with a built-in sarcastic mode, you *can* usually edit the reminder template yourself.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Desires a feature but does not enforce behavior."
+    },
+    {
+      "sent_id": "REQ-015::s028",
+      "order": 28,
+      "text": "The bottom line: **you shouldn’t have to personally remember or craft emails for slow-pay clients** – the app should have your back, automatically and consistently.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "The app should automatically handle emails for slow-pay clients."
+    },
+    {
+      "sent_id": "REQ-015::s029",
+      "order": 29,
+      "text": "- **Smart Expense Tracking (No Shoeboxes or Manual Labels):**",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 1.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Smart Expense Tracking feature with categorization."
+    },
+    {
+      "sent_id": "REQ-015::s030",
+      "order": 30,
+      "text": "In your words, you don’t want to *“categorize expenses like some intern with a label gun.”",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "EXAMPLE_OR_EXPLANATION",
+      "reason_text": "User preference without enforcing behavior."
+    },
+    {
+      "sent_id": "REQ-015::s031",
+      "order": 31,
+      "text": "* The perfect app would automatically recognize common business expenses – if you spend a day working at a coffee shop, it should know that’s a business expense (and maybe even tag it as “Meals & Entertainment” or “Workspace” appropriately).",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-015::s032",
+      "order": 32,
+      "text": "This means **bank feed integration and AI-driven categorization** of transactions.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Bank feed integration and AI categorization."
+    },
+    {
+      "sent_id": "REQ-015::s033",
+      "order": 33,
+      "text": "Some solutions are already moving this direction: FreshBooks, for example, offers automated expense categorization when you import your bank or credit card dat ([Invoice and Accounting Software for Small Businesses - FreshBooks](https://www.freshbooks.com/#:~:text=Invoicing%20Create%20professional%20invoices%20in,accounting%20tools%2C%20powerful%20financial%20reports))】.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-015::s034",
+      "order": 34,
+      "text": "New freelancer-focused banking apps like Found go further, auto-tracking expenses and even capturing receipts on the fl ([Found Review: New Banking For the Self-Employed 2025](https://wisdomdepot.com/found-review/#:~:text=Bookkeeping))】.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "PERFORMANCE_REQUIREMENT",
+      "reason_text": "Auto-tracking and receipt capture."
+    },
+    {
+      "sent_id": "REQ-015::s035",
+      "order": 35,
+      "text": "The goal is an app that feels like it *knows*",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Desires app awareness of purchase types but no enforcement."
+    },
+    {
+      "sent_id": "REQ-015::s036",
+      "order": 36,
+      "text": "what type of purchase each transaction was, reducing those annoying “Please categorize this expense” prompts.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Reduce expense categorization prompts."
+    },
+    {
+      "sent_id": "REQ-015::s037",
+      "order": 37,
+      "text": "You’d spend less time bookkeeping and more time doing actual work.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 1.0,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Less bookkeeping, more work."
+    },
+    {
+      "sent_id": "REQ-015::s038",
+      "order": 38,
+      "text": "- **Tax Time Alerts and Insights",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Tax alerts and insights features."
+    },
+    {
+      "sent_id": "REQ-015::s039",
+      "order": 39,
+      "text": ":** Imagine a dashboard that tells you in real time how much you should set aside for taxes – phrased in a way that’s actually helpful (perhaps with a touch of humor, e.g., *“You’re gonna owe about $1,300 in April – maybe put down the avocado toast.”",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-015::s040",
+      "order": 40,
+      "text": "*).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.5,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Desires system tracking but no enforcement."
+    },
+    {
+      "sent_id": "REQ-015::s041",
+      "order": 41,
+      "text": "This requires the system to track your income and deductible expenses, then estimate tax liability.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Track income and expenses for tax."
+    },
+    {
+      "sent_id": "REQ-015::s042",
+      "order": 42,
+      "text": "**Real-time tax estimation** is actually a feature in some newer apps: the Found banking app automatically calculates your self-employment tax estimates as you earn and spen ([Found Review: New Banking For the Self-Employed 2025](https://wisdomdepot.com/found-review/#:~:text=Found%20Banking%20simplifies%20tax%20management,with%20features%20like))】.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-015::s043",
+      "order": 43,
+      "text": "QuickBooks Self-Employed similarly projects quarterly taxes for freelancers.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "QuickBooks Self-Employed projection features."
+    },
+    {
+      "sent_id": "REQ-015::s044",
+      "order": 44,
+      "text": "The ideal tool would have a built-in “tax buddy” that not only sums up what you might owe, but reminds you of upcoming filing deadlines and how much to save.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Built-in tax buddy and reminders."
+    },
+    {
+      "sent_id": "REQ-015::s045",
+      "order": 45,
+      "text": "Instead of dreading tax season, you’d get gentle warnings throughout the year (“heads-up: quarterly taxes due next week, have $$ ready”).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 1.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Yearly tax warnings and balance with Uncle Sam."
+    },
+    {
+      "sent_id": "REQ-015::s046",
+      "order": 46,
+      "text": "No more nasty surprises at year-end – you’d always know where you stand with Uncle Sam.\n\n- **Multicurrency Magic & Fee Transparency:**",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Multicurrency tracking and fee transparency."
+    },
+    {
+      "sent_id": "REQ-015::s047",
+      "order": 47,
+      "text": "This is huge for you since you deal with clients in the US, Canada, UK, Germany, etc.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Support for multiple currencies in transactions."
+    },
+    {
+      "sent_id": "REQ-015::s048",
+      "order": 48,
+      "text": "The dream app **must handle multiple currencies seamlessly**.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Directly states handling multiple currencies is a must-have feature."
+    },
+    {
+      "sent_id": "REQ-015::s049",
+      "order": 49,
+      "text": "That means you should be able to invoice in EUR or GBP, get paid in those currencies, and then see it converted to your home currency (USD or CAD) with all the intermediary steps clear.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-015::s050",
+      "order": 50,
+      "text": "Right now, it often feels like money vanishes into a black hole of conversion fees – the ideal solution would shine a light on that.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "PERFORMANCE_REQUIREMENT",
+      "reason_text": "Minimize conversion fees."
+    },
+    {
+      "sent_id": "REQ-015::s051",
+      "order": 51,
+      "text": "Good news is many top accounting tools have added multi-currency support.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.5,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Desires system tracking but no enforcement."
+    },
+    {
+      "sent_id": "REQ-015::s052",
+      "order": 52,
+      "text": "QuickBooks Online, Xero, FreshBooks, and Wave Accounting all support transactions in multiple currencie (",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.4,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describes features without enforcement."
+    },
+    {
+      "sent_id": "REQ-015::s053",
+      "order": 53,
+      "text": "[Wave vs QuickBooks: Best for Global Users? — Vintti](https://www.vintti.com/blog/wave-vs-quickbooks-online-which-is-best-for-international-users#:~:text=Handling%20Multiple%20Currencies%20with%20Ease))",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Handling Multiple Currencies with Ease"
+    },
+    {
+      "sent_id": "REQ-015::s054",
+      "order": 54,
+      "text": "([6+ Best Multi-currency Accounting Software [2025]](https://www.ecaplabs.com/blogs/multi-currency-accounting-software#:~:text=FreshBooks%2C%20while%20primarily%20known%20for,automatically%20applying%20current%20exchange%20rates))】.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "PERFORMANCE_REQUIREMENT",
+      "reason_text": "automatically applying current exchange rates"
+    },
+    {
+      "sent_id": "REQ-015::s055",
+      "order": 55,
+      "text": "For example, Wave “handles multiple currencies smoothly” and even **tracks exchange gains or losses automatically*",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.95,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "tracks exchange gains or losses automatically*"
+    },
+    {
+      "sent_id": "REQ-015::s056",
+      "order": 56,
+      "text": "*",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "No reasoning provided."
+    },
+    {
+      "sent_id": "REQ-015::s057",
+      "order": 57,
+      "text": "so you know the true bottom line after conversion ([Wave vs QuickBooks: Best for Global Users?",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "No reasoning provided."
+    },
+    {
+      "sent_id": "REQ-015::s058",
+      "order": 58,
+      "text": "— Vintti](https://www.vintti.com/blog/wave-vs-quickbooks-online-which-is-best-for-international-users#:~:text=match%20at%20L460%20Wave%20also,converting%20amounts%20into%20the%20home))】.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "integrating with payment processors to capture fees and exchange rates"
+    },
+    {
+      "sent_id": "REQ-015::s059",
+      "order": 59,
+      "text": "FreshBooks lets you create an invoice in, say, Euros, and will show you reports with both the original € amount and the converted value in your base currenc ([6+ Best Multi-currency Accounting Software [2025]](https://www.ecaplabs.com/blogs/multi-currency-accounting-software#:~:text=include%20multi,automatically%20applying%20current%20exchange%20rates))】.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-015::s060",
+      "order": 60,
+      "text": "The ideal app would take this further by integrating with payment processors (like PayPal or Stripe) to capture their fees and exchange rates.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "No mystery, no manual math – a clear map of where your money went"
+    },
+    {
+      "sent_id": "REQ-015::s061",
+      "order": 61,
+      "text": "That way, if €1000 turns into $*X* after PayPal’s cut and then into C$*Y* in your bank, you’d see each step accounted for.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "linking invoices, payments, and bank deposits in one system"
+    },
+    {
+      "sent_id": "REQ-015::s062",
+      "order": 62,
+      "text": "No mystery, no manual math – a clear map of where your money went.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "This level of transparency is rare, but it’s technically possible by linking the invoice, the payment, and the bank deposit all together in one system."
+    },
+    {
+      "sent_id": "REQ-015::s063",
+      "order": 63,
+      "text": "This level of transparency is rare, but it’s technically possible by linking the invoice, the payment, and the bank deposit all together in one system.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "No reasoning provided."
+    },
+    {
+      "sent_id": "REQ-015::s064",
+      "order": 64,
+      "text": "- **A Slick, Sexy Dashboard (Not a Tax Library Aesthetic):**",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "No reasoning provided."
+    },
+    {
+      "sent_id": "REQ-015::s065",
+      "order": 65,
+      "text": "You want the interface to feel “more like Apple and less like tax season.”",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "No reasoning provided."
+    },
+    {
+      "sent_id": "REQ-015::s066",
+      "order": 66,
+      "text": "In practice, that means a clean design, intuitive navigation, and visual insights into your finances.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "In practice, that means a clean design, intuitive navigation, and visual insights into your finances."
+    },
+    {
+      "sent_id": "REQ-015::s067",
+      "order": 67,
+      "text": "Think **beautiful charts and an uncluttered layout** that shows you key info at a glance – e.g. how much you’ve made this month, what’s overdue, how your income tracks over time, and yes, how far along you are toward that savings goal.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Think beautiful charts and an uncluttered layout that shows key info at a glance"
+    },
+    {
+      "sent_id": "REQ-015::s068",
+      "order": 68,
+      "text": "Many new-gen accounting apps emphasize dashboards.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "No reasoning provided."
+    },
+    {
+      "sent_id": "REQ-015::s069",
+      "order": 69,
+      "text": "Take a look at an example dashboard from a user-friendly app like FreshBooks – it’s **simple, visual, and focused on just the essentials** (outstanding revenue, total profit, etc.)",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "simple, visual, and focused on just the essentials"
+    },
+    {
+      "sent_id": "REQ-015::s070",
+      "order": 70,
+      "text": "rather than bombarding you with every account and ledger: \n\n  ([Invoice and Accounting Software for Small Businesses - FreshBooks](https://www.freshbooks.com/))】",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "No reasoning provided."
+    },
+    {
+      "sent_id": "REQ-015::s071",
+      "order": 71,
+      "text": "*",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "No reasoning provided."
+    },
+    {
+      "sent_id": "REQ-015::s072",
+      "order": 72,
+      "text": "Example of a modern accounting dashboard: clear overview of outstanding invoices, profit trends, and revenue streams.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "A clean design makes it easier to see how your business is doing at a glance."
+    },
+    {
+      "sent_id": "REQ-015::s073",
+      "order": 73,
+      "text": "A clean design makes it easier to see how your business is doing at a glance.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "In practice, that means a clean design, intuitive navigation, and visual insights into your finances."
+    },
+    {
+      "sent_id": "REQ-015::s074",
+      "order": 74,
+      "text": "*",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.3,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "No specific enforceable behavior mentioned."
+    },
+    {
+      "sent_id": "REQ-015::s075",
+      "order": 75,
+      "text": "The dream tool would greet you with a similar home screen: maybe even with a friendly tone (“Good morning!",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.2,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describes user interface but lacks enforceable action."
+    },
+    {
+      "sent_id": "REQ-015::s076",
+      "order": 76,
+      "text": "Here’s where you stand: on track to hit your monthly goal, but 2 invoices need attention”).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Sets an operational constraint on meeting the monthly goal."
+    },
+    {
+      "sent_id": "REQ-015::s077",
+      "order": 77,
+      "text": "It should feel like a **calm control center** for your finances, not a maze of reports.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-015::s078",
+      "order": 78,
+      "text": "- **Mobile-Friendly Everything:**",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Mentions mobile-friendliness without enforcing action."
+    },
+    {
+      "sent_id": "REQ-015::s079",
+      "order": 79,
+      "text": "You’re on the move (or, as you joked, checking finances from the toilet).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.4,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describes use case but lacks enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-015::s080",
+      "order": 80,
+      "text": "So the whole system *must* work great on a smartphone.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-015::s081",
+      "order": 81,
+      "text": "That means a dedicated mobile app with full functionality – create/send an invoice, snap a receipt, check your cashflow, or send a reminder, all from your phone.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Imposes enforceable action on creating/send invoices."
+    },
+    {
+      "sent_id": "REQ-015::s082",
+      "order": 82,
+      "text": "Most cloud accounting platforms do offer mobile apps, but quality varies.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Compares platforms without enforcing behavior."
+    },
+    {
+      "sent_id": "REQ-015::s083",
+      "order": 83,
+      "text": "FreshBooks and QuickBooks have mobile apps that let you do core tasks (FreshBooks boasts that its mobile app lets you manage things on the go easil ([6+ Best Multi-currency Accounting Software",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "EXAMPLE_OR_EXPLANATION",
+      "reason_text": "Cut-off text, unclear specifics."
+    },
+    {
+      "sent_id": "REQ-015::s084",
+      "order": 84,
+      "text": "[2025]](https://www.ecaplabs.com/blogs/multi-currency-accounting-software#:~:text=making%20multi,border%20payments))】).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.5,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Links without providing info."
+    },
+    {
+      "sent_id": "REQ-015::s085",
+      "order": 85,
+      "text": "The ideal app’s mobile experience would be **just as smooth as the desktop**: no waiting to “do it later on the computer.”",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.7,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Imposes smooth mobile experience constraint."
+    },
+    {
+      "sent_id": "REQ-015::s086",
+      "order": 86,
+      "text": "If inspiration (or urgency) strikes while you’re out, you can handle it in a few taps.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.4,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describes action but lacks enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-015::s087",
+      "order": 87,
+      "text": "- **Integrated Payments (No More Weird Links):**",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Mentions feature without enforcing action."
+    },
+    {
+      "sent_id": "REQ-015::s088",
+      "order": 88,
+      "text": "The flow from invoice to payment should be seamless for your clients.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Imposes enforceable payment flow constraint."
+    },
+    {
+      "sent_id": "REQ-015::s089",
+      "order": 89,
+      "text": "You’d like to send an invoice that has a built-in **“Pay Now” button** where the client can pay by credit card, ACH, PayPal, **right then and there**, without being shuttled off to some clunky third-party site that feels sketchy.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.7,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Mentions built-in payment buttons as a requirement."
+    },
+    {
+      "sent_id": "REQ-015::s090",
+      "order": 90,
+      "text": "Fortunately, integrated payments are standard in many invoicing apps today.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describes feature without enforcing action."
+    },
+    {
+      "sent_id": "REQ-015::s091",
+      "order": 91,
+      "text": "When you email an invoice from platforms like FreshBooks, Wave, or Zoho, you can include a link or button for the client to pay online via Stripe, PayPal, etc ([The Best Accounting Software for Small Businesses in 2025 | PCMag](https://www.pcmag.com/picks/the-best-small-business-accounting-software#:~:text=How%20Do%20Accounting%20Apps%20Handle,Completed%20Transactions))】.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-015::s092",
+      "order": 92,
+      "text": "The dream system would perhaps even allow saving client payment info for recurring charges (with permission, of course) so that your retainer clients get auto-charged – truly “set it and forget it” for you.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "PERFORMANCE_REQUIREMENT",
+      "reason_text": "Implies saving recurring client payments, suggesting an enforceable feature."
+    },
+    {
+      "sent_id": "REQ-015::s093",
+      "order": 93,
+      "text": "The key is that it feels professional and **easy for the client to pay** (no unnecessary signup steps), which means you get your money faster and with less back-and-forth.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Imposes enforceable ease of payment constraint."
+    },
+    {
+      "sent_id": "REQ-015::s094",
+      "order": 94,
+      "text": "- **Personality and Personalization",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Mentions abstract feature without enforcing action."
+    },
+    {
+      "sent_id": "REQ-015::s095",
+      "order": 95,
+      "text": ":**",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Mentions app's personality but lacks specifics."
+    },
+    {
+      "sent_id": "REQ-015::s096",
+      "order": 96,
+      "text": "This one’s more abstract, but basically you wish the app felt like a **finance-savvy buddy** rather than a cold piece of software.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Imposes enforceable feel of finance-savvy buddy constraint."
+    },
+    {
+      "sent_id": "REQ-015::s097",
+      "order": 97,
+      "text": "In practice, this could mean a chat-based assistant in the app that gives you updates or even pokes fun at you when you slack off.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describes feature without enforcing action."
+    },
+    {
+      "sent_id": "REQ-015::s098",
+      "order": 98,
+      "text": "While we’re not quite there yet in mainstream tools, there are hints of this on the horizon.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Mentions future trends but lacks enforceable behavior yet."
+    },
+    {
+      "sent_id": "REQ-015::s099",
+      "order": 99,
+      "text": "In fact, Intuit (maker of QuickBooks) has announced **“Intuit Assist,” an AI-powered financial assistant** that aims to give personalized recommendations and do some of the hard work for yo ([Intuit Assist - A new generative AI-powered financial assistant | Intuit](https://www.intuit.com/intuitassist/#:~:text=Intuit%20Assist))】.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-015::s100",
+      "order": 100,
+      "text": "It’s not about being snarky, but it *is* about the software acting more like an intelligent partner than a passive ledger.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Describes an enforceable interactive behavior."
+    },
+    {
+      "sent_id": "REQ-015::s101",
+      "order": 101,
+      "text": "We’re likely to see more of this approach soon – where your accounting app might say things like “Hey, just noticed you haven’t invoiced Sarah this month, want me to draft one now?” or “You spent 20% more on subscriptions this quarter, everything okay?”",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Provides examples rather than enforcing behavior."
+    },
+    {
+      "sent_id": "REQ-015::s102",
+      "order": 102,
+      "text": "The ultimate tool would have just the right balance of helpfulness and humor – keeping you on track with your money in a human-friendly way.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.7,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Imposes a desired user interface feature."
+    },
+    {
+      "sent_id": "REQ-015::s103",
+      "order": 103,
+      "text": "That’s a lot of features, but essentially you’re imagining an **all-in-one, user-friendly finance hub**: invoicing, expense tracking, multi-currency accounting, tax estimates, payments, and guidance, all wrapped in a beautiful, intuitive package.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Outlines capabilities that the software should have."
+    },
+    {
+      "sent_id": "REQ-015::s104",
+      "order": 104,
+      "text": "Now, the big question: does anything like this exist today?\n\n## Current Solutions: How Close Are We?\nThe perfect “chill and seamless” accounting app you describe is somewhat the *holy grail* for software makers.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Discusses current solutions without imposing behavior."
+    },
+    {
+      "sent_id": "REQ-015::s105",
+      "order": 105,
+      "text": "While no single product nails every single aspect (especially the witty buddy persona), there are a few that come close on various fronts.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Evaluates existing products without enforcing requirements."
+    },
+    {
+      "sent_id": "REQ-015::s106",
+      "order": 106,
+      "text": "Let’s look at some of the notable options and how they stack up against your wish list:\n\n- **FreshBooks – Designed for Non-Accountants:**",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Introduces a product but doesn't enforce any behavior."
+    },
+    {
+      "sent_id": "REQ-015::s107",
+      "order": 107,
+      "text": "FreshBooks is often praised as an easy-to-use accounting and invoicing tool built with freelancers and small businesses in mind.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Praises a product without stating requirements."
+    },
+    {
+      "sent_id": "REQ-015::s108",
+      "order": 108,
+      "text": "It covers a lot: professional invoicing (with recurring invoice scheduling), automated late payment reminders, expense tracking with receipt photos, time tracking, and a pretty clean interface.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describes features of a product without enforcing them."
+    },
+    {
+      "sent_id": "REQ-015::s109",
+      "order": 109,
+      "text": "FreshBooks especially shines in simplicity – it’s frequently cited as being *one of the easiest accounting programs to use ([The Best Accounting Software for Small Businesses in 2025 | PCMag](https://www.pcmag.com/picks/the-best-small-business-accounting-software#:~:text=Accounting%20can%20be%20complicated%2C%20and,easiest%20accounting%20programs%20to%20use))】, and it avoids heavy accounting jargon, which is a relief to many.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Citations about simplicity or ease of use do not state enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-015::s110",
+      "order": 110,
+      "text": "How about your specific needs?",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Asks about needs but doesn't impose enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-015::s111",
+      "order": 111,
+      "text": "FreshBooks **does support multi-currency invoices and expenses**, though only on its higher-tier plan ([6+ Best Multi-currency Accounting Software [2025]](https://www.ecaplabs.com/blogs/multi-currency-accounting-software#:~:text=FreshBooks%2C%20while%20primarily%20known%20for,automatically%20applying%20current%20exchange%20rates))",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Support for multi-currency features is an enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-015::s112",
+      "order": 112,
+      "text": "([6+ Best Multi-currency Accounting Software [2025]](https://www.ecaplabs.com/blogs/multi-currency-accounting-software#:~:text=making%20multi,border%20payments))】.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Links to another resource but doesn't state requirements."
+    },
+    {
+      "sent_id": "REQ-015::s113",
+      "order": 113,
+      "text": "It will automatically handle currency conversions at current exchange rates.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Automatic currency conversion is a required feature."
+    },
+    {
+      "sent_id": "REQ-015::s114",
+      "order": 114,
+      "text": "It also integrates online payments: you can set up a client to pay via credit card or Apple Pay right on the invoice (FreshBooks uses Stripe and other gateways behind the scenes).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Imposes an enforceable integration capability."
+    },
+    {
+      "sent_id": "REQ-015::s115",
+      "order": 115,
+      "text": "On the expense side, it connects to your bank to import transactions and uses **automated categorization** to sort expenses for yo ([Invoice and Accounting Software for Small Businesses - FreshBooks](https://www.freshbooks.com/#:~:text=Invoicing%20Create%20professional%20invoices%20in,accounting%20tools%2C%20powerful%20financial%20reports))】",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Discussions about integrations do not state enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-015::s116",
+      "order": 116,
+      "text": "–",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-015::s117",
+      "order": 117,
+      "text": "no manual label frenzy for every coffee receipt.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-015::s118",
+      "order": 118,
+      "text": "Where FreshBooks might fall short of your dream is tax forecasting and the “snarky buddy” vibe.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-015::s119",
+      "order": 119,
+      "text": "It generates reports (profit/loss, tax summary, etc.) that your accountant can use, but it won’t flat-out tell you “you owe $X in taxes” in a casual way.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-015::s120",
+      "order": 120,
+      "text": "Still, for day-to-day ease of use, FreshBooks is a strong contender.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-015::s121",
+      "order": 121,
+      "text": "Users often choose it over QuickBooks specifically because it’s **“friendly to freelancers” and more intuitive* ([FreshBooks vs. QuickBooks: Which is best?",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-015::s122",
+      "order": 122,
+      "text": "[2025] - Zapier](https://zapier.com/blog/freshbooks-vs-quickbooks/#:~:text=FreshBooks%20vs,%C2%B7%20Client%20and%20accountant%20access))】.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-015::s123",
+      "order": 123,
+      "text": "*Cost:* FreshBooks isn’t free – its multi-currency capable plan is about $60/mont ([6+ Best Multi-currency Accounting Software [2025]](https://www.ecaplabs.com/blogs/multi-currency-accounting-software#:~:text=%2A%20Multi,Integration%20with%20international%20payment%20platforms))】",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-015::s124",
+      "order": 124,
+      "text": "–",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-015::s125",
+      "order": 125,
+      "text": "but many find the UI and reduced stress worth it.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-015::s126",
+      "order": 126,
+      "text": "If you haven’t tried it recently, it’s worth a look, as it continues to evolve with small business needs in mind.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-015::s127",
+      "order": 127,
+      "text": "- **Wave Accounting – Free and Freelancer-Friendly",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-015::s128",
+      "order": 128,
+      "text": ":** Wave is another tool that aligns closely with what you want, especially if budget is a concern (it’s free to use, with paid add-ons).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-015::s129",
+      "order": 129,
+      "text": "**Wave has been lauded as “best for invoicing” for small businesses** by PCMa ([The Best Accounting Software for Small Businesses in 2025 | PCMag](https://www.pcmag.com/picks/the-best-small-business-accounting-software#:~:text=Best%20for%20Invoicing))】, and importantly, it has *no* monthly fee for the core features: invoicing, accounting, and receipt scanning (recently they introduced an optional $16/month “Pro” plan for some advanced features, but recurring invoices and multi-currency are available in the free version).",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "No monthly fee is a required business model feature."
+    },
+    {
+      "sent_id": "REQ-015::s130",
+      "order": 130,
+      "text": "For usability, Wave is top-notch: its interface is **simple and understandable even for financial novices* ([The Best Accounting Software for Small Businesses in 2025 | PCMag](https://www.pcmag.com/picks/the-best-small-business-accounting-software#:~:text=match%20at%20L656%20Wave%20is,businesses%20with%20several%20employees%2C%20though))】.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-015::s131",
+      "order": 131,
+      "text": "You can create invoices with your branding, set up recurring invoices, and turn on automatic reminder emails for late payers.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "You can create invoices with your branding, set up recurring invoices, and turn on automatic reminder emails for late payers."
+    },
+    {
+      "sent_id": "REQ-015::s132",
+      "order": 132,
+      "text": "It also offers built-in credit card processing and bank payment processing (you pay per transaction fees, similar to PayPal/Stripe fees).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-015::s133",
+      "order": 133,
+      "text": "**Multicurrency support?",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-015::s134",
+      "order": 134,
+      "text": "**",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-015::s135",
+      "order": 135,
+      "text": "Yes – even though Wave is targeted at US/Canada users, it handles foreign currency invoicing smoothly.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-015::s136",
+      "order": 136,
+      "text": "You can invoice in dozens of currencies, and when you record payment, Wave will calculate the conversion to your home currency.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Support for multiple currencies in invoicing is an enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-015::s137",
+      "order": 137,
+      "text": "In fact, Wave automatically tracks exchange rate differences and posts gains/losses so your accounts stay accurat ([Wave vs QuickBooks: Best for Global Users?",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-015::s138",
+      "order": 138,
+      "text": "— Vintti](https://www.vintti.com/blog/wave-vs-quickbooks-online-which-is-best-for-international-users#:~:text=match%20at%20L460%20Wave%20also,converting%20amounts%20into%20the%20home))】 – meaning it can tell you exactly how a €1,000 invoice translated into USD after the exchange rate and fees.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-015::s139",
+      "order": 139,
+      "text": "This directly tackles your “where did the money go” black hole problem.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "This directly tackles your “where did the money go” black hole problem."
+    },
+    {
+      "sent_id": "REQ-015::s140",
+      "order": 140,
+      "text": "One caveat: Wave’s tax features are basic.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-015::s141",
+      "order": 141,
+      "text": "It will track sales taxes on invoices (useful if you need to add, say, VAT or GST to an invoice), and you can categorize expenses for write-offs, but it doesn’t do income tax estimates or give advice on how much to save for the IRS.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Statements about sales taxes or income tax advice do not state requirements."
+    },
+    {
+      "sent_id": "REQ-015::s142",
+      "order": 142,
+      "text": "You’d still need to figure out quarterly taxes or use another tool for that.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-015::s143",
+      "order": 143,
+      "text": "Also, since Wave is free, their support is a bit limited compared to paid apps, and some very advanced features (like connecting your bank for automatic import) require the paid upgrad ([The Best Accounting Software for Small Businesses in 2025 | PCMag](https://www.pcmag.com/picks/the-best-small-business-accounting-software#:~:text=Wave%20,charges%20%248%20per%20month%20if))】.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Comments on limited support and pricing tiers do not enforce behavior."
+    },
+    {
+      "sent_id": "REQ-015::s144",
+      "order": 144,
+      "text": "But as a **free, easy-to-use finance app**, Wave covers a lot of your needs: recurring billing, multi-currency tracking, integrated payments, and a clean, modern dashboard.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-015::s145",
+      "order": 145,
+      "text": "It even has a mobile app for invoicing and receipts.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-015::s146",
+      "order": 146,
+      "text": "Many freelancers start with Wave because it feels less daunting than the likes of QuickBooks – it “just works” for sending invoices and tracking income/expenses without unnecessary complexity.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-015::s147",
+      "order": 147,
+      "text": "([The Best Accounting Software for Small Businesses in 2025 | PCMag](https://www.pcmag.com/picks/the-best-small-business-accounting-software))】",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-015::s148",
+      "order": 148,
+      "text": "*Creating an invoice in Wave’s simple interface.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Creating an invoice in Wave’s simple interface."
+    },
+    {
+      "sent_id": "REQ-015::s149",
+      "order": 149,
+      "text": "*",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "The sentence is merely an asterisk, providing no content."
+    },
+    {
+      "sent_id": "REQ-015::s150",
+      "order": 150,
+      "text": "*Wave’s design keeps things straightforward – even features like recurring invoices and customer statements are easy to navigate from the sidebar.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Describes the ease of navigation in Wave's design."
+    },
+    {
+      "sent_id": "REQ-015::s151",
+      "order": 151,
+      "text": "This simplicity has made Wave popular among freelancers who don’t have an accounting background.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "States how Wave’s design has made it popular but doesn’t impose behavior."
+    },
+    {
+      "sent_id": "REQ-015::s152",
+      "order": 152,
+      "text": "*\n\n- **QuickBooks (and QuickBooks Self-Employed) – Power vs. Simplicity:**",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "The sentence is incomplete without context."
+    },
+    {
+      "sent_id": "REQ-015::s153",
+      "order": 153,
+      "text": "Intuit’s",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "The sentence appears to be shorthand or incomplete."
+    },
+    {
+      "sent_id": "REQ-015::s154",
+      "order": 154,
+      "text": "QuickBooks is the elephant in the room – it’s by far the most widely used small business accounting software.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "States that QuickBooks Online is feature-rich."
+    },
+    {
+      "sent_id": "REQ-015::s155",
+      "order": 155,
+      "text": "The online version (QuickBooks Online) is incredibly feature-rich and can do almost everything: invoicing, bills, payroll, inventory, reports, multi-currency, you name it.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "The sentence talks about complexity but doesn’t enforce behavior."
+    },
+    {
+      "sent_id": "REQ-015::s156",
+      "order": 156,
+      "text": "**It’s often considered “Best Overall” for small business accountin ([The Best Accounting Software for Small Businesses in 2025 | PCMag](https://www.pcmag.com/picks/the-best-small-business-accounting-software#:~:text=Best%20Overall))】*",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "It is considered 'Best Overall' as an enforceable feature."
+    },
+    {
+      "sent_id": "REQ-015::s157",
+      "order": 157,
+      "text": "* because of its depth.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "States cost implications without enforcing action."
+    },
+    {
+      "sent_id": "REQ-015::s158",
+      "order": 158,
+      "text": "QuickBooks Online certainly can meet a lot of your functional needs: it supports over 100 currencies with automatic exchange rate update ([6+ Best Multi-currency Accounting Software [2025]](https://www.ecaplabs.com/blogs/multi-currency-accounting-software#:~:text=QuickBooks%2C%20particularly%20its%20Online%20Advanced,generate%20reports%20in%20multiple%20currencies))】, handles international sales tax/VAT in higher tiers, and has tons of integrations (including PayPal, Stripe, etc., for payments).",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Offering multiple currencies in invoicing is a required feature."
+    },
+    {
+      "sent_id": "REQ-015::s159",
+      "order": 159,
+      "text": "However, all that power comes at the cost of complexity *and* cost.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-015::s160",
+      "order": 160,
+      "text": "Users often find that **QuickBooks, while flexible, feels a bit overwhelming unless you’re bookkeeping-savvy** – there’s a learning curve to understand its workflow.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Mentions the learning curve for QuickBooks."
+    },
+    {
+      "sent_id": "REQ-015::s161",
+      "order": 161,
+      "text": "Intuit has tried to address ease-of-use (“the software is easy enough to learn if you’re inexperienced,” notes one revie ([The Best Accounting Software for Small Businesses in 2025 | PCMag](https://www.pcmag.com/picks/the-best-small-business-accounting-software#:~:text=Who%20It%27s%20For))】), but compared to FreshBooks or Wave, it’s still more **heavy-duty**.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-015::s162",
+      "order": 162,
+      "text": "Also, many of the cooler features (like multi-currency) are locked behind higher-priced plans – QuickBooks Online’s “Advanced” plan (needed for multi-currency) can run around $200+ a mont ([6+ Best Multi-currency Accounting Software [2025]](https://www.ecaplabs.com/blogs/multi-currency-accounting-software#:~:text=Pricing%3A%20QuickBooks%20Online%20Advanced%20starts,at%20%24235%20per%20month))】, which is overkill for a freelancer.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Comments about high fees do not enforce requirements."
+    },
+    {
+      "sent_id": "REQ-015::s163",
+      "order": 163,
+      "text": "Intuit does have a product called **QuickBooks Self-Employed** (often ~$15/month) aimed at freelancers, which is much simpler and *does* do nifty things like automatically track mileage, categorize expenses, and estimate quarterly taxes for you.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describes features of QuickBooks Self-Employed."
+    },
+    {
+      "sent_id": "REQ-015::s164",
+      "order": 164,
+      "text": "That could satisfy your tax wish, as it will say “Based on your income, you should set aside $X for taxes.”",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Automatic categorization is an enforced feature."
+    },
+    {
+      "sent_id": "REQ-015::s165",
+      "order": 165,
+      "text": "**But** QuickBooks Self-Employed has downsides: it doesn’t handle multiple currencies or more complex invoicing needs (it’s pretty US-centric), and it’s actually separate from the main QuickBooks Online (which can be confusing if you ever upgrade).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-015::s166",
+      "order": 166,
+      "text": "In summary, QuickBooks as a whole could tick many of your boxes – especially if paired with the upcoming AI assistant (Intuit Assist) to add that “smart buddy” element – but it might feel less “chill” and more like traditional software.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Summarizes but doesn’t enforce action."
+    },
+    {
+      "sent_id": "REQ-015::s167",
+      "order": 167,
+      "text": "It’s an option if you need robust accounting and don’t mind the learning curve, but given your tone, you might prefer something more streamlined.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-015::s168",
+      "order": 168,
+      "text": "- **Zoho Books – An Underrated All-Rounder:**",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "The sentence is a title without content."
+    },
+    {
+      "sent_id": "REQ-015::s169",
+      "order": 169,
+      "text": "Zoho Books is part of the Zoho suite (they do everything from CRM to project management).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-015::s170",
+      "order": 170,
+      "text": "The reason it’s worth noting is that it offers **a very generous free tier** (for businesses under a certain revenue or number of clients) which includes a lot of premium features: client management, expense tracking, **multilingual and multi-currency invoicing**, recurring invoices, **online payment integrations, and automatic payment reminders* ([The Best Accounting Software for Small Businesses in 2025 | PCMag](https://www.pcmag.com/picks/the-best-small-business-accounting-software#:~:text=Zoho%20Books%20has%20a%20surprisingly,connections%20to%20your%20financial%20institutions))】.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "PERFORMANCE_REQUIREMENT",
+      "reason_text": "Lists features like client management and multilingual invoicing."
+    },
+    {
+      "sent_id": "REQ-015::s171",
+      "order": 171,
+      "text": "In other words, Zoho Books hits many items on your list: multi-currency (yes), recurring billing (yes), automated reminders (yes), a solid mobile app (yes), and even project time tracking and expense management built-in.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Mentions project tracking and expense management built-in."
+    },
+    {
+      "sent_id": "REQ-015::s172",
+      "order": 172,
+      "text": "Its dashboard and interface are decent – clean and business-like (maybe not as slick or “fun” as FreshBooks, but not bad).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "States features without enforcing action."
+    },
+    {
+      "sent_id": "REQ-015::s173",
+      "order": 173,
+      "text": "It also can generate all the reports needed for taxes (and if you’re in the US it supports 1099 contractor tracking, etc.).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Mentions generating reports for taxes."
+    },
+    {
+      "sent_id": "REQ-015::s174",
+      "order": 174,
+      "text": "The catch?",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "EXAMPLE_OR_EXPLANATION",
+      "reason_text": "Asking about a problem without stating requirements."
+    },
+    {
+      "sent_id": "REQ-015::s175",
+      "order": 175,
+      "text": "Being part of an “enterprise” suite, Zoho Books can sometimes feel a tad more *corporate* or less intuitive in navigation than FreshBooks/Wave.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describing features but not enforcing them."
+    },
+    {
+      "sent_id": "REQ-015::s176",
+      "order": 176,
+      "text": "It’s still designed for small businesses, though, and many users find that it balances power with usability well.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Commentary on pricing without imposing constraints."
+    },
+    {
+      "sent_id": "REQ-015::s177",
+      "order": 177,
+      "text": "If your biggest gripe is paying a lot for software, Zoho’s free tier could be extremely attractive, since it offers capabilities (like multi-currency invoicing and reminder automation) that often require paid plans elsewhere.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Mentioning limits but not enforcing them."
+    },
+    {
+      "sent_id": "REQ-015::s178",
+      "order": 178,
+      "text": "Just be aware that Zoho’s ecosystem might occasionally surface something you’re not sure about (“do I need to configure a finance approval process?",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "EXAMPLE_OR_EXPLANATION",
+      "reason_text": "Observation without requirements."
+    },
+    {
+      "sent_id": "REQ-015::s179",
+      "order": 179,
+      "text": "What’s this setting?”), but for the most part, it’s set-and-forget for a freelancer use case.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Questioning needs but no enforcement."
+    },
+    {
+      "sent_id": "REQ-015::s180",
+      "order": 180,
+      "text": "The free plan does have limits (currently, one user and a cap on revenue or number of clients), but it’s a low-risk way to get many of the features you outlined.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Discussing limitations without enforcing them."
+    },
+    {
+      "sent_id": "REQ-015::s181",
+      "order": 181,
+      "text": "- **Fiverr Workspace (formerly AND.CO) – Freelance Admin with Personality:**",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Listing features but no requirements."
+    },
+    {
+      "sent_id": "REQ-015::s182",
+      "order": 182,
+      "text": "You mentioned wanting a finance app that feels like a buddy poking you.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "EXAMPLE_OR_EXPLANATION",
+      "reason_text": "Expressing needs without requirements."
+    },
+    {
+      "sent_id": "REQ-015::s183",
+      "order": 183,
+      "text": "Fiverr Workspace is an interesting entry here.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Commentary on a product but no enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-015::s184",
+      "order": 184,
+      "text": "It started as AND.CO, a quirky freelance management app that was literally marketed as having a “Chief Operator” (an AI-ish assistant) to help you manage tasks.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describing features without enforcing them."
+    },
+    {
+      "sent_id": "REQ-015::s185",
+      "order": 185,
+      "text": "Fiverr acquired it and it became **Fiverr Workspace**, geared toward freelancers managing contracts, proposals, *and* invoices.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Mentioning feature details but no requirements."
+    },
+    {
+      "sent_id": "REQ-015::s186",
+      "order": 186,
+      "text": "It has a friendly vibe and is tailored to exactly the kind of one-person business juggling multiple clients.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describing UI but not enforcing it."
+    },
+    {
+      "sent_id": "REQ-015::s187",
+      "order": 187,
+      "text": "Feature-wise, Workspace supports creating and sending invoices (with your branding), **recurring invoices, integrated online payments, and multi-currency billing** (so you can invoice in USD, EUR, GBP, etc.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Lists specific features as requirements."
+    },
+    {
+      "sent_id": "REQ-015::s188",
+      "order": 188,
+      "text": "([Best Invoicing Software Online - Fiverr Workspace](https://workspace.fiverr.com/invoicing/#:~:text=Invoice%20in%20your%20currency,Connect%20your%20bank))",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Link but no requirement."
+    },
+    {
+      "sent_id": "REQ-015::s189",
+      "order": 189,
+      "text": "([Fiverr Workspace vs Routable - Accounting Software - SelectHub](https://www.selecthub.com/accounting-software/fiverr-workspace-vs-routable/#:~:text=Fiverr%20Workspace%20vs%20Routable%20,Integration))】.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Another link without requirements."
+    },
+    {
+      "sent_id": "REQ-015::s190",
+      "order": 190,
+      "text": "Users have appreciated its multi-currency support and client management feature ([Fiverr Pricing, Alternatives & More 2025 | Capterra](https://www.capterra.com/p/239416/Fiverr/#:~:text=Based%20on%2081%20reviews))】.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-015::s191",
+      "order": 191,
+      "text": "It also tracks expenses and time, and can generate some basic reports.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describing functionality but no requirements."
+    },
+    {
+      "sent_id": "REQ-015::s192",
+      "order": 192,
+      "text": "The UI is simpler and more conversational – closer to that “Apple-like” feel, and definitely more playful than a big accounting system.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "UI description without enforcing it."
+    },
+    {
+      "sent_id": "REQ-015::s193",
+      "order": 193,
+      "text": "However, there are a couple of caveats: Fiverr Workspace’s free plan is quite limited (at last check, free users could only manage a single client at a time, which is a deal-breaker for most ([Fiverr Pricing, Alternatives & More 2025 | Capterra](https://www.capterra.com/p/239416/Fiverr/#:~:text=Based%20on%2081%20reviews))】.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-015::s194",
+      "order": 194,
+      "text": "The paid plan unlocks unlimited clients and other features, and it’s reasonably priced (around $18/month).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Discusses pricing but no enforcement."
+    },
+    {
+      "sent_id": "REQ-015::s195",
+      "order": 195,
+      "text": "Also, it doesn’t have advanced accounting reports – it’s more of an invoicing and expense tracker with a lightweight profit/loss view.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Features without enforcing them."
+    },
+    {
+      "sent_id": "REQ-015::s196",
+      "order": 196,
+      "text": "And while it has some “assistant” elements (like notifications and a chat-styled interface for the to-do list), it’s not exactly going to send snarky texts on its own.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-015::s197",
+      "order": 197,
+      "text": "Still, in terms of vibe and ease, Fiverr Workspace leans toward that **casual, user-friendly feeling** you’re after.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-015::s198",
+      "order": 198,
+      "text": "It tries to be a one-stop shop for freelancers (from sending proposals, getting contracts signed, to billing and getting paid).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-015::s199",
+      "order": 199,
+      "text": "If you dislike the sterile feel of big accounting apps, this is one to consider for a test drive.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-015::s200",
+      "order": 200,
+      "text": "- **Found (and Other New Fintech Apps)** – Finance App Meets Bank Account:",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-015::s201",
+      "order": 201,
+      "text": "Found is a newer solution that approaches the problem from a different angle.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-015::s202",
+      "order": 202,
+      "text": "It’s actually a business checking account for self-employed folks **with bookkeeping and tax tools built in* ([Found Review: New Banking For the Self-Employed 2025](https://wisdomdepot.com/found-review/#:~:text=Founded%20in%202019%2C%20Found%20is,friendly%20platform))】.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-015::s203",
+      "order": 203,
+      "text": "Why mention it here?",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-015::s204",
+      "order": 204,
+      "text": "Because it tackles a few of your pain points very well: automatic expense categorization (every time you use the Found debit card or account, it tries to tag the purchase correctly), real-time tax estimates (it will literally show how much in taxes you might owe based on your income, updating continuously), and even auto-saving for taxes (you can have it set aside a percentage of each deposit toward a tax savings pot ([Found Review: New Banking For the Self-Employed 2025](https://wisdomdepot.com/found-review/#:~:text=Found%20Banking%20simplifies%20tax%20management,with%20features%20like))】.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-015::s205",
+      "order": 205,
+      "text": "Plus, it has invoicing built into the app – you can create invoices and accept payments (the payments go into your Found bank account).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Mentions handling payments and bank accounts"
+    },
+    {
+      "sent_id": "REQ-015::s206",
+      "order": 206,
+      "text": "Essentially, it tries to be *that friend who handles your finances* by merging banking, accounting, and tax advice in one.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-015::s207",
+      "order": 207,
+      "text": "The interface is mobile-first and very clean, and it even has a bit of cheeky copy in its alerts.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-015::s208",
+      "order": 208,
+      "text": "For example, Found might ping you with “You just got paid!",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-015::s209",
+      "order": 209,
+      "text": "We set aside $200 for taxes so you don’t have to.”",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-015::s210",
+      "order": 210,
+      "text": "This hits the spirit of your “helpful but a little savage” dashboard idea.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-015::s211",
+      "order": 211,
+      "text": "The major limitation with Found is **currency**: it’s focused on U.S. users, so everything is in USD.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-015::s212",
+      "order": 212,
+      "text": "It won’t help with your multi-currency needs or international clients.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-015::s213",
+      "order": 213,
+      "text": "It’s also U.S.-centric in tax (designed around IRS self-employment taxes).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-015::s214",
+      "order": 214,
+      "text": "So while it nails ease-of-use and automation, it’s not a global solution.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-015::s215",
+      "order": 215,
+      "text": "Still, it represents a trend: fintech apps that blend traditional accounting with a more human-centric approach.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-015::s216",
+      "order": 216,
+      "text": "Similar products include Lili, Novo, or QuickBooks Cash – all aiming to simplify finances for freelancers.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-015::s217",
+      "order": 217,
+      "text": "They show that the industry knows freelancers want simplicity and proactive features.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-015::s218",
+      "order": 218,
+      "text": "If your business finances were only U.S. based, a tool like Found could practically run the show for you (with almost zero spreadsheets).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Describes Found's capability to run a business finances with minimal spreadsheets for U.S.-based entities."
+    },
+    {
+      "sent_id": "REQ-015::s219",
+      "order": 219,
+      "text": "But until they handle multi-currency, you might use Found for U.S. operations alongside another tool for your international stuff.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Discusses handling multi-currency but doesn't enforce any behavior."
+    },
+    {
+      "sent_id": "REQ-015::s220",
+      "order": 220,
+      "text": "There are, of course, other products out there (Harvest and Bonsai for invoicing+time tracking, Xero for full accounting with a nicer UI than QuickBooks, etc.), but the ones above are the closest match to what you described.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describes other products without enforcing a requirement."
+    },
+    {
+      "sent_id": "REQ-015::s221",
+      "order": 221,
+      "text": "Each has strengths and misses:\n- FreshBooks and Wave focus on **simplicity and invoicing** (great UI, cover basics well, but no built-in tax estimator or witty AI).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "EXAMPLE_OR_EXPLANATION",
+      "reason_text": "Explains features of other tools without imposing enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-015::s222",
+      "order": 222,
+      "text": "- QuickBooks covers **comprehensiveness** (it can do almost everything including payroll and inventory), but it’s heavier and pricier – more “corporate”.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Discusses comprehensiveness without requiring action."
+    },
+    {
+      "sent_id": "REQ-015::s223",
+      "order": 223,
+      "text": "- Zoho Books gives a lot of **bang for no buck (free)**, with multicurrency and automation, though its design is a bit more utilitarian.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describes a tool's benefits without enforcing an action."
+    },
+    {
+      "sent_id": "REQ-015::s224",
+      "order": 224,
+      "text": "- Fiverr Workspace and Found represent the new wave of **freelancer-first design** – easier, more fun, but each lacking some piece (one lacks tax stuff, the other lacks multi-currency).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describes design rationales without imposing behavior."
+    },
+    {
+      "sent_id": "REQ-015::s225",
+      "order": 225,
+      "text": "**Is there a single tool that does *absolutely all* of it in one?**",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Asks for a single tool handling all functionalities."
+    },
+    {
+      "sent_id": "REQ-015::s226",
+      "order": 226,
+      "text": "Not quite yet.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Indicates that combining solutions is needed but doesn't enforce it."
+    },
+    {
+      "sent_id": "REQ-015::s227",
+      "order": 227,
+      "text": "You might end up combining two solutions to cover all bases – for instance, using FreshBooks or Wave for invoicing and an app like Found or QuickBooks Self-Employed for the tax estimations.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Explains combining tools without enforcing a requirement."
+    },
+    {
+      "sent_id": "REQ-015::s228",
+      "order": 228,
+      "text": "It’s not ideal, but it can get you pretty close to zero spreadsheet anguish.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Implies minimal spreadsheet usage for U.S.-based businesses."
+    },
+    {
+      "sent_id": "REQ-015::s229",
+      "order": 229,
+      "text": "## Why Isn’t “One Perfect App”",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Discusses why a tool hasn't been built without enforcing action."
+    },
+    {
+      "sent_id": "REQ-015::s230",
+      "order": 230,
+      "text": "Here (Yet)?",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Asks if it's available yet without setting any obligation."
+    },
+    {
+      "sent_id": "REQ-015::s231",
+      "order": 231,
+      "text": "If so many people share these pain points, why hasn’t anyone built this magical finance buddy app already?",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Questions the existence of a magical finance buddy app."
+    },
+    {
+      "sent_id": "REQ-015::s232",
+      "order": 232,
+      "text": "A few reasons:\n\n- **Complexity Behind the Scenes:** Building an app that handles multi-currency accounting, various countries’ tax rules, payment processing, and AI-driven insights *while keeping the UI simple* is a massive undertaking.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Explains complexity without enforcing behavior."
+    },
+    {
+      "sent_id": "REQ-015::s233",
+      "order": 233,
+      "text": "Many tools specialize in one area (say, invoicing) to stay user-friendly.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Discusses tool specialization without action."
+    },
+    {
+      "sent_id": "REQ-015::s234",
+      "order": 234,
+      "text": "The more features you pack in, the more risk that the app starts feeling complicated or things conflict.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Talks about balancing features and clutter without enforcing a requirement."
+    },
+    {
+      "sent_id": "REQ-015::s235",
+      "order": 235,
+      "text": "It’s a delicate balance to add power without clutter.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Explains the balance between power and clutter without action."
+    },
+    {
+      "sent_id": "REQ-015::s236",
+      "order": 236,
+      "text": "For example, multi-currency accounting introduces a lot of behind-the-scenes math and compliance – not all smaller companies want to tackle that on a global scale.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describes complexity without enforcing behavior."
+    },
+    {
+      "sent_id": "REQ-015::s237",
+      "order": 237,
+      "text": "That’s why Wave sticks to US/Canada officiall ([Wave vs QuickBooks: Best for Global Users?",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Discusses why tools might not be suitable without action."
+    },
+    {
+      "sent_id": "REQ-015::s238",
+      "order": 238,
+      "text": "— Vintti](https://www.vintti.com/blog/wave-vs-quickbooks-online-which-is-best-for-international-users#:~:text=Wave%20is%20currently%20only%20available,support%20for%20North%20American%20companies))】, or FreshBooks charges premium for multi-currency",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Comment on multi-currency support does not enforce behavior."
+    },
+    {
+      "sent_id": "REQ-015::s239",
+      "order": 239,
+      "text": "– it’s hard and costly to get right.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "The sentence discusses the difficulty and cost of achieving a certain state, which is an enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-015::s240",
+      "order": 240,
+      "text": "- **Different Users, Different Needs:**",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.7,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "The sentence points out the need for different functionalities catering to various user needs."
+    },
+    {
+      "sent_id": "REQ-015::s241",
+      "order": 241,
+      "text": "The freelancer who wants a sassy AI buddy is one niche; a mid-size business wants enterprise-grade controls; a bookkeeper wants full audit trails.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "The sentence describes the behavior of different user needs, which could be a requirement for system design."
+    },
+    {
+      "sent_id": "REQ-015::s242",
+      "order": 242,
+      "text": "It’s challenging for one product to satisfy both the **“I hate accounting, do it for me” user and the detailed-oriented accountant.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "The sentence sets a requirement for systems to satisfy diverse user needs."
+    },
+    {
+      "sent_id": "REQ-015::s243",
+      "order": 243,
+      "text": "*",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "The sentence is merely a punctuation mark and doesn't convey an enforceable requirement."
+    },
+    {
+      "sent_id": "REQ-015::s244",
+      "order": 244,
+      "text": "* QuickBooks leans toward the latter (and dominates that market), whereas apps like Found/AND.CO lean toward the former.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.7,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "The sentence highlights the need for different target audiences, which is a system design requirement."
+    },
+    {
+      "sent_id": "REQ-015::s245",
+      "order": 245,
+      "text": "The result is a bit of a fragmented market, where each tool chooses a target audience.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "The sentence describes the fragmented market, which is a system behavior that needs to be addressed."
+    },
+    {
+      "sent_id": "REQ-015::s246",
+      "order": 246,
+      "text": "The perfect tool for you might not have a huge market among, say, traditional small businesses (who might actually find a snarky reminder unprofessional).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "COMPLIANCE_REQUIREMENT",
+      "reason_text": "The sentence mentions the need for user trust, which relates to compliance requirements."
+    },
+    {
+      "sent_id": "REQ-015::s247",
+      "order": 247,
+      "text": "- **Emerging Tech and Trust:**",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "The sentence introduces emerging tech and trust, which is a system behavior requiring enforcement."
+    },
+    {
+      "sent_id": "REQ-015::s248",
+      "order": 248,
+      "text": "The more an app takes initiative (auto-doing things, giving advice, showing personality), the more it ventures from pure number-crunching into something akin to an assistant or advisor.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "The sentence describes the need for AI-like features, which is a system constraint."
+    },
+    {
+      "sent_id": "REQ-015::s249",
+      "order": 249,
+      "text": "That introduces questions of trust and liability.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "COMPLIANCE_REQUIREMENT",
+      "reason_text": "The sentence questions trust and liability, which are compliance requirements."
+    },
+    {
+      "sent_id": "REQ-015::s250",
+      "order": 250,
+      "text": "Telling someone “put down the avocado toast and save $X for taxes” requires confidence that the number is accurate.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "PERFORMANCE_REQUIREMENT",
+      "reason_text": "The sentence mentions the need for accurate calculations, which is a performance requirement."
+    },
+    {
+      "sent_id": "REQ-015::s251",
+      "order": 251,
+      "text": "Companies are just now starting to trust AI and automation enough to implement this.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.7,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "The sentence states that companies are now trusting AI enough to implement it, which is a system constraint."
+    },
+    {
+      "sent_id": "REQ-015::s252",
+      "order": 252,
+      "text": "As mentioned, Intuit is launching an AI financial assistan ([Intuit Assist - A new generative AI-powered financial assistant | Intuit](https://www.intuit.com/intuitassist/#:~:text=Intuit%20Assist))】",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Offering AI assistance is an enforced feature."
+    },
+    {
+      "sent_id": "REQ-015::s253",
+      "order": 253,
+      "text": "– that’s a sign the tech is catching up to the vision.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "The sentence indicates that the tech is catching up, which could be a system behavior requirement."
+    },
+    {
+      "sent_id": "REQ-015::s254",
+      "order": 254,
+      "text": "We’re likely on the cusp of seeing more “buddy-like” features, but until recently, software mostly stuck to straight-laced reporting (leaving the interpretation and tone to the user).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "The sentence mentions the shift from reporting to user involvement, which is a system constraint."
+    },
+    {
+      "sent_id": "REQ-015::s255",
+      "order": 255,
+      "text": "-",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-015::s256",
+      "order": 256,
+      "text": "**You *Can* Customize Tone (If You Want):**",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "The sentence explicitly states the capability to customize tone, which is a system requirement."
+    },
+    {
+      "sent_id": "REQ-015::s257",
+      "order": 257,
+      "text": "While no mainstream app is going to send a client an email calling them out for “dragging their feet” by default, they do let *you* customize invoice email templates.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "The sentence explains the capability to customize email templates, which is a system requirement."
+    },
+    {
+      "sent_id": "REQ-015::s258",
+      "order": 258,
+      "text": "This means the capability for personality is there – it’s just manual.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "The sentence confirms the ability to customize tone, reinforcing it as a system requirement."
+    },
+    {
+      "sent_id": "REQ-015::s259",
+      "order": 259,
+      "text": "You could, for instance, edit your reminder template in FreshBooks or Zoho to say “Friendly Reminder: Hi {{client}}, you’re late on payment – don’t make me send my carrier pigeon again 🐦💸.”",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "The sentence provides an example of customizing reminders, which is a system requirement."
+    },
+    {
+      "sent_id": "REQ-015::s260",
+      "order": 260,
+      "text": "It’s not automated sass, but it’s a workaround.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Opinion or advice, not enforceable."
+    },
+    {
+      "sent_id": "REQ-015::s261",
+      "order": 261,
+      "text": "The demand for this is niche, so developers haven’t made it a priority feature (they’re more focused on, say, integrating new payment methods or complying with tax law changes).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Prioritization without constraints."
+    },
+    {
+      "sent_id": "REQ-015::s262",
+      "order": 262,
+      "text": "In summary, the **“finance-savvy buddy”** app you envision is starting to materialize in pieces across the industry.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Summary of features, no specifics."
+    },
+    {
+      "sent_id": "REQ-015::s263",
+      "order": 263,
+      "text": "We have ultra-simple invoicing apps, clever banking/tax apps, and hints of AI assistance on the horizon.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Existing apps without requirements."
+    },
+    {
+      "sent_id": "REQ-015::s264",
+      "order": 264,
+      "text": "The lack of one unified solution comes down to the trade-off between simplicity and breadth – but the gap is closing.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "DESIGN_RATIONALE",
+      "reason_text": "Gap between simplicity and breadth, design rationale."
+    },
+    {
+      "sent_id": "REQ-015::s265",
+      "order": 265,
+      "text": "## Final Thoughts: Getting as Close as Possible Today",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "No content below title."
+    },
+    {
+      "sent_id": "REQ-015::s266",
+      "order": 266,
+      "text": "Until that dream app arrives in full form, your best bet is to pick a solution (or a combo of a couple) that covers your priorities and minimizes the tear-inducing frustration.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Advice on solutions, not requirements."
+    },
+    {
+      "sent_id": "REQ-015::s267",
+      "order": 267,
+      "text": "If multi-currency invoicing and a slick UI are top of the list, **FreshBooks** or **Wave** would likely make you happiest (they cover global clients and look/feel friendly).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.9,
+      "reason_code": "EXAMPLE_OR_EXPLANATION",
+      "reason_text": "Recommendations of tools."
+    },
+    {
+      "sent_id": "REQ-015::s268",
+      "order": 268,
+      "text": "You could then supplement that with a tool like **QuickBooks Self-Employed or Found** to keep an eye on taxes and automatically categorize expenses – essentially outsourcing the brain-burning parts to software.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "EXAMPLE_OR_EXPLANATION",
+      "reason_text": "Supplementary tools advice."
+    },
+    {
+      "sent_id": "REQ-015::s269",
+      "order": 269,
+      "text": "On the other hand, if you want everything in one and don’t mind a slightly more businessy feel, **Zoho Books** might check the most boxes (and you can’t beat free).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "EXAMPLE_OR_EXPLANATION",
+      "reason_text": "Another recommendation for a tool."
+    },
+    {
+      "sent_id": "REQ-015::s270",
+      "order": 270,
+      "text": "The good news is you’re not alone in your rant – software makers are aware that freelancers and small business owners are fed up with bloated, unintuitive accounting systems.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Awareness without action."
+    },
+    {
+      "sent_id": "REQ-015::s271",
+      "order": 271,
+      "text": "The trend is towards simplification, automation, and yes, even a bit of personality.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Trend towards simplification and automation."
+    },
+    {
+      "sent_id": "REQ-015::s272",
+      "order": 272,
+      "text": "As AI features roll out in products (like Intuit Assist in QuickBooks, or other startups adding chatbot-like helpers), you might soon get that experience of a proactive finance friend that *tells* you what you need to know in a human way.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Proactive finance friend experience expected."
+    },
+    {
+      "sent_id": "REQ-015::s273",
+      "order": 273,
+      "text": "For now, know that the landscape is way better than it was a few years ago.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Positive statement about the future."
+    },
+    {
+      "sent_id": "REQ-015::s274",
+      "order": 274,
+      "text": "You don’t have to settle for old-school ledger software.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "No specific behavior mentioned."
+    },
+    {
+      "sent_id": "REQ-015::s275",
+      "order": 275,
+      "text": "Whether it’s **an easy invoicing app that “just works” for cross-border clients (Wave/FreshBooks)**, **a savvy freelancer toolkit (Fiverr Workspace)**, or **a new-wave banking app that automates taxes (Found)**, there *is* relief from “spreadsheet hell.”",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Intuitive system behavior and compliance with certain features."
+    },
+    {
+      "sent_id": "REQ-015::s276",
+      "order": 276,
+      "text": "It might take a bit of trial to find the perfect fit for your workflow, but once you do, you’ll be able to send invoices, track your money, and stay on top of tax stuff without feeling your soul die a little each time.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Sending invoices, tracking money, and staying organized."
+    },
+    {
+      "sent_id": "REQ-015::s277",
+      "order": 277,
+      "text": "Hang in there – the finance tech world is catching up to your needs.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Positive statement about the future without enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-015::s278",
+      "order": 278,
+      "text": "In the meantime, take advantage of the tools that exist now (perhaps start with one of the easier ones mentioned above), and customize them to inject the tone you want.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Advice on using existing tools, not enforcing any behavior."
+    },
+    {
+      "sent_id": "REQ-015::s279",
+      "order": 279,
+      "text": "With the right setup, you’ll have **an intuitive system that feels more like a buddy** and less like a ball-and-chain.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Recommendation of a system without specifying requirements."
+    },
+    {
+      "sent_id": "REQ-015::s280",
+      "order": 280,
+      "text": "No more crying into receipts – ideally just a fist pump when your app messages you, “yo, you’re on track!”",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describes user feedback and interface improvements, not enforceable requirements."
+    },
+    {
+      "sent_id": "REQ-015::s281",
+      "order": 281,
+      "text": "😉\n\n**Sources:** Some of the claims above reference insights from software reviews and expert analyses, including PCMag’s evaluation of top accounting  ([The Best Accounting Software for Small Businesses in 2025 | PCMag](https://www.pcmag.com/picks/the-best-small-business-accounting-software#:~:text=Accounting%20can%20be%20complicated%2C%20and,easiest%20accounting%20programs%20to%20use))",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Sources referencing external analysis and insights, not enforceable requirements."
+    },
+    {
+      "sent_id": "REQ-015::s282",
+      "order": 282,
+      "text": "([The Best Accounting Software for Small Businesses in 2025 | PCMag](https://www.pcmag.com/picks/the-best-small-business-accounting-software#:~:text=match%20at%20L656%20Wave%20is,businesses%20with%20several%20employees%2C%20though))L42】, a comparison of Wave and QuickBooks for international ([Wave vs QuickBooks: Best for Global Users?",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "ARCHITECTURE_DESCRIPTION",
+      "reason_text": "Compares products for international use, not enforceable requirements."
+    },
+    {
+      "sent_id": "REQ-015::s283",
+      "order": 283,
+      "text": "— Vintti](https://www.vintti.com/blog/wave-vs-quickbooks-online-which-is-best-for-international-users#:~:text=match%20at%20L460%20Wave%20also,converting%20amounts%20into%20the%20home))L22】, and feature rundowns from various platforms (FreshBooks, Zoho, Found, e ([Invoice and Accounting Software for Small Businesses - FreshBooks](https://www.freshbooks.com/#:~:text=Invoicing%20Create%20professional%20invoices%20in,accounting%20tools%2C%20powerful%20financial%20reports))",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describes product comparison, not enforceable requirement."
+    },
+    {
+      "sent_id": "REQ-015::s284",
+      "order": 284,
+      "text": "([Found Review: New Banking For the Self-Employed 2025](https://wisdomdepot.com/found-review/#:~:text=Found%20Banking%20simplifies%20tax%20management,with%20features%20like))",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Mentions a review but doesn't state enforceable requirements."
+    },
+    {
+      "sent_id": "REQ-015::s285",
+      "order": 285,
+      "text": "([Fiverr Pricing, Alternatives & More 2025 | Capterra](https://www.capterra.com/p/239416/Fiverr/#:~:text=Based%20on%2081%20reviews))388】.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Provides pricing info without stating requirements."
+    },
+    {
+      "sent_id": "REQ-015::s286",
+      "order": 286,
+      "text": "These illustrate how current tools match up with the described features.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.9,
+      "reason_code": "EXAMPLE_OR_EXPLANATION",
+      "reason_text": "Illustrates tool comparisons without enforcing behavior."
+    },
+    {
+      "sent_id": "REQ-015::s287",
+      "order": 287,
+      "text": "As the industry evolves, expect these features to become even more accessible and integrated.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Discusses industry trends, not enforceable requirements."
+    }
+  ]
+}

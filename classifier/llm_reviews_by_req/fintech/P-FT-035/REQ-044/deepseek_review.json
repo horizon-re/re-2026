@@ -1,0 +1,65 @@
+{
+  "req_id": "REQ-044",
+  "doc_id": "13ba7ebb-73e0-5fa7-90a8-30c92fb04b4c",
+  "domain": "fintech",
+  "prompt_id": "P-FT-035",
+  "model": "deepseek-r1:7b",
+  "review_timestamp": "2026-01-20T22:34:40.080627+00:00",
+  "counts": {
+    "total": 5,
+    "llm_pos": 5,
+    "pipe_pos": 5
+  },
+  "reviews": [
+    {
+      "sent_id": "REQ-044::s001",
+      "order": 1,
+      "text": "The ACH retry engine must implement a structured retry mechanism for failed debit transactions, adhering to a maximum of three retry attempts per failure, utilizing exponential backoff beginning with a 4-hour delay.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Imposes structured retry mechanism with enforced constraints on retry attempts and delays."
+    },
+    {
+      "sent_id": "REQ-044::s002",
+      "order": 2,
+      "text": "Retries must be disabled for any account marked with the risk_tier field set to \"high\".",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Enforces disabling of retries for high-risk accounts."
+    },
+    {
+      "sent_id": "REQ-044::s003",
+      "order": 3,
+      "text": "A dedicated retry window is enforced over weekends, specifically from Saturday 06:00 UTC to Sunday 22:00 UTC, during which retries may be scheduled and executed.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Imposes enforced scheduling of retries on weekends."
+    },
+    {
+      "sent_id": "REQ-044::s004",
+      "order": 4,
+      "text": "For each failed retry attempt, the engine must POST a failure notification within two minutes to https://ops.webhook.company/retry_failed, ensuring the JSON payload includes the keys txnId, attempt, and reason.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Imposes enforced notification upon retry attempts."
+    },
+    {
+      "sent_id": "REQ-044::s005",
+      "order": 5,
+      "text": "The ach_retry_weekend feature must be controlled via a feature flag, defaulting to OFF in production environments, and may only be enabled upon formal QA approval and sign-off to ensure stability and compliance with operational policies.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Imposes enforced feature flag control with conditions."
+    }
+  ]
+}

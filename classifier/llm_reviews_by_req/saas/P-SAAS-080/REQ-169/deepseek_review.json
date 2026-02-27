@@ -1,0 +1,119 @@
+{
+  "req_id": "REQ-169",
+  "doc_id": "f9370a50-5856-5d3d-8716-7e9f7dbaf705",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-080",
+  "model": "deepseek-r1:7b",
+  "review_timestamp": "2026-01-21T00:21:52.001197+00:00",
+  "counts": {
+    "total": 10,
+    "llm_pos": 4,
+    "pipe_pos": 2,
+    "llm_neg": 6,
+    "flip_pos_to_neg": 1,
+    "pipe_neg": 8,
+    "flip_neg_to_pos": 3
+  },
+  "reviews": [
+    {
+      "sent_id": "REQ-169::s001",
+      "order": 1,
+      "text": "Issue  \nThe QASM compiler’s current grammar permits register declarations with indices that are non-integer or negative values (e.g., `qreg q[-1]; qreg q[1.5]; qreg q[π];`).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Imposes a constraint on non-integer indices in register declarations"
+    },
+    {
+      "sent_id": "REQ-169::s002",
+      "order": 2,
+      "text": "These invalid indices lead to undefined behavior in later compilation stages, causing unpredictable runtime faults and hindering compiler reliability.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.5,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Analysis of a problem rather than action"
+    },
+    {
+      "sent_id": "REQ-169::s003",
+      "order": 3,
+      "text": "Because the lexer does not distinguish integer-only index tokens, invalid inputs slip through and produce ambiguous errors downstream rather than a targeted diagnostic.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Imposes that invalid indices are rejected by the lexer"
+    },
+    {
+      "sent_id": "REQ-169::s004",
+      "order": 4,
+      "text": "This defect has been observed in both development and production builds, leading to delayed deployment cycles.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.5,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Observation rather than action or enforceable behavior"
+    },
+    {
+      "sent_id": "REQ-169::s005",
+      "order": 5,
+      "text": "Validation  \nIntroduce a fast-fail lexer rule that matches any array index token not conforming to the pattern of one or more decimal digits (regex `\\d+`).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.7,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Imposes a rule for faster-fail lexer behavior"
+    },
+    {
+      "sent_id": "REQ-169::s006",
+      "order": 6,
+      "text": "On encountering a bracketed index that fails this pattern, the lexer should immediately raise error code QASM102 (“Invalid QASM index: must be integer ≥ 0”), halting further parsing.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Imposes that the lexer raises an error for invalid index patterns"
+    },
+    {
+      "sent_id": "REQ-169::s007",
+      "order": 7,
+      "text": "Add a unit test case where a register declaration uses the Unicode constant π as an index (`qreg q[π];`) and assert that lexing fails with QASM102.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.5,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describes a test case rather than requirement"
+    },
+    {
+      "sent_id": "REQ-169::s008",
+      "order": 8,
+      "text": "Also include negative and floating-point index tests (`qreg q[-1]; qreg q[2.3];`) to ensure comprehensive coverage.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.5,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Extends testing beyond existing cases rather than requirement"
+    },
+    {
+      "sent_id": "REQ-169::s009",
+      "order": 9,
+      "text": "Patch  \nIn `lexer.l`, insert the following rule before the integer rule:  \n```\n\\[\\s*([^\\d][^\\]]*)\\s*\\]    { return error(QASM102, \"Index must be integer ≥ 0\"); }\n```  \nRefactor the existing integer-index rule to match `\\[\\s*\\d+\\s*\\]`.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.5,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Instruction to modify code rather than state behavior"
+    },
+    {
+      "sent_id": "REQ-169::s010",
+      "order": 10,
+      "text": "Extend the unit test suite (e.g., `test/lexer_invalid_index.qasm`) with tests:  \n```\nqreg q[π];    // expect QASM102  \nqreg q[-1];   // expect QASM102  \nqreg q[2.3];  // expect QASM102  \n```  \nRun `make test` to confirm failure on invalid cases and success on valid declarations.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.5,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Extends testing beyond existing cases rather than requirement"
+    }
+  ]
+}

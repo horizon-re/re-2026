@@ -1,0 +1,79 @@
+{
+  "doc_id": "234d40b4-73e4-555c-92af-cd483696df88",
+  "req_key": "saas::P-SAAS-032::REQ-121",
+  "req_id": "REQ-121",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-032",
+  "source": {
+    "raw_path": "02_raw_requirements/saas/P-SAAS-032/req-121_raw.txt",
+    "refined_path": "03_refined_json_normalized/saas/P-SAAS-032/req-121_refined.json",
+    "origin": "both"
+  },
+  "text": "Automatically purge all data older than 24 months daily at 02:00 UTC, excluding records where `legal_hold=true`, and ensure each deletion run logs a summary to `data_retention.log` and sends an email notification to compliance@example.com for audit and compliance tracking.",
+  "structured_data": [
+    {
+      "id": "REQ-121-HLJ-Chunk_1-Item_1-v1.0",
+      "domain": "saas",
+      "summary": "Purge data older than 24 months daily at 02:00 UTC",
+      "priority": "High",
+      "tags": [
+        "data_retention",
+        "automation",
+        "scheduled_task"
+      ],
+      "subdomain": "data_management",
+      "difficulty": 3,
+      "additionalNotes": "Daily automated deletion of old records is required for compliance and storage optimization",
+      "source_hlj_id": "REQ 001-001",
+      "domain_id": "P-SAAS-032"
+    },
+    {
+      "id": "REQ-121-HLJ-Chunk_1-Item_2-v1.0",
+      "domain": "saas",
+      "summary": "Exclude records where legal_hold=true from purge",
+      "priority": "High",
+      "tags": [
+        "compliance",
+        "data_protection",
+        "filtering"
+      ],
+      "subdomain": "data_management",
+      "difficulty": 2,
+      "additionalNotes": "Critical legal exception to avoid deletion of records under hold",
+      "source_hlj_id": "REQ 001-002",
+      "domain_id": "P-SAAS-032"
+    },
+    {
+      "id": "REQ-121-HLJ-Chunk_1-Item_3-v1.0",
+      "domain": "saas",
+      "summary": "Log purge summary to data_retention.log",
+      "priority": "Medium",
+      "tags": [
+        "logging",
+        "audit_trail",
+        "data_operations"
+      ],
+      "subdomain": "monitoring_alerting",
+      "difficulty": 2,
+      "additionalNotes": "Logging supports auditability and traceability of deletion actions",
+      "source_hlj_id": "REQ 001-003",
+      "domain_id": "P-SAAS-032"
+    },
+    {
+      "id": "REQ-121-HLJ-Chunk_1-Item_4-v1.0",
+      "domain": "saas",
+      "summary": "Email compliance@example.com after each purge",
+      "priority": "Medium",
+      "tags": [
+        "notification",
+        "email_alert",
+        "compliance_tracking"
+      ],
+      "subdomain": "monitoring_alerting",
+      "difficulty": 2,
+      "additionalNotes": "Email notification ensures audit visibility for compliance personnel",
+      "source_hlj_id": "REQ 001-004",
+      "domain_id": "P-SAAS-032"
+    }
+  ]
+}

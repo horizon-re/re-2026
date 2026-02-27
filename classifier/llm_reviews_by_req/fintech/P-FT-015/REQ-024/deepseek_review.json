@@ -1,0 +1,109 @@
+{
+  "req_id": "REQ-024",
+  "doc_id": "4dd72f30-b32d-523b-842d-700bf7967576",
+  "domain": "fintech",
+  "prompt_id": "P-FT-015",
+  "model": "deepseek-r1:7b",
+  "review_timestamp": "2026-01-20T22:23:56.874482+00:00",
+  "counts": {
+    "total": 9,
+    "llm_pos": 3,
+    "pipe_pos": 3,
+    "llm_neg": 6,
+    "flip_pos_to_neg": 1,
+    "pipe_neg": 6,
+    "flip_neg_to_pos": 1
+  },
+  "reviews": [
+    {
+      "sent_id": "REQ-024::s001",
+      "order": 1,
+      "text": "### Vision & Goals  \n• Make user onboarding KYC-compliant without killing conversion  \n  – 80% of users complete KYC in under 5 mins  \n  – Cut manual review queue by at least 60%  \n  – Regional compliance coverage in top 3 markets  \n\n### Must‑Have Features  \n• Front-camera selfie capture w/ liveness check  \n• Upload gov’t-issued ID (passport, DL, etc.)",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.95,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Sets enforceable behavior for KYC compliance."
+    },
+    {
+      "sent_id": "REQ-024::s002",
+      "order": 2,
+      "text": "• Name + DOB auto-extract from ID",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Requires auto-extraction of name and DOB."
+    },
+    {
+      "sent_id": "REQ-024::s003",
+      "order": 3,
+      "text": "[TODO @Elena]  \n• Manual override panel for compliance reviewers  \n• Local language support for ID types (esp.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Contains TODO notes rather than requirements."
+    },
+    {
+      "sent_id": "REQ-024::s004",
+      "order": 4,
+      "text": "non-Latin scripts)  \n• Error-handling flow for mismatched fields [TODO @Marco]  \n• Email+SMS fallback if real-time verification fails  \n\n### AI Automation Ideas  \n• “Smart‑ID Verification Bot” flags blurry image uploads + prompts user to re-capture before sending to human reviewer  \n• ML-based “Risk‑Score Predictor” generates probability score (% likelihood of fraud) —",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "EXAMPLE_OR_EXPLANATION",
+      "reason_text": "Discusses automation ideas, not enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-024::s005",
+      "order": 5,
+      "text": "Marco to tune thresholding?",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Contains a TODO note rather than requirements."
+    },
+    {
+      "sent_id": "REQ-024::s006",
+      "order": 6,
+      "text": "•",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.5,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Empty bullet point with no text."
+    },
+    {
+      "sent_id": "REQ-024::s007",
+      "order": 7,
+      "text": "All PII processed only in-region; redact unnecessary fields before logging to backend  \n\n### Compliance & Regions  \n• EU – GDPR-compliant storage + AML5 checklist (beneficial ownership, PEPs)  \n• US – FinCEN Customer Due Diligence rule (must flag shell corps)  \n• Indonesia – OJK requires…  \n\n### Open Questions  \n• How might we speed up retries without frustrating legit users?",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "COMPLIANCE_REQUIREMENT",
+      "reason_text": "Imposes GDPR, AML5, and Indonesia compliance."
+    },
+    {
+      "sent_id": "REQ-024::s008",
+      "order": 8,
+      "text": "• Should we auto-reject expired IDs or allow grace period?",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-024::s009",
+      "order": 9,
+      "text": "• What’s the fallback if selfie verification fails on low-end devices?",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "EXAMPLE_OR_EXPLANATION",
+      "reason_text": "Asks about fallback verification rather than enforcing it."
+    }
+  ]
+}

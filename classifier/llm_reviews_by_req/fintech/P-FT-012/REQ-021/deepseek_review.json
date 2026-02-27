@@ -1,0 +1,168 @@
+{
+  "req_id": "REQ-021",
+  "doc_id": "c1faa32e-c2c9-537e-8327-9f79165d1f97",
+  "domain": "fintech",
+  "prompt_id": "P-FT-012",
+  "model": "deepseek-r1:7b",
+  "review_timestamp": "2026-01-20T22:21:34.105858+00:00",
+  "counts": {
+    "total": 15,
+    "llm_pos": 9,
+    "pipe_pos": 1,
+    "llm_neg": 6,
+    "pipe_neg": 14,
+    "flip_neg_to_pos": 8
+  },
+  "reviews": [
+    {
+      "sent_id": "REQ-021::s001",
+      "order": 1,
+      "text": "Subject: Reimbursement Tool – Initial Thoughts & Scope Overview\n\nHey team,\n\nThanks again for jumping on this!",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "This is an introduction and not a requirement."
+    },
+    {
+      "sent_id": "REQ-021::s002",
+      "order": 2,
+      "text": "Here’s a rough overview of what we’re looking to build for Reimbursely’s new expense reimbursement platform.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "This is an overview of the project and not a requirement."
+    },
+    {
+      "sent_id": "REQ-021::s003",
+      "order": 3,
+      "text": "We’re aiming to simplify the messy, manual process employees currently go through with spreadsheets and email approvals.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "This is about simplifying an existing process and not a requirement."
+    },
+    {
+      "sent_id": "REQ-021::s004",
+      "order": 4,
+      "text": "Vision\nWe want a simple, mobile-friendly tool that automates out-of-pocket expense claims, approvals, and reimbursements—while staying fully compliant with EU tax rules, GDPR, and ISO‑27001 standards.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.5,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "This is a vision statement setting the scope and not enforcing any behavior."
+    },
+    {
+      "sent_id": "REQ-021::s005",
+      "order": 5,
+      "text": "User Roles\n\t•\tEmployees: Upload receipts (photo or PDF), fill basic details, submit.\n\t•\tFinance Managers: Review and approve claims, flag policy issues.\n\t•\tAuditors: View a read-only log of approvals, payouts, and receipts.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.4,
+      "reason_code": "ARCHITECTURE_DESCRIPTION",
+      "reason_text": "This describes user roles but doesn't enforce behavior."
+    },
+    {
+      "sent_id": "REQ-021::s006",
+      "order": 6,
+      "text": "Core Functional Requirements\n\t•\tReceipt upload (drag & drop, phone camera).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Receipt upload functionality is a core requirement."
+    },
+    {
+      "sent_id": "REQ-021::s007",
+      "order": 7,
+      "text": "•\tOCR auto-fill for merchant, date, and amount.\n\t•\tReal-time policy checks (e.g. taxi limit is €50/day).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.95,
+      "reason_code": "PERFORMANCE_REQUIREMENT",
+      "reason_text": "OCR features and policy checks are specific functionalities requiring enforcement."
+    },
+    {
+      "sent_id": "REQ-021::s008",
+      "order": 8,
+      "text": "•\tMulti-currency support with auto-conversion.\n\t•\tSlack notifications for claim status.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "PERFORMANCE_REQUIREMENT",
+      "reason_text": "Multi-currency support with notifications is a performance requirement."
+    },
+    {
+      "sent_id": "REQ-021::s009",
+      "order": 9,
+      "text": "•\tInstant suggestions for reclaimable VAT.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "COMPLIANCE_REQUIREMENT",
+      "reason_text": "Instant VAT suggestions need to comply with tax rules."
+    },
+    {
+      "sent_id": "REQ-021::s010",
+      "order": 10,
+      "text": "Non-Functional & Compliance\n\t•\tFull audit trail on every action.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Full audit trail is a system constraint to enforce behavior."
+    },
+    {
+      "sent_id": "REQ-021::s011",
+      "order": 11,
+      "text": "•\tAll data encrypted at rest and in transit.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SECURITY_REQUIREMENT",
+      "reason_text": "Data encryption is a security measure requirement."
+    },
+    {
+      "sent_id": "REQ-021::s012",
+      "order": 12,
+      "text": "•\tGDPR consent flow and data export/deletion options.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.95,
+      "reason_code": "COMPLIANCE_REQUIREMENT",
+      "reason_text": "GDPR consent flow is required for compliance."
+    },
+    {
+      "sent_id": "REQ-021::s013",
+      "order": 13,
+      "text": "•\tHosted in EU-region AWS.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SECURITY_REQUIREMENT",
+      "reason_text": "Hosting in an EU region is a security requirement."
+    },
+    {
+      "sent_id": "REQ-021::s014",
+      "order": 14,
+      "text": "Open Questions\n\t•\tShould managers get email or Slack alerts by default?",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Managers getting alerts by default is a system behavior."
+    },
+    {
+      "sent_id": "REQ-021::s015",
+      "order": 15,
+      "text": "•\tDo we need integrations with accounting tools from MVP?\n\nLet me know what’s missing!\n—Lena",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "This is more of a question seeking features rather than enforcing behavior."
+    }
+  ]
+}

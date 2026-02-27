@@ -1,0 +1,63 @@
+{
+  "doc_id": "f797c6c3-7ee6-523f-bb5b-3629040b2925",
+  "req_key": "saas::P-SAAS-076::REQ-165",
+  "req_id": "REQ-165",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-076",
+  "source": {
+    "raw_path": "02_raw_requirements/saas/P-SAAS-076/req-165_raw.txt",
+    "refined_path": "03_refined_json_normalized/saas/P-SAAS-076/req-165_refined.json",
+    "origin": "both"
+  },
+  "text": "```\nIF TLON = ∞ OR TLON = NaN THEN\n    SEND ERR_406;\n    LOG \"TLON value is invalid\" TO orbit_ep_nulls;\nEND IF;\n\nIF TLON < -180 OR TLON > 180 THEN\n    SEND ERR_406;\n    LOG \"TLON value out of range: \" + TLON TO orbit_ep_nulls;\nEND IF;\n```",
+  "structured_data": [
+    {
+      "id": "REQ-165-HLJ-Chunk_1-Item_1-v1.0",
+      "domain": "unknown",
+      "summary": "Reject packets where TLON equals ∞ or NaN",
+      "priority": "High",
+      "tags": [
+        "input_validation",
+        "error_handling",
+        "telemetry"
+      ],
+      "subdomain": "data_validation",
+      "difficulty": 2,
+      "additionalNotes": "This rule ensures that only valid TLON values are processed.",
+      "source_hlj_id": "REQ 001-001",
+      "domain_id": "P-SAAS-076"
+    },
+    {
+      "id": "REQ-165-HLJ-Chunk_1-Item_2-v1.0",
+      "domain": "unknown",
+      "summary": "Enforce TLON value between −180 and 180 degrees",
+      "priority": "High",
+      "tags": [
+        "input_validation",
+        "range_check",
+        "telemetry"
+      ],
+      "subdomain": "data_validation",
+      "difficulty": 2,
+      "additionalNotes": "Values outside the range trigger ERR_406 to maintain positional integrity.",
+      "source_hlj_id": "REQ 001-002",
+      "domain_id": "P-SAAS-076"
+    },
+    {
+      "id": "REQ-165-HLJ-Chunk_1-Item_3-v1.0",
+      "domain": "unknown",
+      "summary": "Log TLON validation failures to orbit_ep_nulls",
+      "priority": "Medium",
+      "tags": [
+        "logging",
+        "error_tracking",
+        "telemetry"
+      ],
+      "subdomain": "logging",
+      "difficulty": 1,
+      "additionalNotes": "Captures invalid TLON events for operational visibility and debugging.",
+      "source_hlj_id": "REQ 001-003",
+      "domain_id": "P-SAAS-076"
+    }
+  ]
+}

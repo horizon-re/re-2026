@@ -1,0 +1,369 @@
+{
+  "req_id": "REQ-051",
+  "doc_id": "6d49e495-ccd9-5320-886a-24cb79d9cc65",
+  "domain": "fintech",
+  "prompt_id": "P-FT-042",
+  "model": "deepseek-r1:7b",
+  "review_timestamp": "2026-01-20T22:39:03.340980+00:00",
+  "counts": {
+    "total": 35,
+    "llm_neg": 18,
+    "pipe_pos": 9,
+    "flip_pos_to_neg": 5,
+    "llm_pos": 17,
+    "pipe_neg": 26,
+    "flip_neg_to_pos": 13
+  },
+  "reviews": [
+    {
+      "sent_id": "REQ-051::s001",
+      "order": 1,
+      "text": "Scope Document – DeFi Yield Aggregation Platform\n\nIntroduction\n\nThe DeFi yield aggregation platform is built to empower decentralized finance users seeking maximized returns with minimized complexity.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Mission statement without enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-051::s002",
+      "order": 2,
+      "text": "Our mission is to abstract away the difficulty of manually navigating multiple yield farms, liquidity pools, and staking opportunities across chains.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Abstraction mission without enforcing actions."
+    },
+    {
+      "sent_id": "REQ-051::s003",
+      "order": 3,
+      "text": "By leveraging smart strategies, automated optimizations, and risk-managed exposure, the platform targets crypto-savvy individuals, DAOs, and asset managers who prioritize capital efficiency without sacrificing transparency.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Target audience statement without enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-051::s004",
+      "order": 4,
+      "text": "Initially launching on Ethereum, with a vision to rapidly expand to BSC and Polygon, the platform aims to serve yield farmers frustrated with fragmented ecosystems and inefficient capital allocation tools.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Strategic goal without enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-051::s005",
+      "order": 5,
+      "text": "Architecture Modules\n\nThe platform architecture is composed of three primary modules: the Vault Aggregator, the Yield Optimizer, and the Risk Oracle.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Architecture modules without enforceable actions."
+    },
+    {
+      "sent_id": "REQ-051::s006",
+      "order": 6,
+      "text": "The Vault Aggregator is responsible for pooling user deposits and allocating them across selected yield-generating strategies.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "The Vault Aggregator's responsibilities."
+    },
+    {
+      "sent_id": "REQ-051::s007",
+      "order": 7,
+      "text": "Inputs include user deposits, target allocation percentages, and strategy metadata.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Inputs description without enforceable actions."
+    },
+    {
+      "sent_id": "REQ-051::s008",
+      "order": 8,
+      "text": "Outputs are tokenized vault shares representing user ownership stakes.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Outputs are tokenized vault shares."
+    },
+    {
+      "sent_id": "REQ-051::s009",
+      "order": 9,
+      "text": "This module integrates with major lending and farming protocols such as Aave, Compound, and Curve, using external smart contracts to deploy and reallocate assets dynamically.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Integration with protocols without enforceable actions."
+    },
+    {
+      "sent_id": "REQ-051::s010",
+      "order": 10,
+      "text": "The Yield Optimizer continuously monitors available strategies to maximize returns.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "PERFORMANCE_REQUIREMENT",
+      "reason_text": "Continuously monitors strategies to maximize returns."
+    },
+    {
+      "sent_id": "REQ-051::s011",
+      "order": 11,
+      "text": "Inputs are live yield rates, gas fee estimates, and vault allocation states.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Inputs description without enforceable actions."
+    },
+    {
+      "sent_id": "REQ-051::s012",
+      "order": 12,
+      "text": "Outputs are rebalancing instructions sent to the Vault Aggregator.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Outputs rebalancing instructions."
+    },
+    {
+      "sent_id": "REQ-051::s013",
+      "order": 13,
+      "text": "It integrates with price feeds from Chainlink and custom-built gas oracles to optimize for net gains after transaction costs.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Describes an enforceable integration behavior for net gains"
+    },
+    {
+      "sent_id": "REQ-051::s014",
+      "order": 14,
+      "text": "Additionally, it interfaces with external strategy repositories to dynamically discover new yield opportunities as they emerge.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "States an interaction with external systems for dynamic strategy discovery"
+    },
+    {
+      "sent_id": "REQ-051::s015",
+      "order": 15,
+      "text": "The Risk Oracle module serves as the platform’s internal risk assessor.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Defines the module's internal role as a risk assessor"
+    },
+    {
+      "sent_id": "REQ-051::s016",
+      "order": 16,
+      "text": "Inputs include real-time protocol risk scores, TVL metrics, smart contract audit histories, and oracle reliability data.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Outlines input and output metrics for risk assessment"
+    },
+    {
+      "sent_id": "REQ-051::s017",
+      "order": 17,
+      "text": "Outputs are risk-adjusted APYs and risk flags associated with each strategy.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Specifies outputs related to strategy performance and risk"
+    },
+    {
+      "sent_id": "REQ-051::s018",
+      "order": 18,
+      "text": "The module integrates with third-party risk monitoring tools and DeFi insurance providers to dynamically adjust vault composition based on systemic risk levels.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Describes integration for dynamic vault composition adjustment"
+    },
+    {
+      "sent_id": "REQ-051::s019",
+      "order": 19,
+      "text": "Risk Considerations\n\nThe platform acknowledges critical risk vectors in DeFi environments.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Acknowledges risk but doesn't specify actions."
+    },
+    {
+      "sent_id": "REQ-051::s020",
+      "order": 20,
+      "text": "Smart-contract risk is ever-present due to vulnerabilities in underlying protocols.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Addresses potential smart-contract vulnerabilities as an enforceable behavior"
+    },
+    {
+      "sent_id": "REQ-051::s021",
+      "order": 21,
+      "text": "To mitigate this, the platform will only allocate funds to audited protocols with multi-year operational histories, alongside an internal review of codebases before any integration.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "PERFORMANCE_REQUIREMENT",
+      "reason_text": "Enforces fund allocation to audited protocols."
+    },
+    {
+      "sent_id": "REQ-051::s022",
+      "order": 22,
+      "text": "Oracle risk arises from potential price feed manipulations or downtime.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Identifies risks from oracle operations as constraints"
+    },
+    {
+      "sent_id": "REQ-051::s023",
+      "order": 23,
+      "text": "To reduce this risk, the platform will implement a multi-source validation mechanism, combining Chainlink, Pyth, and in-house anomaly detection to cross-verify price and rate data before executing sensitive transactions.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "PERFORMANCE_REQUIREMENT",
+      "reason_text": "Implements multi-source validation mechanism."
+    },
+    {
+      "sent_id": "REQ-051::s024",
+      "order": 24,
+      "text": "Liquidity risk, particularly from unstable or thinly traded pools, poses another threat.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Mentions liquidity risk as a threat requiring enforcement"
+    },
+    {
+      "sent_id": "REQ-051::s025",
+      "order": 25,
+      "text": "The platform will enforce strict minimum liquidity thresholds before allocating capital to any farm or pool.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Strict liquidity thresholds enforced."
+    },
+    {
+      "sent_id": "REQ-051::s026",
+      "order": 26,
+      "text": "Additionally, dynamic liquidity monitoring will trigger early withdrawal mechanisms to protect users in deteriorating liquidity scenarios.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "PERFORMANCE_REQUIREMENT",
+      "reason_text": "Dynamic monitoring triggers early withdrawals."
+    },
+    {
+      "sent_id": "REQ-051::s027",
+      "order": 27,
+      "text": "Multi-Chain Roadmap\n\nThe multi-chain expansion strategy is designed to maximize TVL growth while maintaining platform integrity.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Outlines multi-chain expansion strategy without enforceable behavior"
+    },
+    {
+      "sent_id": "REQ-051::s028",
+      "order": 28,
+      "text": "Phase one will focus on a successful Ethereum mainnet launch scheduled for August 2025, establishing strong liquidity partnerships and protocol integrations.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Phase launch scheduled without enforceable actions."
+    },
+    {
+      "sent_id": "REQ-051::s029",
+      "order": 29,
+      "text": "Phase two will expand to Binance Smart Chain (BSC) by November 2025, leveraging its low transaction costs and growing DeFi ecosystem.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Expansion phase without enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-051::s030",
+      "order": 30,
+      "text": "Finally, support for Polygon is targeted for January 2026, capitalizing on its scalability, affordable gas fees, and active yield farming community.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Targeted support for Polygon without specific enforceable actions"
+    },
+    {
+      "sent_id": "REQ-051::s031",
+      "order": 31,
+      "text": "Each expansion phase will involve separate smart contract deployments, adapted yield strategies per chain, and chain-specific optimizations to maintain performance and security standards.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Deployment specifics don't enforce actions."
+    },
+    {
+      "sent_id": "REQ-051::s032",
+      "order": 32,
+      "text": "Key Milestones\n\t1.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Milestones with just dates, no enforceable actions"
+    },
+    {
+      "sent_id": "REQ-051::s033",
+      "order": 33,
+      "text": "Platform MVP launch on Ethereum mainnet –",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Platform MVP launch without specific requirements"
+    },
+    {
+      "sent_id": "REQ-051::s034",
+      "order": 34,
+      "text": "August 30, 2025\n\t2.\tFull integration of Risk Oracle and dynamic vault rebalancing – October 15, 2025\n\t3.\tMulti-chain expansion to Binance Smart Chain – November 30, 2025\n\t4.\tPlatform launch on Polygon with optimized L2 strategies – January 20, 2026\n\t5.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Milestones with dates but no enforcing actions specified"
+    },
+    {
+      "sent_id": "REQ-051::s035",
+      "order": 35,
+      "text": "Achievement of $50M TVL across supported chains – March 31, 2026",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "TVL achievement target without enforcement details"
+    }
+  ]
+}

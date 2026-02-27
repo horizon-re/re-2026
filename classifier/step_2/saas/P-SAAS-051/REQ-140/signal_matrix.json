@@ -1,0 +1,16 @@
+{
+  "req_id": "REQ-140",
+  "num_sentences": 3,
+  "num_candidates": 2,
+  "acceptance_rate": 0.667,
+  "signal_counts": {
+    "action": 3,
+    "modal": 2
+  },
+  "top_signal_combinations": [
+    {
+      "pattern": "action+modal",
+      "count": 2
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+**Feature Requirement Document: Destructive Intent Confirmation**
+
+**Feature Name:** Destructive Intent Voice Confirmation and Safety Logging
+
+**Objective:**  
+To ensure user safety and prevent accidental data loss, a confirmation mechanism must be added when the detected user intent is classified as destructive, specifically when it matches the "delete everything" command.
+
+**Requirements:**
+
+1. **Intent Validation:**  
+   - Trigger confirmation flow only if the detected intent equals "delete everything".  
+   - The detected intent must have a confidence score of **≥ 0.9** to proceed.
+
+2. **User Confirmation:**  
+   - A verbal confirmation must be requested.  
+   - The system must explicitly ask: *“Are you sure you want to delete everything?”*  
+   - The user must respond with an exact verbal **“yes”** to proceed. Any other response cancels the action.
+
+3. **Event Logging:**  
+   - All such destructive intent actions must be logged to the `voice_safety` index.  
+   - The log must include timestamp, user ID, intent string, confidence score, and confirmation response.
+
+4. **Rollback Capability:**  
+   - A rollback option must be available for **10 minutes** post-execution.  
+   - Rollback must reverse the “delete everything” operation entirely if invoked within the allowed window.
+
+**Priority:** High  
+**Owner:** Voice Interaction Safety Team

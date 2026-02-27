@@ -1,0 +1,1 @@
+{"unit_id": "REQ-101::cu001", "req_id": "REQ-101", "doc_id": "b9f8bc44-5e70-5fc5-8bc1-5d832a4d9d4c", "parent_sent_id": "REQ-101::s006", "order": 1, "text": "The solution must support integration with both Okta and Azure AD as Identity Providers (IdPs) to cater to a wider range of potential clients."}

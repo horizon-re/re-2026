@@ -1,0 +1,18 @@
+{
+  "run_id": "20260206_174004",
+  "seed": 42,
+  "ratio_ds123": 0.8,
+  "ratio_own": 0.4,
+  "inputs": [
+    "11_extra_requirements\\DOSSPRE 1.0Original.csv",
+    "11_extra_requirements\\HF_FNFC_Functional_Non-Functional_Classification.csv",
+    "11_extra_requirements\\kaggle_software_requirements_extended.csv",
+    "classifier\\outputs\\by_category"
+  ],
+  "dedupe": true,
+  "split": {
+    "train": 0.8,
+    "dev": 0.1,
+    "test": 0.1
+  }
+}

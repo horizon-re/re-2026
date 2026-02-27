@@ -1,0 +1,111 @@
+{
+  "doc_id": "5702a636-b6fc-5c5e-8a3d-4c10faefbdeb",
+  "req_key": "saas::P-SAAS-063::REQ-152",
+  "req_id": "REQ-152",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-063",
+  "source": {
+    "raw_path": "02_raw_requirements/saas/P-SAAS-063/req-152_raw.txt",
+    "refined_path": "03_refined_json_normalized/saas/P-SAAS-063/req-152_refined.json",
+    "origin": "both"
+  },
+  "text": "**Schema Update Note – Spec v3 Migration**\n\nEffective immediately, the schema for Spec v3 will adopt `snake_case` naming conventions for all field identifiers. This update aligns with broader industry practices and improves consistency across internal systems. All new fields added to Spec v3 will follow `snake_case` naming. Existing fields using `camelCase` will remain available for a transitional period but are officially deprecated and will be removed by **2025-10-01**.\n\nTo support downstream integration, a **transform** capability has been introduced within the aggregator layer. This module will **dual-accept** both `snake_case` and `camelCase` keys for a period of **90 days** from today. This grace period is intended to give clients and partners sufficient time to migrate their implementations without service disruption.\n\nWe strongly encourage teams to begin updating their systems to use `snake_case` exclusively. Updated documentation, including migration guides and revised sample payloads, is now available in the developer portal. These resources include side-by-side examples for ease of transition and common pitfalls to avoid during implementation.\n\nPlease direct any technical inquiries or compatibility concerns to the integration support team. Thank you for your cooperation in keeping our schema clean, predictable, and forward-compatible.",
+  "structured_data": [
+    {
+      "id": "REQ-152-HLJ-Chunk_1-Item_1-v1.0",
+      "domain": "saas",
+      "summary": "Adopt snake_case naming for all new Spec v3 fields",
+      "priority": "High",
+      "tags": [
+        "naming_convention",
+        "spec_v3",
+        "schema_update"
+      ],
+      "subdomain": "data_formatting",
+      "difficulty": 2,
+      "additionalNotes": "Aligns with industry standards and internal consistency goals",
+      "source_hlj_id": "REQ 001-001",
+      "domain_id": "P-SAAS-063"
+    },
+    {
+      "id": "REQ-152-HLJ-Chunk_1-Item_2-v1.0",
+      "domain": "saas",
+      "summary": "Deprecate camelCase fields by 2025-10-01",
+      "priority": "High",
+      "tags": [
+        "naming_convention",
+        "deprecation",
+        "schema_v3"
+      ],
+      "subdomain": "data_formatting",
+      "difficulty": 2,
+      "additionalNotes": "Provides a clear sunset timeline for legacy formats",
+      "source_hlj_id": "REQ 001-002",
+      "domain_id": "P-SAAS-063"
+    },
+    {
+      "id": "REQ-152-HLJ-Chunk_1-Item_3-v1.0",
+      "domain": "saas",
+      "summary": "Introduce transform module for dual-acceptance in aggregator",
+      "priority": "Medium",
+      "tags": [
+        "transform",
+        "schema_migration",
+        "aggregator"
+      ],
+      "subdomain": "data_processing",
+      "difficulty": 3,
+      "additionalNotes": "Supports backward compatibility during migration period",
+      "source_hlj_id": "REQ 001-003",
+      "domain_id": "P-SAAS-063"
+    },
+    {
+      "id": "REQ-152-HLJ-Chunk_1-Item_4-v1.0",
+      "domain": "saas",
+      "summary": "Enable dual-acceptance for 90 days from schema update",
+      "priority": "Medium",
+      "tags": [
+        "migration",
+        "grace_period",
+        "compatibility"
+      ],
+      "subdomain": "version_control",
+      "difficulty": 2,
+      "additionalNotes": "Allows partners time to update without service disruption",
+      "source_hlj_id": "REQ 001-004",
+      "domain_id": "P-SAAS-063"
+    },
+    {
+      "id": "REQ-152-HLJ-Chunk_1-Item_5-v1.0",
+      "domain": "saas",
+      "summary": "Provide updated documentation and migration guides",
+      "priority": "High",
+      "tags": [
+        "documentation",
+        "migration_guide",
+        "developer_support"
+      ],
+      "subdomain": "dev_experience",
+      "difficulty": 1,
+      "additionalNotes": "Includes examples and common pitfalls to aid transition",
+      "source_hlj_id": "REQ 001-005",
+      "domain_id": "P-SAAS-063"
+    },
+    {
+      "id": "REQ-152-HLJ-Chunk_1-Item_6-v1.0",
+      "domain": "saas",
+      "summary": "Support sample payloads using snake_case format",
+      "priority": "Low",
+      "tags": [
+        "sample_data",
+        "snake_case",
+        "spec_v3"
+      ],
+      "subdomain": "dev_experience",
+      "difficulty": 1,
+      "additionalNotes": "origin: implied – Required to demonstrate expected schema to developers",
+      "source_hlj_id": "REQ 001-006",
+      "domain_id": "P-SAAS-063"
+    }
+  ]
+}

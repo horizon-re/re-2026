@@ -1,0 +1,143 @@
+{
+  "doc_id": "bdaeecb4-e354-5873-b73a-5306f8c6ece0",
+  "req_key": "fintech::P-FT-036::REQ-045",
+  "req_id": "REQ-045",
+  "domain": "fintech",
+  "prompt_id": "P-FT-036",
+  "source": {
+    "raw_path": "02_raw_requirements/fintech/P-FT-036/req-045_raw.txt",
+    "refined_path": "03_refined_json_normalized/fintech/P-FT-036/req-045_refined.json",
+    "origin": "both"
+  },
+  "text": "Investor interest ahead of our Series B close on August 30, 2025, has zeroed in on one standout feature: AI-powered allowance insights for teen debit users. This demand reflects a broader market appetite for value-added financial literacy tools embedded in youth banking products. Several VCs have flagged actionable, personalized insights as a must-have differentiator, especially as we position ourselves against larger fintech incumbents. To meet this expectation and demonstrate traction, we propose a key performance indicator: 90% of parents actively view their teen’s spending insights at least once per month.\n\nTo deliver on this, we’ll first ingest categorized spend data and apply clustering algorithms to identify behavioral patterns. From there, we can generate three concise, parent-facing tips each week within the app interface—focusing on saving habits, budgeting signals, and unusual spend patterns. A/B testing against a control group will help validate engagement lift and message effectiveness. All data handling and delivery will remain COPPA-compliant to ensure safe and responsible usage for our under-13 segment.",
+  "structured_data": [
+    {
+      "id": "REQ-045-HLJ-Chunk_1-Item_1-v1.0",
+      "domain": "fintech",
+      "summary": "Provide AI-powered allowance insights for teen debit users",
+      "priority": "High",
+      "tags": [
+        "ai_insights",
+        "teen_banking",
+        "personalization"
+      ],
+      "subdomain": "personal_finance",
+      "difficulty": 4,
+      "additionalNotes": "This is the central feature requested by investors.",
+      "source_hlj_id": "REQ 001-001",
+      "domain_id": "P-FT-036"
+    },
+    {
+      "id": "REQ-045-HLJ-Chunk_1-Item_2-v1.0",
+      "domain": "fintech",
+      "summary": "Ensure 90% of parents view insights monthly",
+      "priority": "High",
+      "tags": [
+        "kpi",
+        "engagement",
+        "parent_analytics"
+      ],
+      "subdomain": "analytics",
+      "difficulty": 3,
+      "additionalNotes": "Key performance indicator to demonstrate feature adoption and traction.",
+      "source_hlj_id": "REQ 001-002",
+      "domain_id": "P-FT-036"
+    },
+    {
+      "id": "REQ-045-HLJ-Chunk_1-Item_3-v1.0",
+      "domain": "fintech",
+      "summary": "Ingest categorized spend data for analysis",
+      "priority": "High",
+      "tags": [
+        "data_ingestion",
+        "spending_data",
+        "ml_input"
+      ],
+      "subdomain": "data_processing",
+      "difficulty": 3,
+      "additionalNotes": "Spend categorization is a prerequisite for behavior modeling.",
+      "source_hlj_id": "REQ 001-003",
+      "domain_id": "P-FT-036"
+    },
+    {
+      "id": "REQ-045-HLJ-Chunk_1-Item_4-v1.0",
+      "domain": "fintech",
+      "summary": "Apply clustering algorithm to identify behavior patterns",
+      "priority": "Medium",
+      "tags": [
+        "machine_learning",
+        "clustering",
+        "behavior_analysis"
+      ],
+      "subdomain": "data_science",
+      "difficulty": 4,
+      "additionalNotes": "Clusters support personalized insights and recommendations.",
+      "source_hlj_id": "REQ 001-004",
+      "domain_id": "P-FT-036"
+    },
+    {
+      "id": "REQ-045-HLJ-Chunk_1-Item_5-v1.0",
+      "domain": "fintech",
+      "summary": "Generate 3 parent-facing financial tips per week",
+      "priority": "High",
+      "tags": [
+        "tips",
+        "parent_engagement",
+        "weekly_content"
+      ],
+      "subdomain": "user_engagement",
+      "difficulty": 2,
+      "additionalNotes": "Tips focus on savings, budgeting, and outlier spending.",
+      "source_hlj_id": "REQ 001-005",
+      "domain_id": "P-FT-036"
+    },
+    {
+      "id": "REQ-045-HLJ-Chunk_1-Item_6-v1.0",
+      "domain": "fintech",
+      "summary": "Display tips in app interface",
+      "priority": "Medium",
+      "tags": [
+        "ui_delivery",
+        "in_app_content",
+        "user_interface"
+      ],
+      "subdomain": "mobile_app",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied – UI placement is necessary to deliver weekly tips to users.",
+      "source_hlj_id": "REQ 001-006",
+      "domain_id": "P-FT-036"
+    },
+    {
+      "id": "REQ-045-HLJ-Chunk_1-Item_7-v1.0",
+      "domain": "fintech",
+      "summary": "A/B test insights against control group",
+      "priority": "Medium",
+      "tags": [
+        "ab_testing",
+        "analytics",
+        "insight_validation"
+      ],
+      "subdomain": "experimentation",
+      "difficulty": 3,
+      "additionalNotes": "Testing helps validate engagement and insight effectiveness.",
+      "source_hlj_id": "REQ 001-007",
+      "domain_id": "P-FT-036"
+    },
+    {
+      "id": "REQ-045-HLJ-Chunk_1-Item_8-v1.0",
+      "domain": "fintech",
+      "summary": "Ensure all data handling complies with COPPA",
+      "priority": "High",
+      "tags": [
+        "compliance",
+        "privacy",
+        "child_protection"
+      ],
+      "subdomain": "regulatory",
+      "difficulty": 3,
+      "additionalNotes": "Required for serving users under age 13.",
+      "source_hlj_id": "REQ 001-008",
+      "domain_id": "P-FT-036"
+    }
+  ]
+}

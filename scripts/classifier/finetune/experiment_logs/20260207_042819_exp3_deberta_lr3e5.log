@@ -1,0 +1,58 @@
+C:\Dvip\plantric-root\venv\lib\site-packages\huggingface_hub\file_download.py:943: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Some weights of the model checkpoint at microsoft/deberta-v3-base were not used when initializing DebertaV2Model: ['mask_predictions.dense.weight', 'lm_predictions.lm_head.LayerNorm.bias', 'lm_predictions.lm_head.LayerNorm.weight', 'mask_predictions.LayerNorm.weight', 'mask_predictions.classifier.weight', 'lm_predictions.lm_head.dense.bias', 'mask_predictions.dense.bias', 'mask_predictions.LayerNorm.bias', 'lm_predictions.lm_head.dense.weight', 'lm_predictions.lm_head.bias', 'mask_predictions.classifier.bias']
+- This IS expected if you are initializing DebertaV2Model from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing DebertaV2Model from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+[init] Working directory: C:\Dvip\plantric-root
+
+======================================================================
+[data] Loading datasets...
+======================================================================
+
+[OK] Contextual: 3284 samples
+[OK] F/NFR train: 8747 samples
+[OK] F/NFR dev: 1093 samples
+[OK] Synthetic non-req: 4961 samples
+
+[combined] train=15506 dev=2579
+
+======================================================================
+[model] microsoft/deberta-v3-base
+[lora] targets: ['query_proj', 'key_proj', 'value_proj']
+======================================================================
+
+[encoder] Embedding dimension: 768
+[data] train=15506 dev=2579
+[task1] req_pos=10379/15506
+[task2] func_pos=5449/8747
+[task3] amb_pos=245/2689
+
+======================================================================
+[train] Multi-task LoRA fine-tuning
+======================================================================
+
+[ep 01] req_f1=0.817 req_acc=0.795 | func_f1=0.850 | amb_f1=0.000
+[best] req_f1=0.817 
+[ep 02] req_f1=0.839 req_acc=0.820 | func_f1=0.856 | amb_f1=0.000
+[best] req_f1=0.839 
+[ep 03] req_f1=0.826 req_acc=0.821 | func_f1=0.851 | amb_f1=0.000
+[ep 04] req_f1=0.843 req_acc=0.831 | func_f1=0.864 | amb_f1=0.000
+[best] req_f1=0.843 
+[ep 05] req_f1=0.870 req_acc=0.858 | func_f1=0.870 | amb_f1=0.000
+[best] req_f1=0.870 
+[ep 06] req_f1=0.854 req_acc=0.844 | func_f1=0.870 | amb_f1=0.000
+[ep 07] req_f1=0.875 req_acc=0.864 | func_f1=0.883 | amb_f1=0.000
+[best] req_f1=0.875 
+[ep 08] req_f1=0.878 req_acc=0.867 | func_f1=0.863 | amb_f1=0.000
+[best] req_f1=0.878 
+[ep 09] req_f1=0.878 req_acc=0.865 | func_f1=0.882 | amb_f1=0.000
+[best] req_f1=0.878 
+[ep 10] req_f1=0.882 req_acc=0.872 | func_f1=0.877 | amb_f1=0.053
+[best] req_f1=0.882 
+[done] saved -> classifier\models\multitask_deberta_lora\20260207_080624\deberta
+
+======================================================================
+[done] Model saved -> classifier\models\multitask_deberta_lora\20260207_080624\deberta
+======================================================================
+

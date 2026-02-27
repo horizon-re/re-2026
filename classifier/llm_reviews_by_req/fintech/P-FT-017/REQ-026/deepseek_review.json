@@ -1,0 +1,249 @@
+{
+  "req_id": "REQ-026",
+  "doc_id": "e3727013-306b-5a68-8f10-26c831e5883f",
+  "domain": "fintech",
+  "prompt_id": "P-FT-017",
+  "model": "deepseek-r1:7b",
+  "review_timestamp": "2026-01-20T22:25:16.825840+00:00",
+  "counts": {
+    "total": 23,
+    "llm_pos": 2,
+    "pipe_pos": 2,
+    "llm_neg": 21,
+    "flip_pos_to_neg": 1,
+    "pipe_neg": 21,
+    "flip_neg_to_pos": 1
+  },
+  "reviews": [
+    {
+      "sent_id": "REQ-026::s001",
+      "order": 1,
+      "text": "Executive Summary \nAs we propel into Q3, our mission-critical objective revolves around stringent cost control measures.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Sets high-level objective without enforcing action."
+    },
+    {
+      "sent_id": "REQ-026::s002",
+      "order": 2,
+      "text": "The introduction of the “Vendor Request + Purchase-Order” tool, spearheaded by Procurement Lead Alexis Romero, stands poised to revolutionize our operational efficiency [NOTE:",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Introduction of a tool with potential impact, not enforceable action."
+    },
+    {
+      "sent_id": "REQ-026::s003",
+      "order": 3,
+      "text": "Immediate implementation imperative].",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-026::s004",
+      "order": 4,
+      "text": "By streamlining vendor interactions and purchase-order processes, this tool promises to bolster our financial stewardship and propel us towards sustainable growth.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-026::s005",
+      "order": 5,
+      "text": "=== Project Scope ===\n- In-Scope:\n  • Vendor request submission workflow enhancements.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Imposes immediate implementation as an obligation."
+    },
+    {
+      "sent_id": "REQ-026::s006",
+      "order": 6,
+      "text": "• Purchase-order generation and tracking functionalities.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-026::s007",
+      "order": 7,
+      "text": "• Integration with existing ERP systems for seamless data exchange (TBD details).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-026::s008",
+      "order": 8,
+      "text": "•",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-026::s009",
+      "order": 9,
+      "text": "Comprehensive reporting dashboard for procurement analytics.\n\n- Out-of-Scope:\n  ✗ Supplier contract management module.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-026::s010",
+      "order": 10,
+      "text": "✗ Inventory control functionalities.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-026::s011",
+      "order": 11,
+      "text": "✗ Financial audit trail beyond initial PO creation.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-026::s012",
+      "order": 12,
+      "text": "=== Quick-Win Feature Matrix ===\n| Feature            | Effort (pts) | Impact | Owner |\n|--------------------|--------------|--------|-------|\n| Auto-PO PDF Gen    | 3            | High   | Dev   |\n| AI Vendor Score    | 5            | Med    | Data  |\n| Vendor Performance | 4            |",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-026::s013",
+      "order": 13,
+      "text": "| Ops   |\n| Data Visualization | 2            | Low    | UX    |\n\n=== Timeline & Risks ===\nAlexis confidently asserts that implementation shouldn’t take more than **2 sprints**",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Timeline doesn't enforce actions, just planning."
+    },
+    {
+      "sent_id": "REQ-026::s014",
+      "order": 14,
+      "text": "[NOTE: optimism alert].",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-026::s015",
+      "order": 15,
+      "text": "However, we must navigate potential risks, including legacy ERP API latency, data migration complexities, and stakeholder adoption challenges.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Statement about navigating potential risks, including constraints."
+    },
+    {
+      "sent_id": "REQ-026::s016",
+      "order": 16,
+      "text": "=== AI Enhancement Ideas ===\nTo optimize vendor selection, envision an ML model analyzing historical spend to suggest preferred vendors [NOTE: Long-term efficiency boost].",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-026::s017",
+      "order": 17,
+      "text": "Additionally, flagging compliance anomalies like single-bid scenarios could preemptively mitigate risks and enhance procurement integrity.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-026::s018",
+      "order": 18,
+      "text": "=== Open Questions ===\n1.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-026::s019",
+      "order": 19,
+      "text": "How soon can we secure stakeholder sign-off for initial deployment?\n2.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Inquiry about sign-off timing isn't enforceable."
+    },
+    {
+      "sent_id": "REQ-026::s020",
+      "order": 20,
+      "text": "What strategies will ensure smooth ERP integration amidst legacy system constraints?\n3.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Asking for strategies implies request rather than enforceable action."
+    },
+    {
+      "sent_id": "REQ-026::s021",
+      "order": 21,
+      "text": "How do we prioritize feature rollout to maximize early-stage impact?\n4.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.85,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "The sentence is a question seeking a process rather than stating an enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-026::s022",
+      "order": 22,
+      "text": "Are there additional AI-driven insights our team should explore to enhance procurement efficiency?",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.75,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "The sentence is a question seeking additional insights rather than enforcing behavior."
+    },
+    {
+      "sent_id": "REQ-026::s023",
+      "order": 23,
+      "text": "This early-stage scope document captures the essence of Alexis Romero’s vision for the “Vendor Request + Purchase-Order” tool, blending optimism with a proactive approach to addressing critical procurement needs.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "The sentence describes a vision without enforcing any system behavior."
+    }
+  ]
+}

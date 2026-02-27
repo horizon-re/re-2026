@@ -1,0 +1,8 @@
+Budget available: $60 000 total. We have two sprints to deliver a Plaid-style bank account aggregator MVP on our budgeting dashboard or the feature is scrapped. MVP must be PSD2-compliant in the EU sandbox and incorporate investor-demanded AI insights. Must-haves:
+Basic account aggregator integration (multi-bank linking with balances/transactions visible on the dashboard)
+PSD2 open banking compliance (EU sandbox ready)
+Basic AI-driven insight to satisfy investor expectations
+Stretch goals:
+Additional bank coverage beyond core MVP connections
+Enhanced AI insights or other UX improvements if time permits
+Board meets Friday—confirm 2-sprint MVP.

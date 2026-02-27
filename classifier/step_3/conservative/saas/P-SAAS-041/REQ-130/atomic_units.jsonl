@@ -1,0 +1,5 @@
+{"unit_id": "REQ-130::cu001", "req_id": "REQ-130", "doc_id": "1c41bae5-3fb5-59b3-b411-42f628ba6828", "parent_sent_id": "REQ-130::s002", "order": 1, "text": "This rapid triaging will streamline incident response and reduce noise for security teams ."}
+{"unit_id": "REQ-130::cu002", "req_id": "REQ-130", "doc_id": "1c41bae5-3fb5-59b3-b411-42f628ba6828", "parent_sent_id": "REQ-130::s002", "order": 2, "text": "reduce noise for security teams"}
+{"unit_id": "REQ-130::cu003", "req_id": "REQ-130", "doc_id": "1c41bae5-3fb5-59b3-b411-42f628ba6828", "parent_sent_id": "REQ-130::s009", "order": 3, "text": "Posted in Slack `#sec-ops` for real-time triage by analysts."}
+{"unit_id": "REQ-130::cu004", "req_id": "REQ-130", "doc_id": "1c41bae5-3fb5-59b3-b411-42f628ba6828", "parent_sent_id": "REQ-130::s013", "order": 4, "text": "**SLA & Metrics**  \nSystem must maintain ≥ 95% classification accuracy."}
+{"unit_id": "REQ-130::cu005", "req_id": "REQ-130", "doc_id": "1c41bae5-3fb5-59b3-b411-42f628ba6828", "parent_sent_id": "REQ-130::s014", "order": 5, "text": "Alerts should be delivered within 60 seconds for 95% of cases (P95 latency)."}

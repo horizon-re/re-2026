@@ -1,0 +1,249 @@
+{
+  "req_id": "REQ-027",
+  "doc_id": "41f15231-d890-55f3-b87e-cfe3d0e383f4",
+  "domain": "fintech",
+  "prompt_id": "P-FT-018",
+  "model": "deepseek-r1:7b",
+  "review_timestamp": "2026-01-20T22:25:51.815846+00:00",
+  "counts": {
+    "total": 23,
+    "llm_pos": 6,
+    "pipe_pos": 2,
+    "llm_neg": 17,
+    "flip_pos_to_neg": 1,
+    "pipe_neg": 21,
+    "flip_neg_to_pos": 5
+  },
+  "reviews": [
+    {
+      "sent_id": "REQ-027::s001",
+      "order": 1,
+      "text": "SLIDE 4: Localization Gaps in Billing & Messaging\n•",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Invoices require region-specific phrasing for VAT/GST and local compliance."
+    },
+    {
+      "sent_id": "REQ-027::s002",
+      "order": 2,
+      "text": "Invoices require region‑specific phrasing for VAT/GST and local compliance (Owner?).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-027::s003",
+      "order": 3,
+      "text": "•",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-027::s004",
+      "order": 4,
+      "text": "Email templates often deviate from brand voice in non-English locales.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Email templates often deviate from brand voice in non-English locales."
+    },
+    {
+      "sent_id": "REQ-027::s005",
+      "order": 5,
+      "text": "• Translations are outsourced, but QA is manual—leading to inconsistencies at scale.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Translations are outsourced, but QA is manual—leading to inconsistencies at scale."
+    },
+    {
+      "sent_id": "REQ-027::s006",
+      "order": 6,
+      "text": "•",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-027::s007",
+      "order": 7,
+      "text": "[RISK:",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-027::s008",
+      "order": 8,
+      "text": "Hardcoded strings from legacy invoice templates break when translated.]",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.95,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Hardcoded strings from legacy invoice templates break when translated."
+    },
+    {
+      "sent_id": "REQ-027::s009",
+      "order": 9,
+      "text": "• Our LLM-powered “Translation QA Bot” flags mismatched tone and jurisdiction-specific tax terminology.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-027::s010",
+      "order": 10,
+      "text": "• Workflow for escalation of flagged content still under definition (TBC).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-027::s011",
+      "order": 11,
+      "text": "SLIDE 5: Framework: AI-Assisted Template Governance\n• Introduce a central hub for multi-locale email and invoice templates (Owner?).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-027::s012",
+      "order": 12,
+      "text": "• Leverage LLMs to suggest glossary terms and enforce tone alignment.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-027::s013",
+      "order": 13,
+      "text": "•",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-027::s014",
+      "order": 14,
+      "text": "[RISK: Auto-suggestions may drift from approved brand lexicon under noisy data conditions.]\n• Translation QA Bot integrates with staging environments for pre-deployment review.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "COMPLIANCE_REQUIREMENT",
+      "reason_text": "Translation QA Bot flags mismatched tone and jurisdiction-specific tax terminology."
+    },
+    {
+      "sent_id": "REQ-027::s015",
+      "order": 15,
+      "text": "• Governance checkpoints include human-in-the-loop reviews and audit trails (TBC).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-027::s016",
+      "order": 16,
+      "text": "Feature\tEffort (pts)\tROI\nLLM Glossary Auto‑Suggest\t8\tHigh\nAI Brand‑Tone",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-027::s017",
+      "order": 17,
+      "text": "Checker\t5\tMed\n\t\t\n\nSLIDE 6: Roadmap & Globalization Outcomes\n• Phase 1 rollout targeting LATAM markets with invoice template variants.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-027::s018",
+      "order": 18,
+      "text": "• APAC launch to include right-to-left (RTL) and CJK script template testing (TBC).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-027::s019",
+      "order": 19,
+      "text": "•",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-027::s020",
+      "order": 20,
+      "text": "[RISK:",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.3,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Incomplete and unclear, not an enforceable statement."
+    },
+    {
+      "sent_id": "REQ-027::s021",
+      "order": 21,
+      "text": "Regional linguistic nuance may affect legal enforceability of translated invoices.]\n• Translation QA Bot supports rule-based checks per geography.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-027::s022",
+      "order": 22,
+      "text": "• Enable real-time feedback loop from customer support on template mismatches (Owner?).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Explicitly states a system capability with responsibility."
+    },
+    {
+      "sent_id": "REQ-027::s023",
+      "order": 23,
+      "text": "• Business outcome: faster time to market with 70%+ reduction in localization escalations.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.2,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "business outcome without enforceable action."
+    }
+  ]
+}

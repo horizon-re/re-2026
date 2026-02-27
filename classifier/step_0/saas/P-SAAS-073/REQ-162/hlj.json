@@ -1,0 +1,174 @@
+{
+  "doc_id": "97ce306e-c6da-50bd-baad-2eaca0cca2f2",
+  "req_key": "saas::P-SAAS-073::REQ-162",
+  "req_id": "REQ-162",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-073",
+  "source": {
+    "raw_path": "02_raw_requirements/saas/P-SAAS-073/req-162_raw.txt",
+    "refined_path": "03_refined_json_normalized/saas/P-SAAS-073/req-162_refined.json",
+    "origin": "both"
+  },
+  "text": "Alpha Nine Zulu, this is Control Node. You are ordered to switch your primary data link to frequency shift keying modulation at 1200 baud on a 14 kHz carrier. In the event that no acknowledgment is received within five minutes, automatically revert to continuous wave transmission at ten words per minute. After completion of the mode change, calculate and apply a new CRC-16 checksum to the node table and broadcast the updated checksum to all adjacent peers. Effective immediately, upon receipt of this command, execute and log any errors to local memory in the return status report. Confirm execution of all directives by return status message. Out.",
+  "structured_data": [
+    {
+      "id": "REQ-162-HLJ-Chunk_1-Item_1-v1.0",
+      "domain": "sass",
+      "summary": "switch primary data link to FSK 1200 baud on 14 kHz",
+      "priority": "High",
+      "tags": [
+        "fsk_modulation",
+        "baud_rate",
+        "frequency"
+      ],
+      "subdomain": "unknown",
+      "difficulty": 3,
+      "additionalNotes": "Execute primary modulation change as ordered by control node",
+      "source_hlj_id": "REQ 001-001",
+      "domain_id": "P-SAAS-073"
+    },
+    {
+      "id": "REQ-162-HLJ-Chunk_1-Item_2-v1.0",
+      "domain": "sass",
+      "summary": "fallback to CW transmission at 10 WPM after 5 minutes no ack",
+      "priority": "High",
+      "tags": [
+        "fallback",
+        "cw_transmission",
+        "timer"
+      ],
+      "subdomain": "unknown",
+      "difficulty": 3,
+      "additionalNotes": "Trigger CW fallback upon no acknowledgment within timeout",
+      "source_hlj_id": "REQ 001-002",
+      "domain_id": "P-SAAS-073"
+    },
+    {
+      "id": "REQ-162-HLJ-Chunk_1-Item_3-v1.0",
+      "domain": "sass",
+      "summary": "calculate and apply CRC-16 checksum to node table",
+      "priority": "High",
+      "tags": [
+        "checksum",
+        "crc16",
+        "data_integrity"
+      ],
+      "subdomain": "unknown",
+      "difficulty": 2,
+      "additionalNotes": "Compute CRC-16 as specified after mode change",
+      "source_hlj_id": "REQ 001-003",
+      "domain_id": "P-SAAS-073"
+    },
+    {
+      "id": "REQ-162-HLJ-Chunk_1-Item_4-v1.0",
+      "domain": "sass",
+      "summary": "broadcast updated checksum to all adjacent peers",
+      "priority": "High",
+      "tags": [
+        "broadcast",
+        "peers",
+        "checksum"
+      ],
+      "subdomain": "unknown",
+      "difficulty": 2,
+      "additionalNotes": "Distribute new checksum to neighbors per directive",
+      "source_hlj_id": "REQ 001-004",
+      "domain_id": "P-SAAS-073"
+    },
+    {
+      "id": "REQ-162-HLJ-Chunk_1-Item_5-v1.0",
+      "domain": "sass",
+      "summary": "execute and log any errors to local memory",
+      "priority": "High",
+      "tags": [
+        "error_logging",
+        "local_storage",
+        "execution"
+      ],
+      "subdomain": "unknown",
+      "difficulty": 2,
+      "additionalNotes": "Store error records in onboard memory for status report",
+      "source_hlj_id": "REQ 001-005",
+      "domain_id": "P-SAAS-073"
+    },
+    {
+      "id": "REQ-162-HLJ-Chunk_1-Item_6-v1.0",
+      "domain": "sass",
+      "summary": "confirm execution of directives by return status message",
+      "priority": "High",
+      "tags": [
+        "status_report",
+        "confirmation",
+        "execution"
+      ],
+      "subdomain": "unknown",
+      "difficulty": 2,
+      "additionalNotes": "Send acknowledgment of completed commands back to control",
+      "source_hlj_id": "REQ 001-006",
+      "domain_id": "P-SAAS-073"
+    },
+    {
+      "id": "REQ-162-HLJ-Chunk_1-Item_7-v1.0",
+      "domain": "sass",
+      "summary": "detect acknowledgment messages from control node",
+      "priority": "Low",
+      "tags": [
+        "ack_detection",
+        "communication",
+        "monitoring"
+      ],
+      "subdomain": "unknown",
+      "difficulty": 3,
+      "additionalNotes": "origin: implied – needed to trigger fallback logic",
+      "source_hlj_id": "REQ 001-007",
+      "domain_id": "P-SAAS-073"
+    },
+    {
+      "id": "REQ-162-HLJ-Chunk_1-Item_8-v1.0",
+      "domain": "sass",
+      "summary": "initiate 5-minute countdown timer after mode change",
+      "priority": "Low",
+      "tags": [
+        "timer",
+        "fallback_logic",
+        "monitoring"
+      ],
+      "subdomain": "unknown",
+      "difficulty": 3,
+      "additionalNotes": "origin: implied – required for no-ack detection",
+      "source_hlj_id": "REQ 001-008",
+      "domain_id": "P-SAAS-073"
+    },
+    {
+      "id": "REQ-162-HLJ-Chunk_1-Item_9-v1.0",
+      "domain": "sass",
+      "summary": "execute commands immediately upon receipt",
+      "priority": "Medium",
+      "tags": [
+        "timeliness",
+        "execution",
+        "latency"
+      ],
+      "subdomain": "unknown",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied – per 'effective immediately' directive",
+      "source_hlj_id": "REQ 001-009",
+      "domain_id": "P-SAAS-073"
+    },
+    {
+      "id": "REQ-162-HLJ-Chunk_1-Item_10-v1.0",
+      "domain": "sass",
+      "summary": "store execution logs in local memory",
+      "priority": "Low",
+      "tags": [
+        "error_logging",
+        "local_storage"
+      ],
+      "subdomain": "unknown",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied – needed for status reporting",
+      "source_hlj_id": "REQ 001-010",
+      "domain_id": "P-SAAS-073"
+    }
+  ]
+}

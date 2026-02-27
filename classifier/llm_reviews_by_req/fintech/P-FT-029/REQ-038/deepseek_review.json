@@ -1,0 +1,25 @@
+{
+  "req_id": "REQ-038",
+  "doc_id": "c61b5d5d-e3ed-5999-9889-e3083494dca8",
+  "domain": "fintech",
+  "prompt_id": "P-FT-029",
+  "model": "deepseek-r1:7b",
+  "review_timestamp": "2026-01-20T22:32:49.681488+00:00",
+  "counts": {
+    "total": 1,
+    "llm_pos": 1,
+    "pipe_pos": 1
+  },
+  "reviews": [
+    {
+      "sent_id": "REQ-038::s001",
+      "order": 1,
+      "text": "For all BNPL transactions globally, the system shall, in compliance with CFPB Reg Z and EU PSD2, assess a late fee calculated as max(USD 5, 3% of the overdue principal), with any fractional cent rounded up; log all such fee calculations in the txn_fees table with fee_origin='BNPL_LATE'; and ensure that the feature flag late_fee_v2 is enabled in production by 23:59 UTC tonight, with an audit trail.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.95,
+      "reason_code": "PERFORMANCE_REQUIREMENT",
+      "reason_text": "The sentence outlines specific enforceable system behaviors, such as calculating fees and logging transactions, which are performance-related requirements."
+    }
+  ]
+}

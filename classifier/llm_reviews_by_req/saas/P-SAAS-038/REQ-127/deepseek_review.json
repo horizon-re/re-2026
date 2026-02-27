@@ -1,0 +1,77 @@
+{
+  "req_id": "REQ-127",
+  "doc_id": "62605692-7b0a-5683-9174-3dbf7d917335",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-038",
+  "model": "deepseek-r1:7b",
+  "review_timestamp": "2026-01-20T23:30:16.463004+00:00",
+  "counts": {
+    "total": 6,
+    "llm_pos": 4,
+    "pipe_neg": 6,
+    "flip_neg_to_pos": 4,
+    "llm_neg": 2
+  },
+  "reviews": [
+    {
+      "sent_id": "REQ-127::s001",
+      "order": 1,
+      "text": "Please prioritize immediate rollout of consent tracking and one-click opt-out automation to meet CCPA compliance requirements.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Imposes CCPA compliance by requiring specific actions."
+    },
+    {
+      "sent_id": "REQ-127::s002",
+      "order": 2,
+      "text": "The deadline for full deployment is 48 hours from now.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Only provides a deadline without action."
+    },
+    {
+      "sent_id": "REQ-127::s003",
+      "order": 3,
+      "text": "As part of this rollout, ensure an audit-ready log is maintained for all consent changes, capturing user ID, timestamp, and source IP for each event.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Requires maintaining logs with specific data."
+    },
+    {
+      "sent_id": "REQ-127::s004",
+      "order": 4,
+      "text": "Additionally, set up a nightly export of these logs to the designated S3 bucket ccpa-audit-logs, encrypted using AES-256.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Imposes the action of exporting logs encrypted using AES-256."
+    },
+    {
+      "sent_id": "REQ-127::s005",
+      "order": 5,
+      "text": "Please confirm the assigned development owner responsible for this rollout and provide a rollback plan in case any deployment issues arise.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Discusses roles but doesn't enforce behavior."
+    },
+    {
+      "sent_id": "REQ-127::s006",
+      "order": 6,
+      "text": "Immediate acknowledgment is required.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Requires immediate acknowledgment of completion."
+    }
+  ]
+}

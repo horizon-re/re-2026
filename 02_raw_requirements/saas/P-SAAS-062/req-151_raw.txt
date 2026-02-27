@@ -1,0 +1,7 @@
+**Root Cause Analysis (RCA) – Negative CPU Metric Due to Counter Reset and Rate Calculation Bug**
+
+A -17% CPU usage anomaly was observed, traced back to two compounding issues: a metric counter reset and an underlying bug in the Prometheus rate calculation. When a monitored service was restarted, its CPU counter reset to zero, which is expected behavior. However, the Prometheus `rate()` function used in our query did not properly account for this reset, resulting in an artificially negative delta between samples. This caused the system to report a negative CPU utilization, which is mathematically invalid but not automatically filtered out by default PromQL behavior.
+
+A patch has been applied to address this issue. First, we added a `clamp_min(0, rate(...))` operation in the PromQL expression to ensure that all computed rates are bounded at a minimum of zero. This change prevents negative values from being returned regardless of counter behavior. Additionally, a safeguard was added in the exporter logic to clamp any preprocessed CPU rates to zero if a reset is detected.
+
+To prevent recurrence, a dashboard alert was introduced to monitor for any negative values in critical metrics. This allows for early detection of similar anomalies and ensures timely remediation before impacting downstream systems.

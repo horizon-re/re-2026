@@ -1,0 +1,69 @@
+{
+  "req_id": "REQ-126",
+  "doc_id": "b613486e-3110-531d-9fe2-4af51070496b",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-037",
+  "model": "deepseek-r1:7b",
+  "review_timestamp": "2026-01-20T23:29:57.096834+00:00",
+  "counts": {
+    "total": 5,
+    "llm_neg": 4,
+    "pipe_pos": 1,
+    "flip_pos_to_neg": 1,
+    "pipe_neg": 4,
+    "llm_pos": 1,
+    "flip_neg_to_pos": 1
+  },
+  "reviews": [
+    {
+      "sent_id": "REQ-126::s001",
+      "order": 1,
+      "text": "If your platform can schedule posts but still can’t auto-tag them with 90%+ accuracy, what are we even doing??",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Expresses frustration but not a requirement."
+    },
+    {
+      "sent_id": "REQ-126::s002",
+      "order": 2,
+      "text": "I’m DONE wasting time manually tagging every post.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Complaint about manual work."
+    },
+    {
+      "sent_id": "REQ-126::s003",
+      "order": 3,
+      "text": "Fix it now or I’m finding a platform that respects my sanity next month.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Imposes an enforceable behavior to fix a problem."
+    },
+    {
+      "sent_id": "REQ-126::s004",
+      "order": 4,
+      "text": "🫠",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.5,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "No content provided."
+    },
+    {
+      "sent_id": "REQ-126::s005",
+      "order": 5,
+      "text": "#DoBetter",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Hashtag without context."
+    }
+  ]
+}

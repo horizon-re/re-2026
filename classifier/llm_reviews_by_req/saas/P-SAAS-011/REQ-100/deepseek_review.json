@@ -1,0 +1,1139 @@
+{
+  "req_id": "REQ-100",
+  "doc_id": "1b1ffc47-aa51-5d86-8b5d-e3e32de026e4",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-011",
+  "model": "deepseek-r1:7b",
+  "review_timestamp": "2026-01-20T23:16:08.859021+00:00",
+  "counts": {
+    "total": 112,
+    "llm_pos": 41,
+    "pipe_pos": 20,
+    "llm_neg": 71,
+    "flip_pos_to_neg": 14,
+    "pipe_neg": 92,
+    "flip_neg_to_pos": 35
+  },
+  "reviews": [
+    {
+      "sent_id": "REQ-100::s001",
+      "order": 1,
+      "text": "Proactive Alerting for API Throttling: Ensuring Continuous Service AvailabilityThe proliferation of application programming interfaces (APIs) has become a cornerstone of modern software architecture, facilitating seamless communication and data exchange between disparate systems.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "The sentence outlines a proactive alerting strategy to maintain service availability."
+    },
+    {
+      "sent_id": "REQ-100::s002",
+      "order": 2,
+      "text": "These interfaces are essential for a wide range of functionalities, from simple data retrieval to complex transactional processes.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Explains the importance of API interfaces but doesn't impose enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-100::s003",
+      "order": 3,
+      "text": "However, to maintain stability, prevent abuse, and ensure fair resource allocation, API providers often implement throttling mechanisms.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Discusses the necessity of preventing abuse but isn't a requirement."
+    },
+    {
+      "sent_id": "REQ-100::s004",
+      "order": 4,
+      "text": "API throttling, in its various forms, limits the number of requests a client can make within a specific timeframe or the total number of requests within a given period, such as a month.1 While crucial for the health of the API ecosystem, hitting these limits can lead to service disruptions, impacting application functionality and user experience.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Imposes enforceable limits on API usage."
+    },
+    {
+      "sent_id": "REQ-100::s005",
+      "order": 5,
+      "text": "Establishing proactive alerts before reaching these throttling thresholds is therefore paramount for maintaining continuous service availability and optimizing resource management.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describes the report's content but doesn't specify requirements."
+    },
+    {
+      "sent_id": "REQ-100::s006",
+      "order": 6,
+      "text": "This report delves into the strategies and best practices for setting up automatic alerts for API throttling, encompassing the understanding of throttling mechanisms, monitoring usage, exploring alerting options, forecasting consumption, defining thresholds, configuring alerts, and adopting effective management practices.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Explains concepts without imposing new behavior."
+    },
+    {
+      "sent_id": "REQ-100::s007",
+      "order": 7,
+      "text": "Understanding the Fundamentals of API ThrottlingA fundamental aspect of managing API consumption involves comprehending the distinction between rate limits and monthly quotas.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Explains rate limits but isn't a requirement."
+    },
+    {
+      "sent_id": "REQ-100::s008",
+      "order": 8,
+      "text": "Rate limits are designed to control the immediate flow of traffic, typically defining the maximum number of requests allowed within a short time window, such as seconds, minutes, or hours.1 These limits prevent sudden spikes in traffic from overwhelming the API infrastructure.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.75,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Explains mechanism but doesn't enforce new behavior."
+    },
+    {
+      "sent_id": "REQ-100::s009",
+      "order": 9,
+      "text": "On the other hand, monthly quotas represent the total allowable requests over the course of a calendar month.18 Exceeding these quotas can result in service blocks or additional charges.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.85,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Explains quotas but isn't a requirement."
+    },
+    {
+      "sent_id": "REQ-100::s010",
+      "order": 10,
+      "text": "An effective alerting strategy must consider both the immediate constraints imposed by rate limits and the longer-term consumption tracked by monthly quotas to provide comprehensive protection against service interruptions and unexpected costs.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Imposes protection against service disruptions."
+    },
+    {
+      "sent_id": "REQ-100::s011",
+      "order": 11,
+      "text": "The difference in their temporal scope necessitates distinct approaches to setting alert thresholds and notification frequencies.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.85,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Explains alert thresholds but doesn't enforce them."
+    },
+    {
+      "sent_id": "REQ-100::s012",
+      "order": 12,
+      "text": "API providers employ various throttling algorithms and techniques to enforce these limits.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.75,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Explains mechanisms without enforcing new behavior."
+    },
+    {
+      "sent_id": "REQ-100::s013",
+      "order": 13,
+      "text": "Understanding these mechanisms is crucial for designing an appropriate alerting strategy.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describes algorithms but isn't a requirement."
+    },
+    {
+      "sent_id": "REQ-100::s014",
+      "order": 14,
+      "text": "Algorithm NameDescriptionKey CharacteristicsRelevant Snippet IDsRate Limiting (Fixed Window)Allows a set number of requests within a specific time frame, resetting at the window's start.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Provides technical details without enforcing new behavior."
+    },
+    {
+      "sent_id": "REQ-100::s015",
+      "order": 15,
+      "text": "Can lead to traffic bursts at the beginning of a window.3Rate Limiting (Sliding Window)Similar to fixed window, but the time frame shifts with each new request.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Explains window techniques but isn't a requirement."
+    },
+    {
+      "sent_id": "REQ-100::s016",
+      "order": 16,
+      "text": "Provides more granular control over request rates.6Token BucketA virtual bucket with a fixed capacity; tokens are added at a specific rate, and each request consumes one.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.85,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Explains token bucket but doesn't enforce it."
+    },
+    {
+      "sent_id": "REQ-100::s017",
+      "order": 17,
+      "text": "Allows for short bursts of traffic; adjustable burst capacity and refill rate.2Leaky BucketA queue of fixed size where requests are processed at a constant rate; excess requests are dropped if full.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.65,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Explains leaky bucket without enforcing new behavior."
+    },
+    {
+      "sent_id": "REQ-100::s018",
+      "order": 18,
+      "text": "Ensures a steady flow of requests; can lead to request starvation if processing times vary.2Concurrent Request LimitingRestricts the number of simultaneous requests a client can make.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-100::s019",
+      "order": 19,
+      "text": "Effective for managing resources with fixed concurrency limits, such as database connections.2Dynamic ThrottlingAdjusts throttling limits in real-time based on server load and other conditions.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Explains algorithms without enforcing new behavior."
+    },
+    {
+      "sent_id": "REQ-100::s020",
+      "order": 20,
+      "text": "Adapts to changing server conditions; can optimize resource utilization during low-load periods.2Hard ThrottlingRejects requests that exceed the defined limit.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Explains hard throttling but isn't a requirement."
+    },
+    {
+      "sent_id": "REQ-100::s021",
+      "order": 21,
+      "text": "Simple to implement; provides predictable behavior; effectively prevents API abuse.2Soft ThrottlingDelays requests that exceed the limit instead of immediately rejecting them.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.85,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Explains soft throttling without enforcing new behavior."
+    },
+    {
+      "sent_id": "REQ-100::s022",
+      "order": 22,
+      "text": "Can provide a better user experience during temporary traffic spikes.2\nFixed window algorithms divide time into fixed intervals, permitting a certain number of API calls within each interval.3",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.75,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Explains algorithm types but isn't a requirement."
+    },
+    {
+      "sent_id": "REQ-100::s023",
+      "order": 23,
+      "text": "A potential drawback of this approach is the possibility of traffic surges at the beginning of each new window, which could still strain the system.3 Sliding window techniques refine this by considering a rolling time window, offering a more precise control over request rates.6 The token bucket algorithm operates on the principle of a virtual bucket that holds a certain number of tokens, representing the permission to make an API call.2 Tokens are added to the bucket at a defined rate, and each API request consumes a token.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Discusses mechanisms without enforcing new behavior."
+    },
+    {
+      "sent_id": "REQ-100::s024",
+      "order": 24,
+      "text": "This method allows for occasional bursts of traffic as long as there are tokens available.2",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "States that occasional traffic bursts are allowed as long as tokens are available."
+    },
+    {
+      "sent_id": "REQ-100::s025",
+      "order": 25,
+      "text": "The leaky bucket algorithm, conversely, uses a queue where incoming requests are added, and they are processed at a steady rate, like water dripping from a leaky bucket.2",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-100::s026",
+      "order": 26,
+      "text": "If the queue becomes full, subsequent requests are discarded.3 Concurrent request limiting focuses on the number of simultaneous connections or requests from a client, irrespective of the overall rate.2",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-100::s027",
+      "order": 27,
+      "text": "This is particularly useful for managing resources like database connections that have inherent concurrency limits.2",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Imposes a constraint on concurrency limits for resource management."
+    },
+    {
+      "sent_id": "REQ-100::s028",
+      "order": 28,
+      "text": "Dynamic throttling introduces adaptability by adjusting the throttling limits based on real-time factors such as server load or application performance.2",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-100::s029",
+      "order": 29,
+      "text": "This allows the API to handle fluctuations in demand more gracefully.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-100::s030",
+      "order": 30,
+      "text": "Finally, the distinction between hard and soft throttling lies in how limits are enforced: hard throttling immediately rejects requests exceeding the threshold 2, while soft throttling might delay the requests, providing a more gradual approach to managing traffic.2Throttling can also be enforced at various levels, including per individual user or application (user-level), based on unique API keys (API key-based), by the originating IP address (IP address-based), or at the overall system level to protect backend services.1",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-100::s031",
+      "order": 31,
+      "text": "The choice of throttling level depends on the API provider's specific needs and the desired granularity of control.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-100::s032",
+      "order": 32,
+      "text": "Strategies for Monitoring Current API UsageEffective management of API throttling requires robust monitoring of current usage patterns.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-100::s033",
+      "order": 33,
+      "text": "This involves leveraging the tools and metrics that provide visibility into API traffic and consumption.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-100::s034",
+      "order": 34,
+      "text": "Many API providers offer built-in dashboards that allow users to track their API usage directly.20 For instance, Amazon API Gateway provides a dashboard to view metrics related to API requests and latency.30 Similarly, Google Cloud APIs offer an API Dashboard and integration with Cloud Monitoring to track usage, quota, and billing information.32 Platforms like Zendesk offer an API usage dashboard within the Admin Center, providing insights into request volume and error rates.27 Zoho CRM features an API dashboard that allows users to view usage statistics based on modules, IP addresses, methods, users, or time.28 OpenAI also provides a Usage Dashboard to monitor API activity and costs.26 These provider-specific dashboards often offer a convenient starting point for monitoring API consumption and may include basic alerting features.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-100::s035",
+      "order": 35,
+      "text": "Beyond built-in tools, third-party API monitoring tools offer more advanced functionalities and often support monitoring across multiple API providers.34 Tools like Moesif provide detailed API analytics and user behavior insights 37, while Postman API Monitors allow for automated testing and monitoring.35 Datadog offers comprehensive monitoring across infrastructure, logs, and applications, including detailed API performance metrics.38 Prometheus, an open-source monitoring solution, is often used in conjunction with Alertmanager for robust alerting in complex environments.37 Uptrends focuses on API uptime and performance monitoring with global checkpoint coverage.45 These third-party solutions often provide greater flexibility in creating custom dashboards, setting up sophisticated alerts, and integrating with a wider range of notification systems.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-100::s036",
+      "order": 36,
+      "text": "To effectively manage throttling, it is crucial to track specific key metrics related to API usage.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-100::s037",
+      "order": 37,
+      "text": "The total number of API calls provides a fundamental measure of consumption.1 Monitoring error rates, particularly the occurrence of 429 \"Too Many Requests\" errors, indicates when throttling limits are being hit.1 Request latency and response times can also be indicators of potential throttling or performance degradation under heavy load.34 Throughput, measured as the number of requests processed per unit of time (e.g., per second, minute, or hour), helps understand the volume of API traffic.34 Finally, tracking quota usage against the defined limits, whether rate limits or monthly quotas, is essential for proactive management.20",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-100::s038",
+      "order": 38,
+      "text": "By consistently monitoring these metrics, users can gain valuable insights into their API consumption patterns and identify potential issues before they lead to service disruptions.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-100::s039",
+      "order": 39,
+      "text": "Exploring Built-in Alerting Capabilities from API ProvidersMany API providers offer built-in alerting capabilities that can be configured to notify users when their API usage approaches or exceeds defined thresholds.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Sets a constraint on API request quotas for metered billing plans."
+    },
+    {
+      "sent_id": "REQ-100::s040",
+      "order": 40,
+      "text": "These alerts can often be set up directly through the provider's management console or API.For users of AWS API Gateway, it is possible to create alarms based on CloudWatch metrics that track various aspects of API usage, including request counts, latency, and error rates.53 These alarms can be configured to trigger notifications via Amazon SNS (Simple Notification Service) to email, SMS, or other endpoints when specified thresholds are breached.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-100::s041",
+      "order": 41,
+      "text": "For example, an alarm can be set to trigger when the number of API requests exceeds a certain percentage of the monthly quota.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-100::s042",
+      "order": 42,
+      "text": "Google Cloud Monitoring provides a comprehensive suite of tools for creating alerts based on a wide range of metrics, including those related to Google Cloud APIs.32 Users can define alert policies that specify the metrics to monitor, the conditions under which an alert should fire (e.g., exceeding a certain percentage of quota), and the notification channels to use, such as email, SMS, or Pub/Sub.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Provides alerting based on metrics."
+    },
+    {
+      "sent_id": "REQ-100::s043",
+      "order": 43,
+      "text": "Google Cloud also offers quota alerts directly from the IAM & Admin > Quotas & System Limits page, allowing users to receive notifications when their quota usage reaches a specified percentage of the maximum value.58Zendesk offers in-product warning and error messages that appear on the Admin Center home page and on the API usage page when an account is approaching its API usage limit.27",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Imposes notification limits for quota usage."
+    },
+    {
+      "sent_id": "REQ-100::s044",
+      "order": 44,
+      "text": "These notifications provide a visual indication of nearing the defined capacity.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-100::s045",
+      "order": 45,
+      "text": "Zoho Desk allows users to configure API usage alerts with customizable thresholds and recipients.59 Administrators can set up alerts to be sent to specific agents, profiles, or the primary contact when API usage reaches predefined percentages (e.g., 80%, 90%, 100%) of the limit.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-100::s046",
+      "order": 46,
+      "text": "Stripe provides billing alerts that can be relevant for tracking API request quotas, especially for metered billing plans.60 Users can create billing alerts to be notified when their usage crosses certain thresholds on a meter, which can be configured to track API requests.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-100::s047",
+      "order": 47,
+      "text": "While these built-in alerting features offer convenience and direct integration with the API platform, they may have limitations in terms of customization and flexibility compared to dedicated monitoring tools.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-100::s048",
+      "order": 48,
+      "text": "The range of metrics available for alerting, the types of notification channels supported, and the complexity of alert logic might be restricted.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-100::s049",
+      "order": 49,
+      "text": "For users with more intricate monitoring and alerting requirements, or those managing APIs across multiple providers, third-party solutions often offer enhanced capabilities.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.7,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Moesif offers detailed API analytics and integration with gateways, suitable for teams prioritizing user experience."
+    },
+    {
+      "sent_id": "REQ-100::s050",
+      "order": 50,
+      "text": "Evaluating Third-Party API Monitoring and Alerting SolutionsFor organizations requiring more advanced API monitoring and alerting capabilities, a variety of third-party solutions are available.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.7,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Postman provides versatile monitoring, testing, and collaboration features."
+    },
+    {
+      "sent_id": "REQ-100::s051",
+      "order": 51,
+      "text": "These tools often provide a broader range of features, greater customization options, and the ability to monitor APIs from various providers in a centralized platform.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Datadog offers comprehensive monitoring across cloud environments with features like end-to-end observability."
+    },
+    {
+      "sent_id": "REQ-100::s052",
+      "order": 52,
+      "text": "Moesif stands out for its detailed API analytics and focus on user behavior.37 It offers real-time event logging, advanced alerting features, and integration with API gateways and management platforms, making it suitable for teams prioritizing user experience and API governance.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Prometheus excels in data collection and Alertmanager handles alert routing."
+    },
+    {
+      "sent_id": "REQ-100::s053",
+      "order": 53,
+      "text": "Postman API Monitors are a versatile tool for API testing, monitoring, and collaboration.35 They allow users to schedule automated tests to ensure API health and set up customizable alerts based on performance metrics and error rates.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "AlertSite offers API performance monitoring and reusable test features."
+    },
+    {
+      "sent_id": "REQ-100::s054",
+      "order": 54,
+      "text": "Postman's seamless integration with CI/CD workflows makes it a strong choice for development teams.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Postman integrates with CI/CD workflows, appealing to development teams."
+    },
+    {
+      "sent_id": "REQ-100::s055",
+      "order": 55,
+      "text": "Datadog is a comprehensive monitoring platform known for its end-to-end observability across cloud environments, including APIs.38 It offers real-time metrics, distributed tracing, log management, and robust alerting features, making it ideal for enterprises needing full-stack observability.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Datadog provides robust monitoring and alerting across environments."
+    },
+    {
+      "sent_id": "REQ-100::s056",
+      "order": 56,
+      "text": "Prometheus, often paired with Alertmanager, provides a highly customizable open-source monitoring and alerting solution.37 Prometheus excels at collecting and storing time-series data, while Alertmanager handles the routing, grouping, and delivery of alerts to various notification channels.61",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Prometheus offers open-source, customizable monitoring solutions."
+    },
+    {
+      "sent_id": "REQ-100::s057",
+      "order": 57,
+      "text": "This combination is powerful for complex monitoring scenarios but may require more technical expertise to set up and manage.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-100::s058",
+      "order": 58,
+      "text": "AlertSite by SmartBear focuses specifically on API performance and availability monitoring.39 It offers features for monitoring API transactions, alerting the right teams immediately upon degradation, and monitoring both public and private APIs.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "AlertSite focuses on API monitoring and reusable test features."
+    },
+    {
+      "sent_id": "REQ-100::s059",
+      "order": 59,
+      "text": "AlertSite can also reuse existing SoapUI functional tests or Swagger/OpenAPI files to automate monitor creation.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-100::s060",
+      "order": 60,
+      "text": "The effectiveness of these third-party tools is often enhanced by their ability to integrate with a wide array of existing systems.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-100::s061",
+      "order": 61,
+      "text": "Most offer integrations with popular notification channels such as Slack, email, SMS, PagerDuty, and generic webhooks.8",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Most tools integrate with popular notification channels."
+    },
+    {
+      "sent_id": "REQ-100::s062",
+      "order": 62,
+      "text": "This ensures that alerts are delivered through the communication platforms that teams already use.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-100::s063",
+      "order": 63,
+      "text": "Additionally, integration with incident management platforms like Jira or ServiceNow can help streamline the incident response workflow by automatically creating tickets or triggering other actions when API throttling alerts are received.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-100::s064",
+      "order": 64,
+      "text": "Tool NameKey FeaturesProsConsStarting Price (approx.)Relevant Snippet IDsMoesifUser behavior analytics, real-time logging, advanced alerting, API governanceDetailed insights, user-centric metrics, integrates with API gatewaysMay have a steeper learning curve for some usersPay-as-you-go37Postman API MonitorsAutomated API testing, scheduled monitoring, customizable alerts, CI/CD integrationEasy to use for existing Postman users, good for development workflowsMay lack deep analytics compared to dedicated monitoring toolsFree tier available, premium plans from $12/month35DatadogReal-time metrics, distributed tracing, log management, robust alerting, full-stack observabilityComprehensive monitoring, integrations with many cloud servicesCan be expensive for large-scale deployments$15/host/month38Prometheus (with Alertmanager)Open-source, highly customizable metrics collection and alerting, powerful query language (PromQL)Flexible, scalable, large community supportRequires technical expertise to set up and manageFree37-67AlertSiteAPI transaction monitoring, granular alert targeting, SLA reporting, private API monitoringFocuses on API performance and availability, detailed alerting optionsPricing may be higher and less transparentLikely expensive - pricing hidden39",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-100::s065",
+      "order": 65,
+      "text": "Forecasting API Usage for Effective Alert Threshold DefinitionSetting effective alert thresholds requires an understanding of future API usage.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.3,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "This sentence discusses analyzing historical data for future trend predictions but doesn't enforce any behavior."
+    },
+    {
+      "sent_id": "REQ-100::s066",
+      "order": 66,
+      "text": "By analyzing historical data and trends, users can identify patterns in their API consumption, such as daily or weekly peaks, and seasonal variations.77 Reviewing past usage can reveal growth trends and help estimate future demand.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-100::s067",
+      "order": 67,
+      "text": "This historical perspective forms a crucial baseline for predicting consumption and setting initial alert thresholds.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.3,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describing historical perspective without setting specific enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-100::s068",
+      "order": 68,
+      "text": "It is also essential to account for anticipated traffic and growth that might not be reflected in historical data.77 Planned feature releases, marketing campaigns, or expansions into new markets can lead to significant increases in API usage.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-100::s069",
+      "order": 69,
+      "text": "Collaborating with product and business teams to understand these upcoming events and their potential impact on API traffic is vital for refining forecasts and ensuring that alert thresholds are set appropriately to provide sufficient warning.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.3,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Collaboration with teams to understand future events but not enforcing any requirements."
+    },
+    {
+      "sent_id": "REQ-100::s070",
+      "order": 70,
+      "text": "Several options exist for utilizing forecasting APIs and tools to gain more sophisticated predictions.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.3,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describing options for forecasting without specific enforceable actions."
+    },
+    {
+      "sent_id": "REQ-100::s071",
+      "order": 71,
+      "text": "Some API platforms offer built-in forecasting features based on historical data.77 For example, SAP Integration Suite includes a Predictions feature that leverages AI to forecast future API call volumes.77 Azure Maps Traffic API can be used to predict traffic patterns.84",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.3,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Specific features of a platform without enforcing any requirement."
+    },
+    {
+      "sent_id": "REQ-100::s072",
+      "order": 72,
+      "text": "Additionally, spreadsheet software or dedicated data analysis tools can be employed to build custom forecasting models based on historical API usage data.87",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.85,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describes tool usage but does not impose enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-100::s073",
+      "order": 73,
+      "text": "These tools can help identify complex patterns and provide more accurate predictions than simple trend extrapolation.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Explains tool benefits without imposing enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-100::s074",
+      "order": 74,
+      "text": "Determining Optimal Alert Thresholds for Proactive NotificationDetermining the right alert thresholds is a delicate balance between providing early warnings of potential issues and avoiding alert fatigue caused by excessive notifications.88 Setting thresholds too low can lead to a barrage of alerts for minor fluctuations in usage, while setting them too high might result in missing critical warnings until it's too late to prevent throttling.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.75,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describes threshold determination without enforcing specific action."
+    },
+    {
+      "sent_id": "REQ-100::s075",
+      "order": 75,
+      "text": "Optimal thresholds should be set by carefully considering the API's specific rate limits and monthly quota, as well as historical and anticipated usage patterns.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Sets optimal threshold levels."
+    },
+    {
+      "sent_id": "REQ-100::s076",
+      "order": 76,
+      "text": "A common approach is to set initial warning thresholds at certain percentages of the monthly quota, such as 70%, 85%, and 95%.59 These tiered thresholds can trigger different levels of notification or action.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Imposes the behavior of setting initial warning thresholds."
+    },
+    {
+      "sent_id": "REQ-100::s077",
+      "order": 77,
+      "text": "For instance, a 70% threshold might send a warning email, while a 95% threshold could trigger an urgent alert to the on-call team.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Imposes the behavior of sending alerts based on thresholds."
+    },
+    {
+      "sent_id": "REQ-100::s078",
+      "order": 78,
+      "text": "These initial thresholds should then be adjusted based on observed peak usage and any expected growth in traffic.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-100::s079",
+      "order": 79,
+      "text": "If historical data shows that typical peak usage reaches 80% of the quota, the initial warning threshold might need to be set even higher to avoid unnecessary alerts during normal operations.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Imposes the behavior of adjusting thresholds based on historical data."
+    },
+    {
+      "sent_id": "REQ-100::s080",
+      "order": 80,
+      "text": "For a more adaptive approach, dynamic threshold adjustments can be implemented using monitoring tools.2",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.95,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Imposes the behavior of dynamic threshold adjustments."
+    },
+    {
+      "sent_id": "REQ-100::s081",
+      "order": 81,
+      "text": "These tools can automatically adjust alert thresholds based on real-time usage trends or the current load on the API infrastructure.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Imposes the behavior of real-time threshold adjustments."
+    },
+    {
+      "sent_id": "REQ-100::s082",
+      "order": 82,
+      "text": "For example, if the API is experiencing unusually high traffic, the warning threshold could be temporarily lowered to provide earlier notification of potential quota exhaustion.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-100::s083",
+      "order": 83,
+      "text": "Similarly, during periods of low traffic, the threshold could be raised to reduce alert noise.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Imposes the behavior of lowering thresholds during low traffic."
+    },
+    {
+      "sent_id": "REQ-100::s084",
+      "order": 84,
+      "text": "This dynamic adjustment helps ensure that alerts are relevant to the current situation and reduces the likelihood of both missed warnings and alert fatigue.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Imposes the behavior of reducing alert noise."
+    },
+    {
+      "sent_id": "REQ-100::s085",
+      "order": 85,
+      "text": "Monthly QuotaWarning Threshold 1 (70%)Warning Threshold 2 (85%)Critical Threshold (95%)Actions to Take10,0007,0008,5009,500Investigate usage, optimize code, consider quota increase50,00035,00042,50047,500Review traffic sources, identify potential spikes, plan for scaling100,00070,00085,00095,000Analyze usage patterns, forecast future needs, proactively request quota increaseA Comprehensive Guide to Configuring API Throttling AlertsConfiguring API throttling alerts effectively involves a step-by-step process tailored to the specific platform or tool being used.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Imposes the behavior of adjusting thresholds based on usage."
+    },
+    {
+      "sent_id": "REQ-100::s086",
+      "order": 86,
+      "text": "For AWS API Gateway, alerts can be configured using CloudWatch alarms.53 This involves navigating to the CloudWatch console, creating a new alarm, and selecting the appropriate metric from the AWS/Usage namespace related to API Gateway (e.g., Count for total requests).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Imposes the behavior of configuring alerts using CloudWatch alarms."
+    },
+    {
+      "sent_id": "REQ-100::s087",
+      "order": 87,
+      "text": "Users then define the threshold value (e.g., a percentage of the monthly quota), the period over which the metric is evaluated, and the action to take when the threshold is breached, such as sending an email notification via SNS.In Google Cloud Monitoring, creating alert policies involves selecting the API usage metric (e.g., serviceruntime.googleapis.com/api/request_count for request count or serviceruntime.googleapis.com/quota/allocation/usage for quota usage), defining the condition (e.g., is greater than a certain value), and configuring the notification channels.32 This can be done through the Google Cloud console or programmatically using the Cloud Monitoring API.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Imposes the behavior of setting alert conditions using Google Cloud Monitoring."
+    },
+    {
+      "sent_id": "REQ-100::s088",
+      "order": 88,
+      "text": "For quota-specific alerts, the Quotas & System Limits page offers a direct way to set up notifications.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Imposes the behavior of creating quota-specific alerts."
+    },
+    {
+      "sent_id": "REQ-100::s089",
+      "order": 89,
+      "text": "When using third-party monitoring tools, the configuration process will vary.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-100::s090",
+      "order": 90,
+      "text": "In Datadog, users can create monitors based on API usage metrics collected by the Datadog agent or integrations.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Explains how to set up notifications without imposing specific actions."
+    },
+    {
+      "sent_id": "REQ-100::s091",
+      "order": 91,
+      "text": "This involves selecting the metric, defining the alert conditions (thresholds, time windows), and choosing the notification methods (e.g., Slack, email, PagerDuty).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.75,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describes monitoring setup without enforcing specific behavior."
+    },
+    {
+      "sent_id": "REQ-100::s092",
+      "order": 92,
+      "text": "For Prometheus, alerting rules are defined in YAML files using PromQL expressions.61 These rules specify the conditions under which an alert should fire and can include labels and annotations for context.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Imposes alerting rules defined by YAML files."
+    },
+    {
+      "sent_id": "REQ-100::s093",
+      "order": 93,
+      "text": "Prometheus then sends these alerts to Alertmanager, which is configured separately to handle routing and notifications to various channels.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Explains alert routing but does not impose enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-100::s094",
+      "order": 94,
+      "text": "Moesif allows users to set up alerts based on various criteria, including request volume, error rates, and user behavior, through its web interface or API.Defining appropriate alert notification channels is crucial for ensuring that alerts are received by the relevant teams.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Imposes the behavior of setting up alerts based on various criteria."
+    },
+    {
+      "sent_id": "REQ-100::s095",
+      "order": 95,
+      "text": "Common options include email, SMS, and integrations with collaboration platforms like Slack or incident management tools like PagerDuty.62 For critical alerts, it might be necessary to implement escalation policies that ensure the alert is escalated to different teams or individuals if it is not acknowledged or resolved within a certain timeframe.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Imposes the behavior of configuring escalation policies."
+    },
+    {
+      "sent_id": "REQ-100::s096",
+      "order": 96,
+      "text": "The content of alert messages should be carefully crafted to provide all the necessary information for responders to understand and address the issue quickly.66",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-100::s097",
+      "order": 97,
+      "text": "This typically includes the API endpoint affected, the specific metric that triggered the alert, the threshold value that was exceeded, and a timestamp of when the alert occurred.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Imposes the behavior of documenting alerts with specific details."
+    },
+    {
+      "sent_id": "REQ-100::s098",
+      "order": 98,
+      "text": "Including links to relevant API documentation, runbooks, or dashboards can also significantly improve the efficiency of incident response.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Discusses improving incident response efficiency through API documentation but not enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-100::s099",
+      "order": 99,
+      "text": "Alert messages should be clear, concise, and actionable, enabling the recipient to immediately grasp the problem and know where to look for more information or how to begin troubleshooting.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-100::s100",
+      "order": 100,
+      "text": "Best Practices for Holistic API Quota ManagementProactive alerting is a key component of a broader strategy for managing API quotas effectively.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.5,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Mentions proactive alerting as part of a broader strategy but not enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-100::s101",
+      "order": 101,
+      "text": "Several best practices should be adopted to ensure optimal API performance and prevent service disruptions.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-100::s102",
+      "order": 102,
+      "text": "Defining clear rate limiting strategies is fundamental.8",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.7,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Clarifies the fundamental nature of clear rate limiting as necessary behavior."
+    },
+    {
+      "sent_id": "REQ-100::s103",
+      "order": 103,
+      "text": "This involves documenting the specific rate limits and monthly quotas for API consumers, choosing appropriate rate limiting algorithms based on the API's functionality and anticipated traffic patterns 2, and implementing rate limiting at the most suitable levels, whether by API key, user, or IP address.4When API requests are throttled, it is crucial to implement effective error handling.1",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Details enforcing behaviors like rate limiting and error handling."
+    },
+    {
+      "sent_id": "REQ-100::s104",
+      "order": 104,
+      "text": "This includes returning standard HTTP status codes, such as 429 \"Too Many Requests\", and providing informative error messages to the client.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "States enforcing return of HTTP status codes and error messages."
+    },
+    {
+      "sent_id": "REQ-100::s105",
+      "order": 105,
+      "text": "Including a \"Retry-After\" header in the response can also guide clients on when they can safely retry their request.8Transparency with API consumers about quota information is essential.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.7,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Mentions enforcing behaviors like Retry-After headers."
+    },
+    {
+      "sent_id": "REQ-100::s106",
+      "order": 106,
+      "text": "This can be achieved by communicating quota information clearly in the API documentation 8 and by providing real-time feedback on their current usage through HTTP response headers like X-RateLimit-Limit, X-RateLimit-Remaining, and X-RateLimit-Reset.8 This allows developers to proactively manage their API calls and avoid hitting the limits unexpectedly.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Details enforced behaviors for monitoring and feedback."
+    },
+    {
+      "sent_id": "REQ-100::s107",
+      "order": 107,
+      "text": "Finally, API quota management should be an ongoing process involving continuous monitoring, testing, and refinement of throttling policies.1 Regularly monitoring API usage and the effectiveness of the configured alerts is necessary to identify any issues or areas for improvement.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.7,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "States an ongoing process for monitoring and refinement, which is enforceable."
+    },
+    {
+      "sent_id": "REQ-100::s108",
+      "order": 108,
+      "text": "Testing the throttling mechanisms under various load conditions helps ensure they function as expected and can handle peak traffic.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.6,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Mentions enforcing testing under various loads."
+    },
+    {
+      "sent_id": "REQ-100::s109",
+      "order": 109,
+      "text": "Based on the observed patterns and feedback from API consumers, the rate limits and alert thresholds should be adjusted as needed to optimize performance and maintain a balance between protecting the API infrastructure and providing adequate access for legitimate users.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-100::s110",
+      "order": 110,
+      "text": "Conclusion: Ensuring Robust API Performance and Preventing Service DisruptionsImplementing proactive alerting for API throttling is a vital practice for any organization relying on APIs for critical functions.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.5,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Conclusion emphasizing proactive alerting but not enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-100::s111",
+      "order": 111,
+      "text": "By understanding the nuances of different throttling mechanisms, establishing robust monitoring strategies, and carefully configuring alerts based on forecasted usage and appropriate thresholds, businesses can significantly reduce the risk of service disruptions and optimize their API resource management.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "EXAMPLE_OR_EXPLANATION",
+      "reason_text": "Provides detailed explanations about best practices but not enforceable."
+    },
+    {
+      "sent_id": "REQ-100::s112",
+      "order": 112,
+      "text": "The strategies and best practices outlined in this report provide a comprehensive framework for achieving this goal, ultimately contributing to a more reliable and performant API ecosystem that supports continuous service availability and a positive user experience.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "EXAMPLE_OR_EXPLANATION",
+      "reason_text": "Summarizes comprehensive strategies but not enforceable."
+    }
+  ]
+}

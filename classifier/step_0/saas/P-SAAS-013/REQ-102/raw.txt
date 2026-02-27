@@ -1,0 +1,7 @@
+Hey @dev-team, we need to get a centralized microservices health-check dashboard up ASAP. Being on call tonight has highlighted the need for better visibility into our services.
+
+Ideally, it should display key metrics like CPU%, memory%, restart count, and latency for all our microservices. Let's aim for a refresh interval of 30 seconds and include a "last updated" timestamp on each panel.
+
+We also need an alert rule configured: if any service restarts more than 5 times within a 10-minute window, it should automatically post a notification to the #devops channel.
+
+I've linked some example Grafana panels here: [Link to Grafana examples] and the backlog ticket for this task is here: [Link to Backlog Ticket]. Let's prioritize this tomorrow morning. Thanks!

@@ -1,0 +1,95 @@
+{
+  "doc_id": "fec79713-02b8-540e-b10a-21e1a7df55f7",
+  "req_key": "saas::P-SAAS-053::REQ-142",
+  "req_id": "REQ-142",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-053",
+  "source": {
+    "raw_path": "02_raw_requirements/saas/P-SAAS-053/req-142_raw.txt",
+    "refined_path": "03_refined_json_normalized/saas/P-SAAS-053/req-142_refined.json",
+    "origin": "both"
+  },
+  "text": "The billing rollover CRON job is misconfigured with an invalid schedule: `24:60 UTC on 30 Feb`. This hotfix updates the schedule to `00:00 UTC on the last day of the month`. The PR must include a unit test validating correct trigger behavior across leap years, 30- and 31-day months. As part of the code-freeze policy, the PR is gated—**next evaluated trigger must resolve to `2025-02-28 00:00 UTC`**, with proof via test output or logs. Please coordinate with the scheduler maintainer if changes affect adjacent jobs. All reviewers should verify boundary cases before approving.",
+  "structured_data": [
+    {
+      "id": "REQ-142-HLJ-Chunk_1-Item_1-v1.0",
+      "domain": "saas",
+      "summary": "Fix invalid CRON schedule (24:60 UTC on 30 Feb)",
+      "priority": "High",
+      "tags": [
+        "cron_schedule",
+        "billing",
+        "bug_fix"
+      ],
+      "subdomain": "scheduling",
+      "difficulty": 2,
+      "additionalNotes": "Correct malformed schedule to prevent execution failure.",
+      "source_hlj_id": "REQ 001-001",
+      "domain_id": "P-SAAS-053"
+    },
+    {
+      "id": "REQ-142-HLJ-Chunk_1-Item_2-v1.0",
+      "domain": "saas",
+      "summary": "Update CRON to 00:00 UTC on last day of month",
+      "priority": "High",
+      "tags": [
+        "cron_update",
+        "billing_rollover",
+        "time_fix"
+      ],
+      "subdomain": "scheduling",
+      "difficulty": 2,
+      "additionalNotes": "Standardize billing trigger to align with calendar month-end.",
+      "source_hlj_id": "REQ 001-002",
+      "domain_id": "P-SAAS-053"
+    },
+    {
+      "id": "REQ-142-HLJ-Chunk_1-Item_3-v1.0",
+      "domain": "saas",
+      "summary": "Add unit test for leap year and month-end logic",
+      "priority": "Medium",
+      "tags": [
+        "unit_test",
+        "leap_year",
+        "edge_case"
+      ],
+      "subdomain": "testing",
+      "difficulty": 3,
+      "additionalNotes": "Test must validate execution across leap years and 30/31-day months.",
+      "source_hlj_id": "REQ 001-003",
+      "domain_id": "P-SAAS-053"
+    },
+    {
+      "id": "REQ-142-HLJ-Chunk_1-Item_4-v1.0",
+      "domain": "saas",
+      "summary": "Gate PR on trigger evaluation to 2025-02-28",
+      "priority": "High",
+      "tags": [
+        "code_freeze",
+        "release_gate",
+        "trigger_validation"
+      ],
+      "subdomain": "release_management",
+      "difficulty": 4,
+      "additionalNotes": "PR must demonstrate that next CRON trigger resolves to 2025-02-28 00:00 UTC.",
+      "source_hlj_id": "REQ 001-004",
+      "domain_id": "P-SAAS-053"
+    },
+    {
+      "id": "REQ-142-HLJ-Chunk_1-Item_5-v1.0",
+      "domain": "saas",
+      "summary": "Review boundary cases before approving PR",
+      "priority": "Low",
+      "tags": [
+        "review_process",
+        "edge_case_validation",
+        "qa"
+      ],
+      "subdomain": "quality_assurance",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied – Ensure reviewers validate time-bound logic during code review.",
+      "source_hlj_id": "REQ 001-005",
+      "domain_id": "P-SAAS-053"
+    }
+  ]
+}

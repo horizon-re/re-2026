@@ -1,0 +1,569 @@
+{
+  "req_id": "REQ-053",
+  "doc_id": "86536ca3-75f4-5154-910d-94b89cba8c4c",
+  "domain": "fintech",
+  "prompt_id": "P-FT-044",
+  "model": "deepseek-r1:7b",
+  "review_timestamp": "2026-01-20T22:42:48.820375+00:00",
+  "counts": {
+    "total": 55,
+    "llm_neg": 36,
+    "pipe_pos": 1,
+    "flip_pos_to_neg": 1,
+    "llm_pos": 19,
+    "pipe_neg": 54,
+    "flip_neg_to_pos": 19
+  },
+  "reviews": [
+    {
+      "sent_id": "REQ-053::s001",
+      "order": 1,
+      "text": "User Personas\n\n1.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Must not exceed 5 seconds for <100,000 data points."
+    },
+    {
+      "sent_id": "REQ-053::s002",
+      "order": 2,
+      "text": "Olivia Chen — Operations Manager\n\t•\tBackground: 8+ years managing supply chain operations in a mid-sized manufacturing company.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-053::s003",
+      "order": 3,
+      "text": "•\tGoals: Wants accurate forecasts to optimize inventory levels, minimize waste, and avoid stockouts.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-053::s004",
+      "order": 4,
+      "text": "•\tFrustrations: Past tools were too rigid — she needs customization based on seasonal changes and anomalies.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-053::s005",
+      "order": 5,
+      "text": "2.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-053::s006",
+      "order": 6,
+      "text": "Daniel Ruiz — Financial Analyst\n\t•\tBackground: Junior financial analyst in a fast-scaling SaaS company.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-053::s007",
+      "order": 7,
+      "text": "•\tGoals: Forecast subscription revenue churn and upsells to report realistic financial plans.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-053::s008",
+      "order": 8,
+      "text": "•\tFrustrations: Overly volatile forecasts from AI tools that “overreact” to minor fluctuations.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-053::s009",
+      "order": 9,
+      "text": "3.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-053::s010",
+      "order": 10,
+      "text": "Priya Patel — Product Manager\n\t•\tBackground: PM for an AI-first logistics platform.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-053::s011",
+      "order": 11,
+      "text": "•\tGoals: Integrate forecasting into her product to enable customers to predict delivery times and demand surges.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-053::s012",
+      "order": 12,
+      "text": "•\tFrustrations: API-based tools without clean documentation or rate limits that throttle at peak times.\n\n⸻\n\nFunctional Requirements\n\nCore Forecasting\n\t•\tProvide time-series forecasting for numeric KPIs (inventory, revenue, usage metrics).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-053::s013",
+      "order": 13,
+      "text": "•\tAllow users to input historical data manually or via integrations.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Allow users to input historical data manually or via integrations."
+    },
+    {
+      "sent_id": "REQ-053::s014",
+      "order": 14,
+      "text": "•\tForecast horizon customizable: 7 days, 30 days, 90 days, 1 year.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Forecast horizon customizable: 7 days, 30 days, 90 days, 1 year."
+    },
+    {
+      "sent_id": "REQ-053::s015",
+      "order": 15,
+      "text": "•\tModel selection: AutoML (default), with manual override options for ARIMA, Prophet, or LSTM models for advanced users.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Model selection: AutoML (default), with manual override options for ARIMA, Prophet, or LSTM models."
+    },
+    {
+      "sent_id": "REQ-053::s016",
+      "order": 16,
+      "text": "Alerting\n\t•\tThreshold-based alerts for forecasted metrics (e.g., stock expected to run out within 10 days).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Threshold-based alerts for forecasted metrics."
+    },
+    {
+      "sent_id": "REQ-053::s017",
+      "order": 17,
+      "text": "•\tSmart anomaly alerts: Detect deviations from forecasted trends automatically.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Smart anomaly alerts: Detect deviations from forecasted trends automatically."
+    },
+    {
+      "sent_id": "REQ-053::s018",
+      "order": 18,
+      "text": "•\tAlert delivery options: Email, SMS, Webhook.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Alert delivery options: Email, SMS, Webhook."
+    },
+    {
+      "sent_id": "REQ-053::s019",
+      "order": 19,
+      "text": "Reporting\n\t•\tDaily, weekly, monthly forecast summary reports.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Reporting: Daily, weekly, monthly forecast summary reports."
+    },
+    {
+      "sent_id": "REQ-053::s020",
+      "order": 20,
+      "text": "•\tComparison reports: Forecast vs. Actual with deviation analysis.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 1.0,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "api/forecast/result retrieves forecast output."
+    },
+    {
+      "sent_id": "REQ-053::s021",
+      "order": 21,
+      "text": "•\tExport formats: CSV, PDF, JSON.\n\n⸻\n\nNon‑Functional Requirements\n\nScalability\n\t•\tSupport 10,000+ simultaneous forecasts across multiple organizations.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Integration sections describe endpoints without enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-053::s022",
+      "order": 22,
+      "text": "•\tHorizontal auto-scaling enabled via Kubernetes and container orchestration.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-053::s023",
+      "order": 23,
+      "text": "Availability\n\t•\t99.9% uptime target (measured monthly).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-053::s024",
+      "order": 24,
+      "text": "•\tGraceful degradation: read-only mode if backend services are down.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-053::s025",
+      "order": 25,
+      "text": "Performance\n\t•\tForecast generation time must not exceed 5 seconds for <100,000 data points.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-053::s026",
+      "order": 26,
+      "text": "•\tAlert processing latency under 1 second after data ingestion.\n\n⸻\n\nAI Sensitivity Slider\n\nDescription:\n\t•\tUsers adjust the “sensitivity” of forecasts using a simple slider:\n\t•\tConservative Mode (left side): Favors stability.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-053::s027",
+      "order": 27,
+      "text": "Less responsive to minor data fluctuations.\n\t•\tVolatile Mode (right side): Hyper-reactive to recent changes, suitable for dynamic environments.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-053::s028",
+      "order": 28,
+      "text": "•\tIntermediate states provide a weighted blend based on exponential smoothing factors.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-053::s029",
+      "order": 29,
+      "text": "•\tDefault setting is Balanced at 50%.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-053::s030",
+      "order": 30,
+      "text": "Example:\nOlivia managing seasonal inventory sets the slider toward Conservative during stable months, then shifts it toward Volatile during unpredictable seasons (e.g., Black Friday).\n\n⸻\n\nReporting & Dashboards\n\nRequired Visualizations\n\t•\tForecasted Trend Line (historical + prediction interval shading).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-053::s031",
+      "order": 31,
+      "text": "•\tAnomaly Heatmaps.\n\t•\tDeviation Charts (Actual vs. Forecast).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-053::s032",
+      "order": 32,
+      "text": "•\tAlert Frequency Graphs (over time).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-053::s033",
+      "order": 33,
+      "text": "•\tSensitivity Distribution Graphs (to monitor slider usage impact).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-053::s034",
+      "order": 34,
+      "text": "Export Options\n\t•\tScheduled email delivery of PDFs.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-053::s035",
+      "order": 35,
+      "text": "•\tDirect download of CSVs with timestamps and confidence intervals.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-053::s036",
+      "order": 36,
+      "text": "•\tEmbed charts via iframe or JS snippets into external dashboards (with auth).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-053::s037",
+      "order": 37,
+      "text": "⸻\n\nIntegrations & API\n\nEndpoints\n\t•\t/api/forecast/upload – Upload historical data.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-053::s038",
+      "order": 38,
+      "text": "•\t/api/forecast/generate – Trigger forecast computation.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-053::s039",
+      "order": 39,
+      "text": "•\t/api/forecast/result – Retrieve forecast output.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-053::s040",
+      "order": 40,
+      "text": "•\t/api/alerts/subscribe – Create new threshold-based alert.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-053::s041",
+      "order": 41,
+      "text": "•\t/api/report/export – Generate downloadable reports.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Generates downloadable reports."
+    },
+    {
+      "sent_id": "REQ-053::s042",
+      "order": 42,
+      "text": "Authentication\n\t•\tOAuth 2.0 with JWT access tokens.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Authentication using OAuth 2.0 with JWT access tokens."
+    },
+    {
+      "sent_id": "REQ-053::s043",
+      "order": 43,
+      "text": "•\tAPI keys available for service-to-service integrations.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "API keys available for service-to-service integrations."
+    },
+    {
+      "sent_id": "REQ-053::s044",
+      "order": 44,
+      "text": "Rate Limits\n\t•\tFree tier: 100 API calls/hour.\n\t•\tPremium: 5,000 API calls/hour.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 1.0,
+      "reason_code": "PERFORMANCE_REQUIREMENT",
+      "reason_text": "Free tier: 100 API calls/hour."
+    },
+    {
+      "sent_id": "REQ-053::s045",
+      "order": 45,
+      "text": "•\tCustom enterprise plans available.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Custom enterprise plans available."
+    },
+    {
+      "sent_id": "REQ-053::s046",
+      "order": 46,
+      "text": "Webhook Support\n\t•\tOutbound webhooks for real-time alert delivery to Slack, PagerDuty, custom endpoints.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Webhook support for real-time alert delivery to various endpoints."
+    },
+    {
+      "sent_id": "REQ-053::s047",
+      "order": 47,
+      "text": "⸻\n\nSecurity & Compliance\n\nData Encryption\n\t•\tAt rest: AES-256 encryption on all stored data.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 1.0,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Data Encryption: AES-256 encryption on all stored data."
+    },
+    {
+      "sent_id": "REQ-053::s048",
+      "order": 48,
+      "text": "•\tIn transit:",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "TLS 1.3 enforced across all APIs and frontend apps."
+    },
+    {
+      "sent_id": "REQ-053::s049",
+      "order": 49,
+      "text": "TLS 1.3 enforced across all APIs and frontend apps.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 1.0,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Immutable audit logs capturing data upload events."
+    },
+    {
+      "sent_id": "REQ-053::s050",
+      "order": 50,
+      "text": "Audit Logs\n\t•\tImmutable audit logs capturing:\n\t•\tData upload events.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Forecast generation requests handled by the system."
+    },
+    {
+      "sent_id": "REQ-053::s051",
+      "order": 51,
+      "text": "•\tForecast generation requests.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Alert trigger events processed by the system."
+    },
+    {
+      "sent_id": "REQ-053::s052",
+      "order": 52,
+      "text": "•\tAlert trigger events.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 1.0,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Report export activities supported with configurable storage periods."
+    },
+    {
+      "sent_id": "REQ-053::s053",
+      "order": 53,
+      "text": "•\tReport export activities.\n\t•\tLogs stored for minimum 1 year; configurable up to 5 years for enterprise customers.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 1.0,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Logs stored for a minimum of one year, with configurable options up to five years."
+    },
+    {
+      "sent_id": "REQ-053::s054",
+      "order": 54,
+      "text": "Regulatory Compliance\n\t•\tGDPR, CCPA, and SOC 2 Type II alignment.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 1.0,
+      "reason_code": "COMPLIANCE_REQUIREMENT",
+      "reason_text": "GDPR, CCPA, and SOC 2 Type II alignment enforced."
+    },
+    {
+      "sent_id": "REQ-053::s055",
+      "order": 55,
+      "text": "•\tRight-to-be-forgotten workflows enabled on request.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 1.0,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Right-to-be-forgotten workflows enabled on request."
+    }
+  ]
+}

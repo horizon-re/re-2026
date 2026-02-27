@@ -1,0 +1,257 @@
+{
+  "doc_id": "f313650c-9829-57da-ad61-626402e68d28",
+  "req_key": "saas::P-SAAS-014::REQ-103",
+  "req_id": "REQ-103",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-014",
+  "source": {
+    "raw_path": "02_raw_requirements/saas/P-SAAS-014/req-103_raw.txt",
+    "refined_path": "03_refined_json_normalized/saas/P-SAAS-014/req-103_refined.json",
+    "origin": "both"
+  },
+  "text": "Subject: Regarding your Subscription Cancellation\n\nDear [Customer Name],\n\nThank you for reaching out to us. We sincerely apologize for any frustration you've experienced with our subscription cancellation process. We understand that a smooth and easy cancellation experience is important, and we appreciate you bringing this to our attention.\n\nWe're happy to inform you that we've recently implemented a new, streamlined one-click cancellation flow within your billing portal. To cancel your subscription, simply log in to your account and navigate to the billing section. You should now see a clear and direct option to cancel your current plan.\n\nOnce you initiate the cancellation, you will receive both an email and an SMS confirmation within the next five minutes to confirm that your request has been successfully processed.\n\nFor our internal analysis and to help us improve our services, we will also record the reason for your cancellation. We value your feedback and may reach out separately to gather more details about your experience.\n\nIf you happen to change your mind at any point, we would be grateful if you could take a moment to complete this quick survey about your cancellation experience: [Link to Survey]. Your feedback is invaluable to us.\n\nThank you for being a valued customer. If you have any further questions or require any assistance, please don't hesitate to ask.\n\nSincerely,\n\nThe [Your Company Name] Support Team",
+  "structured_data": [
+    {
+      "id": "REQ-103-HLJ-Chunk_1-Item_1-v1.0",
+      "domain": "saas",
+      "summary": "Implement a new one-click cancellation flow within the billing portal.",
+      "priority": "High",
+      "tags": [
+        "cancellation",
+        "billing_portal",
+        "one_click"
+      ],
+      "subdomain": "subscription_management",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-001",
+      "domain_id": "P-SAAS-014"
+    },
+    {
+      "id": "REQ-103-HLJ-Chunk_1-Item_2-v1.0",
+      "domain": "saas",
+      "summary": "Users should be able to log in to their account.",
+      "priority": "High",
+      "tags": [
+        "authentication",
+        "login",
+        "user_account"
+      ],
+      "subdomain": "user_management",
+      "difficulty": 1,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-002",
+      "domain_id": "P-SAAS-014"
+    },
+    {
+      "id": "REQ-103-HLJ-Chunk_1-Item_3-v1.0",
+      "domain": "saas",
+      "summary": "Users should be able to navigate to the billing section.",
+      "priority": "High",
+      "tags": [
+        "navigation",
+        "billing",
+        "user_interface"
+      ],
+      "subdomain": "user_interface",
+      "difficulty": 1,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-003",
+      "domain_id": "P-SAAS-014"
+    },
+    {
+      "id": "REQ-103-HLJ-Chunk_1-Item_4-v1.0",
+      "domain": "saas",
+      "summary": "Users should see a clear and direct option to cancel their current plan.",
+      "priority": "High",
+      "tags": [
+        "user_interface",
+        "cancellation",
+        "clarity"
+      ],
+      "subdomain": "user_interface",
+      "difficulty": 2,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-004",
+      "domain_id": "P-SAAS-014"
+    },
+    {
+      "id": "REQ-103-HLJ-Chunk_1-Item_5-v1.0",
+      "domain": "saas",
+      "summary": "The system should send an email confirmation upon cancellation.",
+      "priority": "High",
+      "tags": [
+        "email",
+        "confirmation",
+        "cancellation"
+      ],
+      "subdomain": "notifications",
+      "difficulty": 2,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-005",
+      "domain_id": "P-SAAS-014"
+    },
+    {
+      "id": "REQ-103-HLJ-Chunk_1-Item_6-v1.0",
+      "domain": "saas",
+      "summary": "The system should send an SMS confirmation upon cancellation.",
+      "priority": "Medium",
+      "tags": [
+        "sms",
+        "confirmation",
+        "cancellation"
+      ],
+      "subdomain": "notifications",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-006",
+      "domain_id": "P-SAAS-014"
+    },
+    {
+      "id": "REQ-103-HLJ-Chunk_1-Item_7-v1.0",
+      "domain": "saas",
+      "summary": "The email confirmation should be received within five minutes.",
+      "priority": "Medium",
+      "tags": [
+        "email",
+        "confirmation",
+        "performance",
+        "sla"
+      ],
+      "subdomain": "performance",
+      "difficulty": 3,
+      "additionalNotes": "origin: implied",
+      "source_hlj_id": "REQ 001-007",
+      "domain_id": "P-SAAS-014"
+    },
+    {
+      "id": "REQ-103-HLJ-Chunk_1-Item_8-v1.0",
+      "domain": "saas",
+      "summary": "The SMS confirmation should be received within five minutes.",
+      "priority": "Low",
+      "tags": [
+        "sms",
+        "confirmation",
+        "performance",
+        "sla"
+      ],
+      "subdomain": "performance",
+      "difficulty": 3,
+      "additionalNotes": "origin: implied",
+      "source_hlj_id": "REQ 001-008",
+      "domain_id": "P-SAAS-014"
+    },
+    {
+      "id": "REQ-103-HLJ-Chunk_1-Item_9-v1.0",
+      "domain": "saas",
+      "summary": "The system should record the reason for cancellation.",
+      "priority": "Medium",
+      "tags": [
+        "data_collection",
+        "analytics",
+        "cancellation_reason"
+      ],
+      "subdomain": "analytics",
+      "difficulty": 2,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-009",
+      "domain_id": "P-SAAS-014"
+    },
+    {
+      "id": "REQ-103-HLJ-Chunk_1-Item_10-v1.0",
+      "domain": "saas",
+      "summary": "The company may reach out to gather more details about the cancellation experience.",
+      "priority": "Low",
+      "tags": [
+        "feedback",
+        "customer_support",
+        "analysis"
+      ],
+      "subdomain": "customer_support",
+      "difficulty": 1,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-010",
+      "domain_id": "P-SAAS-014"
+    },
+    {
+      "id": "REQ-103-HLJ-Chunk_1-Item_11-v1.0",
+      "domain": "saas",
+      "summary": "The company would appreciate it if users complete a survey about their cancellation experience.",
+      "priority": "Low",
+      "tags": [
+        "feedback",
+        "survey",
+        "customer_experience"
+      ],
+      "subdomain": "customer_experience",
+      "difficulty": 1,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-011",
+      "domain_id": "P-SAAS-014"
+    },
+    {
+      "id": "REQ-103-HLJ-Chunk_1-Item_12-v1.0",
+      "domain": "saas",
+      "summary": "The system should provide a link to the cancellation experience survey.",
+      "priority": "Low",
+      "tags": [
+        "survey",
+        "link",
+        "user_interface"
+      ],
+      "subdomain": "user_interface",
+      "difficulty": 1,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-012",
+      "domain_id": "P-SAAS-014"
+    },
+    {
+      "id": "REQ-103-HLJ-Chunk_1-Item_13-v1.0",
+      "domain": "saas",
+      "summary": "Users should be able to ask further questions or request assistance.",
+      "priority": "Medium",
+      "tags": [
+        "customer_support",
+        "help",
+        "assistance"
+      ],
+      "subdomain": "customer_support",
+      "difficulty": 1,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-013",
+      "domain_id": "P-SAAS-014"
+    },
+    {
+      "id": "REQ-103-HLJ-Chunk_1-Item_14-v1.0",
+      "domain": "saas",
+      "summary": "The cancellation process should be smooth.",
+      "priority": "High",
+      "tags": [
+        "user_experience",
+        "smooth",
+        "cancellation"
+      ],
+      "subdomain": "user_experience",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied",
+      "source_hlj_id": "REQ 001-014",
+      "domain_id": "P-SAAS-014"
+    },
+    {
+      "id": "REQ-103-HLJ-Chunk_1-Item_15-v1.0",
+      "domain": "saas",
+      "summary": "The cancellation process should be easy.",
+      "priority": "High",
+      "tags": [
+        "user_experience",
+        "easy",
+        "cancellation"
+      ],
+      "subdomain": "user_experience",
+      "difficulty": 1,
+      "additionalNotes": "origin: implied",
+      "source_hlj_id": "REQ 001-015",
+      "domain_id": "P-SAAS-014"
+    }
+  ]
+}

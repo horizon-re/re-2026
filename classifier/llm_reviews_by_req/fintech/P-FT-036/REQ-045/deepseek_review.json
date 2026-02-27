@@ -1,0 +1,98 @@
+{
+  "req_id": "REQ-045",
+  "doc_id": "bdaeecb4-e354-5873-b73a-5306f8c6ece0",
+  "domain": "fintech",
+  "prompt_id": "P-FT-036",
+  "model": "deepseek-r1:7b",
+  "review_timestamp": "2026-01-20T22:35:07.012599+00:00",
+  "counts": {
+    "total": 8,
+    "llm_pos": 7,
+    "pipe_pos": 4,
+    "pipe_neg": 4,
+    "flip_neg_to_pos": 3,
+    "llm_neg": 1
+  },
+  "reviews": [
+    {
+      "sent_id": "REQ-045::s001",
+      "order": 1,
+      "text": "Investor interest ahead of our Series B close on August 30, 2025, has zeroed in on one standout feature: AI-powered allowance insights for teen debit users.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "AI-powered insights as a key feature."
+    },
+    {
+      "sent_id": "REQ-045::s002",
+      "order": 2,
+      "text": "This demand reflects a broader market appetite for value-added financial literacy tools embedded in youth banking products.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Market appetite context without action."
+    },
+    {
+      "sent_id": "REQ-045::s003",
+      "order": 3,
+      "text": "Several VCs have flagged actionable, personalized insights as a must-have differentiator, especially as we position ourselves against larger fintech incumbents.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "VC feedback on actionable insights as a differentiator."
+    },
+    {
+      "sent_id": "REQ-045::s004",
+      "order": 4,
+      "text": "To meet this expectation and demonstrate traction, we propose a key performance indicator: 90% of parents actively view their teen’s spending insights at least once per month.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "PERFORMANCE_REQUIREMENT",
+      "reason_text": "Proposed KPI for parent engagement."
+    },
+    {
+      "sent_id": "REQ-045::s005",
+      "order": 5,
+      "text": "To deliver on this, we’ll first ingest categorized spend data and apply clustering algorithms to identify behavioral patterns.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 1.0,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Data handling and delivery constraints."
+    },
+    {
+      "sent_id": "REQ-045::s006",
+      "order": 6,
+      "text": "From there, we can generate three concise, parent-facing tips each week within the app interface—focusing on saving habits, budgeting signals, and unusual spend patterns.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.95,
+      "reason_code": "EXAMPLE_OR_EXPLANATION",
+      "reason_text": "Generating saving, budgeting tips."
+    },
+    {
+      "sent_id": "REQ-045::s007",
+      "order": 7,
+      "text": "A/B testing against a control group will help validate engagement lift and message effectiveness.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "A/B testing to validate engagement lift."
+    },
+    {
+      "sent_id": "REQ-045::s008",
+      "order": 8,
+      "text": "All data handling and delivery will remain COPPA-compliant to ensure safe and responsible usage for our under-13 segment.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 1.0,
+      "reason_code": "SECURITY_REQUIREMENT",
+      "reason_text": "COPPA compliance for data usage."
+    }
+  ]
+}

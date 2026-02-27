@@ -1,0 +1,206 @@
+{
+  "doc_id": "b9f8bc44-5e70-5fc5-8bc1-5d832a4d9d4c",
+  "req_key": "saas::P-SAAS-012::REQ-101",
+  "req_id": "REQ-101",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-012",
+  "source": {
+    "raw_path": "02_raw_requirements/saas/P-SAAS-012/req-101_raw.txt",
+    "refined_path": "03_refined_json_normalized/saas/P-SAAS-012/req-101_refined.json",
+    "origin": "both"
+  },
+  "text": "Title: Integrate SAML SSO with Okta and Azure AD\n\nDescription:\nBusiness Need: Implement enterprise-grade Single Sign-On (SSO) to enhance security and streamline user access. This is crucial for attracting and onboarding enterprise clients who require robust authentication mechanisms.\n\nCurrent Issue: Existing Okta integration has failures that are currently blocking the onboarding of new clients. Resolving this is a high priority.\n\nRequirement: The solution must support integration with both Okta and Azure AD as Identity Providers (IdPs) to cater to a wider range of potential clients.\n\nAcceptance Criteria:\n* Metadata upload endpoint for Service Provider (SP) XML is implemented.\n* Metadata upload endpoint for Identity Provider (IdP) XML is implemented.\n* Certificate rotation is automated every 90 days.\n* Automatic retry mechanism is implemented for 5xx errors with exponential backoff.\n* End-user test flow for both Okta and Azure AD is documented in Confluence.\n\nLabels: security, sso, okta, azure-ad\n\nPriority: High",
+  "structured_data": [
+    {
+      "id": "REQ-101-HLJ-Chunk_1-Item_1-v1.0",
+      "domain": "saas",
+      "summary": "Support integration with both Okta and Azure AD as Identity Providers.",
+      "priority": "High",
+      "tags": [
+        "security",
+        "sso",
+        "okta",
+        "azure_ad"
+      ],
+      "subdomain": "authentication",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-001",
+      "domain_id": "P-SAAS-012"
+    },
+    {
+      "id": "REQ-101-HLJ-Chunk_1-Item_2-v1.0",
+      "domain": "saas",
+      "summary": "Implement a metadata upload endpoint for Service Provider XML.",
+      "priority": "High",
+      "tags": [
+        "security",
+        "sso",
+        "saml"
+      ],
+      "subdomain": "integration",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-002",
+      "domain_id": "P-SAAS-012"
+    },
+    {
+      "id": "REQ-101-HLJ-Chunk_1-Item_3-v1.0",
+      "domain": "saas",
+      "summary": "Implement a metadata upload endpoint for Identity Provider XML.",
+      "priority": "High",
+      "tags": [
+        "security",
+        "sso",
+        "saml",
+        "okta",
+        "azure_ad"
+      ],
+      "subdomain": "integration",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-003",
+      "domain_id": "P-SAAS-012"
+    },
+    {
+      "id": "REQ-101-HLJ-Chunk_1-Item_4-v1.0",
+      "domain": "saas",
+      "summary": "Automate certificate rotation for SAML integration every 90 days.",
+      "priority": "High",
+      "tags": [
+        "security",
+        "sso",
+        "saml",
+        "automation"
+      ],
+      "subdomain": "security",
+      "difficulty": 4,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-004",
+      "domain_id": "P-SAAS-012"
+    },
+    {
+      "id": "REQ-101-HLJ-Chunk_1-Item_5-v1.0",
+      "domain": "saas",
+      "summary": "Implement an automatic retry mechanism for 5xx errors with exponential backoff.",
+      "priority": "Medium",
+      "tags": [
+        "reliability",
+        "error_handling"
+      ],
+      "subdomain": "integration",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-005",
+      "domain_id": "P-SAAS-012"
+    },
+    {
+      "id": "REQ-101-HLJ-Chunk_1-Item_6-v1.0",
+      "domain": "saas",
+      "summary": "Document the end-user test flow for both Okta and Azure AD SSO.",
+      "priority": "Medium",
+      "tags": [
+        "documentation",
+        "testing",
+        "sso",
+        "okta",
+        "azure_ad"
+      ],
+      "subdomain": "documentation",
+      "difficulty": 2,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-006",
+      "domain_id": "P-SAAS-012"
+    },
+    {
+      "id": "REQ-101-HLJ-Chunk_1-Item_7-v1.0",
+      "domain": "saas",
+      "summary": "Securely store uploaded Service Provider metadata.",
+      "priority": "Low",
+      "tags": [
+        "security",
+        "data_storage"
+      ],
+      "subdomain": "security",
+      "difficulty": 3,
+      "additionalNotes": "origin: implied",
+      "source_hlj_id": "REQ 001-007",
+      "domain_id": "P-SAAS-012"
+    },
+    {
+      "id": "REQ-101-HLJ-Chunk_1-Item_8-v1.0",
+      "domain": "saas",
+      "summary": "Handle errors gracefully during Service Provider metadata upload.",
+      "priority": "Low",
+      "tags": [
+        "error_handling",
+        "integration"
+      ],
+      "subdomain": "integration",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied",
+      "source_hlj_id": "REQ 001-008",
+      "domain_id": "P-SAAS-012"
+    },
+    {
+      "id": "REQ-101-HLJ-Chunk_1-Item_9-v1.0",
+      "domain": "saas",
+      "summary": "Securely store uploaded Identity Provider metadata.",
+      "priority": "Low",
+      "tags": [
+        "security",
+        "data_storage"
+      ],
+      "subdomain": "security",
+      "difficulty": 3,
+      "additionalNotes": "origin: implied",
+      "source_hlj_id": "REQ 001-009",
+      "domain_id": "P-SAAS-012"
+    },
+    {
+      "id": "REQ-101-HLJ-Chunk_1-Item_10-v1.0",
+      "domain": "saas",
+      "summary": "Handle errors gracefully during Identity Provider metadata upload.",
+      "priority": "Low",
+      "tags": [
+        "error_handling",
+        "integration"
+      ],
+      "subdomain": "integration",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied",
+      "source_hlj_id": "REQ 001-010",
+      "domain_id": "P-SAAS-012"
+    },
+    {
+      "id": "REQ-101-HLJ-Chunk_1-Item_11-v1.0",
+      "domain": "saas",
+      "summary": "Implement a mechanism for automated certificate rotation.",
+      "priority": "Low",
+      "tags": [
+        "security",
+        "automation"
+      ],
+      "subdomain": "security",
+      "difficulty": 4,
+      "additionalNotes": "origin: implied",
+      "source_hlj_id": "REQ 001-011",
+      "domain_id": "P-SAAS-012"
+    },
+    {
+      "id": "REQ-101-HLJ-Chunk_1-Item_12-v1.0",
+      "domain": "saas",
+      "summary": "Log 5xx errors and retry attempts for troubleshooting.",
+      "priority": "Low",
+      "tags": [
+        "logging",
+        "error_handling"
+      ],
+      "subdomain": "monitoring",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied",
+      "source_hlj_id": "REQ 001-012",
+      "domain_id": "P-SAAS-012"
+    }
+  ]
+}

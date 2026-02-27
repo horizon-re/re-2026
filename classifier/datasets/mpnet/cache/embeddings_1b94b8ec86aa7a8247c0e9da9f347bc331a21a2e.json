@@ -1,0 +1,7 @@
+{
+  "model": "sentence-transformers/all-mpnet-base-v2",
+  "max_length": 128,
+  "n": 15109,
+  "dim": 768,
+  "created_at": "2026-02-04T04:06:27"
+}

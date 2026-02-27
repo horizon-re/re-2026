@@ -1,0 +1,95 @@
+{
+  "doc_id": "9db63761-4122-50b3-9933-0d6e69b95070",
+  "req_key": "saas::P-SAAS-036::REQ-125",
+  "req_id": "REQ-125",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-036",
+  "source": {
+    "raw_path": "02_raw_requirements/saas/P-SAAS-036/req-125_raw.txt",
+    "refined_path": "03_refined_json_normalized/saas/P-SAAS-036/req-125_refined.json",
+    "origin": "both"
+  },
+  "text": "Implement real-time synchronization of warehouse inventory data every 5 seconds across all locations, with a mandatory fallback queuing mechanism if API latency exceeds 1 second, ensuring bulk catch-up synchronization within 30 seconds; discrepancies of more than 10 units must be logged to the inv_sync_errors table and immediately trigger a PagerDuty alert; this requirement is not negotiable and must be fully rolled out and operational by the end of the current sprint.",
+  "structured_data": [
+    {
+      "id": "REQ-125-HLJ-Chunk_1-Item_1-v1.0",
+      "domain": "saas",
+      "summary": "Sync inventory every 5 seconds across all locations",
+      "priority": "High",
+      "tags": [
+        "inventory_sync",
+        "real_time",
+        "multi_location"
+      ],
+      "subdomain": "inventory_management",
+      "difficulty": 3,
+      "additionalNotes": "Real-time synchronization requirement for warehouse inventory across locations.",
+      "source_hlj_id": "REQ 001-001",
+      "domain_id": "P-SAAS-036"
+    },
+    {
+      "id": "REQ-125-HLJ-Chunk_1-Item_2-v1.0",
+      "domain": "saas",
+      "summary": "Implement fallback queue if API latency exceeds 1 second",
+      "priority": "High",
+      "tags": [
+        "latency_handling",
+        "fallback_queue",
+        "api_monitoring"
+      ],
+      "subdomain": "inventory_management",
+      "difficulty": 4,
+      "additionalNotes": "Fallback system triggers to ensure no data loss during high latency.",
+      "source_hlj_id": "REQ 001-002",
+      "domain_id": "P-SAAS-036"
+    },
+    {
+      "id": "REQ-125-HLJ-Chunk_1-Item_3-v1.0",
+      "domain": "saas",
+      "summary": "Ensure bulk catch-up synchronization within 30 seconds",
+      "priority": "High",
+      "tags": [
+        "bulk_sync",
+        "catch_up",
+        "inventory_recovery"
+      ],
+      "subdomain": "inventory_management",
+      "difficulty": 3,
+      "additionalNotes": "Bulk synchronization clears queued data during fallback conditions.",
+      "source_hlj_id": "REQ 001-003",
+      "domain_id": "P-SAAS-036"
+    },
+    {
+      "id": "REQ-125-HLJ-Chunk_1-Item_4-v1.0",
+      "domain": "saas",
+      "summary": "Log inventory discrepancies greater than 10 units",
+      "priority": "High",
+      "tags": [
+        "error_logging",
+        "discrepancy_tracking",
+        "inventory_alert"
+      ],
+      "subdomain": "inventory_management",
+      "difficulty": 2,
+      "additionalNotes": "Discrepancies above 10 units must be logged to inv_sync_errors.",
+      "source_hlj_id": "REQ 001-004",
+      "domain_id": "P-SAAS-036"
+    },
+    {
+      "id": "REQ-125-HLJ-Chunk_1-Item_5-v1.0",
+      "domain": "saas",
+      "summary": "Trigger PagerDuty alert on >10 unit inventory mismatch",
+      "priority": "High",
+      "tags": [
+        "pagerduty_alerts",
+        "incident_response",
+        "inventory_monitoring"
+      ],
+      "subdomain": "inventory_management",
+      "difficulty": 3,
+      "additionalNotes": "Automated alerting for inventory mismatch incidents.",
+      "source_hlj_id": "REQ 001-005",
+      "domain_id": "P-SAAS-036"
+    }
+  ]
+}

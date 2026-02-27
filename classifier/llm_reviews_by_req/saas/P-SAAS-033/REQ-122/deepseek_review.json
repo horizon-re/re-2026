@@ -1,0 +1,97 @@
+{
+  "req_id": "REQ-122",
+  "doc_id": "9b4b4165-219e-5cca-9907-c138f7330f4d",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-033",
+  "model": "deepseek-r1:7b",
+  "review_timestamp": "2026-01-20T23:28:04.063164+00:00",
+  "counts": {
+    "total": 8,
+    "llm_pos": 8,
+    "pipe_pos": 2,
+    "pipe_neg": 6,
+    "flip_neg_to_pos": 6
+  },
+  "reviews": [
+    {
+      "sent_id": "REQ-122::s001",
+      "order": 1,
+      "text": "🚫 Blocking merge until EU auth latency is addressed.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.95,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Blocking merge until a condition is met"
+    },
+    {
+      "sent_id": "REQ-122::s002",
+      "order": 2,
+      "text": "Current benchmark (auth_eu_p95 = 812 ms) exceeds our SLA target of 500 ms.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Enforceable performance constraint"
+    },
+    {
+      "sent_id": "REQ-122::s003",
+      "order": 3,
+      "text": "Before this PR can proceed, please:\n\t1.\tRoll out Redis-based session caching to reduce DB roundtrips.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Action required for PR to proceed"
+    },
+    {
+      "sent_id": "REQ-122::s004",
+      "order": 4,
+      "text": "2.\tImplement edge token validation to cut request latency.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Implement edge token validation is required"
+    },
+    {
+      "sent_id": "REQ-122::s005",
+      "order": 5,
+      "text": "3.\tAttach a rollback plan in case the cache rollout introduces regressions.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Attach rollback plan is required"
+    },
+    {
+      "sent_id": "REQ-122::s006",
+      "order": 6,
+      "text": "Apply these optimizations and re-run the benchmark.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Apply optimizations and re-run benchmark"
+    },
+    {
+      "sent_id": "REQ-122::s007",
+      "order": 7,
+      "text": "Once auth_eu_p95 < 500 ms, remove the needs-perf-fix label and tag reviewers for re-approval.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Condition for label removal and reviewer action"
+    },
+    {
+      "sent_id": "REQ-122::s008",
+      "order": 8,
+      "text": "Performance SLAs are non-negotiable for login-critical flows.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Non-negotiable policy for login-critical flows"
+    }
+  ]
+}

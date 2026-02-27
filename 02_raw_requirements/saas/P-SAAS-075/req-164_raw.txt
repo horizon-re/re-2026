@@ -1,0 +1,12 @@
+Title: Bounding Box ID Overflow Causing Robot Collisions
+
+Description:
+Bounding box identifiers currently reset at 4,096 due to a hardcoded limit in the ID allocator. This overflow is causing ID duplication, resulting in robot collisions during path planning and shared environment tasks. The system fails to detect ID reuse under high-frequency operations, especially in dense object mapping scenarios.
+
+Proposed Fix:
+Increase the ID range to 32,767 to align with int16 safe limits. Implement a modulo-based collision check to ensure no two active bounding boxes share the same ID within the session.
+
+Severity: Critical
+Deadline: Fix must be implemented and validated by Friday to avoid operational downtime in the fleet.
+
+Impact: Affects all robots operating in shared workspaces with more than 4,096 active objects. High risk of damage and mission failure if not addressed.

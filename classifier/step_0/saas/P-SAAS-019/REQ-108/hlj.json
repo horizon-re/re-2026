@@ -1,0 +1,2433 @@
+{
+  "doc_id": "518b9c01-d16d-5411-9c4a-77cd7c61a04c",
+  "req_key": "saas::P-SAAS-019::REQ-108",
+  "req_id": "REQ-108",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-019",
+  "source": {
+    "raw_path": "02_raw_requirements/saas/P-SAAS-019/req-108_raw.txt",
+    "refined_path": "03_refined_json_normalized/saas/P-SAAS-019/req-108_refined.json",
+    "origin": "both"
+  },
+  "text": "Interactive Dashboard Embedding: A Consultant-Style Scope DocumentOverviewThe implementation of an interactive data dashboard represents a strategic move towards enhancing data understanding and analysis within organizations. This digital interface is designed to display data and information in a dynamic and human-friendly manner, empowering users to actively engage with the data to extract meaningful insights.1 Unlike traditional static reports that present a fixed view of information, an interactive dashboard allows users to manipulate data through elements such as charts, graphs, filters, and buttons. This enables real-time customization of data visualizations, facilitating a deeper exploration and understanding of key metrics.1 The primary objective of such a dashboard is to provide actionable insights that support informed decision-making across various levels of an organization.1Interactive dashboards serve several crucial goals. They enable users to delve into the granular details of data, offering both macro and micro perspectives on business performance.3 This capability for agile decision-making ensures that business-related questions can be answered with the most current information available.3 Furthermore, these dashboards empower business users to conduct immediate analysis, reducing their reliance on IT departments and saving valuable resources.3 By presenting a real-time snapshot of business performance, interactive dashboards allow for the quick identification of trends and the monitoring of key performance indicators (KPIs), which is essential for proactive management and strategic adjustments.5 Enhanced visibility into organizational health is another significant benefit, as these dashboards consolidate key metrics from various departments into a single interface.6 Ultimately, the transformation of raw data into easily digestible visual formats democratizes data access and improves data analysis and decision-making processes, contributing to overall business success.2 The real-time engagement offered by interactive dashboards encourages users to explore trends and uncover insights more effectively than static reports.7 By connecting to multiple data sources, these dashboards provide a holistic view of information in one central platform, eliminating the need for users to navigate disparate systems.8 Moreover, interactive features can assist in storytelling, guiding the audience through data narratives in an engaging and comprehensible manner.8The utility of interactive dashboards extends significantly when they are embedded within other applications or websites. This embedded functionality creates a seamless user experience by providing real-time data visualization directly within the tools and platforms users already utilize. Several key use cases highlight the value of this approach. Independent Software Vendors (ISVs) can embed dashboards into their SaaS applications to offer built-in BI reporting capabilities, thereby increasing user engagement and the overall value proposition of their products.9 For enterprise software solutions, organizations can integrate dashboards within their ERP, CRM, and HRM systems, enabling users at all levels to track critical KPIs in real-time within their operational systems.9 Customer-facing portals can also benefit from embedded dashboards, allowing businesses to share personalized insights with their clients, which fosters transparency and enhances customer satisfaction.9 In the realm of e-commerce, online retail platforms can embed dashboards to monitor vital metrics such as inventory levels, customer journey analytics, and overall sales performance, facilitating quicker responses to market dynamics and customer behavior.9 The healthcare industry can leverage embedded dashboards for monitoring patient outcomes and ensuring compliance with healthcare regulations, contributing to improved patient care and operational efficiency.9 Similarly, financial institutions can track transaction data and regulatory adherence through embedded dashboards, which is critical for risk management and fraud detection.9 Project management tools can integrate dashboards to provide project managers with immediate visibility into project progress and the allocation of resources, improving project delivery and resource management.11 Marketing teams can monitor the performance of their campaigns directly within their existing marketing automation platforms, allowing for data-driven adjustments to strategies and improved return on investment.11 Event management companies can embed dashboards to provide both attendees and organizers with valuable insights into event engagement and outcomes, which can be used to optimize future events.13 Furthermore, education and distance learning platforms can embed dashboards to track student engagement and performance, offering educators valuable insights into learning patterns and areas for potential intervention.13 The increasing adoption of embedded interactive dashboards across diverse industries underscores a significant trend towards making data-driven insights more accessible and actionable within various applications and user experiences.Core FeaturesThe interactive dashboard will incorporate a range of core features designed to facilitate effective data exploration and analysis. These features include a variety of chart types, drill-down functionality, filtering capabilities, and options for exporting data in different formats.A comprehensive selection of chart types will be available to cater to diverse data visualization needs.14 For comparison purposes, the dashboard will support bar charts and column charts, which are fundamental for contrasting values across different categories such as sales by region or product performance rankings.15 Dot plots and bullet graphs will also be included for concise comparisons, with bullet graphs being particularly useful for comparing performance against a goal.17 To visualize trends over time, line charts and area charts will be offered, crucial for identifying patterns and changes over specific periods, such as website traffic trends or stock price fluctuations.15 Trend charts will further highlight when values are above or below specified targets.16 For understanding the distribution of data, histograms and scatter plots will be available, aiding in the analysis of data spread and the identification of correlations between variables.15 Density curves will provide an alternative way to visualize data distributions, smoothing out noise to reveal underlying patterns.17 To illustrate the composition of data, pie charts, doughnut charts, stacked bar charts, stacked area charts, treemaps, and sunburst charts will be included, ideal for showing parts of a whole and their relative proportions, such as market share or budget allocation.15 For visualizing relationships between variables, scatter plots and bubble charts will be supported, with bubble charts extending scatter plots by representing a third numeric variable through bubble size.15 Specialized chart types such as funnel charts for visualizing sequential processes, heatmaps for identifying patterns in large datasets, maps for geographical data, gauges for showing performance against a target, and sparklines for concise trend representations will also be available.20 Additionally, dual-axis charts will be considered for comparing different metrics with potentially different scales on a single visualization.17Drill-down functionality will be a key interactive feature, enabling users to explore data in greater depth.28 This will allow users to navigate from a high-level summary to more granular details within the same visualization by simply clicking on a data point or chart element.29 The drill-down process will be guided by attribute hierarchies, ensuring that users can explore data along meaningful and relevant dimensions.28 For instance, a user might start with total sales by region and then drill down to sales by state, then by city, and finally by individual store.29 The dashboard will support various drill-down actions, including the ability to drill into a specific URL for more information, navigate to another related dashboard for a more detailed analysis, or show the underlying data in a tabular format for closer inspection.28 This capability for hierarchical navigation transforms the dashboard into an interactive exploration tool, allowing users to investigate anomalies and understand the drivers behind high-level metrics.34Filtering capabilities will be implemented to allow users to focus on specific subsets of data relevant to their analysis.36 A variety of filter types will be supported, including categorical filters such as dropdown menus, checkboxes, multi-select lists, and hierarchy filters, which are essential for narrowing down data based on specific categories like product type, geographical region, or department.37 Numerical filters, including slider filters and range inputs, will enable users to analyze data within specific quantitative ranges, such as filtering products by price or customers by age.37 Date filters, such as date pickers, date range selectors, and relative date filters (e.g., last week, this month), will be critical for time-based analysis, allowing users to compare performance across different time periods or focus on recent data.37 The dashboard will also consider the implementation of global filters that apply consistently across all visualizations, ensuring a unified analytical perspective.59 Furthermore, options for interactive chart elements to function as filters will be explored, providing a more intuitive and visual means for users to refine the displayed data.37To facilitate data sharing and further analysis, the interactive dashboard will support exporting data in several common formats. The option to export the dashboard layout as a PDF will be available for static sharing and printing, preserving the visual presentation for reports and documentation.61 For users who need to perform more detailed analysis or integrate the data with other tools, exporting to CSV format will be supported, providing raw data in a simple and universally compatible format.61 Exporting to Excel (XLSX/XLS) will also be an option, allowing users to work with the data in Microsoft Excel, often preserving formatting for ease of use.62 Additionally, users will be able to export static images of the dashboard or specific widgets in formats like PNG or JPG for quick sharing or inclusion in presentations.63 The dashboard will also consider options for exporting either the underlying detailed data or the summarized data as it appears in the visualizations, catering to different analytical requirements.76Integration APITo facilitate seamless embedding within external applications and websites, the interactive dashboard will provide a robust Integration API with several key components.The primary method for embedding the dashboard will be through an iframe snippet. This approach offers a simple and quick way to integrate the dashboard into web applications by using the standard HTML <iframe> element.9 The iframe snippet will be easily customizable through standard HTML attributes, allowing developers to adjust the width and height of the embedded dashboard to fit within their application's layout. Attributes such as frameborder and scrolling can be configured to control the appearance and behavior of the iframe, while the sandbox attribute will be crucial for enhancing security by restricting the capabilities of the embedded content.106 Furthermore, the integration will support passing parameters directly through the iframe URL. This will enable developers to control the dashboard's initial state, such as pre-filtering data based on the context of the embedding application or modifying certain behaviors.106 While iframe embedding offers ease of implementation, it's important to acknowledge potential limitations regarding deeper integration with the host application's UI/UX, advanced customization options, and certain security considerations that need careful management.9 Developers should be particularly mindful of security risks such as cross-site scripting (XSS) and clickjacking attacks when using iframes to embed external content.124Secure access to the embedded dashboard will be managed through various authentication flows. The Integration API will support API token authentication, providing a straightforward method for the embedding application to authenticate requests to the dashboard service.105 For more advanced and secure authentication, especially in scenarios requiring single sign-on (SSO), the API will support JSON Web Token (JWT) authentication.105 JWT is a widely recognized standard for securely transmitting information between parties as a JSON object, and its support will enable stateless and scalable authentication for embedded dashboards. Integration with Federated Identity Management (FIM) systems will also be considered, allowing organizations to leverage their existing identity providers for seamless authentication of users accessing the embedded dashboard.105 Furthermore, the API will facilitate Single Sign-On (SSO), enabling users who are already authenticated within the host application to access the embedded dashboard without needing to log in separately.9 This will significantly enhance the user experience by reducing the need for multiple logins. For specific use cases, such as embedding dashboards in customer-facing applications, the API will explore the use of service principals or master users for authentication, allowing the embedding application to authenticate on behalf of its users.128 Finally, the possibility of supporting reverse proxy authentication will be investigated as an additional layer of security and access control for embedding dashboards.130For developers requiring more advanced integration capabilities and a greater degree of control over the embedded dashboard, a comprehensive Software Development Kit (SDK) will be provided.9 This SDK will be designed to allow for programmatic interaction with the embedded dashboard, enabling developers to implement features such as dynamically applying filters based on user actions in the host application, changing the dashboard's theme to match the embedding environment, and subscribing to various events that occur within the dashboard.134 To ensure broad compatibility, the SDK will aim to support common web development frameworks, including JavaScript, React, Angular, and Vue.133 Comprehensive documentation, along with practical examples, will be made available to guide developers through the integration process and effectively utilize the SDK's features.134 The provision of an SDK represents a more robust and flexible integration option compared to iframes, allowing for deeper customization and a more interactive embedding experience, signifying a mature and developer-friendly embedded analytics solution.CustomizationThe interactive dashboard will offer several customization options to ensure it can be tailored to meet the specific needs and branding requirements of different embedding environments.To quickly alter the overall visual appearance of the dashboard, a selection of pre-built themes will be provided.141 These themes will offer different color palettes, font styles, and overall aesthetic designs that can be applied with minimal effort. In addition to these pre-defined options, users will have the ability to create custom themes. This will involve defining specific colors for various dashboard elements, selecting preferred font families and sizes, and adjusting other stylistic properties to align with particular brand guidelines or the visual language of the host application.142 The dashboard will also consider offering both light and dark theme options to cater to user preferences and improve accessibility in different viewing conditions.147 Theming will be a crucial aspect of ensuring that the embedded dashboard feels like a seamless and integrated part of the host application's user interface.To streamline the process of creating dashboards, a selection of pre-designed layout presets will be available.150 These presets will offer various structures and arrangements of dashboard elements, providing users with a starting point for organizing their data visualizations effectively. The dashboard will also incorporate flexible layout options, potentially including grid systems or drag-and-drop functionality, to allow users to arrange widgets and other content according to their specific analytical and presentation needs.156 The availability of layout presets will not only speed up the dashboard creation process but also help ensure a visually appealing and logically organized presentation of data.For organizations embedding the dashboard in client-facing applications, options for client branding will be provided. This will include the ability to integrate client logos and specific brand colors into the dashboard's header, widgets, and other visual elements.149 Furthermore, the dashboard will support white-labeling capabilities, allowing the complete removal of the dashboard provider's branding, thus providing a fully branded experience for the end-users and reinforcing the client's identity.160 These client branding options are essential for creating a cohesive and professional user experience, making the embedded dashboard feel like a natural and integrated component of the client's own products or services.Timeline & DeliverablesThe project for developing and deploying the interactive embedded dashboard will be structured into several key phases, each with its own timeline and specific deliverables.The design phase will commence with requirements gathering and analysis, where the project team will work to understand the specific needs of the users, define the objectives the dashboard should achieve, and identify the key performance indicators (KPIs) that will be tracked.169 This initial phase is critical for establishing a solid foundation for the project. The primary deliverable for this phase will be a comprehensive requirements document outlining the business needs and technical specifications for the dashboard. Following requirements gathering, the team will proceed with mockup and wireframe development, creating visual representations of the dashboard's layout and intended functionality.170 These wireframes and mockups will serve as a tangible visualization of the dashboard's structure and will be shared with stakeholders for early feedback and iteration. The next stage will involve user interface (UI) and user experience (UX) design, where the visual appearance of the dashboard will be refined, and the focus will be on ensuring an intuitive and engaging experience for the end-users.171 The deliverables for this stage will include high-fidelity UI mockups and potentially interactive prototypes to demonstrate the intended user flow and interactions.The development phase will begin with data integration and modeling, where the necessary connections to various data sources will be established, and the data will be prepared and structured for effective visualization within the dashboard.169 Ensuring data accuracy, quality, and optimal performance will be a key focus of this stage. The primary deliverable will be an integrated and modeled dataset ready for consumption by the dashboard. Following data preparation, the core task of dashboard building and widget implementation will commence. This involves developing the interactive dashboard interface and implementing the various features and visualizations as defined in the design phase.169 The main deliverable for this stage will be a fully functional instance of the interactive dashboard. Concurrently or subsequently, the integration API will be implemented, along with any specific customization requirements, to ensure seamless embedding and tailored functionality for the host applications.169 The deliverables for this stage will include the integrated API endpoints and any customized dashboard components.The testing phase will involve rigorous evaluation of the developed dashboard to ensure it meets the defined requirements and provides a high-quality user experience. Functional testing will be conducted to verify that all features, including interactivity, drill-down capabilities, and filtering mechanisms, operate as expected.169 Usability testing will be performed to gather feedback from potential users, ensuring that the dashboard is intuitive, easy to navigate, and effectively communicates the intended insights.169 Performance testing will evaluate the dashboard's responsiveness and load times, particularly in the context of embedding within other applications, to ensure a smooth and efficient user experience.169 Finally, security testing will be conducted to identify and address any potential vulnerabilities, especially those related to the embedding process and authentication mechanisms, to safeguard sensitive data.169 The deliverables for the testing phase will include a comprehensive test plan, detailed test cases, documented test results, and thorough bug reports for any identified issues.The final phase will be the handoff, which includes deploying the fully tested dashboard to the production environment, making it accessible to the intended end-users.169 User training and the provision of comprehensive documentation, such as a user manual and training materials, will be crucial to ensure that users can effectively understand and utilize the interactive dashboard and its various features.169 Planning for ongoing maintenance and support will also be a key aspect of this phase, ensuring the long-term success and relevance of the dashboard.169 The final deliverables for the handoff phase will include the fully deployed and functional embedded dashboard, the user manual, training materials, and a detailed support plan.Chart TypeDescriptionApplicationsBar ChartCompares values across categories using horizontal bars.Comparing sales across regions, ranking product performance.Line ChartDisplays trends and changes in continuous data over time using connected points.Tracking website traffic over months, monitoring stock prices.Pie ChartShows proportions of a whole as slices of a circle.Displaying market share distribution, visualizing budget allocation percentages.Scatter PlotIllustrates the relationship between two variables using data points.Identifying correlations between advertising spend and sales revenue, detecting outliers.HistogramDisplays the frequency distribution of numerical data in bins.Analyzing the distribution of customer ages, understanding the spread of employee salaries.Funnel ChartVisualizes stages in a process with sequential flow.Tracking customer conversion rates through different stages of a sales process.HeatmapUses color intensity to represent data values in a matrix.Identifying peak customer activity times by hour and day, visualizing website engagement by page.... (Other types)......FeatureIframe EmbeddingSDK-Based EmbeddingEase of ImplementationRelatively simple, uses HTML iframe tag.Requires more development effort, involves using JavaScript libraries.CustomizationLimited, primarily through URL parameters.High, allows for deep customization of UI, behavior, and integration.InteractivityBasic, relies on the embedded dashboard's built-in features.Advanced, enables programmatic control over dashboard elements and events.SecurityCan pose security risks if not handled carefully.Offers more control over authentication and authorization.PerformanceMay impact performance due to loading an entire separate HTML page.Can be optimized for better performance by loading specific components.FlexibilityLess flexible in terms of integrating with the host application's UI/UX.More flexible, allows for seamless integration with the host application's UI/UX.AuthenticationRelies on the embedded dashboard's authentication mechanisms.Provides more options for custom authentication flows (e.g., JWT, SSO).",
+  "structured_data": [
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_1-v1.0",
+      "domain": "unknown",
+      "summary": "Display data and information in a dynamic and human-friendly manner.",
+      "priority": "High",
+      "tags": [
+        "data_visualization",
+        "user_interface"
+      ],
+      "subdomain": "dashboard",
+      "difficulty": 2,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-001",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_2-v1.0",
+      "domain": "unknown",
+      "summary": "Allow users to manipulate data through charts, graphs, filters, and buttons.",
+      "priority": "High",
+      "tags": [
+        "data_interaction",
+        "user_interface"
+      ],
+      "subdomain": "dashboard",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-002",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_3-v1.0",
+      "domain": "unknown",
+      "summary": "Enable real-time customization of data visualizations.",
+      "priority": "Medium",
+      "tags": [
+        "data_visualization",
+        "customization"
+      ],
+      "subdomain": "dashboard",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-003",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_4-v1.0",
+      "domain": "unknown",
+      "summary": "Provide actionable insights that support informed decision-making.",
+      "priority": "High",
+      "tags": [
+        "data_analysis",
+        "business_intelligence"
+      ],
+      "subdomain": "dashboard",
+      "difficulty": 2,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-004",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_5-v1.0",
+      "domain": "unknown",
+      "summary": "Enable users to delve into granular details of data.",
+      "priority": "Medium",
+      "tags": [
+        "data_exploration",
+        "drill_down"
+      ],
+      "subdomain": "dashboard",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-005",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_6-v1.0",
+      "domain": "unknown",
+      "summary": "Offer both macro and micro perspectives on business performance.",
+      "priority": "Medium",
+      "tags": [
+        "data_analysis",
+        "business_intelligence"
+      ],
+      "subdomain": "dashboard",
+      "difficulty": 2,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-006",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_7-v1.0",
+      "domain": "unknown",
+      "summary": "Ensure business-related questions can be answered with current information.",
+      "priority": "High",
+      "tags": [
+        "data_accuracy",
+        "real_time_data"
+      ],
+      "subdomain": "dashboard",
+      "difficulty": 3,
+      "additionalNotes": "origin: implied",
+      "source_hlj_id": "REQ 001-007",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_8-v1.0",
+      "domain": "unknown",
+      "summary": "Empower business users to conduct immediate analysis.",
+      "priority": "Medium",
+      "tags": [
+        "self_service_analytics",
+        "user_empowerment"
+      ],
+      "subdomain": "dashboard",
+      "difficulty": 2,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-008",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_9-v1.0",
+      "domain": "unknown",
+      "summary": "Reduce reliance on IT departments for data analysis.",
+      "priority": "Medium",
+      "tags": [
+        "self_service_analytics",
+        "efficiency"
+      ],
+      "subdomain": "dashboard",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied",
+      "source_hlj_id": "REQ 001-009",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_10-v1.0",
+      "domain": "unknown",
+      "summary": "Present a real-time snapshot of business performance.",
+      "priority": "High",
+      "tags": [
+        "real_time_data",
+        "performance_monitoring"
+      ],
+      "subdomain": "dashboard",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-010",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_11-v1.0",
+      "domain": "unknown",
+      "summary": "Allow for quick identification of trends.",
+      "priority": "Medium",
+      "tags": [
+        "trend_analysis",
+        "data_visualization"
+      ],
+      "subdomain": "dashboard",
+      "difficulty": 2,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-011",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_12-v1.0",
+      "domain": "unknown",
+      "summary": "Enable monitoring of key performance indicators (KPIs).",
+      "priority": "High",
+      "tags": [
+        "kpi_monitoring",
+        "performance_management"
+      ],
+      "subdomain": "dashboard",
+      "difficulty": 2,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-012",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_13-v1.0",
+      "domain": "unknown",
+      "summary": "Provide enhanced visibility into organizational health.",
+      "priority": "Medium",
+      "tags": [
+        "data_visibility",
+        "business_intelligence"
+      ],
+      "subdomain": "dashboard",
+      "difficulty": 2,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-013",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_14-v1.0",
+      "domain": "unknown",
+      "summary": "Consolidate key metrics from various departments into a single interface.",
+      "priority": "High",
+      "tags": [
+        "data_integration",
+        "centralized_data"
+      ],
+      "subdomain": "dashboard",
+      "difficulty": 4,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-014",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_15-v1.0",
+      "domain": "unknown",
+      "summary": "Transform raw data into easily digestible visual formats.",
+      "priority": "High",
+      "tags": [
+        "data_visualization",
+        "user_experience"
+      ],
+      "subdomain": "dashboard",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-015",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_16-v1.0",
+      "domain": "unknown",
+      "summary": "Democratize data access across the organization.",
+      "priority": "Medium",
+      "tags": [
+        "data_access",
+        "user_empowerment"
+      ],
+      "subdomain": "dashboard",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-016",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_17-v1.0",
+      "domain": "unknown",
+      "summary": "Improve data analysis and decision-making processes.",
+      "priority": "High",
+      "tags": [
+        "data_analysis",
+        "decision_support"
+      ],
+      "subdomain": "dashboard",
+      "difficulty": 2,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-017",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_18-v1.0",
+      "domain": "unknown",
+      "summary": "Encourage users to explore trends and uncover insights effectively.",
+      "priority": "Medium",
+      "tags": [
+        "data_exploration",
+        "insight_generation"
+      ],
+      "subdomain": "dashboard",
+      "difficulty": 2,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-018",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_19-v1.0",
+      "domain": "unknown",
+      "summary": "Connect to multiple data sources.",
+      "priority": "High",
+      "tags": [
+        "data_integration",
+        "data_connectivity"
+      ],
+      "subdomain": "dashboard",
+      "difficulty": 4,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-019",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_20-v1.0",
+      "domain": "unknown",
+      "summary": "Provide a holistic view of information in one central platform.",
+      "priority": "High",
+      "tags": [
+        "data_consolidation",
+        "single_platform"
+      ],
+      "subdomain": "dashboard",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-020",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_21-v1.0",
+      "domain": "unknown",
+      "summary": "Eliminate the need for users to navigate disparate systems.",
+      "priority": "Medium",
+      "tags": [
+        "user_experience",
+        "efficiency"
+      ],
+      "subdomain": "dashboard",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied",
+      "source_hlj_id": "REQ 001-021",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_22-v1.0",
+      "domain": "unknown",
+      "summary": "Assist in storytelling through interactive features.",
+      "priority": "Low",
+      "tags": [
+        "data_narrative",
+        "user_engagement"
+      ],
+      "subdomain": "dashboard",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-022",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_23-v1.0",
+      "domain": "unknown",
+      "summary": "Guide the audience through data narratives in an engaging manner.",
+      "priority": "Low",
+      "tags": [
+        "data_presentation",
+        "user_engagement"
+      ],
+      "subdomain": "dashboard",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-023",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_24-v1.0",
+      "domain": "saas",
+      "summary": "ISVs can embed dashboards into their SaaS applications.",
+      "priority": "Medium",
+      "tags": [
+        "embedding",
+        "saas_integration"
+      ],
+      "subdomain": "integration",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-024",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_25-v1.0",
+      "domain": "saas",
+      "summary": "Offer built-in BI reporting capabilities in SaaS applications.",
+      "priority": "High",
+      "tags": [
+        "business_intelligence",
+        "reporting"
+      ],
+      "subdomain": "integration",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-025",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_26-v1.0",
+      "domain": "saas",
+      "summary": "Increase user engagement in SaaS applications.",
+      "priority": "Medium",
+      "tags": [
+        "user_engagement",
+        "saas"
+      ],
+      "subdomain": "integration",
+      "difficulty": 2,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-026",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_27-v1.0",
+      "domain": "saas",
+      "summary": "Increase the overall value proposition of SaaS applications.",
+      "priority": "Medium",
+      "tags": [
+        "value_proposition",
+        "saas"
+      ],
+      "subdomain": "integration",
+      "difficulty": 2,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-027",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_28-v1.0",
+      "domain": "enterprise",
+      "summary": "Integrate dashboards within ERP systems.",
+      "priority": "Medium",
+      "tags": [
+        "embedding",
+        "erp_integration"
+      ],
+      "subdomain": "integration",
+      "difficulty": 4,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-028",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_29-v1.0",
+      "domain": "enterprise",
+      "summary": "Integrate dashboards within CRM systems.",
+      "priority": "Medium",
+      "tags": [
+        "embedding",
+        "crm_integration"
+      ],
+      "subdomain": "integration",
+      "difficulty": 4,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-029",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_30-v1.0",
+      "domain": "enterprise",
+      "summary": "Integrate dashboards within HRM systems.",
+      "priority": "Medium",
+      "tags": [
+        "embedding",
+        "hrm_integration"
+      ],
+      "subdomain": "integration",
+      "difficulty": 4,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-030",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_31-v1.0",
+      "domain": "enterprise",
+      "summary": "Enable users to track critical KPIs in real-time within operational systems.",
+      "priority": "High",
+      "tags": [
+        "kpi_monitoring",
+        "real_time_data"
+      ],
+      "subdomain": "integration",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-031",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_32-v1.0",
+      "domain": "unknown",
+      "summary": "Embed dashboards in customer-facing portals.",
+      "priority": "Medium",
+      "tags": [
+        "embedding",
+        "customer_portal"
+      ],
+      "subdomain": "integration",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-032",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_33-v1.0",
+      "domain": "unknown",
+      "summary": "Share personalized insights with clients through embedded dashboards.",
+      "priority": "Medium",
+      "tags": [
+        "data_sharing",
+        "customer_insights"
+      ],
+      "subdomain": "integration",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-033",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_34-v1.0",
+      "domain": "unknown",
+      "summary": "Foster transparency with clients through embedded dashboards.",
+      "priority": "Medium",
+      "tags": [
+        "transparency",
+        "customer_relations"
+      ],
+      "subdomain": "integration",
+      "difficulty": 2,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-034",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_35-v1.0",
+      "domain": "unknown",
+      "summary": "Enhance customer satisfaction through embedded dashboards.",
+      "priority": "Medium",
+      "tags": [
+        "customer_satisfaction",
+        "user_experience"
+      ],
+      "subdomain": "integration",
+      "difficulty": 2,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-035",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_36-v1.0",
+      "domain": "e_commerce",
+      "summary": "Embed dashboards in online retail platforms.",
+      "priority": "Medium",
+      "tags": [
+        "embedding",
+        "e_commerce"
+      ],
+      "subdomain": "integration",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-036",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_37-v1.0",
+      "domain": "e_commerce",
+      "summary": "Monitor inventory levels through embedded dashboards.",
+      "priority": "High",
+      "tags": [
+        "inventory_management",
+        "real_time_data"
+      ],
+      "subdomain": "integration",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-037",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_38-v1.0",
+      "domain": "e_commerce",
+      "summary": "Monitor customer journey analytics through embedded dashboards.",
+      "priority": "High",
+      "tags": [
+        "customer_journey",
+        "analytics"
+      ],
+      "subdomain": "integration",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-038",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_39-v1.0",
+      "domain": "e_commerce",
+      "summary": "Monitor overall sales performance through embedded dashboards.",
+      "priority": "High",
+      "tags": [
+        "sales_performance",
+        "real_time_data"
+      ],
+      "subdomain": "integration",
+      "difficulty": 2,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-039",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_40-v1.0",
+      "domain": "e_commerce",
+      "summary": "Facilitate quicker responses to market dynamics.",
+      "priority": "Medium",
+      "tags": [
+        "market_analysis",
+        "responsiveness"
+      ],
+      "subdomain": "integration",
+      "difficulty": 2,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-040",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_41-v1.0",
+      "domain": "e_commerce",
+      "summary": "Facilitate quicker responses to customer behavior.",
+      "priority": "Medium",
+      "tags": [
+        "customer_behavior",
+        "responsiveness"
+      ],
+      "subdomain": "integration",
+      "difficulty": 2,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-041",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_42-v1.0",
+      "domain": "fintech",
+      "summary": "Monitor patient outcomes through embedded dashboards.",
+      "priority": "High",
+      "tags": [
+        "patient_outcomes",
+        "healthcare"
+      ],
+      "subdomain": "integration",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-042",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_43-v1.0",
+      "domain": "fintech",
+      "summary": "Ensure compliance with healthcare regulations through embedded dashboards.",
+      "priority": "High",
+      "tags": [
+        "regulatory_compliance",
+        "healthcare"
+      ],
+      "subdomain": "integration",
+      "difficulty": 4,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-043",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_44-v1.0",
+      "domain": "fintech",
+      "summary": "Contribute to improved patient care through embedded dashboards.",
+      "priority": "High",
+      "tags": [
+        "patient_care",
+        "healthcare"
+      ],
+      "subdomain": "integration",
+      "difficulty": 2,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-044",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_45-v1.0",
+      "domain": "fintech",
+      "summary": "Contribute to improved operational efficiency through embedded dashboards.",
+      "priority": "Medium",
+      "tags": [
+        "operational_efficiency",
+        "healthcare"
+      ],
+      "subdomain": "integration",
+      "difficulty": 2,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-045",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_46-v1.0",
+      "domain": "fintech",
+      "summary": "Track transaction data through embedded dashboards.",
+      "priority": "High",
+      "tags": [
+        "transaction_monitoring",
+        "financial_institutions"
+      ],
+      "subdomain": "integration",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-046",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_47-v1.0",
+      "domain": "fintech",
+      "summary": "Track regulatory adherence through embedded dashboards.",
+      "priority": "High",
+      "tags": [
+        "regulatory_compliance",
+        "financial_institutions"
+      ],
+      "subdomain": "integration",
+      "difficulty": 4,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-047",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_48-v1.0",
+      "domain": "fintech",
+      "summary": "Support risk management through embedded dashboards.",
+      "priority": "High",
+      "tags": [
+        "risk_management",
+        "financial_institutions"
+      ],
+      "subdomain": "integration",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-048",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_49-v1.0",
+      "domain": "fintech",
+      "summary": "Support fraud detection through embedded dashboards.",
+      "priority": "High",
+      "tags": [
+        "fraud_detection",
+        "financial_institutions"
+      ],
+      "subdomain": "integration",
+      "difficulty": 4,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-049",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_50-v1.0",
+      "domain": "unknown",
+      "summary": "Integrate dashboards with project management tools.",
+      "priority": "Medium",
+      "tags": [
+        "embedding",
+        "project_management"
+      ],
+      "subdomain": "integration",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-050",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_51-v1.0",
+      "domain": "unknown",
+      "summary": "Provide project managers with immediate visibility into project progress.",
+      "priority": "High",
+      "tags": [
+        "project_progress",
+        "real_time_data"
+      ],
+      "subdomain": "integration",
+      "difficulty": 2,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-051",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_52-v1.0",
+      "domain": "unknown",
+      "summary": "Provide project managers with immediate visibility into resource allocation.",
+      "priority": "High",
+      "tags": [
+        "resource_management",
+        "real_time_data"
+      ],
+      "subdomain": "integration",
+      "difficulty": 2,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-052",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_53-v1.0",
+      "domain": "unknown",
+      "summary": "Improve project delivery through embedded dashboards.",
+      "priority": "Medium",
+      "tags": [
+        "project_delivery",
+        "efficiency"
+      ],
+      "subdomain": "integration",
+      "difficulty": 2,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-053",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_54-v1.0",
+      "domain": "unknown",
+      "summary": "Improve resource management through embedded dashboards.",
+      "priority": "Medium",
+      "tags": [
+        "resource_management",
+        "efficiency"
+      ],
+      "subdomain": "integration",
+      "difficulty": 2,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-054",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_55-v1.0",
+      "domain": "unknown",
+      "summary": "Monitor the performance of marketing campaigns directly within platforms.",
+      "priority": "High",
+      "tags": [
+        "campaign_performance",
+        "marketing"
+      ],
+      "subdomain": "integration",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-055",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_56-v1.0",
+      "domain": "unknown",
+      "summary": "Allow for data-driven adjustments to marketing strategies.",
+      "priority": "Medium",
+      "tags": [
+        "data_driven_decisions",
+        "marketing"
+      ],
+      "subdomain": "integration",
+      "difficulty": 2,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-056",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_57-v1.0",
+      "domain": "unknown",
+      "summary": "Improve return on investment for marketing campaigns.",
+      "priority": "Medium",
+      "tags": [
+        "roi",
+        "marketing"
+      ],
+      "subdomain": "integration",
+      "difficulty": 2,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-057",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_58-v1.0",
+      "domain": "unknown",
+      "summary": "Embed dashboards for event management companies.",
+      "priority": "Medium",
+      "tags": [
+        "embedding",
+        "event_management"
+      ],
+      "subdomain": "integration",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-058",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_59-v1.0",
+      "domain": "unknown",
+      "summary": "Provide attendees with valuable insights into event engagement.",
+      "priority": "Medium",
+      "tags": [
+        "event_engagement",
+        "data_insights"
+      ],
+      "subdomain": "integration",
+      "difficulty": 2,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-059",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_60-v1.0",
+      "domain": "unknown",
+      "summary": "Provide organizers with valuable insights into event outcomes.",
+      "priority": "Medium",
+      "tags": [
+        "event_outcomes",
+        "data_insights"
+      ],
+      "subdomain": "integration",
+      "difficulty": 2,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-060",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_61-v1.0",
+      "domain": "unknown",
+      "summary": "Optimize future events based on event engagement insights.",
+      "priority": "Low",
+      "tags": [
+        "event_optimization",
+        "data_driven_decisions"
+      ],
+      "subdomain": "integration",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied",
+      "source_hlj_id": "REQ 001-061",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_62-v1.0",
+      "domain": "unknown",
+      "summary": "Optimize future events based on event outcome insights.",
+      "priority": "Low",
+      "tags": [
+        "event_optimization",
+        "data_driven_decisions"
+      ],
+      "subdomain": "integration",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied",
+      "source_hlj_id": "REQ 001-062",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_63-v1.0",
+      "domain": "education",
+      "summary": "Embed dashboards in education platforms.",
+      "priority": "Medium",
+      "tags": [
+        "embedding",
+        "education"
+      ],
+      "subdomain": "integration",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-063",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_64-v1.0",
+      "domain": "education",
+      "summary": "Embed dashboards in distance learning platforms.",
+      "priority": "Medium",
+      "tags": [
+        "embedding",
+        "distance_learning"
+      ],
+      "subdomain": "integration",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-064",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_65-v1.0",
+      "domain": "education",
+      "summary": "Track student engagement through embedded dashboards.",
+      "priority": "High",
+      "tags": [
+        "student_engagement",
+        "education"
+      ],
+      "subdomain": "integration",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-065",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_66-v1.0",
+      "domain": "education",
+      "summary": "Track student performance through embedded dashboards.",
+      "priority": "High",
+      "tags": [
+        "student_performance",
+        "education"
+      ],
+      "subdomain": "integration",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-066",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_67-v1.0",
+      "domain": "education",
+      "summary": "Offer educators valuable insights into learning patterns.",
+      "priority": "Medium",
+      "tags": [
+        "learning_patterns",
+        "education"
+      ],
+      "subdomain": "integration",
+      "difficulty": 2,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-067",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_68-v1.0",
+      "domain": "education",
+      "summary": "Offer educators valuable insights into areas for potential intervention.",
+      "priority": "Medium",
+      "tags": [
+        "intervention_strategies",
+        "education"
+      ],
+      "subdomain": "integration",
+      "difficulty": 2,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-068",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_69-v1.0",
+      "domain": "unknown",
+      "summary": "Incorporate a range of core features for effective data exploration.",
+      "priority": "High",
+      "tags": [
+        "data_exploration",
+        "core_features"
+      ],
+      "subdomain": "features",
+      "difficulty": 2,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-069",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_70-v1.0",
+      "domain": "unknown",
+      "summary": "Incorporate a range of core features for effective data analysis.",
+      "priority": "High",
+      "tags": [
+        "data_analysis",
+        "core_features"
+      ],
+      "subdomain": "features",
+      "difficulty": 2,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-070",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_71-v1.0",
+      "domain": "unknown",
+      "summary": "Include a variety of chart types.",
+      "priority": "High",
+      "tags": [
+        "data_visualization",
+        "chart_types"
+      ],
+      "subdomain": "features",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-071",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_72-v1.0",
+      "domain": "unknown",
+      "summary": "Provide drill-down functionality.",
+      "priority": "High",
+      "tags": [
+        "data_exploration",
+        "drill_down"
+      ],
+      "subdomain": "features",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-072",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_73-v1.0",
+      "domain": "unknown",
+      "summary": "Offer filtering capabilities.",
+      "priority": "High",
+      "tags": [
+        "data_filtering",
+        "user_interaction"
+      ],
+      "subdomain": "features",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-073",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_74-v1.0",
+      "domain": "unknown",
+      "summary": "Include options for exporting data in different formats.",
+      "priority": "High",
+      "tags": [
+        "data_export",
+        "data_sharing"
+      ],
+      "subdomain": "features",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-074",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_75-v1.0",
+      "domain": "unknown",
+      "summary": "Support bar charts for comparison.",
+      "priority": "Medium",
+      "tags": [
+        "data_visualization",
+        "bar_chart"
+      ],
+      "subdomain": "features",
+      "difficulty": 2,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-075",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_76-v1.0",
+      "domain": "unknown",
+      "summary": "Support column charts for comparison.",
+      "priority": "Medium",
+      "tags": [
+        "data_visualization",
+        "column_chart"
+      ],
+      "subdomain": "features",
+      "difficulty": 2,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-076",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_77-v1.0",
+      "domain": "unknown",
+      "summary": "Support dot plots for concise comparisons.",
+      "priority": "Low",
+      "tags": [
+        "data_visualization",
+        "dot_plot"
+      ],
+      "subdomain": "features",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-077",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_78-v1.0",
+      "domain": "unknown",
+      "summary": "Support bullet graphs for concise comparisons against a goal.",
+      "priority": "Low",
+      "tags": [
+        "data_visualization",
+        "bullet_graph"
+      ],
+      "subdomain": "features",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-078",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_79-v1.0",
+      "domain": "unknown",
+      "summary": "Support line charts to visualize trends over time.",
+      "priority": "Medium",
+      "tags": [
+        "data_visualization",
+        "line_chart",
+        "time_series"
+      ],
+      "subdomain": "features",
+      "difficulty": 2,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-079",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_80-v1.0",
+      "domain": "unknown",
+      "summary": "Support area charts to visualize trends over time.",
+      "priority": "Medium",
+      "tags": [
+        "data_visualization",
+        "area_chart",
+        "time_series"
+      ],
+      "subdomain": "features",
+      "difficulty": 2,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-080",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_81-v1.0",
+      "domain": "unknown",
+      "summary": "Support trend charts to highlight values above or below targets.",
+      "priority": "Low",
+      "tags": [
+        "data_visualization",
+        "trend_chart"
+      ],
+      "subdomain": "features",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-081",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_82-v1.0",
+      "domain": "unknown",
+      "summary": "Support histograms to understand data distribution.",
+      "priority": "Medium",
+      "tags": [
+        "data_visualization",
+        "histogram",
+        "data_distribution"
+      ],
+      "subdomain": "features",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-082",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_83-v1.0",
+      "domain": "unknown",
+      "summary": "Support scatter plots to understand data distribution.",
+      "priority": "Medium",
+      "tags": [
+        "data_visualization",
+        "scatter_plot",
+        "data_distribution"
+      ],
+      "subdomain": "features",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-083",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_84-v1.0",
+      "domain": "unknown",
+      "summary": "Support scatter plots to identify correlations between variables.",
+      "priority": "Medium",
+      "tags": [
+        "data_visualization",
+        "scatter_plot",
+        "correlation"
+      ],
+      "subdomain": "features",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-084",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_85-v1.0",
+      "domain": "unknown",
+      "summary": "Support density curves to visualize data distributions.",
+      "priority": "Low",
+      "tags": [
+        "data_visualization",
+        "density_curve",
+        "data_distribution"
+      ],
+      "subdomain": "features",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-085",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_86-v1.0",
+      "domain": "unknown",
+      "summary": "Support pie charts to illustrate the composition of data.",
+      "priority": "Medium",
+      "tags": [
+        "data_visualization",
+        "pie_chart",
+        "data_composition"
+      ],
+      "subdomain": "features",
+      "difficulty": 2,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-086",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_87-v1.0",
+      "domain": "unknown",
+      "summary": "Support doughnut charts to illustrate the composition of data.",
+      "priority": "Medium",
+      "tags": [
+        "data_visualization",
+        "doughnut_chart",
+        "data_composition"
+      ],
+      "subdomain": "features",
+      "difficulty": 2,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-087",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_88-v1.0",
+      "domain": "unknown",
+      "summary": "Support stacked bar charts to illustrate the composition of data.",
+      "priority": "Medium",
+      "tags": [
+        "data_visualization",
+        "stacked_bar_chart",
+        "data_composition"
+      ],
+      "subdomain": "features",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-088",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_89-v1.0",
+      "domain": "unknown",
+      "summary": "Support stacked area charts to illustrate the composition of data.",
+      "priority": "Medium",
+      "tags": [
+        "data_visualization",
+        "stacked_area_chart",
+        "data_composition"
+      ],
+      "subdomain": "features",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-089",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_90-v1.0",
+      "domain": "unknown",
+      "summary": "Support treemaps to illustrate the composition of data.",
+      "priority": "Low",
+      "tags": [
+        "data_visualization",
+        "treemap",
+        "data_composition"
+      ],
+      "subdomain": "features",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-090",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_91-v1.0",
+      "domain": "unknown",
+      "summary": "Support sunburst charts to illustrate the composition of data.",
+      "priority": "Low",
+      "tags": [
+        "data_visualization",
+        "sunburst_chart",
+        "data_composition"
+      ],
+      "subdomain": "features",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-091",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_92-v1.0",
+      "domain": "unknown",
+      "summary": "Support bubble charts for visualizing relationships between variables.",
+      "priority": "Medium",
+      "tags": [
+        "data_visualization",
+        "bubble_chart",
+        "relationships"
+      ],
+      "subdomain": "features",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-092",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_93-v1.0",
+      "domain": "unknown",
+      "summary": "Represent a third numeric variable through bubble size in bubble charts.",
+      "priority": "Low",
+      "tags": [
+        "data_visualization",
+        "bubble_chart",
+        "variable_representation"
+      ],
+      "subdomain": "features",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-093",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_94-v1.0",
+      "domain": "unknown",
+      "summary": "Support funnel charts for visualizing sequential processes.",
+      "priority": "Medium",
+      "tags": [
+        "data_visualization",
+        "funnel_chart",
+        "sequential_process"
+      ],
+      "subdomain": "features",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-094",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_95-v1.0",
+      "domain": "unknown",
+      "summary": "Support heatmaps for identifying patterns in large datasets.",
+      "priority": "Medium",
+      "tags": [
+        "data_visualization",
+        "heatmap",
+        "large_datasets"
+      ],
+      "subdomain": "features",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-095",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_96-v1.0",
+      "domain": "unknown",
+      "summary": "Support maps for geographical data.",
+      "priority": "Medium",
+      "tags": [
+        "data_visualization",
+        "map",
+        "geographical_data"
+      ],
+      "subdomain": "features",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-096",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_97-v1.0",
+      "domain": "unknown",
+      "summary": "Support gauges for showing performance against a target.",
+      "priority": "Medium",
+      "tags": [
+        "data_visualization",
+        "gauge",
+        "performance_monitoring"
+      ],
+      "subdomain": "features",
+      "difficulty": 2,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-097",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_98-v1.0",
+      "domain": "unknown",
+      "summary": "Support sparklines for concise trend representations.",
+      "priority": "Low",
+      "tags": [
+        "data_visualization",
+        "sparkline",
+        "trend_representation"
+      ],
+      "subdomain": "features",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-098",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_99-v1.0",
+      "domain": "unknown",
+      "summary": "Consider supporting dual-axis charts for comparing different metrics.",
+      "priority": "Low",
+      "tags": [
+        "data_visualization",
+        "dual_axis_chart",
+        "metric_comparison"
+      ],
+      "subdomain": "features",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-099",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_100-v1.0",
+      "domain": "unknown",
+      "summary": "Enable users to explore data in greater depth with drill-down.",
+      "priority": "High",
+      "tags": [
+        "data_exploration",
+        "drill_down"
+      ],
+      "subdomain": "features",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-100",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_101-v1.0",
+      "domain": "unknown",
+      "summary": "Allow users to navigate from a high-level summary to granular details.",
+      "priority": "Medium",
+      "tags": [
+        "data_exploration",
+        "granularity"
+      ],
+      "subdomain": "features",
+      "difficulty": 2,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-101",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_102-v1.0",
+      "domain": "unknown",
+      "summary": "Enable drill-down by clicking on a data point or chart element.",
+      "priority": "Medium",
+      "tags": [
+        "user_interaction",
+        "drill_down"
+      ],
+      "subdomain": "features",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-102",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_103-v1.0",
+      "domain": "unknown",
+      "summary": "Guide the drill-down process by attribute hierarchies.",
+      "priority": "Medium",
+      "tags": [
+        "data_navigation",
+        "hierarchy"
+      ],
+      "subdomain": "features",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-103",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_104-v1.0",
+      "domain": "unknown",
+      "summary": "Support drill-down from total sales by region to state.",
+      "priority": "Low",
+      "tags": [
+        "drill_down",
+        "sales_analysis"
+      ],
+      "subdomain": "features",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-104",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_105-v1.0",
+      "domain": "unknown",
+      "summary": "Support drill-down from sales by state to city.",
+      "priority": "Low",
+      "tags": [
+        "drill_down",
+        "sales_analysis"
+      ],
+      "subdomain": "features",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-105",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_106-v1.0",
+      "domain": "unknown",
+      "summary": "Support drill-down from sales by city to individual store.",
+      "priority": "Low",
+      "tags": [
+        "drill_down",
+        "sales_analysis"
+      ],
+      "subdomain": "features",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-106",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_107-v1.0",
+      "domain": "unknown",
+      "summary": "Support drill-down to a specific URL for more information.",
+      "priority": "Low",
+      "tags": [
+        "drill_down",
+        "external_link"
+      ],
+      "subdomain": "features",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-107",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_108-v1.0",
+      "domain": "unknown",
+      "summary": "Support drill-down to another related dashboard for detailed analysis.",
+      "priority": "Low",
+      "tags": [
+        "drill_down",
+        "dashboard_navigation"
+      ],
+      "subdomain": "features",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-108",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_109-v1.0",
+      "domain": "unknown",
+      "summary": "Support drill-down to show underlying data in a tabular format.",
+      "priority": "Medium",
+      "tags": [
+        "drill_down",
+        "tabular_data"
+      ],
+      "subdomain": "features",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-109",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_110-v1.0",
+      "domain": "unknown",
+      "summary": "Transform the dashboard into an interactive exploration tool.",
+      "priority": "Medium",
+      "tags": [
+        "interactive",
+        "data_exploration"
+      ],
+      "subdomain": "features",
+      "difficulty": 2,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-110",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_111-v1.0",
+      "domain": "unknown",
+      "summary": "Allow users to investigate anomalies through drill-down.",
+      "priority": "Medium",
+      "tags": [
+        "anomaly_detection",
+        "drill_down"
+      ],
+      "subdomain": "features",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-111",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_112-v1.0",
+      "domain": "unknown",
+      "summary": "Allow users to understand drivers behind high-level metrics.",
+      "priority": "Medium",
+      "tags": [
+        "root_cause_analysis",
+        "data_analysis"
+      ],
+      "subdomain": "features",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-112",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_113-v1.0",
+      "domain": "unknown",
+      "summary": "Implement filtering capabilities to focus on specific data subsets.",
+      "priority": "High",
+      "tags": [
+        "data_filtering",
+        "data_analysis"
+      ],
+      "subdomain": "features",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-113",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_114-v1.0",
+      "domain": "unknown",
+      "summary": "Support categorical filters such as dropdown menus.",
+      "priority": "Medium",
+      "tags": [
+        "data_filtering",
+        "categorical_filter",
+        "dropdown"
+      ],
+      "subdomain": "features",
+      "difficulty": 2,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-114",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_115-v1.0",
+      "domain": "unknown",
+      "summary": "Support categorical filters such as checkboxes.",
+      "priority": "Medium",
+      "tags": [
+        "data_filtering",
+        "categorical_filter",
+        "checkbox"
+      ],
+      "subdomain": "features",
+      "difficulty": 2,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-115",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_116-v1.0",
+      "domain": "unknown",
+      "summary": "Support categorical filters such as multi-select lists.",
+      "priority": "Medium",
+      "tags": [
+        "data_filtering",
+        "categorical_filter",
+        "multi_select"
+      ],
+      "subdomain": "features",
+      "difficulty": 2,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-116",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_117-v1.0",
+      "domain": "unknown",
+      "summary": "Support categorical filters such as hierarchy filters.",
+      "priority": "Medium",
+      "tags": [
+        "data_filtering",
+        "categorical_filter",
+        "hierarchy_filter"
+      ],
+      "subdomain": "features",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-117",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_118-v1.0",
+      "domain": "unknown",
+      "summary": "Enable filtering data based on categories like product type.",
+      "priority": "Low",
+      "tags": [
+        "data_filtering",
+        "product"
+      ],
+      "subdomain": "features",
+      "difficulty": 2,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-118",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_119-v1.0",
+      "domain": "unknown",
+      "summary": "Enable filtering data based on geographical region.",
+      "priority": "Low",
+      "tags": [
+        "data_filtering",
+        "geography"
+      ],
+      "subdomain": "features",
+      "difficulty": 2,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-119",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_120-v1.0",
+      "domain": "unknown",
+      "summary": "Enable filtering data based on department.",
+      "priority": "Low",
+      "tags": [
+        "data_filtering",
+        "department"
+      ],
+      "subdomain": "features",
+      "difficulty": 2,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-120",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_121-v1.0",
+      "domain": "unknown",
+      "summary": "Support numerical filters including slider filters.",
+      "priority": "Medium",
+      "tags": [
+        "data_filtering",
+        "numerical_filter",
+        "slider"
+      ],
+      "subdomain": "features",
+      "difficulty": 2,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-121",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_122-v1.0",
+      "domain": "unknown",
+      "summary": "Support numerical filters including range inputs.",
+      "priority": "Medium",
+      "tags": [
+        "data_filtering",
+        "numerical_filter",
+        "range_input"
+      ],
+      "subdomain": "features",
+      "difficulty": 2,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-122",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_123-v1.0",
+      "domain": "unknown",
+      "summary": "Enable filtering products by price using numerical filters.",
+      "priority": "Low",
+      "tags": [
+        "data_filtering",
+        "price"
+      ],
+      "subdomain": "features",
+      "difficulty": 2,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-123",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_124-v1.0",
+      "domain": "unknown",
+      "summary": "Enable filtering customers by age using numerical filters.",
+      "priority": "Low",
+      "tags": [
+        "data_filtering",
+        "customer",
+        "age"
+      ],
+      "subdomain": "features",
+      "difficulty": 2,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-124",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_125-v1.0",
+      "domain": "unknown",
+      "summary": "Support date filters such as date pickers.",
+      "priority": "Medium",
+      "tags": [
+        "data_filtering",
+        "date_filter",
+        "date_picker"
+      ],
+      "subdomain": "features",
+      "difficulty": 2,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-125",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_126-v1.0",
+      "domain": "unknown",
+      "summary": "Support date filters such as date range selectors.",
+      "priority": "Medium",
+      "tags": [
+        "data_filtering",
+        "date_filter",
+        "date_range"
+      ],
+      "subdomain": "features",
+      "difficulty": 2,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-126",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_127-v1.0",
+      "domain": "unknown",
+      "summary": "Support date filters such as relative date filters.",
+      "priority": "Medium",
+      "tags": [
+        "data_filtering",
+        "date_filter",
+        "relative_date"
+      ],
+      "subdomain": "features",
+      "difficulty": 2,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-127",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_128-v1.0",
+      "domain": "unknown",
+      "summary": "Enable time-based analysis using date filters.",
+      "priority": "Medium",
+      "tags": [
+        "time_series_analysis",
+        "data_filtering"
+      ],
+      "subdomain": "features",
+      "difficulty": 2,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-128",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_129-v1.0",
+      "domain": "unknown",
+      "summary": "Allow users to compare performance across different time periods.",
+      "priority": "Medium",
+      "tags": [
+        "performance_comparison",
+        "time_series_analysis"
+      ],
+      "subdomain": "features",
+      "difficulty": 2,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-129",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_130-v1.0",
+      "domain": "unknown",
+      "summary": "Allow users to focus on recent data using date filters.",
+      "priority": "Medium",
+      "tags": [
+        "recent_data",
+        "data_filtering"
+      ],
+      "subdomain": "features",
+      "difficulty": 2,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-130",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_131-v1.0",
+      "domain": "unknown",
+      "summary": "Consider implementing global filters that apply across all visualizations.",
+      "priority": "Low",
+      "tags": [
+        "data_filtering",
+        "global_filter"
+      ],
+      "subdomain": "features",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-131",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_132-v1.0",
+      "domain": "unknown",
+      "summary": "Explore options for interactive chart elements to function as filters.",
+      "priority": "Low",
+      "tags": [
+        "data_filtering",
+        "interactive_charts"
+      ],
+      "subdomain": "features",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-132",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_133-v1.0",
+      "domain": "unknown",
+      "summary": "Support exporting the dashboard layout as a PDF.",
+      "priority": "Medium",
+      "tags": [
+        "data_export",
+        "pdf"
+      ],
+      "subdomain": "features",
+      "difficulty": 2,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-133",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_134-v1.0",
+      "domain": "unknown",
+      "summary": "Preserve the visual presentation for reports and documentation in PDF export.",
+      "priority": "Low",
+      "tags": [
+        "data_export",
+        "pdf",
+        "formatting"
+      ],
+      "subdomain": "features",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied",
+      "source_hlj_id": "REQ 001-134",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_135-v1.0",
+      "domain": "unknown",
+      "summary": "Support exporting data to CSV format.",
+      "priority": "High",
+      "tags": [
+        "data_export",
+        "csv"
+      ],
+      "subdomain": "features",
+      "difficulty": 2,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-135",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_136-v1.0",
+      "domain": "unknown",
+      "summary": "Provide raw data in a simple and universally compatible format in CSV export.",
+      "priority": "Low",
+      "tags": [
+        "data_export",
+        "csv",
+        "compatibility"
+      ],
+      "subdomain": "features",
+      "difficulty": 1,
+      "additionalNotes": "origin: implied",
+      "source_hlj_id": "REQ 001-136",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_137-v1.0",
+      "domain": "unknown",
+      "summary": "Support exporting to Excel (XLSX/XLS).",
+      "priority": "Medium",
+      "tags": [
+        "data_export",
+        "excel"
+      ],
+      "subdomain": "features",
+      "difficulty": 2,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-137",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_138-v1.0",
+      "domain": "unknown",
+      "summary": "Allow users to work with data in Microsoft Excel.",
+      "priority": "Low",
+      "tags": [
+        "data_export",
+        "excel",
+        "integration"
+      ],
+      "subdomain": "features",
+      "difficulty": 1,
+      "additionalNotes": "origin: implied",
+      "source_hlj_id": "REQ 001-138",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_139-v1.0",
+      "domain": "unknown",
+      "summary": "Consider preserving formatting in Excel export.",
+      "priority": "Low",
+      "tags": [
+        "data_export",
+        "excel",
+        "formatting"
+      ],
+      "subdomain": "features",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-139",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_140-v1.0",
+      "domain": "unknown",
+      "summary": "Allow users to export static images of the dashboard.",
+      "priority": "Low",
+      "tags": [
+        "data_export",
+        "image"
+      ],
+      "subdomain": "features",
+      "difficulty": 2,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-140",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_141-v1.0",
+      "domain": "unknown",
+      "summary": "Allow users to export static images of specific widgets.",
+      "priority": "Low",
+      "tags": [
+        "data_export",
+        "widget",
+        "image"
+      ],
+      "subdomain": "features",
+      "difficulty": 2,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-141",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_142-v1.0",
+      "domain": "unknown",
+      "summary": "Support image export formats like PNG.",
+      "priority": "Low",
+      "tags": [
+        "data_export",
+        "image",
+        "png"
+      ],
+      "subdomain": "features",
+      "difficulty": 1,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-142",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_143-v1.0",
+      "domain": "unknown",
+      "summary": "Support image export formats like JPG.",
+      "priority": "Low",
+      "tags": [
+        "data_export",
+        "image",
+        "jpg"
+      ],
+      "subdomain": "features",
+      "difficulty": 1,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-143",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_144-v1.0",
+      "domain": "unknown",
+      "summary": "Consider options for exporting underlying detailed data.",
+      "priority": "Low",
+      "tags": [
+        "data_export",
+        "detailed_data"
+      ],
+      "subdomain": "features",
+      "difficulty": 2,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-144",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_145-v1.0",
+      "domain": "unknown",
+      "summary": "Consider options for exporting summarized data as it appears in visualizations.",
+      "priority": "Low",
+      "tags": [
+        "data_export",
+        "summarized_data"
+      ],
+      "subdomain": "features",
+      "difficulty": 2,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-145",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_146-v1.0",
+      "domain": "unknown",
+      "summary": "Provide a robust Integration API for seamless embedding.",
+      "priority": "High",
+      "tags": [
+        "integration",
+        "api"
+      ],
+      "subdomain": "integration",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-146",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_147-v1.0",
+      "domain": "unknown",
+      "summary": "Embed the dashboard through an iframe snippet.",
+      "priority": "High",
+      "tags": [
+        "embedding",
+        "iframe"
+      ],
+      "subdomain": "integration",
+      "difficulty": 2,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-147",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_148-v1.0",
+      "domain": "unknown",
+      "summary": "Customize the iframe snippet through standard HTML attributes.",
+      "priority": "Medium",
+      "tags": [
+        "embedding",
+        "iframe",
+        "customization"
+      ],
+      "subdomain": "integration",
+      "difficulty": 2,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-148",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_149-v1.0",
+      "domain": "unknown",
+      "summary": "Allow developers to adjust the width of the embedded dashboard.",
+      "priority": "Medium",
+      "tags": [
+        "embedding",
+        "iframe",
+        "layout"
+      ],
+      "subdomain": "integration",
+      "difficulty": 1,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-149",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_150-v1.0",
+      "domain": "unknown",
+      "summary": "Allow developers to adjust the height of the embedded dashboard.",
+      "priority": "Medium",
+      "tags": [
+        "embedding",
+        "iframe",
+        "layout"
+      ],
+      "subdomain": "integration",
+      "difficulty": 1,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-150",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_151-v1.0",
+      "domain": "unknown",
+      "summary": "Configure the frameborder attribute of the iframe.",
+      "priority": "Low",
+      "tags": [
+        "embedding",
+        "iframe",
+        "appearance"
+      ],
+      "subdomain": "integration",
+      "difficulty": 1,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-151",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_152-v1.0",
+      "domain": "unknown",
+      "summary": "Configure the scrolling attribute of the iframe.",
+      "priority": "Low",
+      "tags": [
+        "embedding",
+        "iframe",
+        "behavior"
+      ],
+      "subdomain": "integration",
+      "difficulty": 1,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-152",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_153-v1.0",
+      "domain": "unknown",
+      "summary": "Use the sandbox attribute for enhancing security of embedded content.",
+      "priority": "High",
+      "tags": [
+        "embedding",
+        "iframe",
+        "security"
+      ],
+      "subdomain": "integration",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-153",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_154-v1.0",
+      "domain": "unknown",
+      "summary": "Support passing parameters directly through the iframe URL.",
+      "priority": "Medium",
+      "tags": [
+        "embedding",
+        "iframe",
+        "url_parameters"
+      ],
+      "subdomain": "integration",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-154",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_155-v1.0",
+      "domain": "unknown",
+      "summary": "Control the dashboard's initial state via URL parameters.",
+      "priority": "Medium",
+      "tags": [
+        "embedding",
+        "iframe",
+        "initial_state"
+      ],
+      "subdomain": "integration",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-155",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_156-v1.0",
+      "domain": "unknown",
+      "summary": "Pre-filter data based on the context of the embedding application.",
+      "priority": "Medium",
+      "tags": [
+        "embedding",
+        "data_filtering",
+        "context"
+      ],
+      "subdomain": "integration",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-156",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_157-v1.0",
+      "domain": "unknown",
+      "summary": "Modify certain behaviors of the dashboard via URL parameters.",
+      "priority": "Low",
+      "tags": [
+        "embedding",
+        "iframe",
+        "behavior_control"
+      ],
+      "subdomain": "integration",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-157",
+      "domain_id": "P-SAAS-019"
+    },
+    {
+      "id": "REQ-108-HLJ-Chunk_1-Item_158-v1.0",
+      "domain": "unknown",
+      "summary": "Manage secure access to the embedded dashboard through authentication flows.",
+      "priority": "High",
+      "tags": [
+        "security",
+        "authentication",
+        "embedding"
+      ],
+      "subdomain": "integration",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-158",
+      "domain_id": "P-SAAS-019"
+    }
+  ]
+}

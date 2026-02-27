@@ -1,0 +1,159 @@
+{
+  "doc_id": "bb77b3b2-e255-58ac-aeb9-796c8fd14503",
+  "req_key": "saas::P-SAAS-061::REQ-150",
+  "req_id": "REQ-150",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-061",
+  "source": {
+    "raw_path": "02_raw_requirements/saas/P-SAAS-061/req-150_raw.txt",
+    "refined_path": "03_refined_json_normalized/saas/P-SAAS-061/req-150_refined.json",
+    "origin": "both"
+  },
+  "text": "**Feature Requirement Document: Destructive Intent Confirmation**\n\n**Feature Name:** Destructive Intent Voice Confirmation and Safety Logging\n\n**Objective:**  \nTo ensure user safety and prevent accidental data loss, a confirmation mechanism must be added when the detected user intent is classified as destructive, specifically when it matches the \"delete everything\" command.\n\n**Requirements:**\n\n1. **Intent Validation:**  \n   - Trigger confirmation flow only if the detected intent equals \"delete everything\".  \n   - The detected intent must have a confidence score of **≥ 0.9** to proceed.\n\n2. **User Confirmation:**  \n   - A verbal confirmation must be requested.  \n   - The system must explicitly ask: *“Are you sure you want to delete everything?”*  \n   - The user must respond with an exact verbal **“yes”** to proceed. Any other response cancels the action.\n\n3. **Event Logging:**  \n   - All such destructive intent actions must be logged to the `voice_safety` index.  \n   - The log must include timestamp, user ID, intent string, confidence score, and confirmation response.\n\n4. **Rollback Capability:**  \n   - A rollback option must be available for **10 minutes** post-execution.  \n   - Rollback must reverse the “delete everything” operation entirely if invoked within the allowed window.\n\n**Priority:** High  \n**Owner:** Voice Interaction Safety Team",
+  "structured_data": [
+    {
+      "id": "REQ-150-HLJ-Chunk_1-Item_1-v1.0",
+      "domain": "unknown",
+      "summary": "Trigger confirmation only on 'delete everything' intent",
+      "priority": "High",
+      "tags": [
+        "intent_detection",
+        "safety",
+        "voice_command"
+      ],
+      "subdomain": "natural_language_processing",
+      "difficulty": 2,
+      "additionalNotes": "Matches destructive command before any safety checks are performed",
+      "source_hlj_id": "REQ 001-001",
+      "domain_id": "P-SAAS-061"
+    },
+    {
+      "id": "REQ-150-HLJ-Chunk_1-Item_2-v1.0",
+      "domain": "unknown",
+      "summary": "Require confidence score of at least 0.9 to proceed",
+      "priority": "High",
+      "tags": [
+        "intent_validation",
+        "ml_confidence",
+        "voice_ai"
+      ],
+      "subdomain": "natural_language_processing",
+      "difficulty": 2,
+      "additionalNotes": "Ensures the system is sufficiently certain of the user's destructive intent",
+      "source_hlj_id": "REQ 001-002",
+      "domain_id": "P-SAAS-061"
+    },
+    {
+      "id": "REQ-150-HLJ-Chunk_1-Item_3-v1.0",
+      "domain": "unknown",
+      "summary": "Request explicit verbal confirmation from user",
+      "priority": "High",
+      "tags": [
+        "user_confirmation",
+        "voice_input",
+        "safety"
+      ],
+      "subdomain": "voice_interface",
+      "difficulty": 2,
+      "additionalNotes": "System must engage the user in confirmation dialog for destructive intent",
+      "source_hlj_id": "REQ 001-003",
+      "domain_id": "P-SAAS-061"
+    },
+    {
+      "id": "REQ-150-HLJ-Chunk_1-Item_4-v1.0",
+      "domain": "unknown",
+      "summary": "Cancel operation unless verbal response is exact 'yes'",
+      "priority": "High",
+      "tags": [
+        "voice_validation",
+        "confirmation",
+        "user_input"
+      ],
+      "subdomain": "voice_interface",
+      "difficulty": 2,
+      "additionalNotes": "Prevents accidental confirmations via ambiguous or misinterpreted responses",
+      "source_hlj_id": "REQ 001-004",
+      "domain_id": "P-SAAS-061"
+    },
+    {
+      "id": "REQ-150-HLJ-Chunk_1-Item_5-v1.0",
+      "domain": "unknown",
+      "summary": "Log event data to voice_safety index",
+      "priority": "High",
+      "tags": [
+        "audit_logging",
+        "safety",
+        "intent_audit"
+      ],
+      "subdomain": "data_logging",
+      "difficulty": 3,
+      "additionalNotes": "Tracks all destructive intent confirmations for auditing and traceability",
+      "source_hlj_id": "REQ 001-005",
+      "domain_id": "P-SAAS-061"
+    },
+    {
+      "id": "REQ-150-HLJ-Chunk_1-Item_6-v1.0",
+      "domain": "unknown",
+      "summary": "Include metadata fields in each log entry",
+      "priority": "High",
+      "tags": [
+        "logging",
+        "metadata",
+        "audit_trail"
+      ],
+      "subdomain": "data_logging",
+      "difficulty": 2,
+      "additionalNotes": "Fields include timestamp, user ID, intent, confidence, and confirmation response",
+      "source_hlj_id": "REQ 001-006",
+      "domain_id": "P-SAAS-061"
+    },
+    {
+      "id": "REQ-150-HLJ-Chunk_1-Item_7-v1.0",
+      "domain": "unknown",
+      "summary": "Enable rollback option for 10 minutes post-deletion",
+      "priority": "High",
+      "tags": [
+        "rollback",
+        "safety",
+        "data_recovery"
+      ],
+      "subdomain": "data_integrity",
+      "difficulty": 3,
+      "additionalNotes": "Provides a safeguard mechanism for undoing critical operations shortly after execution",
+      "source_hlj_id": "REQ 001-007",
+      "domain_id": "P-SAAS-061"
+    },
+    {
+      "id": "REQ-150-HLJ-Chunk_1-Item_8-v1.0",
+      "domain": "unknown",
+      "summary": "Reverse deletion completely if rollback is invoked",
+      "priority": "High",
+      "tags": [
+        "rollback",
+        "data_restore",
+        "safety_feature"
+      ],
+      "subdomain": "data_integrity",
+      "difficulty": 3,
+      "additionalNotes": "Rollback must restore system to pre-deletion state",
+      "source_hlj_id": "REQ 001-008",
+      "domain_id": "P-SAAS-061"
+    },
+    {
+      "id": "REQ-150-HLJ-Chunk_1-Item_9-v1.0",
+      "domain": "unknown",
+      "summary": "Ensure real-time system responsiveness during rollback window",
+      "priority": "Low",
+      "tags": [
+        "system_performance",
+        "rollback",
+        "usability"
+      ],
+      "subdomain": "system_performance",
+      "difficulty": 3,
+      "additionalNotes": "origin: implied — rollback usability implies system must remain responsive for invocation",
+      "source_hlj_id": "REQ 001-009",
+      "domain_id": "P-SAAS-061"
+    }
+  ]
+}

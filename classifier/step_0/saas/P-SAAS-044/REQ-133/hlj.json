@@ -1,0 +1,143 @@
+{
+  "doc_id": "b8c5d50a-2c26-5e2b-8ba6-e61ca8a2fa8d",
+  "req_key": "saas::P-SAAS-044::REQ-133",
+  "req_id": "REQ-133",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-044",
+  "source": {
+    "raw_path": "02_raw_requirements/saas/P-SAAS-044/req-133_raw.txt",
+    "refined_path": "03_refined_json_normalized/saas/P-SAAS-044/req-133_refined.json",
+    "origin": "both"
+  },
+  "text": "### Emotion Detection Module\n\nThe Emotion Detection Module enables real-time sentiment scoring during live chat sessions, analyzing each message and updating sentiment labels—**positive**, **neutral**, or **negative**—every 2 seconds. This empowers support teams with instant emotional insights to guide tone, escalation, and prioritization strategies.\n\nThe underlying NLP model is optimized for high accuracy, targeting **≥88% F1 score on English** text, and is undergoing phased expansion for **multilingual sentiment analysis** as part of our 2025 roadmap.\n\nIn the UI, sentiment badges appear beside each message, color-coded for quick reference. A **trend line graph** visualizes the sentiment trajectory across the session, while a **negative sentiment alert** is triggered when **more than 3 consecutive negative messages** are detected—enabling proactive intervention by agents or escalation bots.\n\nAll data is processed **exclusively on on-premise GPUs** to ensure compliance with **GDPR Article 28**, keeping **personally identifiable information (PII) onshore** and under full client control.\n\nThe next key milestone is the **pilot release scheduled for 2025-05-15**, which will be available as an **opt-in module** in the admin console. This ensures flexibility for client-specific rollout plans and compliance workflows.",
+  "structured_data": [
+    {
+      "id": "REQ-133-HLJ-Chunk_1-Item_1-v1.0",
+      "domain": "saas",
+      "summary": "Score sentiment in real-time every 2 seconds",
+      "priority": "High",
+      "tags": [
+        "sentiment_analysis",
+        "real_time",
+        "chat_sessions"
+      ],
+      "subdomain": "live_chat",
+      "difficulty": 3,
+      "additionalNotes": "Sentiment labels updated dynamically during ongoing chat sessions",
+      "source_hlj_id": "REQ 001-001",
+      "domain_id": "P-SAAS-044"
+    },
+    {
+      "id": "REQ-133-HLJ-Chunk_1-Item_2-v1.0",
+      "domain": "saas",
+      "summary": "Label sentiment as positive, neutral, or negative",
+      "priority": "High",
+      "tags": [
+        "sentiment_labels",
+        "ui_badge",
+        "classification"
+      ],
+      "subdomain": "live_chat",
+      "difficulty": 2,
+      "additionalNotes": "Supports three sentiment categories visible to support teams",
+      "source_hlj_id": "REQ 001-002",
+      "domain_id": "P-SAAS-044"
+    },
+    {
+      "id": "REQ-133-HLJ-Chunk_1-Item_3-v1.0",
+      "domain": "saas",
+      "summary": "Achieve ≥88% F1 score on English sentiment model",
+      "priority": "High",
+      "tags": [
+        "model_accuracy",
+        "nlp_model",
+        "english_language"
+      ],
+      "subdomain": "machine_learning",
+      "difficulty": 4,
+      "additionalNotes": "Model performance benchmark to ensure reliability",
+      "source_hlj_id": "REQ 001-003",
+      "domain_id": "P-SAAS-044"
+    },
+    {
+      "id": "REQ-133-HLJ-Chunk_1-Item_4-v1.0",
+      "domain": "saas",
+      "summary": "Support multilingual sentiment analysis roadmap",
+      "priority": "Medium",
+      "tags": [
+        "multilingual",
+        "nlp",
+        "roadmap"
+      ],
+      "subdomain": "machine_learning",
+      "difficulty": 3,
+      "additionalNotes": "Future capability to expand beyond English",
+      "source_hlj_id": "REQ 001-004",
+      "domain_id": "P-SAAS-044"
+    },
+    {
+      "id": "REQ-133-HLJ-Chunk_1-Item_5-v1.0",
+      "domain": "saas",
+      "summary": "Show sentiment badges and trend line in UI",
+      "priority": "Medium",
+      "tags": [
+        "ui_elements",
+        "trend_line",
+        "badge_display"
+      ],
+      "subdomain": "live_chat",
+      "difficulty": 2,
+      "additionalNotes": "Enhances agent awareness through visual feedback",
+      "source_hlj_id": "REQ 001-005",
+      "domain_id": "P-SAAS-044"
+    },
+    {
+      "id": "REQ-133-HLJ-Chunk_1-Item_6-v1.0",
+      "domain": "saas",
+      "summary": "Trigger alert for 3+ consecutive negative messages",
+      "priority": "High",
+      "tags": [
+        "alerting",
+        "negative_sentiment",
+        "proactive_support"
+      ],
+      "subdomain": "live_chat",
+      "difficulty": 3,
+      "additionalNotes": "Automatic intervention prompt based on message pattern",
+      "source_hlj_id": "REQ 001-006",
+      "domain_id": "P-SAAS-044"
+    },
+    {
+      "id": "REQ-133-HLJ-Chunk_1-Item_7-v1.0",
+      "domain": "saas",
+      "summary": "Process sentiment data on-prem to retain PII onshore",
+      "priority": "High",
+      "tags": [
+        "data_privacy",
+        "on_prem",
+        "gdpr_compliance"
+      ],
+      "subdomain": "security",
+      "difficulty": 4,
+      "additionalNotes": "Ensures GDPR Article 28 adherence by avoiding cloud processing",
+      "source_hlj_id": "REQ 001-007",
+      "domain_id": "P-SAAS-044"
+    },
+    {
+      "id": "REQ-133-HLJ-Chunk_1-Item_8-v1.0",
+      "domain": "saas",
+      "summary": "Release pilot as opt-in module on 2025-05-15",
+      "priority": "Medium",
+      "tags": [
+        "pilot_release",
+        "feature_flag",
+        "admin_console"
+      ],
+      "subdomain": "rollout_management",
+      "difficulty": 2,
+      "additionalNotes": "Enables flexible activation per client preference",
+      "source_hlj_id": "REQ 001-008",
+      "domain_id": "P-SAAS-044"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "req_id": "REQ-041",
+  "num_sentences": 1,
+  "num_candidates": 1,
+  "acceptance_rate": 1.0,
+  "signal_counts": {
+    "action": 1,
+    "modal": 1,
+    "constraint": 1
+  },
+  "top_signal_combinations": [
+    {
+      "pattern": "action+constraint+modal",
+      "count": 1
+    }
+  ]
+}

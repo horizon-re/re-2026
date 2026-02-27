@@ -1,0 +1,239 @@
+{
+  "req_id": "REQ-022",
+  "doc_id": "1dfdb5d5-3705-5f68-bf4b-9bf183e637ae",
+  "domain": "fintech",
+  "prompt_id": "P-FT-013",
+  "model": "deepseek-r1:7b",
+  "review_timestamp": "2026-01-20T22:22:26.261071+00:00",
+  "counts": {
+    "total": 22,
+    "llm_pos": 10,
+    "pipe_pos": 4,
+    "llm_neg": 12,
+    "flip_pos_to_neg": 2,
+    "pipe_neg": 18,
+    "flip_neg_to_pos": 8
+  },
+  "reviews": [
+    {
+      "sent_id": "REQ-022::s001",
+      "order": 1,
+      "text": "Certainly!",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.5,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Confirmation or support statement."
+    },
+    {
+      "sent_id": "REQ-022::s002",
+      "order": 2,
+      "text": "Here's a draft support ticket from Olivia Martins' perspective:\n\n---\n\n**Problem Statement:**\nWe currently spend valuable time every Friday exporting and emailing KPI reports manually.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "EXAMPLE_OR_EXPLANATION",
+      "reason_text": "Problem statement description."
+    },
+    {
+      "sent_id": "REQ-022::s003",
+      "order": 3,
+      "text": "This process is inefficient and prone to errors.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.5,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Observation about inefficiency."
+    },
+    {
+      "sent_id": "REQ-022::s004",
+      "order": 4,
+      "text": "**Desired Outcome:**\nAutomate the generation and delivery of weekly KPI reports without manual intervention.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 1.0,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Desires automated KPI report generation."
+    },
+    {
+      "sent_id": "REQ-022::s005",
+      "order": 5,
+      "text": "Ops and finance managers should receive a CSV and a branded PDF with the click of a button.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Automates report generation and delivery with button click."
+    },
+    {
+      "sent_id": "REQ-022::s006",
+      "order": 6,
+      "text": "**Acceptance Criteria:**\n1.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Acceptance criteria section."
+    },
+    {
+      "sent_id": "REQ-022::s007",
+      "order": 7,
+      "text": "A scheduled job runs every Friday at 17:00 local time to generate reports.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 1.0,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Scheduled job for report generation."
+    },
+    {
+      "sent_id": "REQ-022::s008",
+      "order": 8,
+      "text": "2. Reports are generated in CSV and branded PDF formats.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 1.0,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Reports must be in CSV and PDF formats."
+    },
+    {
+      "sent_id": "REQ-022::s009",
+      "order": 9,
+      "text": "3. Implement retry logic and audit logging to comply with SOC 2 standards.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-022::s010",
+      "order": 10,
+      "text": "4.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.5,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "No action required here."
+    },
+    {
+      "sent_id": "REQ-022::s011",
+      "order": 11,
+      "text": "Notifications are sent to Slack's \"#ops-alerts\" channel for success and failure events.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 1.0,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Notifications via Slack are required."
+    },
+    {
+      "sent_id": "REQ-022::s012",
+      "order": 12,
+      "text": "5.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-022::s013",
+      "order": 13,
+      "text": "Reports are emailed using SES or SMTP to designated recipients.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 1.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Reports must be sent via SES or SMTP."
+    },
+    {
+      "sent_id": "REQ-022::s014",
+      "order": 14,
+      "text": "6.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-022::s015",
+      "order": 15,
+      "text": "The solution is user-friendly with a one-click \"Email KPI Pack\" function.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 1.0,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "User-friendly interface with one-click functionality."
+    },
+    {
+      "sent_id": "REQ-022::s016",
+      "order": 16,
+      "text": "**Constraints:**\n1.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.5,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Constraints section."
+    },
+    {
+      "sent_id": "REQ-022::s017",
+      "order": 17,
+      "text": "Avoid disrupting existing workflows or tools like Domo or Looker.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 1.0,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Avoid disrupting existing workflows."
+    },
+    {
+      "sent_id": "REQ-022::s018",
+      "order": 18,
+      "text": "2. Ensure the solution is robust against data inconsistencies or failures during report generation.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.95,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "States that the solution should handle data inconsistencies or failures during report generation."
+    },
+    {
+      "sent_id": "REQ-022::s019",
+      "order": 19,
+      "text": "**Open Questions:**\n1.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.5,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Only asks for clarification without stating enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-022::s020",
+      "order": 20,
+      "text": "Should the CSV and PDF be attached separately or merged into a single file?\n2.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Clarification request for file attachment format."
+    },
+    {
+      "sent_id": "REQ-022::s021",
+      "order": 21,
+      "text": "What specific branding elements should be included in the PDF?\n3.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "EXAMPLE_OR_EXPLANATION",
+      "reason_text": "Asking about specific PDF elements."
+    },
+    {
+      "sent_id": "REQ-022::s022",
+      "order": 22,
+      "text": "Are there any additional security requirements beyond SOC 2 compliance?\n\n---\n\nThis should provide a clear and concise overview of Olivia's requirements and expectations for automating the KPI report generation process.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "PERFORMANCE_REQUIREMENT",
+      "reason_text": "Requires additional security beyond SOC 2 compliance."
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+### Emotion Detection Module
+
+The Emotion Detection Module enables real-time sentiment scoring during live chat sessions, analyzing each message and updating sentiment labels—**positive**, **neutral**, or **negative**—every 2 seconds. This empowers support teams with instant emotional insights to guide tone, escalation, and prioritization strategies.
+
+The underlying NLP model is optimized for high accuracy, targeting **≥88% F1 score on English** text, and is undergoing phased expansion for **multilingual sentiment analysis** as part of our 2025 roadmap.
+
+In the UI, sentiment badges appear beside each message, color-coded for quick reference. A **trend line graph** visualizes the sentiment trajectory across the session, while a **negative sentiment alert** is triggered when **more than 3 consecutive negative messages** are detected—enabling proactive intervention by agents or escalation bots.
+
+All data is processed **exclusively on on-premise GPUs** to ensure compliance with **GDPR Article 28**, keeping **personally identifiable information (PII) onshore** and under full client control.
+
+The next key milestone is the **pilot release scheduled for 2025-05-15**, which will be available as an **opt-in module** in the admin console. This ensures flexibility for client-specific rollout plans and compliance workflows.

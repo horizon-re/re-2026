@@ -1,0 +1,111 @@
+{
+  "doc_id": "0cfdb56e-b0f5-5451-8773-8a6f04e8b9c3",
+  "req_key": "saas::P-SAAS-045::REQ-134",
+  "req_id": "REQ-134",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-045",
+  "source": {
+    "raw_path": "02_raw_requirements/saas/P-SAAS-045/req-134_raw.txt",
+    "refined_path": "03_refined_json_normalized/saas/P-SAAS-045/req-134_refined.json",
+    "origin": "both"
+  },
+  "text": "**Problem Statement**  \nThe current churn prediction model is falling short in identifying potential upsell opportunities, leading to missed revenue growth. Sales teams have expressed dissatisfaction with the lack of actionable insights, particularly regarding customers who appear at risk but are actually primed for expansion.\n\n**Solution Outline**  \nTo address this, we will enhance the existing churn pipeline by integrating an *upsell candidate score*. This score will be derived using new features such as recent spend delta (month-over-month changes) and feature adoption velocity (rate of product usage growth). This hybrid model aims to not only flag churn risks but also surface accounts with high upsell potential, helping sales teams better prioritize outreach.\n\n**Metrics**  \nOur target is a **10% increase in upsell conversions** and a **5% reduction in false-positive churn alerts**, improving both revenue capture and operational efficiency.\n\n**Tasks & Owners**  \n- **Data Feature Engineering** – Lead: @data-team  \n- **Model Retraining & Validation** – Lead: @ml-lead  \n- **Dashboard Integration & Comms Update** – Lead: @product-ops  \n\n**Timeline**  \n- **Kickoff:** May 5, 2025  \n- **Pilot Results:** May 26, 2025  \nThis phased rollout will allow time for iterative tuning before full deployment.",
+  "structured_data": [
+    {
+      "id": "REQ-134-HLJ-Chunk_1-Item_1-v1.0",
+      "domain": "saas",
+      "summary": "Integrate upsell score into churn model",
+      "priority": "High",
+      "tags": [
+        "upsell_score",
+        "churn_model",
+        "revenue_growth"
+      ],
+      "subdomain": "customer_insights",
+      "difficulty": 3,
+      "additionalNotes": "Combine upsell scoring with churn detection for dual-use model.",
+      "source_hlj_id": "REQ 001-001",
+      "domain_id": "P-SAAS-045"
+    },
+    {
+      "id": "REQ-134-HLJ-Chunk_1-Item_2-v1.0",
+      "domain": "saas",
+      "summary": "Engineer features: spend delta and adoption velocity",
+      "priority": "High",
+      "tags": [
+        "feature_engineering",
+        "spend_delta",
+        "usage_metrics"
+      ],
+      "subdomain": "data_pipeline",
+      "difficulty": 4,
+      "additionalNotes": "Calculate month-over-month spending and feature usage rate changes.",
+      "source_hlj_id": "REQ 001-002",
+      "domain_id": "P-SAAS-045"
+    },
+    {
+      "id": "REQ-134-HLJ-Chunk_1-Item_3-v1.0",
+      "domain": "saas",
+      "summary": "Retrain churn model with new features",
+      "priority": "High",
+      "tags": [
+        "model_retraining",
+        "ml_pipeline",
+        "churn_prediction"
+      ],
+      "subdomain": "machine_learning",
+      "difficulty": 4,
+      "additionalNotes": "Model will include upsell features alongside churn indicators.",
+      "source_hlj_id": "REQ 001-003",
+      "domain_id": "P-SAAS-045"
+    },
+    {
+      "id": "REQ-134-HLJ-Chunk_1-Item_4-v1.0",
+      "domain": "saas",
+      "summary": "Update dashboard with upsell scoring",
+      "priority": "Medium",
+      "tags": [
+        "dashboard",
+        "upsell_insights",
+        "product_ops"
+      ],
+      "subdomain": "analytics_dashboard",
+      "difficulty": 3,
+      "additionalNotes": "Expose upsell scores for sales prioritization and visibility.",
+      "source_hlj_id": "REQ 001-004",
+      "domain_id": "P-SAAS-045"
+    },
+    {
+      "id": "REQ-134-HLJ-Chunk_1-Item_5-v1.0",
+      "domain": "saas",
+      "summary": "Track 10% lift in upsell conversions",
+      "priority": "Medium",
+      "tags": [
+        "conversion_tracking",
+        "upsell",
+        "kpi"
+      ],
+      "subdomain": "performance_metrics",
+      "difficulty": 2,
+      "additionalNotes": "KPI target to measure effectiveness of integrated model.",
+      "source_hlj_id": "REQ 001-005",
+      "domain_id": "P-SAAS-045"
+    },
+    {
+      "id": "REQ-134-HLJ-Chunk_1-Item_6-v1.0",
+      "domain": "saas",
+      "summary": "Reduce false churn alerts by 5%",
+      "priority": "Medium",
+      "tags": [
+        "churn_alerts",
+        "false_positive",
+        "model_accuracy"
+      ],
+      "subdomain": "performance_metrics",
+      "difficulty": 2,
+      "additionalNotes": "Metric to validate model precision improvement with upsell logic.",
+      "source_hlj_id": "REQ 001-006",
+      "domain_id": "P-SAAS-045"
+    }
+  ]
+}

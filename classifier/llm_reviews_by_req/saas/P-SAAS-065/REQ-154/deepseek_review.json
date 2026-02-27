@@ -1,0 +1,129 @@
+{
+  "req_id": "REQ-154",
+  "doc_id": "3ceaeef8-c3fb-5f42-98d1-8563886d35b7",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-065",
+  "model": "deepseek-r1:7b",
+  "review_timestamp": "2026-01-20T23:58:51.471173+00:00",
+  "counts": {
+    "total": 11,
+    "llm_pos": 4,
+    "pipe_pos": 4,
+    "llm_neg": 7,
+    "flip_pos_to_neg": 1,
+    "pipe_neg": 7,
+    "flip_neg_to_pos": 1
+  },
+  "reviews": [
+    {
+      "sent_id": "REQ-154::s001",
+      "order": 1,
+      "text": "**Internal Memo**  \n**To:** Communications Team  \n**From:** Corporate Affairs  \n**Subject:** Press Release Correction – Uptime Statement Discrepancy  \n**Date:** April 23, 2025  \n\nWe’ve identified a critical discrepancy in the current draft of our upcoming press release.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Identifies an issue without action."
+    },
+    {
+      "sent_id": "REQ-154::s002",
+      "order": 2,
+      "text": "The statement “0 ms downtime” inaccurately represents our service availability and conflicts with our established 95% SLA (Service Level Agreement).",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Imposes an enforceable SLA change."
+    },
+    {
+      "sent_id": "REQ-154::s003",
+      "order": 3,
+      "text": "To maintain accuracy and avoid potential legal and reputational risk, the copy must be revised immediately.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "ARCHITECTURE_DESCRIPTION",
+      "reason_text": "Imposes an immediate content revision."
+    },
+    {
+      "sent_id": "REQ-154::s004",
+      "order": 4,
+      "text": "The corrected phrasing should read:",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Only informational without action."
+    },
+    {
+      "sent_id": "REQ-154::s005",
+      "order": 5,
+      "text": "**“We offer 99.95% uptime with a 5-minute SLA response window.”",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "States facts without obligation."
+    },
+    {
+      "sent_id": "REQ-154::s006",
+      "order": 6,
+      "text": "**\n\nThis revision more accurately reflects our operational metrics and aligns with the legal and technical documentation of our platform.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Comments on accuracy without action."
+    },
+    {
+      "sent_id": "REQ-154::s007",
+      "order": 7,
+      "text": "Action Required:\n- Update the release with the revised language by **end of day Friday, May 2, 2025**.\n- Submit the revised draft to **Legal** for mandatory review prior to publication.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.95,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Contains specific enforceable actions."
+    },
+    {
+      "sent_id": "REQ-154::s008",
+      "order": 8,
+      "text": "- Ensure any previously distributed versions (internal or external) are flagged and recalled where possible to prevent confusion.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Imposes recalling distributed versions."
+    },
+    {
+      "sent_id": "REQ-154::s009",
+      "order": 9,
+      "text": "We appreciate your immediate attention to this matter.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Expresses appreciation without action."
+    },
+    {
+      "sent_id": "REQ-154::s010",
+      "order": 10,
+      "text": "Please confirm once the update has been implemented and forwarded to Legal.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Asks for confirmation instead of requiring it."
+    },
+    {
+      "sent_id": "REQ-154::s011",
+      "order": 11,
+      "text": "—Corporate Affairs",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "No content provided."
+    }
+  ]
+}

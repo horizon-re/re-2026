@@ -1,0 +1,47 @@
+Traceback (most recent call last):
+  File "scripts\classifier\finetune\train_multitask_deberta.py", line 31, in <module>
+    import torch
+  File "C:\Dvip\plantric-root\venv\lib\site-packages\torch\__init__.py", line 1465, in <module>
+    from . import _meta_registrations
+  File "C:\Dvip\plantric-root\venv\lib\site-packages\torch\_meta_registrations.py", line 7, in <module>
+    from torch._decomp import _add_op_to_registry, global_decomposition_table, meta_table
+  File "C:\Dvip\plantric-root\venv\lib\site-packages\torch\_decomp\__init__.py", line 169, in <module>
+    import torch._decomp.decompositions
+  File "C:\Dvip\plantric-root\venv\lib\site-packages\torch\_decomp\decompositions.py", line 10, in <module>
+    import torch._prims as prims
+  File "C:\Dvip\plantric-root\venv\lib\site-packages\torch\_prims\__init__.py", line 33, in <module>
+    from torch._subclasses.fake_tensor import FakeTensor, FakeTensorMode
+  File "C:\Dvip\plantric-root\venv\lib\site-packages\torch\_subclasses\__init__.py", line 3, in <module>
+    from torch._subclasses.fake_tensor import (
+  File "C:\Dvip\plantric-root\venv\lib\site-packages\torch\_subclasses\fake_tensor.py", line 13, in <module>
+    from torch._guards import Source
+  File "C:\Dvip\plantric-root\venv\lib\site-packages\torch\_guards.py", line 14, in <module>
+    import sympy  # type: ignore[import]
+  File "C:\Dvip\plantric-root\venv\lib\site-packages\sympy\__init__.py", line 74, in <module>
+    from .polys import (Poly, PurePoly, poly_from_expr, parallel_poly_from_expr,
+  File "C:\Dvip\plantric-root\venv\lib\site-packages\sympy\polys\__init__.py", line 79, in <module>
+    from .polyfuncs import (symmetrize, horner, interpolate,
+  File "C:\Dvip\plantric-root\venv\lib\site-packages\sympy\polys\polyfuncs.py", line 10, in <module>
+    from sympy.polys.specialpolys import (
+  File "C:\Dvip\plantric-root\venv\lib\site-packages\sympy\polys\specialpolys.py", line 298, in <module>
+    from sympy.polys.rings import ring
+  File "C:\Dvip\plantric-root\venv\lib\site-packages\sympy\polys\rings.py", line 30, in <module>
+    from sympy.printing.defaults import DefaultPrinting
+  File "C:\Dvip\plantric-root\venv\lib\site-packages\sympy\printing\__init__.py", line 11, in <module>
+    from .pycode import pycode
+  File "C:\Dvip\plantric-root\venv\lib\site-packages\sympy\printing\pycode.py", line 11, in <module>
+    from .codeprinter import CodePrinter
+  File "C:\Dvip\plantric-root\venv\lib\site-packages\sympy\printing\codeprinter.py", line 13, in <module>
+    from sympy.functions.elementary.complexes import re
+  File "C:\Dvip\plantric-root\venv\lib\site-packages\sympy\functions\__init__.py", line 37, in <module>
+    from sympy.functions.special.singularity_functions import SingularityFunction
+  File "C:\Dvip\plantric-root\venv\lib\site-packages\sympy\functions\special\singularity_functions.py", line 7, in <module>
+    from sympy.functions.special.delta_functions import Heaviside
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 779, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 874, in get_code
+  File "<frozen importlib._bootstrap_external>", line 972, in get_data
+KeyboardInterrupt
+^C

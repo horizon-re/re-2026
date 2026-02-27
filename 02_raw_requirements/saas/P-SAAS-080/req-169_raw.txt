@@ -1,0 +1,18 @@
+Issue  
+The QASM compiler’s current grammar permits register declarations with indices that are non-integer or negative values (e.g., `qreg q[-1]; qreg q[1.5]; qreg q[π];`). These invalid indices lead to undefined behavior in later compilation stages, causing unpredictable runtime faults and hindering compiler reliability. Because the lexer does not distinguish integer-only index tokens, invalid inputs slip through and produce ambiguous errors downstream rather than a targeted diagnostic. This defect has been observed in both development and production builds, leading to delayed deployment cycles.
+
+Validation  
+Introduce a fast-fail lexer rule that matches any array index token not conforming to the pattern of one or more decimal digits (regex `\d+`). On encountering a bracketed index that fails this pattern, the lexer should immediately raise error code QASM102 (“Invalid QASM index: must be integer ≥ 0”), halting further parsing. Add a unit test case where a register declaration uses the Unicode constant π as an index (`qreg q[π];`) and assert that lexing fails with QASM102. Also include negative and floating-point index tests (`qreg q[-1]; qreg q[2.3];`) to ensure comprehensive coverage.
+
+Patch  
+In `lexer.l`, insert the following rule before the integer rule:  
+```
+\[\s*([^\d][^\]]*)\s*\]    { return error(QASM102, "Index must be integer ≥ 0"); }
+```  
+Refactor the existing integer-index rule to match `\[\s*\d+\s*\]`. Extend the unit test suite (e.g., `test/lexer_invalid_index.qasm`) with tests:  
+```
+qreg q[π];    // expect QASM102  
+qreg q[-1];   // expect QASM102  
+qreg q[2.3];  // expect QASM102  
+```  
+Run `make test` to confirm failure on invalid cases and success on valid declarations.

@@ -1,0 +1,98 @@
+{
+  "req_id": "REQ-164",
+  "doc_id": "80824469-2dad-5b22-8475-25921bbb7d63",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-075",
+  "model": "deepseek-r1:7b",
+  "review_timestamp": "2026-01-21T00:19:42.619182+00:00",
+  "counts": {
+    "total": 8,
+    "llm_pos": 4,
+    "pipe_pos": 2,
+    "llm_neg": 4,
+    "pipe_neg": 6,
+    "flip_neg_to_pos": 2
+  },
+  "reviews": [
+    {
+      "sent_id": "REQ-164::s001",
+      "order": 1,
+      "text": "Title: Bounding Box ID Overflow Causing Robot Collisions\n\nDescription:\nBounding box identifiers currently reset at 4,096 due to a hardcoded limit in the ID allocator.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-164::s002",
+      "order": 2,
+      "text": "This overflow is causing ID duplication, resulting in robot collisions during path planning and shared environment tasks.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-164::s003",
+      "order": 3,
+      "text": "The system fails to detect ID reuse under high-frequency operations, especially in dense object mapping scenarios.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Describes system behavior issue under high-frequency operations."
+    },
+    {
+      "sent_id": "REQ-164::s004",
+      "order": 4,
+      "text": "Proposed Fix:\nIncrease the ID range to 32,767 to align with int16 safe limits.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-164::s005",
+      "order": 5,
+      "text": "Implement a modulo-based collision check to ensure no two active bounding boxes share the same ID within the session.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-164::s006",
+      "order": 6,
+      "text": "Severity: Critical\nDeadline: Fix must be implemented and validated by Friday to avoid operational downtime in the fleet.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Imposes deadline and criticality constraint on system fix."
+    },
+    {
+      "sent_id": "REQ-164::s007",
+      "order": 7,
+      "text": "Impact: Affects all robots operating in shared workspaces with more than 4,096 active objects.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Points out behavior consequence in dense object mapping."
+    },
+    {
+      "sent_id": "REQ-164::s008",
+      "order": 8,
+      "text": "High risk of damage and mission failure if not addressed.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Indicates high risk requiring action."
+    }
+  ]
+}

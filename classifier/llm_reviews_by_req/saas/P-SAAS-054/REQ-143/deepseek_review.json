@@ -1,0 +1,79 @@
+{
+  "req_id": "REQ-143",
+  "doc_id": "cd955934-105e-5cb5-ae58-7e7a77d80971",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-054",
+  "model": "deepseek-r1:7b",
+  "review_timestamp": "2026-01-20T23:52:17.625757+00:00",
+  "counts": {
+    "total": 6,
+    "llm_pos": 3,
+    "pipe_pos": 2,
+    "llm_neg": 3,
+    "flip_pos_to_neg": 1,
+    "pipe_neg": 4,
+    "flip_neg_to_pos": 2
+  },
+  "reviews": [
+    {
+      "sent_id": "REQ-143::s001",
+      "order": 1,
+      "text": "I'm using GraphQL with a custom auth middleware, but a mis-scoped query exposed sensitive fields under `__typename`, which could reveal PII (e.g., user roles or restricted types) even if field access is denied.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.95,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Potentially exposes PII under __typename"
+    },
+    {
+      "sent_id": "REQ-143::s002",
+      "order": 2,
+      "text": "This was discovered during a legal privacy audit, so urgent guidance is needed.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "COMPLIANCE_REQUIREMENT",
+      "reason_text": "Discovered during legal privacy audit"
+    },
+    {
+      "sent_id": "REQ-143::s003",
+      "order": 3,
+      "text": "Minimal repro:\n```graphql\nquery {\n  user {\n    __",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-143::s004",
+      "order": 4,
+      "text": "typename\n    email  # properly secured\n  }\n}\n```\nDue to how `__typename` resolves, it leaks model-specific info that should be protected.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Leaks model-specific info that should be protected"
+    },
+    {
+      "sent_id": "REQ-143::s005",
+      "order": 5,
+      "text": "What are best practices to prevent this?",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "EXAMPLE_OR_EXPLANATION",
+      "reason_text": "Seeking guidance or best practices"
+    },
+    {
+      "sent_id": "REQ-143::s006",
+      "order": 6,
+      "text": "Should I use schema directives to control `__typename` visibility, or enforce field-level auth rules that handle introspection?\n\nTags: graphql, authorization, privacy",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.75,
+      "reason_code": "EXAMPLE_OR_EXPLANATION",
+      "reason_text": "Best practices question"
+    }
+  ]
+}

@@ -1,0 +1,187 @@
+{
+  "req_id": "REQ-132",
+  "doc_id": "6bb5d24b-5f96-5477-8722-6469202c1df6",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-043",
+  "model": "deepseek-r1:7b",
+  "review_timestamp": "2026-01-20T23:33:20.243754+00:00",
+  "counts": {
+    "total": 17,
+    "llm_neg": 7,
+    "pipe_neg": 17,
+    "llm_pos": 10,
+    "flip_neg_to_pos": 10
+  },
+  "reviews": [
+    {
+      "sent_id": "REQ-132::s001",
+      "order": 1,
+      "text": "**Scope**",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Generic scope statement without specific requirement."
+    },
+    {
+      "sent_id": "REQ-132::s002",
+      "order": 2,
+      "text": "The data export feature allows users to download all of their personal data in both JSON and CSV formats within 24 hours of request submission.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.95,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Enforceable behavior of downloading data within 24 hours."
+    },
+    {
+      "sent_id": "REQ-132::s003",
+      "order": 3,
+      "text": "This functionality ensures transparency and aligns with data portability regulations.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "COMPLIANCE_REQUIREMENT",
+      "reason_text": "Compliance with data portability regulations."
+    },
+    {
+      "sent_id": "REQ-132::s004",
+      "order": 4,
+      "text": "**Request Flow**  \nUsers initiate the export process via an in-app “Export My Data” button.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describes process flow without enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-132::s005",
+      "order": 5,
+      "text": "Once the request is submitted, a confirmation email is sent to the registered address.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "EXAMPLE_OR_EXPLANATION",
+      "reason_text": "Explains expected outcome without imposing behavior."
+    },
+    {
+      "sent_id": "REQ-132::s006",
+      "order": 6,
+      "text": "Upon user confirmation, a secure export link is generated and shared via email.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Process flow detail without enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-132::s007",
+      "order": 7,
+      "text": "The link remains valid for 72 hours before expiration.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.95,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Enforceable validity period for export links."
+    },
+    {
+      "sent_id": "REQ-132::s008",
+      "order": 8,
+      "text": "**Data Coverage**",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describes data coverage without enforcing behavior."
+    },
+    {
+      "sent_id": "REQ-132::s009",
+      "order": 9,
+      "text": "The exported package includes comprehensive user data such as profile information, activity logs, and billing history.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Explanation of exported package contents."
+    },
+    {
+      "sent_id": "REQ-132::s010",
+      "order": 10,
+      "text": "Internal analytics, system logs, and non-user-facing metadata are deliberately excluded to protect proprietary insights and maintain relevance to the user.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Excludes metadata for proprietary reasons."
+    },
+    {
+      "sent_id": "REQ-132::s011",
+      "order": 11,
+      "text": "**Security & Compliance**",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.95,
+      "reason_code": "SECURITY_REQUIREMENT",
+      "reason_text": "Enforceable security measure for export requests."
+    },
+    {
+      "sent_id": "REQ-132::s012",
+      "order": 12,
+      "text": "All exported data is bundled in AES-256 encrypted ZIP files.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SECURITY_REQUIREMENT",
+      "reason_text": "Specific encryption requirement for data security."
+    },
+    {
+      "sent_id": "REQ-132::s013",
+      "order": 13,
+      "text": "Access is granted via time-bound, signed URLs to ensure secure delivery.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Enforceable use of time-bound URLs for access."
+    },
+    {
+      "sent_id": "REQ-132::s014",
+      "order": 14,
+      "text": "Consent and access logs related to export requests are stored for five years to support compliance with privacy regulations such as GDPR and CCPA.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "COMPLIANCE_REQUIREMENT",
+      "reason_text": "Enforceable storage of logs and consent for compliance."
+    },
+    {
+      "sent_id": "REQ-132::s015",
+      "order": 15,
+      "text": "**Scalability**",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Enforceable capacity to handle export requests."
+    },
+    {
+      "sent_id": "REQ-132::s016",
+      "order": 16,
+      "text": "The system is engineered to handle up to 1,000 concurrent export requests.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.95,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Specific scalability requirement for concurrent requests."
+    },
+    {
+      "sent_id": "REQ-132::s017",
+      "order": 17,
+      "text": "A backend job queue architecture supports export generation, with automatic retry mechanisms to handle failures and ensure reliable delivery at scale.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Enforceable job queue with retry mechanisms."
+    }
+  ]
+}

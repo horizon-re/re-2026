@@ -1,0 +1,208 @@
+{
+  "req_id": "REQ-150",
+  "doc_id": "bb77b3b2-e255-58ac-aeb9-796c8fd14503",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-061",
+  "model": "deepseek-r1:7b",
+  "review_timestamp": "2026-01-20T23:56:39.889557+00:00",
+  "counts": {
+    "total": 19,
+    "llm_pos": 12,
+    "pipe_pos": 8,
+    "llm_neg": 7,
+    "pipe_neg": 11,
+    "flip_neg_to_pos": 4
+  },
+  "reviews": [
+    {
+      "sent_id": "REQ-150::s001",
+      "order": 1,
+      "text": "**Feature Requirement Document: Destructive Intent Confirmation**\n\n**Feature Name:**",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Documentation header, no enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-150::s002",
+      "order": 2,
+      "text": "Destructive Intent Voice Confirmation and Safety Logging\n\n**Objective:**",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Objective header, no enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-150::s003",
+      "order": 3,
+      "text": "To ensure user safety and prevent accidental data loss, a confirmation mechanism must be added when the detected user intent is classified as destructive, specifically when it matches the \"delete everything\" command.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Imposes a confirmation mechanism under specific conditions."
+    },
+    {
+      "sent_id": "REQ-150::s004",
+      "order": 4,
+      "text": "**Requirements:**\n\n1.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.5,
+      "reason_code": "EXAMPLE_OR_EXPLANATION",
+      "reason_text": "Lacks specific requirement content."
+    },
+    {
+      "sent_id": "REQ-150::s005",
+      "order": 5,
+      "text": "**Intent Validation:**  \n   - Trigger confirmation flow only if the detected intent equals \"delete everything\".",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Requires confirmation only for 'delete everything' intent."
+    },
+    {
+      "sent_id": "REQ-150::s006",
+      "order": 6,
+      "text": "- The detected intent must have a confidence score of **≥ 0.9** to proceed.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "The detected intent must meet a confidence threshold to proceed."
+    },
+    {
+      "sent_id": "REQ-150::s007",
+      "order": 7,
+      "text": "2. **User Confirmation:**  \n   - A verbal confirmation must be requested.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Requires verbal confirmation of destructive intent."
+    },
+    {
+      "sent_id": "REQ-150::s008",
+      "order": 8,
+      "text": "- The system must explicitly ask: *“Are you sure you want to delete everything?”",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.7,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "The system must ask a specific confirmation question."
+    },
+    {
+      "sent_id": "REQ-150::s009",
+      "order": 9,
+      "text": "*  \n   -",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.4,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Empty line, no content."
+    },
+    {
+      "sent_id": "REQ-150::s010",
+      "order": 10,
+      "text": "The user must respond with an exact verbal **“yes”** to proceed.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Requires an exact 'yes' response to proceed."
+    },
+    {
+      "sent_id": "REQ-150::s011",
+      "order": 11,
+      "text": "Any other response cancels the action.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.7,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Any other response cancels the action."
+    },
+    {
+      "sent_id": "REQ-150::s012",
+      "order": 12,
+      "text": "3.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.3,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Numbered line with no content."
+    },
+    {
+      "sent_id": "REQ-150::s013",
+      "order": 13,
+      "text": "**Event Logging:**  \n   - All such destructive intent actions must be logged to the `voice_safety` index.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Logs must include specific details about destructive actions."
+    },
+    {
+      "sent_id": "REQ-150::s014",
+      "order": 14,
+      "text": "- The log must include timestamp, user ID, intent string, confidence score, and confirmation response.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Logs must include a confidence score and confirmation response."
+    },
+    {
+      "sent_id": "REQ-150::s015",
+      "order": 15,
+      "text": "4. *",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Requires a rollback option within 10 minutes."
+    },
+    {
+      "sent_id": "REQ-150::s016",
+      "order": 16,
+      "text": "*Rollback Capability:**",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.2,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Empty line, no content."
+    },
+    {
+      "sent_id": "REQ-150::s017",
+      "order": 17,
+      "text": "- A rollback option must be available for **10 minutes** post-execution.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Rollback must be available for 10 minutes."
+    },
+    {
+      "sent_id": "REQ-150::s018",
+      "order": 18,
+      "text": "- Rollback must reverse the “delete everything” operation entirely if invoked within the allowed window.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.7,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Rollback must reverse the destructive operation within a window."
+    },
+    {
+      "sent_id": "REQ-150::s019",
+      "order": 19,
+      "text": "**Priority:** High  \n**Owner:** Voice Interaction Safety Team",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.1,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Priority and owner header, no enforceable behavior."
+    }
+  ]
+}

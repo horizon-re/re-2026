@@ -1,0 +1,259 @@
+{
+  "req_id": "REQ-105",
+  "doc_id": "c1072885-5388-5ccc-8516-09f215bc6409",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-016",
+  "model": "deepseek-r1:7b",
+  "review_timestamp": "2026-01-20T23:19:54.355494+00:00",
+  "counts": {
+    "total": 24,
+    "llm_pos": 6,
+    "pipe_pos": 10,
+    "llm_neg": 18,
+    "flip_pos_to_neg": 7,
+    "pipe_neg": 14,
+    "flip_neg_to_pos": 3
+  },
+  "reviews": [
+    {
+      "sent_id": "REQ-105::s001",
+      "order": 1,
+      "text": "Add Email Reputation Monitoring Feature to Proactively Address Deliverability IssuesDeclining email deliverability metrics and a noticeable increase in Gmail spam rates indicate a critical need for proactive monitoring of our email sending reputation.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-105::s002",
+      "order": 2,
+      "text": "This issue proposes the development and implementation of a new feature to continuously track and alert on our reputation with key email providers.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-105::s003",
+      "order": 3,
+      "text": "This will allow us to identify and address potential issues before they significantly impact our ability to reach our audience.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Proactively addressing issues before significant impact on audience reach."
+    },
+    {
+      "sent_id": "REQ-105::s004",
+      "order": 4,
+      "text": "Requirements:To effectively monitor and manage our email sending reputation, the following capabilities are required:1.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-105::s005",
+      "order": 5,
+      "text": "Automated Daily Reputation Scan of Sending IPs and Domains:The foundation of this monitoring system will be an automated process that runs daily to check the reputation of all IP addresses and domains used for sending emails.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-105::s006",
+      "order": 6,
+      "text": "This regular scanning is crucial because email reputation can fluctuate rapidly, and early detection of any negative trends is essential to prevent deliverability problems.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-105::s007",
+      "order": 7,
+      "text": "Maintaining an up-to-date list of all sending IPs and domains will be a prerequisite for this functionality.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-105::s008",
+      "order": 8,
+      "text": "The frequency of daily scans underscores the dynamic nature of email reputation and the potential for swift deterioration if issues are not promptly identified.2. Integration with Mailgun API and Gmail Postmaster:",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-105::s009",
+      "order": 9,
+      "text": "The monitoring system must integrate with both the Mailgun API and Gmail Postmaster.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Integrate with Mailgun API and Gmail Postmaster."
+    },
+    {
+      "sent_id": "REQ-105::s010",
+      "order": 10,
+      "text": "Integration with the Mailgun API will provide valuable data on our sending reputation as perceived by our email service provider.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Integrate with Mailgun API to gather data on email service provider's reputation."
+    },
+    {
+      "sent_id": "REQ-105::s011",
+      "order": 11,
+      "text": "This will likely include metrics related to bounce rates, spam complaints, and overall account health.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-105::s012",
+      "order": 12,
+      "text": "Simultaneously, integrating with Gmail Postmaster will offer direct insights into how Gmail, a major recipient domain, views our sending reputation and the deliverability of our emails to their users.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-105::s013",
+      "order": 13,
+      "text": "This dual integration strategy ensures a comprehensive understanding of our email reputation from both the sending platform's perspective and the recipient's perspective.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Dual integration strategy ensures comprehensive reputation understanding from both sender and recipient perspectives."
+    },
+    {
+      "sent_id": "REQ-105::s014",
+      "order": 14,
+      "text": "Any discrepancies in the data reported by these two sources could indicate specific problems that require further investigation.3.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-105::s015",
+      "order": 15,
+      "text": "Slack Alert on Reputation Drop > 5 Points:To ensure timely intervention when our email reputation is at risk, the system should be configured to send an immediate alert to the #email-alerts Slack channel whenever a monitored IP address or domain experiences a reputation drop of more than 5 points.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "System must send Slack alerts for reputation drops over 5 points."
+    },
+    {
+      "sent_id": "REQ-105::s016",
+      "order": 16,
+      "text": "The definition of a \"point\" drop will need to be aligned with the specific metrics provided by the Mailgun API and Gmail Postmaster.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-105::s017",
+      "order": 17,
+      "text": "This threshold of 5 points suggests a predefined level of risk tolerance, indicating that drops of this magnitude are considered significant enough to warrant immediate attention.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Sets a predefined risk tolerance threshold."
+    },
+    {
+      "sent_id": "REQ-105::s018",
+      "order": 18,
+      "text": "The selection of Slack as the notification channel reflects the team's established communication workflow for critical operational alerts.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Explains team communication workflow."
+    },
+    {
+      "sent_id": "REQ-105::s019",
+      "order": 19,
+      "text": "Understanding the typical range and variability of reputation scores from both platforms will be important to fine-tune this alerting threshold and avoid excessive or insufficient notifications.4.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-105::s020",
+      "order": 20,
+      "text": "Dashboard Widget for Reputation Trends:A dedicated dashboard widget is required to visually represent the historical trends of our email sending reputation.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-105::s021",
+      "order": 21,
+      "text": "This widget should display reputation scores over time, allowing us to easily identify patterns, track improvements resulting from any remediation efforts, and proactively detect potential long-term issues.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-105::s022",
+      "order": 22,
+      "text": "To enable this visualization, the system will need to store and aggregate the reputation data collected from the Mailgun API and Gmail Postmaster on an ongoing basis.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-105::s023",
+      "order": 23,
+      "text": "The ability to visualize these trends will be invaluable for understanding the overall health of our email deliverability and for making informed decisions about our email sending practices.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "EXAMPLE_OR_EXPLANATION",
+      "reason_text": "Explains the value of a feature."
+    },
+    {
+      "sent_id": "REQ-105::s024",
+      "order": 24,
+      "text": "Labels: feature, email, monitoring, high-priorityAssignees:Priority: High",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Labels features but doesn't impose behavior."
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "doc_id": "cd955934-105e-5cb5-ae58-7e7a77d80971",
+  "req_key": "saas::P-SAAS-054::REQ-143",
+  "req_id": "REQ-143",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-054",
+  "source": {
+    "raw_path": "02_raw_requirements/saas/P-SAAS-054/req-143_raw.txt",
+    "refined_path": "03_refined_json_normalized/saas/P-SAAS-054/req-143_refined.json",
+    "origin": "both"
+  },
+  "text": "I'm using GraphQL with a custom auth middleware, but a mis-scoped query exposed sensitive fields under `__typename`, which could reveal PII (e.g., user roles or restricted types) even if field access is denied. This was discovered during a legal privacy audit, so urgent guidance is needed.\n\nMinimal repro:\n```graphql\nquery {\n  user {\n    __typename\n    email  # properly secured\n  }\n}\n```\nDue to how `__typename` resolves, it leaks model-specific info that should be protected.\n\nWhat are best practices to prevent this? Should I use schema directives to control `__typename` visibility, or enforce field-level auth rules that handle introspection?\n\nTags: graphql, authorization, privacy",
+  "structured_data": [
+    {
+      "id": "REQ-143-HLJ-Chunk_1-Item_1-v1.0",
+      "domain": "saas",
+      "summary": "Prevent leakage of PII via __typename introspection",
+      "priority": "High",
+      "tags": [
+        "graphql",
+        "authorization",
+        "privacy"
+      ],
+      "subdomain": "introspection_security",
+      "difficulty": 3,
+      "additionalNotes": "Discovered during privacy audit; introspection reveals restricted type names.",
+      "source_hlj_id": "REQ 001-001",
+      "domain_id": "P-SAAS-054"
+    },
+    {
+      "id": "REQ-143-HLJ-Chunk_1-Item_2-v1.0",
+      "domain": "saas",
+      "summary": "Implement field-level authorization for GraphQL types",
+      "priority": "High",
+      "tags": [
+        "field_level_auth",
+        "graphql",
+        "security"
+      ],
+      "subdomain": "authorization",
+      "difficulty": 4,
+      "additionalNotes": "Enforce granular access control even on introspectable types.",
+      "source_hlj_id": "REQ 001-002",
+      "domain_id": "P-SAAS-054"
+    },
+    {
+      "id": "REQ-143-HLJ-Chunk_1-Item_3-v1.0",
+      "domain": "saas",
+      "summary": "Apply schema directives to manage type exposure",
+      "priority": "Medium",
+      "tags": [
+        "schema_directives",
+        "graphql",
+        "access_control"
+      ],
+      "subdomain": "authorization",
+      "difficulty": 3,
+      "additionalNotes": "origin: implied – Use directives as an optional security strategy.",
+      "source_hlj_id": "REQ 001-003",
+      "domain_id": "P-SAAS-054"
+    },
+    {
+      "id": "REQ-143-HLJ-Chunk_1-Item_4-v1.0",
+      "domain": "saas",
+      "summary": "Ensure introspection respects role-based access control",
+      "priority": "Medium",
+      "tags": [
+        "graphql",
+        "rbac",
+        "introspection"
+      ],
+      "subdomain": "introspection_security",
+      "difficulty": 3,
+      "additionalNotes": "origin: implied – RBAC enforcement must extend to introspection queries.",
+      "source_hlj_id": "REQ 001-004",
+      "domain_id": "P-SAAS-054"
+    }
+  ]
+}

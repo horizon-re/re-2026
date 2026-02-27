@@ -1,0 +1,26 @@
+{
+  "req_id": "REQ-121",
+  "doc_id": "234d40b4-73e4-555c-92af-cd483696df88",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-032",
+  "model": "deepseek-r1:7b",
+  "review_timestamp": "2026-01-20T23:27:29.897924+00:00",
+  "counts": {
+    "total": 1,
+    "llm_pos": 1,
+    "pipe_neg": 1,
+    "flip_neg_to_pos": 1
+  },
+  "reviews": [
+    {
+      "sent_id": "REQ-121::s001",
+      "order": 1,
+      "text": "Automatically purge all data older than 24 months daily at 02:00 UTC, excluding records where `legal_hold=true`, and ensure each deletion run logs a summary to `data_retention.log` and sends an email notification to compliance@example.com for audit and compliance tracking.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Automatically purge data older than 24 months with logging and email notifications."
+    }
+  ]
+}

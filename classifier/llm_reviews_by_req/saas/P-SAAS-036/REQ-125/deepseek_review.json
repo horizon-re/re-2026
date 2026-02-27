@@ -1,0 +1,25 @@
+{
+  "req_id": "REQ-125",
+  "doc_id": "9db63761-4122-50b3-9933-0d6e69b95070",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-036",
+  "model": "deepseek-r1:7b",
+  "review_timestamp": "2026-01-20T23:29:36.145114+00:00",
+  "counts": {
+    "total": 1,
+    "llm_pos": 1,
+    "pipe_pos": 1
+  },
+  "reviews": [
+    {
+      "sent_id": "REQ-125::s001",
+      "order": 1,
+      "text": "Implement real-time synchronization of warehouse inventory data every 5 seconds across all locations, with a mandatory fallback queuing mechanism if API latency exceeds 1 second, ensuring bulk catch-up synchronization within 30 seconds; discrepancies of more than 10 units must be logged to the inv_sync_errors table and immediately trigger a PagerDuty alert; this requirement is not negotiable and must be fully rolled out and operational by the end of the current sprint.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Imposes enforceable real-time synchronization behavior with specific constraints and logging obligations."
+    }
+  ]
+}

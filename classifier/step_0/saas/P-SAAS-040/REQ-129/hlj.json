@@ -1,0 +1,127 @@
+{
+  "doc_id": "f0042b08-df7d-5ff1-9e3c-6736d129b8ab",
+  "req_key": "saas::P-SAAS-040::REQ-129",
+  "req_id": "REQ-129",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-040",
+  "source": {
+    "raw_path": "02_raw_requirements/saas/P-SAAS-040/req-129_raw.txt",
+    "refined_path": "03_refined_json_normalized/saas/P-SAAS-040/req-129_refined.json",
+    "origin": "both"
+  },
+  "text": "Exciting news: we’re launching an agentic onboarding bot powered by the GPT-4 API! 🚀 This smart assistant will greet new users with personalized welcome messages based on their role and first actions in the app, making every experience feel tailored and engaging. Our early KPIs are ambitious: a 15% lift in activation rates and a +5 boost in NPS. To ensure quality, we’ve built in safeguards like a profanity filter and a daily token cap of 5k per tenant. Beta launch is just two weeks away! Want early access? Vote in our Slack pilot poll and help shape the future!",
+  "structured_data": [
+    {
+      "id": "REQ-129-HLJ-Chunk_1-Item_1-v1.0",
+      "domain": "saas",
+      "summary": "Launch agentic onboarding bot powered by GPT-4 API",
+      "priority": "High",
+      "tags": [
+        "onboarding_bot",
+        "gpt4_integration",
+        "user_experience"
+      ],
+      "subdomain": "user_onboarding",
+      "difficulty": 3,
+      "additionalNotes": "Announcement of AI-driven onboarding bot launch.",
+      "source_hlj_id": "REQ 001-001",
+      "domain_id": "P-SAAS-040"
+    },
+    {
+      "id": "REQ-129-HLJ-Chunk_1-Item_2-v1.0",
+      "domain": "saas",
+      "summary": "Personalize welcome messages based on user role and in-app actions",
+      "priority": "High",
+      "tags": [
+        "personalization",
+        "user_role",
+        "user_journey"
+      ],
+      "subdomain": "user_onboarding",
+      "difficulty": 4,
+      "additionalNotes": "Welcome messages triggered dynamically by user attributes and actions.",
+      "source_hlj_id": "REQ 001-002",
+      "domain_id": "P-SAAS-040"
+    },
+    {
+      "id": "REQ-129-HLJ-Chunk_1-Item_3-v1.0",
+      "domain": "saas",
+      "summary": "Target 15% increase in user activation rates",
+      "priority": "Medium",
+      "tags": [
+        "kpi",
+        "activation_rate",
+        "performance_goal"
+      ],
+      "subdomain": "user_onboarding",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied — Key performance metric for measuring success.",
+      "source_hlj_id": "REQ 001-003",
+      "domain_id": "P-SAAS-040"
+    },
+    {
+      "id": "REQ-129-HLJ-Chunk_1-Item_4-v1.0",
+      "domain": "saas",
+      "summary": "Target +5 boost in Net Promoter Score (NPS)",
+      "priority": "Medium",
+      "tags": [
+        "kpi",
+        "nps",
+        "user_satisfaction"
+      ],
+      "subdomain": "user_onboarding",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied — Improvement goal for customer satisfaction metric.",
+      "source_hlj_id": "REQ 001-004",
+      "domain_id": "P-SAAS-040"
+    },
+    {
+      "id": "REQ-129-HLJ-Chunk_1-Item_5-v1.0",
+      "domain": "saas",
+      "summary": "Implement profanity filter for onboarding bot communications",
+      "priority": "High",
+      "tags": [
+        "profanity_filter",
+        "content_moderation",
+        "user_protection"
+      ],
+      "subdomain": "user_onboarding",
+      "difficulty": 3,
+      "additionalNotes": "Safeguard to maintain professionalism and brand tone.",
+      "source_hlj_id": "REQ 001-005",
+      "domain_id": "P-SAAS-040"
+    },
+    {
+      "id": "REQ-129-HLJ-Chunk_1-Item_6-v1.0",
+      "domain": "saas",
+      "summary": "Enforce daily token usage cap of 5k per tenant",
+      "priority": "High",
+      "tags": [
+        "usage_limits",
+        "api_tokens",
+        "tenant_management"
+      ],
+      "subdomain": "user_onboarding",
+      "difficulty": 3,
+      "additionalNotes": "Limits daily GPT-4 token usage to control operational costs.",
+      "source_hlj_id": "REQ 001-006",
+      "domain_id": "P-SAAS-040"
+    },
+    {
+      "id": "REQ-129-HLJ-Chunk_1-Item_7-v1.0",
+      "domain": "saas",
+      "summary": "Launch beta in two weeks and recruit Slack pilot volunteers",
+      "priority": "Medium",
+      "tags": [
+        "beta_launch",
+        "pilot_program",
+        "user_feedback"
+      ],
+      "subdomain": "user_onboarding",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied — Volunteer recruitment via Slack poll for pilot testing.",
+      "source_hlj_id": "REQ 001-007",
+      "domain_id": "P-SAAS-040"
+    }
+  ]
+}

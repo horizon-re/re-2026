@@ -1,0 +1,127 @@
+{
+  "doc_id": "7024ebe6-a12e-5771-9252-dfafeed5a264",
+  "req_key": "fintech::P-FT-032::REQ-041",
+  "req_id": "REQ-041",
+  "domain": "fintech",
+  "prompt_id": "P-FT-032",
+  "source": {
+    "raw_path": "02_raw_requirements/fintech/P-FT-032/req-041_raw.txt",
+    "refined_path": "03_refined_json_normalized/fintech/P-FT-032/req-041_refined.json",
+    "origin": "both"
+  },
+  "text": "The micro-investing app must implement an AI-powered feature (flagged as aiPicksV1) launching 1 June 2025, that surfaces no more than five plain-language, emoji-free stock ideas daily—each passing FINRA “communication with the public” standards and logged in compliance_feed_audit—with the feed accessible exclusively to verified users aged 18–30.",
+  "structured_data": [
+    {
+      "id": "REQ-041-HLJ-Chunk_1-Item_1-v1.0",
+      "domain": "fintech",
+      "summary": "Surface ≤5 stock ideas daily using AI model",
+      "priority": "High",
+      "tags": [
+        "ai_recommendations",
+        "stock_ideas",
+        "daily_feed"
+      ],
+      "subdomain": "micro_investing",
+      "difficulty": 4,
+      "additionalNotes": "Feature must generate a limited number of daily stock picks to avoid information overload and maintain relevance.",
+      "source_hlj_id": "REQ 001-001",
+      "domain_id": "P-FT-032"
+    },
+    {
+      "id": "REQ-041-HLJ-Chunk_1-Item_2-v1.0",
+      "domain": "fintech",
+      "summary": "Ensure captions are plain-language and emoji-free",
+      "priority": "High",
+      "tags": [
+        "content_guidelines",
+        "plain_language",
+        "compliance"
+      ],
+      "subdomain": "micro_investing",
+      "difficulty": 2,
+      "additionalNotes": "Requirement ensures accessibility and compliance with formal financial communication norms.",
+      "source_hlj_id": "REQ 001-002",
+      "domain_id": "P-FT-032"
+    },
+    {
+      "id": "REQ-041-HLJ-Chunk_1-Item_3-v1.0",
+      "domain": "fintech",
+      "summary": "Pass all suggestions through FINRA communication review",
+      "priority": "High",
+      "tags": [
+        "regulatory_compliance",
+        "finra",
+        "content_review"
+      ],
+      "subdomain": "regulatory",
+      "difficulty": 5,
+      "additionalNotes": "All AI-suggested content must comply with FINRA Rule 2210 on communications with the public.",
+      "source_hlj_id": "REQ 001-003",
+      "domain_id": "P-FT-032"
+    },
+    {
+      "id": "REQ-041-HLJ-Chunk_1-Item_4-v1.0",
+      "domain": "fintech",
+      "summary": "Log all suggestions in compliance_feed_audit",
+      "priority": "Medium",
+      "tags": [
+        "audit_logging",
+        "compliance_tracking",
+        "content_audit"
+      ],
+      "subdomain": "regulatory",
+      "difficulty": 3,
+      "additionalNotes": "Log entries should support future audits and internal oversight of recommendation compliance.",
+      "source_hlj_id": "REQ 001-004",
+      "domain_id": "P-FT-032"
+    },
+    {
+      "id": "REQ-041-HLJ-Chunk_1-Item_5-v1.0",
+      "domain": "fintech",
+      "summary": "Restrict feed access to verified users aged 18–30",
+      "priority": "High",
+      "tags": [
+        "access_control",
+        "age_verification",
+        "user_filtering"
+      ],
+      "subdomain": "user_management",
+      "difficulty": 4,
+      "additionalNotes": "Feature targets specific demographic; must enforce age and verification checks.",
+      "source_hlj_id": "REQ 001-005",
+      "domain_id": "P-FT-032"
+    },
+    {
+      "id": "REQ-041-HLJ-Chunk_1-Item_6-v1.0",
+      "domain": "fintech",
+      "summary": "Implement feature flag aiPicksV1 for rollout",
+      "priority": "Medium",
+      "tags": [
+        "feature_flag",
+        "rollout",
+        "versioning"
+      ],
+      "subdomain": "release_management",
+      "difficulty": 2,
+      "additionalNotes": "Feature flag enables controlled deployment and testing prior to full launch.",
+      "source_hlj_id": "REQ 001-006",
+      "domain_id": "P-FT-032"
+    },
+    {
+      "id": "REQ-041-HLJ-Chunk_1-Item_7-v1.0",
+      "domain": "fintech",
+      "summary": "Launch feature on 1 June 2025",
+      "priority": "Low",
+      "tags": [
+        "launch_date",
+        "release_schedule",
+        "project_timeline"
+      ],
+      "subdomain": "release_management",
+      "difficulty": 1,
+      "additionalNotes": "origin: implied – Date establishes a fixed deadline for readiness and deployment.",
+      "source_hlj_id": "REQ 001-007",
+      "domain_id": "P-FT-032"
+    }
+  ]
+}

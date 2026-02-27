@@ -1,0 +1,449 @@
+{
+  "req_id": "REQ-136",
+  "doc_id": "40f92fb0-9cee-59ed-8660-b0def183f696",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-047",
+  "model": "deepseek-r1:7b",
+  "review_timestamp": "2026-01-20T23:38:13.006364+00:00",
+  "counts": {
+    "total": 43,
+    "llm_pos": 18,
+    "pipe_pos": 3,
+    "llm_neg": 25,
+    "flip_pos_to_neg": 2,
+    "pipe_neg": 40,
+    "flip_neg_to_pos": 17
+  },
+  "reviews": [
+    {
+      "sent_id": "REQ-136::s001",
+      "order": 1,
+      "text": "**Feasibility Study: Secure Sharing with Verifiable Logs**\n\n---\n\n### **Objective – Secure Sharing with Verifiable Logs**\n\nThis feasibility study explores the development and deployment of a secure data-sharing system with verifiable audit logs, tailored to highly regulated environments.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-136::s002",
+      "order": 2,
+      "text": "The primary objective is to enable entities (e.g., enterprises, healthcare providers, government agencies) to share sensitive data across organizational boundaries without compromising confidentiality, integrity, or regulatory compliance.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "PERFORMANCE_REQUIREMENT",
+      "reason_text": "Outlines the system's objective of enabling data sharing across boundaries without compromising confidentiality, integrity, or compliance."
+    },
+    {
+      "sent_id": "REQ-136::s003",
+      "order": 3,
+      "text": "The solution ensures that:\n\n- Data is encrypted before leaving the client’s environment.\n- Access and sharing actions are logged in a tamper-proof manner.\n- Regulatory frameworks such as GDPR are upheld.\n- Stakeholders retain cryptographic proof of compliance activities.\n\n---\n\n### **Encryption Model – Client-Side AES-GCM with Key Escrow via KMS-Backed HSM**\n\nTo ensure end-to-end confidentiality, all data is encrypted on the client side using **AES-GCM (Advanced Encryption Standard in Galois/Counter Mode)** before transmission or storage.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.95,
+      "reason_code": "SECURITY_REQUIREMENT",
+      "reason_text": "Details the use of client-side encryption (AES-GCM) and key management via HSM and KMS, setting enforceable security boundaries."
+    },
+    {
+      "sent_id": "REQ-136::s004",
+      "order": 4,
+      "text": "This authenticated encryption algorithm ensures both data confidentiality and integrity, guarding against unauthorized access and tampering.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Describes the use of authenticated encryption to enforce confidentiality and integrity."
+    },
+    {
+      "sent_id": "REQ-136::s005",
+      "order": 5,
+      "text": "Key characteristics of the encryption model include:\n\n- **Client-side encryption**: Data is encrypted before it leaves the user’s device or service boundary.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-136::s006",
+      "order": 6,
+      "text": "- **AES-GCM*",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-136::s007",
+      "order": 7,
+      "text": "*: Offers authenticated encryption with additional data (AEAD), ensuring integrity in transit and at rest.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-136::s008",
+      "order": 8,
+      "text": "- **Key Management**: Keys are not stored with the data.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-136::s009",
+      "order": 9,
+      "text": "Instead, they are escrowed via a **cloud-based Key Management Service (KMS)** integrated with **Hardware Security Modules (HSMs)** for secure generation, rotation, and access control.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Details the escrow of keys via KMS and HSM, setting enforceable key management boundaries."
+    },
+    {
+      "sent_id": "REQ-136::s010",
+      "order": 10,
+      "text": "- **Access Control Policies**: Access to the keys is governed by strict Identity and Access Management (IAM) roles and time-based constraints.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-136::s011",
+      "order": 11,
+      "text": "- **Auditability**: Every key retrieval attempt is logged and monitored within the KMS system.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-136::s012",
+      "order": 12,
+      "text": "This model effectively mitigates the risks of insider threats, data breaches, and unauthorized key access.\n\n---\n\n### **Blockchain Logging – Append-Only Hash to Hyperledger; On-Chain Proof Every 10 Minutes**\n\nFor verifiable, tamper-evident logging of data-sharing events, an **append-only audit trail** is constructed using a **Hyperledger Fabric** blockchain network.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "PERFORMANCE_REQUIREMENT",
+      "reason_text": "Mentions mitigating risks of insider threats and data breaches, which is an enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-136::s013",
+      "order": 13,
+      "text": "This system logs cryptographic hashes of metadata related to each data-sharing operation.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Describes the system's behavior of logging cryptographic hashes, which is an enforceable action."
+    },
+    {
+      "sent_id": "REQ-136::s014",
+      "order": 14,
+      "text": "**Mechanics of the logging model:**\n\n- **Off-chain event processing**: Every data-sharing event (including metadata like sender, recipient, and timestamp) is hashed (e.g., SHA-256) and temporarily stored in an event buffer.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-136::s015",
+      "order": 15,
+      "text": "- **Hash chaining**: Events are grouped and sequentially hashed to form a Merkle tree.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-136::s016",
+      "order": 16,
+      "text": "- **On-chain commitment**: Every **10 minutes**, a Merkle root representing the last batch of events is written to the blockchain.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-136::s017",
+      "order": 17,
+      "text": "- **Hyperledger Fabric**: Chosen for its enterprise readiness, fine-grained access controls, and support for private channels between consortium members.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Details the use of Hyperledger Fabric for auditability, setting enforceable logging mechanisms."
+    },
+    {
+      "sent_id": "REQ-136::s018",
+      "order": 18,
+      "text": "- **Auditability**: Any external auditor or regulatory authority can verify an event’s inclusion by validating the Merkle proof against the on-chain hash.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-136::s019",
+      "order": 19,
+      "text": "This ensures non-repudiation, tamper evidence, and cryptographic traceability for all shared events.\n\n---\n\n### **GDPR Alignment – Right-to-Erasure via Off-Chain Pointer Deletion; Article 30 Mapping**\n\nThe solution is engineered to comply with the **General Data Protection Regulation (GDPR)**, focusing on data subject rights and controller obligations.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 1.0,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Ensures non-repudiation, tamper evidence, and cryptographic traceability."
+    },
+    {
+      "sent_id": "REQ-136::s020",
+      "order": 20,
+      "text": "**Key Compliance Mechanisms:**\n\n- **Right-to-Erasure**:",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 1.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Compliance with GDPR's right-to-erasure."
+    },
+    {
+      "sent_id": "REQ-136::s021",
+      "order": 21,
+      "text": "Although the system maintains immutable logs on-chain, actual data is never stored on the blockchain.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-136::s022",
+      "order": 22,
+      "text": "Instead:\n  - All personally identifiable information (PII) resides off-chain in encrypted form.\n  - On-chain entries merely reference **pseudonymous pointers** or **non-PII metadata**.\n  - When a right-to-erasure request is granted, the corresponding off-chain data and its reference pointer are deleted.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 1.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Explanation of data storage architecture."
+    },
+    {
+      "sent_id": "REQ-136::s023",
+      "order": 23,
+      "text": "This ensures data is no longer accessible or re-identifiable, satisfying Article 17 obligations.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 1.0,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Data accessibility and identifiability constraints."
+    },
+    {
+      "sent_id": "REQ-136::s024",
+      "order": 24,
+      "text": "- **Article 30 Mapping (Records of Processing Activities)*",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 1.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Mapping of GDPR processing activities."
+    },
+    {
+      "sent_id": "REQ-136::s025",
+      "order": 25,
+      "text": "*:\n  - The system automatically logs data processing activities (who shared what, when, and with whom).",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-136::s026",
+      "order": 26,
+      "text": "- These logs can be exported in a structured format to facilitate compliance audits.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 1.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Exporting logs for compliance audits."
+    },
+    {
+      "sent_id": "REQ-136::s027",
+      "order": 27,
+      "text": "- **Data Minimization and Purpose Limitation**:\n  - Only metadata essential for compliance is retained.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 1.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Data retention constraints under GDPR."
+    },
+    {
+      "sent_id": "REQ-136::s028",
+      "order": 28,
+      "text": "- Data sharing is purpose-bound and access-controlled.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 1.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Data sharing boundaries."
+    },
+    {
+      "sent_id": "REQ-136::s029",
+      "order": 29,
+      "text": "This hybrid on/off-chain architecture supports both GDPR-compliant data deletion and audit integrity.\n\n---\n\n### **Cost-Benefit Analysis – Infra Cost vs Compliance Gains**\n\n#### **Costs:**\n\n- **Cloud Infrastructure**:\n  - Encrypted object storage (e.g., Amazon S3, Azure Blob).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 1.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Compliance with GDPR deletion and audit mechanisms."
+    },
+    {
+      "sent_id": "REQ-136::s030",
+      "order": 30,
+      "text": "- HSM-backed KMS usage charges (per key, per operation).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 1.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "HSM and KMS usage charges."
+    },
+    {
+      "sent_id": "REQ-136::s031",
+      "order": 31,
+      "text": "- Blockchain node hosting and inter-peer communication (compute and bandwidth).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 1.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Blockchain node hosting details."
+    },
+    {
+      "sent_id": "REQ-136::s032",
+      "order": 32,
+      "text": "- **Development and Integration**:\n  - Initial setup of encryption and logging modules.\n  - Smart contract development and Hyperledger deployment.\n  - IAM, GDPR compliance tooling, and auditing dashboards.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 1.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Compliance with GDPR's right-to-erasure."
+    },
+    {
+      "sent_id": "REQ-136::s033",
+      "order": 33,
+      "text": "- **Ongoing Maintenance**:\n  - Key lifecycle management.\n  - Blockchain network updates.\n  - Compliance updates for evolving regulations.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 1.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Ongoing maintenance updates."
+    },
+    {
+      "sent_id": "REQ-136::s034",
+      "order": 34,
+      "text": "Estimated infrastructure cost: $5,000–$8,000/month for a medium-sized enterprise setup.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 1.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Infrastructure cost estimation."
+    },
+    {
+      "sent_id": "REQ-136::s035",
+      "order": 35,
+      "text": "#### **Benefits:**\n\n- **Regulatory Assurance**:\n  - Native GDPR compliance mechanisms reduce audit overhead.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 1.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Automated documentation for compliance."
+    },
+    {
+      "sent_id": "REQ-136::s036",
+      "order": 36,
+      "text": "- Automated Article 30 documentation streamlines regulator communication.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 1.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Zero-trust design details."
+    },
+    {
+      "sent_id": "REQ-136::s037",
+      "order": 37,
+      "text": "- **Operational Integrity**:\n  - Zero-trust design and immutable audit logs reduce insider threat exposure.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 1.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Data integrity assurance mechanisms."
+    },
+    {
+      "sent_id": "REQ-136::s038",
+      "order": 38,
+      "text": "- Easier dispute resolution with on-chain cryptographic proof.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 1.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Market differentiation details."
+    },
+    {
+      "sent_id": "REQ-136::s039",
+      "order": 39,
+      "text": "- **Market Differentiation**:\n  - Transparent data handling practices enhance customer trust and competitive advantage.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 1.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Data handling practices for compliance."
+    },
+    {
+      "sent_id": "REQ-136::s040",
+      "order": 40,
+      "text": "- **Long-Term Savings**:\n  - Reduced risk of non-compliance fines (up to €20M or 4% of global turnover under GDPR).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 1.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Long-term savings details."
+    },
+    {
+      "sent_id": "REQ-136::s041",
+      "order": 41,
+      "text": "- Minimized cost of incident response due to verifiable audit trail.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "States a behavior related to minimizing incident response costs due to an audit trail."
+    },
+    {
+      "sent_id": "REQ-136::s042",
+      "order": 42,
+      "text": "Overall, the long-term **compliance assurance and reputational gains** significantly outweigh the moderate recurring infrastructure cost.\n\n---\n\n### **Conclusion**\n\nThis feasibility study confirms that a secure sharing framework incorporating **client-side AES-GCM encryption**, **KMS-backed key escrow**, **Hyperledger-based logging**, and **GDPR-aligned controls** is both technically and economically viable.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Summary of study results without new system requirements."
+    },
+    {
+      "sent_id": "REQ-136::s043",
+      "order": 43,
+      "text": "The solution addresses core challenges in secure data exchange—confidentiality, auditability, and compliance—while offering scalable deployment options and tangible risk mitigation for privacy-centric organizations.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Conclusion of the feasibility study without proposing new requirements."
+    }
+  ]
+}

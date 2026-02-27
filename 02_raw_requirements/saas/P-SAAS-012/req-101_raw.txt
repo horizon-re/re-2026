@@ -1,0 +1,19 @@
+Title: Integrate SAML SSO with Okta and Azure AD
+
+Description:
+Business Need: Implement enterprise-grade Single Sign-On (SSO) to enhance security and streamline user access. This is crucial for attracting and onboarding enterprise clients who require robust authentication mechanisms.
+
+Current Issue: Existing Okta integration has failures that are currently blocking the onboarding of new clients. Resolving this is a high priority.
+
+Requirement: The solution must support integration with both Okta and Azure AD as Identity Providers (IdPs) to cater to a wider range of potential clients.
+
+Acceptance Criteria:
+* Metadata upload endpoint for Service Provider (SP) XML is implemented.
+* Metadata upload endpoint for Identity Provider (IdP) XML is implemented.
+* Certificate rotation is automated every 90 days.
+* Automatic retry mechanism is implemented for 5xx errors with exponential backoff.
+* End-user test flow for both Okta and Azure AD is documented in Confluence.
+
+Labels: security, sso, okta, azure-ad
+
+Priority: High

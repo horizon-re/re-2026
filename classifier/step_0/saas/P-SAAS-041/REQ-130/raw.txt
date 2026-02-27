@@ -1,0 +1,17 @@
+**Objective**  
+Implement an automated incident classification system that categorizes events as Low, Medium, or High severity within 30 seconds of log ingestion. This rapid triaging will streamline incident response and reduce noise for security teams.
+
+**Classification Engine**  
+The AI-powered engine ingests three primary inputs: log severity (e.g., error level, frequency), source IP reputation (internal threat intel scores), and an anomaly score derived from behavior baselines. Severity thresholds are dynamically tuned using a feedback loop informed by incident resolution data and false-positive rates, ensuring adaptive precision over time.
+
+**Alert Routing**  
+Classified alerts are routed based on severity:  
+- **Low** ➜ Added to the Jira security backlog for periodic review.  
+- **Medium** ➜ Posted in Slack `#sec-ops` for real-time triage by analysts.  
+- **High** ➜ Triggered as a PagerDuty "P1" alert, with immediate escalation.
+
+**SLA & Metrics**  
+System must maintain ≥ 95% classification accuracy. Alerts should be delivered within 60 seconds for 95% of cases (P95 latency).
+
+**Audit & Reporting**  
+Each classification is logged in the `incident_audit` table with original log content, predicted severity, and the model version used. Records are retained for a minimum of one year to support compliance and post-incident reviews.

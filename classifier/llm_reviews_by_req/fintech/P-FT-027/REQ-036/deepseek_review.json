@@ -1,0 +1,25 @@
+{
+  "req_id": "REQ-036",
+  "doc_id": "be4d0a85-3e62-5613-b173-ef3247ee2941",
+  "domain": "fintech",
+  "prompt_id": "P-FT-027",
+  "model": "deepseek-r1:7b",
+  "review_timestamp": "2026-01-20T22:32:05.908593+00:00",
+  "counts": {
+    "total": 1,
+    "llm_pos": 1,
+    "pipe_pos": 1
+  },
+  "reviews": [
+    {
+      "sent_id": "REQ-036::s001",
+      "order": 1,
+      "text": "The application shall include a \"Pay Again\" button next to the existing \"Send\" button in the user interface that autofills the IBAN from the last successful transfer (ensuring it passes format validation of 22 alphanumeric characters with a valid country checksum), enforces a maximum of 3 clicks per minute per user to prevent duplicate transfers, and is disabled by default if the last successful transfer occurred more than 30 days ago.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.95,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "The sentence specifies enforceable user interface behavior, including button inclusion, IBAN validation, click limits, and automatic disabling."
+    }
+  ]
+}

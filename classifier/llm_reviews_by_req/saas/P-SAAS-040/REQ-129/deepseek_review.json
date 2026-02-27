@@ -1,0 +1,98 @@
+{
+  "req_id": "REQ-129",
+  "doc_id": "f0042b08-df7d-5ff1-9e3c-6736d129b8ab",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-040",
+  "model": "deepseek-r1:7b",
+  "review_timestamp": "2026-01-20T23:31:24.595687+00:00",
+  "counts": {
+    "total": 8,
+    "llm_pos": 2,
+    "pipe_pos": 1,
+    "llm_neg": 6,
+    "pipe_neg": 7,
+    "flip_neg_to_pos": 1
+  },
+  "reviews": [
+    {
+      "sent_id": "REQ-129::s001",
+      "order": 1,
+      "text": "Exciting news: we’re launching an agentic onboarding bot powered by the GPT-4 API!",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Announcement of an event without enforcing system behavior."
+    },
+    {
+      "sent_id": "REQ-129::s002",
+      "order": 2,
+      "text": "🚀",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.4,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "No text content to evaluate."
+    },
+    {
+      "sent_id": "REQ-129::s003",
+      "order": 3,
+      "text": "This smart assistant will greet new users with personalized welcome messages based on their role and first actions in the app, making every experience feel tailored and engaging.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Describes a system behavior (greeting users with personalized messages based on role and actions)."
+    },
+    {
+      "sent_id": "REQ-129::s004",
+      "order": 4,
+      "text": "Our early KPIs are ambitious: a 15% lift in activation rates and a +5 boost in NPS.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Announces expected performance metrics without specifying actions."
+    },
+    {
+      "sent_id": "REQ-129::s005",
+      "order": 5,
+      "text": "To ensure quality, we’ve built in safeguards like a profanity filter and a daily token cap of 5k per tenant.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "COMPLIANCE_REQUIREMENT",
+      "reason_text": "Outlines measures to ensure quality (profanity filter and token cap)."
+    },
+    {
+      "sent_id": "REQ-129::s006",
+      "order": 6,
+      "text": "Beta launch is just two weeks away!",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.5,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Announcement of an event without enforcing system behavior."
+    },
+    {
+      "sent_id": "REQ-129::s007",
+      "order": 7,
+      "text": "Want early access?",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Invites for access but doesn't enforce behavior."
+    },
+    {
+      "sent_id": "REQ-129::s008",
+      "order": 8,
+      "text": "Vote in our Slack pilot poll and help shape the future!",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.5,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Invitation to participate without enforcing system action."
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "req_id": "REQ-144",
+  "doc_id": "5bba2f51-a6a2-5101-a0d3-41387d1b168d",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-055",
+  "model": "deepseek-r1:7b",
+  "review_timestamp": "2026-01-20T23:52:32.193232+00:00",
+  "counts": {
+    "total": 3,
+    "llm_pos": 3,
+    "pipe_pos": 3
+  },
+  "reviews": [
+    {
+      "sent_id": "REQ-144::s001",
+      "order": 1,
+      "text": "The system shall support logging events in Mars Coordinated Time (MTC), such as \"Booting in MARS-TZ (sol 0)\", by mapping MTC to its corresponding Earth UTC offset using the `martian_tz_map` table; if no valid mapping exists, the system shall raise an alert.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.95,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "The system shall map MTC to UTC and raise alerts for invalid mappings."
+    },
+    {
+      "sent_id": "REQ-144::s002",
+      "order": 2,
+      "text": "All extraterrestrial MTC-based log entries shall be stored in the `logs_mars` partition with a strict retention policy of seven Earth days.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.95,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "The system shall store logs in 'logs_mars' with a seven-day retention."
+    },
+    {
+      "sent_id": "REQ-144::s003",
+      "order": 3,
+      "text": "Additionally, the system shall integrate with Grafana to include a dashboard panel labeled “Mars Sol Lag” to visualize time synchronization discrepancies between Earth UTC and MTC.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.95,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "The system shall integrate Grafana for a dashboard labeled 'Mars Sol Lag'."
+    }
+  ]
+}

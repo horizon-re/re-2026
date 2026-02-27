@@ -1,0 +1,67 @@
+{
+  "req_id": "REQ-163",
+  "doc_id": "d15ddb71-fa30-5c93-b910-ca3febef40ff",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-074",
+  "model": "deepseek-r1:7b",
+  "review_timestamp": "2026-01-21T00:19:23.967311+00:00",
+  "counts": {
+    "total": 5,
+    "llm_pos": 5,
+    "pipe_pos": 1,
+    "pipe_neg": 4,
+    "flip_neg_to_pos": 4
+  },
+  "reviews": [
+    {
+      "sent_id": "REQ-163::s001",
+      "order": 1,
+      "text": "To enhance data integrity in cryogenic organ storage, implement a triple CRC32 checksum on combined RFID and temperature telemetry packets.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "PERFORMANCE_REQUIREMENT",
+      "reason_text": "Implementing checksum implies performance constraint."
+    },
+    {
+      "sent_id": "REQ-163::s002",
+      "order": 2,
+      "text": "This redundancy ensures robust validation during transmission and mitigates silent corruption in high-noise environments.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Redundancy ensures validation constraint."
+    },
+    {
+      "sent_id": "REQ-163::s003",
+      "order": 3,
+      "text": "Any organ bin exhibiting LN₂ probe temperature drift exceeding ±0.3 Kelvin from baseline must be auto-rejected to prevent transplant risk from thermal instability.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Auto-reject implies security requirement."
+    },
+    {
+      "sent_id": "REQ-163::s004",
+      "order": 4,
+      "text": "The legacy COBOL subroutine CHK3SUM must be adapted to interface with the existing IoT bridge, enabling seamless checksum verification across both legacy and modern systems.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Adapting the subroutine implies enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-163::s005",
+      "order": 5,
+      "text": "This integration ensures cross-platform compatibility without rewriting critical firmware logic, preserving backward compatibility while improving safety assurance.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Integration preserves compatibility constraint."
+    }
+  ]
+}

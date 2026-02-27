@@ -1,0 +1,63 @@
+{
+  "doc_id": "d578a973-641c-54d3-af31-94b0c193f417",
+  "req_key": "saas::P-SAAS-077::REQ-166",
+  "req_id": "REQ-166",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-077",
+  "source": {
+    "raw_path": "02_raw_requirements/saas/P-SAAS-077/req-166_raw.txt",
+    "refined_path": "03_refined_json_normalized/saas/P-SAAS-077/req-166_refined.json",
+    "origin": "both"
+  },
+  "text": "**Problem / Fix / Test**\n\n**Problem**  \nThe Morse message queue intermittently stalls during local Daylight Saving Time (DST) transitions, specifically when clocks advance from 02:00 to 03:00. This occurs because local timestamping introduces a non-monotonic jump, causing messages with timestamps during the skipped hour to appear out of order or invalid. As a result, the queue halts processing until manual intervention or timeout recovery, disrupting time-critical telemetry operations.\n\n**Fix**  \nAll message timestamps will be converted to Coordinated Universal Time (UTC) at the point of queue insertion, eliminating reliance on system-local time. A DST flag will be added to the message header for diagnostic transparency, allowing downstream systems to detect whether the message originated during a DST transition. This ensures temporal consistency across all regions and avoids ambiguity during clock changes.\n\n**Test**  \nImplement a simulation that toggles the system clock across a DST boundary (02:00 → 03:00) in a controlled environment. Enqueue messages at 01:59:59, 02:00:00 (skipped), and 03:00:01. Verify that messages are timestamped in UTC without interruption, and the queue processes all entries in chronological order. Confirm that maximum observed delay does not exceed one second during the transition.",
+  "structured_data": [
+    {
+      "id": "REQ-166-HLJ-Chunk_1-Item_1-v1.0",
+      "domain": "unknown",
+      "summary": "Problem – Morse message queue stalls during DST transitions",
+      "priority": "High",
+      "tags": [
+        "time_critical_operations",
+        "system_stability",
+        "telemetry"
+      ],
+      "subdomain": "data_processing",
+      "difficulty": 3,
+      "additionalNotes": "Timestamp non-monotonicity during DST change causes queue halts. Origin: implied",
+      "source_hlj_id": "REQ 001-001",
+      "domain_id": "P-SAAS-077"
+    },
+    {
+      "id": "REQ-166-HLJ-Chunk_1-Item_2-v1.0",
+      "domain": "unknown",
+      "summary": "Fix – Convert timestamps to UTC, add DST flag in header",
+      "priority": "High",
+      "tags": [
+        "time_management",
+        "system_integration",
+        "diagnostics"
+      ],
+      "subdomain": "data_processing",
+      "difficulty": 4,
+      "additionalNotes": "Ensures queue processing continuity across time zones.",
+      "source_hlj_id": "REQ 001-002",
+      "domain_id": "P-SAAS-077"
+    },
+    {
+      "id": "REQ-166-HLJ-Chunk_1-Item_3-v1.0",
+      "domain": "unknown",
+      "summary": "Test – Simulate DST transition, ensure ≤ 1s delay",
+      "priority": "Medium",
+      "tags": [
+        "testing_strategy",
+        "system_simulation",
+        "performance"
+      ],
+      "subdomain": "testing",
+      "difficulty": 2,
+      "additionalNotes": "Validates queue behavior under DST change scenarios.",
+      "source_hlj_id": "REQ 001-003",
+      "domain_id": "P-SAAS-077"
+    }
+  ]
+}

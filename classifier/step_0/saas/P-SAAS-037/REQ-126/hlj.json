@@ -1,0 +1,63 @@
+{
+  "doc_id": "b613486e-3110-531d-9fe2-4af51070496b",
+  "req_key": "saas::P-SAAS-037::REQ-126",
+  "req_id": "REQ-126",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-037",
+  "source": {
+    "raw_path": "02_raw_requirements/saas/P-SAAS-037/req-126_raw.txt",
+    "refined_path": "03_refined_json_normalized/saas/P-SAAS-037/req-126_refined.json",
+    "origin": "both"
+  },
+  "text": "If your platform can schedule posts but still can’t auto-tag them with 90%+ accuracy, what are we even doing?? I’m DONE wasting time manually tagging every post. Fix it now or I’m finding a platform that respects my sanity next month. 🫠 #DoBetter",
+  "structured_data": [
+    {
+      "id": "REQ-126-HLJ-Chunk_1-Item_1-v1.0",
+      "domain": "saas",
+      "summary": "Implement AI auto-tagging for scheduled posts",
+      "priority": "High",
+      "tags": [
+        "ai_tagging",
+        "scheduled_posts",
+        "automation"
+      ],
+      "subdomain": "content_management",
+      "difficulty": 3,
+      "additionalNotes": "Demanded feature for reducing manual workload in scheduled post management.",
+      "source_hlj_id": "REQ 001-001",
+      "domain_id": "P-SAAS-037"
+    },
+    {
+      "id": "REQ-126-HLJ-Chunk_1-Item_2-v1.0",
+      "domain": "saas",
+      "summary": "Achieve minimum 90% tag accuracy in AI auto-tagging",
+      "priority": "High",
+      "tags": [
+        "tag_accuracy",
+        "quality_assurance",
+        "ai_validation"
+      ],
+      "subdomain": "content_management",
+      "difficulty": 4,
+      "additionalNotes": "Sets performance benchmark for AI-based tag matching.",
+      "source_hlj_id": "REQ 001-002",
+      "domain_id": "P-SAAS-037"
+    },
+    {
+      "id": "REQ-126-HLJ-Chunk_1-Item_3-v1.0",
+      "domain": "saas",
+      "summary": "Eliminate manual tagging by next month",
+      "priority": "High",
+      "tags": [
+        "manual_tagging",
+        "workflow_optimization",
+        "user_experience"
+      ],
+      "subdomain": "content_management",
+      "difficulty": 2,
+      "additionalNotes": "Client threatens platform churn if manual tagging persists.",
+      "source_hlj_id": "REQ 001-003",
+      "domain_id": "P-SAAS-037"
+    }
+  ]
+}

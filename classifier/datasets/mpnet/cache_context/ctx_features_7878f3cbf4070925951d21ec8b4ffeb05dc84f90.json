@@ -1,0 +1,10 @@
+{
+  "created_at": "2026-02-05T00:38:45",
+  "train_path": "classifier\\outputs\\splits\\train_40.jsonl",
+  "model_name": "sentence-transformers/all-mpnet-base-v2",
+  "max_length": 128,
+  "n_before": 2,
+  "n_after": 2,
+  "N": 2213,
+  "dim": 2305
+}

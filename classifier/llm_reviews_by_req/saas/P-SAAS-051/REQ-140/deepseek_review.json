@@ -1,0 +1,49 @@
+{
+  "req_id": "REQ-140",
+  "doc_id": "951b75df-a0d4-59e2-9a84-0f6622c127d0",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-051",
+  "model": "deepseek-r1:7b",
+  "review_timestamp": "2026-01-20T23:51:06.211292+00:00",
+  "counts": {
+    "total": 3,
+    "llm_pos": 2,
+    "pipe_pos": 2,
+    "llm_neg": 1,
+    "flip_pos_to_neg": 1,
+    "pipe_neg": 1,
+    "flip_neg_to_pos": 1
+  },
+  "reviews": [
+    {
+      "sent_id": "REQ-140::s001",
+      "order": 1,
+      "text": "🚨 P1-non-negotiable: Ensure all AR overlay UI call-outs support right-to-left Arabic (🇸🇦) layout before next week’s trade show.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Non-negotiable UI layout requirement"
+    },
+    {
+      "sent_id": "REQ-140::s002",
+      "order": 2,
+      "text": "The layout must fully mirror all anchor positions for RTL orientation—emoji 🎉 remains at the end of the line regardless of direction.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Behaves enforceably with RTL layout"
+    },
+    {
+      "sent_id": "REQ-140::s003",
+      "order": 3,
+      "text": "Figma mock-ups are due by Friday 12:00 UTC, and QA testing must be completed on HoloLens 2.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Tasks for QA testing and Figma mock-ups"
+    }
+  ]
+}

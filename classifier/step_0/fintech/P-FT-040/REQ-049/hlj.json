@@ -1,0 +1,175 @@
+{
+  "doc_id": "e23db068-bcf2-59cc-9618-dd6f1bc45a07",
+  "req_key": "fintech::P-FT-040::REQ-049",
+  "req_id": "REQ-049",
+  "domain": "fintech",
+  "prompt_id": "P-FT-040",
+  "source": {
+    "raw_path": "02_raw_requirements/fintech/P-FT-040/req-049_raw.txt",
+    "refined_path": "03_refined_json_normalized/fintech/P-FT-040/req-049_refined.json",
+    "origin": "both"
+  },
+  "text": "## Capture  \nThe system shall require users to submit a selfie video not exceeding 5 seconds in length. This video must adhere to quality standards suitable for biometric verification and identity validation processes.\n\n## Liveness  \nThe submitted selfie video must pass a biometric liveness detection test conforming to ISO/IEC 30107-3 standards, achieving a spoof detection score of 0.2 or lower. Videos failing to meet this criterion shall be rejected, and users prompted to resubmit until compliance is achieved.\n\n## AML Check  \nThe identity verification workflow must integrate mandatory checks against sanctioned individuals, specifically referencing OFAC and EU sanctions lists. Verification will fail immediately upon a positive match, requiring manual escalation for compliance review and further action.\n\n## Privacy  \nAll biometric templates generated from user videos shall be securely stored using AES-256-GCM encryption. To ensure adherence to GDPR Article 5(1)(e), all stored biometric templates must be purged after a retention period of 5 years, or sooner if explicitly requested by the user, in compliance with relevant data protection guidelines.\n\n---\n\n**Go-Live:** 15 July 2025",
+  "structured_data": [
+    {
+      "id": "REQ-049-HLJ-Chunk_1-Item_1-v1.0",
+      "domain": "fintech",
+      "summary": "Limit selfie video duration to 5 seconds.",
+      "priority": "High",
+      "tags": [
+        "video_capture",
+        "user_input",
+        "duration_limit"
+      ],
+      "subdomain": "identity_verification",
+      "difficulty": 2,
+      "additionalNotes": "Short video reduces processing load and enforces UX standard.",
+      "source_hlj_id": "REQ 001-001",
+      "domain_id": "P-FT-040"
+    },
+    {
+      "id": "REQ-049-HLJ-Chunk_1-Item_2-v1.0",
+      "domain": "fintech",
+      "summary": "Ensure video quality is suitable for biometric verification.",
+      "priority": "High",
+      "tags": [
+        "video_quality",
+        "biometrics",
+        "data_capture"
+      ],
+      "subdomain": "identity_verification",
+      "difficulty": 3,
+      "additionalNotes": "High-quality input is critical for accurate identity matching.",
+      "source_hlj_id": "REQ 001-002",
+      "domain_id": "P-FT-040"
+    },
+    {
+      "id": "REQ-049-HLJ-Chunk_1-Item_3-v1.0",
+      "domain": "fintech",
+      "summary": "Perform liveness check using ISO/IEC 30107-3 standard.",
+      "priority": "High",
+      "tags": [
+        "liveness_detection",
+        "spoof_prevention",
+        "standards_compliance"
+      ],
+      "subdomain": "biometric_security",
+      "difficulty": 3,
+      "additionalNotes": "Conformance ensures anti-spoofing integrity.",
+      "source_hlj_id": "REQ 001-003",
+      "domain_id": "P-FT-040"
+    },
+    {
+      "id": "REQ-049-HLJ-Chunk_1-Item_4-v1.0",
+      "domain": "fintech",
+      "summary": "Accept selfie only if spoof score is ≤ 0.2.",
+      "priority": "High",
+      "tags": [
+        "liveness_score",
+        "security_threshold",
+        "spoof_check"
+      ],
+      "subdomain": "biometric_security",
+      "difficulty": 2,
+      "additionalNotes": "Spoof detection score threshold defined by biometric standards.",
+      "source_hlj_id": "REQ 001-004",
+      "domain_id": "P-FT-040"
+    },
+    {
+      "id": "REQ-049-HLJ-Chunk_1-Item_5-v1.0",
+      "domain": "fintech",
+      "summary": "Prompt resubmission for failed liveness checks.",
+      "priority": "Medium",
+      "tags": [
+        "user_feedback",
+        "retry_logic",
+        "liveness_failure"
+      ],
+      "subdomain": "user_experience",
+      "difficulty": 2,
+      "additionalNotes": "Supports iterative verification for user success.",
+      "source_hlj_id": "REQ 001-005",
+      "domain_id": "P-FT-040"
+    },
+    {
+      "id": "REQ-049-HLJ-Chunk_1-Item_6-v1.0",
+      "domain": "fintech",
+      "summary": "Cross-check identities against OFAC and EU sanctions lists.",
+      "priority": "High",
+      "tags": [
+        "aml_check",
+        "sanctions_screening",
+        "compliance"
+      ],
+      "subdomain": "risk_management",
+      "difficulty": 3,
+      "additionalNotes": "Sanctions compliance is critical for regulatory adherence.",
+      "source_hlj_id": "REQ 001-006",
+      "domain_id": "P-FT-040"
+    },
+    {
+      "id": "REQ-049-HLJ-Chunk_1-Item_7-v1.0",
+      "domain": "fintech",
+      "summary": "Escalate verification on positive match to sanctions lists.",
+      "priority": "Medium",
+      "tags": [
+        "manual_review",
+        "compliance_workflow",
+        "sanctions_match"
+      ],
+      "subdomain": "risk_management",
+      "difficulty": 2,
+      "additionalNotes": "Ensures human oversight on critical compliance decisions.",
+      "source_hlj_id": "REQ 001-007",
+      "domain_id": "P-FT-040"
+    },
+    {
+      "id": "REQ-049-HLJ-Chunk_1-Item_8-v1.0",
+      "domain": "fintech",
+      "summary": "Encrypt biometric templates using AES-256-GCM.",
+      "priority": "High",
+      "tags": [
+        "data_encryption",
+        "biometric_storage",
+        "security"
+      ],
+      "subdomain": "data_protection",
+      "difficulty": 3,
+      "additionalNotes": "Strong encryption is required for storing sensitive biometric data.",
+      "source_hlj_id": "REQ 001-008",
+      "domain_id": "P-FT-040"
+    },
+    {
+      "id": "REQ-049-HLJ-Chunk_1-Item_9-v1.0",
+      "domain": "fintech",
+      "summary": "Purge biometric data after 5 years or upon request.",
+      "priority": "High",
+      "tags": [
+        "data_retention",
+        "gdpr_compliance",
+        "privacy"
+      ],
+      "subdomain": "data_protection",
+      "difficulty": 3,
+      "additionalNotes": "GDPR Article 5(1)(e) mandates time-limited data retention.",
+      "source_hlj_id": "REQ 001-009",
+      "domain_id": "P-FT-040"
+    },
+    {
+      "id": "REQ-049-HLJ-Chunk_1-Item_10-v1.0",
+      "domain": "fintech",
+      "summary": "Set go-live deadline for 15 July 2025.",
+      "priority": "Low",
+      "tags": [
+        "project_milestone",
+        "launch_date",
+        "deployment"
+      ],
+      "subdomain": "project_management",
+      "difficulty": 1,
+      "additionalNotes": "origin: implied – Operational schedule requirement inferred from project goal.",
+      "source_hlj_id": "REQ 001-010",
+      "domain_id": "P-FT-040"
+    }
+  ]
+}

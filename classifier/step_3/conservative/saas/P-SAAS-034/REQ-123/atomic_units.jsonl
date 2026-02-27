@@ -1,0 +1,4 @@
+{"unit_id": "REQ-123::cu001", "req_id": "REQ-123", "doc_id": "53006f51-c770-53b2-a826-c3298b2eb7bd", "parent_sent_id": "REQ-123::s004", "order": 1, "text": "This will ensure rapid awareness and triage."}
+{"unit_id": "REQ-123::cu002", "req_id": "REQ-123", "doc_id": "53006f51-c770-53b2-a826-c3298b2eb7bd", "parent_sent_id": "REQ-123::s005", "order": 2, "text": "Finally , the fix must be developed , tested , and deployed no later than Friday 18:00 UTC ."}
+{"unit_id": "REQ-123::cu003", "req_id": "REQ-123", "doc_id": "53006f51-c770-53b2-a826-c3298b2eb7bd", "parent_sent_id": "REQ-123::s005", "order": 3, "text": "tested"}
+{"unit_id": "REQ-123::cu004", "req_id": "REQ-123", "doc_id": "53006f51-c770-53b2-a826-c3298b2eb7bd", "parent_sent_id": "REQ-123::s005", "order": 4, "text": "deployed no later than Friday 18:00 UTC"}

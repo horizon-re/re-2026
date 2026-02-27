@@ -1,0 +1,79 @@
+{
+  "doc_id": "2fbc755c-99bf-576e-ae42-df4d9e797759",
+  "req_key": "saas::P-SAAS-078::REQ-167",
+  "req_id": "REQ-167",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-078",
+  "source": {
+    "raw_path": "02_raw_requirements/saas/P-SAAS-078/req-167_raw.txt",
+    "refined_path": "03_refined_json_normalized/saas/P-SAAS-078/req-167_refined.json",
+    "origin": "both"
+  },
+  "text": "Bug Brief: Unit Mismatch and Safety Constraint in OBJ Importer\n\nThe current 3D engine expects mesh vertex coordinates in inches, but several OBJ files are authored using micrometers (µm) without explicit unit metadata. As a result, imported models appear extremely large or distorted in the simulation environment, causing rendering anomalies and potential physics simulation errors. To resolve this, enforce a scale conversion factor of 1 inch = 25,400 µm during import. This ensures consistent spatial representation across all models regardless of authoring units.\n\nAdditionally, during high-frequency simulation, some imported models are triggering force feedback spikes above the acceptable threshold. To mitigate user discomfort, clamp any vibrational force applied via haptics to a maximum of 4 N, beyond which it may induce pain or strain.\n\nTo prevent future mismatches, the OBJ importer must perform a metadata scan for declared or inferred units and issue a warning if the units are missing or incompatible. If no unit metadata is found, default to µm and apply the scaling logic automatically. This safeguard preserves physical accuracy and user safety without disrupting the workflow of external model creators.",
+  "structured_data": [
+    {
+      "id": "REQ-167-HLJ-Chunk_1-Item_1-v1.0",
+      "domain": "saas",
+      "summary": "Enforce scale conversion of 1 inch = 25,400 µm on import",
+      "priority": "High",
+      "tags": [
+        "unit_conversion",
+        "mesh_import",
+        "scaling_logic"
+      ],
+      "subdomain": "3d_engine",
+      "difficulty": 3,
+      "additionalNotes": "Ensures accurate spatial dimensions when OBJ files use micrometer units instead of inches.",
+      "source_hlj_id": "REQ 001-001",
+      "domain_id": "P-SAAS-078"
+    },
+    {
+      "id": "REQ-167-HLJ-Chunk_1-Item_2-v1.0",
+      "domain": "saas",
+      "summary": "Clamp vibrational force output to a max of 4 N",
+      "priority": "High",
+      "tags": [
+        "force_feedback",
+        "haptics",
+        "safety_constraint"
+      ],
+      "subdomain": "simulation_safety",
+      "difficulty": 2,
+      "additionalNotes": "Prevents painful or unsafe haptic feedback during high-frequency simulation.",
+      "source_hlj_id": "REQ 001-002",
+      "domain_id": "P-SAAS-078"
+    },
+    {
+      "id": "REQ-167-HLJ-Chunk_1-Item_3-v1.0",
+      "domain": "saas",
+      "summary": "Add unit metadata scan in OBJ importer",
+      "priority": "Medium",
+      "tags": [
+        "metadata_scan",
+        "import_validation",
+        "unit_detection"
+      ],
+      "subdomain": "3d_engine",
+      "difficulty": 3,
+      "additionalNotes": "Validates unit declarations in imported models to avoid scale mismatches.",
+      "source_hlj_id": "REQ 001-003",
+      "domain_id": "P-SAAS-078"
+    },
+    {
+      "id": "REQ-167-HLJ-Chunk_1-Item_4-v1.0",
+      "domain": "saas",
+      "summary": "Default to µm and apply scale if metadata missing",
+      "priority": "Low",
+      "tags": [
+        "unit_default",
+        "auto_scaling",
+        "fallback_logic"
+      ],
+      "subdomain": "3d_engine",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied – Applies µm scaling by default to preserve rendering integrity when units are unspecified.",
+      "source_hlj_id": "REQ 001-004",
+      "domain_id": "P-SAAS-078"
+    }
+  ]
+}

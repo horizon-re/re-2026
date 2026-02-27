@@ -1,0 +1,2 @@
+{"unit_id": "REQ-169::cu001", "req_id": "REQ-169", "doc_id": "f9370a50-5856-5d3d-8716-7e9f7dbaf705", "parent_sent_id": "REQ-169::s006", "order": 1, "text": "On encountering a bracketed index that fails this pattern, the lexer should immediately raise error code QASM102 (“Invalid QASM index: must be integer ≥ 0”), halting further parsing."}
+{"unit_id": "REQ-169::cu002", "req_id": "REQ-169", "doc_id": "f9370a50-5856-5d3d-8716-7e9f7dbaf705", "parent_sent_id": "REQ-169::s009", "order": 2, "text": "insert the following rule before the integer rule :"}

@@ -1,0 +1,29 @@
+### Vision & Goals  
+• Make user onboarding KYC-compliant without killing conversion  
+  – 80% of users complete KYC in under 5 mins  
+  – Cut manual review queue by at least 60%  
+  – Regional compliance coverage in top 3 markets  
+
+### Must‑Have Features  
+• Front-camera selfie capture w/ liveness check  
+• Upload gov’t-issued ID (passport, DL, etc.)  
+• Name + DOB auto-extract from ID [TODO @Elena]  
+• Manual override panel for compliance reviewers  
+• Local language support for ID types (esp. non-Latin scripts)  
+• Error-handling flow for mismatched fields [TODO @Marco]  
+• Email+SMS fallback if real-time verification fails  
+
+### AI Automation Ideas  
+• “Smart‑ID Verification Bot” flags blurry image uploads + prompts user to re-capture before sending to human reviewer  
+• ML-based “Risk‑Score Predictor” generates probability score (% likelihood of fraud) — Marco to tune thresholding?  
+• All PII processed only in-region; redact unnecessary fields before logging to backend  
+
+### Compliance & Regions  
+• EU – GDPR-compliant storage + AML5 checklist (beneficial ownership, PEPs)  
+• US – FinCEN Customer Due Diligence rule (must flag shell corps)  
+• Indonesia – OJK requires…  
+
+### Open Questions  
+• How might we speed up retries without frustrating legit users?  
+• Should we auto-reject expired IDs or allow grace period?  
+• What’s the fallback if selfie verification fails on low-end devices?

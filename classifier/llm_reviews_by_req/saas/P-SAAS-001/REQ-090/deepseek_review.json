@@ -1,0 +1,1559 @@
+{
+  "req_id": "REQ-090",
+  "doc_id": "0355b397-7125-55c4-9e5e-1943823836a1",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-001",
+  "model": "deepseek-r1:7b",
+  "review_timestamp": "2026-01-20T22:49:58.199122+00:00",
+  "counts": {
+    "total": 154,
+    "llm_neg": 73,
+    "pipe_pos": 54,
+    "flip_pos_to_neg": 21,
+    "llm_pos": 81,
+    "pipe_neg": 100,
+    "flip_neg_to_pos": 48
+  },
+  "reviews": [
+    {
+      "sent_id": "REQ-090::s001",
+      "order": 1,
+      "text": "Analysis of Business Requirements for a Multi-Tenant CRM Platform1.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-090::s002",
+      "order": 2,
+      "text": "Executive SummaryThis report presents an analysis of the Business Requirements Document (BRD) outlining the specifications for a new multi-tenant Customer Relationship Management (CRM) platform.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-090::s003",
+      "order": 3,
+      "text": "The BRD articulates the need for a comprehensive CRM solution capable of serving businesses of varying scales, with a particular emphasis on small to medium-sized enterprises (SMEs) and larger organizations that possess intricate structures and necessitate operational independence within a shared platform environment.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-090::s004",
+      "order": 4,
+      "text": "The primary objectives for this platform, as stated in the BRD, encompass the provision of a robust and scalable CRM, the facilitation of efficient customer interaction and data management, the offering of a customizable and adaptable platform, the assurance of data security and regulatory compliance, the enablement of seamless integration with other business applications, and the streamlining of client onboarding and ongoing platform administration.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-090::s005",
+      "order": 5,
+      "text": "An initial assessment suggests that the proposed platform demonstrates considerable potential in addressing the multifaceted requirements of organizations with complex operational models, particularly through its focus on multi-tenancy and hierarchical account structures.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "The text describes the platform's potential to address complex requirements but does not explicitly state an enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-090::s006",
+      "order": 6,
+      "text": "This approach could represent a notable advantage within the CRM market by catering specifically to the needs of diverse and intricate organizational frameworks.2.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-090::s007",
+      "order": 7,
+      "text": "In-depth Analysis of the Account Hierarchy2.1.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-090::s008",
+      "order": 8,
+      "text": "Multi-Level Structure (Tenant, Account, Org Unit)The proposed CRM platform incorporates a three-tiered hierarchical structure, comprising the Tenant, Account, and Organizational Unit (Org Unit) levels.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "The text explains the structure but does not specify a requirement."
+    },
+    {
+      "sent_id": "REQ-090::s009",
+      "order": 9,
+      "text": "The Tenant represents the overarching customer organization that subscribes to the platform.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Sets up the context of the Tenant as an overarching customer organization but does not enforce any behavior."
+    },
+    {
+      "sent_id": "REQ-090::s010",
+      "order": 10,
+      "text": "Below the Tenant level are Accounts, which are intended to represent distinct business units, departments, or subsidiaries within the Tenant organization.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Explains the hierarchical structure of Accounts as business units but does not impose behavior."
+    },
+    {
+      "sent_id": "REQ-090::s011",
+      "order": 11,
+      "text": "Further segmenting the structure are Org Units, which allow for even more granular categorization and management of users and data within an Account.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describes Org Units for granularity without enforcing any behavior."
+    },
+    {
+      "sent_id": "REQ-090::s012",
+      "order": 12,
+      "text": "The rationale behind this multi-level hierarchy is to effectively mirror the internal organizational structures of businesses within the CRM system.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Explains the rationale for hierarchy without enforcing any behavior."
+    },
+    {
+      "sent_id": "REQ-090::s013",
+      "order": 13,
+      "text": "This alignment is designed to facilitate more efficient management and the generation of insightful reports tailored to specific organizational segments.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describes benefits of efficient management without enforcing any behavior."
+    },
+    {
+      "sent_id": "REQ-090::s014",
+      "order": 14,
+      "text": "A foundational aspect of this structure is the isolation of databases and configurations at the Tenant level.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Isolation of databases at Tenant level could be enforceable."
+    },
+    {
+      "sent_id": "REQ-090::s015",
+      "order": 15,
+      "text": "This isolation is a standard and critical element of multi-tenant architectures, as it ensures that the data of one subscribing organization remains entirely separate and inaccessible to other tenants, thereby upholding data privacy and security.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Ensures data privacy through isolation, which is enforceable."
+    },
+    {
+      "sent_id": "REQ-090::s016",
+      "order": 16,
+      "text": "This architectural decision also simplifies processes such as data backup and recovery, as these operations can be performed independently for each tenant.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Simplifies data backup with tenant-independent operations, enforceable."
+    },
+    {
+      "sent_id": "REQ-090::s017",
+      "order": 17,
+      "text": "Furthermore, the platform's support for multiple levels of Org Units within an Account introduces a significant degree of flexibility.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Introduces flexibility but doesn't enforce behavior."
+    },
+    {
+      "sent_id": "REQ-090::s018",
+      "order": 18,
+      "text": "This capability is particularly beneficial for larger and more complex organizations that require fine-grained control over how data is accessed and by whom within different parts of their operational structure.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Benefits of fine-grained control but doesn't enforce."
+    },
+    {
+      "sent_id": "REQ-090::s019",
+      "order": 19,
+      "text": "The ability to represent intricate internal reporting lines and departmental divisions within the CRM enhances its utility for organizations with sophisticated operational frameworks.2.2.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Enhances utility for complex structures without enforcing."
+    },
+    {
+      "sent_id": "REQ-090::s020",
+      "order": 20,
+      "text": "Inheritance RulesThe BRD specifies that inheritance rules will govern the propagation of settings and permissions down the account hierarchy.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Inheritance rules will govern the propagation of settings and permissions down the account hierarchy, imposing a system constraint."
+    },
+    {
+      "sent_id": "REQ-090::s021",
+      "order": 21,
+      "text": "For instance, global settings defined at the Tenant level can be automatically inherited by all underlying Accounts and Org Units.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Inheritance of settings could be enforceable."
+    },
+    {
+      "sent_id": "REQ-090::s022",
+      "order": 22,
+      "text": "Simultaneously, the system will allow for specific configurations to be customized at the lower levels of the hierarchy, such as at the Account or Org Unit level.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "The text explains how customization can occur but does not specify a requirement."
+    },
+    {
+      "sent_id": "REQ-090::s023",
+      "order": 23,
+      "text": "This inheritance model offers a crucial balance between ensuring consistency across the entire tenant organization and providing the necessary flexibility to accommodate the unique operational requirements of individual business units or departments.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Balances consistency and flexibility without enforcing."
+    },
+    {
+      "sent_id": "REQ-090::s024",
+      "order": 24,
+      "text": "Implementing such rules is a vital design consideration for maintaining manageability within a hierarchical structure.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Design consideration for manageability, not enforceable yet."
+    },
+    {
+      "sent_id": "REQ-090::s025",
+      "order": 25,
+      "text": "Without inheritance, the task of applying and updating settings and permissions across a potentially large number of Accounts and Org Units within a single Tenant would become exceedingly complex and significantly increase the likelihood of errors.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Prevents complexity in settings inheritance, enforceable."
+    },
+    {
+      "sent_id": "REQ-090::s026",
+      "order": 26,
+      "text": "The establishment of inheritance streamlines this administrative process, allowing for efficient application of overarching policies while still providing the adaptability required at more granular levels of the organization.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Efficient admin processes could be enforceable."
+    },
+    {
+      "sent_id": "REQ-090::s027",
+      "order": 27,
+      "text": "The effectiveness of these inheritance rules will be closely tied to the degree of detail in settings and permissions that can be inherited and the extent to which these can be overridden at each level.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.5,
+      "reason_code": "COMPLIANCE_REQUIREMENT",
+      "reason_text": "The effectiveness of these rules is tied to the degree of detail, which may be a guideline rather than an enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-090::s028",
+      "order": 28,
+      "text": "This aspect will be a critical consideration during the detailed design phase of the platform's development.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Part of design phase, not enforceable yet."
+    },
+    {
+      "sent_id": "REQ-090::s029",
+      "order": 29,
+      "text": "A well-implemented hierarchical structure, underpinned by robust inheritance rules, has the potential to significantly enhance data management, reporting capabilities, and user administration for organizations characterized by complex internal arrangements.3.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Enhances reporting but doesn't enforce behavior."
+    },
+    {
+      "sent_id": "REQ-090::s030",
+      "order": 30,
+      "text": "Evaluation of the Role-Based Access Control System3.1.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.7,
+      "reason_code": "COMPLIANCE_REQUIREMENT",
+      "reason_text": "Evaluation of Role-Based Access Control is enforceable."
+    },
+    {
+      "sent_id": "REQ-090::s031",
+      "order": 31,
+      "text": "Standard and Custom RolesThe platform will implement a Role-Based Access Control (RBAC) system to manage user permissions and data access.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "The platform will implement a Role-Based Access Control (RBAC) system, which is an enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-090::s032",
+      "order": 32,
+      "text": "This system will include a set of predefined standard roles, such as Sales Representative, Marketing Manager, Customer Support Agent, and Administrator.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "The text explains predefined roles but does not specify a requirement."
+    },
+    {
+      "sent_id": "REQ-090::s033",
+      "order": 33,
+      "text": "Each of these roles will be associated with a specific set of permissions that align with the typical responsibilities of individuals in those positions.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "The text explains how roles are associated with permissions but does not specify a requirement."
+    },
+    {
+      "sent_id": "REQ-090::s034",
+      "order": 34,
+      "text": "The inclusion of these standard roles offers a foundational framework for common CRM user types, which can significantly simplify the initial setup and configuration process for new tenants.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Standard roles for simplification could be enforceable."
+    },
+    {
+      "sent_id": "REQ-090::s035",
+      "order": 35,
+      "text": "This suggests an understanding of typical CRM usage patterns across various business functions, which can accelerate the process of getting the platform operational for new subscribers.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "The text explains usage patterns but does not specify a requirement."
+    },
+    {
+      "sent_id": "REQ-090::s036",
+      "order": 36,
+      "text": "Beyond the standard roles, the platform will also empower Tenant Administrators to create custom roles with tailored permissions.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Tenant Administrators will create custom roles with tailored permissions, which is an enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-090::s037",
+      "order": 37,
+      "text": "This flexibility is essential for accommodating the diverse and often unique requirements of different organizations and their specific job functions.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "States an enforceable system behavior related to flexibility for different organizations."
+    },
+    {
+      "sent_id": "REQ-090::s038",
+      "order": 38,
+      "text": "While standard roles provide a useful starting point, they may not perfectly align with the precise organizational structure and responsibilities within every business.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "The text explains a potential misalignment but does not specify a requirement."
+    },
+    {
+      "sent_id": "REQ-090::s039",
+      "order": 39,
+      "text": "The ability to define custom roles allows tenants to precisely control access levels based on their specific security protocols and operational needs.3.2.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 1.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "States a capability that allows precise control based on security needs."
+    },
+    {
+      "sent_id": "REQ-090::s040",
+      "order": 40,
+      "text": "Permissions MatrixThe BRD mentions the existence of a comprehensive permissions matrix that will define the specific actions each role is authorized to perform within the platform.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "A comprehensive permissions matrix will define actions each role is authorized to perform."
+    },
+    {
+      "sent_id": "REQ-090::s041",
+      "order": 41,
+      "text": "This matrix will cover various modules of the CRM, such as contacts, leads, opportunities, and cases, specifying whether a user in a particular role can create, read, update, or delete records within those modules.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "The matrix specifies whether users can create, read, update, or delete records within modules."
+    },
+    {
+      "sent_id": "REQ-090::s042",
+      "order": 42,
+      "text": "A well-defined permissions matrix is a fundamental component of a robust RBAC system.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 1.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Mentions a fundamental component of RBAC system."
+    },
+    {
+      "sent_id": "REQ-090::s043",
+      "order": 43,
+      "text": "It provides clarity and granular control over what users can and cannot do within the platform, which is essential for maintaining data security and operational integrity.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 1.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describes granular control over user actions."
+    },
+    {
+      "sent_id": "REQ-090::s044",
+      "order": 44,
+      "text": "The explicit mention of such a matrix indicates a commitment to providing detailed control over user interactions with the platform's functionalities.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 1.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Explicitly mentions the matrix for control over user interactions."
+    },
+    {
+      "sent_id": "REQ-090::s045",
+      "order": 45,
+      "text": "Without a clear and documented permissions matrix, it would be challenging to effectively manage and understand the access rights associated with each role, potentially leading to security vulnerabilities or inefficiencies in operations.3.3.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 1.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Emphasizes the requirement for audit trails."
+    },
+    {
+      "sent_id": "REQ-090::s046",
+      "order": 46,
+      "text": "Admin Override WorkflowsRecognizing that exceptional circumstances may arise, the platform will include admin override workflows.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Admin Override Workflows will allow overrides for specific users or situations."
+    },
+    {
+      "sent_id": "REQ-090::s047",
+      "order": 47,
+      "text": "These workflows will allow designated Tenant Administrators to temporarily bypass certain restrictions for specific users or situations.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Admin Override Workflows will allow temporary overrides by Tenant Administrators."
+    },
+    {
+      "sent_id": "REQ-090::s048",
+      "order": 48,
+      "text": "Crucially, the BRD emphasizes the requirement for a clear audit trail of any such overrides.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 1.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Mentions the requirement for audit trails in overrides."
+    },
+    {
+      "sent_id": "REQ-090::s049",
+      "order": 49,
+      "text": "While RBAC provides a structured approach to access control, there are often legitimate instances where temporary deviations from the standard permissions may be necessary.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "There are instances where temporary deviations from permissions may be necessary."
+    },
+    {
+      "sent_id": "REQ-090::s050",
+      "order": 50,
+      "text": "The inclusion of override mechanisms acknowledges this operational reality.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 1.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Acknowledges the need for override mechanisms."
+    },
+    {
+      "sent_id": "REQ-090::s051",
+      "order": 51,
+      "text": "However, to prevent potential misuse and maintain accountability, a comprehensive audit trail of all override actions is essential.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 1.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Mentions the necessity of an audit trail."
+    },
+    {
+      "sent_id": "REQ-090::s052",
+      "order": 52,
+      "text": "This ensures that any exceptions to the standard access controls are logged, tracked, and reviewable, contributing to the overall security and compliance posture of the platform.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 1.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "States that exceptions are logged and tracked for security."
+    },
+    {
+      "sent_id": "REQ-090::s053",
+      "order": 53,
+      "text": "This balanced approach, combining structured access control with controlled flexibility for exceptions, demonstrates a thoughtful consideration of both security and usability.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 1.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Balanced access control with exceptions considered."
+    },
+    {
+      "sent_id": "REQ-090::s054",
+      "order": 54,
+      "text": "The effectiveness of the RBAC system will also depend on the user-friendliness of the interface provided to Tenant Administrators for managing roles and permissions, particularly when creating and assigning custom roles.4.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "User-friendliness is required for Tenant Administrators to manage roles."
+    },
+    {
+      "sent_id": "REQ-090::s055",
+      "order": 55,
+      "text": "Considerations for Multi-Region Data Storage4.1.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Discusses multi-region data storage without system enforcement."
+    },
+    {
+      "sent_id": "REQ-090::s056",
+      "order": 56,
+      "text": "Tenant Choice of Data RegionThe platform will support multi-region data storage, allowing tenants to select the geographical region where their primary data will be stored.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Multi-region data storage is required for tenant choice."
+    },
+    {
+      "sent_id": "REQ-090::s057",
+      "order": 57,
+      "text": "This capability is increasingly important for meeting data residency requirements, such as those stipulated by regulations like the General Data Protection Regulation (GDPR) in Europe, which mandate that personal data of EU citizens be stored and processed within the EU.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 1.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Mentions GDPR compliance for data storage."
+    },
+    {
+      "sent_id": "REQ-090::s058",
+      "order": 58,
+      "text": "Additionally, storing data closer to the users can potentially improve performance by reducing latency.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Explains potential performance benefits without enforcing them."
+    },
+    {
+      "sent_id": "REQ-090::s059",
+      "order": 59,
+      "text": "Offering tenants the choice of data region demonstrates a commitment to addressing data sovereignty and compliance requirements, which can be a significant advantage in attracting a global customer base.4.2.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 1.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Mentions data sovereignty and compliance for global customer base."
+    },
+    {
+      "sent_id": "REQ-090::s060",
+      "order": 60,
+      "text": "Data Encryption at RestTo ensure the confidentiality and security of data, the platform will encrypt data at rest using industry-standard encryption algorithms.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Data encryption at rest is required for confidentiality."
+    },
+    {
+      "sent_id": "REQ-090::s061",
+      "order": 61,
+      "text": "Encryption at rest is a fundamental security measure that protects data from unauthorized access even if the physical storage media were to be compromised.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 1.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Mentions encryption as a security measure."
+    },
+    {
+      "sent_id": "REQ-090::s062",
+      "order": 62,
+      "text": "By employing industry-standard algorithms, the platform leverages well-established and vetted cryptographic methods, providing a strong level of assurance regarding the protection of sensitive data.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "The text explains the use of encryption algorithms but does not specify a requirement."
+    },
+    {
+      "sent_id": "REQ-090::s063",
+      "order": 63,
+      "text": "This commitment to encryption is a crucial security best practice and provides tenants with confidence in the platform's ability to safeguard their information.4.3.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 1.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Acknowledges commitment to information protection."
+    },
+    {
+      "sent_id": "REQ-090::s064",
+      "order": 64,
+      "text": "Failover MechanismsThe platform architecture will incorporate robust failover mechanisms to ensure business continuity in the event of regional outages or disasters.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "The platform architecture will incorporate robust failover mechanisms."
+    },
+    {
+      "sent_id": "REQ-090::s065",
+      "order": 65,
+      "text": "This will involve replicating data across multiple availability zones within the chosen region and potentially across secondary regions.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "This involves replicating data but doesn't state behavior."
+    },
+    {
+      "sent_id": "REQ-090::s066",
+      "order": 66,
+      "text": "This redundancy allows for automatic failover to a healthy instance of the platform with minimal disruption in service.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 1.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Mentions redundancy for failover and availability."
+    },
+    {
+      "sent_id": "REQ-090::s067",
+      "order": 67,
+      "text": "The implementation of such mechanisms is critical for ensuring the platform's high availability and minimizing potential downtime, which is a key requirement for enterprise-grade CRM systems.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 1.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "States the requirement for high availability."
+    },
+    {
+      "sent_id": "REQ-090::s068",
+      "order": 68,
+      "text": "Cloud infrastructure, while generally reliable, can experience outages, and having redundant systems in geographically diverse locations ensures that the CRM remains accessible even if a primary location fails.4.4.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 1.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Mentions redundancy in diverse locations for accessibility."
+    },
+    {
+      "sent_id": "REQ-090::s069",
+      "order": 69,
+      "text": "Transparency and DocumentationThe BRD emphasizes the commitment to providing clear documentation to tenants regarding data storage locations and failover procedures.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Background context without enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-090::s070",
+      "order": 70,
+      "text": "Transparency about how and where data is stored, as well as the measures in place to ensure business continuity, is crucial for building trust with tenants, particularly when dealing with sensitive customer data.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.75,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Explains importance but not enforceable action."
+    },
+    {
+      "sent_id": "REQ-090::s071",
+      "order": 71,
+      "text": "Providing clear and accessible documentation allows tenants to understand and assess the platform's reliability and compliance measures, empowering them to make informed decisions about their data.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.85,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describes purpose without enforcing behavior."
+    },
+    {
+      "sent_id": "REQ-090::s072",
+      "order": 72,
+      "text": "The performance implications of data replication across regions and the potential latency for users accessing data in a region different from their own should be carefully considered and optimized during the platform's development.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Focuses on performance considerations."
+    },
+    {
+      "sent_id": "REQ-090::s073",
+      "order": 73,
+      "text": "Offering multi-region data storage can be a significant competitive advantage, enabling the platform to cater to a global customer base with diverse regulatory requirements.5.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "ARCHITECTURE_DESCRIPTION",
+      "reason_text": "Discusses a feature without enforcing it."
+    },
+    {
+      "sent_id": "REQ-090::s074",
+      "order": 74,
+      "text": "Review of the Audit Logging Framework5.1.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.5,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "No explicit requirement indicated."
+    },
+    {
+      "sent_id": "REQ-090::s075",
+      "order": 75,
+      "text": "Scope of Logged EventsA comprehensive audit logging system will be implemented to track user activity and system events within the platform.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Implementation of a comprehensive audit logging system."
+    },
+    {
+      "sent_id": "REQ-090::s076",
+      "order": 76,
+      "text": "The system will log a wide range of events, including user logins and logouts, data changes (creation, modification, deletion of records), integration calls to and from external systems, and administrative actions.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.5,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Details on events logged but no enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-090::s077",
+      "order": 77,
+      "text": "This broad scope of logged events indicates a strong commitment to auditability, providing valuable insights into how the platform is being used and any potential security-related activities.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Explains a capability without enforcing it."
+    },
+    {
+      "sent_id": "REQ-090::s078",
+      "order": 78,
+      "text": "Tracking these diverse events provides a holistic view of platform usage and potential security incidents, which is essential for monitoring and maintaining a secure and compliant environment.5.2.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.65,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describes functionality but no enforceable action."
+    },
+    {
+      "sent_id": "REQ-090::s079",
+      "order": 79,
+      "text": "Audit Log Entry DetailsEach audit log entry will include detailed information, such as a timestamp, the user or system responsible for the event, the type of event, and relevant details about the action performed.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Each audit log entry includes detailed information."
+    },
+    {
+      "sent_id": "REQ-090::s080",
+      "order": 80,
+      "text": "This level of detail in the audit logs is crucial for effective analysis and investigation of events.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Explains the need for detail but no requirement."
+    },
+    {
+      "sent_id": "REQ-090::s081",
+      "order": 81,
+      "text": "The inclusion of timestamps allows for the chronological tracking of activities, while identifying the user or system responsible provides accountability.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.65,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Explains accountability without enforcing it."
+    },
+    {
+      "sent_id": "REQ-090::s082",
+      "order": 82,
+      "text": "The event type clarifies what action occurred, and the relevant details offer specific context about the action, such as the data that was changed.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describes event types but no requirement."
+    },
+    {
+      "sent_id": "REQ-090::s083",
+      "order": 83,
+      "text": "This comprehensive information enhances the value of the audit logs for forensic analysis, compliance reporting, and identifying the root cause of any issues that may arise.5.3.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Focuses on impact rather than requirement."
+    },
+    {
+      "sent_id": "REQ-090::s084",
+      "order": 84,
+      "text": "Configurable Data Retention PoliciesThe platform will offer configurable data retention policies, allowing tenants to define how long audit logs are stored based on their compliance requirements and internal policies.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Configurable data retention policies are offered."
+    },
+    {
+      "sent_id": "REQ-090::s085",
+      "order": 85,
+      "text": "Different organizations are subject to varying legal and regulatory obligations regarding the retention of audit logs.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Explains regulatory context without enforcing it."
+    },
+    {
+      "sent_id": "REQ-090::s086",
+      "order": 86,
+      "text": "Providing tenants with the flexibility to configure these policies ensures that they can meet their specific requirements.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.55,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "No explicit requirement indicated."
+    },
+    {
+      "sent_id": "REQ-090::s087",
+      "order": 87,
+      "text": "For example, regulations like HIPAA or SOX often specify minimum data retention periods, and this feature allows tenants to comply with such mandates.5.4.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.65,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Explains compliance but no enforceable action."
+    },
+    {
+      "sent_id": "REQ-090::s088",
+      "order": 88,
+      "text": "Tenant Access to Audit LogsTenant Administrators will have access to audit logs relevant to their tenant.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.5,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Focus on benefits, not enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-090::s089",
+      "order": 89,
+      "text": "This access provides tenants with valuable visibility into the activity occurring within their own CRM instance, empowering them to monitor platform usage, identify potential security incidents, and perform their own audits as needed.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describes monitoring capabilities without enforcing them."
+    },
+    {
+      "sent_id": "REQ-090::s090",
+      "order": 90,
+      "text": "This transparency fosters trust and accountability, enabling tenants to maintain oversight of their platform environment.5.5.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.65,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Explains trust but no enforceable requirement."
+    },
+    {
+      "sent_id": "REQ-090::s091",
+      "order": 91,
+      "text": "Searchability and ExportabilityThe audit logs will be designed to be easily searchable and exportable for analysis and reporting purposes.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Focuses on impact during development."
+    },
+    {
+      "sent_id": "REQ-090::s092",
+      "order": 92,
+      "text": "The ability to efficiently search through audit logs based on various criteria, such as user, event type, or date range, is essential for effective analysis and incident investigation.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.75,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describes search capabilities without enforcing them."
+    },
+    {
+      "sent_id": "REQ-090::s093",
+      "order": 93,
+      "text": "Furthermore, the ability to export the logs in a common format allows for further analysis using external tools and facilitates compliance audits and reporting.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Explains export functionality but no requirement."
+    },
+    {
+      "sent_id": "REQ-090::s094",
+      "order": 94,
+      "text": "This functionality significantly enhances the practical utility of the audit logs, making it easier to extract meaningful information and insights.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describes utility without enforcing it."
+    },
+    {
+      "sent_id": "REQ-090::s095",
+      "order": 95,
+      "text": "The potential impact of extensive audit logging on the platform's overall performance should be carefully considered and optimized during the development process.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describes potential impact but doesn't impose behavior."
+    },
+    {
+      "sent_id": "REQ-090::s096",
+      "order": 96,
+      "text": "A robust audit logging system is crucial for maintaining security, ensuring compliance with various regulations, and providing valuable insights into platform usage and potential issues.6.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Crucial for security and compliance."
+    },
+    {
+      "sent_id": "REQ-090::s097",
+      "order": 97,
+      "text": "Potential and Implementation of the Integrations Marketplace6.1.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.5,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "No explicit requirement indicated."
+    },
+    {
+      "sent_id": "REQ-090::s098",
+      "order": 98,
+      "text": "Central Repository for Pre-built IntegrationsThe platform will feature an Integrations Marketplace, serving as a central repository for pre-built integrations with popular third-party services, such as marketing automation platforms, accounting software, and customer support tools.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Central repository description."
+    },
+    {
+      "sent_id": "REQ-090::s099",
+      "order": 99,
+      "text": "Integrations are vital for extending the functionality of a CRM system and connecting it with other essential business applications.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.45,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Explains integrations without enforcing them."
+    },
+    {
+      "sent_id": "REQ-090::s100",
+      "order": 100,
+      "text": "A well-curated marketplace simplifies the process for tenants to discover and manage these integrations.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describes a general feature without specifying enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-090::s101",
+      "order": 101,
+      "text": "Such a marketplace can significantly enhance the value proposition of the CRM by providing seamless connectivity with other essential business applications, thereby reducing the need for custom development and streamlining business workflows.6.2.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Explains the potential benefits without enforcing a specific action."
+    },
+    {
+      "sent_id": "REQ-090::s102",
+      "order": 102,
+      "text": "Package Management SystemThe platform will include a package management system to allow tenants to easily browse, install, and manage integrations.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Package management system to be included."
+    },
+    {
+      "sent_id": "REQ-090::s103",
+      "order": 103,
+      "text": "A user-friendly package management system is essential for encouraging the adoption and utilization of integrations.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Imposes the necessity for a user-friendly package management system."
+    },
+    {
+      "sent_id": "REQ-090::s104",
+      "order": 104,
+      "text": "It simplifies the process of finding, installing, and maintaining these connections without requiring deep technical expertise from the tenants.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Implies the requirement for simplification in integration processes."
+    },
+    {
+      "sent_id": "REQ-090::s105",
+      "order": 105,
+      "text": "This ease of use will likely lead to greater adoption of integrations, further extending the platform's capabilities.6.3.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Ease of integration affects platform capabilities."
+    },
+    {
+      "sent_id": "REQ-090::s106",
+      "order": 106,
+      "text": "Partner API Onboarding ProcessA well-documented partner API onboarding process will enable third-party developers to build and publish their own integrations on the marketplace.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Well-documented partner process for integrations."
+    },
+    {
+      "sent_id": "REQ-090::s107",
+      "order": 107,
+      "text": "A robust and easy-to-use API, coupled with a clear onboarding process for developers, is crucial for fostering a vibrant ecosystem of integrations.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Imposes the necessity for a robust API and onboarding process."
+    },
+    {
+      "sent_id": "REQ-090::s108",
+      "order": 108,
+      "text": "The more integrations available, the more attractive the CRM becomes to businesses with diverse technology stacks.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describes an implication of integrations without enforcing a behavior."
+    },
+    {
+      "sent_id": "REQ-090::s109",
+      "order": 109,
+      "text": "This allows the platform's capabilities to be expanded beyond its core functionalities, catering to a wider range of user needs.6.4.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Explains the potential range of uses without enforcing specific actions."
+    },
+    {
+      "sent_id": "REQ-090::s110",
+      "order": 110,
+      "text": "Integration Certification ProcessTo ensure the quality and security of integrations, a certification process will be implemented.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Certification process will be implemented."
+    },
+    {
+      "sent_id": "REQ-090::s111",
+      "order": 111,
+      "text": "This process will require partners to adhere to specific development guidelines and undergo testing before their integrations are made available to tenants.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.5,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Process requires adherence to guidelines."
+    },
+    {
+      "sent_id": "REQ-090::s112",
+      "order": 112,
+      "text": "Implementing a certification process demonstrates a commitment to maintaining the quality, security, and reliability of the integrations offered on the marketplace.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "COMPLIANCE_REQUIREMENT",
+      "reason_text": "Imposes the necessity for a certification process."
+    },
+    {
+      "sent_id": "REQ-090::s113",
+      "order": 113,
+      "text": "This provides tenants with confidence in the safety and performance of the integrations they choose to use.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SECURITY_REQUIREMENT",
+      "reason_text": "Imposes the necessity for confidence in integration safety."
+    },
+    {
+      "sent_id": "REQ-090::s114",
+      "order": 114,
+      "text": "Poorly developed or insecure integrations can negatively impact the platform's stability and security, and certification helps mitigate these risks.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "SECURITY_REQUIREMENT",
+      "reason_text": "Imposes the necessity for secure integration development."
+    },
+    {
+      "sent_id": "REQ-090::s115",
+      "order": 115,
+      "text": "The success of the Integrations Marketplace will heavily rely on the capabilities of the platform's API, the ease with which third-party partners can develop integrations, and the effectiveness of the certification process in ensuring quality and security.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Depends on API and partner capabilities."
+    },
+    {
+      "sent_id": "REQ-090::s116",
+      "order": 116,
+      "text": "A thriving Integrations Marketplace can be a significant competitive differentiator, transforming the CRM platform into a central hub for various business processes and increasing its value and stickiness for tenants.7.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Imposes the necessity for a competitive market hub."
+    },
+    {
+      "sent_id": "REQ-090::s117",
+      "order": 117,
+      "text": "Assessment of the Automated Client Onboarding Process7.1.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describes an assessment process without enforcing a specific behavior."
+    },
+    {
+      "sent_id": "REQ-090::s118",
+      "order": 118,
+      "text": "Onboarding Workflow",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describes an onboarding workflow without enforcing a specific action."
+    },
+    {
+      "sent_id": "REQ-090::s119",
+      "order": 119,
+      "text": "StepsThe platform will include an automated client onboarding process to streamline the setup and configuration of new tenants.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Automated client onboarding process."
+    },
+    {
+      "sent_id": "REQ-090::s120",
+      "order": 120,
+      "text": "The onboarding workflow will involve a series of steps, including tenant registration, initial configuration of basic settings (e.g., time zone, currency), user provisioning, and data migration (if applicable).",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "The onboarding workflow outlines specific steps that must be followed, imposing enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-090::s121",
+      "order": 121,
+      "text": "A streamlined onboarding process is crucial for creating a positive first impression and ensuring efficient adoption of the platform by new tenants.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Imposes the necessity for a positive first impression."
+    },
+    {
+      "sent_id": "REQ-090::s122",
+      "order": 122,
+      "text": "Automating these key steps will significantly reduce the time and effort required for new subscribers to get started with the platform, leading to a better overall user experience and a faster realization of the platform's value.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "PERFORMANCE_REQUIREMENT",
+      "reason_text": "Automating steps to reduce time and effort suggests enforceable performance behavior."
+    },
+    {
+      "sent_id": "REQ-090::s123",
+      "order": 123,
+      "text": "Manual onboarding processes can be time-consuming and prone to errors, making automation a key factor in improving efficiency and consistency.7.2.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.75,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Imposes the necessity for efficient onboarding processes."
+    },
+    {
+      "sent_id": "REQ-090::s124",
+      "order": 124,
+      "text": "Validation ChecksThe system will incorporate validation checks at each step of the onboarding process to ensure data integrity and prevent errors.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Validation checks ensure data integrity, imposing enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-090::s125",
+      "order": 125,
+      "text": "Implementing validation checks at each stage, such as verifying the format of entered data or ensuring that all required fields are completed, is crucial for maintaining data accuracy from the outset.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Imposes the necessity for validation checks at each stage."
+    },
+    {
+      "sent_id": "REQ-090::s126",
+      "order": 126,
+      "text": "This helps prevent potential issues and inconsistencies that could arise later if incorrect or incomplete data is entered during the initial setup.7.3.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.75,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Imposes the necessity for data accuracy from the outset."
+    },
+    {
+      "sent_id": "REQ-090::s127",
+      "order": 127,
+      "text": "Automated Notification TriggersAutomated notification triggers will keep administrators informed of the progress of the onboarding process and alert them to any issues that require attention.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Automated notifications impose constraints on system maintainability."
+    },
+    {
+      "sent_id": "REQ-090::s128",
+      "order": 128,
+      "text": "Proactive notifications provide valuable real-time updates on the onboarding status, allowing administrators to promptly address any problems or roadblocks that may occur.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Proactive notifications enforce real-time updates and address issues."
+    },
+    {
+      "sent_id": "REQ-090::s129",
+      "order": 129,
+      "text": "This ensures a smoother and more efficient onboarding experience for new tenants.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Imposes the necessity for a smoother onboarding experience."
+    },
+    {
+      "sent_id": "REQ-090::s130",
+      "order": 130,
+      "text": "Keeping administrators informed reduces uncertainty and allows for quick resolution of any issues, minimizing delays in the onboarding process.7.4.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Imposes the necessity for quick resolution of issues."
+    },
+    {
+      "sent_id": "REQ-090::s131",
+      "order": 131,
+      "text": "Clear and Intuitive GuidanceThe platform will provide clear and intuitive guidance to new tenants throughout the onboarding process, including setup wizards and helpful documentation.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Clear guidance helps users configure systems effectively."
+    },
+    {
+      "sent_id": "REQ-090::s132",
+      "order": 132,
+      "text": "Clear guidance and user-friendly tools are essential for a positive onboarding experience, especially for users who may be new to CRM systems or less technically proficient.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Imposes the necessity for user-friendly tools."
+    },
+    {
+      "sent_id": "REQ-090::s133",
+      "order": 133,
+      "text": "Providing resources such as setup wizards that guide users through the configuration steps and comprehensive documentation that answers common questions will significantly improve the onboarding experience and make it easier for new tenants to configure and start using the platform effectively.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Documentation ensures users can set up and use the platform."
+    },
+    {
+      "sent_id": "REQ-090::s134",
+      "order": 134,
+      "text": "A well-designed onboarding process should be easy to follow, even for users who are new to CRM systems.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describes an ideal but not enforceable onboarding process."
+    },
+    {
+      "sent_id": "REQ-090::s135",
+      "order": 135,
+      "text": "The effectiveness of the automated onboarding will depend on the user-friendliness of the interface, the clarity and completeness of the documentation, and the robustness of any automated data migration capabilities offered.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "User-friendliness of interface affects effectiveness and usability."
+    },
+    {
+      "sent_id": "REQ-090::s136",
+      "order": 136,
+      "text": "A smooth and efficient onboarding process is critical for customer satisfaction and rapid adoption of the platform, contributing to faster revenue generation and positive word-of-mouth.8.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.7,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "States the importance of a smooth onboarding process."
+    },
+    {
+      "sent_id": "REQ-090::s137",
+      "order": 137,
+      "text": "Recommendations and ConclusionThe proposed multi-tenant CRM platform, as outlined in the BRD, exhibits several key strengths.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Conclusions about the platform's strengths."
+    },
+    {
+      "sent_id": "REQ-090::s138",
+      "order": 138,
+      "text": "The hierarchical account structure with inheritance rules appears well-suited to accommodate organizations with complex internal arrangements, offering a balance between centralized control and decentralized flexibility.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "ARCHITECTURE_DESCRIPTION",
+      "reason_text": "Discusses a hierarchical structure for organization."
+    },
+    {
+      "sent_id": "REQ-090::s139",
+      "order": 139,
+      "text": "The robust RBAC system, with its provision for both standard and custom roles, along with admin override workflows and audit trails, demonstrates a strong focus on security and compliance.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "SECURITY_REQUIREMENT",
+      "reason_text": "Robust RBAC system with roles and workflows ensures compliance."
+    },
+    {
+      "sent_id": "REQ-090::s140",
+      "order": 140,
+      "text": "The commitment to multi-region data storage addresses critical data residency requirements and enhances business continuity through failover mechanisms.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SECURITY_REQUIREMENT",
+      "reason_text": "Addresses data residency requirements and business continuity."
+    },
+    {
+      "sent_id": "REQ-090::s141",
+      "order": 141,
+      "text": "The comprehensive audit logging framework provides detailed tracking of user and system activities, crucial for security monitoring and regulatory compliance.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.75,
+      "reason_code": "SECURITY_REQUIREMENT",
+      "reason_text": "Mentions audit logging for monitoring and compliance."
+    },
+    {
+      "sent_id": "REQ-090::s142",
+      "order": 142,
+      "text": "The planned Integrations Marketplace has the potential to significantly extend the platform's functionality and value by facilitating seamless connectivity with other business applications.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "PERFORMANCE_REQUIREMENT",
+      "reason_text": "Discusses potential extendibility of platform functionality."
+    },
+    {
+      "sent_id": "REQ-090::s143",
+      "order": 143,
+      "text": "Finally, the automated client onboarding process promises to streamline the initial setup for new tenants, improving efficiency and user experience.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Automated onboarding streamlines setup for new tenants."
+    },
+    {
+      "sent_id": "REQ-090::s144",
+      "order": 144,
+      "text": "However, certain aspects could benefit from further clarification and consideration during the detailed design and implementation phases.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "DESIGN_RATIONALE",
+      "reason_text": "Points out aspects needing further clarification during design."
+    },
+    {
+      "sent_id": "REQ-090::s145",
+      "order": 145,
+      "text": "For instance, the specific granularity of inheritance rules for settings and permissions at each level of the hierarchy would be beneficial to define further.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "DESIGN_RATIONALE",
+      "reason_text": "Asks for further definition of inheritance rules."
+    },
+    {
+      "sent_id": "REQ-090::s146",
+      "order": 146,
+      "text": "The user interface for managing roles and permissions within the RBAC system should be intuitive and user-friendly, particularly for Tenant Administrators creating custom roles.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.75,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Requires user-friendly UI for role management."
+    },
+    {
+      "sent_id": "REQ-090::s147",
+      "order": 147,
+      "text": "Performance considerations for multi-region data storage, especially regarding data replication and potential latency, should be thoroughly addressed.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-090::s148",
+      "order": 148,
+      "text": "Similarly, the performance impact of extensive audit logging on the platform's overall responsiveness needs careful optimization.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.75,
+      "reason_code": "PERFORMANCE_REQUIREMENT",
+      "reason_text": "Mentions performance impact of audit logging."
+    },
+    {
+      "sent_id": "REQ-090::s149",
+      "order": 149,
+      "text": "The specifics of the partner API for the Integrations Marketplace, including its capabilities and ease of use for third-party developers, will be critical for its success.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "COMPLIANCE_REQUIREMENT",
+      "reason_text": "Discusses partner API capabilities for integrations."
+    },
+    {
+      "sent_id": "REQ-090::s150",
+      "order": 150,
+      "text": "Finally, the robustness and flexibility of the automated data migration process during onboarding should be carefully considered to accommodate various data sources and formats.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "PERFORMANCE_REQUIREMENT",
+      "reason_text": "Data replication and latency considerations ensure robustness."
+    },
+    {
+      "sent_id": "REQ-090::s151",
+      "order": 151,
+      "text": "Based on this analysis, the following recommendations are offered: prioritize thorough testing of the failover mechanisms for multi-region data storage to ensure business continuity; develop comprehensive and easily accessible documentation for all features of the platform, including detailed guidance on setting up and managing the account hierarchy, RBAC system, and integrations; and place a strong emphasis on the user experience for both tenants and administrators across all aspects of the platform, from onboarding to daily use.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Offers multiple recommendations."
+    },
+    {
+      "sent_id": "REQ-090::s152",
+      "order": 152,
+      "text": "In conclusion, the proposed multi-tenant CRM platform has significant potential to effectively meet the needs of its target audience, including SMEs and larger organizations with complex structures.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Handling diverse data sources during migration is enforceable."
+    },
+    {
+      "sent_id": "REQ-090::s153",
+      "order": 153,
+      "text": "By providing a flexible, scalable, secure, and well-integrated solution, the platform is well-positioned to achieve its stated goals of enabling efficient customer relationship management and driving business growth for its users.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-090::s154",
+      "order": 154,
+      "text": "Table 1: Standard Roles and Example PermissionsRole NameExample PermissionsSales RepresentativeCreate Leads, View Contacts, Edit Opportunities, Close DealsMarketing ManagerCreate Campaigns, Manage Marketing Lists, Analyze Campaign Performance, View Leads and ContactsCustomer Support AgentView Contacts, Create and Manage Cases, Update Case Status, Access Knowledge BaseAdministratorManage Users and Roles, Configure System Settings, Access Audit Logs, Manage Integrations, Define Tenant-Level Settings and Policies",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Requires user experience improvements for roles."
+    }
+  ]
+}

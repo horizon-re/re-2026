@@ -1,0 +1,8 @@
+**Problem**  
+In Microsoft Teams bilingual chats, machine translation between Spanish and English often misinterprets AM/PM time expressions. This is due to differences in datetime formats—Spanish commonly uses 24-hour notation or places AM/PM differently, while English relies on 12-hour formats with explicit AM/PM suffixes. The current translation API does not account for locale-specific datetime parsing, leading to incorrect message timings and potential miscommunication in scheduling or event-based conversations.
+
+**Fix**  
+Integrate a pre-processing layer that applies locale-aware datetime regular expressions before passing messages to the translation API. This layer identifies and standardizes time expressions based on source and target language conventions. For Spanish-to-English, 24-hour times will be converted to 12-hour format with appropriate AM/PM context. For English-to-Spanish, AM/PM markers will be resolved into 24-hour equivalents. The regex module will rely on language detection and handle edge cases like "mediodía" (noon) and "medianoche" (midnight) appropriately.
+
+**Validation**  
+Run 100 unit test samples containing diverse datetime expressions across both languages. After translation and reverse-translation, validate the preservation of intended time values. If the confusion rate—defined as incorrect AM/PM interpretation—exceeds 0.5%, trigger an alert and flag the sample set for regression analysis.

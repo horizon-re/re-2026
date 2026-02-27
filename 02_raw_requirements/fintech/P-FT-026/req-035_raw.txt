@@ -1,0 +1,7 @@
+[Alt text: A weary Wojak cartoon hunched over a spreadsheet labeled "Quarterly Tax Math", with a clock showing midnight.]
+When quarterly tax math breaks your brain at midnight.
+Jess (Intern): I know it's late and the pressure's on; I just thought we could use a quick laugh to keep us going. Honestly, this meme sums up how quarter-end tax math feels right now.
+Matt (CFO): I appreciate the levity, but compliance is no joke. The overtime and consulting fees for these filings are through the roof - we could practically hire another full-time analyst with what it's costing us each quarter. Our current process isn't sustainable.
+Jess (Intern): You're right. We've spent endless hours every night poring over those spreadsheets to ensure nothing slips through the cracks. It's draining for everyone and definitely not efficient.
+Riya (Dev): I have an idea to ease this burden. What if we build an LLM wrapper around our Google Sheet TaxRules_v2 to handle these calculations automatically? It would use all the rules we've defined and do the tax math on the fly. That could save us a ton of time each quarter and significantly reduce the chance of human error.
+VP Finance: There's real potential here - an AI-powered tax calculator using our own rules might be exactly the cost-saving solution we need. It could significantly cut down our compliance time and costs each quarter if it works as envisioned. Let's explore this further. [ACTION] Draft spec.

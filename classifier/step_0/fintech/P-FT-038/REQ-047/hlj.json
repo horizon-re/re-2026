@@ -1,0 +1,111 @@
+{
+  "doc_id": "462b1d8a-cc0a-584c-a28a-b08ee12695fd",
+  "req_key": "fintech::P-FT-038::REQ-047",
+  "req_id": "REQ-047",
+  "domain": "fintech",
+  "prompt_id": "P-FT-038",
+  "source": {
+    "raw_path": "02_raw_requirements/fintech/P-FT-038/req-047_raw.txt",
+    "refined_path": "03_refined_json_normalized/fintech/P-FT-038/req-047_refined.json",
+    "origin": "both"
+  },
+  "text": "**Context**  \nIn accordance with Article 32 of the Revised Payment Services Directive (PSD2), we maintain a maximum allowable latency ceiling of 500 milliseconds for API response times. This benchmark is critical to ensuring the accessibility and performance standards required for secure and reliable customer service in the European Economic Area.\n\n**Evidence**  \nA 30-day extract of our operational logs confirms compliance, with the 95th percentile (P95) of API latency measured at 412 milliseconds. This value remains well within the mandated 500 ms ceiling. A snippet of the relevant data is provided below for reference:\n\n`{ \"period\": \"30d\", \"metric\": \"api_latency_ms\", \"P95\": 412 }`  \nChecksum reference: `SHA256:7c9d2ea5b41b6f4f2d273af9aabc32d3d6f4f19db3f62c25e2a9a1b98dfc4970`\n\n**Fallback**  \nIn the event that our primary infrastructure exceeds operational thresholds or experiences degradation, we initiate an automated failover to our EU‑West‑2 cluster within 45 seconds. Additionally, any service degradation events triggering failover will be reported to the relevant National Competent Authority (NCA) within 24 hours, as stipulated by PSD2 incident reporting guidelines.",
+  "structured_data": [
+    {
+      "id": "REQ-047-HLJ-Chunk_1-Item_1-v1.0",
+      "domain": "fintech",
+      "summary": "Enforce 500ms maximum API latency ceiling.",
+      "priority": "High",
+      "tags": [
+        "api_latency",
+        "performance",
+        "psd2"
+      ],
+      "subdomain": "compliance",
+      "difficulty": 3,
+      "additionalNotes": "Requirement is explicitly tied to PSD2 Article 32 performance thresholds.",
+      "source_hlj_id": "REQ 001-001",
+      "domain_id": "P-FT-038"
+    },
+    {
+      "id": "REQ-047-HLJ-Chunk_1-Item_2-v1.0",
+      "domain": "fintech",
+      "summary": "Maintain rolling 30-day API latency logs.",
+      "priority": "Medium",
+      "tags": [
+        "monitoring",
+        "latency_tracking",
+        "logging"
+      ],
+      "subdomain": "observability",
+      "difficulty": 2,
+      "additionalNotes": "Required for evidencing latency compliance under PSD2.",
+      "source_hlj_id": "REQ 001-002",
+      "domain_id": "P-FT-038"
+    },
+    {
+      "id": "REQ-047-HLJ-Chunk_1-Item_3-v1.0",
+      "domain": "fintech",
+      "summary": "Track and report 95th percentile API latency.",
+      "priority": "Medium",
+      "tags": [
+        "performance_metrics",
+        "latency",
+        "p95"
+      ],
+      "subdomain": "analytics",
+      "difficulty": 2,
+      "additionalNotes": "95th percentile latency reporting provides compliance visibility.",
+      "source_hlj_id": "REQ 001-003",
+      "domain_id": "P-FT-038"
+    },
+    {
+      "id": "REQ-047-HLJ-Chunk_1-Item_4-v1.0",
+      "domain": "fintech",
+      "summary": "Automate failover to EU-West-2 cluster within 45 seconds.",
+      "priority": "High",
+      "tags": [
+        "failover",
+        "redundancy",
+        "infrastructure_resilience"
+      ],
+      "subdomain": "resilience",
+      "difficulty": 4,
+      "additionalNotes": "Critical for minimizing service disruption and maintaining availability.",
+      "source_hlj_id": "REQ 001-004",
+      "domain_id": "P-FT-038"
+    },
+    {
+      "id": "REQ-047-HLJ-Chunk_1-Item_5-v1.0",
+      "domain": "fintech",
+      "summary": "Notify NCA within 24 hours after service degradation event.",
+      "priority": "High",
+      "tags": [
+        "incident_reporting",
+        "compliance",
+        "psd2"
+      ],
+      "subdomain": "regulatory",
+      "difficulty": 3,
+      "additionalNotes": "Mandated by PSD2 for major incidents or failover events.",
+      "source_hlj_id": "REQ 001-005",
+      "domain_id": "P-FT-038"
+    },
+    {
+      "id": "REQ-047-HLJ-Chunk_1-Item_6-v1.0",
+      "domain": "fintech",
+      "summary": "Validate logs with cryptographic checksum reference.",
+      "priority": "Low",
+      "tags": [
+        "logging",
+        "audit",
+        "data_integrity"
+      ],
+      "subdomain": "security",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied – Checksum ensures auditability and tamper-evident logs.",
+      "source_hlj_id": "REQ 001-006",
+      "domain_id": "P-FT-038"
+    }
+  ]
+}

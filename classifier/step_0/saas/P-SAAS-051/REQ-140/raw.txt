@@ -1,0 +1,1 @@
+🚨 P1-non-negotiable: Ensure all AR overlay UI call-outs support right-to-left Arabic (🇸🇦) layout before next week’s trade show. The layout must fully mirror all anchor positions for RTL orientation—emoji 🎉 remains at the end of the line regardless of direction. Figma mock-ups are due by Friday 12:00 UTC, and QA testing must be completed on HoloLens 2.

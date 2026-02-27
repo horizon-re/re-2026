@@ -1,0 +1,128 @@
+{
+  "req_id": "REQ-149",
+  "doc_id": "d699bfba-3643-5dd3-889e-e7d8879c3ab3",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-060",
+  "model": "deepseek-r1:7b",
+  "review_timestamp": "2026-01-20T23:55:46.556294+00:00",
+  "counts": {
+    "total": 11,
+    "llm_pos": 8,
+    "pipe_pos": 4,
+    "pipe_neg": 7,
+    "flip_neg_to_pos": 4,
+    "llm_neg": 3
+  },
+  "reviews": [
+    {
+      "sent_id": "REQ-149::s001",
+      "order": 1,
+      "text": "**Problem**  \nIn Microsoft Teams bilingual chats, machine translation between Spanish and English often misinterprets AM/PM time expressions.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Machine translation misinterprets AM/PM."
+    },
+    {
+      "sent_id": "REQ-149::s002",
+      "order": 2,
+      "text": "This is due to differences in datetime formats—Spanish commonly uses 24-hour notation or places AM/PM differently, while English relies on 12-hour formats with explicit AM/PM suffixes.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Explains time format differences."
+    },
+    {
+      "sent_id": "REQ-149::s003",
+      "order": 3,
+      "text": "The current translation API does not account for locale-specific datetime parsing, leading to incorrect message timings and potential miscommunication in scheduling or event-based conversations.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.95,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Enforces correct parsing of time formats across locales."
+    },
+    {
+      "sent_id": "REQ-149::s004",
+      "order": 4,
+      "text": "**Fix**  \nIntegrate a pre-processing layer that applies locale-aware datetime regular expressions before passing messages to the translation API.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Integrate pre-processing layer."
+    },
+    {
+      "sent_id": "REQ-149::s005",
+      "order": 5,
+      "text": "This layer identifies and standardizes time expressions based on source and target language conventions.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Standardize based on language conventions."
+    },
+    {
+      "sent_id": "REQ-149::s006",
+      "order": 6,
+      "text": "For Spanish-to-English, 24-hour times will be converted to 12-hour format with appropriate AM/PM context.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "PERFORMANCE_REQUIREMENT",
+      "reason_text": "Convert Spanish times to 12h format with AM/PM."
+    },
+    {
+      "sent_id": "REQ-149::s007",
+      "order": 7,
+      "text": "For English-to-Spanish, AM/PM markers will be resolved into 24-hour equivalents.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Ensure English times convert to 24h format."
+    },
+    {
+      "sent_id": "REQ-149::s008",
+      "order": 8,
+      "text": "The regex module will rely on language detection and handle edge cases like \"mediodía\" (noon) and \"medianoche\" (midnight) appropriately.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Enforce accurate time conversion for specific cases."
+    },
+    {
+      "sent_id": "REQ-149::s009",
+      "order": 9,
+      "text": "**Validation**  \nRun 100 unit test samples containing diverse datetime expressions across both languages.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Validation plan for accuracy."
+    },
+    {
+      "sent_id": "REQ-149::s010",
+      "order": 10,
+      "text": "After translation and reverse-translation, validate the preservation of intended time values.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.55,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Validate translation preservation."
+    },
+    {
+      "sent_id": "REQ-149::s011",
+      "order": 11,
+      "text": "If the confusion rate—defined as incorrect AM/PM interpretation—exceeds 0.5%, trigger an alert and flag the sample set for regression analysis.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "COMPLIANCE_REQUIREMENT",
+      "reason_text": "Trigger alerts for confusion rate."
+    }
+  ]
+}

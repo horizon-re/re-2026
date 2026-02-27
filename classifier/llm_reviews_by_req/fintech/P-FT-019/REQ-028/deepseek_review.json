@@ -1,0 +1,307 @@
+{
+  "req_id": "REQ-028",
+  "doc_id": "f8963c2a-a761-583d-90d9-148b2b3c2d62",
+  "domain": "fintech",
+  "prompt_id": "P-FT-019",
+  "model": "deepseek-r1:7b",
+  "review_timestamp": "2026-01-20T22:27:10.304202+00:00",
+  "counts": {
+    "total": 29,
+    "llm_neg": 19,
+    "pipe_neg": 29,
+    "llm_pos": 10,
+    "flip_neg_to_pos": 10
+  },
+  "reviews": [
+    {
+      "sent_id": "REQ-028::s001",
+      "order": 1,
+      "text": "## Interview Meta\nDate: 2025-04-18  \nParticipants: Julia (CSM), Dylan (COO",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "This is a record of the date and participants, not an enforceable requirement."
+    },
+    {
+      "sent_id": "REQ-028::s002",
+      "order": 2,
+      "text": ")  \nPlan Tier: Enterprise-Annual\n\n## Raw Notes\n-",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Plan tier information is a categorization, not an enforceable requirement."
+    },
+    {
+      "sent_id": "REQ-028::s003",
+      "order": 3,
+      "text": "So, um, the main thing we're seeing, uh, {pain-point} is that upgrading, you know, it's just too complicated right now.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Observation of complexity, not an enforceable requirement."
+    },
+    {
+      "sent_id": "REQ-028::s004",
+      "order": 4,
+      "text": "I mean, users, they gotta jump through, like, hoops to even find where to do it.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Issue description without implicit action."
+    },
+    {
+      "sent_id": "REQ-028::s005",
+      "order": 5,
+      "text": "- Like, [OPEN QUESTION]",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "An open question without an enforceable requirement."
+    },
+    {
+      "sent_id": "REQ-028::s006",
+      "order": 6,
+      "text": "How are users supposed to know where to go when they want to upgrade their plan?",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Inquiry about user process, not a requirement."
+    },
+    {
+      "sent_id": "REQ-028::s007",
+      "order": 7,
+      "text": "There's gotta be a simpler way.\n- And cancellations?",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Imposes the behavior of simplifying upgrade processes."
+    },
+    {
+      "sent_id": "REQ-028::s008",
+      "order": 8,
+      "text": "Yeah, {pain-point}, they shouldn't have to call support just to cancel.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Issue with cancellations, not a requirement."
+    },
+    {
+      "sent_id": "REQ-028::s009",
+      "order": 9,
+      "text": "It's like we're making them jump through hoops again, you know?\n- Sometimes users actually get stuck between plans, and, um, they end up paying for both.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Observation of plan issues without action."
+    },
+    {
+      "sent_id": "REQ-028::s010",
+      "order": 10,
+      "text": "{delight} Fixing that could really make their day.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Expresses a positive impact on users but not enforceable."
+    },
+    {
+      "sent_id": "REQ-028::s011",
+      "order": 11,
+      "text": "- We've been thinking, for upgrades, maybe we could just put a big button right on the dashboard.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Imposes the behavior of adding a dashboard button."
+    },
+    {
+      "sent_id": "REQ-028::s012",
+      "order": 12,
+      "text": "Like, \"Upgrade Now\" or something.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 1.0,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Imposes the behavior of creating an upgrade button."
+    },
+    {
+      "sent_id": "REQ-028::s013",
+      "order": 13,
+      "text": "Keep it simple, you know?\n-",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "General observation without enforceable action."
+    },
+    {
+      "sent_id": "REQ-028::s014",
+      "order": 14,
+      "text": "And for cancellations, maybe a self-serve option right there, no need to hunt for it.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Imposes the behavior of simplifying cancellations."
+    },
+    {
+      "sent_id": "REQ-028::s015",
+      "order": 15,
+      "text": "Just straightforward, click, and done.\n-",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 1.0,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Imposes the behavior of simplifying cancellations."
+    },
+    {
+      "sent_id": "REQ-028::s016",
+      "order": 16,
+      "text": "The AI stuff?",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Mentions AI but doesn't set a requirement."
+    },
+    {
+      "sent_id": "REQ-028::s017",
+      "order": 17,
+      "text": "Yeah, we're exploring ML for predicting when someone might churn.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Analysis without enforceable action."
+    },
+    {
+      "sent_id": "REQ-028::s018",
+      "order": 18,
+      "text": "It's like, preemptively giving them reasons to stay, you know?",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Observation of churn prediction without action."
+    },
+    {
+      "sent_id": "REQ-028::s019",
+      "order": 19,
+      "text": "{pain-point}\n- Oh, and this LLM FAQ thing,",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Question about LLM FAQ, not a requirement."
+    },
+    {
+      "sent_id": "REQ-028::s020",
+      "order": 20,
+      "text": "yeah, it could be huge.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Mentions the potential of AI but no enforceable requirement."
+    },
+    {
+      "sent_id": "REQ-028::s021",
+      "order": 21,
+      "text": "Imagine the time saved if customers could just get answers right away, without calling in.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Imagining the time saved is more about user experience than a specific enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-028::s022",
+      "order": 22,
+      "text": "## Emerging Themes\n1.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.4,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "This is an emerging theme heading, not a requirement."
+    },
+    {
+      "sent_id": "REQ-028::s023",
+      "order": 23,
+      "text": "Upgrades\n   - Users struggle to find upgrade options easily.\n   - Simplify with a prominent \"Upgrade Now\" button.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.7,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Users struggle to find upgrade options easily, requiring an improvement."
+    },
+    {
+      "sent_id": "REQ-028::s024",
+      "order": 24,
+      "text": "2.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.5,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "This is another emerging theme heading, not a requirement."
+    },
+    {
+      "sent_id": "REQ-028::s025",
+      "order": 25,
+      "text": "Cancellations\n   - Current process requires unnecessary steps.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.7,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Current process requires unnecessary steps, necessitating simplification."
+    },
+    {
+      "sent_id": "REQ-028::s026",
+      "order": 26,
+      "text": "- Implement straightforward self-serve cancellation.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Implement straightforward self-serve cancellation is a clear enforceable action."
+    },
+    {
+      "sent_id": "REQ-028::s027",
+      "order": 27,
+      "text": "3.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.4,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "This section discusses opportunities without specific requirements."
+    },
+    {
+      "sent_id": "REQ-028::s028",
+      "order": 28,
+      "text": "AI Opportunities\n   - ML \"Churn Predictor\" to anticipate customer departures.\n   - LLM FAQ Generator for instant customer support.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "EXAMPLE_OR_EXPLANATION",
+      "reason_text": "This is more about potential features than actual requirements."
+    },
+    {
+      "sent_id": "REQ-028::s029",
+      "order": 29,
+      "text": "## Action Items\n- [ ] Draft journey map (Owner: UX)\n- [ ] Validate churn model inputs (Owner: Data)\n- [ ] ... leave one checkbox blank",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Draft journey map is an action item requiring specific responsibility."
+    }
+  ]
+}

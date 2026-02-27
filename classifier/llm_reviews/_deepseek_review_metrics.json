@@ -1,0 +1,26 @@
+{
+  "started_at": "2026-01-20T20:40:10.411162+00:00",
+  "model": "deepseek-r1:7b",
+  "batch_size": 20,
+  "total": 4662,
+  "label_counts": {
+    "requirement_candidate": 2340,
+    "not_requirement": 2322
+  },
+  "reason_codes": {
+    "BACKGROUND_CONTEXT": 3112,
+    "SYSTEM_BEHAVIOR": 867,
+    "SYSTEM_CONSTRAINT": 198,
+    "PERFORMANCE_REQUIREMENT": 155,
+    "EXAMPLE_OR_EXPLANATION": 111,
+    "COMPLIANCE_REQUIREMENT": 110,
+    "SECURITY_REQUIREMENT": 82,
+    "ARCHITECTURE_DESCRIPTION": 22,
+    "DESIGN_RATIONALE": 5
+  },
+  "flip_counts": {
+    "pos_to_neg": 561,
+    "neg_to_pos": 1188
+  },
+  "finished_at": "2026-01-21T00:22:57.751164+00:00"
+}

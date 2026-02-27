@@ -1,0 +1,67 @@
+{
+  "req_id": "REQ-124",
+  "doc_id": "9ec33d6a-75f5-5c28-a47d-519ed426c545",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-035",
+  "model": "deepseek-r1:7b",
+  "review_timestamp": "2026-01-20T23:29:04.977574+00:00",
+  "counts": {
+    "total": 5,
+    "llm_neg": 1,
+    "pipe_neg": 5,
+    "llm_pos": 4,
+    "flip_neg_to_pos": 4
+  },
+  "reviews": [
+    {
+      "sent_id": "REQ-124::s001",
+      "order": 1,
+      "text": "hey, urgent – gateway keeps crashing, payments failing esp for multi-tenant setups.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "The sentence mentions issues but does not specify enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-124::s002",
+      "order": 2,
+      "text": "need stability fix ASAP.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "A need for stability with time sensitivity."
+    },
+    {
+      "sent_id": "REQ-124::s003",
+      "order": 3,
+      "text": "pls do blue/green deploy w/ auto-failover in under 2 min. also add retry queue w/ idempotent keys so we don’t double-charge.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Blue/Green deploy with auto-failover and retry queue."
+    },
+    {
+      "sent_id": "REQ-124::s004",
+      "order": 4,
+      "text": "on-call pager needs to get alert if queue spikes.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Pager needs alert on queue spikes."
+    },
+    {
+      "sent_id": "REQ-124::s005",
+      "order": 5,
+      "text": "ping back w/ status update in 1 hr max 🙏",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Ping back with status update in 1 hour."
+    }
+  ]
+}

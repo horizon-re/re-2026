@@ -1,0 +1,10 @@
+14:07 Carlo: Spent all weekend chasing that billing permissions bug 😡 Our RBAC ballooned to 420 lines of nested ifs.
+14:08 Sasha: Ugh, brutal. I saw a demo of an LLM generating RBAC rules from route metadata—basically an AI policy generator. Worth trying?
+14:09 Carlo: So just throw AI at it? I doubt an LLM can cover our edge cases.
+14:10 Sasha: It's risky, but doing nothing is worse. The AI approach could give us a starting point.
+14:11 Carlo: If AI gets a permission wrong, we'll be firefighting again. I'm not comfortable with a black-box controlling prod access.
+14:12 Sasha: We won't accept its output blindly; we'll vet every rule. Think of the time we'd save.
+14:13 Carlo: Rewriting it is brutal. Either months of refactoring or gambling on AI.
+14:14 Sasha: Leadership expects a plan by Friday. A full rewrite is huge. An AI-assisted path might be quicker.
+14:15 Carlo: [TODO] rewrite RBAC
+14:16 Sasha: I'll bring up the rewrite. Either way, we can't keep firefighting.

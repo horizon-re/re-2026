@@ -1,0 +1,30 @@
+Certainly! Here's a draft support ticket from Olivia Martins' perspective:
+
+---
+
+**Problem Statement:**
+We currently spend valuable time every Friday exporting and emailing KPI reports manually. This process is inefficient and prone to errors.
+
+**Desired Outcome:**
+Automate the generation and delivery of weekly KPI reports without manual intervention. Ops and finance managers should receive a CSV and a branded PDF with the click of a button.
+
+**Acceptance Criteria:**
+1. A scheduled job runs every Friday at 17:00 local time to generate reports.
+2. Reports are generated in CSV and branded PDF formats.
+3. Implement retry logic and audit logging to comply with SOC 2 standards.
+4. Notifications are sent to Slack's "#ops-alerts" channel for success and failure events.
+5. Reports are emailed using SES or SMTP to designated recipients.
+6. The solution is user-friendly with a one-click "Email KPI Pack" function.
+
+**Constraints:**
+1. Avoid disrupting existing workflows or tools like Domo or Looker.
+2. Ensure the solution is robust against data inconsistencies or failures during report generation.
+
+**Open Questions:**
+1. Should the CSV and PDF be attached separately or merged into a single file?
+2. What specific branding elements should be included in the PDF?
+3. Are there any additional security requirements beyond SOC 2 compliance?
+
+---
+
+This should provide a clear and concise overview of Olivia's requirements and expectations for automating the KPI report generation process.

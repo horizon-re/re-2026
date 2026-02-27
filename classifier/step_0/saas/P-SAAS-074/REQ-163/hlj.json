@@ -1,0 +1,79 @@
+{
+  "doc_id": "d15ddb71-fa30-5c93-b910-ca3febef40ff",
+  "req_key": "saas::P-SAAS-074::REQ-163",
+  "req_id": "REQ-163",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-074",
+  "source": {
+    "raw_path": "02_raw_requirements/saas/P-SAAS-074/req-163_raw.txt",
+    "refined_path": "03_refined_json_normalized/saas/P-SAAS-074/req-163_refined.json",
+    "origin": "both"
+  },
+  "text": "To enhance data integrity in cryogenic organ storage, implement a triple CRC32 checksum on combined RFID and temperature telemetry packets. This redundancy ensures robust validation during transmission and mitigates silent corruption in high-noise environments. Any organ bin exhibiting LN₂ probe temperature drift exceeding ±0.3 Kelvin from baseline must be auto-rejected to prevent transplant risk from thermal instability. The legacy COBOL subroutine CHK3SUM must be adapted to interface with the existing IoT bridge, enabling seamless checksum verification across both legacy and modern systems. This integration ensures cross-platform compatibility without rewriting critical firmware logic, preserving backward compatibility while improving safety assurance.",
+  "structured_data": [
+    {
+      "id": "REQ-163-HLJ-Chunk_1-Item_1-v1.0",
+      "domain": "unknown",
+      "summary": "Implement triple CRC32 on RFID and temperature packets",
+      "priority": "High",
+      "tags": [
+        "crc32_checksum",
+        "rfid_integrity",
+        "temperature_data"
+      ],
+      "subdomain": "cryogenic_storage",
+      "difficulty": 3,
+      "additionalNotes": "Ensures packet integrity during high-noise transmission in cryogenic environments.",
+      "source_hlj_id": "REQ 001-001",
+      "domain_id": "P-SAAS-074"
+    },
+    {
+      "id": "REQ-163-HLJ-Chunk_1-Item_2-v1.0",
+      "domain": "unknown",
+      "summary": "Auto-reject organ bin if LN₂ drift exceeds ±0.3 K",
+      "priority": "High",
+      "tags": [
+        "temperature_drift",
+        "auto_rejection",
+        "safety_protocol"
+      ],
+      "subdomain": "cryogenic_storage",
+      "difficulty": 2,
+      "additionalNotes": "Prevents risk from thermal instability in organ transport.",
+      "source_hlj_id": "REQ 001-002",
+      "domain_id": "P-SAAS-074"
+    },
+    {
+      "id": "REQ-163-HLJ-Chunk_1-Item_3-v1.0",
+      "domain": "unknown",
+      "summary": "Adapt COBOL CHK3SUM routine to interface with IoT bridge",
+      "priority": "Medium",
+      "tags": [
+        "cobol_integration",
+        "iot_bridge",
+        "checksum_routine"
+      ],
+      "subdomain": "cryogenic_storage",
+      "difficulty": 4,
+      "additionalNotes": "Extends legacy checksum routine to support IoT-based checksum validation.",
+      "source_hlj_id": "REQ 001-003",
+      "domain_id": "P-SAAS-074"
+    },
+    {
+      "id": "REQ-163-HLJ-Chunk_1-Item_4-v1.0",
+      "domain": "unknown",
+      "summary": "Ensure checksum compatibility without firmware rewrite",
+      "priority": "Low",
+      "tags": [
+        "cross_platform",
+        "firmware_compatibility",
+        "backward_support"
+      ],
+      "subdomain": "cryogenic_storage",
+      "difficulty": 3,
+      "additionalNotes": "origin: implied – Preserves compatibility across platforms without modifying existing firmware logic.",
+      "source_hlj_id": "REQ 001-004",
+      "domain_id": "P-SAAS-074"
+    }
+  ]
+}

@@ -1,0 +1,1263 @@
+{
+  "doc_id": "40b59390-71eb-5e31-b020-26979e479c66",
+  "req_key": "saas::P-SAAS-048::REQ-137",
+  "req_id": "REQ-137",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-048",
+  "source": {
+    "raw_path": "02_raw_requirements/saas/P-SAAS-048/req-137_raw.txt",
+    "refined_path": "03_refined_json_normalized/saas/P-SAAS-048/req-137_refined.json",
+    "origin": "both"
+  },
+  "text": "HIPAA Compliance ChecklistAdministrative Safeguards – policies, training, BAAs.Policies and Procedures- Fintech\n\nID: AS_POL_001Description: Develop, implement, and maintain written policies and procedures to prevent, detect, contain, and correct security violations. This encompasses the establishment of a security management process that includes risk analysis, risk management, sanction policies, and information system activity review.1 The creation of these documented guidelines forms the bedrock of an organization's HIPAA compliance efforts.Expected Evidence: Dated and signed copies of security policies and procedures manual, including sections on risk analysis, risk management, sanctions, and system activity review.\n\n\nID: AS_POL_002Description: Conduct a comprehensive and accurate risk analysis to identify potential threats and vulnerabilities to the confidentiality, integrity, and availability of electronic Protected Health Information (ePHI).2 This analysis should encompass all systems and processes that handle ePHI.Expected Evidence: Documented risk assessment reports, including identified threats and vulnerabilities, assessment methodology, and dates of analysis.\n\n\nID: AS_POL_003Description: Implement a comprehensive risk management plan to address the risks and vulnerabilities identified in the risk analysis to a reasonable and appropriate level.2 This plan should detail the security measures to be implemented to mitigate these risks.Expected Evidence: Risk management plan document outlining identified risks, planned mitigation strategies, responsible parties, and implementation timelines.\n\n\nID: AS_POL_004Description: Establish and implement a sanction policy that outlines the disciplinary actions for workforce members who fail to comply with the organization's security policies and procedures.2 This policy should be communicated to all workforce members.Expected Evidence: Documented sanction policy with evidence of communication to workforce members (e.g., signed acknowledgments).\n\n\nID: AS_POL_005Description: Implement procedures for the regular review of records of information system activity, such as audit logs, access reports, and security incident tracking reports.2 These reviews should be conducted to monitor for inappropriate or unauthorized access to ePHI.Expected Evidence: Logs of system activity reviews, including dates of review, individuals responsible, findings, and any corrective actions taken.\n\nAssigned Security Responsibility\nID: AS_ORG_001\nDescription: Designate a HIPAA Security Officer who is responsible for developing, implementing, and overseeing the organization's security policies and procedures as required by the HIPAA Security Rule.1 The Security Officer should have the authority and resources to fulfill these responsibilities.\nExpected Evidence: Documentation of the Security Officer's designation, including their name, contact information, and defined responsibilities.\nWorkforce Security\n\nID: AS_EMP_001Description: Implement policies and procedures to ensure that workforce members have appropriate access to ePHI based on their roles and responsibilities, adhering to the principle of least privilege.1 Access should be limited to the minimum necessary to perform assigned tasks.Expected Evidence: Role-based access control policies and procedures, job descriptions outlining access needs, and records of user access assignments.\n\n\nID: AS_EMP_002Description: Establish and implement workforce clearance procedures that define the process for granting access to ePHI, which may include background checks where appropriate for the role.4 These procedures should ensure that individuals granted access are trustworthy and have a legitimate need for the information.Expected Evidence: Workforce clearance policies and procedures, records of background checks (if applicable), and documentation of access approval processes.\n\n\nID: AS_EMP_003Description: Implement termination procedures for access rights that outline the steps to be taken when an employee's role changes or their employment ends.1 These procedures should ensure that access to ePHI is promptly revoked.Expected Evidence: Termination procedures document, including steps for revoking access to systems and physical locations, and records of access termination for former employees.\n\nInformation Access Management\n\nID: AS_IAM_001Description: Implement policies and procedures for authorizing access to ePHI that are consistent with the minimum necessary standard of the HIPAA Privacy Rule.1 This includes protocols for granting, modifying, and terminating access.Expected Evidence: Information access management policies and procedures, including protocols for access requests, approvals, modifications, and terminations.\n\n\nID: AS_IAM_002Description: If the organization includes a health care clearinghouse function that is part of a larger organization, implement policies and procedures to protect the ePHI of the clearinghouse from unauthorized access by the larger organization.2 This may involve physical or logical separation of systems and data.Expected Evidence: Policies and procedures outlining the isolation of health care clearinghouse functions, including network diagrams or descriptions of segregation controls.\n\nWorkforce Training\n\nID: AS_TRN_001Description: Develop and implement a comprehensive HIPAA security awareness and training program for all workforce members, including management, that covers the requirements of the HIPAA Privacy, Security, and Breach Notification Rules.1 The program should be tailored to the roles and responsibilities of the workforce members.Expected Evidence: HIPAA training curriculum, training materials, and schedule of training sessions.\n\n\nID: AS_TRN_002Description: Provide initial HIPAA training to new workforce members within a reasonable period after they join the organization, ideally before they are granted access to PHI.13 This training should cover the organization's policies and procedures related to PHI.Expected Evidence: Records of initial HIPAA training completion for new employees, including dates and content covered.\n\n\nID: AS_TRN_003Description: Conduct periodic refresher HIPAA training for all workforce members to reinforce their knowledge and keep them updated on any changes to regulations, policies, or procedures.13 Annual refresher training is a recommended best practice.14Expected Evidence: Schedule of refresher training, records of attendance, and updated training materials.\n\n\nID: AS_TRN_004Description: Ensure that the HIPAA training program includes specific modules on security reminders, protection from malicious software (malware), procedures for login monitoring, and proper password management.4 These topics address common security threats and user behaviors.Expected Evidence: Training materials specifically covering security reminders, malware protection, login monitoring, and password management.\n\n\nID: AS_TRN_005Description: Train workforce members on the organization's procedures for identifying, responding to, and reporting security incidents, including potential breaches of PHI.1 This training should ensure that incidents are reported promptly and appropriately.Expected Evidence: Incident response and breach reporting procedures documented in training materials, and records of training on these procedures.\n\n\nID: AS_TRN_006Description: Maintain comprehensive documentation of all HIPAA training activities provided to the workforce, including the dates of training sessions, the content covered, and a list of attendees for each session.14 This documentation serves as evidence of compliance.Expected Evidence: Training logs, sign-in sheets, or electronic records of training completion.\n\nBusiness Associate Agreements (BAAs)\n\nID: AS_BAA_001Description: Establish written Business Associate Agreements (BAAs) with all business associates who have access to electronic Protected Health Information (ePHI).4 These agreements are legally binding contracts outlining the responsibilities of the business associate in protecting PHI.Expected Evidence: Signed copies of Business Associate Agreements with all relevant vendors and service providers.\n\n\nID: AS_BAA_002Description: Ensure that each BAA clearly outlines the permitted and required uses of PHI by the business associate, consistent with the covered entity's obligations under HIPAA.6 The agreement should specify the purposes for which the business associate can use and disclose PHI.Expected Evidence: Review of the BAA to confirm inclusion of permitted and required uses of PHI.\n\n\nID: AS_BAA_003Description: Stipulate within the BAA that the business associate will implement administrative, physical, and technical safeguards that reasonably and appropriately protect the confidentiality, integrity, and availability of the ePHI they access.6 This ensures that business associates are also adhering to the HIPAA Security Rule.Expected Evidence: Review of the BAA to confirm inclusion of the requirement for business associates to implement HIPAA safeguards.\n\n\nID: AS_BAA_004Description: Require the business associate, through the BAA, to report to the covered entity any unauthorized uses or disclosures of PHI, including incidents that constitute breaches of unsecured PHI, as defined by the Breach Notification Rule.6 This ensures timely notification in the event of a breach.Expected Evidence: Review of the BAA to confirm inclusion of breach reporting requirements.\n\n\nID: AS_BAA_005Description: Include procedures within the BAA that obligate the business associate to provide access to PHI to the covered entity and to individuals as required by the HIPAA Privacy Rule, including facilitating individual rights to access, amend, and receive an accounting of disclosures.34Expected Evidence: Review of the BAA to confirm inclusion of procedures for providing access to PHI.\n\n\nID: AS_BAA_006Description: Outline the procedures for the business associate to return or destroy all PHI received from, or created or received on behalf of, the covered entity at the termination of the BAA, where feasible.6 This ensures the proper handling of PHI when the business relationship ends.Expected Evidence: Review of the BAA to confirm inclusion of procedures for PHI return or destruction upon termination.\n\n\nID: AS_BAA_007Description: If a business associate uses subcontractors that will have access to PHI, ensure that the BAA requires the business associate to have a BAA in place with each of those subcontractors.6 This extends HIPAA compliance obligations down the chain of business relationships.Expected Evidence: Review of the organization's BAAs and confirmation that they include a requirement for business associates to have BAAs with their subcontractors who access PHI.\n\nTechnical Safeguards – access controls, encryption, audit trails.Access Controls\n\nID: TS_ACC_001Description: Implement unique user identification by assigning a distinct name and/or number for identifying and tracking the identity of each workforce member who accesses systems containing electronic Protected Health Information (ePHI).10 This allows for individual accountability.Expected Evidence: System user accounts with unique identifiers for each workforce member.\n\n\nID: TS_ACC_002Description: Establish and implement procedures for obtaining necessary ePHI during an emergency situation, ensuring that authorized personnel can access critical information while maintaining security.41Expected Evidence: Documented emergency access procedures, including roles and responsibilities, and steps for gaining access to ePHI during emergencies.\n\n\nID: TS_ACC_003Description: Implement automatic logoff mechanisms that terminate an electronic session after a predetermined period of inactivity to prevent unauthorized access to ePHI on unattended workstations.10Expected Evidence: System configurations demonstrating automatic logoff settings with defined inactivity periods.\n\n\nID: TS_ACC_004Description: Implement role-based access controls to limit access to ePHI based on the specific job functions and responsibilities of each workforce member.1 Users should only have access to the ePHI necessary to perform their duties.Expected Evidence: Documentation of role-based access control policies and procedures, and system access permissions aligned with job roles.\n\n\nID: TS_ACC_005Description: Implement procedures for access authorization, which include the process for granting new access, modifying existing access rights, and terminating access when it is no longer required.1Expected Evidence: Access authorization policies and procedures, access request forms, approval workflows, and records of access changes and terminations.\n\n\nID: TS_ACC_006Description: Employ strong authentication methods to verify the identity of individuals or entities seeking access to ePHI, such as the use of complex passwords, multi-factor authentication (MFA), or biometric authentication where appropriate.7Expected Evidence: Password policies outlining complexity requirements, documentation of MFA implementation, or descriptions of other authentication methods used.\n\nEncryption\n\nID: TS_ENC_001Description: Implement a mechanism to encrypt and decrypt electronic Protected Health Information (ePHI) both at rest (when stored on devices or systems) and in transit (when being transmitted across networks or the internet) whenever it is reasonable and appropriate to do so.8Expected Evidence: Documentation of encryption methods used for data at rest and in transit, including the algorithms and standards employed.\n\n\nID: TS_ENC_002Description: Implement integrity controls, which include policies and procedures to protect ePHI from improper alteration or destruction, and utilize electronic mechanisms to corroborate that ePHI has not been altered or destroyed in an unauthorized manner.10Expected Evidence: Documentation of integrity control policies and procedures, and descriptions of the electronic mechanisms used to verify data integrity (e.g., checksums, digital signatures).\n\n\nID: TS_ENC_003Description: Implement technical security measures to ensure the confidentiality of ePHI during transmission over electronic networks, such as using secure protocols like HTTPS, Secure File Transfer Protocol (SFTP), or Virtual Private Networks (VPNs).10Expected Evidence: Network diagrams showing secure transmission protocols in use, configuration settings for secure communication channels.\n\nAudit Trails\n\nID: TS_AUD_001Description: Implement audit controls, which include hardware, software, and/or procedural mechanisms that record and examine activity in information systems containing or using electronic Protected Health Information (ePHI).7 These controls should log user access, changes to ePHI, and security-related events.Expected Evidence: System audit logs, configuration settings for audit logging, and descriptions of the audit log review process.\n\n\nID: TS_AUD_002Description: Establish procedures for the regular review and analysis of audit logs to identify any suspicious or unauthorized activity that may indicate a security incident or a violation of HIPAA policies.1Expected Evidence: Records of audit log reviews, including dates of review, individuals responsible, findings, and any follow-up actions taken.\n\n\nID: TS_AUD_003Description: Implement measures to protect audit logs from tampering or unauthorized modification to ensure their integrity and reliability as a record of system activity.43 Access to audit logs should be restricted to authorized personnel.Expected Evidence: Access control lists for audit log files, policies and procedures for maintaining the integrity of audit logs.\n\nPhysical Safeguards – server room security, device disposal.Facility Access Controls\n\nID: PS_FAC_001Description: Establish (and implement as needed) procedures that allow facility access in support of restoration of lost data under the disaster recovery plan and emergency mode operations plan in the event of an emergency.7 These procedures should ensure that authorized personnel can access necessary facilities during disruptions.Expected Evidence: Contingency operations plan outlining procedures for emergency facility access, including roles and responsibilities.\n\n\nID: PS_FAC_002Description: Implement a facility security plan that includes policies and procedures to safeguard the physical facility and the equipment therein from unauthorized physical access, tampering, and theft.7 This plan should address physical barriers, monitoring systems, and personnel security.Expected Evidence: Documented facility security plan, including details of physical security measures in place (e.g., alarm systems, surveillance, access control systems).\n\n\nID: PS_FAC_003Description: Implement access control and validation procedures to control and validate a person's access to facilities based on their role or function, including visitor control and control of access to software programs for testing and revision.7 This may involve using access cards, biometric scanners, or manual sign-in logs.Expected Evidence: Policies and procedures for access control, visitor logs, records of access authorizations, and descriptions of validation procedures.\n\n\nID: PS_FAC_004Description: Maintain records of any repairs and modifications made to physical security components within the facility, such as doors, locks, and surveillance systems.7 These records help track changes to the physical security environment.Expected Evidence: Maintenance logs for physical security components, including dates, descriptions of work performed, and individuals responsible.\n\nWorkstation Use and Security\n\nID: PS_WKS_001Description: Implement policies and procedures that specify the proper functions to be performed, the manner in which those functions are to be performed, and the physical attributes of the surroundings of a specific workstation or class of workstation that can access ePHI.7 This includes guidelines on workstation placement, permissible uses, and security practices.Expected Evidence: Workstation use policies and procedures, including guidelines on screen visibility, prohibited activities, and proper usage.\n\n\nID: PS_WKS_002Description: Implement physical safeguards to govern who can access workstations and equipment where ePHI is accessible, such as using locks on computers, locking office doors when unattended, and utilizing screen savers with password protection.7Expected Evidence: Policies and procedures on workstation security, evidence of physical security measures in place (e.g., cable locks), and screen saver settings.\n\nDevice and Media Controls\n\nID: PS_DEV_001Description: Implement policies and procedures that govern the receipt and removal of hardware and electronic media that contain ePHI into and out of a facility, and the movement of these items within the facility.7 This ensures proper tracking and control of devices and media.Expected Evidence: Policies and procedures for device and media control, including check-in/check-out logs or inventory tracking systems.\n\n\nID: PS_DEV_002Description: Implement policies and procedures to address the final disposition of ePHI and/or the hardware or electronic media on which it is stored, ensuring that ePHI cannot be recovered after disposal.6 This may involve using certified data destruction services or physical destruction methods.Expected Evidence: Device disposal policies and procedures, contracts with data destruction services, or records of physical destruction (e.g., certificates of destruction).\n\n\nID: PS_DEV_003Description: Implement procedures for the removal of ePHI from electronic media before the media are made available for reuse, such as securely wiping data from hard drives or other storage devices.18Expected Evidence: Media sanitization procedures, records of media wiping or sanitization activities.\n\n\nID: PS_DEV_004Description: Maintain a record of the movements of hardware and electronic media containing ePHI and identify the person responsible for its movement (asset inventory).7 This helps track the location and custody of sensitive devices and media.Expected Evidence: Asset inventory logs or system for tracking hardware and electronic media.\n\n\nID: PS_DEV_005Description: Create a retrievable, exact copy of ePHI, when needed, before moving equipment that contains ePHI.18 This ensures data can be recovered if the equipment is lost or damaged during movement.Expected Evidence: Policies and procedures for data backup before equipment movement, records of backups performed.\n\nEHR Integration Tests – API auth, PHI field mapping.API Authorization\n\nID: EHR_API_001Description: Implement secure API authorization protocols, such as OAuth 2.0, to control access to Electronic Health Record (EHR) data during integration with other systems, ensuring that only authenticated and authorized applications or users can interact with the EHR.44Expected Evidence: Documentation of API authorization protocols used, configuration settings for authentication mechanisms.\n\n\nID: EHR_API_002Description: Utilize strong authentication methods, such as multi-factor authentication (MFA), for API access to verify the identity of integrating systems or users.44 This adds an extra layer of security beyond basic credentials.Expected Evidence: Records of MFA implementation for API access, policies requiring MFA for integration.\n\n\nID: EHR_API_003Description: Ensure that only authorized applications and users are granted access to specific EHR data and functionalities through APIs, based on the principle of least privilege.44 Access should be limited to what is necessary for the integration's purpose.Expected Evidence: API access control lists or permission settings, documentation outlining the scope of access granted to each integrating application.\n\n\nID: EHR_API_004Description: Establish procedures for the secure management of API keys or tokens, including secure generation, storage, and regular rotation to prevent unauthorized access to EHR data.45Expected Evidence: Policies and procedures for API key management, records of key generation and rotation.\n\n\nID: EHR_API_005Description: Conduct regular security audits and penetration testing of API integrations to identify and address potential vulnerabilities that could compromise the security of ePHI during data exchange.45Expected Evidence: Reports of security audits and penetration tests conducted on EHR integrations, including findings and remediation plans.\n\nPHI Field Mapping\n\nID: EHR_MAP_001Description: Create and maintain comprehensive documentation of all Protected Health Information (PHI) fields being exchanged between integrated EHR systems, clearly mapping the source fields to the corresponding destination fields, including data types and any transformations applied.25Expected Evidence: Data mapping documentation outlining the flow of PHI fields between integrated systems.\n\n\nID: EHR_MAP_002Description: Implement validation processes during EHR integration to ensure the integrity and accuracy of PHI as it is exchanged between systems, verifying that data is transferred without errors or omissions.44Expected Evidence: Records of data validation testing performed during EHR integration, including test cases and results.\n\n\nID: EHR_MAP_003Description: Ensure that all PHI exchanged during EHR integration is transmitted securely using encryption protocols such as TLS/SSL to protect the data from unauthorized interception.44Expected Evidence: Configuration settings for secure communication protocols used during EHR integration.\n\n\nID: EHR_MAP_004Description: Conduct thorough testing of PHI field mapping accuracy to verify that data is correctly transferred and stored in the destination system, ensuring that all mapped fields are accurate and complete.49Expected Evidence: Test plans and results specifically focused on verifying the accuracy of PHI field mapping during integration.\n\nReporting & Evidence – log locations, retention periods.Log Locations\n\nID: REP_LOG_001Description: Document the specific locations of all system logs that record access to and activity within systems that create, receive, maintain, or transmit electronic Protected Health Information (ePHI).8 This includes application logs, system logs, audit logs, and security logs.Expected Evidence: Documented list of all relevant system logs, their locations (including server paths or system names), and the types of information recorded in each log.\n\n\nID: REP_LOG_002Description: Ensure that all system logs containing information about access to ePHI are stored securely to prevent unauthorized access, modification, or deletion, maintaining the integrity of the audit trail.8Expected Evidence: Documentation of security measures implemented to protect log files, such as access controls and integrity checks.\n\n\nID: REP_LOG_003Description: Establish and document clear procedures for the regular review and analysis of system logs to identify any suspicious activity, potential security incidents, or unauthorized access to ePHI.1 These procedures should specify the frequency of reviews and the personnel responsible.Expected Evidence: Documented procedures for log review and analysis, schedules for log reviews, and records of log reviews performed, including any findings and actions taken.\n\nRetention Periods\n\nID: REP_RET_001Description: Develop and implement a comprehensive policy on the retention of all records related to HIPAA compliance, ensuring adherence to mandated retention periods.6 This policy should cover various types of documentation, including policies and procedures, risk assessments, training records, audit logs, and Business Associate Agreements.Expected Evidence: Formal record retention policy document outlining the retention periods for different types of HIPAA-related records.\n\n\nID: REP_RET_002Description: Retain written security policies and procedures for a minimum of six years from the date of their creation or the date when they were last in effect, whichever is later, as required by the HIPAA Security Rule.2Expected Evidence: Dated copies of security policies and procedures, with records indicating their effective dates and retention schedule.\n\n\nID: REP_RET_003Description: Maintain Business Associate Agreements (BAAs) in compliance with the HIPAA Security Rule, generally for at least six years after the termination of the agreement.7 This ensures that the contractual obligations related to PHI protection are documented for the required period.Expected Evidence: Records of all active and terminated BAAs, with dates of agreement and termination, and adherence to the six-year retention period post-termination.\n\n\nID: REP_RET_004Description: Retain documentation related to breach notifications, including the details of the breach incident, the risk assessment conducted to determine the probability of compromise, and copies of the notifications sent to affected individuals and the Department of Health and Human Services (HHS), for at least six years.23Expected Evidence: Records of all reported breaches, including incident reports, risk assessments, notification letters, and confirmation of submission to HHS.\n",
+  "structured_data": [
+    {
+      "id": "REQ-137-HLJ-Chunk_1-Item_1-v1.0",
+      "domain": "fintech",
+      "summary": "Develop and maintain HIPAA security policies",
+      "priority": "High",
+      "tags": [
+        "security_policies",
+        "compliance",
+        "hipaa"
+      ],
+      "subdomain": "administrative_safeguards",
+      "difficulty": 3,
+      "additionalNotes": "Includes policies on risk analysis, management, sanctions, and system review",
+      "source_hlj_id": "REQ 001-001",
+      "domain_id": "P-SAAS-048"
+    },
+    {
+      "id": "REQ-137-HLJ-Chunk_1-Item_2-v1.0",
+      "domain": "fintech",
+      "summary": "Conduct comprehensive risk analysis for ePHI systems",
+      "priority": "High",
+      "tags": [
+        "risk_analysis",
+        "threats",
+        "vulnerabilities"
+      ],
+      "subdomain": "administrative_safeguards",
+      "difficulty": 3,
+      "additionalNotes": "Covers threats to confidentiality, integrity, and availability of ePHI",
+      "source_hlj_id": "REQ 001-002",
+      "domain_id": "P-SAAS-048"
+    },
+    {
+      "id": "REQ-137-HLJ-Chunk_1-Item_3-v1.0",
+      "domain": "fintech",
+      "summary": "Implement risk management plan addressing ePHI threats",
+      "priority": "High",
+      "tags": [
+        "risk_management",
+        "mitigation",
+        "hipaa"
+      ],
+      "subdomain": "administrative_safeguards",
+      "difficulty": 3,
+      "additionalNotes": "Plan should detail mitigations, responsibilities, and timelines",
+      "source_hlj_id": "REQ 001-003",
+      "domain_id": "P-SAAS-048"
+    },
+    {
+      "id": "REQ-137-HLJ-Chunk_1-Item_4-v1.0",
+      "domain": "fintech",
+      "summary": "Establish sanction policy for non-compliant workforce behavior",
+      "priority": "High",
+      "tags": [
+        "sanction_policy",
+        "disciplinary_action",
+        "hipaa"
+      ],
+      "subdomain": "administrative_safeguards",
+      "difficulty": 2,
+      "additionalNotes": "Policy must be communicated to workforce with acknowledgments",
+      "source_hlj_id": "REQ 001-004",
+      "domain_id": "P-SAAS-048"
+    },
+    {
+      "id": "REQ-137-HLJ-Chunk_1-Item_5-v1.0",
+      "domain": "fintech",
+      "summary": "Review system activity logs regularly for unauthorized access",
+      "priority": "High",
+      "tags": [
+        "audit_logs",
+        "access_review",
+        "security_incidents"
+      ],
+      "subdomain": "administrative_safeguards",
+      "difficulty": 3,
+      "additionalNotes": "Covers access reports and incident tracking",
+      "source_hlj_id": "REQ 001-005",
+      "domain_id": "P-SAAS-048"
+    },
+    {
+      "id": "REQ-137-HLJ-Chunk_1-Item_6-v1.0",
+      "domain": "fintech",
+      "summary": "Designate a HIPAA Security Officer",
+      "priority": "High",
+      "tags": [
+        "hipaa_officer",
+        "security_responsibility",
+        "compliance"
+      ],
+      "subdomain": "administrative_safeguards",
+      "difficulty": 2,
+      "additionalNotes": "Officer must have authority and resources for enforcement",
+      "source_hlj_id": "REQ 001-006",
+      "domain_id": "P-SAAS-048"
+    },
+    {
+      "id": "REQ-137-HLJ-Chunk_1-Item_7-v1.0",
+      "domain": "fintech",
+      "summary": "Implement role-based access for ePHI",
+      "priority": "High",
+      "tags": [
+        "access_control",
+        "least_privilege",
+        "rbac"
+      ],
+      "subdomain": "workforce_security",
+      "difficulty": 3,
+      "additionalNotes": "Ensure access aligns with role responsibilities",
+      "source_hlj_id": "REQ 001-007",
+      "domain_id": "P-SAAS-048"
+    },
+    {
+      "id": "REQ-137-HLJ-Chunk_1-Item_8-v1.0",
+      "domain": "fintech",
+      "summary": "Establish workforce clearance procedures for ePHI access",
+      "priority": "High",
+      "tags": [
+        "clearance",
+        "background_checks",
+        "access_control"
+      ],
+      "subdomain": "workforce_security",
+      "difficulty": 3,
+      "additionalNotes": "May include background checks and approval workflows",
+      "source_hlj_id": "REQ 001-008",
+      "domain_id": "P-SAAS-048"
+    },
+    {
+      "id": "REQ-137-HLJ-Chunk_1-Item_9-v1.0",
+      "domain": "fintech",
+      "summary": "Implement termination procedures for ePHI access",
+      "priority": "High",
+      "tags": [
+        "termination",
+        "access_revocation",
+        "offboarding"
+      ],
+      "subdomain": "workforce_security",
+      "difficulty": 2,
+      "additionalNotes": "Ensure prompt revocation on role change or exit",
+      "source_hlj_id": "REQ 001-009",
+      "domain_id": "P-SAAS-048"
+    },
+    {
+      "id": "REQ-137-HLJ-Chunk_1-Item_10-v1.0",
+      "domain": "fintech",
+      "summary": "Define ePHI access policies consistent with HIPAA standards",
+      "priority": "High",
+      "tags": [
+        "access_policies",
+        "hipaa_compliance",
+        "minimum_necessary"
+      ],
+      "subdomain": "information_access_management",
+      "difficulty": 3,
+      "additionalNotes": "Cover granting, modifying, and terminating access",
+      "source_hlj_id": "REQ 001-010",
+      "domain_id": "P-SAAS-048"
+    },
+    {
+      "id": "REQ-137-HLJ-Chunk_1-Item_11-v1.0",
+      "domain": "fintech",
+      "summary": "Protect ePHI in health care clearinghouses from internal access",
+      "priority": "High",
+      "tags": [
+        "clearinghouse",
+        "data_isolation",
+        "access_control"
+      ],
+      "subdomain": "information_access_management",
+      "difficulty": 3,
+      "additionalNotes": "May involve logical or physical separation",
+      "source_hlj_id": "REQ 001-011",
+      "domain_id": "P-SAAS-048"
+    },
+    {
+      "id": "REQ-137-HLJ-Chunk_1-Item_12-v1.0",
+      "domain": "fintech",
+      "summary": "Develop HIPAA security training for all workforce roles",
+      "priority": "High",
+      "tags": [
+        "hipaa_training",
+        "security_awareness",
+        "compliance"
+      ],
+      "subdomain": "workforce_training",
+      "difficulty": 3,
+      "additionalNotes": "Covers Privacy, Security, and Breach Notification Rules",
+      "source_hlj_id": "REQ 001-012",
+      "domain_id": "P-SAAS-048"
+    },
+    {
+      "id": "REQ-137-HLJ-Chunk_1-Item_13-v1.0",
+      "domain": "fintech",
+      "summary": "Train new workforce on HIPAA before PHI access",
+      "priority": "High",
+      "tags": [
+        "hipaa_training",
+        "onboarding",
+        "new_employee"
+      ],
+      "subdomain": "workforce_training",
+      "difficulty": 2,
+      "additionalNotes": "Initial training should occur before granting PHI access",
+      "source_hlj_id": "REQ 001-013",
+      "domain_id": "P-SAAS-048"
+    },
+    {
+      "id": "REQ-137-HLJ-Chunk_1-Item_14-v1.0",
+      "domain": "fintech",
+      "summary": "Conduct periodic HIPAA refresher training",
+      "priority": "Medium",
+      "tags": [
+        "refresher_training",
+        "hipaa_update",
+        "ongoing_learning"
+      ],
+      "subdomain": "workforce_training",
+      "difficulty": 2,
+      "additionalNotes": "Annual frequency recommended",
+      "source_hlj_id": "REQ 001-014",
+      "domain_id": "P-SAAS-048"
+    },
+    {
+      "id": "REQ-137-HLJ-Chunk_1-Item_15-v1.0",
+      "domain": "fintech",
+      "summary": "Include security-specific topics in HIPAA training",
+      "priority": "High",
+      "tags": [
+        "malware_protection",
+        "login_monitoring",
+        "password_management"
+      ],
+      "subdomain": "workforce_training",
+      "difficulty": 2,
+      "additionalNotes": "Covers security reminders and common threat topics",
+      "source_hlj_id": "REQ 001-015",
+      "domain_id": "P-SAAS-048"
+    },
+    {
+      "id": "REQ-137-HLJ-Chunk_1-Item_16-v1.0",
+      "domain": "fintech",
+      "summary": "Train workforce on incident response and PHI breach reporting",
+      "priority": "High",
+      "tags": [
+        "incident_response",
+        "breach_reporting",
+        "training"
+      ],
+      "subdomain": "workforce_training",
+      "difficulty": 2,
+      "additionalNotes": "Ensure timely and appropriate incident reporting",
+      "source_hlj_id": "REQ 001-016",
+      "domain_id": "P-SAAS-048"
+    },
+    {
+      "id": "REQ-137-HLJ-Chunk_1-Item_17-v1.0",
+      "domain": "fintech",
+      "summary": "Maintain full documentation of all HIPAA training",
+      "priority": "High",
+      "tags": [
+        "training_logs",
+        "attendance_records",
+        "compliance"
+      ],
+      "subdomain": "workforce_training",
+      "difficulty": 2,
+      "additionalNotes": "Includes session dates, attendees, and content",
+      "source_hlj_id": "REQ 001-017",
+      "domain_id": "P-SAAS-048"
+    },
+    {
+      "id": "REQ-137-HLJ-Chunk_1-Item_18-v1.0",
+      "domain": "fintech",
+      "summary": "Establish Business Associate Agreements with all PHI vendors",
+      "priority": "High",
+      "tags": [
+        "business_associate",
+        "hipaa_contracts",
+        "vendor_management"
+      ],
+      "subdomain": "business_associate_agreements",
+      "difficulty": 3,
+      "additionalNotes": "Legally binding agreements for PHI protection",
+      "source_hlj_id": "REQ 001-018",
+      "domain_id": "P-SAAS-048"
+    },
+    {
+      "id": "REQ-137-HLJ-Chunk_1-Item_19-v1.0",
+      "domain": "fintech",
+      "summary": "Define permitted PHI uses in BAAs",
+      "priority": "High",
+      "tags": [
+        "phi_usage",
+        "baa_clauses",
+        "vendor_policy"
+      ],
+      "subdomain": "business_associate_agreements",
+      "difficulty": 2,
+      "additionalNotes": "BAAs must specify allowable use and disclosure",
+      "source_hlj_id": "REQ 001-019",
+      "domain_id": "P-SAAS-048"
+    },
+    {
+      "id": "REQ-137-HLJ-Chunk_1-Item_20-v1.0",
+      "domain": "fintech",
+      "summary": "Require PHI safeguards in BAAs",
+      "priority": "High",
+      "tags": [
+        "technical_safeguards",
+        "administrative_controls",
+        "baa"
+      ],
+      "subdomain": "business_associate_agreements",
+      "difficulty": 3,
+      "additionalNotes": "BAAs must mandate HIPAA-compliant security measures",
+      "source_hlj_id": "REQ 001-020",
+      "domain_id": "P-SAAS-048"
+    },
+    {
+      "id": "REQ-137-HLJ-Chunk_1-Item_21-v1.0",
+      "domain": "fintech",
+      "summary": "Mandate breach reporting in Business Associate Agreements",
+      "priority": "High",
+      "tags": [
+        "breach_reporting",
+        "baa_clauses",
+        "compliance"
+      ],
+      "subdomain": "business_associate_agreements",
+      "difficulty": 3,
+      "additionalNotes": "BAAs must require associates to report PHI breaches",
+      "source_hlj_id": "REQ 001-021",
+      "domain_id": "P-SAAS-048"
+    },
+    {
+      "id": "REQ-137-HLJ-Chunk_1-Item_22-v1.0",
+      "domain": "fintech",
+      "summary": "Ensure BAAs include PHI access procedures",
+      "priority": "High",
+      "tags": [
+        "phi_access",
+        "individual_rights",
+        "baa"
+      ],
+      "subdomain": "business_associate_agreements",
+      "difficulty": 3,
+      "additionalNotes": "BAAs must define PHI access, amendment, and disclosure procedures",
+      "source_hlj_id": "REQ 001-022",
+      "domain_id": "P-SAAS-048"
+    },
+    {
+      "id": "REQ-137-HLJ-Chunk_1-Item_23-v1.0",
+      "domain": "fintech",
+      "summary": "Include PHI return or destruction clause in BAAs",
+      "priority": "High",
+      "tags": [
+        "data_disposal",
+        "baa_clauses",
+        "termination"
+      ],
+      "subdomain": "business_associate_agreements",
+      "difficulty": 3,
+      "additionalNotes": "PHI must be returned or destroyed when BAAs terminate",
+      "source_hlj_id": "REQ 001-023",
+      "domain_id": "P-SAAS-048"
+    },
+    {
+      "id": "REQ-137-HLJ-Chunk_1-Item_24-v1.0",
+      "domain": "fintech",
+      "summary": "Require BAAs for subcontractors handling PHI",
+      "priority": "High",
+      "tags": [
+        "subcontractor_compliance",
+        "phi_flow_down",
+        "baa_chain"
+      ],
+      "subdomain": "business_associate_agreements",
+      "difficulty": 3,
+      "additionalNotes": "Business associates must ensure their vendors sign BAAs",
+      "source_hlj_id": "REQ 001-024",
+      "domain_id": "P-SAAS-048"
+    },
+    {
+      "id": "REQ-137-HLJ-Chunk_1-Item_25-v1.0",
+      "domain": "fintech",
+      "summary": "Assign unique user IDs for all ePHI system users",
+      "priority": "High",
+      "tags": [
+        "user_id",
+        "accountability",
+        "access_tracking"
+      ],
+      "subdomain": "technical_safeguards",
+      "difficulty": 2,
+      "additionalNotes": "Supports individual user tracking and accountability",
+      "source_hlj_id": "REQ 001-025",
+      "domain_id": "P-SAAS-048"
+    },
+    {
+      "id": "REQ-137-HLJ-Chunk_1-Item_26-v1.0",
+      "domain": "fintech",
+      "summary": "Establish emergency ePHI access procedures",
+      "priority": "High",
+      "tags": [
+        "emergency_access",
+        "disaster_recovery",
+        "business_continuity"
+      ],
+      "subdomain": "technical_safeguards",
+      "difficulty": 3,
+      "additionalNotes": "Procedures for secure ePHI access during emergencies",
+      "source_hlj_id": "REQ 001-026",
+      "domain_id": "P-SAAS-048"
+    },
+    {
+      "id": "REQ-137-HLJ-Chunk_1-Item_27-v1.0",
+      "domain": "fintech",
+      "summary": "Enable automatic session logoff for inactivity",
+      "priority": "High",
+      "tags": [
+        "auto_logoff",
+        "session_timeout",
+        "unauthorized_access"
+      ],
+      "subdomain": "technical_safeguards",
+      "difficulty": 2,
+      "additionalNotes": "Prevents unauthorized ePHI access on idle devices",
+      "source_hlj_id": "REQ 001-027",
+      "domain_id": "P-SAAS-048"
+    },
+    {
+      "id": "REQ-137-HLJ-Chunk_1-Item_28-v1.0",
+      "domain": "fintech",
+      "summary": "Limit ePHI access based on job roles",
+      "priority": "High",
+      "tags": [
+        "rbac",
+        "least_privilege",
+        "access_control"
+      ],
+      "subdomain": "technical_safeguards",
+      "difficulty": 3,
+      "additionalNotes": "Use role-based permissions to restrict data access",
+      "source_hlj_id": "REQ 001-028",
+      "domain_id": "P-SAAS-048"
+    },
+    {
+      "id": "REQ-137-HLJ-Chunk_1-Item_29-v1.0",
+      "domain": "fintech",
+      "summary": "Define access authorization workflows",
+      "priority": "High",
+      "tags": [
+        "authorization",
+        "access_control",
+        "approval_workflow"
+      ],
+      "subdomain": "technical_safeguards",
+      "difficulty": 3,
+      "additionalNotes": "Processes for granting, changing, and terminating access",
+      "source_hlj_id": "REQ 001-029",
+      "domain_id": "P-SAAS-048"
+    },
+    {
+      "id": "REQ-137-HLJ-Chunk_1-Item_30-v1.0",
+      "domain": "fintech",
+      "summary": "Use strong authentication for ePHI access",
+      "priority": "High",
+      "tags": [
+        "mfa",
+        "biometrics",
+        "authentication"
+      ],
+      "subdomain": "technical_safeguards",
+      "difficulty": 3,
+      "additionalNotes": "Includes MFA, biometrics, or complex passwords",
+      "source_hlj_id": "REQ 001-030",
+      "domain_id": "P-SAAS-048"
+    },
+    {
+      "id": "REQ-137-HLJ-Chunk_1-Item_31-v1.0",
+      "domain": "fintech",
+      "summary": "Encrypt ePHI at rest and in transit",
+      "priority": "High",
+      "tags": [
+        "encryption",
+        "data_security",
+        "hipaa"
+      ],
+      "subdomain": "technical_safeguards",
+      "difficulty": 3,
+      "additionalNotes": "Use secure algorithms for storage and transmission",
+      "source_hlj_id": "REQ 001-031",
+      "domain_id": "P-SAAS-048"
+    },
+    {
+      "id": "REQ-137-HLJ-Chunk_1-Item_32-v1.0",
+      "domain": "fintech",
+      "summary": "Implement ePHI integrity controls",
+      "priority": "High",
+      "tags": [
+        "data_integrity",
+        "checksums",
+        "hipaa"
+      ],
+      "subdomain": "technical_safeguards",
+      "difficulty": 3,
+      "additionalNotes": "Use digital signatures or similar mechanisms",
+      "source_hlj_id": "REQ 001-032",
+      "domain_id": "P-SAAS-048"
+    },
+    {
+      "id": "REQ-137-HLJ-Chunk_1-Item_33-v1.0",
+      "domain": "fintech",
+      "summary": "Use secure protocols for ePHI transmission",
+      "priority": "High",
+      "tags": [
+        "secure_transmission",
+        "tls",
+        "vpn"
+      ],
+      "subdomain": "technical_safeguards",
+      "difficulty": 2,
+      "additionalNotes": "Use HTTPS, SFTP, or VPNs to secure data in transit",
+      "source_hlj_id": "REQ 001-033",
+      "domain_id": "P-SAAS-048"
+    },
+    {
+      "id": "REQ-137-HLJ-Chunk_1-Item_34-v1.0",
+      "domain": "fintech",
+      "summary": "Implement audit controls for ePHI system activity",
+      "priority": "High",
+      "tags": [
+        "audit_logging",
+        "system_monitoring",
+        "compliance"
+      ],
+      "subdomain": "technical_safeguards",
+      "difficulty": 3,
+      "additionalNotes": "Track access and changes to ePHI",
+      "source_hlj_id": "REQ 001-034",
+      "domain_id": "P-SAAS-048"
+    },
+    {
+      "id": "REQ-137-HLJ-Chunk_1-Item_35-v1.0",
+      "domain": "fintech",
+      "summary": "Review audit logs to detect security issues",
+      "priority": "High",
+      "tags": [
+        "audit_review",
+        "security_incidents",
+        "compliance"
+      ],
+      "subdomain": "technical_safeguards",
+      "difficulty": 2,
+      "additionalNotes": "Detect suspicious access or behavior patterns",
+      "source_hlj_id": "REQ 001-035",
+      "domain_id": "P-SAAS-048"
+    },
+    {
+      "id": "REQ-137-HLJ-Chunk_1-Item_36-v1.0",
+      "domain": "fintech",
+      "summary": "Protect audit logs from tampering",
+      "priority": "High",
+      "tags": [
+        "audit_log_protection",
+        "access_control",
+        "data_integrity"
+      ],
+      "subdomain": "technical_safeguards",
+      "difficulty": 3,
+      "additionalNotes": "Restrict log access and preserve log integrity",
+      "source_hlj_id": "REQ 001-036",
+      "domain_id": "P-SAAS-048"
+    },
+    {
+      "id": "REQ-137-HLJ-Chunk_1-Item_37-v1.0",
+      "domain": "fintech",
+      "summary": "Provide emergency facility access for disaster recovery",
+      "priority": "High",
+      "tags": [
+        "facility_access",
+        "disaster_recovery",
+        "business_continuity"
+      ],
+      "subdomain": "physical_safeguards",
+      "difficulty": 3,
+      "additionalNotes": "Allow secure facility entry during disruptions",
+      "source_hlj_id": "REQ 001-037",
+      "domain_id": "P-SAAS-048"
+    },
+    {
+      "id": "REQ-137-HLJ-Chunk_1-Item_38-v1.0",
+      "domain": "fintech",
+      "summary": "Create facility security plan to prevent unauthorized access",
+      "priority": "High",
+      "tags": [
+        "physical_security",
+        "unauthorized_access",
+        "facility_controls"
+      ],
+      "subdomain": "physical_safeguards",
+      "difficulty": 2,
+      "additionalNotes": "Covers alarms, surveillance, and security barriers",
+      "source_hlj_id": "REQ 001-038",
+      "domain_id": "P-SAAS-048"
+    },
+    {
+      "id": "REQ-137-HLJ-Chunk_1-Item_39-v1.0",
+      "domain": "fintech",
+      "summary": "Implement facility access validation procedures",
+      "priority": "High",
+      "tags": [
+        "access_validation",
+        "visitor_logs",
+        "biometric_access"
+      ],
+      "subdomain": "physical_safeguards",
+      "difficulty": 3,
+      "additionalNotes": "Includes cards, logs, scanners, or validation protocols",
+      "source_hlj_id": "REQ 001-039",
+      "domain_id": "P-SAAS-048"
+    },
+    {
+      "id": "REQ-137-HLJ-Chunk_1-Item_40-v1.0",
+      "domain": "fintech",
+      "summary": "Track facility security component repairs and changes",
+      "priority": "Medium",
+      "tags": [
+        "maintenance_logs",
+        "security_hardware",
+        "repair_tracking"
+      ],
+      "subdomain": "physical_safeguards",
+      "difficulty": 2,
+      "additionalNotes": "Maintain records of modifications to locks or systems",
+      "source_hlj_id": "REQ 001-040",
+      "domain_id": "P-SAAS-048"
+    },
+    {
+      "id": "REQ-137-HLJ-Chunk_1-Item_41-v1.0",
+      "domain": "fintech",
+      "summary": "Define workstation usage policies for ePHI access",
+      "priority": "High",
+      "tags": [
+        "workstation_use",
+        "security_practices",
+        "ephi"
+      ],
+      "subdomain": "physical_safeguards",
+      "difficulty": 2,
+      "additionalNotes": "Covers proper functions, placement, and usage behavior",
+      "source_hlj_id": "REQ 001-041",
+      "domain_id": "P-SAAS-048"
+    },
+    {
+      "id": "REQ-137-HLJ-Chunk_1-Item_42-v1.0",
+      "domain": "fintech",
+      "summary": "Physically secure workstations accessing ePHI",
+      "priority": "High",
+      "tags": [
+        "workstation_security",
+        "locks",
+        "screen_protection"
+      ],
+      "subdomain": "physical_safeguards",
+      "difficulty": 2,
+      "additionalNotes": "Includes door locks, screen savers, and cable locks",
+      "source_hlj_id": "REQ 001-042",
+      "domain_id": "P-SAAS-048"
+    },
+    {
+      "id": "REQ-137-HLJ-Chunk_1-Item_43-v1.0",
+      "domain": "fintech",
+      "summary": "Control media and device movement within facilities",
+      "priority": "High",
+      "tags": [
+        "device_tracking",
+        "media_control",
+        "ephi_transport"
+      ],
+      "subdomain": "physical_safeguards",
+      "difficulty": 3,
+      "additionalNotes": "Implement check-in/check-out systems and logs",
+      "source_hlj_id": "REQ 001-043",
+      "domain_id": "P-SAAS-048"
+    },
+    {
+      "id": "REQ-137-HLJ-Chunk_1-Item_44-v1.0",
+      "domain": "fintech",
+      "summary": "Define procedures for ePHI media disposal",
+      "priority": "High",
+      "tags": [
+        "data_destruction",
+        "media_disposal",
+        "compliance"
+      ],
+      "subdomain": "physical_safeguards",
+      "difficulty": 3,
+      "additionalNotes": "Use certified destruction or physical wipe processes",
+      "source_hlj_id": "REQ 001-044",
+      "domain_id": "P-SAAS-048"
+    },
+    {
+      "id": "REQ-137-HLJ-Chunk_1-Item_45-v1.0",
+      "domain": "fintech",
+      "summary": "Sanitize electronic media before reuse",
+      "priority": "High",
+      "tags": [
+        "media_sanitization",
+        "data_wipe",
+        "reuse_policy"
+      ],
+      "subdomain": "physical_safeguards",
+      "difficulty": 2,
+      "additionalNotes": "Ensure ePHI is fully erased before repurposing",
+      "source_hlj_id": "REQ 001-045",
+      "domain_id": "P-SAAS-048"
+    },
+    {
+      "id": "REQ-137-HLJ-Chunk_1-Item_46-v1.0",
+      "domain": "fintech",
+      "summary": "Maintain asset inventory for ePHI hardware",
+      "priority": "High",
+      "tags": [
+        "asset_inventory",
+        "device_tracking",
+        "hardware_log"
+      ],
+      "subdomain": "physical_safeguards",
+      "difficulty": 2,
+      "additionalNotes": "Track device movements and assigned custodians",
+      "source_hlj_id": "REQ 001-046",
+      "domain_id": "P-SAAS-048"
+    },
+    {
+      "id": "REQ-137-HLJ-Chunk_1-Item_47-v1.0",
+      "domain": "fintech",
+      "summary": "Backup ePHI before moving any storage equipment",
+      "priority": "High",
+      "tags": [
+        "data_backup",
+        "equipment_transport",
+        "data_integrity"
+      ],
+      "subdomain": "physical_safeguards",
+      "difficulty": 2,
+      "additionalNotes": "Ensure retrievable copy exists during equipment relocation",
+      "source_hlj_id": "REQ 001-047",
+      "domain_id": "P-SAAS-048"
+    },
+    {
+      "id": "REQ-137-HLJ-Chunk_1-Item_48-v1.0",
+      "domain": "fintech",
+      "summary": "Use OAuth 2.0 or similar for API authorization",
+      "priority": "High",
+      "tags": [
+        "api_security",
+        "oauth2",
+        "ehr_integration"
+      ],
+      "subdomain": "ehr_api",
+      "difficulty": 3,
+      "additionalNotes": "Controls access to integrated EHR data",
+      "source_hlj_id": "REQ 001-048",
+      "domain_id": "P-SAAS-048"
+    },
+    {
+      "id": "REQ-137-HLJ-Chunk_1-Item_49-v1.0",
+      "domain": "fintech",
+      "summary": "Use MFA for securing API access to EHR systems",
+      "priority": "High",
+      "tags": [
+        "api_access",
+        "mfa",
+        "security"
+      ],
+      "subdomain": "ehr_api",
+      "difficulty": 3,
+      "additionalNotes": "Enhances authentication for API endpoints",
+      "source_hlj_id": "REQ 001-049",
+      "domain_id": "P-SAAS-048"
+    },
+    {
+      "id": "REQ-137-HLJ-Chunk_1-Item_50-v1.0",
+      "domain": "fintech",
+      "summary": "Enforce least privilege in EHR API data access",
+      "priority": "High",
+      "tags": [
+        "least_privilege",
+        "api_permissions",
+        "ehr"
+      ],
+      "subdomain": "ehr_api",
+      "difficulty": 3,
+      "additionalNotes": "Grant only necessary permissions per integration",
+      "source_hlj_id": "REQ 001-050",
+      "domain_id": "P-SAAS-048"
+    },
+    {
+      "id": "REQ-137-HLJ-Chunk_1-Item_51-v1.0",
+      "domain": "fintech",
+      "summary": "Securely manage API keys and tokens",
+      "priority": "High",
+      "tags": [
+        "api_keys",
+        "token_management",
+        "security"
+      ],
+      "subdomain": "ehr_api",
+      "difficulty": 3,
+      "additionalNotes": "Implement key rotation and secure storage practices",
+      "source_hlj_id": "REQ 001-051",
+      "domain_id": "P-SAAS-048"
+    },
+    {
+      "id": "REQ-137-HLJ-Chunk_1-Item_52-v1.0",
+      "domain": "fintech",
+      "summary": "Perform security audits of EHR API integrations",
+      "priority": "High",
+      "tags": [
+        "security_audit",
+        "penetration_testing",
+        "ehr_api"
+      ],
+      "subdomain": "ehr_api",
+      "difficulty": 4,
+      "additionalNotes": "Detect and remediate potential API vulnerabilities",
+      "source_hlj_id": "REQ 001-052",
+      "domain_id": "P-SAAS-048"
+    },
+    {
+      "id": "REQ-137-HLJ-Chunk_1-Item_53-v1.0",
+      "domain": "fintech",
+      "summary": "Document PHI field mapping in EHR integrations",
+      "priority": "High",
+      "tags": [
+        "phi_mapping",
+        "data_flow",
+        "integration"
+      ],
+      "subdomain": "ehr_mapping",
+      "difficulty": 3,
+      "additionalNotes": "Map source to destination fields with types and transforms",
+      "source_hlj_id": "REQ 001-053",
+      "domain_id": "P-SAAS-048"
+    },
+    {
+      "id": "REQ-137-HLJ-Chunk_1-Item_54-v1.0",
+      "domain": "fintech",
+      "summary": "Validate PHI accuracy during EHR integration",
+      "priority": "High",
+      "tags": [
+        "data_validation",
+        "ehr_testing",
+        "phi_accuracy"
+      ],
+      "subdomain": "ehr_mapping",
+      "difficulty": 3,
+      "additionalNotes": "Test that data transfers without errors or omissions",
+      "source_hlj_id": "REQ 001-054",
+      "domain_id": "P-SAAS-048"
+    },
+    {
+      "id": "REQ-137-HLJ-Chunk_1-Item_55-v1.0",
+      "domain": "fintech",
+      "summary": "Encrypt PHI during EHR data exchange",
+      "priority": "High",
+      "tags": [
+        "data_encryption",
+        "secure_exchange",
+        "ehr"
+      ],
+      "subdomain": "ehr_mapping",
+      "difficulty": 3,
+      "additionalNotes": "Use TLS/SSL to secure data during integration",
+      "source_hlj_id": "REQ 001-055",
+      "domain_id": "P-SAAS-048"
+    },
+    {
+      "id": "REQ-137-HLJ-Chunk_1-Item_56-v1.0",
+      "domain": "fintech",
+      "summary": "Test mapping accuracy for PHI in EHR systems",
+      "priority": "High",
+      "tags": [
+        "data_mapping",
+        "testing",
+        "ehr_integration"
+      ],
+      "subdomain": "ehr_mapping",
+      "difficulty": 3,
+      "additionalNotes": "Ensure mapped fields are complete and correct",
+      "source_hlj_id": "REQ 001-056",
+      "domain_id": "P-SAAS-048"
+    },
+    {
+      "id": "REQ-137-HLJ-Chunk_1-Item_57-v1.0",
+      "domain": "fintech",
+      "summary": "Document locations of all ePHI system logs",
+      "priority": "High",
+      "tags": [
+        "log_locations",
+        "system_logs",
+        "audit"
+      ],
+      "subdomain": "reporting_and_evidence",
+      "difficulty": 2,
+      "additionalNotes": "List includes paths, servers, and types of logs",
+      "source_hlj_id": "REQ 001-057",
+      "domain_id": "P-SAAS-048"
+    },
+    {
+      "id": "REQ-137-HLJ-Chunk_1-Item_58-v1.0",
+      "domain": "fintech",
+      "summary": "Secure system logs to prevent unauthorized access",
+      "priority": "High",
+      "tags": [
+        "log_security",
+        "access_control",
+        "audit_trails"
+      ],
+      "subdomain": "reporting_and_evidence",
+      "difficulty": 3,
+      "additionalNotes": "Prevent log tampering or deletion",
+      "source_hlj_id": "REQ 001-058",
+      "domain_id": "P-SAAS-048"
+    },
+    {
+      "id": "REQ-137-HLJ-Chunk_1-Item_59-v1.0",
+      "domain": "fintech",
+      "summary": "Review system logs regularly for security incidents",
+      "priority": "High",
+      "tags": [
+        "log_review",
+        "security_monitoring",
+        "audit"
+      ],
+      "subdomain": "reporting_and_evidence",
+      "difficulty": 3,
+      "additionalNotes": "Detect unauthorized access or anomalies",
+      "source_hlj_id": "REQ 001-059",
+      "domain_id": "P-SAAS-048"
+    },
+    {
+      "id": "REQ-137-HLJ-Chunk_1-Item_60-v1.0",
+      "domain": "fintech",
+      "summary": "Define HIPAA-compliant document retention policy",
+      "priority": "High",
+      "tags": [
+        "record_retention",
+        "hipaa_policy",
+        "compliance"
+      ],
+      "subdomain": "reporting_and_evidence",
+      "difficulty": 3,
+      "additionalNotes": "Policy must cover all types of HIPAA records",
+      "source_hlj_id": "REQ 001-060",
+      "domain_id": "P-SAAS-048"
+    },
+    {
+      "id": "REQ-137-HLJ-Chunk_1-Item_61-v1.0",
+      "domain": "fintech",
+      "summary": "Retain security policies for at least six years",
+      "priority": "High",
+      "tags": [
+        "policy_retention",
+        "security_policies",
+        "hipaa_compliance"
+      ],
+      "subdomain": "reporting_and_evidence",
+      "difficulty": 2,
+      "additionalNotes": "Retention must follow HIPAA Security Rule timelines",
+      "source_hlj_id": "REQ 001-061",
+      "domain_id": "P-SAAS-048"
+    },
+    {
+      "id": "REQ-137-HLJ-Chunk_1-Item_62-v1.0",
+      "domain": "fintech",
+      "summary": "Retain Business Associate Agreements post-termination",
+      "priority": "High",
+      "tags": [
+        "baa_retention",
+        "contract_records",
+        "hipaa"
+      ],
+      "subdomain": "reporting_and_evidence",
+      "difficulty": 2,
+      "additionalNotes": "BAAs must be retained for 6 years after termination",
+      "source_hlj_id": "REQ 001-062",
+      "domain_id": "P-SAAS-048"
+    },
+    {
+      "id": "REQ-137-HLJ-Chunk_1-Item_63-v1.0",
+      "domain": "fintech",
+      "summary": "Retain breach notification documentation for 6 years",
+      "priority": "High",
+      "tags": [
+        "breach_docs",
+        "incident_response",
+        "retention"
+      ],
+      "subdomain": "reporting_and_evidence",
+      "difficulty": 2,
+      "additionalNotes": "Includes incident reports, risk assessments, and HHS notifications",
+      "source_hlj_id": "REQ 001-063",
+      "domain_id": "P-SAAS-048"
+    },
+    {
+      "id": "REQ-137-HLJ-Chunk_1-Item_64-v1.0",
+      "domain": "fintech",
+      "summary": "Maintain signed acknowledgments for HIPAA training",
+      "priority": "Low",
+      "tags": [
+        "training_docs",
+        "acknowledgments",
+        "compliance"
+      ],
+      "subdomain": "workforce_training",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied – Serves as proof of policy communication",
+      "source_hlj_id": "REQ 001-064",
+      "domain_id": "P-SAAS-048"
+    },
+    {
+      "id": "REQ-137-HLJ-Chunk_1-Item_65-v1.0",
+      "domain": "fintech",
+      "summary": "Log dates and reviewers for all audit reviews",
+      "priority": "Low",
+      "tags": [
+        "audit_logging",
+        "review_tracking",
+        "compliance"
+      ],
+      "subdomain": "technical_safeguards",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied – Ensures accountability in audit reviews",
+      "source_hlj_id": "REQ 001-065",
+      "domain_id": "P-SAAS-048"
+    },
+    {
+      "id": "REQ-137-HLJ-Chunk_1-Item_66-v1.0",
+      "domain": "fintech",
+      "summary": "Use secure cloud storage for HIPAA log files",
+      "priority": "Low",
+      "tags": [
+        "cloud_storage",
+        "log_security",
+        "hipaa"
+      ],
+      "subdomain": "reporting_and_evidence",
+      "difficulty": 3,
+      "additionalNotes": "origin: implied – Log integrity depends on storage security",
+      "source_hlj_id": "REQ 001-066",
+      "domain_id": "P-SAAS-048"
+    },
+    {
+      "id": "REQ-137-HLJ-Chunk_1-Item_67-v1.0",
+      "domain": "fintech",
+      "summary": "Include PHI access permissions in employee job roles",
+      "priority": "Low",
+      "tags": [
+        "job_roles",
+        "phi_permissions",
+        "access_policy"
+      ],
+      "subdomain": "workforce_security",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied – Clarifies access rights in job descriptions",
+      "source_hlj_id": "REQ 001-067",
+      "domain_id": "P-SAAS-048"
+    },
+    {
+      "id": "REQ-137-HLJ-Chunk_1-Item_68-v1.0",
+      "domain": "fintech",
+      "summary": "Store audit logs on write-once-read-many devices",
+      "priority": "Low",
+      "tags": [
+        "audit_logs",
+        "worm_storage",
+        "log_protection"
+      ],
+      "subdomain": "technical_safeguards",
+      "difficulty": 3,
+      "additionalNotes": "origin: implied – Enhances tamper resistance of audit logs",
+      "source_hlj_id": "REQ 001-068",
+      "domain_id": "P-SAAS-048"
+    },
+    {
+      "id": "REQ-137-HLJ-Chunk_1-Item_69-v1.0",
+      "domain": "fintech",
+      "summary": "Log approval workflows for access authorization",
+      "priority": "Low",
+      "tags": [
+        "access_approval",
+        "workflow_tracking",
+        "audit"
+      ],
+      "subdomain": "technical_safeguards",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied – Proves due diligence in access control",
+      "source_hlj_id": "REQ 001-069",
+      "domain_id": "P-SAAS-048"
+    },
+    {
+      "id": "REQ-137-HLJ-Chunk_1-Item_70-v1.0",
+      "domain": "fintech",
+      "summary": "Document MFA implementation across access points",
+      "priority": "Low",
+      "tags": [
+        "mfa_documentation",
+        "access_security",
+        "identity_verification"
+      ],
+      "subdomain": "technical_safeguards",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied – Required for audit and security assurance",
+      "source_hlj_id": "REQ 001-070",
+      "domain_id": "P-SAAS-048"
+    },
+    {
+      "id": "REQ-137-HLJ-Chunk_1-Item_71-v1.0",
+      "domain": "fintech",
+      "summary": "Track PHI copies before equipment relocation",
+      "priority": "Low",
+      "tags": [
+        "phi_backup",
+        "equipment_move",
+        "data_tracking"
+      ],
+      "subdomain": "physical_safeguards",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied – Avoids data loss during relocation",
+      "source_hlj_id": "REQ 001-071",
+      "domain_id": "P-SAAS-048"
+    },
+    {
+      "id": "REQ-137-HLJ-Chunk_1-Item_72-v1.0",
+      "domain": "fintech",
+      "summary": "Notify users of failed login attempts",
+      "priority": "Low",
+      "tags": [
+        "login_attempts",
+        "user_alerts",
+        "security"
+      ],
+      "subdomain": "technical_safeguards",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied – Encourages user awareness of access issues",
+      "source_hlj_id": "REQ 001-072",
+      "domain_id": "P-SAAS-048"
+    },
+    {
+      "id": "REQ-137-HLJ-Chunk_1-Item_73-v1.0",
+      "domain": "fintech",
+      "summary": "Ensure separation of duties in PHI access",
+      "priority": "Low",
+      "tags": [
+        "segregation_of_duties",
+        "phi_access",
+        "compliance"
+      ],
+      "subdomain": "workforce_security",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied – Reduces fraud and misuse risks",
+      "source_hlj_id": "REQ 001-073",
+      "domain_id": "P-SAAS-048"
+    },
+    {
+      "id": "REQ-137-HLJ-Chunk_1-Item_74-v1.0",
+      "domain": "fintech",
+      "summary": "Log failed access to encrypted PHI",
+      "priority": "Low",
+      "tags": [
+        "access_failures",
+        "encryption",
+        "logging"
+      ],
+      "subdomain": "technical_safeguards",
+      "difficulty": 3,
+      "additionalNotes": "origin: implied – Supports incident response and forensics",
+      "source_hlj_id": "REQ 001-074",
+      "domain_id": "P-SAAS-048"
+    },
+    {
+      "id": "REQ-137-HLJ-Chunk_1-Item_75-v1.0",
+      "domain": "fintech",
+      "summary": "Regularly test backup data restoration procedures",
+      "priority": "Low",
+      "tags": [
+        "backup_testing",
+        "restoration",
+        "data_recovery"
+      ],
+      "subdomain": "physical_safeguards",
+      "difficulty": 3,
+      "additionalNotes": "origin: implied – Ensures recoverability in emergencies",
+      "source_hlj_id": "REQ 001-075",
+      "domain_id": "P-SAAS-048"
+    },
+    {
+      "id": "REQ-137-HLJ-Chunk_1-Item_76-v1.0",
+      "domain": "fintech",
+      "summary": "Tag and label media devices that store ePHI",
+      "priority": "Low",
+      "tags": [
+        "media_labeling",
+        "device_tracking",
+        "ephi"
+      ],
+      "subdomain": "physical_safeguards",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied – Helps track data-bearing devices",
+      "source_hlj_id": "REQ 001-076",
+      "domain_id": "P-SAAS-048"
+    },
+    {
+      "id": "REQ-137-HLJ-Chunk_1-Item_77-v1.0",
+      "domain": "fintech",
+      "summary": "Restrict removable media usage in workstations",
+      "priority": "Low",
+      "tags": [
+        "usb_restrictions",
+        "media_controls",
+        "ephi"
+      ],
+      "subdomain": "physical_safeguards",
+      "difficulty": 3,
+      "additionalNotes": "origin: implied – Prevents data exfiltration risks",
+      "source_hlj_id": "REQ 001-077",
+      "domain_id": "P-SAAS-048"
+    },
+    {
+      "id": "REQ-137-HLJ-Chunk_1-Item_78-v1.0",
+      "domain": "fintech",
+      "summary": "Rotate access credentials on schedule",
+      "priority": "Low",
+      "tags": [
+        "credential_rotation",
+        "access_control",
+        "password_policy"
+      ],
+      "subdomain": "technical_safeguards",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied – Enhances long-term account security",
+      "source_hlj_id": "REQ 001-078",
+      "domain_id": "P-SAAS-048"
+    }
+  ]
+}

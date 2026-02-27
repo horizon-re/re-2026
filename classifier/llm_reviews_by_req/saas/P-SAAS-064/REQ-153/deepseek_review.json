@@ -1,0 +1,128 @@
+{
+  "req_id": "REQ-153",
+  "doc_id": "ab61fa30-e0a3-5078-aace-22d20fa68fba",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-064",
+  "model": "deepseek-r1:7b",
+  "review_timestamp": "2026-01-20T23:58:16.687329+00:00",
+  "counts": {
+    "total": 11,
+    "llm_pos": 10,
+    "pipe_pos": 4,
+    "pipe_neg": 7,
+    "flip_neg_to_pos": 6,
+    "llm_neg": 1
+  },
+  "reviews": [
+    {
+      "sent_id": "REQ-153::s001",
+      "order": 1,
+      "text": "**Ticket Title:** OCR Misinterpretation of \"5 s\" as \"$5\" Leading to Price Calculation Error\n\n**Description:**",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Requires correct OCR handling of time-based data."
+    },
+    {
+      "sent_id": "REQ-153::s002",
+      "order": 2,
+      "text": "Our OCR system is incorrectly interpreting the string \"5 s\" (representing \"5 seconds\") as \"$5\", leading to miscalculations in price-sensitive contexts where time-based data is critical.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Describes the OCR system misinterpreting '5 s' as '$5', indicating a specific behavior to correct."
+    },
+    {
+      "sent_id": "REQ-153::s003",
+      "order": 3,
+      "text": "This is especially problematic in automated billing and log analysis pipelines where time and currency are both present, creating ambiguities.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Addresses mixed currency-time scenarios needing resolution."
+    },
+    {
+      "sent_id": "REQ-153::s004",
+      "order": 4,
+      "text": "**Tasks:**  \n1.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Requires handling of tasks to prevent errors."
+    },
+    {
+      "sent_id": "REQ-153::s005",
+      "order": 5,
+      "text": "**Implement contextual spell-checking logic** that distinguishes between time units (e.g., \"s\", \"sec\", \"seconds\") and monetary values (e.g., \"$\", \"USD\", etc.).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Imposes specific logic for distinguishing units."
+    },
+    {
+      "sent_id": "REQ-153::s006",
+      "order": 6,
+      "text": "This should rely on surrounding words and common patterns to infer the correct unit.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "States the system should infer units based on context."
+    },
+    {
+      "sent_id": "REQ-153::s007",
+      "order": 7,
+      "text": "2. **Introduce a manual review flag** for any extracted value where time and currency indicators are mixed or ambiguous (e.g., \"$5s\", \"5 $s\", etc.).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Requires manual flagging for ambiguous values."
+    },
+    {
+      "sent_id": "REQ-153::s008",
+      "order": 8,
+      "text": "3. **Update the OCR post-processing pipeline** to apply this logic before final value extraction is returned downstream.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Imposes changes to OCR processing logic."
+    },
+    {
+      "sent_id": "REQ-153::s009",
+      "order": 9,
+      "text": "**Acceptance Criteria:**  \n- System must correctly identify \"5 s\" as time when used in timing or duration context.\n-",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Enforces correct time/duration identification and prevents false currency matches."
+    },
+    {
+      "sent_id": "REQ-153::s010",
+      "order": 10,
+      "text": "No false positive currency values should result from timing strings.\n- All flagged ambiguities should appear in the review dashboard with context snippet and original OCR output.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Prevents false positives and requires context-aware flagging."
+    },
+    {
+      "sent_id": "REQ-153::s011",
+      "order": 11,
+      "text": "**Priority:** High  \n**Estimate:** 3 engineering days",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    }
+  ]
+}

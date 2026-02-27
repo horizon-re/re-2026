@@ -1,0 +1,1259 @@
+{
+  "req_id": "REQ-010",
+  "doc_id": "1f686c9f-e03d-5d79-b00e-7a337f30856f",
+  "domain": "fintech",
+  "prompt_id": "P-FT-001",
+  "model": "deepseek-r1:7b",
+  "review_timestamp": "2026-01-20T20:46:06.830880+00:00",
+  "counts": {
+    "total": 124,
+    "llm_neg": 56,
+    "pipe_pos": 56,
+    "flip_pos_to_neg": 23,
+    "llm_pos": 68,
+    "pipe_neg": 68,
+    "flip_neg_to_pos": 35
+  },
+  "reviews": [
+    {
+      "sent_id": "REQ-010::s001",
+      "order": 1,
+      "text": "Great.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.5,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Generic positive response with no enforceable action."
+    },
+    {
+      "sent_id": "REQ-010::s002",
+      "order": 2,
+      "text": "I’ll create a structured early-stage requirements document for a global cloud-based SaaS FinTech platform targeting small and medium businesses.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Plan for SaaS platform development but not enforcing action."
+    },
+    {
+      "sent_id": "REQ-010::s003",
+      "order": 3,
+      "text": "It will highlight invoice/expense tracking, tax support, forecasting, and banking integrations—with an emphasis on automation, user experience, and intelligent features.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Describes system functions but lacks enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-010::s004",
+      "order": 4,
+      "text": "I’ll include sections like business context, personas, features, operational considerations, and future plans.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Plan includes sections like features and operational considerations but not enforcing action."
+    },
+    {
+      "sent_id": "REQ-010::s005",
+      "order": 5,
+      "text": "I’ll get that ready for you shortly.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Request ready for delivery, no enforceable action."
+    },
+    {
+      "sent_id": "REQ-010::s006",
+      "order": 6,
+      "text": "# Global Cloud FinTech SaaS Platform – Early Requirements\n\n## Overview / Business Context\n ([Business Woman Financing Accounting Banking Concept, businesswoman doing finances and calculate about cost to real estate investment and in other, tax system.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Background information without enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-010::s007",
+      "order": 7,
+      "text": "photo – Office Image on Unsplash](https://unsplash.com/photos/business-woman-financing-accounting-banking-concept-businesswoman-doing-finances-and-calculate-about-cost-to-real-estate-investment-and-in-other-tax-system-HwsvKRpmhPo))Our cloud-based finance platform will serve small and medium businesses worldwide.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Provides background without enforcing actions."
+    },
+    {
+      "sent_id": "REQ-010::s008",
+      "order": 8,
+      "text": "SMBs represent over 90% of global businesses ([Smart SMB Cash Flow Management Tips for Success](https://www.ccmonet.ai/blog-posts-new/smart-smb-cash-flow-management-tips-for-success#:~:text=Cash%20forecasting%20and%20financial%20planning,for%20their%20growth%20and%20sustainability)), and many are already adopting cloud accounting solutions.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.5,
+      "reason_code": "EXAMPLE_OR_EXPLANATION",
+      "reason_text": "Explains data but doesn't enforce behavior."
+    },
+    {
+      "sent_id": "REQ-010::s009",
+      "order": 9,
+      "text": "In a recent UK study, 87% of SMB cloud accounting users say it gives them better visibility into their finances ([How small businesses are benefiting from open banking-driven cloud accountancy - Open Banking](https://www.openbanking.org.uk/insights/how-small-businesses-are-benefiting-from-open-banking-driven-cloud-accountancy/#:~:text=Snapshot%20of%20financial%20position%20We,result%20of%20using%20these%20services)), yet manual tasks persist: 60% of invoices still require manual entry ([2025 Accounts Payable Automation Trends Report: Key Takeaways | SAP Concur](https://www.concur.com/blog/article/2025-accounts-payable-automation-trends-report-key-takeaways#:~:text=Since%202023%2C%20there%E2%80%99s%20been%20a,just%20a%20year%20ago)).",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "EXAMPLE_OR_EXPLANATION",
+      "reason_text": "Provides statistics without enforcing actions."
+    },
+    {
+      "sent_id": "REQ-010::s010",
+      "order": 10,
+      "text": "Leading products like FreshBooks and Wave cover basics (invoicing, expenses), but often lack advanced automation or built‑in intelligence.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "PERFORMANCE_REQUIREMENT",
+      "reason_text": "Lack of advanced automation or built-in intelligence."
+    },
+    {
+      "sent_id": "REQ-010::s011",
+      "order": 11,
+      "text": "Our platform will combine core functions with modern UX and smart automation – for example, automating invoice processing to cut workload (akin to how 52% of finance teams now spend under 10h/week on AP after adopting automation ([2025 Accounts Payable Automation Trends Report: Key Takeaways | SAP Concur](https://www.concur.com/blog/article/2025-accounts-payable-automation-trends-report-key-takeaways#:~:text=Takeaway%20,efficiency%20gains))).",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Implies automation reducing manual tasks."
+    },
+    {
+      "sent_id": "REQ-010::s012",
+      "order": 12,
+      "text": "By integrating real-time data and analytics, we’ll help SMB users stay ahead of cash needs and compliance while minimizing manual effort.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Help SMB users stay ahead of cash needs and compliance."
+    },
+    {
+      "sent_id": "REQ-010::s013",
+      "order": 13,
+      "text": "The platform will emphasize ease-of-use for non-technical users.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "EXAMPLE_OR_EXPLANATION",
+      "reason_text": "Emphasizes ease-of-use without enforceable action."
+    },
+    {
+      "sent_id": "REQ-010::s014",
+      "order": 14,
+      "text": "Business owners and finance staff can start with simple setup (importing data from banks/CRMs) and immediately see clear dashboards.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Simple setup with dashboards for business owners."
+    },
+    {
+      "sent_id": "REQ-010::s015",
+      "order": 15,
+      "text": "Enhanced automation (e.g. automatic expense categorization, tax rate updates) will reduce errors and save time.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.7,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Implements automation reducing errors."
+    },
+    {
+      "sent_id": "REQ-010::s016",
+      "order": 16,
+      "text": "Built-in compliance features (e.g. automated tax calculations) are critical: for instance, automating sales-tax filing can save businesses the ~$100K it typically costs to resolve one state audit ([What are the benefits to compliance?",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "COMPLIANCE_REQUIREMENT",
+      "reason_text": "Built-in compliance features for audit purposes."
+    },
+    {
+      "sent_id": "REQ-010::s017",
+      "order": 17,
+      "text": "- TaxJar](https://www.taxjar.com/blog/2022-04-what-are-the-benefits-to-compliance#:~:text=Paying%20for%20the%20advice%20of,%E2%80%9D)).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-010::s018",
+      "order": 18,
+      "text": "Likewise, proactive forecasting is vital – 72% of firms prioritize cash flow forecasts ([Smart SMB Cash Flow Management Tips for Success](https://www.ccmonet.ai/blog-posts-new/smart-smb-cash-flow-management-tips-for-success#:~:text=Forecasting%20predicts%20future%20finances%20using,organizations%20prioritize%20cash%20flow%20forecasting)), yet many still lack accurate budgeting tools.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-010::s019",
+      "order": 19,
+      "text": "Our service will embed basic forecasting and alerts so managers can anticipate shortfalls, leveraging the very data they enter day-to-day.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Embeds forecasting for manager visibility."
+    },
+    {
+      "sent_id": "REQ-010::s020",
+      "order": 20,
+      "text": "## User Roles and Personas\n ([Accountant calculating the Saving Account Book and Statement of financial statements at home.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describes user roles without enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-010::s021",
+      "order": 21,
+      "text": "Accountancy Concept.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.75,
+      "reason_code": "EXAMPLE_OR_EXPLANATION",
+      "reason_text": "Example text without requirements."
+    },
+    {
+      "sent_id": "REQ-010::s022",
+      "order": 22,
+      "text": "photo – Business Image on Unsplash](https://unsplash.com/photos/accountant-calculating-the-saving-account-book-and-statement-of-financial-statements-at-home-accountancy-concept-HZM0K01sdVg))Key users include **Finance Managers**, **Accountants/Bookkeepers**, and **Business Owners**.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Photo description without requirements."
+    },
+    {
+      "sent_id": "REQ-010::s023",
+      "order": 23,
+      "text": "Each needs different workflows and levels of detail:\n\n- **Finance Managers (Controllers/CFOs)** – Oversee budgets, reporting and cash planning.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.85,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describes user roles and needs but doesn't set enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-010::s024",
+      "order": 24,
+      "text": "They need real-time dashboards for cash flow and profit/loss, as well as forecasting tools.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "PERFORMANCE_REQUIREMENT",
+      "reason_text": "Need for real-time dashboards and forecasting."
+    },
+    {
+      "sent_id": "REQ-010::s025",
+      "order": 25,
+      "text": "They value customizable reports and alerts for billing or budget overruns.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Require customizable reports for billing or budget overruns."
+    },
+    {
+      "sent_id": "REQ-010::s026",
+      "order": 26,
+      "text": "(For example, a controller might generate a 12-month cash forecast to plan payroll, relying on historical and pipeline data.)\n\n- **Accountants / Bookkeepers** – Handle day-to-day bookkeeping and compliance.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "PERFORMANCE_REQUIREMENT",
+      "reason_text": "Automation saves manual effort in processing transactions."
+    },
+    {
+      "sent_id": "REQ-010::s027",
+      "order": 27,
+      "text": "They require an intuitive ledger, automatic matching of bank transactions, and built-in tax routines.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "They require an intuitive ledger and automatic tax routines."
+    },
+    {
+      "sent_id": "REQ-010::s028",
+      "order": 28,
+      "text": "Automation is key: software that classifies transactions and prepares audit reports saves time.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "PERFORMANCE_REQUIREMENT",
+      "reason_text": "Automation is key for saving time in audits."
+    },
+    {
+      "sent_id": "REQ-010::s029",
+      "order": 29,
+      "text": "(As one tax expert notes, a well‑implemented sales tax system creates a transaction-level record that drastically shortens audit work ([What are the benefits to compliance?",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "EXAMPLE_OR_EXPLANATION",
+      "reason_text": "Background example without requirements."
+    },
+    {
+      "sent_id": "REQ-010::s030",
+      "order": 30,
+      "text": "- TaxJar](https://www.taxjar.com/blog/2022-04-what-are-the-benefits-to-compliance#:~:text=%E2%80%9CSales%20tax%20automation%20,%E2%80%9D)).)",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.75,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describes compliance features from an example but doesn't set enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-010::s031",
+      "order": 31,
+      "text": "They need a reliable audit trail and multi-currency support for any international entries.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "COMPLIANCE_REQUIREMENT",
+      "reason_text": "Need a reliable audit trail and multi-currency support."
+    },
+    {
+      "sent_id": "REQ-010::s032",
+      "order": 32,
+      "text": "- **Business Owners / Executives** – May not be finance experts and want a high-level view.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-010::s033",
+      "order": 33,
+      "text": "They need simple dashboards showing overall cash position, outstanding invoices, and key metrics (e.g. profit margins, runway).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "They need simple dashboards for key metrics."
+    },
+    {
+      "sent_id": "REQ-010::s034",
+      "order": 34,
+      "text": "The interface must be uncluttered.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describes interface but doesn't enforce behavior."
+    },
+    {
+      "sent_id": "REQ-010::s035",
+      "order": 35,
+      "text": "They expect fast answers to questions like “Are we profitable this month?” or “Do we have enough cash for next quarter?” without wading through reports.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Fast answers to financial questions are expected."
+    },
+    {
+      "sent_id": "REQ-010::s036",
+      "order": 36,
+      "text": "Each persona can have role-based access: for example, owners can see top-level summaries but accountants see detailed transactions.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Defines role-based access permissions for users."
+    },
+    {
+      "sent_id": "REQ-010::s037",
+      "order": 37,
+      "text": "Multi-factor authentication and OAuth2 will ensure each user only accesses appropriate data.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SECURITY_REQUIREMENT",
+      "reason_text": "Implements MFA and OAuth2 for data access."
+    },
+    {
+      "sent_id": "REQ-010::s038",
+      "order": 38,
+      "text": "## Key Features\n\n- **Invoice and Expense Tracking:** Centralized billing and spending management with heavy automation.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Only a title."
+    },
+    {
+      "sent_id": "REQ-010::s039",
+      "order": 39,
+      "text": "Users can create and send invoices (including recurring billing) and log expenses by uploading receipts or using mobile capture.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Users can create and send invoices."
+    },
+    {
+      "sent_id": "REQ-010::s040",
+      "order": 40,
+      "text": "Expenses are automatically categorized (using rules or AI-assisted tag suggestions).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Expenses are automatically categorized."
+    },
+    {
+      "sent_id": "REQ-010::s041",
+      "order": 41,
+      "text": "Bank integrations (via APIs) let transactions auto-import and match to invoices.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Bank integrations auto-import transactions."
+    },
+    {
+      "sent_id": "REQ-010::s042",
+      "order": 42,
+      "text": "This drastically cuts manual work – e.g. Concur found automation halved time spent on invoice processing ([2025 Accounts Payable Automation Trends Report: Key Takeaways | SAP Concur](https://www.concur.com/blog/article/2025-accounts-payable-automation-trends-report-key-takeaways#:~:text=Takeaway%20,efficiency%20gains)).",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-010::s043",
+      "order": 43,
+      "text": "The system will also send reminders for overdue payments and support partial payments.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Sends reminders and supports partial payments."
+    },
+    {
+      "sent_id": "REQ-010::s044",
+      "order": 44,
+      "text": "- **Tax Filing Support:** Built-in compliance tools to handle multi-jurisdiction tax rules.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Tax filing tools are built-in for compliance."
+    },
+    {
+      "sent_id": "REQ-010::s045",
+      "order": 45,
+      "text": "The platform calculates applicable sales tax/VAT/GST on invoices automatically based on customer location and products.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.7,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Calculates sales tax based on location and products."
+    },
+    {
+      "sent_id": "REQ-010::s046",
+      "order": 46,
+      "text": "It can generate standard tax forms and reports (including e-filing formats) to streamline filings.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "System generates tax forms."
+    },
+    {
+      "sent_id": "REQ-010::s047",
+      "order": 47,
+      "text": "Automated tax classification creates an auditable record: this is vital, as a U.S. state sales-tax audit can cost ~$100K for a small business ([What are the benefits to compliance?",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Automated tax classification is vital for audits."
+    },
+    {
+      "sent_id": "REQ-010::s048",
+      "order": 48,
+      "text": "- TaxJar](https://www.taxjar.com/blog/2022-04-what-are-the-benefits-to-compliance#:~:text=Paying%20for%20the%20advice%20of,%E2%80%9D)); our solution aims to make audit response a matter of clicking a report.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-010::s049",
+      "order": 49,
+      "text": "Regional tax configurations (e.g. EU VAT, Canada GST/HST, etc.) and frequent rate updates will keep data accurate globally.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Handles regional tax configurations with updates."
+    },
+    {
+      "sent_id": "REQ-010::s050",
+      "order": 50,
+      "text": "- **Cash Flow Monitoring:** Real-time dashboards for inflows, outflows, and cash-on-hand.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Real-time dashboards for cash flow."
+    },
+    {
+      "sent_id": "REQ-010::s051",
+      "order": 51,
+      "text": "Daily bank sync (via open-banking APIs or direct feeds) means balances update automatically.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Daily bank sync updates balances automatically."
+    },
+    {
+      "sent_id": "REQ-010::s052",
+      "order": 52,
+      "text": "The dashboard highlights due invoices and upcoming bills, and sends alerts if cash drops below a threshold.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Dashboard highlights due invoices and sends alerts."
+    },
+    {
+      "sent_id": "REQ-010::s053",
+      "order": 53,
+      "text": "SMBs overwhelmingly find such real-time visibility valuable – 77% report having a clearer view of their finances using cloud tools ([How small businesses are benefiting from open banking-driven cloud accountancy - Open Banking](https://www.openbanking.org.uk/insights/how-small-businesses-are-benefiting-from-open-banking-driven-cloud-accountancy/#:~:text=Snapshot%20of%20financial%20position%20We,result%20of%20using%20these%20services)).",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-010::s054",
+      "order": 54,
+      "text": "We’ll display trends (weekly/monthly cash changes) and allow scenario checks (e.g. “what if a big payment is delayed?”).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Trends and scenario checks are allowed."
+    },
+    {
+      "sent_id": "REQ-010::s055",
+      "order": 55,
+      "text": "- **Basic Financial Forecasting:** Simple forecasting models based on historical data and user inputs.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Only a title."
+    },
+    {
+      "sent_id": "REQ-010::s056",
+      "order": 56,
+      "text": "Users can set budget targets or revenue projections and the system will compare actuals to forecasts.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-010::s057",
+      "order": 57,
+      "text": "Predictive tools (for example, projecting next-quarter cash flow) will use past trends and open invoices; as noted, 72% of firms prioritize cash forecasting ([Smart SMB Cash Flow Management Tips for Success](https://www.ccmonet.ai/blog-posts-new/smart-smb-cash-flow-management-tips-for-success#:~:text=Forecasting%20predicts%20future%20finances%20using,organizations%20prioritize%20cash%20flow%20forecasting)).",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-010::s058",
+      "order": 58,
+      "text": "Scenario planning (such as “reduce expenses by 10%” or “add a new revenue stream”) will help managers see financial impacts.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Scenario planning is an example of a strategic approach but does not enforce system behavior."
+    },
+    {
+      "sent_id": "REQ-010::s059",
+      "order": 59,
+      "text": "These features guide decision-making without requiring separate spreadsheets.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Only a description."
+    },
+    {
+      "sent_id": "REQ-010::s060",
+      "order": 60,
+      "text": "- **Multi-currency Support:**",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Only a title."
+    },
+    {
+      "sent_id": "REQ-010::s061",
+      "order": 61,
+      "text": "Seamless handling of international transactions.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Seamless handling of international transactions."
+    },
+    {
+      "sent_id": "REQ-010::s062",
+      "order": 62,
+      "text": "Users can invoice and record expenses in dozens of currencies (supporting 100+ by default ([How to Overcome the Accounting Challenges of Foreign Currency Transactions](https://www.runeleven.com/blog/how-to-overcome-the-accounting-challenges-of-foreign-currency-transactions#:~:text=Scalable%20General%20Ledger%20Process%20unlimited,most%20complex%20tax%20%2020))).",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Users can invoice and record expenses in multiple currencies is a system capability."
+    },
+    {
+      "sent_id": "REQ-010::s063",
+      "order": 63,
+      "text": "Exchange rates are updated daily from reliable sources, and gains/losses on currency conversion are tracked.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Exchange rates are updated daily and tracked."
+    },
+    {
+      "sent_id": "REQ-010::s064",
+      "order": 64,
+      "text": "Financial reports consolidate into a base currency of choice, with clear currency columns.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Financial reports consolidate into a base currency."
+    },
+    {
+      "sent_id": "REQ-010::s065",
+      "order": 65,
+      "text": "This protects businesses from FX errors: for example, using multicurrency accounts can shield firms from exchange rate volatility when trading internationally ([How to Overcome the Accounting Challenges of Foreign Currency Transactions](https://www.runeleven.com/blog/how-to-overcome-the-accounting-challenges-of-foreign-currency-transactions#:~:text=Scalable%20General%20Ledger%20Process%20unlimited,most%20complex%20tax%20%2020)).",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SECURITY_REQUIREMENT",
+      "reason_text": "Using multicurrency accounts protects businesses from FX errors is a security measure."
+    },
+    {
+      "sent_id": "REQ-010::s066",
+      "order": 66,
+      "text": "- **Integrations:** Built-in connectors to banks, CRMs, and payment gateways.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Only a title."
+    },
+    {
+      "sent_id": "REQ-010::s067",
+      "order": 67,
+      "text": "Bank account integration is a must – in a survey, 72% of SMBs cited bank syncing as a top feature ([How small businesses are benefiting from open banking-driven cloud accountancy - Open Banking](https://www.openbanking.org.uk/insights/how-small-businesses-are-benefiting-from-open-banking-driven-cloud-accountancy/#:~:text=More%20significantly%2C%2072,banking%20connections%20%E2%80%93%20as%20important)).",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "PERFORMANCE_REQUIREMENT",
+      "reason_text": "Bank account integration is required by a survey to be added as a feature."
+    },
+    {
+      "sent_id": "REQ-010::s068",
+      "order": 68,
+      "text": "The platform will connect via popular open-banking APIs (e.g. Plaid, TrueLayer) to pull transactions.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "The platform will connect via popular open-banking APIs is a system behavior."
+    },
+    {
+      "sent_id": "REQ-010::s069",
+      "order": 69,
+      "text": "It will also integrate with CRMs (Salesforce, HubSpot, etc.)",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.7,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Integration with CRMs is required for functionality."
+    },
+    {
+      "sent_id": "REQ-010::s070",
+      "order": 70,
+      "text": "so that sales data (pipeline, won deals) feeds into invoicing and forecasting.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Only a description."
+    },
+    {
+      "sent_id": "REQ-010::s071",
+      "order": 71,
+      "text": "Payment gateway integrations (Stripe, PayPal, Square) allow clients to pay invoices online, automatically recording receipts.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Payment gateway integrations allow clients to pay invoices online with automatic receipt recording."
+    },
+    {
+      "sent_id": "REQ-010::s072",
+      "order": 72,
+      "text": "All APIs will use secure OAuth2 authentication and webhooks for real-time updates.\n\n## Operational Considerations\n\n- **Scalability and Performance:**",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Scalability and performance discussion is part of the design rationale."
+    },
+    {
+      "sent_id": "REQ-010::s073",
+      "order": 73,
+      "text": "The system will be built as a cloud-native, multi-tenant SaaS.  According to best practices, such solutions must be *highly scalable* and *highly performant* ([Best Practices for SaaS Development with Microservices](https://frontegg.com/blog/best-practices-for-saas-development-using-microservices#:~:text=Performance%20is%20vital%20when%20building,adoption%20will%20be%20more%20difficult))",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "The system must be highly scalable and performant is a performance requirement."
+    },
+    {
+      "sent_id": "REQ-010::s074",
+      "order": 74,
+      "text": "([Best Practices for SaaS Development with Microservices](https://frontegg.com/blog/best-practices-for-saas-development-using-microservices#:~:text=Scalable)).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Link to a blog post about SaaS development practices."
+    },
+    {
+      "sent_id": "REQ-010::s075",
+      "order": 75,
+      "text": "We will use a microservices or modular architecture on AWS/GCP, with Kubernetes or similar to add capacity on demand.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Caching and database optimization is required for low-latency APIs."
+    },
+    {
+      "sent_id": "REQ-010::s076",
+      "order": 76,
+      "text": "Caching layers (e.g. Redis) and optimized database (PostgreSQL) indexes will keep APIs and dashboards low-latency even under heavy use.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Caching layers and database optimization are required for system behavior."
+    },
+    {
+      "sent_id": "REQ-010::s077",
+      "order": 77,
+      "text": "Automated horizontal scaling ensures thousands of concurrent users can be served; performance testing targets sub-second response for key API calls and dashboard updates.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Automated horizontal scaling ensures thousands of concurrent users with sub-second response times."
+    },
+    {
+      "sent_id": "REQ-010::s078",
+      "order": 78,
+      "text": "- **High Availability:**",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "PERFORMANCE_REQUIREMENT",
+      "reason_text": "This feedback lets us fix issues proactively."
+    },
+    {
+      "sent_id": "REQ-010::s079",
+      "order": 79,
+      "text": "Redundancy will be built into every layer.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Redundancy is required to ensure system reliability."
+    },
+    {
+      "sent_id": "REQ-010::s080",
+      "order": 80,
+      "text": "Services and databases will run in multiple availability zones (or regions) to minimize downtime.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Downtime minimization is a system behavior requirement."
+    },
+    {
+      "sent_id": "REQ-010::s081",
+      "order": 81,
+      "text": "Automated failover and health checks (plus a robust CI/CD pipeline on GitHub Actions/GitLab CI) will let us deploy updates safely without service interruption.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Automated failover is required for service interruption safety."
+    },
+    {
+      "sent_id": "REQ-010::s082",
+      "order": 82,
+      "text": "System monitoring (metrics, logs, and alerts) will track both technical (CPU, errors) and business (payment success rate, delayed invoices) indicators ([Best Practices for SaaS Development with Microservices](https://frontegg.com/blog/best-practices-for-saas-development-using-microservices#:~:text=Monitoring)).",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "System monitoring is required to track payment success rates."
+    },
+    {
+      "sent_id": "REQ-010::s083",
+      "order": 83,
+      "text": "This feedback lets us fix issues proactively.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Security and compliance header note."
+    },
+    {
+      "sent_id": "REQ-010::s084",
+      "order": 84,
+      "text": "- **Security and Compliance:**",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-010::s085",
+      "order": 85,
+      "text": "Security is paramount for a finance platform.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SECURITY_REQUIREMENT",
+      "reason_text": "Security is paramount for a finance platform."
+    },
+    {
+      "sent_id": "REQ-010::s086",
+      "order": 86,
+      "text": "All data in transit and at rest will be encrypted (TLS and AES-256 or stronger).",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SECURITY_REQUIREMENT",
+      "reason_text": "Data encryption is required for security and compliance."
+    },
+    {
+      "sent_id": "REQ-010::s087",
+      "order": 87,
+      "text": "Role-based access control with OAuth2 and optional multi-factor authentication will restrict features (e.g. only Admins can change tax settings).",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SECURITY_REQUIREMENT",
+      "reason_text": "Role-based access control is required for feature restriction."
+    },
+    {
+      "sent_id": "REQ-010::s088",
+      "order": 88,
+      "text": "Regular penetration testing and vulnerability scans will be conducted.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SECURITY_REQUIREMENT",
+      "reason_text": "Vulnerability testing is required for security."
+    },
+    {
+      "sent_id": "REQ-010::s089",
+      "order": 89,
+      "text": "We will adhere to GDPR for EU customer data (protecting personal data rights ([GDPR vs. SOC 2: Navigating Compliance in the Digital Age](https://heydata.eu/en/magazine/gdpr-or-soc-2-navigating-the-seas-of-compliance#:~:text=Imagine%20GDPR%20as%20a%20powerful,data%2C%20demanding%20transparency%20and%20accountability))), PCI DSS for any credit-card payment processing ([Why FinTechs need to be PCI DSS compliant](https://www.secfix.com/post/pci-dss-standard-in-the-fintech-industry#:~:text=The%20Payment%20Card%20Industry%20Data,must%20comply%20with%20PCI%20DSS)), and pursue SOC 2 certification to demonstrate cloud security controls ([SOC 2 for SaaS: All You Need to Know - Sprinto](https://sprinto.com/blog/why-soc-2-for-saas-companies/#:~:text=Data%20security%3A%20SOC%202%20compliance,availability%2C%20confidentiality%2C%20and%20processing%20integrity)).",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Compliance standards are required for secure handling of sensitive data."
+    },
+    {
+      "sent_id": "REQ-010::s090",
+      "order": 90,
+      "text": "Achieving these standards not only ensures safety, but builds customer trust (SOC 2 compliance is now expected by enterprise clients ([SOC 2 for SaaS: All You Need to Know - Sprinto](https://sprinto.com/blog/why-soc-2-for-saas-companies/#:~:text=Data%20security%3A%20SOC%202%20compliance,availability%2C%20confidentiality%2C%20and%20processing%20integrity))).",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "SOC 2 certification is required for cloud security."
+    },
+    {
+      "sent_id": "REQ-010::s091",
+      "order": 91,
+      "text": "- **API Reliability:** Our APIs (used by integrations and potentially third-party developers) will be versioned and rate-limited, with clear documentation.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "API reliability requirements are enforced."
+    },
+    {
+      "sent_id": "REQ-010::s092",
+      "order": 92,
+      "text": "We’ll implement retry and idempotency logic for webhooks to handle occasional failures.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Implement retry and idempotency logic for webhooks."
+    },
+    {
+      "sent_id": "REQ-010::s093",
+      "order": 93,
+      "text": "This ensures that bank feeds, CRM syncs, and payment callbacks happen smoothly and do not double-post or miss data.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Ensure smooth bank feeds and data synchronization."
+    },
+    {
+      "sent_id": "REQ-010::s094",
+      "order": 94,
+      "text": "- **Globalization and Data Privacy:**",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Globalization and data privacy header note."
+    },
+    {
+      "sent_id": "REQ-010::s095",
+      "order": 95,
+      "text": "The system will be region-aware: data residency options (EU, US, APAC) may be provided for GDPR compliance.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Region-aware data residency options for GDPR compliance."
+    },
+    {
+      "sent_id": "REQ-010::s096",
+      "order": 96,
+      "text": "Interfaces and help content will support multiple languages over time.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Specifies the system will support multiple languages."
+    },
+    {
+      "sent_id": "REQ-010::s097",
+      "order": 97,
+      "text": "Financial workflows will accommodate regional variations (e.g. different fiscal year starts, date formats, accounting standards).",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Specifies handling regional variations in workflows."
+    },
+    {
+      "sent_id": "REQ-010::s098",
+      "order": 98,
+      "text": "## Future Expansion Notes\n\n- **Advanced Analytics & AI:**",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Advanced analytics and AI features listed."
+    },
+    {
+      "sent_id": "REQ-010::s099",
+      "order": 99,
+      "text": "In the next phase, we will layer machine learning and AI on top of the data.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Outlines future plans without enforceable action."
+    },
+    {
+      "sent_id": "REQ-010::s100",
+      "order": 100,
+      "text": "Oak HC/FT notes that SaaS is evolving into “higher intelligence applications” rather than just record systems ([Oak HC/FT | The Convergence of AI and SaaS: Who Will Win in Fintech?](https://www.oakhcft.com/blog-post/the-convergence-of-ai-and-saas-who-will-win-in-fintech#:~:text=Today%2C%20we%20are%20seeing%20SaaS,functions%2C%20including%20healthcare%20and%20fintech)).",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "External link discussing AI in SaaS context."
+    },
+    {
+      "sent_id": "REQ-010::s101",
+      "order": 101,
+      "text": "We plan features like automated anomaly detection in transactions (to flag fraud or errors), AI-driven cash forecasting, and conversational assistants (chat interfaces answering finance questions).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Automated anomaly detection, cash forecasting, and conversational assistants."
+    },
+    {
+      "sent_id": "REQ-010::s102",
+      "order": 102,
+      "text": "As 40% of AP teams are considering AI adoption ([2025 Accounts Payable Automation Trends Report: Key Takeaways | SAP Concur](https://www.concur.com/blog/article/2025-accounts-payable-automation-trends-report-key-takeaways#:~:text=While%20automation%20has%20made%20strides%2C,AI%20technologies%20for%20spend%20management)), we aim to be early adopters by embedding intelligent insights into workflows.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.75,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Discusses adopters' plans without enforceable action."
+    },
+    {
+      "sent_id": "REQ-010::s103",
+      "order": 103,
+      "text": "- **Fraud Detection and Risk Management:**",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Fraud detection header note."
+    },
+    {
+      "sent_id": "REQ-010::s104",
+      "order": 104,
+      "text": "Fraud is a growing concern in fintech.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.65,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Fraud concern in fintech."
+    },
+    {
+      "sent_id": "REQ-010::s105",
+      "order": 105,
+      "text": "Future modules may analyze spending patterns to detect suspicious activity (e.g. duplicate invoices or unusually large payments).",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Specifies analyzing spending patterns for suspicious activity."
+    },
+    {
+      "sent_id": "REQ-010::s106",
+      "order": 106,
+      "text": "Given that fraud is “one of the biggest challenges in financial services” ([Oak HC/FT | The Convergence of AI and SaaS: Who Will Win in Fintech?](https://www.oakhcft.com/blog-post/the-convergence-of-ai-and-saas-who-will-win-in-fintech#:~:text=,are%20best%20positioned%20to%20win)), proactive fraud tools (like employee expense fraud alerts) will add value and security for SMBs.\n\n- **Expanded Services:**",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-010::s107",
+      "order": 107,
+      "text": "Over time, we could add related financial services: payroll processing, lending/financing options, inventory management, or deeper industry-specific modules.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Future expansion header note."
+    },
+    {
+      "sent_id": "REQ-010::s108",
+      "order": 108,
+      "text": "For example, integrating point-of-sale data for retailers or time-tracking for service businesses.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.75,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Integrating point-of-sale data header note."
+    },
+    {
+      "sent_id": "REQ-010::s109",
+      "order": 109,
+      "text": "Partnering with banks or fintech lenders to offer working capital loans is another possibility.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Partnering with banks header note."
+    },
+    {
+      "sent_id": "REQ-010::s110",
+      "order": 110,
+      "text": "- **Ecosystem and API Platform:**",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Ecosystem and API platform header note."
+    },
+    {
+      "sent_id": "REQ-010::s111",
+      "order": 111,
+      "text": "We anticipate building a developer ecosystem.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Anticipating a developer ecosystem header note."
+    },
+    {
+      "sent_id": "REQ-010::s112",
+      "order": 112,
+      "text": "Public APIs could allow third-party apps or accountants’ portals to connect to customer data (with permission).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Specifies the enforceable behavior of allowing third-party apps or accountants’ portals to access customer data with permission."
+    },
+    {
+      "sent_id": "REQ-010::s113",
+      "order": 113,
+      "text": "A marketplace of add-ons (e.g. tax advisory services, analytics plugins) could emerge.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.2,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Discusses a potential feature (add-ons marketplace) without specifying enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-010::s114",
+      "order": 114,
+      "text": "This horizontal platform strategy is supported by trends toward platform play in fintech ([Oak HC/FT | The Convergence of AI and SaaS: Who Will Win in Fintech?](https://www.oakhcft.com/blog-post/the-convergence-of-ai-and-saas-who-will-win-in-fintech#:~:text=,with%20AI%20in%20the%20financial)).",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "External link about platform play in fintech context."
+    },
+    {
+      "sent_id": "REQ-010::s115",
+      "order": 115,
+      "text": "- **Global Growth and Compliance:*",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Presents context about global growth and compliance without specifying enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-010::s116",
+      "order": 116,
+      "text": "*",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "A placeholder or separator in the document without content."
+    },
+    {
+      "sent_id": "REQ-010::s117",
+      "order": 117,
+      "text": "We will continually expand tax and regulatory coverage (adding more countries’ rules and forms).",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Specifies expanding tax coverage globally."
+    },
+    {
+      "sent_id": "REQ-010::s118",
+      "order": 118,
+      "text": "Multi-language support for UI and documentation will be rolled out.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Specifies multi-language support for UI and documentation."
+    },
+    {
+      "sent_id": "REQ-010::s119",
+      "order": 119,
+      "text": "Strategic international data centers will be deployed to minimize latency globally.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Specifies deploying global data centers for global latency."
+    },
+    {
+      "sent_id": "REQ-010::s120",
+      "order": 120,
+      "text": "By addressing these areas, the platform will not only meet current SMB needs but also adapt to future market and technology trends, staying ahead of competitors in automation and intelligence.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Specifies adapting to meet SMB needs and future market trends."
+    },
+    {
+      "sent_id": "REQ-010::s121",
+      "order": 121,
+      "text": "**Sources:** Industry reports and best-practice guides inform these requirements ([Smart SMB Cash Flow Management Tips for Success](https://www.ccmonet.ai/blog-posts-new/smart-smb-cash-flow-management-tips-for-success#:~:text=Cash%20forecasting%20and%20financial%20planning,for%20their%20growth%20and%20sustainability))",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "External source citing requirements but not enforceable."
+    },
+    {
+      "sent_id": "REQ-010::s122",
+      "order": 122,
+      "text": "([2025 Accounts Payable Automation Trends Report: Key Takeaways | SAP Concur](https://www.concur.com/blog/article/2025-accounts-payable-automation-trends-report-key-takeaways#:~:text=Takeaway%20,efficiency%20gains))",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "External link about 2025 trends but not enforcing action."
+    },
+    {
+      "sent_id": "REQ-010::s123",
+      "order": 123,
+      "text": "([How small businesses are benefiting from open banking-driven cloud accountancy - Open Banking](https://www.openbanking.org.uk/insights/how-small-businesses-are-benefiting-from-open-banking-driven-cloud-accountancy/#:~:text=More%20significantly%2C%2072,banking%20connections%20%E2%80%93%20as%20important))",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "External link about open banking benefits without enforcement."
+    },
+    {
+      "sent_id": "REQ-010::s124",
+      "order": 124,
+      "text": "([SOC 2 for SaaS: All You Need to Know - Sprinto](https://sprinto.com/blog/why-soc-2-for-saas-companies/#:~:text=Data%20security%3A%20SOC%202%20compliance,availability%2C%20confidentiality%2C%20and%20processing%20integrity)), ensuring our vision aligns with SMB needs and SaaS architecture standards.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.75,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "External source on SOC 2 compliance but not enforcing."
+    }
+  ]
+}

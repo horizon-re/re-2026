@@ -1,0 +1,6 @@
+🚫 Blocking merge until EU auth latency is addressed. Current benchmark (auth_eu_p95 = 812 ms) exceeds our SLA target of 500 ms. Before this PR can proceed, please:
+	1.	Roll out Redis-based session caching to reduce DB roundtrips.
+	2.	Implement edge token validation to cut request latency.
+	3.	Attach a rollback plan in case the cache rollout introduces regressions.
+
+Apply these optimizations and re-run the benchmark. Once auth_eu_p95 < 500 ms, remove the needs-perf-fix label and tag reviewers for re-approval. Performance SLAs are non-negotiable for login-critical flows.

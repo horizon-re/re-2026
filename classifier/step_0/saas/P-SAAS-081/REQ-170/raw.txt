@@ -1,0 +1,10 @@
+**Header Normalization**  
+To ensure consistent data handling, the ETL process will first normalize headers by stripping emojis and mapping Demotic characters to their corresponding UNICODE names. This step aims to eliminate potential encoding discrepancies and improve data clarity throughout the transformation pipeline. Emojis will be replaced with their textual descriptions where applicable, and Demotic characters will be mapped using standard UNICODE representations.
+
+**Conversion**  
+The next phase involves converting CSV (Comma-Separated Values) files to TSV (Tab-Separated Values) format to facilitate better compatibility with downstream systems and tools. Special care will be taken to escape any existing tab characters within fields to prevent misinterpretation during parsing. This conversion ensures that data integrity is maintained while accommodating systems that require tab-delimited formats for efficient processing.
+
+**Validation**  
+Post-conversion, each row will undergo checksum validation to verify data integrity and detect any potential transmission errors or data corruption. Rows failing the checksum validation will be logged to the `hieroglyph_etl.err` file for further investigation and remediation. This validation step is crucial in maintaining the reliability and accuracy of the transformed data, ensuring that only consistent and error-free information proceeds to subsequent stages of processing.
+
+This ETL remediation plan aims to enhance the robustness and reliability of the data transformation process, addressing key normalization, conversion, and validation requirements to meet operational standards effectively.

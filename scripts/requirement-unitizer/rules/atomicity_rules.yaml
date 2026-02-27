@@ -1,0 +1,13 @@
+split_on:
+  - coordinated_verbs
+  - sequential_markers
+  - multiple_conditions
+
+sequential_markers:
+  - then
+  - after
+  - before
+  - subsequently
+
+max_units_per_sentence: 5
+mode: conservative

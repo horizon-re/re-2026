@@ -1,0 +1,12 @@
+{
+  "doc_id": "c836f946-0cc3-5328-bfb2-83e23366cfc5",
+  "req_key": "saas::P-SAAS-079::REQ-168",
+  "req_id": "REQ-168",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-079",
+  "char_count": 1176,
+  "line_count": 12,
+  "sha256_raw": "3debbcb87f05b247c2d112d4b837219074e4ee3943b306ce2dfbbd8f7f4585f1",
+  "sha256_refined": "af94b0319a95d70224997286157729bd9bedfa4b220cdb62e42134c1fe1bee72",
+  "created_at": 1768691359.0200322
+}

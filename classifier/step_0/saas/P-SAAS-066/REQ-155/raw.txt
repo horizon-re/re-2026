@@ -1,0 +1,13 @@
+**Data Normalization Brief: Handling Inconsistent Date Formats and PII Exposure**
+
+**Problem**  
+A recently leaked CSV dataset contains sensitive personal data, including Social Security Numbers (SSNs) and full addresses, alongside non-standard date formats. Dates are recorded in two inconsistent formats: `YYYYDDMM` and Julian day format, with several instances of misalignment between the two. This inconsistency complicates parsing and creates risk in downstream processing. Moreover, the exposure of PII in its raw form violates data protection policies and compliance requirements.
+
+**Normalization Steps**  
+To establish consistency, all date entries will be normalized to the ISO 8601 format (`YYYY-MM-DD`). Custom parsers will be implemented to correctly handle the reversed `YYYYDDMM` structure and convert Julian dates while validating parity between both formats. A null-safe parsing strategy will be applied to skip and flag corrupt or missing entries without breaking the pipeline. Each transformation will include unit verification to prevent incorrect mappings, especially across leap years.
+
+**PII Redaction**  
+To mitigate risk, SSNs will be redacted using SHA-256 hashing with a unique, securely stored salt to preserve integrity without compromising identity. Address fields will be entirely dropped from the dataset, as they are not essential for the intended analysis.
+
+**Validation & Logging**  
+A dedicated unit test suite will cover edge cases, including 366-day leap years and Julian-to-Gregorian mismatches. All rejected or unparseable entries will be logged to a separate file, `csv_date_errors`, enabling auditability and facilitating manual review without polluting the clean dataset.

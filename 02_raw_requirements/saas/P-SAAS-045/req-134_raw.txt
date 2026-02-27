@@ -1,0 +1,18 @@
+**Problem Statement**  
+The current churn prediction model is falling short in identifying potential upsell opportunities, leading to missed revenue growth. Sales teams have expressed dissatisfaction with the lack of actionable insights, particularly regarding customers who appear at risk but are actually primed for expansion.
+
+**Solution Outline**  
+To address this, we will enhance the existing churn pipeline by integrating an *upsell candidate score*. This score will be derived using new features such as recent spend delta (month-over-month changes) and feature adoption velocity (rate of product usage growth). This hybrid model aims to not only flag churn risks but also surface accounts with high upsell potential, helping sales teams better prioritize outreach.
+
+**Metrics**  
+Our target is a **10% increase in upsell conversions** and a **5% reduction in false-positive churn alerts**, improving both revenue capture and operational efficiency.
+
+**Tasks & Owners**  
+- **Data Feature Engineering** – Lead: @data-team  
+- **Model Retraining & Validation** – Lead: @ml-lead  
+- **Dashboard Integration & Comms Update** – Lead: @product-ops  
+
+**Timeline**  
+- **Kickoff:** May 5, 2025  
+- **Pilot Results:** May 26, 2025  
+This phased rollout will allow time for iterative tuning before full deployment.

@@ -1,0 +1,95 @@
+{
+  "doc_id": "5f951227-1ac6-56d3-ac06-505ab51014b6",
+  "req_key": "saas::P-SAAS-052::REQ-141",
+  "req_id": "REQ-141",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-052",
+  "source": {
+    "raw_path": "02_raw_requirements/saas/P-SAAS-052/req-141_raw.txt",
+    "refined_path": "03_refined_json_normalized/saas/P-SAAS-052/req-141_refined.json",
+    "origin": "both"
+  },
+  "text": "SEV-1 Alert: “epoch overflow 2038-01-19 03:14:08” triggered critical time_t failure. All engineers: immediately rollback to build v2.7.3 across all regions using `ci-hotfix.sh`. Mitigation SLA: pipelines must be green within 15 minutes. An epoch-safe patch must be cut and validated by EOD. Create a post-mortem ticket with root-cause analysis and include a regression test explicitly covering `time_t >= INT32_MAX`. No exceptions—this needs airtight verification.",
+  "structured_data": [
+    {
+      "id": "REQ-141-HLJ-Chunk_1-Item_1-v1.0",
+      "domain": "unknown",
+      "summary": "Rollback to build v2.7.3 across all regions",
+      "priority": "High",
+      "tags": [
+        "rollback",
+        "ci_hotfix",
+        "build_v2_7_3"
+      ],
+      "subdomain": "incident_response",
+      "difficulty": 2,
+      "additionalNotes": "Triggered by SEV-1 epoch overflow alert",
+      "source_hlj_id": "REQ 001-001",
+      "domain_id": "P-SAAS-052"
+    },
+    {
+      "id": "REQ-141-HLJ-Chunk_1-Item_2-v1.0",
+      "domain": "unknown",
+      "summary": "Ensure CI pipelines pass within 15 minutes",
+      "priority": "High",
+      "tags": [
+        "pipeline",
+        "sla",
+        "ci_cd"
+      ],
+      "subdomain": "devops",
+      "difficulty": 3,
+      "additionalNotes": "Mitigation SLA requires green CI status ≤ 15 min",
+      "source_hlj_id": "REQ 001-002",
+      "domain_id": "P-SAAS-052"
+    },
+    {
+      "id": "REQ-141-HLJ-Chunk_1-Item_3-v1.0",
+      "domain": "unknown",
+      "summary": "Deliver epoch-safe patch by EOD",
+      "priority": "High",
+      "tags": [
+        "patch",
+        "epoch_safe",
+        "deadline"
+      ],
+      "subdomain": "maintenance",
+      "difficulty": 3,
+      "additionalNotes": "Patch must address time_t overflow issue",
+      "source_hlj_id": "REQ 001-003",
+      "domain_id": "P-SAAS-052"
+    },
+    {
+      "id": "REQ-141-HLJ-Chunk_1-Item_4-v1.0",
+      "domain": "unknown",
+      "summary": "Create post-mortem with root-cause analysis",
+      "priority": "Medium",
+      "tags": [
+        "post_mortem",
+        "root_cause",
+        "incident"
+      ],
+      "subdomain": "incident_response",
+      "difficulty": 2,
+      "additionalNotes": "Should include steps to prevent reoccurrence",
+      "source_hlj_id": "REQ 001-004",
+      "domain_id": "P-SAAS-052"
+    },
+    {
+      "id": "REQ-141-HLJ-Chunk_1-Item_5-v1.0",
+      "domain": "unknown",
+      "summary": "Add regression test for time_t >= INT32_MAX",
+      "priority": "High",
+      "tags": [
+        "unit_test",
+        "regression",
+        "time_overflow"
+      ],
+      "subdomain": "testing",
+      "difficulty": 4,
+      "additionalNotes": "Ensures future compatibility beyond 2038 epoch",
+      "source_hlj_id": "REQ 001-005",
+      "domain_id": "P-SAAS-052"
+    }
+  ]
+}

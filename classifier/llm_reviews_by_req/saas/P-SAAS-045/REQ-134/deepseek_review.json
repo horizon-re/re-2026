@@ -1,0 +1,139 @@
+{
+  "req_id": "REQ-134",
+  "doc_id": "0cfdb56e-b0f5-5451-8773-8a6f04e8b9c3",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-045",
+  "model": "deepseek-r1:7b",
+  "review_timestamp": "2026-01-20T23:34:17.940704+00:00",
+  "counts": {
+    "total": 12,
+    "llm_pos": 2,
+    "pipe_pos": 3,
+    "llm_neg": 10,
+    "flip_pos_to_neg": 2,
+    "pipe_neg": 9,
+    "flip_neg_to_pos": 1
+  },
+  "reviews": [
+    {
+      "sent_id": "REQ-134::s001",
+      "order": 1,
+      "text": "**Problem Statement**",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Problem statement about current model shortcomings."
+    },
+    {
+      "sent_id": "REQ-134::s002",
+      "order": 2,
+      "text": "The current churn prediction model is falling short in identifying potential upsell opportunities, leading to missed revenue growth.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Issues with the model leading to missed revenue."
+    },
+    {
+      "sent_id": "REQ-134::s003",
+      "order": 3,
+      "text": "Sales teams have expressed dissatisfaction with the lack of actionable insights, particularly regarding customers who appear at risk but are actually primed for expansion.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Customer dissatisfaction with insights."
+    },
+    {
+      "sent_id": "REQ-134::s004",
+      "order": 4,
+      "text": "**Solution Outline**  \nTo address this, we will enhance the existing churn pipeline by integrating an *upsell candidate score*.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Enhancing the churn pipeline to integrate an upsell candidate score is an enforceable system behavior."
+    },
+    {
+      "sent_id": "REQ-134::s005",
+      "order": 5,
+      "text": "This score will be derived using new features such as recent spend delta (month-over-month changes) and feature adoption velocity (rate of product usage growth).",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "This sentence explains how the score will be derived, not an enforceable requirement."
+    },
+    {
+      "sent_id": "REQ-134::s006",
+      "order": 6,
+      "text": "This hybrid model aims to not only flag churn risks but also surface accounts with high upsell potential, helping sales teams better prioritize outreach.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Desired outcomes for the model but no enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-134::s007",
+      "order": 7,
+      "text": "**Metrics**",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.5,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Metrics section with targets."
+    },
+    {
+      "sent_id": "REQ-134::s008",
+      "order": 8,
+      "text": "Our target is a **10% increase in upsell conversions** and a **5% reduction in false-positive churn alerts**, improving both revenue capture and operational efficiency.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.95,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Clear enforceable goals for conversions and false positives."
+    },
+    {
+      "sent_id": "REQ-134::s009",
+      "order": 9,
+      "text": "**Tasks & Owners**  \n- **Data Feature Engineering** – Lead: @data-team  \n- **Model Retraining & Validation** – Lead: @ml-lead  \n- **Dashboard Integration & Comms Update** – Lead: @product-ops  \n\n**Timeline**  \n- **Kickoff:**",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Tasks and owners listed but not enforceable."
+    },
+    {
+      "sent_id": "REQ-134::s010",
+      "order": 10,
+      "text": "May 5, 2025  \n- **Pilot Results:**",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.5,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Timeline with dates provided."
+    },
+    {
+      "sent_id": "REQ-134::s011",
+      "order": 11,
+      "text": "May 26, 2025",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.4,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "No specific action or enforceable behavior mentioned."
+    },
+    {
+      "sent_id": "REQ-134::s012",
+      "order": 12,
+      "text": "This phased rollout will allow time for iterative tuning before full deployment.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "This is about the phased rollout plan, not enforceable behavior."
+    }
+  ]
+}

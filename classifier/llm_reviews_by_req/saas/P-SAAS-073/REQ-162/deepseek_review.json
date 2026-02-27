@@ -1,0 +1,87 @@
+{
+  "req_id": "REQ-162",
+  "doc_id": "97ce306e-c6da-50bd-baad-2eaca0cca2f2",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-073",
+  "model": "deepseek-r1:7b",
+  "review_timestamp": "2026-01-21T00:19:09.568868+00:00",
+  "counts": {
+    "total": 7,
+    "llm_neg": 2,
+    "pipe_neg": 7,
+    "llm_pos": 5,
+    "flip_neg_to_pos": 5
+  },
+  "reviews": [
+    {
+      "sent_id": "REQ-162::s001",
+      "order": 1,
+      "text": "Alpha Nine Zulu, this is Control Node.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Just an identifier, not a requirement."
+    },
+    {
+      "sent_id": "REQ-162::s002",
+      "order": 2,
+      "text": "You are ordered to switch your primary data link to frequency shift keying modulation at 1200 baud on a 14 kHz carrier.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Imposes specific behavior on the system."
+    },
+    {
+      "sent_id": "REQ-162::s003",
+      "order": 3,
+      "text": "In the event that no acknowledgment is received within five minutes, automatically revert to continuous wave transmission at ten words per minute.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Imposes an enforceable behavior condition."
+    },
+    {
+      "sent_id": "REQ-162::s004",
+      "order": 4,
+      "text": "After completion of the mode change, calculate and apply a new CRC-16 checksum to the node table and broadcast the updated checksum to all adjacent peers.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "PERFORMANCE_REQUIREMENT",
+      "reason_text": "Imposes an enforceable action on the system."
+    },
+    {
+      "sent_id": "REQ-162::s005",
+      "order": 5,
+      "text": "Effective immediately, upon receipt of this command, execute and log any errors to local memory in the return status report.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Imposes immediate action and logging."
+    },
+    {
+      "sent_id": "REQ-162::s006",
+      "order": 6,
+      "text": "Confirm execution of all directives by return status message.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Imposes a specific command confirmation requirement."
+    },
+    {
+      "sent_id": "REQ-162::s007",
+      "order": 7,
+      "text": "Out.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Too vague, no action specified."
+    }
+  ]
+}

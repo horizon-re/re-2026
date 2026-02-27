@@ -1,0 +1,12 @@
+{
+  "doc_id": "9ec33d6a-75f5-5c28-a47d-519ed426c545",
+  "req_key": "saas::P-SAAS-035::REQ-124",
+  "req_id": "REQ-124",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-035",
+  "char_count": 324,
+  "line_count": 1,
+  "sha256_raw": "50b29fd021a6d38267f663ed16d17595e88aea388ab91ccea5878f5bfee89ad0",
+  "sha256_refined": "548349c9a7b0c1b91f932bf5a526a045d56cb00cb4659ba695ebefa6ec70eef6",
+  "created_at": 1768691358.2483492
+}

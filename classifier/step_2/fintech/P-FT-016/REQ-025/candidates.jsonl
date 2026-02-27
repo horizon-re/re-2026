@@ -1,0 +1,1 @@
+{"doc_id": "4857e3f1-9bba-5cf4-abc4-2c4fc6bfa2e8", "req_id": "REQ-025", "sent_id": "REQ-025::s010", "order": 10, "text": "Acceptance Criteria:\n\t•\tApply after score > threshold\n\t•\t@dev Add region check logic\n\t•\tTBD…", "is_candidate": true, "signals": {"action": true, "modal": false, "system": false, "constraint": true}}

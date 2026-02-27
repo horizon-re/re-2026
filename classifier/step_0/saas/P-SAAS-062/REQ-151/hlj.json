@@ -1,0 +1,79 @@
+{
+  "doc_id": "b5029907-76a4-5928-acfc-f156a82a42fc",
+  "req_key": "saas::P-SAAS-062::REQ-151",
+  "req_id": "REQ-151",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-062",
+  "source": {
+    "raw_path": "02_raw_requirements/saas/P-SAAS-062/req-151_raw.txt",
+    "refined_path": "03_refined_json_normalized/saas/P-SAAS-062/req-151_refined.json",
+    "origin": "both"
+  },
+  "text": "**Root Cause Analysis (RCA) – Negative CPU Metric Due to Counter Reset and Rate Calculation Bug**\n\nA -17% CPU usage anomaly was observed, traced back to two compounding issues: a metric counter reset and an underlying bug in the Prometheus rate calculation. When a monitored service was restarted, its CPU counter reset to zero, which is expected behavior. However, the Prometheus `rate()` function used in our query did not properly account for this reset, resulting in an artificially negative delta between samples. This caused the system to report a negative CPU utilization, which is mathematically invalid but not automatically filtered out by default PromQL behavior.\n\nA patch has been applied to address this issue. First, we added a `clamp_min(0, rate(...))` operation in the PromQL expression to ensure that all computed rates are bounded at a minimum of zero. This change prevents negative values from being returned regardless of counter behavior. Additionally, a safeguard was added in the exporter logic to clamp any preprocessed CPU rates to zero if a reset is detected.\n\nTo prevent recurrence, a dashboard alert was introduced to monitor for any negative values in critical metrics. This allows for early detection of similar anomalies and ensures timely remediation before impacting downstream systems.",
+  "structured_data": [
+    {
+      "id": "REQ-151-HLJ-Chunk_1-Item_1-v1.0",
+      "domain": "saas",
+      "summary": "Clamp PromQL rate outputs to minimum zero",
+      "priority": "High",
+      "tags": [
+        "promql",
+        "metrics_validation",
+        "cpu"
+      ],
+      "subdomain": "monitoring",
+      "difficulty": 2,
+      "additionalNotes": "Ensure Prometheus queries return only non-negative CPU rates using clamp_min.",
+      "source_hlj_id": "REQ 001-001",
+      "domain_id": "P-SAAS-062"
+    },
+    {
+      "id": "REQ-151-HLJ-Chunk_1-Item_2-v1.0",
+      "domain": "saas",
+      "summary": "Patch exporter to clamp preprocessed CPU rates",
+      "priority": "High",
+      "tags": [
+        "exporter_fix",
+        "cpu",
+        "metrics_pipeline"
+      ],
+      "subdomain": "monitoring",
+      "difficulty": 3,
+      "additionalNotes": "Exporter must detect counter resets and clamp resulting CPU rate values to zero.",
+      "source_hlj_id": "REQ 001-002",
+      "domain_id": "P-SAAS-062"
+    },
+    {
+      "id": "REQ-151-HLJ-Chunk_1-Item_3-v1.0",
+      "domain": "saas",
+      "summary": "Add dashboard alert for negative metric detection",
+      "priority": "Medium",
+      "tags": [
+        "alerting",
+        "dashboard",
+        "anomaly_detection"
+      ],
+      "subdomain": "observability",
+      "difficulty": 2,
+      "additionalNotes": "Monitor dashboards for any metrics reporting values below zero to trigger investigation.",
+      "source_hlj_id": "REQ 001-003",
+      "domain_id": "P-SAAS-062"
+    },
+    {
+      "id": "REQ-151-HLJ-Chunk_1-Item_4-v1.0",
+      "domain": "saas",
+      "summary": "Support Prometheus counter reset handling",
+      "priority": "Low",
+      "tags": [
+        "counter_reset",
+        "rate_bug",
+        "prometheus"
+      ],
+      "subdomain": "monitoring",
+      "difficulty": 3,
+      "additionalNotes": "origin: implied – Prometheus query logic must gracefully handle counter resets without producing negative rates.",
+      "source_hlj_id": "REQ 001-004",
+      "domain_id": "P-SAAS-062"
+    }
+  ]
+}

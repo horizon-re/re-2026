@@ -1,0 +1,247 @@
+{
+  "req_id": "REQ-029",
+  "doc_id": "6cc58f93-b5a9-5fdd-b23b-24f63b78c1ff",
+  "domain": "fintech",
+  "prompt_id": "P-FT-020",
+  "model": "deepseek-r1:7b",
+  "review_timestamp": "2026-01-20T22:28:18.018930+00:00",
+  "counts": {
+    "total": 23,
+    "llm_neg": 21,
+    "pipe_neg": 23,
+    "llm_pos": 2,
+    "flip_neg_to_pos": 2
+  },
+  "reviews": [
+    {
+      "sent_id": "REQ-029::s001",
+      "order": 1,
+      "text": "# Session Meta\nDate: 2025‑04‑18  \nParticipants: AO‑01, AO‑02, AO‑03  \nPrototype Version: v0.7  \n\n# Verbatim Highlights\n• “It guessed ‘Catering’ instead of ‘Office Lunch’—close, but not perfect.”",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.85,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Session meta details and verbatim highlights are presented without enforcing any system behavior."
+    },
+    {
+      "sent_id": "REQ-029::s002",
+      "order": 2,
+      "text": "{highlight}  \n• “Why does the OCR freak out when the receipt is wrinkled?”",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.85,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Issue with OCR when receipt is wrinkled is a concern but not enforceable."
+    },
+    {
+      "sent_id": "REQ-029::s003",
+      "order": 3,
+      "text": "{pain}  \n• “Great job auto-categorising Amazon receipts; that saved me so much time!”",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.85,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "User satisfaction with auto-categorizing receipts is an observation."
+    },
+    {
+      "sent_id": "REQ-029::s004",
+      "order": 4,
+      "text": "{delight}  \n• “Took forever to process a blurry receipt—made me retry three times.”",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.85,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Receipt processing issue is noted but not enforcing any behavior."
+    },
+    {
+      "sent_id": "REQ-029::s005",
+      "order": 5,
+      "text": "{pain}  \n• “Confused parking fees with transport expenses—not intuitive enough.”",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.85,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Confusion between parking fees and transport expenses is a pain point."
+    },
+    {
+      "sent_id": "REQ-029::s006",
+      "order": 6,
+      "text": "{pain}  \n• “Wish I could easily edit the category after it's processed—too many taps.”",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.85,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Desire to edit categories after processing is an observation."
+    },
+    {
+      "sent_id": "REQ-029::s007",
+      "order": 7,
+      "text": "{pain}  \n• “Loved the simplicity of the overview dashboard.”",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.85,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "User appreciation for dashboard is an example."
+    },
+    {
+      "sent_id": "REQ-029::s008",
+      "order": 8,
+      "text": "{highlight}  \n• “It doesn’t recognize handwritten tips—annoying.”",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.85,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Issue with handwritten tips being annoying is a concern."
+    },
+    {
+      "sent_id": "REQ-029::s009",
+      "order": 9,
+      "text": "{pain}  \n• “Super handy to get instant totals by category at month-end.”",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.85,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Instant totals by category are appreciated but not enforcing any action."
+    },
+    {
+      "sent_id": "REQ-029::s010",
+      "order": 10,
+      "text": "{highlight}  \n\n# Observed Behaviours\n1.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.85,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Observed behavior of scanning button spammed is a concern."
+    },
+    {
+      "sent_id": "REQ-029::s011",
+      "order": 11,
+      "text": "User dragged PDF instead of JPEG (auto‑converted?)  \n2.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.85,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Issue with PDF vs. JPEG conversion is an observation."
+    },
+    {
+      "sent_id": "REQ-029::s012",
+      "order": 12,
+      "text": "Spammed **“Re‑scan”** button",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.85,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Spammed 'Re-scan' button is observed."
+    },
+    {
+      "sent_id": "REQ-029::s013",
+      "order": 13,
+      "text": "4× after mis‑tag.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.85,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Mis-tagging issues are multiple and noted."
+    },
+    {
+      "sent_id": "REQ-029::s014",
+      "order": 14,
+      "text": "3. Couldn’t quickly locate manual edit option; visibly frustrated.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.85,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Difficulty locating manual edit is observed."
+    },
+    {
+      "sent_id": "REQ-029::s015",
+      "order": 15,
+      "text": "4. AO‑02 repeatedly pressed category dropdown hoping for auto-suggestions.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.85,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Repeating category dropdown is an observation."
+    },
+    {
+      "sent_id": "REQ-029::s016",
+      "order": 16,
+      "text": "5. Skipped the onboarding tips instantly.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.85,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Skipping onboarding tips is observed."
+    },
+    {
+      "sent_id": "REQ-029::s017",
+      "order": 17,
+      "text": "6. Leave one step blank: “____",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.85,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Left step blank is a problem."
+    },
+    {
+      "sent_id": "REQ-029::s018",
+      "order": 18,
+      "text": "(TBD)”.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.75,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "(TBD)"
+    },
+    {
+      "sent_id": "REQ-029::s019",
+      "order": 19,
+      "text": "# Quick‑Win Ideas\n- AI “fuzzy‑match” to map ‘Starbucs’→‘Starbucks’.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.85,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "AI fuzzy-match suggestion is an idea."
+    },
+    {
+      "sent_id": "REQ-029::s020",
+      "order": 20,
+      "text": "- Smart rules engine suggests GL code ✅/❌.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 1.0,
+      "reason_code": "PERFORMANCE_REQUIREMENT",
+      "reason_text": "- Smart rules engine suggests GL code ✅/❌."
+    },
+    {
+      "sent_id": "REQ-029::s021",
+      "order": 21,
+      "text": "- Allow one-tap edits directly from category results screen.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Explicitly states an enforceable system behavior."
+    },
+    {
+      "sent_id": "REQ-029::s022",
+      "order": 22,
+      "text": "[OPEN Q]  \n\n# Next Steps\n☐ Validate OCR edge cases (Owner: Dev)  \n☐ Heuristic categorisation accuracy ≥ 90 % (Owner: Data)",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Checklist items for next steps, not a requirement."
+    },
+    {
+      "sent_id": "REQ-029::s023",
+      "order": 23,
+      "text": "☐ Improve UI visibility for manual category edits (Owner: UX)  \n☐ – leave one checkbox line empty",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Procedural instruction without enforceable behavior."
+    }
+  ]
+}

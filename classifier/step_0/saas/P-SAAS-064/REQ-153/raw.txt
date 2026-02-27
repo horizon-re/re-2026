@@ -1,0 +1,17 @@
+**Ticket Title:** OCR Misinterpretation of "5 s" as "$5" Leading to Price Calculation Error
+
+**Description:**  
+Our OCR system is incorrectly interpreting the string "5 s" (representing "5 seconds") as "$5", leading to miscalculations in price-sensitive contexts where time-based data is critical. This is especially problematic in automated billing and log analysis pipelines where time and currency are both present, creating ambiguities.
+
+**Tasks:**  
+1. **Implement contextual spell-checking logic** that distinguishes between time units (e.g., "s", "sec", "seconds") and monetary values (e.g., "$", "USD", etc.). This should rely on surrounding words and common patterns to infer the correct unit.
+2. **Introduce a manual review flag** for any extracted value where time and currency indicators are mixed or ambiguous (e.g., "$5s", "5 $s", etc.).
+3. **Update the OCR post-processing pipeline** to apply this logic before final value extraction is returned downstream.
+
+**Acceptance Criteria:**  
+- System must correctly identify "5 s" as time when used in timing or duration context.
+- No false positive currency values should result from timing strings.
+- All flagged ambiguities should appear in the review dashboard with context snippet and original OCR output.
+
+**Priority:** High  
+**Estimate:** 3 engineering days

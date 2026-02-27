@@ -1,0 +1,14 @@
+{
+  "doc_id": "6cc58f93-b5a9-5fdd-b23b-24f63b78c1ff",
+  "req_key": "fintech::P-FT-020::REQ-029",
+  "req_id": "REQ-029",
+  "domain": "fintech",
+  "prompt_id": "P-FT-020",
+  "source": {
+    "raw_path": "02_raw_requirements/fintech/P-FT-020/req-029_raw.txt",
+    "refined_path": null,
+    "origin": "raw_only"
+  },
+  "text": "# Session Meta\nDate: 2025‑04‑18  \nParticipants: AO‑01, AO‑02, AO‑03  \nPrototype Version: v0.7  \n\n# Verbatim Highlights\n• “It guessed ‘Catering’ instead of ‘Office Lunch’—close, but not perfect.” {highlight}  \n• “Why does the OCR freak out when the receipt is wrinkled?” {pain}  \n• “Great job auto-categorising Amazon receipts; that saved me so much time!” {delight}  \n• “Took forever to process a blurry receipt—made me retry three times.” {pain}  \n• “Confused parking fees with transport expenses—not intuitive enough.” {pain}  \n• “Wish I could easily edit the category after it's processed—too many taps.” {pain}  \n• “Loved the simplicity of the overview dashboard.” {highlight}  \n• “It doesn’t recognize handwritten tips—annoying.” {pain}  \n• “Super handy to get instant totals by category at month-end.” {highlight}  \n\n# Observed Behaviours\n1. User dragged PDF instead of JPEG (auto‑converted?)  \n2. Spammed **“Re‑scan”** button 4× after mis‑tag.  \n3. Couldn’t quickly locate manual edit option; visibly frustrated.  \n4. AO‑02 repeatedly pressed category dropdown hoping for auto-suggestions.  \n5. Skipped the onboarding tips instantly.  \n6. Leave one step blank: “____ (TBD)”.  \n\n# Quick‑Win Ideas\n- AI “fuzzy‑match” to map ‘Starbucs’→‘Starbucks’.  \n- Smart rules engine suggests GL code ✅/❌.  \n- Allow one-tap edits directly from category results screen. [OPEN Q]  \n\n# Next Steps\n☐ Validate OCR edge cases (Owner: Dev)  \n☐ Heuristic categorisation accuracy ≥ 90 % (Owner: Data)  \n☐ Improve UI visibility for manual category edits (Owner: UX)  \n☐ – leave one checkbox line empty",
+  "structured_data": null
+}

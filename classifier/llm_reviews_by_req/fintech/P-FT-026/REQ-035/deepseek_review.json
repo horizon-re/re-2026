@@ -1,0 +1,207 @@
+{
+  "req_id": "REQ-035",
+  "doc_id": "e32f23f0-02a0-51d0-b828-f07c0626432a",
+  "domain": "fintech",
+  "prompt_id": "P-FT-026",
+  "model": "deepseek-r1:7b",
+  "review_timestamp": "2026-01-20T22:31:49.182629+00:00",
+  "counts": {
+    "total": 19,
+    "llm_neg": 12,
+    "pipe_neg": 19,
+    "llm_pos": 7,
+    "flip_neg_to_pos": 7
+  },
+  "reviews": [
+    {
+      "sent_id": "REQ-035::s001",
+      "order": 1,
+      "text": "[Alt text: A weary Wojak cartoon hunched over a spreadsheet labeled \"Quarterly Tax Math\", with a clock showing midnight.]",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describes an image and context without enforcing behavior."
+    },
+    {
+      "sent_id": "REQ-035::s002",
+      "order": 2,
+      "text": "When quarterly tax math breaks your brain at midnight.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "EXAMPLE_OR_EXPLANATION",
+      "reason_text": "Complaint about stress without enforcing behavior."
+    },
+    {
+      "sent_id": "REQ-035::s003",
+      "order": 3,
+      "text": "Jess (Intern): I know it's late and the pressure's on; I just thought we could use a quick laugh to keep us going.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Internal observation without action."
+    },
+    {
+      "sent_id": "REQ-035::s004",
+      "order": 4,
+      "text": "Honestly, this meme sums up how quarter-end tax math feels right now.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "EXAMPLE_OR_EXPLANATION",
+      "reason_text": "Meme about stress."
+    },
+    {
+      "sent_id": "REQ-035::s005",
+      "order": 5,
+      "text": "Matt (CFO): I appreciate the levity, but compliance is no joke.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "COMPLIANCE_REQUIREMENT",
+      "reason_text": "Mention of compliance as a constraint."
+    },
+    {
+      "sent_id": "REQ-035::s006",
+      "order": 6,
+      "text": "The overtime and consulting fees for these filings are through the roof - we could practically hire another full-time analyst with what it's costing us each quarter.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.7,
+      "reason_code": "PERFORMANCE_REQUIREMENT",
+      "reason_text": "Cost-related statement about overtime."
+    },
+    {
+      "sent_id": "REQ-035::s007",
+      "order": 7,
+      "text": "Our current process isn't sustainable.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Observation about process sustainability."
+    },
+    {
+      "sent_id": "REQ-035::s008",
+      "order": 8,
+      "text": "Jess (Intern):",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-035::s009",
+      "order": 9,
+      "text": "You're right.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-035::s010",
+      "order": 10,
+      "text": "We've spent endless hours every night poring over those spreadsheets to ensure nothing slips through the cracks.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Cost analysis observation."
+    },
+    {
+      "sent_id": "REQ-035::s011",
+      "order": 11,
+      "text": "It's draining for everyone and definitely not efficient.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-035::s012",
+      "order": 12,
+      "text": "Riya (Dev): I have an idea to ease this burden.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Suggesting a new feature as enforced behavior."
+    },
+    {
+      "sent_id": "REQ-035::s013",
+      "order": 13,
+      "text": "What if we build an LLM wrapper around our Google Sheet TaxRules_v2 to handle these calculations automatically?",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Proposed LLM wrapper as enforceable."
+    },
+    {
+      "sent_id": "REQ-035::s014",
+      "order": 14,
+      "text": "It would use all the rules we've defined and do the tax math on the fly.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Use of rules for calculation as enforceable."
+    },
+    {
+      "sent_id": "REQ-035::s015",
+      "order": 15,
+      "text": "That could save us a ton of time each quarter and significantly reduce the chance of human error.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-035::s016",
+      "order": 16,
+      "text": "VP Finance: There's real potential here - an AI-powered tax calculator using our own rules might be exactly the cost-saving solution we need.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "COMPLIANCE_REQUIREMENT",
+      "reason_text": "Potential compliance solution."
+    },
+    {
+      "sent_id": "REQ-035::s017",
+      "order": 17,
+      "text": "It could significantly cut down our compliance time and costs each quarter if it works as envisioned.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Cost-saving potential without action."
+    },
+    {
+      "sent_id": "REQ-035::s018",
+      "order": 18,
+      "text": "Let's explore this further.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Encouraging further exploration."
+    },
+    {
+      "sent_id": "REQ-035::s019",
+      "order": 19,
+      "text": "[ACTION] Draft spec.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 1.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Drafting a spec as enforceable action."
+    }
+  ]
+}

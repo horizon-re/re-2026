@@ -1,0 +1,95 @@
+{
+  "doc_id": "6dbdc3a6-a71c-58d6-885a-df498f9d405e",
+  "req_key": "saas::P-SAAS-013::REQ-102",
+  "req_id": "REQ-102",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-013",
+  "source": {
+    "raw_path": "02_raw_requirements/saas/P-SAAS-013/req-102_raw.txt",
+    "refined_path": "03_refined_json_normalized/saas/P-SAAS-013/req-102_refined.json",
+    "origin": "both"
+  },
+  "text": "Hey @dev-team, we need to get a centralized microservices health-check dashboard up ASAP. Being on call tonight has highlighted the need for better visibility into our services.\n\nIdeally, it should display key metrics like CPU%, memory%, restart count, and latency for all our microservices. Let's aim for a refresh interval of 30 seconds and include a \"last updated\" timestamp on each panel.\n\nWe also need an alert rule configured: if any service restarts more than 5 times within a 10-minute window, it should automatically post a notification to the #devops channel.\n\nI've linked some example Grafana panels here: [Link to Grafana examples] and the backlog ticket for this task is here: [Link to Backlog Ticket]. Let's prioritize this tomorrow morning. Thanks!",
+  "structured_data": [
+    {
+      "id": "REQ-102-HLJ-Chunk_1-Item_1-v1.0",
+      "domain": "saas",
+      "summary": "Build centralized dashboard for microservices health-checks",
+      "priority": "High",
+      "tags": [
+        "dashboard",
+        "health_check",
+        "microservices"
+      ],
+      "subdomain": "observability",
+      "difficulty": 3,
+      "additionalNotes": "Centralized view for service health visibility.",
+      "source_hlj_id": "REQ 001-001",
+      "domain_id": "P-SAAS-013"
+    },
+    {
+      "id": "REQ-102-HLJ-Chunk_1-Item_2-v1.0",
+      "domain": "saas",
+      "summary": "Display CPU%, memory%, restart count, and latency metrics",
+      "priority": "High",
+      "tags": [
+        "metrics",
+        "monitoring",
+        "performance"
+      ],
+      "subdomain": "observability",
+      "difficulty": 2,
+      "additionalNotes": "Key metrics for real-time health monitoring.",
+      "source_hlj_id": "REQ 001-002",
+      "domain_id": "P-SAAS-013"
+    },
+    {
+      "id": "REQ-102-HLJ-Chunk_1-Item_3-v1.0",
+      "domain": "saas",
+      "summary": "Refresh dashboard every 30 seconds with last updated timestamp",
+      "priority": "Medium",
+      "tags": [
+        "dashboard_refresh",
+        "real_time",
+        "monitoring"
+      ],
+      "subdomain": "observability",
+      "difficulty": 2,
+      "additionalNotes": "Maintain up-to-date service metrics display.",
+      "source_hlj_id": "REQ 001-003",
+      "domain_id": "P-SAAS-013"
+    },
+    {
+      "id": "REQ-102-HLJ-Chunk_1-Item_4-v1.0",
+      "domain": "saas",
+      "summary": "Configure alert for >5 restarts within 10 minutes",
+      "priority": "High",
+      "tags": [
+        "alerting",
+        "reliability",
+        "incident_response"
+      ],
+      "subdomain": "observability",
+      "difficulty": 3,
+      "additionalNotes": "Automatic incident notification based on restart threshold.",
+      "source_hlj_id": "REQ 001-004",
+      "domain_id": "P-SAAS-013"
+    },
+    {
+      "id": "REQ-102-HLJ-Chunk_1-Item_5-v1.0",
+      "domain": "saas",
+      "summary": "Post automatic notification to #devops channel on alert trigger",
+      "priority": "High",
+      "tags": [
+        "alerting",
+        "notification",
+        "devops"
+      ],
+      "subdomain": "observability",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied Notify DevOps team automatically on critical incidents.",
+      "source_hlj_id": "REQ 001-005",
+      "domain_id": "P-SAAS-013"
+    }
+  ]
+}

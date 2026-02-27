@@ -1,0 +1,95 @@
+{
+  "doc_id": "3ceaeef8-c3fb-5f42-98d1-8563886d35b7",
+  "req_key": "saas::P-SAAS-065::REQ-154",
+  "req_id": "REQ-154",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-065",
+  "source": {
+    "raw_path": "02_raw_requirements/saas/P-SAAS-065/req-154_raw.txt",
+    "refined_path": "03_refined_json_normalized/saas/P-SAAS-065/req-154_refined.json",
+    "origin": "both"
+  },
+  "text": "**Internal Memo**  \n**To:** Communications Team  \n**From:** Corporate Affairs  \n**Subject:** Press Release Correction – Uptime Statement Discrepancy  \n**Date:** April 23, 2025  \n\nWe’ve identified a critical discrepancy in the current draft of our upcoming press release. The statement “0 ms downtime” inaccurately represents our service availability and conflicts with our established 95% SLA (Service Level Agreement).\n\nTo maintain accuracy and avoid potential legal and reputational risk, the copy must be revised immediately. The corrected phrasing should read:  \n\n**“We offer 99.95% uptime with a 5-minute SLA response window.”**\n\nThis revision more accurately reflects our operational metrics and aligns with the legal and technical documentation of our platform.\n\nAction Required:\n- Update the release with the revised language by **end of day Friday, May 2, 2025**.\n- Submit the revised draft to **Legal** for mandatory review prior to publication.\n- Ensure any previously distributed versions (internal or external) are flagged and recalled where possible to prevent confusion.\n\nWe appreciate your immediate attention to this matter. Please confirm once the update has been implemented and forwarded to Legal.\n\n—Corporate Affairs",
+  "structured_data": [
+    {
+      "id": "REQ-154-HLJ-Chunk_1-Item_1-v1.0",
+      "domain": "saas",
+      "summary": "Revise uptime copy to '99.95% uptime, 5-minute SLA'",
+      "priority": "High",
+      "tags": [
+        "uptime_metrics",
+        "sla_accuracy",
+        "press_release"
+      ],
+      "subdomain": "service_availability",
+      "difficulty": 2,
+      "additionalNotes": "Corrects misleading availability language to match actual SLA terms",
+      "source_hlj_id": "REQ 001-001",
+      "domain_id": "P-SAAS-065"
+    },
+    {
+      "id": "REQ-154-HLJ-Chunk_1-Item_2-v1.0",
+      "domain": "saas",
+      "summary": "Ensure legal review of the revised press release",
+      "priority": "High",
+      "tags": [
+        "legal_review",
+        "compliance",
+        "publication"
+      ],
+      "subdomain": "risk_management",
+      "difficulty": 2,
+      "additionalNotes": "Mandatory legal validation before external release",
+      "source_hlj_id": "REQ 001-002",
+      "domain_id": "P-SAAS-065"
+    },
+    {
+      "id": "REQ-154-HLJ-Chunk_1-Item_3-v1.0",
+      "domain": "saas",
+      "summary": "Submit revised draft by May 2, 2025 deadline",
+      "priority": "Medium",
+      "tags": [
+        "deadline",
+        "documentation",
+        "content_review"
+      ],
+      "subdomain": "communications",
+      "difficulty": 1,
+      "additionalNotes": "Time-sensitive delivery to prevent delays in publication",
+      "source_hlj_id": "REQ 001-003",
+      "domain_id": "P-SAAS-065"
+    },
+    {
+      "id": "REQ-154-HLJ-Chunk_1-Item_4-v1.0",
+      "domain": "saas",
+      "summary": "Recall any previously distributed inaccurate versions",
+      "priority": "Medium",
+      "tags": [
+        "version_control",
+        "communication",
+        "correction"
+      ],
+      "subdomain": "communications",
+      "difficulty": 2,
+      "additionalNotes": "Ensures inaccurate messaging is removed from circulation",
+      "source_hlj_id": "REQ 001-004",
+      "domain_id": "P-SAAS-065"
+    },
+    {
+      "id": "REQ-154-HLJ-Chunk_1-Item_5-v1.0",
+      "domain": "saas",
+      "summary": "Confirm update and legal submission completion",
+      "priority": "Low",
+      "tags": [
+        "confirmation",
+        "process_completion",
+        "tracking"
+      ],
+      "subdomain": "communications",
+      "difficulty": 1,
+      "additionalNotes": "origin: implied – follow-up confirmation to ensure task closure and audit trail",
+      "source_hlj_id": "REQ 001-005",
+      "domain_id": "P-SAAS-065"
+    }
+  ]
+}

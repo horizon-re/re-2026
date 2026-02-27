@@ -1,0 +1,207 @@
+{
+  "req_id": "REQ-033",
+  "doc_id": "c09f2060-0b95-5901-a709-cd2cbab7af9d",
+  "domain": "fintech",
+  "prompt_id": "P-FT-024",
+  "model": "deepseek-r1:7b",
+  "review_timestamp": "2026-01-20T22:30:37.882797+00:00",
+  "counts": {
+    "total": 19,
+    "llm_neg": 18,
+    "pipe_neg": 19,
+    "llm_pos": 1,
+    "flip_neg_to_pos": 1
+  },
+  "reviews": [
+    {
+      "sent_id": "REQ-033::s001",
+      "order": 1,
+      "text": "14:07 Carlo: Spent all weekend chasing that billing permissions bug 😡 Our RBAC ballooned to 420 lines of nested ifs.\n14:08 Sasha: Ugh, brutal.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.95,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describes an issue without imposing enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-033::s002",
+      "order": 2,
+      "text": "I saw a demo of an LLM generating RBAC rules from route metadata—basically an AI policy generator.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.75,
+      "reason_code": "EXAMPLE_OR_EXPLANATION",
+      "reason_text": "Proposes a feature without being enforceable."
+    },
+    {
+      "sent_id": "REQ-033::s003",
+      "order": 3,
+      "text": "Worth trying?\n14:09 Carlo: So just throw AI at it?",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.85,
+      "reason_code": "EXAMPLE_OR_EXPLANATION",
+      "reason_text": "Asks for action without stating a requirement."
+    },
+    {
+      "sent_id": "REQ-033::s004",
+      "order": 4,
+      "text": "I doubt an LLM can cover our edge cases.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.75,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Mentions limitations of AI but no requirement."
+    },
+    {
+      "sent_id": "REQ-033::s005",
+      "order": 5,
+      "text": "14:10 Sasha:",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "No text provided."
+    },
+    {
+      "sent_id": "REQ-033::s006",
+      "order": 6,
+      "text": "It's risky, but doing nothing is worse.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.75,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Expresses risk but no enforceable action."
+    },
+    {
+      "sent_id": "REQ-033::s007",
+      "order": 7,
+      "text": "The AI approach could give us a starting point.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "EXAMPLE_OR_EXPLANATION",
+      "reason_text": "Suggests a starting point without enforcing it."
+    },
+    {
+      "sent_id": "REQ-033::s008",
+      "order": 8,
+      "text": "14:11 Carlo: If AI gets a permission wrong, we'll be firefighting again.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.75,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Mentions potential failure of AI but no enforceable action."
+    },
+    {
+      "sent_id": "REQ-033::s009",
+      "order": 9,
+      "text": "I'm not comfortable with a black-box controlling prod access.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "SECURITY_REQUIREMENT",
+      "reason_text": "Expresses discomfort with control but no requirement."
+    },
+    {
+      "sent_id": "REQ-033::s010",
+      "order": 10,
+      "text": "14:12 Sasha: We won't accept its output blindly; we'll vet every rule.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.75,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "No direct enforceable action."
+    },
+    {
+      "sent_id": "REQ-033::s011",
+      "order": 11,
+      "text": "Think of the time we'd save.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.85,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Mentions time savings but no requirement."
+    },
+    {
+      "sent_id": "REQ-033::s012",
+      "order": 12,
+      "text": "14:13 Carlo: Rewriting it is brutal.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.75,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Expresses frustration with rewriting."
+    },
+    {
+      "sent_id": "REQ-033::s013",
+      "order": 13,
+      "text": "Either months of refactoring or gambling on AI.\n14:14 Sasha: Leadership expects a plan by Friday.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Presents options without enforcing any."
+    },
+    {
+      "sent_id": "REQ-033::s014",
+      "order": 14,
+      "text": "A full rewrite is huge.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.75,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Mentions full rewrite as a constraint."
+    },
+    {
+      "sent_id": "REQ-033::s015",
+      "order": 15,
+      "text": "An AI-assisted path might be quicker.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Suggests AI assistance without enforcing it."
+    },
+    {
+      "sent_id": "REQ-033::s016",
+      "order": 16,
+      "text": "14:15 Carlo:",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.85,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "No text provided."
+    },
+    {
+      "sent_id": "REQ-033::s017",
+      "order": 17,
+      "text": "[TODO] rewrite RBAC\n14:16 Sasha:",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Mentions rewriting RBAC but no requirement."
+    },
+    {
+      "sent_id": "REQ-033::s018",
+      "order": 18,
+      "text": "I'll bring up the rewrite.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.75,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Expresses action on rewriting."
+    },
+    {
+      "sent_id": "REQ-033::s019",
+      "order": 19,
+      "text": "Either way, we can't keep firefighting.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "COMPLIANCE_REQUIREMENT",
+      "reason_text": "Mentions the need to plan better."
+    }
+  ]
+}

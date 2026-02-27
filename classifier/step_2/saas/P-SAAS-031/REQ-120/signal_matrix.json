@@ -1,0 +1,11 @@
+{
+  "req_id": "REQ-120",
+  "num_sentences": 4,
+  "num_candidates": 0,
+  "acceptance_rate": 0.0,
+  "signal_counts": {
+    "action": 1,
+    "constraint": 1
+  },
+  "top_signal_combinations": []
+}

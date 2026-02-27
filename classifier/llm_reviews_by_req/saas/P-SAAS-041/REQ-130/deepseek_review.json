@@ -1,0 +1,189 @@
+{
+  "req_id": "REQ-130",
+  "doc_id": "1c41bae5-3fb5-59b3-b411-42f628ba6828",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-041",
+  "model": "deepseek-r1:7b",
+  "review_timestamp": "2026-01-20T23:32:04.628983+00:00",
+  "counts": {
+    "total": 17,
+    "llm_neg": 10,
+    "pipe_pos": 4,
+    "flip_pos_to_neg": 1,
+    "llm_pos": 7,
+    "pipe_neg": 13,
+    "flip_neg_to_pos": 4
+  },
+  "reviews": [
+    {
+      "sent_id": "REQ-130::s001",
+      "order": 1,
+      "text": "**Objective**  \nImplement an automated incident classification system that categorizes events as Low, Medium, or High severity within 30 seconds of log ingestion.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Imposes an implementation objective."
+    },
+    {
+      "sent_id": "REQ-130::s002",
+      "order": 2,
+      "text": "This rapid triaging will streamline incident response and reduce noise for security teams.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describes process but doesn't state enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-130::s003",
+      "order": 3,
+      "text": "**Classification Engine**  \nThe AI-powered engine ingests three primary inputs: log severity (e.g., error level, frequency), source IP reputation (internal threat intel scores), and an anomaly score derived from behavior baselines.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describes component function without enforceable action."
+    },
+    {
+      "sent_id": "REQ-130::s004",
+      "order": 4,
+      "text": "Severity thresholds are dynamically tuned using a feedback loop informed by incident resolution data and false-positive rates, ensuring adaptive precision over time.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.75,
+      "reason_code": "PERFORMANCE_REQUIREMENT",
+      "reason_text": "Imposes dynamic tuning behavior."
+    },
+    {
+      "sent_id": "REQ-130::s005",
+      "order": 5,
+      "text": "**Alert Routing**  \nClassified alerts are routed based on severity:  \n- **Low** ➜",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.5,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Setup example, not enforceable action."
+    },
+    {
+      "sent_id": "REQ-130::s006",
+      "order": 6,
+      "text": "Added to the Jira security backlog for periodic review.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.4,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Setup example without constraints."
+    },
+    {
+      "sent_id": "REQ-130::s007",
+      "order": 7,
+      "text": "- **Medium**",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.5,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Placeholder for categorization, not enforceable action."
+    },
+    {
+      "sent_id": "REQ-130::s008",
+      "order": 8,
+      "text": "➜",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Placeholder for categorization, not enforceable action."
+    },
+    {
+      "sent_id": "REQ-130::s009",
+      "order": 9,
+      "text": "Posted in Slack `#sec-ops` for real-time triage by analysts.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "PERFORMANCE_REQUIREMENT",
+      "reason_text": "Sets real-time triage requirement."
+    },
+    {
+      "sent_id": "REQ-130::s010",
+      "order": 10,
+      "text": "- **High*",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-130::s011",
+      "order": 11,
+      "text": "* ➜",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-130::s012",
+      "order": 12,
+      "text": "Triggered as a PagerDuty \"P1\" alert, with immediate escalation.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Imposes incident escalation behavior."
+    },
+    {
+      "sent_id": "REQ-130::s013",
+      "order": 13,
+      "text": "**SLA & Metrics**  \nSystem must maintain ≥ 95% classification accuracy.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Imposes a system accuracy constraint."
+    },
+    {
+      "sent_id": "REQ-130::s014",
+      "order": 14,
+      "text": "Alerts should be delivered within 60 seconds for 95% of cases (P95 latency).",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "PERFORMANCE_REQUIREMENT",
+      "reason_text": "Sets latency requirement."
+    },
+    {
+      "sent_id": "REQ-130::s015",
+      "order": 15,
+      "text": "**Audit & Reporting**",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describes function without enforceable action."
+    },
+    {
+      "sent_id": "REQ-130::s016",
+      "order": 16,
+      "text": "Each classification is logged in the `incident_audit` table with original log content, predicted severity, and the model version used.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.5,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describes logging process without constraint."
+    },
+    {
+      "sent_id": "REQ-130::s017",
+      "order": 17,
+      "text": "Records are retained for a minimum of one year to support compliance and post-incident reviews.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Imposes retention period requirement."
+    }
+  ]
+}

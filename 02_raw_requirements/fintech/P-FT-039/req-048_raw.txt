@@ -1,0 +1,23 @@
+**Objective:**  
+The goal is to implement an enhanced fraud detection threshold to improve accuracy and reduce false positives in transaction monitoring, maintaining a false-positive target of 3%. This adjustment leverages updated risk assessment scores (`risk_threshold_v2`) to balance fraud prevention effectiveness with customer impact.
+
+**Threshold Matrix:**  
+
+| Region | Threshold | False Positive Target |
+|--------|-----------|-----------------------|
+| EU     | 0.82      | 3%                    |
+| US     | 0.78      | 3%                    |
+
+**Rollout:**  
+Deployment will be controlled via the feature flag `risk_threshold_v2`. The rollout will follow a staged deployment strategy, starting at 10% of the user base, scaling progressively to 100% over five days as follows:
+
+- **Day 1:** 10%  
+- **Day 2:** 25%  
+- **Day 3:** 50%  
+- **Day 4:** 75%  
+- **Day 5:** 100%  
+
+Daily monitoring will ensure stability and threshold efficacy before proceeding to each subsequent phase.
+
+**Audit:**  
+All manual overrides of fraud detection scores or threshold adjustments must be recorded systematically. Entries must be captured in the dedicated `fraud_score_audit` logging table, ensuring traceability and audit compliance. Logged data should include transaction identifiers, overridden values, original and adjusted scores, timestamp, and the operator's user ID. Auditing will be continuously monitored to validate policy adherence and accuracy.

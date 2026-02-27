@@ -1,0 +1,448 @@
+{
+  "req_id": "REQ-135",
+  "doc_id": "2afdf0bd-55bf-5a76-9957-fa1a74f0e6d3",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-046",
+  "model": "deepseek-r1:7b",
+  "review_timestamp": "2026-01-20T23:36:44.139950+00:00",
+  "counts": {
+    "total": 43,
+    "llm_pos": 20,
+    "pipe_pos": 2,
+    "llm_neg": 23,
+    "pipe_neg": 41,
+    "flip_neg_to_pos": 18
+  },
+  "reviews": [
+    {
+      "sent_id": "REQ-135::s001",
+      "order": 1,
+      "text": "**Due Diligence Response Document**\n\n---\n\n### Encryption Overview\n\nOur organization maintains stringent encryption protocols to ensure the confidentiality, integrity, and availability of data throughout its lifecycle.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-135::s002",
+      "order": 2,
+      "text": "Data at rest is protected using **Advanced Encryption Standard (AES) with a 256-bit key length (AES-256)**, the industry gold standard for cryptographic security.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Encrypts data using AES-256."
+    },
+    {
+      "sent_id": "REQ-135::s003",
+      "order": 3,
+      "text": "This algorithm is applied across all storage layers including relational databases, object storage, and cached data, with encryption enforced at the disk and file levels.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-135::s004",
+      "order": 4,
+      "text": "For data in transit, we exclusively employ **Transport Layer Security (TLS) version 1.3**, the latest and most secure version of the TLS protocol.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Uses TLS 1.3 for secure communication."
+    },
+    {
+      "sent_id": "REQ-135::s005",
+      "order": 5,
+      "text": "This ensures end-to-end encryption between clients, services, and external endpoints, eliminating support for legacy ciphers and reducing the surface area for downgrade attacks or man-in-the-middle threats.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-135::s006",
+      "order": 6,
+      "text": "To enhance encryption hygiene and reduce key exposure risk, we utilize a **Key Management System (KMS)*",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-135::s007",
+      "order": 7,
+      "text": "* with automatic **key rotation policies**.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Automatically rotates keys to prevent exposure and reduce threats."
+    },
+    {
+      "sent_id": "REQ-135::s008",
+      "order": 8,
+      "text": "Keys are rotated every 90 days or sooner based on compliance needs and threat intelligence.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-135::s009",
+      "order": 9,
+      "text": "All keys are managed centrally with audit logs maintained for all access events, ensuring full traceability and compliance alignment.\n\n---\n\n### Privacy Controls\n\nWe prioritize user privacy and granular access management through robust, layered controls.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Key management is enforced centrally with logs."
+    },
+    {
+      "sent_id": "REQ-135::s010",
+      "order": 10,
+      "text": "Firstly, our platform supports **role-based data masking**, ensuring that users only see data relevant to their access level.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Role-based data masking ensures users only see relevant data."
+    },
+    {
+      "sent_id": "REQ-135::s011",
+      "order": 11,
+      "text": "Sensitive fields such as Social Insurance Numbers (SIN), payment information, and personal identifiers are dynamically obfuscated unless explicitly permitted.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Dynamic obfuscation for sensitive fields."
+    },
+    {
+      "sent_id": "REQ-135::s012",
+      "order": 12,
+      "text": "This is implemented at the application level and backed by audit trails to enforce non-repudiation.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Audit trails enforce non-repudiation."
+    },
+    {
+      "sent_id": "REQ-135::s013",
+      "order": 13,
+      "text": "Secondly, we have implemented **field-level consent management**, allowing users to selectively grant or revoke consent for individual data fields.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Field-level consent management allows selective access."
+    },
+    {
+      "sent_id": "REQ-135::s014",
+      "order": 14,
+      "text": "This provides fine-grained control over personal data processing and aligns with global data privacy regulations such as GDPR and Canada’s PIPEDA.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Controls align with GDPR and PIPEDA."
+    },
+    {
+      "sent_id": "REQ-135::s015",
+      "order": 15,
+      "text": "Consent statuses are version-controlled and stored in a tamper-evident log, enabling full historical traceability for compliance audits or user inquiries.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Consent statuses tracked in logs."
+    },
+    {
+      "sent_id": "REQ-135::s016",
+      "order": 16,
+      "text": "Additionally, all internal access to user data is governed by **zero-trust principles**, requiring multi-factor authentication, purpose-specific access approvals, and session logging.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Zero-trust principles enforced with MFA and session logging."
+    },
+    {
+      "sent_id": "REQ-135::s017",
+      "order": 17,
+      "text": "These measures ensure that data privacy is not only configurable but enforceable by design.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Data privacy enforced by design."
+    },
+    {
+      "sent_id": "REQ-135::s018",
+      "order": 18,
+      "text": "---\n\n### Scalability Architecture\n\nTo support rapid user growth and fluctuating workloads, our platform is architected for scale using modern distributed technologies.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-135::s019",
+      "order": 19,
+      "text": "The core application stack follows a **microservices architecture**, where each service is independently deployable and loosely coupled.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Microservices architecture independently deployable and loosely coupled."
+    },
+    {
+      "sent_id": "REQ-135::s020",
+      "order": 20,
+      "text": "This enables us to scale subsystems independently and ensure continuous delivery with minimal downtime.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Supports scalable subsystems."
+    },
+    {
+      "sent_id": "REQ-135::s021",
+      "order": 21,
+      "text": "All services are deployed within a **Kubernetes cluster**, hosted across multiple availability zones for high availability and fault tolerance.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "States high availability and fault tolerance through Kubernetes deployment."
+    },
+    {
+      "sent_id": "REQ-135::s022",
+      "order": 22,
+      "text": "Each service is monitored and auto-scaled using **Horizontal Pod Autoscaler (HPA)** configurations, which adjust the number of running pods based on CPU utilization, memory thresholds, and custom business metrics.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Uses HPA configurations for scaling."
+    },
+    {
+      "sent_id": "REQ-135::s023",
+      "order": 23,
+      "text": "Our current deployment comfortably scales to **10× our daily peak usage** within seconds, as validated by production load tests.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.95,
+      "reason_code": "PERFORMANCE_REQUIREMENT",
+      "reason_text": "Scale up to 10× peak usage within seconds."
+    },
+    {
+      "sent_id": "REQ-135::s024",
+      "order": 24,
+      "text": "This elasticity ensures consistent performance during high-demand events such as product launches, campaigns, or third-party integrations.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Ensure consistent performance during high demand."
+    },
+    {
+      "sent_id": "REQ-135::s025",
+      "order": 25,
+      "text": "We also maintain a dedicated **observability stack** (Prometheus, Grafana, Loki) that enables real-time visibility into system health, latency metrics, and failure patterns—supporting proactive issue resolution and optimal resource allocation.\n\n---\n\n### Compliance Roadmap",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Use observability stack for real-time monitoring."
+    },
+    {
+      "sent_id": "REQ-135::s026",
+      "order": 26,
+      "text": "We are committed to maintaining a robust compliance posture in line with industry standards and regulatory requirements.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-135::s027",
+      "order": 27,
+      "text": "We are currently undergoing the **SOC 2 Type II** attestation process, with controls in place and evidence collection actively underway.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-135::s028",
+      "order": 28,
+      "text": "This certification, which covers Security, Availability, and Confidentiality principles, is being guided by a certified third-party auditor, and we anticipate finalization in **Q3 2025**.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-135::s029",
+      "order": 29,
+      "text": "In parallel, we have initiated preparations for an **ISO/IEC 27001** audit, the international standard for information security management systems (ISMS).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-135::s030",
+      "order": 30,
+      "text": "We are on track for the formal audit in **Q4 2025**, supported by a dedicated compliance team, risk register, asset classification framework, and documented ISMS processes.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-135::s031",
+      "order": 31,
+      "text": "Our internal policies and training programs are continuously updated to reflect best practices and regulatory shifts.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-135::s032",
+      "order": 32,
+      "text": "Employees undergo mandatory annual training on data protection, secure coding, and incident response, with refresher modules tied to observed policy breaches or changes in compliance requirements.\n\n---\n\n### Risk & Mitigation\n\nWe maintain a proactive, multi-layered strategy to identify, mitigate, and recover from risks across our infrastructure.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-135::s033",
+      "order": 33,
+      "text": "Our first layer of defense includes **DDoS shielding** using a combination of upstream rate-limiting, WAF rulesets, and integration with CDN providers like Cloudflare and AWS Shield Advanced.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-135::s034",
+      "order": 34,
+      "text": "This protects the application from volumetric attacks and ensures minimal impact on end-user availability.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-135::s035",
+      "order": 35,
+      "text": "To harden our infrastructure against unknown unknowns, we conduct **chaos engineering tests** on staging environments.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-135::s036",
+      "order": 36,
+      "text": "These simulations intentionally introduce failure scenarios—such as pod crashes, latency injection, or zone outages—to evaluate system resilience and uncover hidden bottlenecks.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-135::s037",
+      "order": 37,
+      "text": "Results feed directly into architectural hardening cycles.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-135::s038",
+      "order": 38,
+      "text": "In addition, we perform **quarterly penetration tests** via independent third-party security firms.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-135::s039",
+      "order": 39,
+      "text": "These tests include black-box and white-box assessments of both application and infrastructure layers.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-135::s040",
+      "order": 40,
+      "text": "Findings are tracked in a secure vulnerability management system, prioritized by CVSS scores, and resolved through a formal remediation process.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-135::s041",
+      "order": 41,
+      "text": "All risk activities are logged, monitored, and reviewed by our internal security governance team to ensure continuous improvement and alignment with evolving threat landscapes.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SECURITY_REQUIREMENT",
+      "reason_text": "Log, monitor, and review risk activities to ensure continuous improvement."
+    },
+    {
+      "sent_id": "REQ-135::s042",
+      "order": 42,
+      "text": "---\n\n**Conclusion**\n\nThrough rigorous encryption, privacy-centric controls, a cloud-native scalability model, a forward-looking compliance roadmap, and a proactive risk management program, we maintain enterprise-grade security and operational excellence.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Summary paragraph not specifying enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-135::s043",
+      "order": 43,
+      "text": "Our systems are engineered not only for resilience and scale, but for trust—ensuring that both our partners and users remain secure in a dynamic digital landscape.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "ARCHITECTURE_DESCRIPTION",
+      "reason_text": "Design goals for resilience, scalability, and trust."
+    }
+  ]
+}

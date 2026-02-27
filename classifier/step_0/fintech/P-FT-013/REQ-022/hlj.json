@@ -1,0 +1,239 @@
+{
+  "doc_id": "1dfdb5d5-3705-5f68-bf4b-9bf183e637ae",
+  "req_key": "fintech::P-FT-013::REQ-022",
+  "req_id": "REQ-022",
+  "domain": "fintech",
+  "prompt_id": "P-FT-013",
+  "source": {
+    "raw_path": "02_raw_requirements/fintech/P-FT-013/req-022_raw.txt",
+    "refined_path": "03_refined_json_normalized/fintech/P-FT-013/req-022_refined.json",
+    "origin": "both"
+  },
+  "text": "Certainly! Here's a draft support ticket from Olivia Martins' perspective:\n\n---\n\n**Problem Statement:**\nWe currently spend valuable time every Friday exporting and emailing KPI reports manually. This process is inefficient and prone to errors.\n\n**Desired Outcome:**\nAutomate the generation and delivery of weekly KPI reports without manual intervention. Ops and finance managers should receive a CSV and a branded PDF with the click of a button.\n\n**Acceptance Criteria:**\n1. A scheduled job runs every Friday at 17:00 local time to generate reports.\n2. Reports are generated in CSV and branded PDF formats.\n3. Implement retry logic and audit logging to comply with SOC 2 standards.\n4. Notifications are sent to Slack's \"#ops-alerts\" channel for success and failure events.\n5. Reports are emailed using SES or SMTP to designated recipients.\n6. The solution is user-friendly with a one-click \"Email KPI Pack\" function.\n\n**Constraints:**\n1. Avoid disrupting existing workflows or tools like Domo or Looker.\n2. Ensure the solution is robust against data inconsistencies or failures during report generation.\n\n**Open Questions:**\n1. Should the CSV and PDF be attached separately or merged into a single file?\n2. What specific branding elements should be included in the PDF?\n3. Are there any additional security requirements beyond SOC 2 compliance?\n\n---\n\nThis should provide a clear and concise overview of Olivia's requirements and expectations for automating the KPI report generation process.",
+  "structured_data": [
+    {
+      "id": "REQ-022-HLJ-Chunk_1-Item_1-v1.0",
+      "domain": "fintech",
+      "summary": "Upload receipts using drag and drop or phone camera",
+      "priority": "High",
+      "tags": [
+        "receipt_upload",
+        "mobile_input",
+        "user_submission"
+      ],
+      "subdomain": "expenses",
+      "difficulty": 2,
+      "additionalNotes": "Supports image or PDF upload from desktop or phone.",
+      "source_hlj_id": "REQ 001-001",
+      "domain_id": "P-FT-013"
+    },
+    {
+      "id": "REQ-022-HLJ-Chunk_1-Item_2-v1.0",
+      "domain": "fintech",
+      "summary": "Auto-fill receipt fields using OCR technology",
+      "priority": "High",
+      "tags": [
+        "ocr",
+        "auto_fill",
+        "receipt_data"
+      ],
+      "subdomain": "expenses",
+      "difficulty": 3,
+      "additionalNotes": "OCR extracts merchant, date, and amount automatically.",
+      "source_hlj_id": "REQ 001-002",
+      "domain_id": "P-FT-013"
+    },
+    {
+      "id": "REQ-022-HLJ-Chunk_1-Item_3-v1.0",
+      "domain": "fintech",
+      "summary": "Validate expenses against real-time policy limits",
+      "priority": "High",
+      "tags": [
+        "policy_check",
+        "expense_rules",
+        "validation"
+      ],
+      "subdomain": "compliance",
+      "difficulty": 3,
+      "additionalNotes": "Checks if expense fits within configured company policy caps.",
+      "source_hlj_id": "REQ 001-003",
+      "domain_id": "P-FT-013"
+    },
+    {
+      "id": "REQ-022-HLJ-Chunk_1-Item_4-v1.0",
+      "domain": "fintech",
+      "summary": "Support multi-currency expenses with auto conversion",
+      "priority": "High",
+      "tags": [
+        "multi_currency",
+        "conversion",
+        "international"
+      ],
+      "subdomain": "finance",
+      "difficulty": 3,
+      "additionalNotes": "Automatically converts foreign currencies using live rates.",
+      "source_hlj_id": "REQ 001-004",
+      "domain_id": "P-FT-013"
+    },
+    {
+      "id": "REQ-022-HLJ-Chunk_1-Item_5-v1.0",
+      "domain": "fintech",
+      "summary": "Send Slack notifications for expense claim statuses",
+      "priority": "Medium",
+      "tags": [
+        "slack",
+        "notifications",
+        "claim_status"
+      ],
+      "subdomain": "communications",
+      "difficulty": 2,
+      "additionalNotes": "Notifies users when claims are submitted, approved, or flagged.",
+      "source_hlj_id": "REQ 001-005",
+      "domain_id": "P-FT-013"
+    },
+    {
+      "id": "REQ-022-HLJ-Chunk_1-Item_6-v1.0",
+      "domain": "fintech",
+      "summary": "Suggest reclaimable VAT amounts instantly",
+      "priority": "Medium",
+      "tags": [
+        "vat",
+        "tax_reclaim",
+        "auto_suggestions"
+      ],
+      "subdomain": "tax",
+      "difficulty": 3,
+      "additionalNotes": "Helps finance managers identify recoverable tax per expense.",
+      "source_hlj_id": "REQ 001-006",
+      "domain_id": "P-FT-013"
+    },
+    {
+      "id": "REQ-022-HLJ-Chunk_1-Item_7-v1.0",
+      "domain": "fintech",
+      "summary": "Track every user action with a full audit trail",
+      "priority": "High",
+      "tags": [
+        "audit_trail",
+        "tracking",
+        "compliance"
+      ],
+      "subdomain": "security",
+      "difficulty": 4,
+      "additionalNotes": "Supports compliance and traceability of approvals and edits.",
+      "source_hlj_id": "REQ 001-007",
+      "domain_id": "P-FT-013"
+    },
+    {
+      "id": "REQ-022-HLJ-Chunk_1-Item_8-v1.0",
+      "domain": "fintech",
+      "summary": "Encrypt all data at rest and in transit",
+      "priority": "High",
+      "tags": [
+        "encryption",
+        "security",
+        "data_protection"
+      ],
+      "subdomain": "security",
+      "difficulty": 4,
+      "additionalNotes": "Ensures compliance with GDPR and ISO‑27001.",
+      "source_hlj_id": "REQ 001-008",
+      "domain_id": "P-FT-013"
+    },
+    {
+      "id": "REQ-022-HLJ-Chunk_1-Item_9-v1.0",
+      "domain": "fintech",
+      "summary": "Enable GDPR data export and deletion on request",
+      "priority": "High",
+      "tags": [
+        "gdpr",
+        "user_rights",
+        "data_control"
+      ],
+      "subdomain": "compliance",
+      "difficulty": 3,
+      "additionalNotes": "User must be able to download or erase their personal data.",
+      "source_hlj_id": "REQ 001-009",
+      "domain_id": "P-FT-013"
+    },
+    {
+      "id": "REQ-022-HLJ-Chunk_1-Item_10-v1.0",
+      "domain": "fintech",
+      "summary": "Host infrastructure on AWS EU region for compliance",
+      "priority": "High",
+      "tags": [
+        "hosting",
+        "eu_data_residency",
+        "aws"
+      ],
+      "subdomain": "infrastructure",
+      "difficulty": 2,
+      "additionalNotes": "Ensures regional compliance with data residency laws.",
+      "source_hlj_id": "REQ 001-010",
+      "domain_id": "P-FT-013"
+    },
+    {
+      "id": "REQ-022-HLJ-Chunk_1-Item_11-v1.0",
+      "domain": "fintech",
+      "summary": "Allow employees to submit business expense claims",
+      "priority": "High",
+      "tags": [
+        "employee",
+        "claim_submission",
+        "expenses"
+      ],
+      "subdomain": "expenses",
+      "difficulty": 2,
+      "additionalNotes": "Employees provide details and attach receipts to submit claims.",
+      "source_hlj_id": "REQ 001-011",
+      "domain_id": "P-FT-013"
+    },
+    {
+      "id": "REQ-022-HLJ-Chunk_1-Item_12-v1.0",
+      "domain": "fintech",
+      "summary": "Enable finance managers to review and approve claims",
+      "priority": "High",
+      "tags": [
+        "finance_review",
+        "approval_flow",
+        "claims"
+      ],
+      "subdomain": "expenses",
+      "difficulty": 2,
+      "additionalNotes": "Managers can approve, reject, or flag expense entries.",
+      "source_hlj_id": "REQ 001-012",
+      "domain_id": "P-FT-013"
+    },
+    {
+      "id": "REQ-022-HLJ-Chunk_1-Item_13-v1.0",
+      "domain": "fintech",
+      "summary": "Provide auditors with read-only access to expense history",
+      "priority": "Medium",
+      "tags": [
+        "auditor_access",
+        "read_only",
+        "audit_logs"
+      ],
+      "subdomain": "compliance",
+      "difficulty": 2,
+      "additionalNotes": "Auditors can view but not edit claims and audit data.",
+      "source_hlj_id": "REQ 001-013",
+      "domain_id": "P-FT-013"
+    },
+    {
+      "id": "REQ-022-HLJ-Chunk_1-Item_14-v1.0",
+      "domain": "fintech",
+      "summary": "Display user-friendly interface for non-technical users",
+      "priority": "Low",
+      "tags": [
+        "ux",
+        "non_technical_users",
+        "simplicity"
+      ],
+      "subdomain": "user_experience",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied – Interfaces must be clear for finance teams and employees.",
+      "source_hlj_id": "REQ 001-014",
+      "domain_id": "P-FT-013"
+    }
+  ]
+}

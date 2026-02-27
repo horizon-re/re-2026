@@ -1,0 +1,1 @@
+Roll out intelligent auto-scaling across all prod clusters now. Target: CPU <= 65% for 95% uptime, scale-out within 60s of breach. Slack alert #infra-alerts on scale failure. ETA for hotfix by 07:00 local.

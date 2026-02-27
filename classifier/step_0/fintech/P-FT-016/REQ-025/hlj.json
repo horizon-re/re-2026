@@ -1,0 +1,399 @@
+{
+  "doc_id": "4857e3f1-9bba-5cf4-abc4-2c4fc6bfa2e8",
+  "req_key": "fintech::P-FT-016::REQ-025",
+  "req_id": "REQ-025",
+  "domain": "fintech",
+  "prompt_id": "P-FT-016",
+  "source": {
+    "raw_path": "02_raw_requirements/fintech/P-FT-016/req-025_raw.txt",
+    "refined_path": "03_refined_json_normalized/fintech/P-FT-016/req-025_refined.json",
+    "origin": "both"
+  },
+  "text": "[CRM‑201] Lead scoring algorithm prototype\n\nDescription: Begin tuning model for sales-qualified vs. non-qualified leads.\nAcceptance Criteria:\n\t•\tTrain on past 12 months of conversion data\n\t•\t☑ Export leads above 70% likelihood to SDR dashboard\n\t•\tTBD…\nNotes: @dev @data needed for historical conversion dump\n\n[CRM‑202] Email cadence scheduler (MVP)\n\nDescription: Allow users to create multi-step email drip sequences.\nAcceptance Criteria:\n\t•\tCreate/send/edit cadences via UI\n\t•\t☐ Show basic email stats (opens, clicks) per step\n\t•\tTBD…\nNotes: @designer to finalize template UI\n\n[CRM‑203] Auto-log email engagement\n\nDescription: Automatically capture opens and link clicks in timeline.\nAcceptance Criteria:\n\t•\tAdd event stream for opens\n\t•\t☑ Include timestamped click-through tracking\n\t•\tTBD…\n\n[CRM‑204] Contact enrichment via AI signals\n\nDescription: Detect job changes, company size shifts from public data.\nAcceptance Criteria:\n\t•\tMatch updates against LinkedIn profiles\n\t•\tFlag major firmographic shifts ☑\n\t•\tTBD…\n\n[CRM‑205] Dashboard metrics: email activity\n\nDescription: Prototype bar chart of daily open/click rates.\nAcceptance Criteria:\n\t•\tShow last 14 days’ activity\n\t•\t☐ Toggle per cadence\n\t•\tTBD…\nNotes: Basic metrics only, not funnel deep dive yet\n\n[CRM‑206] Scoring rules editor\n\nDescription: UI to adjust AI scoring thresholds and rules.\nAcceptance Criteria:\n\t•\tModify lead type weightings\n\t•\tSave/publish rules to backend ☑\n\t•\tTBD…\n\n[CRM‑207] Smart lead routing rules\n\nDescription: Route high-score leads to assigned rep based on region.\nAcceptance Criteria:\n\t•\tApply after score > threshold\n\t•\t@dev Add region check logic\n\t•\tTBD…\n\n[CRM‑208] AI assist: next-best-action prompt\n\nDescription: Suggest next action based on contact history and score.\nAcceptance Criteria:\n\t•\tTrigger when lead is inactive 7+ days\n\t•\tRecommend call/email nudge\n\t•\tTBD…\n\n[CRM‑209] Track reply rates for cadences\n\nDescription: Capture replies, calculate % per email step.\nAcceptance Criteria:\n\t•\tDetect reply-to on outgoing emails ☑\n\t•\tShow per-step %\n\t•\tTBD…\n\n[CRM‑210] Admin controls for feature access\n\nDescription: Enable/disable enrichment and scoring tools per org.\nAcceptance Criteria:\n\t•\tToggle via admin dashboard\n\t•\t☐ Log changes for audit\n\t•\tTBD…\nNotes: @dev permission schema draft in progress",
+  "structured_data": [
+    {
+      "id": "REQ-025-HLJ-Chunk_1-Item_1-v1.0",
+      "domain": "saas",
+      "summary": "Tune AI lead scoring with 12-month conversion data",
+      "priority": "High",
+      "tags": [
+        "lead_scoring",
+        "ai_model",
+        "conversion_data"
+      ],
+      "subdomain": "sales_automation",
+      "difficulty": 4,
+      "additionalNotes": "Leverages past conversion history to improve SDR targeting.",
+      "source_hlj_id": "REQ 001-001",
+      "domain_id": "P-FT-016"
+    },
+    {
+      "id": "REQ-025-HLJ-Chunk_1-Item_2-v1.0",
+      "domain": "saas",
+      "summary": "Export high-score leads to SDR dashboard",
+      "priority": "Medium",
+      "tags": [
+        "lead_export",
+        "dashboard",
+        "sales_ops"
+      ],
+      "subdomain": "sales_automation",
+      "difficulty": 3,
+      "additionalNotes": "Supports downstream visibility for SDR teams.",
+      "source_hlj_id": "REQ 001-002",
+      "domain_id": "P-FT-016"
+    },
+    {
+      "id": "REQ-025-HLJ-Chunk_1-Item_3-v1.0",
+      "domain": "saas",
+      "summary": "Build multi-step email cadence scheduler",
+      "priority": "High",
+      "tags": [
+        "email_automation",
+        "cadence_tool",
+        "ui_component"
+      ],
+      "subdomain": "email_automation",
+      "difficulty": 3,
+      "additionalNotes": "Users can create, send, and manage cadences.",
+      "source_hlj_id": "REQ 001-003",
+      "domain_id": "P-FT-016"
+    },
+    {
+      "id": "REQ-025-HLJ-Chunk_1-Item_4-v1.0",
+      "domain": "saas",
+      "summary": "Display open and click stats per email step",
+      "priority": "Medium",
+      "tags": [
+        "email_tracking",
+        "engagement_metrics",
+        "analytics"
+      ],
+      "subdomain": "email_automation",
+      "difficulty": 3,
+      "additionalNotes": "Shows interaction metrics across steps in a cadence.",
+      "source_hlj_id": "REQ 001-004",
+      "domain_id": "P-FT-016"
+    },
+    {
+      "id": "REQ-025-HLJ-Chunk_1-Item_5-v1.0",
+      "domain": "saas",
+      "summary": "Auto-log opens and clicks in contact timeline",
+      "priority": "High",
+      "tags": [
+        "engagement_tracking",
+        "timeline_events",
+        "auto_logging"
+      ],
+      "subdomain": "email_tracking",
+      "difficulty": 3,
+      "additionalNotes": "Automatically logs all email interaction events.",
+      "source_hlj_id": "REQ 001-005",
+      "domain_id": "P-FT-016"
+    },
+    {
+      "id": "REQ-025-HLJ-Chunk_1-Item_6-v1.0",
+      "domain": "saas",
+      "summary": "Match contact updates using LinkedIn profile data",
+      "priority": "Medium",
+      "tags": [
+        "contact_enrichment",
+        "linkedin",
+        "ai_signals"
+      ],
+      "subdomain": "data_enrichment",
+      "difficulty": 4,
+      "additionalNotes": "Tracks role, employer, and company size changes.",
+      "source_hlj_id": "REQ 001-006",
+      "domain_id": "P-FT-016"
+    },
+    {
+      "id": "REQ-025-HLJ-Chunk_1-Item_7-v1.0",
+      "domain": "saas",
+      "summary": "Flag major firmographic shifts using enrichment logic",
+      "priority": "Medium",
+      "tags": [
+        "firmographics",
+        "ai_detection",
+        "change_alerts"
+      ],
+      "subdomain": "data_enrichment",
+      "difficulty": 4,
+      "additionalNotes": "Detects significant business changes in contact info.",
+      "source_hlj_id": "REQ 001-007",
+      "domain_id": "P-FT-016"
+    },
+    {
+      "id": "REQ-025-HLJ-Chunk_1-Item_8-v1.0",
+      "domain": "saas",
+      "summary": "Display 14-day email engagement trend in dashboard",
+      "priority": "Medium",
+      "tags": [
+        "dashboard",
+        "email_stats",
+        "trend_chart"
+      ],
+      "subdomain": "email_analytics",
+      "difficulty": 3,
+      "additionalNotes": "Visual chart of email activity across cadences.",
+      "source_hlj_id": "REQ 001-008",
+      "domain_id": "P-FT-016"
+    },
+    {
+      "id": "REQ-025-HLJ-Chunk_1-Item_9-v1.0",
+      "domain": "saas",
+      "summary": "Enable toggle of engagement chart per cadence",
+      "priority": "Low",
+      "tags": [
+        "dashboard_toggle",
+        "email_analytics",
+        "user_controls"
+      ],
+      "subdomain": "email_analytics",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied – Provides per-cadence filtering options.",
+      "source_hlj_id": "REQ 001-009",
+      "domain_id": "P-FT-016"
+    },
+    {
+      "id": "REQ-025-HLJ-Chunk_1-Item_10-v1.0",
+      "domain": "saas",
+      "summary": "Create UI for editing lead scoring rules",
+      "priority": "Medium",
+      "tags": [
+        "ui_component",
+        "lead_scoring",
+        "rule_editor"
+      ],
+      "subdomain": "sales_automation",
+      "difficulty": 3,
+      "additionalNotes": "Users can tune weights and thresholds for AI scoring.",
+      "source_hlj_id": "REQ 001-010",
+      "domain_id": "P-FT-016"
+    },
+    {
+      "id": "REQ-025-HLJ-Chunk_1-Item_11-v1.0",
+      "domain": "saas",
+      "summary": "Allow saving and publishing custom scoring logic",
+      "priority": "Medium",
+      "tags": [
+        "scoring_rules",
+        "publishing",
+        "backend_update"
+      ],
+      "subdomain": "sales_automation",
+      "difficulty": 3,
+      "additionalNotes": "Supports override of default model settings.",
+      "source_hlj_id": "REQ 001-011",
+      "domain_id": "P-FT-016"
+    },
+    {
+      "id": "REQ-025-HLJ-Chunk_1-Item_12-v1.0",
+      "domain": "saas",
+      "summary": "Route leads to reps by score and region",
+      "priority": "High",
+      "tags": [
+        "lead_routing",
+        "sales_ops",
+        "geolocation"
+      ],
+      "subdomain": "sales_automation",
+      "difficulty": 3,
+      "additionalNotes": "Automatically assigns leads based on rules.",
+      "source_hlj_id": "REQ 001-012",
+      "domain_id": "P-FT-016"
+    },
+    {
+      "id": "REQ-025-HLJ-Chunk_1-Item_13-v1.0",
+      "domain": "saas",
+      "summary": "Suggest next-best action using AI prompts",
+      "priority": "Medium",
+      "tags": [
+        "ai_suggestions",
+        "next_action",
+        "sales_productivity"
+      ],
+      "subdomain": "sales_automation",
+      "difficulty": 4,
+      "additionalNotes": "Prompts reps with suggestions like call or follow-up email.",
+      "source_hlj_id": "REQ 001-013",
+      "domain_id": "P-FT-016"
+    },
+    {
+      "id": "REQ-025-HLJ-Chunk_1-Item_14-v1.0",
+      "domain": "saas",
+      "summary": "Detect replies to cadence emails",
+      "priority": "Medium",
+      "tags": [
+        "email_replies",
+        "reply_tracking",
+        "cadence_analytics"
+      ],
+      "subdomain": "email_tracking",
+      "difficulty": 3,
+      "additionalNotes": "Tracks responses to outbound automated emails.",
+      "source_hlj_id": "REQ 001-014",
+      "domain_id": "P-FT-016"
+    },
+    {
+      "id": "REQ-025-HLJ-Chunk_1-Item_15-v1.0",
+      "domain": "saas",
+      "summary": "Show reply rates by email step",
+      "priority": "Low",
+      "tags": [
+        "reply_rate",
+        "email_metrics",
+        "step_analytics"
+      ],
+      "subdomain": "email_tracking",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied – Calculates % replies at each step.",
+      "source_hlj_id": "REQ 001-015",
+      "domain_id": "P-FT-016"
+    },
+    {
+      "id": "REQ-025-HLJ-Chunk_1-Item_16-v1.0",
+      "domain": "saas",
+      "summary": "Toggle access to enrichment and scoring by org",
+      "priority": "High",
+      "tags": [
+        "feature_flags",
+        "admin_controls",
+        "org_level_settings"
+      ],
+      "subdomain": "permissions",
+      "difficulty": 3,
+      "additionalNotes": "Admins can control access to AI tools per organization.",
+      "source_hlj_id": "REQ 001-016",
+      "domain_id": "P-FT-016"
+    },
+    {
+      "id": "REQ-025-HLJ-Chunk_1-Item_17-v1.0",
+      "domain": "saas",
+      "summary": "Log admin changes for audit purposes",
+      "priority": "Low",
+      "tags": [
+        "audit_log",
+        "admin_tracking",
+        "change_history"
+      ],
+      "subdomain": "permissions",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied – Track all changes in permission settings.",
+      "source_hlj_id": "REQ 001-017",
+      "domain_id": "P-FT-016"
+    },
+    {
+      "id": "REQ-025-HLJ-Chunk_1-Item_18-v1.0",
+      "domain": "saas",
+      "summary": "Import historical conversion data for AI tuning",
+      "priority": "Low",
+      "tags": [
+        "data_import",
+        "conversion_history",
+        "ai_training"
+      ],
+      "subdomain": "data_ingestion",
+      "difficulty": 3,
+      "additionalNotes": "origin: implied – Required for initial model accuracy.",
+      "source_hlj_id": "REQ 001-018",
+      "domain_id": "P-FT-016"
+    },
+    {
+      "id": "REQ-025-HLJ-Chunk_1-Item_19-v1.0",
+      "domain": "saas",
+      "summary": "Highlight inactive leads after 7+ days",
+      "priority": "Medium",
+      "tags": [
+        "lead_engagement",
+        "inactivity",
+        "ai_nudge"
+      ],
+      "subdomain": "sales_automation",
+      "difficulty": 2,
+      "additionalNotes": "Triggers AI prompt for re-engagement.",
+      "source_hlj_id": "REQ 001-019",
+      "domain_id": "P-FT-016"
+    },
+    {
+      "id": "REQ-025-HLJ-Chunk_1-Item_20-v1.0",
+      "domain": "saas",
+      "summary": "Enable @dev and @designer tagging in comments",
+      "priority": "Low",
+      "tags": [
+        "team_collaboration",
+        "mention_tags",
+        "comment_system"
+      ],
+      "subdomain": "collaboration",
+      "difficulty": 1,
+      "additionalNotes": "origin: implied – Used for team workflow coordination.",
+      "source_hlj_id": "REQ 001-020",
+      "domain_id": "P-FT-016"
+    },
+    {
+      "id": "REQ-025-HLJ-Chunk_1-Item_21-v1.0",
+      "domain": "saas",
+      "summary": "Provide default email template designs",
+      "priority": "Low",
+      "tags": [
+        "email_templates",
+        "default_styles",
+        "campaign_setup"
+      ],
+      "subdomain": "email_automation",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied – Needed for quick cadence setup.",
+      "source_hlj_id": "REQ 001-021",
+      "domain_id": "P-FT-016"
+    },
+    {
+      "id": "REQ-025-HLJ-Chunk_1-Item_22-v1.0",
+      "domain": "saas",
+      "summary": "Track and report click-through timestamps",
+      "priority": "Medium",
+      "tags": [
+        "click_tracking",
+        "email_events",
+        "timestamp_logging"
+      ],
+      "subdomain": "email_tracking",
+      "difficulty": 3,
+      "additionalNotes": "Supports detailed engagement analysis.",
+      "source_hlj_id": "REQ 001-022",
+      "domain_id": "P-FT-016"
+    },
+    {
+      "id": "REQ-025-HLJ-Chunk_1-Item_23-v1.0",
+      "domain": "saas",
+      "summary": "Allow step-by-step customization of cadence emails",
+      "priority": "Low",
+      "tags": [
+        "email_customization",
+        "cadence_steps",
+        "content_flexibility"
+      ],
+      "subdomain": "email_automation",
+      "difficulty": 3,
+      "additionalNotes": "origin: implied – Helps personalize outreach per step.",
+      "source_hlj_id": "REQ 001-023",
+      "domain_id": "P-FT-016"
+    },
+    {
+      "id": "REQ-025-HLJ-Chunk_1-Item_24-v1.0",
+      "domain": "saas",
+      "summary": "Enable dashboard filtering by lead score",
+      "priority": "Low",
+      "tags": [
+        "dashboard_filters",
+        "lead_score",
+        "visual_insights"
+      ],
+      "subdomain": "analytics",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied – Visualize top-scoring leads.",
+      "source_hlj_id": "REQ 001-024",
+      "domain_id": "P-FT-016"
+    }
+  ]
+}

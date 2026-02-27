@@ -1,0 +1,199 @@
+{
+  "req_id": "REQ-147",
+  "doc_id": "313c2da3-0e3d-56e2-aa0e-32be726e8dd7",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-058",
+  "model": "deepseek-r1:7b",
+  "review_timestamp": "2026-01-20T23:54:29.540912+00:00",
+  "counts": {
+    "total": 18,
+    "llm_neg": 12,
+    "pipe_pos": 2,
+    "flip_pos_to_neg": 1,
+    "llm_pos": 6,
+    "pipe_neg": 16,
+    "flip_neg_to_pos": 5
+  },
+  "reviews": [
+    {
+      "sent_id": "REQ-147::s001",
+      "order": 1,
+      "text": "**Bug Report: Notes Toast Displays Incorrect Comment Count Due to int64 Overflow**\n\n**Summary:**",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Bug report without enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-147::s002",
+      "order": 2,
+      "text": "The Notes toast currently displays an incorrect comment count of `9,223,372,036,854,775,808`, which is indicative of an int64 overflow.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.5,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describes a problem but doesn't enforce behavior."
+    },
+    {
+      "sent_id": "REQ-147::s003",
+      "order": 3,
+      "text": "This creates confusion for users and may affect analytics accuracy.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "General statement about potential issues."
+    },
+    {
+      "sent_id": "REQ-147::s004",
+      "order": 4,
+      "text": "**Steps to Reproduce:**  \n1.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.4,
+      "reason_code": "EXAMPLE_OR_EXPLANATION",
+      "reason_text": "Only steps to reproduce without enforcing behavior."
+    },
+    {
+      "sent_id": "REQ-147::s005",
+      "order": 5,
+      "text": "Open Notes on any large-thread project.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.3,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describes action without enforcing constraint."
+    },
+    {
+      "sent_id": "REQ-147::s006",
+      "order": 6,
+      "text": "2.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.2,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Only triggers notification without enforcing behavior."
+    },
+    {
+      "sent_id": "REQ-147::s007",
+      "order": 7,
+      "text": "Trigger a toast notification for comment activity.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.1,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Observing count but not enforcing anything."
+    },
+    {
+      "sent_id": "REQ-147::s008",
+      "order": 8,
+      "text": "3. Observe the displayed count.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-147::s009",
+      "order": 9,
+      "text": "**Expected Result:**",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Only expected result without enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-147::s010",
+      "order": 10,
+      "text": "The comment count should reflect the actual number or be capped appropriately.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Implicit requirement to reflect comment count accurately."
+    },
+    {
+      "sent_id": "REQ-147::s011",
+      "order": 11,
+      "text": "**Actual Result:**",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Only actual result placeholder without enforcing constraint."
+    },
+    {
+      "sent_id": "REQ-147::s012",
+      "order": 12,
+      "text": "An overflowed value is shown, misrepresenting the comment total.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Implicit requirement to prevent overflowed values."
+    },
+    {
+      "sent_id": "REQ-147::s013",
+      "order": 13,
+      "text": "**Proposed Fix:**  \n- Switch counter data type to unsigned 128-bit integer to future-proof the system.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "COMPLIANCE_REQUIREMENT",
+      "reason_text": "Implicit requirement to enforce correct data types."
+    },
+    {
+      "sent_id": "REQ-147::s014",
+      "order": 14,
+      "text": "- Introduce pagination for values exceeding 1 million.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.7,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Imposes pagination for large counts."
+    },
+    {
+      "sent_id": "REQ-147::s015",
+      "order": 15,
+      "text": "- Add a UI cap displaying “99 K+” for readability.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Enforces UI cap to improve readability."
+    },
+    {
+      "sent_id": "REQ-147::s016",
+      "order": 16,
+      "text": "- Include a Jest regression test to prevent reoccurrence.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Implies no regression test needed, enforcing stability."
+    },
+    {
+      "sent_id": "REQ-147::s017",
+      "order": 17,
+      "text": "**Severity:** High  \n**Deadline:**",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.5,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Only deadline without enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-147::s018",
+      "order": 18,
+      "text": "Next sprint",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.3,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "No requirement indicated in the text."
+    }
+  ]
+}

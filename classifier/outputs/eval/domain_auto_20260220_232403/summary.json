@@ -1,0 +1,206 @@
+[
+  {
+    "run_dir": "20260215_235846_deberta-base_n1",
+    "model_name": "microsoft/deberta-v3-base",
+    "n_context": 1,
+    "metrics": {
+      "accuracy": 0.4229486324216144,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "roc_auc": NaN,
+      "pr_auc": NaN,
+      "tp": 0,
+      "fp": 0,
+      "tn": 634,
+      "fn": 865
+    }
+  },
+  {
+    "run_dir": "20260216_000626_deberta-base_n2",
+    "model_name": "microsoft/deberta-v3-base",
+    "n_context": 2,
+    "metrics": {
+      "accuracy": 0.4229486324216144,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "roc_auc": NaN,
+      "pr_auc": NaN,
+      "tp": 0,
+      "fp": 0,
+      "tn": 634,
+      "fn": 865
+    }
+  },
+  {
+    "run_dir": "20260216_001416_deberta-base_n3",
+    "model_name": "microsoft/deberta-v3-base",
+    "n_context": 3,
+    "metrics": {
+      "accuracy": 0.4229486324216144,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "roc_auc": NaN,
+      "pr_auc": NaN,
+      "tp": 0,
+      "fp": 0,
+      "tn": 634,
+      "fn": 865
+    }
+  },
+  {
+    "run_dir": "20260216_002156_mpnet-base_n1",
+    "model_name": "sentence-transformers/all-mpnet-base-v2",
+    "n_context": 1,
+    "metrics": {
+      "accuracy": 0.4229486324216144,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "roc_auc": NaN,
+      "pr_auc": NaN,
+      "tp": 0,
+      "fp": 0,
+      "tn": 634,
+      "fn": 865
+    }
+  },
+  {
+    "run_dir": "20260216_002703_mpnet-base_n2",
+    "model_name": "sentence-transformers/all-mpnet-base-v2",
+    "n_context": 2,
+    "metrics": {
+      "accuracy": 0.4229486324216144,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "roc_auc": NaN,
+      "pr_auc": NaN,
+      "tp": 0,
+      "fp": 0,
+      "tn": 634,
+      "fn": 865
+    }
+  },
+  {
+    "run_dir": "20260216_003211_mpnet-base_n3",
+    "model_name": "sentence-transformers/all-mpnet-base-v2",
+    "n_context": 3,
+    "metrics": {
+      "accuracy": 0.4229486324216144,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "roc_auc": NaN,
+      "pr_auc": NaN,
+      "tp": 0,
+      "fp": 0,
+      "tn": 634,
+      "fn": 865
+    }
+  },
+  {
+    "run_dir": "20260216_010952_deberta-base_n1",
+    "model_name": "microsoft/deberta-v3-base",
+    "n_context": 1,
+    "metrics": {
+      "accuracy": 0.8612408272181454,
+      "precision": 0.8678611422172452,
+      "recall": 0.8959537572254336,
+      "f1": 0.8816837315130831,
+      "roc_auc": 0.9280210061815066,
+      "pr_auc": 0.9439126518277535,
+      "tp": 775,
+      "fp": 118,
+      "tn": 516,
+      "fn": 90
+    }
+  },
+  {
+    "run_dir": "20260216_014357_deberta-base_n2",
+    "model_name": "microsoft/deberta-v3-base",
+    "n_context": 2,
+    "metrics": {
+      "accuracy": 0.8745830553702468,
+      "precision": 0.8723872387238724,
+      "recall": 0.9167630057803469,
+      "f1": 0.8940248027057497,
+      "roc_auc": 0.9396336682409147,
+      "pr_auc": 0.9415805760645699,
+      "tp": 793,
+      "fp": 116,
+      "tn": 518,
+      "fn": 72
+    }
+  },
+  {
+    "run_dir": "20260216_021757_deberta-base_n3",
+    "model_name": "microsoft/deberta-v3-base",
+    "n_context": 3,
+    "metrics": {
+      "accuracy": 0.8645763842561708,
+      "precision": 0.8669623059866962,
+      "recall": 0.9040462427745665,
+      "f1": 0.8851160158460668,
+      "roc_auc": 0.9346729636585767,
+      "pr_auc": 0.9435931027865423,
+      "tp": 782,
+      "fp": 120,
+      "tn": 514,
+      "fn": 83
+    }
+  },
+  {
+    "run_dir": "20260216_025232_mpnet-base_n1",
+    "model_name": "sentence-transformers/all-mpnet-base-v2",
+    "n_context": 1,
+    "metrics": {
+      "accuracy": 0.8445630420280187,
+      "precision": 0.8333333333333334,
+      "recall": 0.9132947976878613,
+      "f1": 0.8714837286265859,
+      "roc_auc": 0.9203588556007366,
+      "pr_auc": 0.9359338125119968,
+      "tp": 790,
+      "fp": 158,
+      "tn": 476,
+      "fn": 75
+    }
+  },
+  {
+    "run_dir": "20260216_031535_mpnet-base_n2",
+    "model_name": "sentence-transformers/all-mpnet-base-v2",
+    "n_context": 2,
+    "metrics": {
+      "accuracy": 0.8485657104736491,
+      "precision": 0.8536585365853658,
+      "recall": 0.8901734104046243,
+      "f1": 0.8715336728919072,
+      "roc_auc": 0.9175981473714921,
+      "pr_auc": 0.935512372201009,
+      "tp": 770,
+      "fp": 132,
+      "tn": 502,
+      "fn": 95
+    }
+  },
+  {
+    "run_dir": "20260216_033853_mpnet-base_n3",
+    "model_name": "sentence-transformers/all-mpnet-base-v2",
+    "n_context": 3,
+    "metrics": {
+      "accuracy": 0.8305537024683122,
+      "precision": 0.8185610010427529,
+      "recall": 0.9075144508670521,
+      "f1": 0.8607456140350878,
+      "roc_auc": 0.911613573786036,
+      "pr_auc": 0.9295347803500816,
+      "tp": 785,
+      "fp": 174,
+      "tn": 460,
+      "fn": 80
+    }
+  }
+]

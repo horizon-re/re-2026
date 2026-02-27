@@ -1,0 +1,4 @@
+{"unit_id": "REQ-147::cu001", "req_id": "REQ-147", "doc_id": "313c2da3-0e3d-56e2-aa0e-32be726e8dd7", "parent_sent_id": "REQ-147::s003", "order": 1, "text": "This creates confusion for users and may affect analytics accuracy ."}
+{"unit_id": "REQ-147::cu002", "req_id": "REQ-147", "doc_id": "313c2da3-0e3d-56e2-aa0e-32be726e8dd7", "parent_sent_id": "REQ-147::s003", "order": 2, "text": "may affect analytics accuracy"}
+{"unit_id": "REQ-147::cu003", "req_id": "REQ-147", "doc_id": "313c2da3-0e3d-56e2-aa0e-32be726e8dd7", "parent_sent_id": "REQ-147::s010", "order": 3, "text": "The comment count should reflect the actual number or be capped appropriately ."}
+{"unit_id": "REQ-147::cu004", "req_id": "REQ-147", "doc_id": "313c2da3-0e3d-56e2-aa0e-32be726e8dd7", "parent_sent_id": "REQ-147::s010", "order": 4, "text": "be capped appropriately"}

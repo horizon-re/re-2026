@@ -1,0 +1,95 @@
+{
+  "doc_id": "9ec33d6a-75f5-5c28-a47d-519ed426c545",
+  "req_key": "saas::P-SAAS-035::REQ-124",
+  "req_id": "REQ-124",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-035",
+  "source": {
+    "raw_path": "02_raw_requirements/saas/P-SAAS-035/req-124_raw.txt",
+    "refined_path": "03_refined_json_normalized/saas/P-SAAS-035/req-124_refined.json",
+    "origin": "both"
+  },
+  "text": "hey, urgent – gateway keeps crashing, payments failing esp for multi-tenant setups. need stability fix ASAP. pls do blue/green deploy w/ auto-failover in under 2 min. also add retry queue w/ idempotent keys so we don’t double-charge. on-call pager needs to get alert if queue spikes. ping back w/ status update in 1 hr max 🙏",
+  "structured_data": [
+    {
+      "id": "REQ-124-HLJ-Chunk_1-Item_1-v1.0",
+      "domain": "saas",
+      "summary": "Fix payment gateway instability for multi-tenant clients",
+      "priority": "High",
+      "tags": [
+        "gateway_crash",
+        "multi_tenant",
+        "payment_failure"
+      ],
+      "subdomain": "payment_processing",
+      "difficulty": 3,
+      "additionalNotes": "Stability issues are causing payment failures across multiple client environments.",
+      "source_hlj_id": "REQ 001-001",
+      "domain_id": "P-SAAS-035"
+    },
+    {
+      "id": "REQ-124-HLJ-Chunk_1-Item_2-v1.0",
+      "domain": "saas",
+      "summary": "Implement blue/green deploy with <2 min automatic failover",
+      "priority": "High",
+      "tags": [
+        "blue_green",
+        "failover",
+        "deployment_strategy"
+      ],
+      "subdomain": "infrastructure_resilience",
+      "difficulty": 4,
+      "additionalNotes": "Enables near-zero downtime and recovery during gateway incidents.",
+      "source_hlj_id": "REQ 001-002",
+      "domain_id": "P-SAAS-035"
+    },
+    {
+      "id": "REQ-124-HLJ-Chunk_1-Item_3-v1.0",
+      "domain": "saas",
+      "summary": "Add retry queue with idempotent keys to prevent double-charging",
+      "priority": "High",
+      "tags": [
+        "retry_queue",
+        "idempotency",
+        "payment_safety"
+      ],
+      "subdomain": "payment_processing",
+      "difficulty": 4,
+      "additionalNotes": "Ensures failed payments can be retried safely without duplicating charges.",
+      "source_hlj_id": "REQ 001-003",
+      "domain_id": "P-SAAS-035"
+    },
+    {
+      "id": "REQ-124-HLJ-Chunk_1-Item_4-v1.0",
+      "domain": "saas",
+      "summary": "Alert on-call pager if retry queue exceeds threshold",
+      "priority": "Medium",
+      "tags": [
+        "alerting",
+        "on_call",
+        "queue_monitoring"
+      ],
+      "subdomain": "system_monitoring",
+      "difficulty": 2,
+      "additionalNotes": "Helps detect system congestion or payment backlog before it escalates.",
+      "source_hlj_id": "REQ 001-004",
+      "domain_id": "P-SAAS-035"
+    },
+    {
+      "id": "REQ-124-HLJ-Chunk_1-Item_5-v1.0",
+      "domain": "saas",
+      "summary": "Provide gateway status update within 1 hour",
+      "priority": "Low",
+      "tags": [
+        "status_update",
+        "sla_response",
+        "incident_reporting"
+      ],
+      "subdomain": "client_communication",
+      "difficulty": 1,
+      "additionalNotes": "origin: implied – Timely updates help stakeholders coordinate during incidents.",
+      "source_hlj_id": "REQ 001-005",
+      "domain_id": "P-SAAS-035"
+    }
+  ]
+}

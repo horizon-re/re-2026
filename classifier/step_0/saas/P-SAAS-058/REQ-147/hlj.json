@@ -1,0 +1,95 @@
+{
+  "doc_id": "313c2da3-0e3d-56e2-aa0e-32be726e8dd7",
+  "req_key": "saas::P-SAAS-058::REQ-147",
+  "req_id": "REQ-147",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-058",
+  "source": {
+    "raw_path": "02_raw_requirements/saas/P-SAAS-058/req-147_raw.txt",
+    "refined_path": "03_refined_json_normalized/saas/P-SAAS-058/req-147_refined.json",
+    "origin": "both"
+  },
+  "text": "**Bug Report: Notes Toast Displays Incorrect Comment Count Due to int64 Overflow**\n\n**Summary:**  \nThe Notes toast currently displays an incorrect comment count of `9,223,372,036,854,775,808`, which is indicative of an int64 overflow. This creates confusion for users and may affect analytics accuracy.\n\n**Steps to Reproduce:**  \n1. Open Notes on any large-thread project.  \n2. Trigger a toast notification for comment activity.  \n3. Observe the displayed count.\n\n**Expected Result:**  \nThe comment count should reflect the actual number or be capped appropriately.\n\n**Actual Result:**  \nAn overflowed value is shown, misrepresenting the comment total.\n\n**Proposed Fix:**  \n- Switch counter data type to unsigned 128-bit integer to future-proof the system.  \n- Introduce pagination for values exceeding 1 million.  \n- Add a UI cap displaying “99 K+” for readability.  \n- Include a Jest regression test to prevent reoccurrence.\n\n**Severity:** High  \n**Deadline:** Next sprint",
+  "structured_data": [
+    {
+      "id": "REQ-147-HLJ-Chunk_1-Item_1-v1.0",
+      "domain": "saas",
+      "summary": "Switch comment counter to unsigned 128-bit integer",
+      "priority": "High",
+      "tags": [
+        "data_type",
+        "integer_overflow",
+        "comment_tracking"
+      ],
+      "subdomain": "data_handling",
+      "difficulty": 2,
+      "additionalNotes": "Required to prevent int64 overflow in comment count.",
+      "source_hlj_id": "REQ 001-001",
+      "domain_id": "P-SAAS-058"
+    },
+    {
+      "id": "REQ-147-HLJ-Chunk_1-Item_2-v1.0",
+      "domain": "saas",
+      "summary": "Paginate comment counts above one million",
+      "priority": "Medium",
+      "tags": [
+        "pagination",
+        "scalability",
+        "comment_tracking"
+      ],
+      "subdomain": "data_presentation",
+      "difficulty": 3,
+      "additionalNotes": "Improves UI performance and manageability for large comment threads.",
+      "source_hlj_id": "REQ 001-002",
+      "domain_id": "P-SAAS-058"
+    },
+    {
+      "id": "REQ-147-HLJ-Chunk_1-Item_3-v1.0",
+      "domain": "saas",
+      "summary": "Cap toast UI comment count at '99 K+'",
+      "priority": "Medium",
+      "tags": [
+        "ui_cap",
+        "display_formatting",
+        "comment_tracking"
+      ],
+      "subdomain": "user_interface",
+      "difficulty": 2,
+      "additionalNotes": "Prevents display of unreadable or unrealistic values.",
+      "source_hlj_id": "REQ 001-003",
+      "domain_id": "P-SAAS-058"
+    },
+    {
+      "id": "REQ-147-HLJ-Chunk_1-Item_4-v1.0",
+      "domain": "saas",
+      "summary": "Add Jest regression test for comment count overflow",
+      "priority": "High",
+      "tags": [
+        "automated_testing",
+        "regression_test",
+        "jest"
+      ],
+      "subdomain": "quality_assurance",
+      "difficulty": 2,
+      "additionalNotes": "Ensures future changes do not reintroduce overflow bug.",
+      "source_hlj_id": "REQ 001-004",
+      "domain_id": "P-SAAS-058"
+    },
+    {
+      "id": "REQ-147-HLJ-Chunk_1-Item_5-v1.0",
+      "domain": "saas",
+      "summary": "Display accurate comment count in toast notifications",
+      "priority": "High",
+      "tags": [
+        "bug_fix",
+        "data_accuracy",
+        "toast_notification"
+      ],
+      "subdomain": "user_feedback",
+      "difficulty": 1,
+      "additionalNotes": "Corrects user-visible misrepresentation of comment activity.",
+      "source_hlj_id": "REQ 001-005",
+      "domain_id": "P-SAAS-058"
+    }
+  ]
+}

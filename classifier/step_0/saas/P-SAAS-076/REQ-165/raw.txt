@@ -1,0 +1,11 @@
+```
+IF TLON = ∞ OR TLON = NaN THEN
+    SEND ERR_406;
+    LOG "TLON value is invalid" TO orbit_ep_nulls;
+END IF;
+
+IF TLON < -180 OR TLON > 180 THEN
+    SEND ERR_406;
+    LOG "TLON value out of range: " + TLON TO orbit_ep_nulls;
+END IF;
+```

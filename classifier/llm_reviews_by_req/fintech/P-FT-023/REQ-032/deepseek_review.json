@@ -1,0 +1,68 @@
+{
+  "req_id": "REQ-032",
+  "doc_id": "c7d7fc16-87b6-55e9-851c-7e6bc09fe70a",
+  "domain": "fintech",
+  "prompt_id": "P-FT-023",
+  "model": "deepseek-r1:7b",
+  "review_timestamp": "2026-01-20T22:29:52.284202+00:00",
+  "counts": {
+    "total": 5,
+    "llm_pos": 2,
+    "pipe_pos": 1,
+    "llm_neg": 3,
+    "pipe_neg": 4,
+    "flip_neg_to_pos": 1
+  },
+  "reviews": [
+    {
+      "sent_id": "REQ-032::s001",
+      "order": 1,
+      "text": "Budget available: $60 000 total.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "The statement refers to budget availability without imposing enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-032::s002",
+      "order": 2,
+      "text": "We have two sprints to deliver a Plaid-style bank account aggregator MVP on our budgeting dashboard or the feature is scrapped.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "EXAMPLE_OR_EXPLANATION",
+      "reason_text": "It provides an example of MVP features without stating enforceable requirements."
+    },
+    {
+      "sent_id": "REQ-032::s003",
+      "order": 3,
+      "text": "MVP must be PSD2-compliant in the EU sandbox and incorporate investor-demanded AI insights.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "The sentence outlines required actions (two sprints) and an option to scrap, implying enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-032::s004",
+      "order": 4,
+      "text": "Must-haves:\nBasic account aggregator integration (multi-bank linking with balances/transactions visible on the dashboard)",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "EXAMPLE_OR_EXPLANATION",
+      "reason_text": "It lists must-haves as constraints without explicit enforceable actions."
+    },
+    {
+      "sent_id": "REQ-032::s005",
+      "order": 5,
+      "text": "PSD2 open banking compliance (EU sandbox ready)\nBasic AI-driven insight to satisfy investor expectations\nStretch goals:\nAdditional bank coverage beyond core MVP connections\nEnhanced AI insights or other UX improvements if time permits\nBoard meets Friday—confirm 2-sprint MVP.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "The sentence requires confirming the MVP timeline by Friday, imposing an enforceable obligation."
+    }
+  ]
+}

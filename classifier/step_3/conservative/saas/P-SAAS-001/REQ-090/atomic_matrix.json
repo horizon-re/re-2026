@@ -1,0 +1,9 @@
+{
+  "req_id": "REQ-090",
+  "mode": "conservative",
+  "num_parent_sentences": 54,
+  "num_atomic_units": 73,
+  "avg_units_per_sentence": 1.352,
+  "max_units_from_single_sentence": 3,
+  "split_rate": 0.296
+}

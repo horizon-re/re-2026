@@ -1,0 +1,1 @@
+{"unit_id": "REQ-146::cu001", "req_id": "REQ-146", "doc_id": "51373314-fb0a-524b-8685-224ddef4213d", "parent_sent_id": "REQ-146::s006", "order": 1, "text": "Immediate remediation required:\n\n- Fallback logic must replace `NaN` with last known valid datapoint.  \n- Mark `NaN` entries as null in audit logs."}

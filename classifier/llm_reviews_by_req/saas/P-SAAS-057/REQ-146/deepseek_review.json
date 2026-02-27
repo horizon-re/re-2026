@@ -1,0 +1,128 @@
+{
+  "req_id": "REQ-146",
+  "doc_id": "51373314-fb0a-524b-8685-224ddef4213d",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-057",
+  "model": "deepseek-r1:7b",
+  "review_timestamp": "2026-01-20T23:53:40.223778+00:00",
+  "counts": {
+    "total": 11,
+    "llm_pos": 4,
+    "pipe_pos": 1,
+    "llm_neg": 7,
+    "pipe_neg": 10,
+    "flip_neg_to_pos": 3
+  },
+  "reviews": [
+    {
+      "sent_id": "REQ-146::s001",
+      "order": 1,
+      "text": "**Incident Ticket #7432 – CloudWatch Anomaly & Spend Spike**  \n**Priority:** P1 | *",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-146::s002",
+      "order": 2,
+      "text": "*Reported by:** AWS Budgets | *",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-146::s003",
+      "order": 3,
+      "text": "*Triggered:** PagerDuty\n\nAt 02:13 UTC, CloudWatch reported an anomalous spend spike from $0 to $1,000,000 within 2 minutes.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-146::s004",
+      "order": 4,
+      "text": "Associated metric value returned as `NaN`, suggesting a divide-by-zero or corrupted calculation in cost reporting pipeline.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-146::s005",
+      "order": 5,
+      "text": "AWS Budgets alert triggered, automatically escalating via PagerDuty (P1).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-146::s006",
+      "order": 6,
+      "text": "Immediate remediation required:\n\n- Fallback logic must replace `NaN` with last known valid datapoint.  \n- Mark `NaN` entries as null in audit logs.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Explicitly sets enforceable behavior to replace NaN with last known valid datapoint and mark entries as null in audit logs."
+    },
+    {
+      "sent_id": "REQ-146::s007",
+      "order": 7,
+      "text": "- Engineering to deliver root-cause analysis within 4 hours.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Explicitly requires root-cause analysis to be delivered within a timeframe."
+    },
+    {
+      "sent_id": "REQ-146::s008",
+      "order": 8,
+      "text": "- Mandatory unit test to simulate divide-by-zero scenario and validate safeguard logic.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Requires the execution of a test to simulate a divide-by-zero scenario."
+    },
+    {
+      "sent_id": "REQ-146::s009",
+      "order": 9,
+      "text": "This anomaly caused temporary billing visibility loss and alerting system overload.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-146::s010",
+      "order": 10,
+      "text": "Until resolved, all dependent financial dashboards and budget alerts are considered unreliable.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Sets an enforceable system behavior to ensure dependent financial dashboards and budget alerts are reliable until resolved."
+    },
+    {
+      "sent_id": "REQ-146::s011",
+      "order": 11,
+      "text": "Engineering lead assigned: @cloud-metrics-eng. ETA for preliminary RCA: 06:30 UTC.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+{"unit_id": "REQ-037::au001", "req_id": "REQ-037", "doc_id": "15af87a2-03b1-545e-a3ea-3d04a16fa26b", "parent_sent_id": "REQ-037::s002", "order": 1, "text": "Embossing depth must not exceed 0.25   mm to preserve NFC antenna functionality ."}
+{"unit_id": "REQ-037::au002", "req_id": "REQ-037", "doc_id": "15af87a2-03b1-545e-a3ea-3d04a16fa26b", "parent_sent_id": "REQ-037::s002", "order": 2, "text": "to preserve NFC antenna functionality"}
+{"unit_id": "REQ-037::au003", "req_id": "REQ-037", "doc_id": "15af87a2-03b1-545e-a3ea-3d04a16fa26b", "parent_sent_id": "REQ-037::s003", "order": 3, "text": "All marketing renders must be updated within 48 hours of any implementation changes ."}

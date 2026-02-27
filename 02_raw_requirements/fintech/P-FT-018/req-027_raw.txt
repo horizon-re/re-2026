@@ -1,0 +1,27 @@
+SLIDE 4: Localization Gaps in Billing & Messaging
+• Invoices require region‑specific phrasing for VAT/GST and local compliance (Owner?).
+• Email templates often deviate from brand voice in non-English locales.
+• Translations are outsourced, but QA is manual—leading to inconsistencies at scale.
+• [RISK: Hardcoded strings from legacy invoice templates break when translated.]
+• Our LLM-powered “Translation QA Bot” flags mismatched tone and jurisdiction-specific tax terminology.
+• Workflow for escalation of flagged content still under definition (TBC).
+
+SLIDE 5: Framework: AI-Assisted Template Governance
+• Introduce a central hub for multi-locale email and invoice templates (Owner?).
+• Leverage LLMs to suggest glossary terms and enforce tone alignment.
+• [RISK: Auto-suggestions may drift from approved brand lexicon under noisy data conditions.]
+• Translation QA Bot integrates with staging environments for pre-deployment review.
+• Governance checkpoints include human-in-the-loop reviews and audit trails (TBC).
+
+Feature	Effort (pts)	ROI
+LLM Glossary Auto‑Suggest	8	High
+AI Brand‑Tone Checker	5	Med
+		
+
+SLIDE 6: Roadmap & Globalization Outcomes
+• Phase 1 rollout targeting LATAM markets with invoice template variants.
+• APAC launch to include right-to-left (RTL) and CJK script template testing (TBC).
+• [RISK: Regional linguistic nuance may affect legal enforceability of translated invoices.]
+• Translation QA Bot supports rule-based checks per geography.
+• Enable real-time feedback loop from customer support on template mismatches (Owner?).
+• Business outcome: faster time to market with 70%+ reduction in localization escalations.

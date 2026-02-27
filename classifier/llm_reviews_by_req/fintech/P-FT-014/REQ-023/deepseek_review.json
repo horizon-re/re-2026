@@ -1,0 +1,259 @@
+{
+  "req_id": "REQ-023",
+  "doc_id": "7978167b-b0b3-5f35-8e99-7a66306650b2",
+  "domain": "fintech",
+  "prompt_id": "P-FT-014",
+  "model": "deepseek-r1:7b",
+  "review_timestamp": "2026-01-20T22:23:28.550263+00:00",
+  "counts": {
+    "total": 24,
+    "llm_neg": 18,
+    "pipe_pos": 1,
+    "flip_pos_to_neg": 1,
+    "pipe_neg": 23,
+    "llm_pos": 6,
+    "flip_neg_to_pos": 6
+  },
+  "reviews": [
+    {
+      "sent_id": "REQ-023::s001",
+      "order": 1,
+      "text": "14:03  \nMaya: Hey both, thanks for jumping on.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Text between times, no action."
+    },
+    {
+      "sent_id": "REQ-023::s002",
+      "order": 2,
+      "text": "We need to talk about the rounding issues.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Implicit constraint to flag over €1 discrepancies."
+    },
+    {
+      "sent_id": "REQ-023::s003",
+      "order": 3,
+      "text": "Auditors flagged some net pay mismatches, especially in our EU and India payrolls.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Text between times, no action."
+    },
+    {
+      "sent_id": "REQ-023::s004",
+      "order": 4,
+      "text": "14:04  \nJonas:",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Text between times, no action."
+    },
+    {
+      "sent_id": "REQ-023::s005",
+      "order": 5,
+      "text": "Yeah, the €0.83 discrepancy in France was what triggered it.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "EXAMPLE_OR_EXPLANATION",
+      "reason_text": "Explains discrepancy but doesn't set a requirement."
+    },
+    {
+      "sent_id": "REQ-023::s006",
+      "order": 6,
+      "text": "It’s minor, but they’re calling it a “systemic risk.”  \n\n14:05  \nCarla: I’ve looked into this.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Text between times, no action."
+    },
+    {
+      "sent_id": "REQ-023::s007",
+      "order": 7,
+      "text": "The problem is we’re using fixed rounding logic in some regions, and manual overrides in others.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Text between times, no action."
+    },
+    {
+      "sent_id": "REQ-023::s008",
+      "order": 8,
+      "text": "No consistency.  \n\n14:06  \nMaya:",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.5,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Text between times, no action."
+    },
+    {
+      "sent_id": "REQ-023::s009",
+      "order": 9,
+      "text": "So what’s the fix?",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Implicit requirement to fix rounding issues."
+    },
+    {
+      "sent_id": "REQ-023::s010",
+      "order": 10,
+      "text": "We need something reliable—and audit-proof.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Text between times, no action."
+    },
+    {
+      "sent_id": "REQ-023::s011",
+      "order": 11,
+      "text": "14:06  \nCarla: I’m proposing a rule engine that learns from historical payroll.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Explains solution but doesn't set a requirement."
+    },
+    {
+      "sent_id": "REQ-023::s012",
+      "order": 12,
+      "text": "It can detect regional patterns and suggest rounding rules automatically.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.5,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Text between times, no action."
+    },
+    {
+      "sent_id": "REQ-023::s013",
+      "order": 13,
+      "text": "14:07  \nJonas:",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "EXAMPLE_OR_EXPLANATION",
+      "reason_text": "Question about fix but doesn't set a requirement."
+    },
+    {
+      "sent_id": "REQ-023::s014",
+      "order": 14,
+      "text": "And what happens when it gets it wrong?",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Text between times, no action."
+    },
+    {
+      "sent_id": "REQ-023::s015",
+      "order": 15,
+      "text": "We’re not risking a €1+ variance on net pay.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Implicit constraint to avoid over €1 variance."
+    },
+    {
+      "sent_id": "REQ-023::s016",
+      "order": 16,
+      "text": "14:08  \nCarla: That’s built in.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Text between times, no action."
+    },
+    {
+      "sent_id": "REQ-023::s017",
+      "order": 17,
+      "text": "Anything over €1 gets flagged and logged.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Implicit constraint to flag over €1 discrepancies."
+    },
+    {
+      "sent_id": "REQ-023::s018",
+      "order": 18,
+      "text": "We can even force a manual review for those.  \n\n14:08  \nMaya:",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Text between times, no action."
+    },
+    {
+      "sent_id": "REQ-023::s019",
+      "order": 19,
+      "text": "Okay, but I need payslip transparency.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Desire for transparency without enforcement."
+    },
+    {
+      "sent_id": "REQ-023::s020",
+      "order": 20,
+      "text": "If HR or the employee checks, they should see exactly what was rounded and why.  \n\n14:09  \nCarla: We’ll surface that in the payslip viewer.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-023::s021",
+      "order": 21,
+      "text": "Change history too, for audit.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Implies a system behavior related to change tracking for auditing."
+    },
+    {
+      "sent_id": "REQ-023::s022",
+      "order": 22,
+      "text": "But I need firm specs—what counts as an “exception”?",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Asks about exception criteria, which is clarification."
+    },
+    {
+      "sent_id": "REQ-023::s023",
+      "order": 23,
+      "text": "14:10  \nJonas: Let’s define that this week.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Scheduling task without enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-023::s024",
+      "order": 24,
+      "text": "But I’m aligned—this engine needs to be bulletproof.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Imposes the engine to be highly reliable."
+    }
+  ]
+}

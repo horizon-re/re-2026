@@ -1,0 +1,148 @@
+{
+  "req_id": "REQ-101",
+  "doc_id": "b9f8bc44-5e70-5fc5-8bc1-5d832a4d9d4c",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-012",
+  "model": "deepseek-r1:7b",
+  "review_timestamp": "2026-01-20T23:16:47.873845+00:00",
+  "counts": {
+    "total": 13,
+    "llm_pos": 5,
+    "pipe_pos": 1,
+    "llm_neg": 8,
+    "pipe_neg": 12,
+    "flip_neg_to_pos": 4
+  },
+  "reviews": [
+    {
+      "sent_id": "REQ-101::s001",
+      "order": 1,
+      "text": "Title: Integrate SAML SSO with Okta and Azure AD\n\nDescription:\nBusiness Need: Implement enterprise-grade Single Sign-On (SSO) to enhance security and streamline user access.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "business need description without enforceable behavior"
+    },
+    {
+      "sent_id": "REQ-101::s002",
+      "order": 2,
+      "text": "This is crucial for attracting and onboarding enterprise clients who require robust authentication mechanisms.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Explanation of why integration is needed without enforceable behavior"
+    },
+    {
+      "sent_id": "REQ-101::s003",
+      "order": 3,
+      "text": "Current Issue: Existing Okta integration has failures that are currently blocking the onboarding of new clients.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Problem statement without enforcing integration issues"
+    },
+    {
+      "sent_id": "REQ-101::s004",
+      "order": 4,
+      "text": "Resolving this is a high priority.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.5,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Urgency statement without enforceable behavior"
+    },
+    {
+      "sent_id": "REQ-101::s005",
+      "order": 5,
+      "text": "Requirement:",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.4,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Use of 'Requirement:' without enforcing a behavior"
+    },
+    {
+      "sent_id": "REQ-101::s006",
+      "order": 6,
+      "text": "The solution must support integration with both Okta and Azure AD as Identity Providers (IdPs) to cater to a wider range of potential clients.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Imposes enforceable integration with Okta and Azure AD"
+    },
+    {
+      "sent_id": "REQ-101::s007",
+      "order": 7,
+      "text": "Acceptance Criteria:",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.3,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Acceptance criteria list without enforceable behavior"
+    },
+    {
+      "sent_id": "REQ-101::s008",
+      "order": 8,
+      "text": "* Metadata upload endpoint for Service Provider (SP) XML is implemented.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "PERFORMANCE_REQUIREMENT",
+      "reason_text": "Automated endpoint implementation for metadata upload"
+    },
+    {
+      "sent_id": "REQ-101::s009",
+      "order": 9,
+      "text": "* Metadata upload endpoint for Identity Provider (IdP) XML is implemented.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "PERFORMANCE_REQUIREMENT",
+      "reason_text": "Implementation of endpoint for IdP XML metadata upload"
+    },
+    {
+      "sent_id": "REQ-101::s010",
+      "order": 10,
+      "text": "* Certificate rotation is automated every 90 days.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.95,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Automated certificate rotation every 90 days"
+    },
+    {
+      "sent_id": "REQ-101::s011",
+      "order": 11,
+      "text": "* Automatic retry mechanism is implemented for 5xx errors with exponential backoff.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "PERFORMANCE_REQUIREMENT",
+      "reason_text": "Automatic retry mechanism for 5xx errors"
+    },
+    {
+      "sent_id": "REQ-101::s012",
+      "order": 12,
+      "text": "* End-user test flow for both Okta and Azure AD is documented in Confluence.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "EXAMPLE_OR_EXPLANATION",
+      "reason_text": "Documentation of end-user test flows without enforceable behavior"
+    },
+    {
+      "sent_id": "REQ-101::s013",
+      "order": 13,
+      "text": "Labels: security, sso, okta, azure-ad\n\nPriority: High",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.5,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "High priority label only"
+    }
+  ]
+}

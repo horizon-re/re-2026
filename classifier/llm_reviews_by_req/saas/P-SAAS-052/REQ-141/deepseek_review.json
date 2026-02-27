@@ -1,0 +1,78 @@
+{
+  "req_id": "REQ-141",
+  "doc_id": "5f951227-1ac6-56d3-ac06-505ab51014b6",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-052",
+  "model": "deepseek-r1:7b",
+  "review_timestamp": "2026-01-20T23:51:33.343678+00:00",
+  "counts": {
+    "total": 6,
+    "llm_pos": 5,
+    "pipe_pos": 2,
+    "llm_neg": 1,
+    "pipe_neg": 4,
+    "flip_neg_to_pos": 3
+  },
+  "reviews": [
+    {
+      "sent_id": "REQ-141::s001",
+      "order": 1,
+      "text": "SEV-1 Alert: “epoch overflow 2038-01-19 03:14:08” triggered critical time_t failure.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "EXAMPLE_OR_EXPLANATION",
+      "reason_text": "Status alert indicating issue, not enforceable action."
+    },
+    {
+      "sent_id": "REQ-141::s002",
+      "order": 2,
+      "text": "All engineers: immediately rollback to build v2.7.3 across all regions using `ci-hotfix.sh`.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Immediate rollback order across regions using specified script."
+    },
+    {
+      "sent_id": "REQ-141::s003",
+      "order": 3,
+      "text": "Mitigation SLA: pipelines must be green within 15 minutes.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "PERFORMANCE_REQUIREMENT",
+      "reason_text": "SLA specifying green pipelines within time frame."
+    },
+    {
+      "sent_id": "REQ-141::s004",
+      "order": 4,
+      "text": "An epoch-safe patch must be cut and validated by EOD.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Enforceable deadline for cutting and validating a patch."
+    },
+    {
+      "sent_id": "REQ-141::s005",
+      "order": 5,
+      "text": "Create a post-mortem ticket with root-cause analysis and include a regression test explicitly covering `time_t >= INT32_MAX`.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Obligation to create post-mortem ticket with analysis and test."
+    },
+    {
+      "sent_id": "REQ-141::s006",
+      "order": 6,
+      "text": "No exceptions—this needs airtight verification.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "No exceptions imply universal requirement for verification."
+    }
+  ]
+}

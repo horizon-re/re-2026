@@ -1,0 +1,95 @@
+{
+  "doc_id": "ecdd4211-0b86-5803-b1d4-6859f6902be1",
+  "req_key": "fintech::P-FT-030::REQ-039",
+  "req_id": "REQ-039",
+  "domain": "fintech",
+  "prompt_id": "P-FT-030",
+  "source": {
+    "raw_path": "02_raw_requirements/fintech/P-FT-030/req-039_raw.txt",
+    "refined_path": "03_refined_json_normalized/fintech/P-FT-030/req-039_refined.json",
+    "origin": "both"
+  },
+  "text": "The robo-advisor onboarding process must automatically derive a user's risk score based on their linked brokerage transaction history and age, but revert seamlessly to a concise three-question Know Your Customer (KYC) assessment when data confidence falls below 0.8, subsequently storing the resulting computed riskTier, complete with timestamp and data source, in the user's profile, and strictly preventing any portfolio creation until successful completion and validation of both KYC compliance and the assigned riskTier are confirmed within the system.",
+  "structured_data": [
+    {
+      "id": "REQ-039-HLJ-Chunk_1-Item_1-v1.0",
+      "domain": "fintech",
+      "summary": "Auto-derive risk score from brokerage history and age",
+      "priority": "High",
+      "tags": [
+        "risk_scoring",
+        "data_analysis",
+        "user_onboarding"
+      ],
+      "subdomain": "robo_advisory",
+      "difficulty": 4,
+      "additionalNotes": "Uses existing user data sources to determine financial risk profile during onboarding.",
+      "source_hlj_id": "REQ 001-001",
+      "domain_id": "P-FT-030"
+    },
+    {
+      "id": "REQ-039-HLJ-Chunk_1-Item_2-v1.0",
+      "domain": "fintech",
+      "summary": "Revert to 3-question KYC if confidence is below 0.8",
+      "priority": "High",
+      "tags": [
+        "kyc",
+        "fallback_logic",
+        "user_verification"
+      ],
+      "subdomain": "robo_advisory",
+      "difficulty": 3,
+      "additionalNotes": "Ensures compliance and fallback mechanism for uncertain automated assessments.",
+      "source_hlj_id": "REQ 001-002",
+      "domain_id": "P-FT-030"
+    },
+    {
+      "id": "REQ-039-HLJ-Chunk_1-Item_3-v1.0",
+      "domain": "fintech",
+      "summary": "Store riskTier with timestamp and source in user profile",
+      "priority": "High",
+      "tags": [
+        "user_profile",
+        "data_persistence",
+        "audit_trail"
+      ],
+      "subdomain": "robo_advisory",
+      "difficulty": 2,
+      "additionalNotes": "Tracks how and when the user's risk assessment was derived for auditing and traceability.",
+      "source_hlj_id": "REQ 001-003",
+      "domain_id": "P-FT-030"
+    },
+    {
+      "id": "REQ-039-HLJ-Chunk_1-Item_4-v1.0",
+      "domain": "fintech",
+      "summary": "Block portfolio creation until KYC and riskTier exist",
+      "priority": "High",
+      "tags": [
+        "access_control",
+        "business_rules",
+        "compliance"
+      ],
+      "subdomain": "robo_advisory",
+      "difficulty": 3,
+      "additionalNotes": "Prevents users from proceeding to financial planning without compliance prerequisites.",
+      "source_hlj_id": "REQ 001-004",
+      "domain_id": "P-FT-030"
+    },
+    {
+      "id": "REQ-039-HLJ-Chunk_1-Item_5-v1.0",
+      "domain": "fintech",
+      "summary": "Validate completion of KYC and riskTier before portfolio",
+      "priority": "Medium",
+      "tags": [
+        "validation",
+        "workflow",
+        "risk_management"
+      ],
+      "subdomain": "robo_advisory",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied — System must validate that both KYC and riskTier are set before enabling portfolio actions.",
+      "source_hlj_id": "REQ 001-005",
+      "domain_id": "P-FT-030"
+    }
+  ]
+}

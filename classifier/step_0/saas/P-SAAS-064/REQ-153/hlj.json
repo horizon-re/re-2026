@@ -1,0 +1,95 @@
+{
+  "doc_id": "ab61fa30-e0a3-5078-aace-22d20fa68fba",
+  "req_key": "saas::P-SAAS-064::REQ-153",
+  "req_id": "REQ-153",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-064",
+  "source": {
+    "raw_path": "02_raw_requirements/saas/P-SAAS-064/req-153_raw.txt",
+    "refined_path": "03_refined_json_normalized/saas/P-SAAS-064/req-153_refined.json",
+    "origin": "both"
+  },
+  "text": "**Ticket Title:** OCR Misinterpretation of \"5 s\" as \"$5\" Leading to Price Calculation Error\n\n**Description:**  \nOur OCR system is incorrectly interpreting the string \"5 s\" (representing \"5 seconds\") as \"$5\", leading to miscalculations in price-sensitive contexts where time-based data is critical. This is especially problematic in automated billing and log analysis pipelines where time and currency are both present, creating ambiguities.\n\n**Tasks:**  \n1. **Implement contextual spell-checking logic** that distinguishes between time units (e.g., \"s\", \"sec\", \"seconds\") and monetary values (e.g., \"$\", \"USD\", etc.). This should rely on surrounding words and common patterns to infer the correct unit.\n2. **Introduce a manual review flag** for any extracted value where time and currency indicators are mixed or ambiguous (e.g., \"$5s\", \"5 $s\", etc.).\n3. **Update the OCR post-processing pipeline** to apply this logic before final value extraction is returned downstream.\n\n**Acceptance Criteria:**  \n- System must correctly identify \"5 s\" as time when used in timing or duration context.\n- No false positive currency values should result from timing strings.\n- All flagged ambiguities should appear in the review dashboard with context snippet and original OCR output.\n\n**Priority:** High  \n**Estimate:** 3 engineering days",
+  "structured_data": [
+    {
+      "id": "REQ-153-HLJ-Chunk_1-Item_1-v1.0",
+      "domain": "saas",
+      "summary": "Implement context-aware spell-check between time and currency",
+      "priority": "High",
+      "tags": [
+        "ocr",
+        "spell_check",
+        "unit_disambiguation"
+      ],
+      "subdomain": "ocr_processing",
+      "difficulty": 3,
+      "additionalNotes": "System should use contextual clues to differentiate time vs currency symbols",
+      "source_hlj_id": "REQ 001-001",
+      "domain_id": "P-SAAS-064"
+    },
+    {
+      "id": "REQ-153-HLJ-Chunk_1-Item_2-v1.0",
+      "domain": "saas",
+      "summary": "Add manual review flag for ambiguous unit extraction",
+      "priority": "Medium",
+      "tags": [
+        "review_flag",
+        "unit_conflict",
+        "error_detection"
+      ],
+      "subdomain": "ocr_processing",
+      "difficulty": 2,
+      "additionalNotes": "Flag mixed units like '$5s' for human validation",
+      "source_hlj_id": "REQ 001-002",
+      "domain_id": "P-SAAS-064"
+    },
+    {
+      "id": "REQ-153-HLJ-Chunk_1-Item_3-v1.0",
+      "domain": "saas",
+      "summary": "Update OCR pipeline with new pre-extraction logic",
+      "priority": "High",
+      "tags": [
+        "ocr_pipeline",
+        "preprocessing",
+        "context_logic"
+      ],
+      "subdomain": "ocr_processing",
+      "difficulty": 3,
+      "additionalNotes": "New logic must be applied before value extraction",
+      "source_hlj_id": "REQ 001-003",
+      "domain_id": "P-SAAS-064"
+    },
+    {
+      "id": "REQ-153-HLJ-Chunk_1-Item_4-v1.0",
+      "domain": "saas",
+      "summary": "Correctly interpret '5 s' as time in context",
+      "priority": "High",
+      "tags": [
+        "unit_parsing",
+        "duration",
+        "context_awareness"
+      ],
+      "subdomain": "ocr_processing",
+      "difficulty": 2,
+      "additionalNotes": "System must prioritize context-based accuracy for time formats",
+      "source_hlj_id": "REQ 001-004",
+      "domain_id": "P-SAAS-064"
+    },
+    {
+      "id": "REQ-153-HLJ-Chunk_1-Item_5-v1.0",
+      "domain": "saas",
+      "summary": "Display flagged ambiguities in review dashboard",
+      "priority": "Medium",
+      "tags": [
+        "dashboard",
+        "review",
+        "data_validation"
+      ],
+      "subdomain": "ui_review",
+      "difficulty": 2,
+      "additionalNotes": "Include context snippet and OCR original text for reviewers",
+      "source_hlj_id": "REQ 001-005",
+      "domain_id": "P-SAAS-064"
+    }
+  ]
+}

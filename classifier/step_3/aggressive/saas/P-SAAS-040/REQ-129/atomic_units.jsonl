@@ -1,0 +1,4 @@
+{"unit_id": "REQ-129::au001", "req_id": "REQ-129", "doc_id": "f0042b08-df7d-5ff1-9e3c-6736d129b8ab", "parent_sent_id": "REQ-129::s003", "order": 1, "text": "This smart assistant will greet new users with personalized welcome messages based on their role and first actions in the app , making every experience feel tailored and engaging ."}
+{"unit_id": "REQ-129::au002", "req_id": "REQ-129", "doc_id": "f0042b08-df7d-5ff1-9e3c-6736d129b8ab", "parent_sent_id": "REQ-129::s003", "order": 2, "text": "based on their role and first actions in the app"}
+{"unit_id": "REQ-129::au003", "req_id": "REQ-129", "doc_id": "f0042b08-df7d-5ff1-9e3c-6736d129b8ab", "parent_sent_id": "REQ-129::s003", "order": 3, "text": "making every experience feel tailored and engaging"}
+{"unit_id": "REQ-129::au004", "req_id": "REQ-129", "doc_id": "f0042b08-df7d-5ff1-9e3c-6736d129b8ab", "parent_sent_id": "REQ-129::s003", "order": 4, "text": "every experience feel tailored and engaging"}

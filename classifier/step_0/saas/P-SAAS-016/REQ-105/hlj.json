@@ -1,0 +1,144 @@
+{
+  "doc_id": "c1072885-5388-5ccc-8516-09f215bc6409",
+  "req_key": "saas::P-SAAS-016::REQ-105",
+  "req_id": "REQ-105",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-016",
+  "source": {
+    "raw_path": "02_raw_requirements/saas/P-SAAS-016/req-105_raw.txt",
+    "refined_path": "03_refined_json_normalized/saas/P-SAAS-016/req-105_refined.json",
+    "origin": "both"
+  },
+  "text": "Add Email Reputation Monitoring Feature to Proactively Address Deliverability IssuesDeclining email deliverability metrics and a noticeable increase in Gmail spam rates indicate a critical need for proactive monitoring of our email sending reputation. This issue proposes the development and implementation of a new feature to continuously track and alert on our reputation with key email providers. This will allow us to identify and address potential issues before they significantly impact our ability to reach our audience.Requirements:To effectively monitor and manage our email sending reputation, the following capabilities are required:1. Automated Daily Reputation Scan of Sending IPs and Domains:The foundation of this monitoring system will be an automated process that runs daily to check the reputation of all IP addresses and domains used for sending emails. This regular scanning is crucial because email reputation can fluctuate rapidly, and early detection of any negative trends is essential to prevent deliverability problems. Maintaining an up-to-date list of all sending IPs and domains will be a prerequisite for this functionality. The frequency of daily scans underscores the dynamic nature of email reputation and the potential for swift deterioration if issues are not promptly identified.2. Integration with Mailgun API and Gmail Postmaster:The monitoring system must integrate with both the Mailgun API and Gmail Postmaster. Integration with the Mailgun API will provide valuable data on our sending reputation as perceived by our email service provider. This will likely include metrics related to bounce rates, spam complaints, and overall account health. Simultaneously, integrating with Gmail Postmaster will offer direct insights into how Gmail, a major recipient domain, views our sending reputation and the deliverability of our emails to their users. This dual integration strategy ensures a comprehensive understanding of our email reputation from both the sending platform's perspective and the recipient's perspective. Any discrepancies in the data reported by these two sources could indicate specific problems that require further investigation.3. Slack Alert on Reputation Drop > 5 Points:To ensure timely intervention when our email reputation is at risk, the system should be configured to send an immediate alert to the #email-alerts Slack channel whenever a monitored IP address or domain experiences a reputation drop of more than 5 points. The definition of a \"point\" drop will need to be aligned with the specific metrics provided by the Mailgun API and Gmail Postmaster. This threshold of 5 points suggests a predefined level of risk tolerance, indicating that drops of this magnitude are considered significant enough to warrant immediate attention. The selection of Slack as the notification channel reflects the team's established communication workflow for critical operational alerts. Understanding the typical range and variability of reputation scores from both platforms will be important to fine-tune this alerting threshold and avoid excessive or insufficient notifications.4. Dashboard Widget for Reputation Trends:A dedicated dashboard widget is required to visually represent the historical trends of our email sending reputation. This widget should display reputation scores over time, allowing us to easily identify patterns, track improvements resulting from any remediation efforts, and proactively detect potential long-term issues. To enable this visualization, the system will need to store and aggregate the reputation data collected from the Mailgun API and Gmail Postmaster on an ongoing basis. The ability to visualize these trends will be invaluable for understanding the overall health of our email deliverability and for making informed decisions about our email sending practices.Labels: feature, email, monitoring, high-priorityAssignees:Priority: High",
+  "structured_data": [
+    {
+      "id": "REQ-105-HLJ-Chunk_1-Item_1-v1.0",
+      "domain": "unknown",
+      "summary": "Automate daily reputation scan of sending IPs and domains.",
+      "priority": "High",
+      "tags": [
+        "email",
+        "reputation",
+        "monitoring",
+        "automation"
+      ],
+      "subdomain": "email deliverability",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-001",
+      "domain_id": "P-SAAS-016"
+    },
+    {
+      "id": "REQ-105-HLJ-Chunk_1-Item_2-v1.0",
+      "domain": "unknown",
+      "summary": "Maintain an up-to-date list of all sending IPs and domains.",
+      "priority": "High",
+      "tags": [
+        "email",
+        "inventory",
+        "data_management"
+      ],
+      "subdomain": "email deliverability",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied",
+      "source_hlj_id": "REQ 001-002",
+      "domain_id": "P-SAAS-016"
+    },
+    {
+      "id": "REQ-105-HLJ-Chunk_1-Item_3-v1.0",
+      "domain": "unknown",
+      "summary": "Integrate with Mailgun API for reputation data.",
+      "priority": "High",
+      "tags": [
+        "email",
+        "integration",
+        "mailgun"
+      ],
+      "subdomain": "email deliverability",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-003",
+      "domain_id": "P-SAAS-016"
+    },
+    {
+      "id": "REQ-105-HLJ-Chunk_1-Item_4-v1.0",
+      "domain": "unknown",
+      "summary": "Integrate with Gmail Postmaster for reputation data.",
+      "priority": "High",
+      "tags": [
+        "email",
+        "integration",
+        "gmail_postmaster"
+      ],
+      "subdomain": "email deliverability",
+      "difficulty": 3,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-004",
+      "domain_id": "P-SAAS-016"
+    },
+    {
+      "id": "REQ-105-HLJ-Chunk_1-Item_5-v1.0",
+      "domain": "unknown",
+      "summary": "Send Slack alert to #email-alerts on reputation drop > 5 points.",
+      "priority": "High",
+      "tags": [
+        "email",
+        "alerting",
+        "slack"
+      ],
+      "subdomain": "email deliverability",
+      "difficulty": 2,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-005",
+      "domain_id": "P-SAAS-016"
+    },
+    {
+      "id": "REQ-105-HLJ-Chunk_1-Item_6-v1.0",
+      "domain": "unknown",
+      "summary": "Configure alert threshold for reputation drop.",
+      "priority": "Medium",
+      "tags": [
+        "email",
+        "alerting",
+        "configuration"
+      ],
+      "subdomain": "email deliverability",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied",
+      "source_hlj_id": "REQ 001-006",
+      "domain_id": "P-SAAS-016"
+    },
+    {
+      "id": "REQ-105-HLJ-Chunk_1-Item_7-v1.0",
+      "domain": "unknown",
+      "summary": "Display historical reputation trends in a dashboard widget.",
+      "priority": "High",
+      "tags": [
+        "email",
+        "dashboard",
+        "visualization"
+      ],
+      "subdomain": "email deliverability",
+      "difficulty": 4,
+      "additionalNotes": "",
+      "source_hlj_id": "REQ 001-007",
+      "domain_id": "P-SAAS-016"
+    },
+    {
+      "id": "REQ-105-HLJ-Chunk_1-Item_8-v1.0",
+      "domain": "unknown",
+      "summary": "Store and aggregate reputation data from Mailgun and Gmail.",
+      "priority": "High",
+      "tags": [
+        "email",
+        "data_storage",
+        "data_aggregation"
+      ],
+      "subdomain": "email deliverability",
+      "difficulty": 3,
+      "additionalNotes": "origin: implied",
+      "source_hlj_id": "REQ 001-008",
+      "domain_id": "P-SAAS-016"
+    }
+  ]
+}

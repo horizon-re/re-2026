@@ -1,0 +1,14 @@
+{
+  "doc_id": "be4d0a85-3e62-5613-b173-ef3247ee2941",
+  "req_key": "fintech::P-FT-027::REQ-036",
+  "req_id": "REQ-036",
+  "domain": "fintech",
+  "prompt_id": "P-FT-027",
+  "source": {
+    "raw_path": "02_raw_requirements/fintech/P-FT-027/req-036_raw.txt",
+    "refined_path": null,
+    "origin": "raw_only"
+  },
+  "text": "The application shall include a \"Pay Again\" button next to the existing \"Send\" button in the user interface that autofills the IBAN from the last successful transfer (ensuring it passes format validation of 22 alphanumeric characters with a valid country checksum), enforces a maximum of 3 clicks per minute per user to prevent duplicate transfers, and is disabled by default if the last successful transfer occurred more than 30 days ago.",
+  "structured_data": null
+}

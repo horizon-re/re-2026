@@ -1,0 +1,9 @@
+**Schema Update Note – Spec v3 Migration**
+
+Effective immediately, the schema for Spec v3 will adopt `snake_case` naming conventions for all field identifiers. This update aligns with broader industry practices and improves consistency across internal systems. All new fields added to Spec v3 will follow `snake_case` naming. Existing fields using `camelCase` will remain available for a transitional period but are officially deprecated and will be removed by **2025-10-01**.
+
+To support downstream integration, a **transform** capability has been introduced within the aggregator layer. This module will **dual-accept** both `snake_case` and `camelCase` keys for a period of **90 days** from today. This grace period is intended to give clients and partners sufficient time to migrate their implementations without service disruption.
+
+We strongly encourage teams to begin updating their systems to use `snake_case` exclusively. Updated documentation, including migration guides and revised sample payloads, is now available in the developer portal. These resources include side-by-side examples for ease of transition and common pitfalls to avoid during implementation.
+
+Please direct any technical inquiries or compatibility concerns to the integration support team. Thank you for your cooperation in keeping our schema clean, predictable, and forward-compatible.

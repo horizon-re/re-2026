@@ -1,0 +1,159 @@
+{
+  "doc_id": "7978167b-b0b3-5f35-8e99-7a66306650b2",
+  "req_key": "fintech::P-FT-014::REQ-023",
+  "req_id": "REQ-023",
+  "domain": "fintech",
+  "prompt_id": "P-FT-014",
+  "source": {
+    "raw_path": "02_raw_requirements/fintech/P-FT-014/req-023_raw.txt",
+    "refined_path": "03_refined_json_normalized/fintech/P-FT-014/req-023_refined.json",
+    "origin": "both"
+  },
+  "text": "14:03  \nMaya: Hey both, thanks for jumping on. We need to talk about the rounding issues. Auditors flagged some net pay mismatches, especially in our EU and India payrolls.  \n\n14:04  \nJonas: Yeah, the €0.83 discrepancy in France was what triggered it. It’s minor, but they’re calling it a “systemic risk.”  \n\n14:05  \nCarla: I’ve looked into this. The problem is we’re using fixed rounding logic in some regions, and manual overrides in others. No consistency.  \n\n14:06  \nMaya: So what’s the fix? We need something reliable—and audit-proof.  \n\n14:06  \nCarla: I’m proposing a rule engine that learns from historical payroll. It can detect regional patterns and suggest rounding rules automatically.  \n\n14:07  \nJonas: And what happens when it gets it wrong? We’re not risking a €1+ variance on net pay.  \n\n14:08  \nCarla: That’s built in. Anything over €1 gets flagged and logged. We can even force a manual review for those.  \n\n14:08  \nMaya: Okay, but I need payslip transparency. If HR or the employee checks, they should see exactly what was rounded and why.  \n\n14:09  \nCarla: We’ll surface that in the payslip viewer. Change history too, for audit. But I need firm specs—what counts as an “exception”?  \n\n14:10  \nJonas: Let’s define that this week. But I’m aligned—this engine needs to be bulletproof.",
+  "structured_data": [
+    {
+      "id": "REQ-023-HLJ-Chunk_1-Item_1-v1.0",
+      "domain": "fintech",
+      "summary": "Learn rounding rules per locale from historical data",
+      "priority": "High",
+      "tags": [
+        "rounding",
+        "localization",
+        "machine_learning"
+      ],
+      "subdomain": "payroll_engine",
+      "difficulty": 4,
+      "additionalNotes": "This enables region-specific rule detection based on past payroll behavior",
+      "source_hlj_id": "REQ 001-001",
+      "domain_id": "P-FT-014"
+    },
+    {
+      "id": "REQ-023-HLJ-Chunk_1-Item_2-v1.0",
+      "domain": "fintech",
+      "summary": "Auto-suggest correct rounding rule during payroll run",
+      "priority": "High",
+      "tags": [
+        "ai_suggestions",
+        "rounding",
+        "automation"
+      ],
+      "subdomain": "payroll_engine",
+      "difficulty": 3,
+      "additionalNotes": "Reduces manual overrides by suggesting learned rules in real-time",
+      "source_hlj_id": "REQ 001-002",
+      "domain_id": "P-FT-014"
+    },
+    {
+      "id": "REQ-023-HLJ-Chunk_1-Item_3-v1.0",
+      "domain": "fintech",
+      "summary": "Flag and log net pay variances greater than €1",
+      "priority": "High",
+      "tags": [
+        "audit_log",
+        "variance_alerts",
+        "compliance"
+      ],
+      "subdomain": "payroll_engine",
+      "difficulty": 3,
+      "additionalNotes": "Helps catch and trace large anomalies for compliance review",
+      "source_hlj_id": "REQ 001-003",
+      "domain_id": "P-FT-014"
+    },
+    {
+      "id": "REQ-023-HLJ-Chunk_1-Item_4-v1.0",
+      "domain": "fintech",
+      "summary": "Expose rounding logic in the payslip viewer",
+      "priority": "High",
+      "tags": [
+        "payslip",
+        "transparency",
+        "ui"
+      ],
+      "subdomain": "hr_tools",
+      "difficulty": 2,
+      "additionalNotes": "Ensures HR and employees can see what rounding occurred and why",
+      "source_hlj_id": "REQ 001-004",
+      "domain_id": "P-FT-014"
+    },
+    {
+      "id": "REQ-023-HLJ-Chunk_1-Item_5-v1.0",
+      "domain": "fintech",
+      "summary": "Maintain audit-ready change history for rounding adjustments",
+      "priority": "High",
+      "tags": [
+        "audit",
+        "change_log",
+        "compliance"
+      ],
+      "subdomain": "governance",
+      "difficulty": 3,
+      "additionalNotes": "Supports financial and tax audits through a complete history of changes",
+      "source_hlj_id": "REQ 001-005",
+      "domain_id": "P-FT-014"
+    },
+    {
+      "id": "REQ-023-HLJ-Chunk_1-Item_6-v1.0",
+      "domain": "fintech",
+      "summary": "Define what counts as an exception in payroll rounding",
+      "priority": "Medium",
+      "tags": [
+        "policy_definition",
+        "exceptions",
+        "payroll"
+      ],
+      "subdomain": "compliance",
+      "difficulty": 2,
+      "additionalNotes": "Helps finalize conditions under which rules must trigger alerts or manual review",
+      "source_hlj_id": "REQ 001-006",
+      "domain_id": "P-FT-014"
+    },
+    {
+      "id": "REQ-023-HLJ-Chunk_1-Item_7-v1.0",
+      "domain": "fintech",
+      "summary": "Support multi-currency net pay calculation",
+      "priority": "Low",
+      "tags": [
+        "currency",
+        "net_pay",
+        "calculation"
+      ],
+      "subdomain": "payroll_engine",
+      "difficulty": 3,
+      "additionalNotes": "origin: implied – Required for processing region-specific rounding and variance detection",
+      "source_hlj_id": "REQ 001-007",
+      "domain_id": "P-FT-014"
+    },
+    {
+      "id": "REQ-023-HLJ-Chunk_1-Item_8-v1.0",
+      "domain": "fintech",
+      "summary": "Ensure regional tax and compliance support in payroll calculations",
+      "priority": "Low",
+      "tags": [
+        "tax_compliance",
+        "regional_logic",
+        "payroll"
+      ],
+      "subdomain": "compliance",
+      "difficulty": 4,
+      "additionalNotes": "origin: implied – Rounding rules must align with local tax and payroll regulations",
+      "source_hlj_id": "REQ 001-008",
+      "domain_id": "P-FT-014"
+    },
+    {
+      "id": "REQ-023-HLJ-Chunk_1-Item_9-v1.0",
+      "domain": "fintech",
+      "summary": "Schedule recurring payroll analysis with rule engine",
+      "priority": "Low",
+      "tags": [
+        "scheduler",
+        "celery",
+        "automation"
+      ],
+      "subdomain": "backend_services",
+      "difficulty": 3,
+      "additionalNotes": "origin: implied – System likely uses recurring task execution to analyze payroll regularly",
+      "source_hlj_id": "REQ 001-009",
+      "domain_id": "P-FT-014"
+    }
+  ]
+}

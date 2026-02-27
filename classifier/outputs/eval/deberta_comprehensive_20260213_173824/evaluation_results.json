@@ -1,0 +1,74 @@
+{
+  "metadata": {
+    "timestamp": "20260213_173824",
+    "test_data": "classifier\\outputs\\splits\\train_40.jsonl",
+    "n_samples": 2212,
+    "n_positive": 1259,
+    "n_negative": 953,
+    "comprehensive": true,
+    "context_sizes": [
+      1,
+      2,
+      3
+    ]
+  },
+  "results": [
+    {
+      "model": "DeBERTa-base (Full FT, n=1)",
+      "n_context": 1,
+      "metrics": {
+        "accuracy": 0.8675406871609403,
+        "precision": 0.8933224755700325,
+        "recall": 0.8713264495631453,
+        "f1": 0.8821873743466022,
+        "roc_auc": 0.929066440411826,
+        "pr_auc": 0.9367452333591677,
+        "tp": 1097,
+        "fp": 131,
+        "tn": 822,
+        "fn": 162,
+        "n_samples": 2212,
+        "n_positive": 1259,
+        "n_negative": 953
+      }
+    },
+    {
+      "model": "DeBERTa-base (Full FT, n=2)",
+      "n_context": 2,
+      "metrics": {
+        "accuracy": 0.8684448462929476,
+        "precision": 0.8954248366013072,
+        "recall": 0.8705321683876092,
+        "f1": 0.882803060813532,
+        "roc_auc": 0.9329753372777909,
+        "pr_auc": 0.9420825402577759,
+        "tp": 1096,
+        "fp": 128,
+        "tn": 825,
+        "fn": 163,
+        "n_samples": 2212,
+        "n_positive": 1259,
+        "n_negative": 953
+      }
+    },
+    {
+      "model": "DeBERTa-base (Full FT, n=3)",
+      "n_context": 3,
+      "metrics": {
+        "accuracy": 0.8630198915009042,
+        "precision": 0.8873581847649918,
+        "recall": 0.8697378872120731,
+        "f1": 0.878459687123947,
+        "roc_auc": 0.9226017584201722,
+        "pr_auc": 0.9266306850973014,
+        "tp": 1095,
+        "fp": 139,
+        "tn": 814,
+        "fn": 164,
+        "n_samples": 2212,
+        "n_positive": 1259,
+        "n_negative": 953
+      }
+    }
+  ]
+}

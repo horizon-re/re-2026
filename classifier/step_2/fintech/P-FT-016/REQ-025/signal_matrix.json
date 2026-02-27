@@ -1,0 +1,16 @@
+{
+  "req_id": "REQ-025",
+  "num_sentences": 16,
+  "num_candidates": 1,
+  "acceptance_rate": 0.062,
+  "signal_counts": {
+    "action": 12,
+    "constraint": 1
+  },
+  "top_signal_combinations": [
+    {
+      "pattern": "action+constraint",
+      "count": 1
+    }
+  ]
+}

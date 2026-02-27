@@ -1,0 +1,79 @@
+{
+  "req_id": "REQ-142",
+  "doc_id": "fec79713-02b8-540e-b10a-21e1a7df55f7",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-053",
+  "model": "deepseek-r1:7b",
+  "review_timestamp": "2026-01-20T23:51:58.376759+00:00",
+  "counts": {
+    "total": 6,
+    "llm_pos": 4,
+    "pipe_pos": 3,
+    "llm_neg": 2,
+    "flip_pos_to_neg": 1,
+    "pipe_neg": 3,
+    "flip_neg_to_pos": 2
+  },
+  "reviews": [
+    {
+      "sent_id": "REQ-142::s001",
+      "order": 1,
+      "text": "The billing rollover CRON job is misconfigured with an invalid schedule: `24:60 UTC on 30 Feb`.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Imposes a correct schedule for a job."
+    },
+    {
+      "sent_id": "REQ-142::s002",
+      "order": 2,
+      "text": "This hotfix updates the schedule to `00:00 UTC on the last day of the month`.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Sets an enforceable schedule update for a job."
+    },
+    {
+      "sent_id": "REQ-142::s003",
+      "order": 3,
+      "text": "The PR must include a unit test validating correct trigger behavior across leap years, 30- and 31-day months.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Specifies the inclusion of a unit test for trigger behavior across specific date scenarios."
+    },
+    {
+      "sent_id": "REQ-142::s004",
+      "order": 4,
+      "text": "As part of the code-freeze policy, the PR is gated—**next evaluated trigger must resolve to `2025-02-28 00:00 UTC`**, with proof via test output or logs.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Enforces a trigger resolution to a specific date with proof."
+    },
+    {
+      "sent_id": "REQ-142::s005",
+      "order": 5,
+      "text": "Please coordinate with the scheduler maintainer if changes affect adjacent jobs.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Imposes coordination but lacks enforceable action."
+    },
+    {
+      "sent_id": "REQ-142::s006",
+      "order": 6,
+      "text": "All reviewers should verify boundary cases before approving.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Imposes a reviewer responsibility but lacks enforceable action."
+    }
+  ]
+}

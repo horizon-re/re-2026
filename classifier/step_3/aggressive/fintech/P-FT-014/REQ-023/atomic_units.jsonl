@@ -1,0 +1,2 @@
+{"unit_id": "REQ-023::au001", "req_id": "REQ-023", "doc_id": "7978167b-b0b3-5f35-8e99-7a66306650b2", "parent_sent_id": "REQ-023::s020", "order": 1, "text": "If HR or the employee checks , they should see exactly what was rounded and why .  \n\n 14:09  \n Carla"}
+{"unit_id": "REQ-023::au002", "req_id": "REQ-023", "doc_id": "7978167b-b0b3-5f35-8e99-7a66306650b2", "parent_sent_id": "REQ-023::s020", "order": 2, "text": "If HR or the employee checks , they should see exactly what was rounded and why .  \n\n 14:09  \n Carla : We ’ll surface that in the payslip viewer ."}

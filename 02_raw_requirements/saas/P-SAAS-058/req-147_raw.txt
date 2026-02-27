@@ -1,0 +1,24 @@
+**Bug Report: Notes Toast Displays Incorrect Comment Count Due to int64 Overflow**
+
+**Summary:**  
+The Notes toast currently displays an incorrect comment count of `9,223,372,036,854,775,808`, which is indicative of an int64 overflow. This creates confusion for users and may affect analytics accuracy.
+
+**Steps to Reproduce:**  
+1. Open Notes on any large-thread project.  
+2. Trigger a toast notification for comment activity.  
+3. Observe the displayed count.
+
+**Expected Result:**  
+The comment count should reflect the actual number or be capped appropriately.
+
+**Actual Result:**  
+An overflowed value is shown, misrepresenting the comment total.
+
+**Proposed Fix:**  
+- Switch counter data type to unsigned 128-bit integer to future-proof the system.  
+- Introduce pagination for values exceeding 1 million.  
+- Add a UI cap displaying “99 K+” for readability.  
+- Include a Jest regression test to prevent reoccurrence.
+
+**Severity:** High  
+**Deadline:** Next sprint

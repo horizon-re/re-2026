@@ -1,0 +1,16 @@
+I'm using GraphQL with a custom auth middleware, but a mis-scoped query exposed sensitive fields under `__typename`, which could reveal PII (e.g., user roles or restricted types) even if field access is denied. This was discovered during a legal privacy audit, so urgent guidance is needed.
+
+Minimal repro:
+```graphql
+query {
+  user {
+    __typename
+    email  # properly secured
+  }
+}
+```
+Due to how `__typename` resolves, it leaks model-specific info that should be protected.
+
+What are best practices to prevent this? Should I use schema directives to control `__typename` visibility, or enforce field-level auth rules that handle introspection?
+
+Tags: graphql, authorization, privacy

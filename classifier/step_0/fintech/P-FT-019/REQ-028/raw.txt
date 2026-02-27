@@ -1,0 +1,32 @@
+## Interview Meta
+Date: 2025-04-18  
+Participants: Julia (CSM), Dylan (COO)  
+Plan Tier: Enterprise-Annual
+
+## Raw Notes
+- So, um, the main thing we're seeing, uh, {pain-point} is that upgrading, you know, it's just too complicated right now. I mean, users, they gotta jump through, like, hoops to even find where to do it.
+- Like, [OPEN QUESTION] How are users supposed to know where to go when they want to upgrade their plan? There's gotta be a simpler way.
+- And cancellations? Yeah, {pain-point}, they shouldn't have to call support just to cancel. It's like we're making them jump through hoops again, you know?
+- Sometimes users actually get stuck between plans, and, um, they end up paying for both. {delight} Fixing that could really make their day.
+- We've been thinking, for upgrades, maybe we could just put a big button right on the dashboard. Like, "Upgrade Now" or something. Keep it simple, you know?
+- And for cancellations, maybe a self-serve option right there, no need to hunt for it. Just straightforward, click, and done.
+- The AI stuff? Yeah, we're exploring ML for predicting when someone might churn. It's like, preemptively giving them reasons to stay, you know? {pain-point}
+- Oh, and this LLM FAQ thing, yeah, it could be huge. Imagine the time saved if customers could just get answers right away, without calling in.
+
+## Emerging Themes
+1. Upgrades
+   - Users struggle to find upgrade options easily.
+   - Simplify with a prominent "Upgrade Now" button.
+   
+2. Cancellations
+   - Current process requires unnecessary steps.
+   - Implement straightforward self-serve cancellation.
+   
+3. AI Opportunities
+   - ML "Churn Predictor" to anticipate customer departures.
+   - LLM FAQ Generator for instant customer support.
+
+## Action Items
+- [ ] Draft journey map (Owner: UX)
+- [ ] Validate churn model inputs (Owner: Data)
+- [ ] ... leave one checkbox blank

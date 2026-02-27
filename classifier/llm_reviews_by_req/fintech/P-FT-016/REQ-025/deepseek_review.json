@@ -1,0 +1,178 @@
+{
+  "req_id": "REQ-025",
+  "doc_id": "4857e3f1-9bba-5cf4-abc4-2c4fc6bfa2e8",
+  "domain": "fintech",
+  "prompt_id": "P-FT-016",
+  "model": "deepseek-r1:7b",
+  "review_timestamp": "2026-01-20T22:24:32.970341+00:00",
+  "counts": {
+    "total": 16,
+    "llm_pos": 15,
+    "pipe_pos": 1,
+    "llm_neg": 1,
+    "pipe_neg": 15,
+    "flip_neg_to_pos": 14
+  },
+  "reviews": [
+    {
+      "sent_id": "REQ-025::s001",
+      "order": 1,
+      "text": "[CRM‑201] Lead scoring algorithm prototype\n\nDescription: Begin tuning model for sales-qualified vs. non-qualified leads.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Project description without enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-025::s002",
+      "order": 2,
+      "text": "Acceptance Criteria:\n\t•\tTrain on past 12 months of conversion data\n\t•\t☑ Export leads above 70% likelihood to SDR dashboard\n\t•\tTBD…\nNotes: @dev @data needed for historical conversion dump\n\n[CRM‑202] Email cadence scheduler (MVP)\n\nDescription: Allow users to create multi-step email drip sequences.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Train on past data and export leads based on likelihood."
+    },
+    {
+      "sent_id": "REQ-025::s003",
+      "order": 3,
+      "text": "Acceptance Criteria:\n\t•\tCreate/send/edit cadences via UI\n\t•\t☐ Show basic email stats (opens, clicks) per step\n\t•\tTBD…\nNotes: @designer to finalize template UI\n\n[CRM‑203] Auto-log email engagement\n\nDescription: Automatically capture opens and link clicks in timeline.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Show email stats per step and finalize template UI."
+    },
+    {
+      "sent_id": "REQ-025::s004",
+      "order": 4,
+      "text": "Acceptance Criteria:\n\t•\tAdd event stream for opens\n\t•\t☑ Include timestamped click-through tracking\n\t•\tTBD…",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Add event streams and timestamped tracking."
+    },
+    {
+      "sent_id": "REQ-025::s005",
+      "order": 5,
+      "text": "[CRM‑204] Contact enrichment via AI signals\n\nDescription: Detect job changes, company size shifts from public data.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Detect job changes and company size shifts."
+    },
+    {
+      "sent_id": "REQ-025::s006",
+      "order": 6,
+      "text": "Acceptance Criteria:\n\t•\tMatch updates against LinkedIn profiles\n\t•\tFlag major firmographic shifts ☑\n\t•\tTBD…",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Match updates against profiles and flag major shifts."
+    },
+    {
+      "sent_id": "REQ-025::s007",
+      "order": 7,
+      "text": "[CRM‑205] Dashboard metrics: email activity\n\nDescription: Prototype bar chart of daily open/click rates.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Prototype bar chart of daily activity metrics."
+    },
+    {
+      "sent_id": "REQ-025::s008",
+      "order": 8,
+      "text": "Acceptance Criteria:\n\t•\tShow last 14 days’ activity\n\t•\t☐ Toggle per cadence\n\t•\tTBD…\nNotes: Basic metrics only, not funnel deep dive yet\n\n[CRM‑206] Scoring rules editor\n\nDescription: UI to adjust AI scoring thresholds and rules.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Show last 14 days’ activity and toggle cadences."
+    },
+    {
+      "sent_id": "REQ-025::s009",
+      "order": 9,
+      "text": "Acceptance Criteria:\n\t•\tModify lead type weightings\n\t•\tSave/publish rules to backend ☑\n\t•\tTBD…\n\n[CRM‑207] Smart lead routing rules\n\nDescription: Route high-score leads to assigned rep based on region.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Modify lead weightings and publish rules to backend."
+    },
+    {
+      "sent_id": "REQ-025::s010",
+      "order": 10,
+      "text": "Acceptance Criteria:\n\t•\tApply after score > threshold\n\t•\t@dev Add region check logic\n\t•\tTBD…",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Condition for application based on score threshold."
+    },
+    {
+      "sent_id": "REQ-025::s011",
+      "order": 11,
+      "text": "[CRM‑208] AI assist: next-best-action prompt\n\nDescription: Suggest next action based on contact history and score.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "AI suggest next actions based on contact history and score."
+    },
+    {
+      "sent_id": "REQ-025::s012",
+      "order": 12,
+      "text": "Acceptance Criteria:\n\t•\tTrigger when lead is inactive 7+ days\n\t•\tRecommend call/email nudge\n\t•\tTBD…",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Trigger inactive leads for nudge actions."
+    },
+    {
+      "sent_id": "REQ-025::s013",
+      "order": 13,
+      "text": "[CRM‑209] Track reply rates for cadences\n\nDescription: Capture replies, calculate % per email step.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Capture and calculate reply rates per email step."
+    },
+    {
+      "sent_id": "REQ-025::s014",
+      "order": 14,
+      "text": "Acceptance Criteria:\n\t•\tDetect reply-to on outgoing emails ☑\n\t•\tShow per-step %\n\t•\tTBD…",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Detect reply-to on outgoing emails."
+    },
+    {
+      "sent_id": "REQ-025::s015",
+      "order": 15,
+      "text": "[CRM‑210] Admin controls for feature access\n\nDescription: Enable/disable enrichment and scoring tools per org.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Enable/disable enrichment per organization."
+    },
+    {
+      "sent_id": "REQ-025::s016",
+      "order": 16,
+      "text": "Acceptance Criteria:\n\t•\tToggle via admin dashboard\n\t•\t☐ Log changes for audit\n\t•\tTBD…\nNotes: @dev permission schema draft in progress",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Log changes for audit purposes."
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "req_id": "REQ-120",
+  "doc_id": "e6135316-a662-58fe-b2c1-892d34ee3c13",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-031",
+  "model": "deepseek-r1:7b",
+  "review_timestamp": "2026-01-20T23:27:21.664218+00:00",
+  "counts": {
+    "total": 4,
+    "llm_pos": 2,
+    "pipe_neg": 4,
+    "flip_neg_to_pos": 2,
+    "llm_neg": 2
+  },
+  "reviews": [
+    {
+      "sent_id": "REQ-120::s001",
+      "order": 1,
+      "text": "Roll out intelligent auto-scaling across all prod clusters now.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Autoscaling action specified."
+    },
+    {
+      "sent_id": "REQ-120::s002",
+      "order": 2,
+      "text": "Target: CPU <= 65% for 95% uptime, scale-out within 60s of breach.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "CPU and uptime constraints given."
+    },
+    {
+      "sent_id": "REQ-120::s003",
+      "order": 3,
+      "text": "Slack alert #infra-alerts on scale failure.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "EXAMPLE_OR_EXPLANATION",
+      "reason_text": "Operational action specified."
+    },
+    {
+      "sent_id": "REQ-120::s004",
+      "order": 4,
+      "text": "ETA for hotfix by 07:00 local.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.65,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Provisioning ETA mentioned."
+    }
+  ]
+}

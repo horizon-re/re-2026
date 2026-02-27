@@ -1,0 +1,79 @@
+{
+  "doc_id": "c836f946-0cc3-5328-bfb2-83e23366cfc5",
+  "req_key": "saas::P-SAAS-079::REQ-168",
+  "req_id": "REQ-168",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-079",
+  "source": {
+    "raw_path": "02_raw_requirements/saas/P-SAAS-079/req-168_raw.txt",
+    "refined_path": "03_refined_json_normalized/saas/P-SAAS-079/req-168_refined.json",
+    "origin": "both"
+  },
+  "text": "Title: BRF Output Formatting Enhancements for Pagination and Accessibility\n\nDescription:\nUpdate the BRF (Braille Ready Format) output generator to enforce a strict limit of 40 cells per line to comply with standard tactile display and embossing device constraints. Additionally, ensure that pagination begins from page 1—page 0 must be explicitly disallowed to avoid indexing errors and alignment issues in downstream tools.\n\nA tactile page break marker \"⠿⠿\" must be inserted at the end of each page to assist with both manual review and automated parsing by assistive hardware. This marker should be consistent and placed on a new line following the final line of each page.\n\nTest Plan:\nInclude a regression test case simulating a 1,000-page BRF document, ensuring no overflow occurs beyond 40 cells/line, page numbering remains sequential from 1, and all page breaks render correctly with the \"⠿⠿\" symbol.\n\nPriority: High\nImpact: Prevents tactile display overflow, improves document readability and navigability for visually impaired users, and aligns with assistive device formatting standards. Failure to implement may result in unreadable output and increased user error.",
+  "structured_data": [
+    {
+      "id": "REQ-168-HLJ-Chunk_1-Item_1-v1.0",
+      "domain": "saas",
+      "summary": "Limit BRF output to 40 cells per line",
+      "priority": "High",
+      "tags": [
+        "brf_output",
+        "line_limit",
+        "accessibility"
+      ],
+      "subdomain": "document_formatting",
+      "difficulty": 2,
+      "additionalNotes": "Ensures compliance with tactile display standards and prevents overflow on assistive devices.",
+      "source_hlj_id": "REQ 001-001",
+      "domain_id": "P-SAAS-079"
+    },
+    {
+      "id": "REQ-168-HLJ-Chunk_1-Item_2-v1.0",
+      "domain": "saas",
+      "summary": "Start BRF pagination at page 1; disallow page 0",
+      "priority": "High",
+      "tags": [
+        "pagination",
+        "page_numbering",
+        "format_standards"
+      ],
+      "subdomain": "document_formatting",
+      "difficulty": 2,
+      "additionalNotes": "Prevents downstream indexing errors by enforcing standard page numbering.",
+      "source_hlj_id": "REQ 001-002",
+      "domain_id": "P-SAAS-079"
+    },
+    {
+      "id": "REQ-168-HLJ-Chunk_1-Item_3-v1.0",
+      "domain": "saas",
+      "summary": "Insert tactile ⠿⠿ page break at end of each page",
+      "priority": "Medium",
+      "tags": [
+        "page_break",
+        "tactile_marker",
+        "assistive_tech"
+      ],
+      "subdomain": "document_formatting",
+      "difficulty": 3,
+      "additionalNotes": "Supports manual and automated parsing in tactile readers with consistent page delimiters.",
+      "source_hlj_id": "REQ 001-003",
+      "domain_id": "P-SAAS-079"
+    },
+    {
+      "id": "REQ-168-HLJ-Chunk_1-Item_4-v1.0",
+      "domain": "saas",
+      "summary": "Run regression test for 1,000-page BRF document",
+      "priority": "Medium",
+      "tags": [
+        "regression_test",
+        "brf_validation",
+        "large_file"
+      ],
+      "subdomain": "document_formatting",
+      "difficulty": 3,
+      "additionalNotes": "Validates formatting and stability across extensive BRF output jobs.",
+      "source_hlj_id": "REQ 001-004",
+      "domain_id": "P-SAAS-079"
+    }
+  ]
+}

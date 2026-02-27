@@ -1,0 +1,107 @@
+{
+  "req_id": "REQ-049",
+  "doc_id": "e23db068-bcf2-59cc-9618-dd6f1bc45a07",
+  "domain": "fintech",
+  "prompt_id": "P-FT-040",
+  "model": "deepseek-r1:7b",
+  "review_timestamp": "2026-01-20T22:36:50.311918+00:00",
+  "counts": {
+    "total": 9,
+    "llm_pos": 8,
+    "pipe_pos": 8,
+    "llm_neg": 1,
+    "pipe_neg": 1
+  },
+  "reviews": [
+    {
+      "sent_id": "REQ-049::s001",
+      "order": 1,
+      "text": "## Capture  \nThe system shall require users to submit a selfie video not exceeding 5 seconds in length.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "PERFORMANCE_REQUIREMENT",
+      "reason_text": "Enforceable system behavior requiring users to submit a selfie video within a length constraint."
+    },
+    {
+      "sent_id": "REQ-049::s002",
+      "order": 2,
+      "text": "This video must adhere to quality standards suitable for biometric verification and identity validation processes.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Enforceable quality standard for submitted videos."
+    },
+    {
+      "sent_id": "REQ-049::s003",
+      "order": 3,
+      "text": "## Liveness  \nThe submitted selfie video must pass a biometric liveness detection test conforming to ISO/IEC 30107-3 standards, achieving a spoof detection score of 0.2 or lower.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Biometric liveness detection test with specific score requirements."
+    },
+    {
+      "sent_id": "REQ-049::s004",
+      "order": 4,
+      "text": "Videos failing to meet this criterion shall be rejected, and users prompted to resubmit until compliance is achieved.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "PERFORMANCE_REQUIREMENT",
+      "reason_text": "Process for handling non-compliant videos."
+    },
+    {
+      "sent_id": "REQ-049::s005",
+      "order": 5,
+      "text": "## AML Check",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.5,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Only an abbreviation without content."
+    },
+    {
+      "sent_id": "REQ-049::s006",
+      "order": 6,
+      "text": "The identity verification workflow must integrate mandatory checks against sanctioned individuals, specifically referencing OFAC and EU sanctions lists.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Mandatory checks against sanctioned individuals."
+    },
+    {
+      "sent_id": "REQ-049::s007",
+      "order": 7,
+      "text": "Verification will fail immediately upon a positive match, requiring manual escalation for compliance review and further action.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Immediate verification failure and manual escalation."
+    },
+    {
+      "sent_id": "REQ-049::s008",
+      "order": 8,
+      "text": "## Privacy  \nAll biometric templates generated from user videos shall be securely stored using AES-256-GCM encryption.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Secure storage of biometric templates with encryption."
+    },
+    {
+      "sent_id": "REQ-049::s009",
+      "order": 9,
+      "text": "To ensure adherence to GDPR Article 5(1)(e), all stored biometric templates must be purged after a retention period of 5 years, or sooner if explicitly requested by the user, in compliance with relevant data protection guidelines.\n\n---\n\n**Go-Live:** 15 July 2025",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "COMPLIANCE_REQUIREMENT",
+      "reason_text": "GDPR compliance and data retention policies."
+    }
+  ]
+}

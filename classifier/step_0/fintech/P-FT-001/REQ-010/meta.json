@@ -1,0 +1,12 @@
+{
+  "doc_id": "1f686c9f-e03d-5d79-b00e-7a337f30856f",
+  "req_key": "fintech::P-FT-001::REQ-010",
+  "req_id": "REQ-010",
+  "domain": "fintech",
+  "prompt_id": "P-FT-001",
+  "char_count": 19940,
+  "line_count": 62,
+  "sha256_raw": "e351ba72b527b9133748315f8b4add688791ad311f6dcb7f3c90f9018b000279",
+  "sha256_refined": "0b86d8e530c31d32d8c43ce4552b93d353751a664bbe1bf5da5d92a4f9e8b685",
+  "created_at": 1768691357.207211
+}

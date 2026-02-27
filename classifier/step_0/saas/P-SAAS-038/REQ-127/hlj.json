@@ -1,0 +1,111 @@
+{
+  "doc_id": "62605692-7b0a-5683-9174-3dbf7d917335",
+  "req_key": "saas::P-SAAS-038::REQ-127",
+  "req_id": "REQ-127",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-038",
+  "source": {
+    "raw_path": "02_raw_requirements/saas/P-SAAS-038/req-127_raw.txt",
+    "refined_path": "03_refined_json_normalized/saas/P-SAAS-038/req-127_refined.json",
+    "origin": "both"
+  },
+  "text": "Please prioritize immediate rollout of consent tracking and one-click opt-out automation to meet CCPA compliance requirements. The deadline for full deployment is 48 hours from now. As part of this rollout, ensure an audit-ready log is maintained for all consent changes, capturing user ID, timestamp, and source IP for each event. Additionally, set up a nightly export of these logs to the designated S3 bucket ccpa-audit-logs, encrypted using AES-256. Please confirm the assigned development owner responsible for this rollout and provide a rollback plan in case any deployment issues arise. Immediate acknowledgment is required.",
+  "structured_data": [
+    {
+      "id": "REQ-127-HLJ-Chunk_1-Item_1-v1.0",
+      "domain": "saas",
+      "summary": "Roll out consent tracking immediately",
+      "priority": "High",
+      "tags": [
+        "consent_tracking",
+        "ccpa_compliance",
+        "user_privacy"
+      ],
+      "subdomain": "compliance",
+      "difficulty": 3,
+      "additionalNotes": "Urgent rollout to meet CCPA compliance within 48 hours.",
+      "source_hlj_id": "REQ 001-001",
+      "domain_id": "P-SAAS-038"
+    },
+    {
+      "id": "REQ-127-HLJ-Chunk_1-Item_2-v1.0",
+      "domain": "saas",
+      "summary": "Implement one-click opt-out automation",
+      "priority": "High",
+      "tags": [
+        "opt_out",
+        "user_rights",
+        "automation"
+      ],
+      "subdomain": "compliance",
+      "difficulty": 3,
+      "additionalNotes": "One-click user opt-out process for compliance with CCPA.",
+      "source_hlj_id": "REQ 001-002",
+      "domain_id": "P-SAAS-038"
+    },
+    {
+      "id": "REQ-127-HLJ-Chunk_1-Item_3-v1.0",
+      "domain": "saas",
+      "summary": "Maintain audit-ready log of consent changes",
+      "priority": "High",
+      "tags": [
+        "audit_logging",
+        "consent_management",
+        "data_tracking"
+      ],
+      "subdomain": "compliance",
+      "difficulty": 4,
+      "additionalNotes": "Log must capture user ID, timestamp, and source IP.",
+      "source_hlj_id": "REQ 001-003",
+      "domain_id": "P-SAAS-038"
+    },
+    {
+      "id": "REQ-127-HLJ-Chunk_1-Item_4-v1.0",
+      "domain": "saas",
+      "summary": "Nightly export consent logs to AES-256 encrypted S3 bucket",
+      "priority": "High",
+      "tags": [
+        "data_export",
+        "s3_storage",
+        "encryption"
+      ],
+      "subdomain": "compliance",
+      "difficulty": 4,
+      "additionalNotes": "Logs must be encrypted with AES-256 and stored nightly.",
+      "source_hlj_id": "REQ 001-004",
+      "domain_id": "P-SAAS-038"
+    },
+    {
+      "id": "REQ-127-HLJ-Chunk_1-Item_5-v1.0",
+      "domain": "saas",
+      "summary": "Assign development owner for rollout responsibility",
+      "priority": "Medium",
+      "tags": [
+        "project_ownership",
+        "rollout_management",
+        "accountability"
+      ],
+      "subdomain": "compliance",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied — Confirmation of dev owner needed for deployment accountability.",
+      "source_hlj_id": "REQ 001-005",
+      "domain_id": "P-SAAS-038"
+    },
+    {
+      "id": "REQ-127-HLJ-Chunk_1-Item_6-v1.0",
+      "domain": "saas",
+      "summary": "Provide rollback plan for deployment issues",
+      "priority": "Medium",
+      "tags": [
+        "rollback_plan",
+        "deployment_safety",
+        "risk_management"
+      ],
+      "subdomain": "compliance",
+      "difficulty": 3,
+      "additionalNotes": "origin: implied — Deployment contingency plan required in case of failure.",
+      "source_hlj_id": "REQ 001-006",
+      "domain_id": "P-SAAS-038"
+    }
+  ]
+}

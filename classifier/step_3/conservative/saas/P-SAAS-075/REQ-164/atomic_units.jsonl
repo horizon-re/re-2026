@@ -1,0 +1,2 @@
+{"unit_id": "REQ-164::cu001", "req_id": "REQ-164", "doc_id": "80824469-2dad-5b22-8475-25921bbb7d63", "parent_sent_id": "REQ-164::s003", "order": 1, "text": "The system fails to detect ID reuse under high-frequency operations, especially in dense object mapping scenarios."}
+{"unit_id": "REQ-164::cu002", "req_id": "REQ-164", "doc_id": "80824469-2dad-5b22-8475-25921bbb7d63", "parent_sent_id": "REQ-164::s006", "order": 2, "text": "Severity: Critical\nDeadline: Fix must be implemented and validated by Friday to avoid operational downtime in the fleet."}

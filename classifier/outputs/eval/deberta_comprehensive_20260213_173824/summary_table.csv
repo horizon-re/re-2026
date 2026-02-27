@@ -1,0 +1,4 @@
+model,accuracy,precision,recall,f1,roc_auc,tp,fp,tn,fn
+"DeBERTa-base (Full FT, n=1)",86.75,89.33,87.13,88.22,0.9291,1097,131,822,162
+"DeBERTa-base (Full FT, n=2)",86.84,89.54,87.05,88.28,0.9330,1096,128,825,163
+"DeBERTa-base (Full FT, n=3)",86.30,88.74,86.97,87.85,0.9226,1095,139,814,164

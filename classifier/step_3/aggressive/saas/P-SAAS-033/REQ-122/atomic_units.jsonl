@@ -1,0 +1,2 @@
+{"unit_id": "REQ-122::au001", "req_id": "REQ-122", "doc_id": "9b4b4165-219e-5cca-9907-c138f7330f4d", "parent_sent_id": "REQ-122::s002", "order": 1, "text": "Current benchmark ( auth_eu_p95 = 812 ms ) exceeds our SLA target of 500 ms ."}
+{"unit_id": "REQ-122::au002", "req_id": "REQ-122", "doc_id": "9b4b4165-219e-5cca-9907-c138f7330f4d", "parent_sent_id": "REQ-122::s007", "order": 2, "text": "Once auth_eu_p95 < 500 ms , remove the needs - perf - fix label and tag reviewers for re - approval ."}

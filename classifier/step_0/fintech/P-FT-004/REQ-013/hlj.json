@@ -1,0 +1,1679 @@
+{
+  "doc_id": "e194a86c-2835-5156-b2e4-3179fb2a7b6a",
+  "req_key": "fintech::P-FT-004::REQ-013",
+  "req_id": "REQ-013",
+  "domain": "fintech",
+  "prompt_id": "P-FT-004",
+  "source": {
+    "raw_path": "02_raw_requirements/fintech/P-FT-004/req-013_raw.txt",
+    "refined_path": "03_refined_json_normalized/fintech/P-FT-004/req-013_refined.json",
+    "origin": "both"
+  },
+  "text": "FinTech Platform for Automated SME Credit Risk Assessment – Planning Document\nBusiness Context & Lending Use Case\nSmall and medium-sized enterprises (SMEs) often face lengthy and complex loan approval processes. Traditional manual underwriting can take weeks, requiring extensive paperwork and human review. This slows down access to funds and drives up operational costs for lenders. In today’s competitive market, nearly half of SMEs seek faster credit decisions and a smoother borrowing experience​\ney.com\n. FinTech innovations offer a solution: by automating credit risk assessment, lenders can expedite decisions without sacrificing risk controls.\nHigh Application Volumes: Lenders dealing with high volumes of SME loan applications need a scalable process. Manual reviews don’t easily scale – increasing loan volume traditionally meant hiring more underwriters, which eats into profit margins​\nlendfusion.com\n. An automated platform allows handling more applications in parallel, improving throughput. For example, one SME lender cut approval times from weeks to hours and tripled its loan processing capacity without adding staff by adopting automated underwriting​\nlendfusion.com\n. This illustrates the efficiency gains our platform targets.\nInconsistent Manual Decisions: Different underwriters may interpret credit data in varying ways, leading to inconsistent decisions and potential compliance issues​\nlendfusion.com\n. Automating the credit evaluation with standardized criteria will ensure consistent, high-quality lending decisions across all applications. It also reduces human error and bias by applying the same rules and models uniformly.\nNeed for Speed and Competitiveness: SMEs expect quicker access to credit in line with modern “instant” banking trends. Fast, automated risk assessment gives lenders a competitive edge in acquiring SME customers. By streamlining approval processes with smart automation, lenders can deliver funds faster, meeting the market demand for speed without compromising diligence​\ney.com\n.\nUse Case Emphasis: The primary use case is a digital credit risk platform that ingests SME loan applications (typically for working capital, equipment financing, etc.) and produces an automated creditworthiness evaluation. This evaluation helps underwriters and loan officers make timely decisions even in high-volume lending programs (e.g. nationwide small business loan programs or fintech-originated loans). The platform will be integral in both origination (initial credit scoring and decision recommendation) and monitoring (tracking loan performance for existing customers) to proactively manage risk​\ney.com\n. Overall, aligning this platform with the business strategy means faster approvals, more loans booked, and better risk management – driving profitability while expanding access to credit for SMEs.\nPrimary Users & Their Workflows\nThe platform is designed for the professionals involved in credit underwriting and risk management of SME loans. It will support a collaborative workflow between automated systems and human experts, ensuring that each application is handled at the right level of scrutiny. The primary users and their typical workflows include:\nCredit Underwriters / Loan Officers: These are the front-line analysts who review loan applications. In the new workflow, an underwriter begins by viewing the system’s auto-generated risk assessment for a new application. Routine applications with strong financials may be auto-approved by the system based on predefined criteria, allowing the underwriter to quickly finalize them. Cases that are not clear-cut are flagged for manual review. For example, if an applicant’s financial ratios fall in a gray area or a rule is triggered (e.g. borderline credit score or missing data), the application is routed to the underwriter for a closer look​\nlendfoundry.com\n​\nlendfoundry.com\n. The underwriter can then examine the detailed data (uploaded documents, bank transactions, etc.) via the platform’s dashboard, add any necessary comments or additional data, and make a decision or recommendation. This tiered approach lets underwriters focus their time on cases that truly need expert judgment, while straightforward low-risk cases are handled automatically. Every decision – whether automated or manual override – is captured in the system for transparency.\nCredit Manager / Risk Officer: This user oversees the overall credit decision process and policy adherence. They configure the credit policy rules in the system (such as auto-decline thresholds, risk score cutoffs, and approval limits for various loan sizes). The platform will allow risk managers to set tiered approval workflows – for instance, loans above a certain amount or outside standard policy require a senior manager’s approval. A credit manager’s workflow involves reviewing any applications escalated by underwriters or automatically flagged as exceptions. They will use the platform to audit decisions (ensuring that underwriting guidelines are followed) and to approve or decline exceptions. They also monitor portfolio risk metrics on the dashboard (e.g. average risk scores, approval rates, and any emerging trends) to adjust policies. The platform’s manual override and commentary features enable managers to provide guidance on special cases and document their justifications, creating a feedback loop to refine the automated models and rules over time.\nFinancial Analysts / Data Science Leads: Although not end-users for loan processing, these stakeholders will use the platform’s outputs for strategic analysis. They will review aggregated data on credit scoring outcomes and model performance. Their “workflow” is more periodic – for example, reviewing monthly reports on approval/decline statistics, portfolio credit quality, and model predictive accuracy. Based on insights (like if the model is too conservative or if a certain sector is experiencing higher defaults), they might suggest policy tweaks or model retraining (addressed in the Versioning section). The platform will support exporting data and audit logs so analysts can ensure that the automated decisions align with expected risk tolerances and business goals. Feedback from these analysts will be incorporated to continuously improve the credit scoring logic.\nIn summary, an application flows through the system with automated scoring and rule-based decisions first, then to underwriters for any needed human review, and up to managers for high-level approvals – with each step supported by a unified platform interface. This streamlined workflow ensures efficiency while keeping experienced eyes on the riskiest or most exceptional cases.\nData Sources & Required Integrations\nEffective SME credit risk assessment requires aggregating data from multiple sources. Our platform will integrate a broad range of financial data inputs, ensuring a holistic view of each applicant’s creditworthiness. The key data sources and integrations include:\nDocument-Based Financial Data: SMEs often submit financial documents like bank statements, tax returns, income statements, balance sheets, and invoices. The platform will incorporate advanced OCR (Optical Character Recognition) and document parsing technology to extract key figures and metrics from these PDFs or scanned documents. This allows automated “financial spreading” – converting documents into structured data (e.g. revenue, profit, debts, cash flow metrics) for analysis. Modern OCR engines can achieve extremely high accuracy on financial documents; for instance, solutions exist that analyze uploaded bank statements with over 99% accuracy, effectively replacing tedious manual review​\nocrolus.com\n. By using such technology, our platform will quickly validate and digest document data (checking for things like consistent revenues, debt levels, or verifying that a provided bank statement is authentic). This integration drastically reduces underwriters’ time spent on manual data entry and prevents errors. All extracted data will be presented in the dashboard alongside the original documents (so users can cross-verify any figure if needed).\nBank Account Data Aggregation (Open Banking APIs): To get a real-time picture of an SME’s finances, the platform will connect to bank data aggregators – specifically, we plan to integrate with Plaid (popular in North America) and Salt Edge (extensive coverage in Europe and beyond). With the borrower’s consent, these integrations allow the platform to pull transaction history, account balances, and other banking data directly from the SME’s bank accounts via secure APIs. Open banking access provides real-time financial data straight from the source, eliminating the need for applicants to manually upload statements and ensuring data authenticity​\nsaltedge.com\n. This integration means the system can automatically fetch, for example, the last 12 months of transactions for a business checking account. From these, the platform will analyze behavioral patterns such as cash flow volatility, daily balances, frequency of overdrafts, and payment reliability (e.g., whether the SME consistently pays vendors and creditors on time). This rich transaction data provides insight into the SME’s financial health beyond static statements. The integration is designed to streamline the application process – reducing friction by auto-filling financial information – and improve risk accuracy by using up-to-date data. According to Salt Edge, leveraging live bank data allows lenders to take decisions “in a split second” and strike out a lot of credit risk associated with outdated information​\nsaltedge.com\n​\nsaltedge.com\n.\nCredit Bureau & Alternative Data Services: Many lenders will want to incorporate external credit data for a more complete risk profile. The platform will support integration with business credit bureaus or rating agencies to pull credit scores, trade credit data, or public records on the SME and its principals. For example, an API integration to services like Dun & Bradstreet or Experian’s SME credit reports can provide information on any past delinquencies, existing loan balances, or credit scores of the business owners. Additionally, alternative data sources can be plugged in – such as accounting software (QuickBooks, Xero) for real-time financial statements, e-commerce platform data (if the SME is an online seller, their sales and customer reviews might be relevant), or even utility and rent payment data that indicate reliability. Our platform’s architecture is API-driven, making it straightforward to add such integrations. The initial scope prioritizes documents and bank accounts (as listed above), since those directly support the core credit analysis, but it is extensible to new data sources as needed.\nData Validation & Fraud Checks: As part of data integration, the platform will also incorporate checks to validate data and flag inconsistencies. For example, the system might cross-verify reported revenues on a financial statement against the cash flow seen in bank transactions. If an applicant-submitted document appears altered or if the numbers don’t reconcile, the system flags it for manual review. We will integrate identity verification (KYC) APIs as well – confirming the business identity and owners, and checking against watchlists – though these are more about compliance than credit risk, they are critical for a one-stop underwriting workflow. By automating these validations, we reduce fraud risk and ensure underwriters are working with trustworthy data​\nsaltedge.com\n.\nAll these data sources feed into the credit scoring engine. The integrations are built with security in mind (using encryption and consent management, see Operational Considerations) since they handle sensitive financial information. The result is a comprehensive dataset for each loan application: combining traditional financial metrics, live cash flow data, and any available credit history. This comprehensive approach aligns with industry trends – lenders now leverage “new sources and unprecedented volumes of real-time customer data… packed with rich insights” to transform SME credit decisioning​\ney.com\n. Our platform ensures these data points are readily accessible and actionable for better credit decisions.\nCredit Scoring Logic & Explainability Expectations\nAt the heart of the platform is the credit scoring and decisioning engine – the logic that evaluates an SME’s creditworthiness. This engine will utilize a combination of analytical models and business rules to produce a risk assessment for each application. Equally important to what the decision is, however, is why: stakeholders and regulators expect the system to provide clear, human-understandable explanations for its credit decisions. Below, we outline the approach to the scoring logic and how we will ensure transparency and explainability:\nMulti-Factor Risk Assessment: The credit scoring logic considers a wide range of factors about the SME. These include financial ratios derived from documents (e.g. debt-to-income ratio, profit margins, current ratio), cash flow patterns from bank data (e.g. frequency of negative balances, volatility of revenues), payment history (e.g. any missed loan/credit payments), and behavioral indicators (such as consistency in paying invoices on time). The platform’s model will likely be a machine learning-based risk model or an enhanced scorecard that weighs these factors to predict the probability of default or overall credit risk grade. Regardless of the modeling technique, it will be developed to align with domain expertise – for example, higher stable cash flow and strong financials should yield a better score, whereas erratic income or heavy existing debt will lower it, mirroring common credit principles. We will calibrate the model using historical data (loan outcomes, defaults) to ensure it has strong predictive power. The output will typically be a numerical credit score or rating for the SME, and possibly expected loss metrics, which translate into an automated recommendation (e.g., “approve”, “approve with conditions”, or “refer to manual review/decline”). However, unlike a mysterious “black box”, this model’s workings will be made as transparent as possible to the end users.\nRule-Based Overrides and Policy Criteria: In addition to the statistical model, the scoring logic incorporates business rules that reflect credit policy. These are explicit conditions that can override or complement the model’s recommendation. For instance, rules might include: “Decline if bankruptcy filed in last 5 years,” or “If annual revenue < $50k, flag for manual review regardless of score.” Such rules ensure that certain hard requirements or regulatory constraints are always enforced. They can also handle edge cases the model isn’t trained on. The platform allows configuring these rules so that the risk team can adjust criteria without rewriting code. These rule outcomes are straightforward to explain (e.g. “Application declined due to recent bankruptcy record”), and the system will show these alongside the score. In practice, the combined logic works like: model produces a baseline risk score and recommendation, then policy rules are applied to adjust the outcome (auto-approve, refer, or auto-decline) according to institutional risk appetite.\nExplainability Mechanisms: Every credit decision generated by the platform will come with a clear explanation. The system will present the key factors influencing the score and decision in an easily digestible format for underwriters and even for communication to borrowers as needed. For example, the platform might display messages such as: “Cash flow volatility was high (cash balance dropped below zero in 3 of the past 6 months), which negatively impacted the score,” or “Debt service coverage ratio is strong, contributing positively to creditworthiness.” We will implement an explainability layer that translates the model’s internal calculations into ranked reason codes – essentially, the top factors that affected the applicant’s score either positively or negatively. This is crucial not only for user trust but also for compliance (adverse action reasoning). In designing the model, we will favor algorithms that are interpretable or at least can be reliably explained. If using a machine learning model, we’ll apply post-hoc explanation techniques (like SHAP values or LIME) to identify feature importance for each decision. However, we must ensure these explanations are accurate. Recent regulatory guidance cautions that if a lender uses a complex algorithm, they must be able to validate the accuracy of any post-hoc explanations – purely approximate explanations that can’t be proven might not satisfy compliance​\npaceanalyticsllc.com\n​\npaceanalyticsllc.com\n. Therefore, we might lean towards a more transparent modeling approach (such as gradient boosting with monotonic constraints, or an interpretable AI model) to ensure we can always generate specific and accurate reason codes.\nNo “Black Box” Decisions: Both business stakeholders and regulators have an expectation that the credit scoring process is not a mysterious black box. Our platform will document and expose the logic behind decisions. In practice, this means an underwriter using the system can click on a score and see a breakdown: for instance, “Financial health: Good (contributed +10 to score), Leverage: High (contributed -15), Cash flow consistency: Moderate (-5), Industry risk: Low (+5)” and so on, culminating in the final score. This traceability fosters confidence that the model is making logical, defensible decisions. It also allows users to sanity-check the automated outcome – if something looks off in the explanation, it can prompt a manual review or investigation into whether an input data might be erroneous. Importantly, from a compliance perspective, the platform will store these reason codes and factor values for each decision, so if later questioned (by auditors or in a regulatory review), we can demonstrate exactly why a particular application was approved or denied.\nExpectations for Model Performance: The data science team will set target metrics for the credit model (such as KS-statistic, Gini coefficient for rank-ordering risk, etc., though we won’t surface those to non-technical stakeholders). But one business expectation is that the model remains accurate and up-to-date over time. We acknowledge that any predictive model can drift or become less effective as economic conditions change or as SMEs adapt behavior. Thus, included in our logic design is a plan for regular model validation and updates (see the Versioning & Continuous Learning section for more on how we’ll update). In summary here: the scoring logic isn’t “one and done” – it will be monitored and recalibrated as needed to maintain high predictive power and compliance with evolving standards.\nUltimately, the credit scoring logic will serve as an “augmented intelligence” for underwriters – doing the heavy analytical lifting and pointing out risk drivers, while allowing humans to exercise judgment on final decisions when necessary. The explainability built into the system ensures that product owners, risk managers, and even borrowers can trust and understand the basis for each credit decision, reinforcing transparency and fairness in the lending process.\nDashboard & Decision Support Tools\nThe platform will provide a unified dashboard interface that serves as the underwriter’s and risk manager’s command center for credit decisions. This dashboard is a critical component, as it translates all the data and analytics into actionable insights and workflow tools. We will design it to be intuitive, information-rich, and supportive of decision-making, combining automation with human oversight. Key elements and features of the dashboard and related decision support tools include:\nLoan Application Summary View: Each SME loan application will have a summary page on the dashboard. At a glance, the underwriter will see the applicant’s profile (business name, industry, loan amount requested, etc.), the system-generated credit score or risk rating, and the recommended decision (approve/conditional/decline) along with top reason codes. Think of this as a “credit memo” auto-generated by the platform. The summary will highlight critical facts such as annual revenue, profitability, existing debt, and recent cash flow trends, so the user immediately gets a 360-degree snapshot of the borrower’s financial health. Any alerts or flags (for example, “Missing tax return document” or “High volatility in bank account balance detected”) will also be shown prominently. This saves the user from hunting through data – the most pertinent information for decision-making is aggregated in one place.\nDrill-Down Financial Analysis: From the summary, the underwriter can drill deeper into various sections. The dashboard will have tabs or expandable sections for:\nFinancial Statements & Documents: A section where extracted financial metrics are displayed in table form (e.g., income statement and balance sheet line items for the past 2-3 years). The original documents (PDFs) are viewable side-by-side or via a pop-up, with the key figures highlighted. This allows the user to verify any data point easily. If the OCR flagged uncertainties (like unreadable figures), those will be indicated for manual confirmation.\nBank Transactions Analysis: An interactive view of the borrower’s bank account data (if provided via integration). This might include charts of daily balance over time, cash inflows vs. outflows per month, and detection of any anomalies (like sudden drops, frequent overdrafts, etc.). The user can filter transactions (e.g., to see all payments to certain creditors, or all instances of returned payments) and the system will have calculated metrics like average monthly inflow, largest expense categories, etc., to support credit analysis. These tools help underwriters perform what would traditionally be a labor-intensive review of bank statements in just minutes, focusing on trends that matter.\nCredit History & External Data: If credit bureau data or other external data was pulled, the dashboard will present that as well – for instance, a credit score of an owner, any outstanding loans or delinquencies, public records like liens or judgments, etc. Having this in one place means the underwriter doesn’t need to run separate reports; the platform consolidates it.\nDecision Support & Policy Rules Engine: The dashboard isn’t just for viewing information – it actively guides decision-making. An embedded policy rules engine will cross-check the application against all the lending criteria and either clear the application or flag issues. These flags appear on the dashboard as notifications. For example: “Policy Check: Debt-Service Coverage below 1.2x (requires manager review)” or “Auto-Approval eligible: All criteria met for fast-track approval.” The system may automatically approve applications that are well within safe parameters (as configured), but even in those cases, the underwriter dashboard will show that the application was auto-approved and on what basis (e.g., “Auto-approved: Excellent financials and score above threshold”). Conversely, if something triggers a refer or decline, the exact rule will be displayed (e.g., “Declined: Applicant has prior bankruptcy – policy rule”). This clarity helps underwriters and managers quickly understand what needs attention. The rules engine also ensures tiered approvals: if an underwriter attempts to approve a loan beyond their authority limit, the system will route the application to the appropriate senior approver, and the dashboard will reflect that (“Pending approval from Credit Manager”). All of this happens in a controlled workflow, so nothing slips through without the right sign-offs​\nbrex.com\n.\nManual Override & Justification: The platform fully supports human overrides of automated decisions, with appropriate controls. If an underwriter believes an application should be treated differently than the model’s recommendation, they can manually change the decision (e.g., move from decline to approve with conditions) on the dashboard. To maintain accountability, the system will prompt them to enter a justification note when doing so. This note, along with the original recommendation and override action, is saved in the audit trail. A credit manager reviewing later can see: “System recommended decline due to low cash flow; Underwriter X overrode to conditional approval citing a one-time expense anomaly in statements; Manager Y approved this override.” This full audit trail of actions and rationales will be available for every application. It not only helps in compliance (demonstrating due diligence and fairness in decisions) but also provides material for training and refining the model (if overrides happen frequently for a certain reason, that’s feedback to adjust the model or policy).\nPipeline Management & Search: The dashboard will include tools to manage the queue of applications. Underwriters can see all their assigned pending applications, sorted by priority or SLA (e.g., applications nearing a decision deadline at the top). They can search or filter the pipeline by various attributes (e.g., filter to see all applications auto-approved, or all those waiting for additional documents). Managers will have an overview of the broader pipeline and can reassign or balance workloads. This helps ensure no application gets lost or delayed and that throughput remains high.\nAnalytics and Reporting: Besides individual application views, the platform offers dashboard widgets for overall portfolio analytics. For example, a manager might see the distribution of risk scores of applications in the pipeline, approval rates, average processing time, and any bottlenecks. Decision support includes trend analysis – e.g., if a particular industry sector’s applicants are frequently getting declined due to certain criteria, the system can flag that trend to the product team (which might prompt a policy review for that segment). These aggregated insights help in strategic planning and demonstrating the platform’s impact (like shorter approval times, consistent decision standards, etc.).\nCollaboration and Notes: Users can add internal notes or comments on an application within the dashboard. If an underwriter needs a second opinion, they can tag a senior underwriter or risk officer in a note. The platform could send a notification to that person to review the comment. This collaboration tool keeps all discussion about the application in one place (rather than in separate email threads), and those notes become part of the application’s record. For instance, if during manual review an underwriter suspects an unusual pattern, they might note it and ask the data analyst team to review post hoc. Later, anyone reviewing the file can see this commentary thread.\nAudit Trail and Logs Access: For compliance and transparency, the dashboard will have an admin or compliance view where every action on an application is logged (data pulls, score calculation, any changes). As noted, the platform logs every action (“Every action on the platform is logged… complete records for audit”​\nlendfoundry.com\n). Authorized users (e.g., compliance officers or auditors) can access these logs via a secure interface or export, to verify that proper process was followed on each loan. This feature aligns with the need for full auditability in credit decisions and supports internal and external examinations.\nOverall, the dashboard and tools are about empowering the users with the information and controls they need to make sound credit decisions quickly. It merges automated analysis with user-friendly interfaces and workflow management, acting as a co-pilot for underwriters. The design will keep the interface uncluttered, focusing on key risk indicators and calls to action, because user adoption is critical – if the tool is intuitive and clearly beneficial, users will trust and rely on it for their day-to-day lending decisions. In essence, the dashboard is where all the platform’s capabilities (data integration, scoring logic, policy rules) come together to support efficient and informed lending decisions.\nBias Mitigation & Regulatory Compliance Goals\nEnsuring fair lending practices and regulatory compliance is a top priority in designing this credit risk platform. Because our system directly influences credit decisions for SMEs (which can be individuals or small business owners behind the scenes), it must adhere to all relevant laws and guidelines in North America and the EU. We will bake compliance and bias mitigation into the platform’s models, workflows, and data handling processes from the start, rather than treating it as an afterthought. Key goals and considerations include:\nFair Lending & Anti-Discrimination (ECOA and Regulation B): In the United States, the Equal Credit Opportunity Act (ECOA) and its implementing Regulation B prohibit discrimination in any aspect of a credit transaction – this protection explicitly applies to business credit applicants as well, including small businesses​\nfdic.gov\n. Our platform will be designed to not use any protected characteristics (such as race, gender, religion, national origin, etc.) in the credit decision process, and to avoid proxy variables that could indirectly incorporate such factors. We will conduct fairness testing on the credit scoring model to detect any disparate impact. This means analyzing approval rates and score outcomes for protected groups versus others to ensure there are no unjustified disparities​\nrmahq.org\n. If disparities are found, we will investigate the model factors contributing to them and seek less discriminatory alternatives (LDAs) – for example, adjusting or removing certain data inputs that might introduce bias, while trying to maintain predictive accuracy​\nrmahq.org\n​\nrmahq.org\n. This approach aligns with regulators’ clear message that lenders must make reasonable efforts to find models that are both accurate and less discriminatory​\nrmahq.org\n​\nrmahq.org\n. By implementing such alternative comparisons during model development, we aim to meet the “fair lending” expectations out of the gate.\nAdverse Action Reasons & Explainability (ECOA/FCRA requirements): Whenever a credit application is denied or given less favorable terms, U.S. regulations require providing the applicant with specific reasons. ECOA/Reg B and the Fair Credit Reporting Act (FCRA) mandate that a denied applicant receive an adverse action notice that lists the principal reasons for denial (or other adverse action) in clear, specific language​\nconsumerfinance.gov\n​\nrmahq.org\n. Our platform will facilitate compliance with these rules by generating the reason codes for each decline based on the explainability component of our credit logic. As described earlier, the system will output the top factors leading to a denial – these correspond to the “specific reasons” required. For instance, the system might flag “Insufficient cash flow to support debt” or “Business revenue too low relative to loan amount” as reasons. We will ensure these reasons are stored and can be easily included in an adverse action letter to the applicant. Additionally, if a credit score (from a bureau or our internal score) was used in making the decision, FCRA requires that the score and related information be disclosed in the notice​\nconsumerfinance.gov\n. The platform will retain the exact score used and up to four key factors that adversely affected that score, in order to populate such disclosures. By automating the capture of these reason codes and factors, we reduce the risk of non-compliance due to human error and ensure every decline or counter-offer is traceable to a compliant explanation.\nGDPR and EU Automated Decision Regulations: For our European users and applicants, we must comply with the General Data Protection Regulation (GDPR), particularly Article 22 which governs automated individual decision-making. The recent interpretation by EU authorities (including a December 2023 CJEU ruling) is that an automated credit score constitutes an automated decision with significant effect, which is prohibited under GDPR Article 22(1) unless certain conditions are met​\nhunton.com\n. In practice, this means we cannot rely solely on automated scoring to make final lending decisions for EU applicants without safeguards. One typical condition that allows automated processing is if it is “necessary for entering into or performance of a contract” (Article 22(2)(a)), which arguably applies to credit scoring for a loan contract​\nico.org.uk\n. Even so, GDPR would require that we provide notice to the applicant, implement measures to protect their rights, and in many cases allow for human intervention upon request​\nhunton.com\n​\nhunton.com\n. Our platform will be configured such that in EU contexts, either:\nA human (underwriter) always reviews and approves the model’s decision before it is final – meaning decisions are not “solely automated”, or\nIf fully automated decisions are used for efficiency, we obtain explicit consent from the applicant for such processing and inform them of their right to have the decision reviewed by a human. We would also need to allow an appeal or review mechanism as part of the workflow for anyone dissatisfied with an automated outcome.\nWe will also ensure compliance with GDPR’s transparency requirements: applicants (data subjects) can request information on the logic of the decision. Because our system is explainable, we can provide a meaningful explanation of how their data influenced the outcome, fulfilling the “right to an explanation” as interpreted in GDPR recitals. Additionally, data minimization and privacy will be observed – we only use data relevant to creditworthiness and have clear consent and purpose for each data source (for example, using bank transaction data strictly for credit risk analysis with the user’s permission, in line with open banking regulations). All personal data, whether belonging to EU or North American applicants, will be protected per GDPR and parallel laws (e.g., CCPA in California, PIPEDA in Canada), with rights for users to access or delete data as applicable.\nModel Governance and Documentation: We will maintain a robust model governance framework in line with regulatory expectations (such as the Federal Reserve/OCC guidance in the U.S. for model risk management, and similar principles in Europe). This includes documenting the model development process, assumptions, and limitations. Every version of the credit score model will be documented with its validation results and any fair lending analyses performed. We will convene a model review committee (involving data science, risk, and compliance stakeholders) to approve the model before deployment and whenever it is updated. By instituting model governance, we ensure accountability – regulators and internal audit can see that we have control over our models and that they are not unchecked algorithms. Part of this governance is also stress-testing the model under various scenarios to ensure it remains within acceptable risk and bias parameters. As Experian notes, organizations should have governance frameworks to oversee development and monitoring of lending models, ensuring they are fair and transparent​\nexperian.com\n – our plan aligns with this best practice.\nBias Mitigation Strategies: In addition to up-front model selection to minimize bias, the platform will incorporate ongoing bias monitoring. We will periodically run analyses on approved vs. declined application data to check for disparate impact (e.g., using metrics like adverse impact ratio for different demographic segments, when such data is available or can be proxied)​\nexperian.com\n. If we detect any concerning patterns, we will dig deeper to find root causes. The platform’s design allows for quick adjustments to eliminate bias – for example, if a certain data field is found to inadvertently disadvantage a protected group without strong predictive necessity, we can drop or replace that field in the scoring model (this is part of searching for less discriminatory alternatives as mentioned above). We will also use constraints in the model (for instance, monotonic constraints to ensure the model’s outputs move in expected directions with respect to certain inputs) to avoid perverse or biased behaviors. Moreover, by providing the underwriters the ability to override decisions, we keep a human check in the loop – if ever the model produced an obviously unfair outcome in an individual case, a human can correct it and that instance can be flagged for examination and model improvement. Our audit logs will capture demographics (when provided, e.g., some applications might include principal owners’ gender for monitoring) so we can demonstrate compliance with fair lending rules or answer any regulatory inquiries with data. The ultimate goal is to ensure equitable access to credit: applicants who are creditworthy should be approved consistently regardless of personal characteristics, and our system’s policies will be tailored to that principle.\nRegulatory Alignment (Summary of Key Laws): To list the main regulations and how the platform aligns:\nECOA (US) – We do not discriminate on prohibited bases​\nfdic.gov\n; we provide notice of adverse action with reasons; we maintain records of decisions to evidence fair treatment.\nRegulation B (US) – We’ll adhere to its specific requirements, e.g., how to formulate reason statements, when to notify (within 30 days, though that’s a lender process outside platform scope, but the platform can timestamp decisions to help).\nFCRA (US) – If using consumer credit reports/scores, we comply with disclosure requirements; we ensure data obtained from credit bureaus is used properly and securely (and not beyond permissible purposes).\nGDPR (EU) – We ensure lawful basis for data usage (consent/contract), honor individuals’ rights, secure personal data, and avoid fully automated decisions without safeguards.\nEBA Guidelines & Other EU Lending Regulations: European Banking Authority guidelines (such as on loan origination and monitoring) emphasize creditworthiness assessment, data transparency, and borrower rights. Our platform’s explainability and thorough data capture help lenders meet these guidelines. Also, open banking (PSD2) compliance is handled by using accredited APIs like Salt Edge, ensuring we handle customer bank data under the required consent frameworks.\nUDAP/UDAAP (Unfair, Deceptive, or Abusive Acts or Practices in US) – While not a single regulation, we ensure the platform’s outputs (like reasons given) are not misleading or unfair to consumers. The clarity and fairness we build in also protect the lender from UDAAP risk​\nrmahq.org\n.\nBy embedding these compliance and fairness considerations into the platform design, we aim to reduce legal and reputational risks for any lender using the system. In practical terms, this means when an auditor or regulator examines the lending process, the lender can produce detailed logs, decision rationales, and model documentation to show that decisions were made consistently, fairly, and in line with regulatory expectations. Compliance is not just a legal duty but also a way to build trust – SMEs will be more confident to apply knowing the process is objective and their data is protected. Our platform is positioned as a tool that upholds ethical and fair lending standards while enabling efficiency and innovation in credit risk assessment.\nOperational Considerations (Security, Audit Logs, Uptime, Scaling)\nBeyond functionality, a mission-critical platform like this must meet high standards for security, reliability, and scalability. Underwriters and credit officers rely on this system to do their daily jobs – any downtime or security breach can severely impact business and customer trust. We have outlined the operational requirements and how the platform will address them:\nData Security & Privacy: The platform will handle sensitive financial information (company financials, bank data, personal identifiers of guarantors, etc.), so strong security measures are non-negotiable. All data will be encrypted both at rest and in transit – using industry-standard strong encryption (for example, AES-256 for data storage and TLS 1.2/1.3 for data in motion)​\nlendfoundry.com\n. Access to data within the platform is controlled via role-based access control (RBAC): users only see information relevant to their role and permissions​\nlendfoundry.com\n. For instance, an underwriter can view applications assigned to them, but cannot arbitrarily pull up other loans without proper rights; a risk manager can see broader data but maybe not full personal details if not needed. We will implement multi-factor authentication (MFA) for user logins to prevent unauthorized account access​\nlendfoundry.com\n, and integrate with the lender’s single sign-on if available for seamless yet secure authentication. All access and actions are logged (see audit logs below). The system will undergo regular security audits and penetration testing to identify and patch any vulnerabilities. We’ll also align with standards like SOC 2 requirements, since lenders often demand proof of strong internal controls. In short, the platform is built with a “security-first mindset” – protecting sensitive data not only prevents breaches and fines​\nlendfoundry.com\n, but also builds confidence with our institutional clients and their customers.\nAudit Logs & Traceability: Every significant action on the platform will produce an audit log entry. This includes user actions (logins, viewing an application, making a decision, overriding a decision, changing a rule), system actions (data imported from external sources, score calculations, automated rule triggers), and administrative changes (like model version updates or configuration changes). These logs are timestamped and stored securely (in an append-only format to prevent tampering). The benefit is a complete audit trail that can be used to monitor compliance and investigate issues. If a question arises like “Why was this loan approved contrary to policy?”, we can trace who overrode what and why, as well as what the system recommended originally. Audit trails are indispensable for internal audits and regulatory exams. By having it automated, we save a huge amount of manual effort in compiling evidence – as one best practice guide notes, detailed audit logs of all actions and comments help meet compliance with minimal hassle​\nbrex.com\n. Indeed, our approach mirrors the concept: “Every action on the platform is logged… complete records available for audit”​\nlendfoundry.com\n. The platform may include an audit dashboard for authorized users, where they can query these logs by various filters (date, user, application ID, type of event) for oversight and reporting.\nHigh Availability & Uptime: Underwriters might be working under tight deadlines (e.g., an SME waiting for approval to close a deal), so the platform must be reliably available whenever needed. We will design for at least 99.9% uptime (which equates to less than ~9 hours of unplanned downtime per year). This involves deploying the system in a highly available cloud environment, with redundancy at multiple levels – e.g., multiple application servers behind load balancers, primary and replica databases with failover, etc. We will use monitoring tools to get instant alerts on any service degradation so our DevOps team can respond swiftly, ideally before users even notice. Maintenance windows will be scheduled during off-hours and kept minimal. Additionally, we’ll implement robust disaster recovery procedures: regular backups of data, and the ability to restore service in an alternate region or environment if a major outage occurs. From the user’s perspective, the goal is that the system is virtually always up during business hours and beyond. We will also provide transparency on uptime via an SLA (service level agreement) to client institutions, possibly with credits if uptime falls below agreed levels – underlining our commitment to reliability.\nScalability & Performance: As the volume of loan applications grows, or during peak times (for instance, a seasonal surge in SME loan requests or the launch of a new loan program), the platform should seamlessly handle the load. The architecture will be built to scale horizontally, meaning we can add more computing resources to handle more concurrent application processing without a performance drop. For example, the document processing and scoring components can run in parallel across many servers or cloud functions when there’s a spike in uploads and scoring tasks. We’ll leverage cloud auto-scaling features so that capacity can expand or contract based on usage, optimizing cost and performance. From an underwriter’s perspective, pages on the dashboard should load quickly and analytics should update in near real-time; therefore, we’ll optimize database queries and possibly use caching for frequently accessed info. Our target is that even as user count or application count doubles or triples, the response times remain within a few seconds for most operations. This scalability plan ensures the platform can support a growing lender or multiple lenders and even new features (like more complex models or additional data sources) down the line without needing a re-architecture. We will conduct load testing to verify throughput – e.g., can we handle hundreds of simultaneous applications being processed and dozens of underwriters working without slowdown – and tune the system accordingly.\nSecurity Compliance & Certifications: We will align with relevant security compliance frameworks. For instance, lenders may require that the platform is PCI DSS compliant if handling any payment info (if we integrate payments for loan disbursement or repayment, though that’s peripheral). More directly applicable, SOC 2 Type II certification will likely be pursued, demonstrating that our security, availability, and confidentiality controls meet industry standards. Additionally, if hosting data in the EU, we’ll ensure GDPR compliance (addressed above) and consider ISO 27001 certification as a further sign of mature security practices. The platform will also help lenders meet their own compliance – for example, GLBA (Gramm-Leach-Bliley Act in the US) requires financial institutions to protect customers’ private data; by using our securely designed system, a lender can confidently say they are using a tool that meets GLBA’s Safeguards Rule requirements​\nlendfoundry.com\n.\nLogging and Monitoring (Operational): On top of audit logs for business actions, we will have extensive system logs and monitoring. This means tracking things like integration call success/failure (did the call to the bank API succeed, did the OCR finish correctly), performance metrics (CPU, memory, etc.), and any application errors. A monitoring dashboard will enable our support team to catch issues early. If an integration like Plaid is down, the system might show a warning and automatically failover to ask the applicant for manual document upload, for instance – ensuring graceful degradation. We’ll also monitor model performance in production to detect data drift or anomalies (which segues into the continuous learning part).\nMaintaining and Updating System with Minimal Downtime: We plan for deployment processes that allow updates with zero or minimal downtime (rolling deployments in the cloud, feature flagging, blue-green deployments for bigger changes). This way, we can release new features, security patches, or model updates without interrupting users. We’ll inform users of any upcoming changes and have fallbacks if an update causes any unexpected issues (ability to roll back quickly).\nAudit and Compliance Support: Operationally, we ensure that any compliance audit (internal or external) can be supported by the platform. For example, if regulators want to see all loans declined due to a specific rule in the last year, we could retrieve that easily from logs or a reporting module. We consider the needs of lending compliance reviews so that our data retention policies meet those (e.g., keeping records for the minimum required years). The system will have data export capabilities for regulators or examiners, with appropriate security (perhaps read-only access to certain data for auditors).\nIn conclusion, the platform’s operational backbone is designed to be secure, reliable, and scalable. Lenders entrusting their credit decision process to this platform can be confident that it will protect sensitive information, be available when needed, and grow with their business. Additionally, by having strong operational controls, we minimize the risk of surprises (like system outages or breaches) that could damage the lender’s operations or reputation. These considerations are as crucial as the credit logic itself – a fast credit decision means little if the system is down or compromised – hence we treat this as a core part of the product’s value proposition.\nVersioning & Continuous Learning Expectations\nCredit risk models and decision policies cannot remain static; they must evolve with changing economic conditions, new data, and lessons learned from outcomes. Stakeholders expect that the platform will support ongoing improvement – continuous learning – rather than a one-time setup. This involves versioning of models, regular updates to decision rules, and mechanisms to learn from new information to keep the credit assessment accurate and effective. Below are the key expectations and how we plan to fulfill them:\nModel Versioning and Tracking: Each iteration of the credit scoring model (and major rule set changes) will be version-controlled within the platform. This means we will label models as v1.0, v1.1, v2.0, etc., with clear records of what changed (new features added, algorithm update, re-training with more recent data, etc.). For every loan application processed, the platform will log exactly which model version and rule set was used to generate the decision. This is crucial for auditability and for assessing model changes over time. If, for instance, a question comes up about why a loan in January was approved, we can see it was under model v1.0 with certain criteria, whereas by June we might be on v2.0. From a compliance standpoint, this also allows us to reconstruct decisions if needed and show regulators that we manage model risk responsibly by not constantly tinkering without oversight. When a new model version is ready, we will likely run it in parallel (shadow mode) for a period to compare its decisions to the current champion model – a kind of A/B test approach – ensuring it’s performing as expected before fully switching over. This champion/challenger process is a best practice to validate improvements and avoid unwittingly introducing problems. The platform will facilitate running such tests on a sample of applications.\nRegular Model Updates (Continuous Learning): The data science leads expect to regularly update the risk model to incorporate newly observed data and improve accuracy. As more loans are originated and as their performance is observed over time (who defaulted, who paid back on time), we accumulate a richer dataset. Periodically (e.g., quarterly or biannually), we will use this data to retrain or recalibrate the model. This ensures the model adapts to any shifts – for example, if economic conditions tighten and default rates increase across the board, the model should learn from that to become more conservative where appropriate. Over time, new types of data might become available (say we start capturing more granular cashflow data or new behavior metrics) – these can be introduced into the model to see if they boost prediction power. Our platform will support this by allowing data scientists to plug in new variables or new model coefficients easily, subject to validation. The expectation is that model performance (predictive accuracy, measured by metrics like Gini or KS) should either improve or remain stable with each iteration; continuous learning aims to prevent performance degradation (which can happen due to model drift). We will closely monitor the model’s back-testing results and real outcomes – for example, how accurate were the risk predictions versus actual default rates. If we find certain segments where the model was off, that informs the next update. This ongoing cycle ensures the credit risk assessment stays aligned with reality and doesn’t become stale. In banking, this is akin to ongoing model monitoring, which helps maintain alignment with current risks and market conditions​\ngrantthornton.com\n.\nFeedback Loop from Underwriters: The platform will treat underwriter overrides and actions as valuable feedback data. For instance, if underwriters frequently override the model’s decision for a particular reason (say the model flags something as high risk but underwriters see a qualitative context that mitigates it), we will capture those reasons. The system can aggregate common override reasons or policy exceptions. This qualitative feedback can guide adjustments either to the model or to the lending policy. For example, if many underwriters override declines for SMEs with slightly low cash flow but long stable business history, we might realize the model undervalues longevity, and tweak that in the next version. Essentially, the human judgments provide additional data points for learning. We may incorporate a feature where underwriters can label an outcome if they spot an error in the model’s reasoning, which then goes back to the data science team for analysis.\nPolicy Rule Tuning: Continuous improvement isn’t just about the statistical model – the credit policy rules (the hard criteria and approval thresholds) also need to be revisited regularly. Business strategy or external conditions might prompt changes: for example, during an economic downturn, the risk appetite might shrink, leading to stricter auto-approval cutoffs (requiring a higher score for instant approval, perhaps). Conversely, if the lender wants to aggressively grow in a certain segment, they might relax some criteria. The platform will make it easy to adjust these rules configurations. Product owners or risk managers (with appropriate permissions) could simulate a rule change in a UAT environment – e.g., see how many more loans would have been approved in the last quarter if a certain threshold was lower – and then deploy that change to production. We will document each policy change (who made it, when, and why). This flexibility means the lending strategy can be quickly operationalized in the system. A what-if analysis tool could be included: allowing tweaking of a policy parameter and instantly showing the expected impact on approval rates using recent application data. This helps in deciding on policy tweaks scientifically.\nMonitoring Model Quality and Drift: The platform will have monitoring in place to detect if the model’s predictions start deviating from actual outcomes over time – known as model drift or degradation. We will track population drift (are the incoming SMEs significantly different from the training data distribution?) and performance drift (is the model’s default prediction accuracy worsening?). For instance, if the platform notices that a higher percentage of “low risk” scored loans are defaulting than before, it will alert the data science team. Regular reports on model performance metrics will be available on the platform (for data science and risk leads), such as Gini coefficient trending, population stability index for key variables, etc. This way, we can proactively schedule a model update if needed rather than waiting too long. As Grant Thornton’s guidance notes, ongoing monitoring should be established from a model’s inception and actively managed to keep models aligned with their targets and current risk environment​\ngrantthornton.com\n. Our approach follows this principle by treating model monitoring as an integral process.\nOutcome Data Integration: Continuous learning also depends on feeding the system with the outcomes of loans. The platform should integrate with loan servicing systems to get performance data: which loans were approved, which have repaid fully, which are delinquent or defaulted. We will use this data to close the loop on predictions. Over time, we will accumulate a dataset of features and outcomes which allows assessing and improving the model. For example, suppose the model predicted a 5% default probability for a certain loan; one year later, we see whether it defaulted or not. Aggregating these, we can check calibration (did about 5% of those loans default?). The expectation from stakeholders is that the model not only segments risk but is well-calibrated to actual probabilities. With each iteration, calibration can be adjusted if needed.\nLearning New Patterns (Adaptive Behavior): Beyond scheduled updates, the platform could employ some adaptive algorithms that update certain risk signals in near-real-time. For example, an SME’s bank account data could be periodically refreshed even post-loan (if the lender has ongoing access for covenants or monitoring). If the platform notices a sharp deterioration in cash flow, it could flag the account for review or even suggest an intervention. While this strays into portfolio monitoring territory, it is a continuous learning aspect – the system doesn’t stop learning after origination; it can continue to gather data through the life of the loan. This might be a future-phase feature, but worth noting as an expectation for a cutting-edge platform.\nChampion/Challenger and Testing Framework: Stakeholders expect that any changes undergo rigorous testing. We will implement a champion/challenger testing framework wherein a new model (challenger) is tested against the incumbent (champion) on live (or recent historical) data to prove its effectiveness before full deployment​\naltair.com\n. This ensures that continuous learning is done safely – improvements are validated, not assumed. The platform may rotate a small percentage of applications to a challenger model in parallel (with results hidden from underwriters) just to collect comparative outcomes. Only when the challenger demonstrates equal or better performance (and no new bias issues) would it replace the champion. This controlled experimentation capability is a sophisticated feature that data science leads would use to drive model innovation.\nDocumentation & Version Communication: Each time a model or major policy update is rolled out, we will document the changes in a summary for the business users (non-technical). For example: “Model v2.0 now incorporates two years of financial data instead of one, and gives slightly more weight to cash flow consistency. As a result, some marginal applicants may see higher scores if they have stable cash flows.” Communicating these changes helps underwriters and managers understand any shifts in outcomes they might observe. It also reinforces trust in the system because users see that it’s being actively improved in response to real data. Internally, we maintain a detailed log of changes (for compliance and development tracking), and externally we might provide a changelog or even training sessions when a significant change occurs.\nIn summary, the platform is not a static product but a living system that learns and improves over time. With robust versioning and monitoring in place, we can iterate on the credit risk model and policies in a controlled, transparent manner. This continuous learning loop – data -> model -> decision -> outcome -> back to data – ensures that over the long term, the automated credit risk assessments become more and more accurate, fair, and aligned with the lender’s objectives. It gives the stakeholders confidence that the system will not become obsolete or misaligned; instead, it will adapt to new challenges (like economic shifts or new types of borrowers) and incorporate the collective learning gained from each lending decision made. By planning for these processes from the start, we set the expectation that the platform will remain at the cutting edge of SME credit risk management throughout its lifecycle, delivering ongoing value.",
+  "structured_data": [
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_1-v1.0",
+      "domain": "fintech",
+      "summary": "Automate credit risk scoring using document-based inputs",
+      "priority": "High",
+      "tags": [
+        "document_processing",
+        "credit_scoring",
+        "ocr_integration"
+      ],
+      "subdomain": "credit_risk_assessment",
+      "difficulty": 4,
+      "additionalNotes": "Includes OCR and financial data extraction from tax returns, balance sheets, etc.",
+      "source_hlj_id": "REQ 001-001",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_2-v1.0",
+      "domain": "fintech",
+      "summary": "Integrate with bank APIs to fetch real-time transaction data",
+      "priority": "High",
+      "tags": [
+        "bank_api",
+        "open_banking",
+        "data_aggregation"
+      ],
+      "subdomain": "data_integration",
+      "difficulty": 4,
+      "additionalNotes": "Uses Plaid and Salt Edge for bank account aggregation",
+      "source_hlj_id": "REQ 001-002",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_3-v1.0",
+      "domain": "fintech",
+      "summary": "Analyze behavioral patterns from financial transactions",
+      "priority": "High",
+      "tags": [
+        "behavioral_analysis",
+        "transaction_data",
+        "cash_flow"
+      ],
+      "subdomain": "credit_risk_assessment",
+      "difficulty": 4,
+      "additionalNotes": "Examines overdrafts, revenue consistency, and vendor payments",
+      "source_hlj_id": "REQ 001-003",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_4-v1.0",
+      "domain": "fintech",
+      "summary": "Generate explainable creditworthiness predictions",
+      "priority": "High",
+      "tags": [
+        "explainability",
+        "ai_model",
+        "risk_scoring"
+      ],
+      "subdomain": "model_explainability",
+      "difficulty": 5,
+      "additionalNotes": "System must output reasons behind automated decisions with SHAP or LIME-like techniques",
+      "source_hlj_id": "REQ 001-004",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_5-v1.0",
+      "domain": "fintech",
+      "summary": "Support tiered approval workflows with human overrides",
+      "priority": "High",
+      "tags": [
+        "approval_workflow",
+        "manual_override",
+        "tiered_approval"
+      ],
+      "subdomain": "decision_management",
+      "difficulty": 3,
+      "additionalNotes": "Higher loan amounts trigger manager review; all overrides require justification",
+      "source_hlj_id": "REQ 001-005",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_6-v1.0",
+      "domain": "fintech",
+      "summary": "Provide audit trails of credit decisions and changes",
+      "priority": "High",
+      "tags": [
+        "audit_log",
+        "compliance",
+        "decision_tracking"
+      ],
+      "subdomain": "compliance",
+      "difficulty": 3,
+      "additionalNotes": "Tracks user actions, score versions, and overrides for regulatory transparency",
+      "source_hlj_id": "REQ 001-006",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_7-v1.0",
+      "domain": "fintech",
+      "summary": "Expose dashboard with summarized applicant profiles",
+      "priority": "High",
+      "tags": [
+        "dashboard",
+        "applicant_summary",
+        "user_interface"
+      ],
+      "subdomain": "ui_ux",
+      "difficulty": 3,
+      "additionalNotes": "Displays risk score, loan amount, business info, and top red flags",
+      "source_hlj_id": "REQ 001-007",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_8-v1.0",
+      "domain": "fintech",
+      "summary": "Enable drill-down into financial statements and metrics",
+      "priority": "High",
+      "tags": [
+        "financial_analysis",
+        "ui_components",
+        "document_viewer"
+      ],
+      "subdomain": "ui_ux",
+      "difficulty": 3,
+      "additionalNotes": "Side-by-side PDF viewer with extracted figures and anomaly flags",
+      "source_hlj_id": "REQ 001-008",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_9-v1.0",
+      "domain": "fintech",
+      "summary": "Support real-time analytics on loan pipeline",
+      "priority": "Medium",
+      "tags": [
+        "analytics",
+        "loan_pipeline",
+        "performance_metrics"
+      ],
+      "subdomain": "reporting",
+      "difficulty": 3,
+      "additionalNotes": "Includes processing time, approval rate, and score distributions",
+      "source_hlj_id": "REQ 001-009",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_10-v1.0",
+      "domain": "fintech",
+      "summary": "Export decision and scoring data for audit or analysis",
+      "priority": "Medium",
+      "tags": [
+        "data_export",
+        "audit_support",
+        "analytics"
+      ],
+      "subdomain": "data_management",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied — Supports CSV/JSON exports for internal/external audits",
+      "source_hlj_id": "REQ 001-010",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_11-v1.0",
+      "domain": "fintech",
+      "summary": "Enable collaboration via internal comments and tagging",
+      "priority": "Medium",
+      "tags": [
+        "collaboration",
+        "notes",
+        "tagging"
+      ],
+      "subdomain": "ui_ux",
+      "difficulty": 2,
+      "additionalNotes": "Underwriters can tag peers or managers with inline comments",
+      "source_hlj_id": "REQ 001-011",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_12-v1.0",
+      "domain": "fintech",
+      "summary": "Conduct fraud checks by cross-verifying data points",
+      "priority": "High",
+      "tags": [
+        "fraud_detection",
+        "data_validation",
+        "document_authenticity"
+      ],
+      "subdomain": "compliance",
+      "difficulty": 4,
+      "additionalNotes": "Flags discrepancies between submitted docs and bank transaction data",
+      "source_hlj_id": "REQ 001-012",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_13-v1.0",
+      "domain": "fintech",
+      "summary": "Support KYC verification through third-party APIs",
+      "priority": "Medium",
+      "tags": [
+        "kyc",
+        "identity_verification",
+        "api_integration"
+      ],
+      "subdomain": "compliance",
+      "difficulty": 3,
+      "additionalNotes": "Integrates with standard KYC providers for identity and ownership checks",
+      "source_hlj_id": "REQ 001-013",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_14-v1.0",
+      "domain": "fintech",
+      "summary": "Allow manual decision overrides with rationale logging",
+      "priority": "High",
+      "tags": [
+        "manual_override",
+        "audit_logging",
+        "credit_decision"
+      ],
+      "subdomain": "decision_management",
+      "difficulty": 3,
+      "additionalNotes": "Justification for overrides must be stored and reviewable",
+      "source_hlj_id": "REQ 001-014",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_15-v1.0",
+      "domain": "fintech",
+      "summary": "Allow underwriters to filter application queue by status",
+      "priority": "Low",
+      "tags": [
+        "workflow_management",
+        "filtering",
+        "ui_dashboard"
+      ],
+      "subdomain": "ui_ux",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied — Users can filter by pending, flagged, or auto-approved",
+      "source_hlj_id": "REQ 001-015",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_16-v1.0",
+      "domain": "fintech",
+      "summary": "Provide role-based access control for user permissions",
+      "priority": "High",
+      "tags": [
+        "rbac",
+        "user_roles",
+        "access_control"
+      ],
+      "subdomain": "security",
+      "difficulty": 3,
+      "additionalNotes": "Restricts access to data and actions based on user roles (underwriter, manager, etc.)",
+      "source_hlj_id": "REQ 001-016",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_17-v1.0",
+      "domain": "fintech",
+      "summary": "Log every platform action for full auditability",
+      "priority": "High",
+      "tags": [
+        "audit_logging",
+        "compliance",
+        "traceability"
+      ],
+      "subdomain": "compliance",
+      "difficulty": 3,
+      "additionalNotes": "Includes timestamps, user ID, data changes, and triggered rule outcomes",
+      "source_hlj_id": "REQ 001-017",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_18-v1.0",
+      "domain": "fintech",
+      "summary": "Auto-approve low-risk applications via policy engine",
+      "priority": "Medium",
+      "tags": [
+        "auto_approval",
+        "policy_engine",
+        "risk_score"
+      ],
+      "subdomain": "decision_management",
+      "difficulty": 3,
+      "additionalNotes": "Approval is triggered when financials and risk score meet predefined thresholds",
+      "source_hlj_id": "REQ 001-018",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_19-v1.0",
+      "domain": "fintech",
+      "summary": "Trigger manager review for flagged or high-risk cases",
+      "priority": "High",
+      "tags": [
+        "manager_approval",
+        "risk_flagging",
+        "tiered_workflow"
+      ],
+      "subdomain": "workflow",
+      "difficulty": 2,
+      "additionalNotes": "System routes non-conforming applications to the appropriate role",
+      "source_hlj_id": "REQ 001-019",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_20-v1.0",
+      "domain": "fintech",
+      "summary": "Allow external credit bureau data integration",
+      "priority": "High",
+      "tags": [
+        "credit_bureau",
+        "api_integration",
+        "external_data"
+      ],
+      "subdomain": "data_integration",
+      "difficulty": 4,
+      "additionalNotes": "Integrates with Experian, D&B, etc., for business credit checks",
+      "source_hlj_id": "REQ 001-020",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_21-v1.0",
+      "domain": "fintech",
+      "summary": "Use alternative financial data from accounting software",
+      "priority": "Medium",
+      "tags": [
+        "alternative_data",
+        "accounting_software",
+        "credit_risk"
+      ],
+      "subdomain": "data_integration",
+      "difficulty": 3,
+      "additionalNotes": "origin: implied — Data from QuickBooks or Xero used to enhance financial visibility",
+      "source_hlj_id": "REQ 001-021",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_22-v1.0",
+      "domain": "fintech",
+      "summary": "Detect and flag altered or suspicious documents",
+      "priority": "High",
+      "tags": [
+        "fraud_detection",
+        "document_analysis",
+        "flagging"
+      ],
+      "subdomain": "compliance",
+      "difficulty": 4,
+      "additionalNotes": "System checks authenticity of submitted PDFs and scans",
+      "source_hlj_id": "REQ 001-022",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_23-v1.0",
+      "domain": "fintech",
+      "summary": "Visualize cash flow patterns over time",
+      "priority": "Medium",
+      "tags": [
+        "cash_flow",
+        "visualization",
+        "bank_data"
+      ],
+      "subdomain": "ui_ux",
+      "difficulty": 2,
+      "additionalNotes": "Includes charts for inflows/outflows, volatility, and overdrafts",
+      "source_hlj_id": "REQ 001-023",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_24-v1.0",
+      "domain": "fintech",
+      "summary": "Filter transactions for behavioral credit analysis",
+      "priority": "Medium",
+      "tags": [
+        "transaction_filter",
+        "behavioral_analysis",
+        "financial_trends"
+      ],
+      "subdomain": "credit_risk_assessment",
+      "difficulty": 3,
+      "additionalNotes": "e.g., view all vendor payments or flagged anomalies",
+      "source_hlj_id": "REQ 001-024",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_25-v1.0",
+      "domain": "fintech",
+      "summary": "Summarize reasons behind each credit decision",
+      "priority": "High",
+      "tags": [
+        "explainability",
+        "decision_reasons",
+        "credit_scoring"
+      ],
+      "subdomain": "model_explainability",
+      "difficulty": 4,
+      "additionalNotes": "System displays positively/negatively contributing factors in plain text",
+      "source_hlj_id": "REQ 001-025",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_26-v1.0",
+      "domain": "fintech",
+      "summary": "Enforce hard policy rules alongside model output",
+      "priority": "High",
+      "tags": [
+        "business_rules",
+        "model_override",
+        "risk_policy"
+      ],
+      "subdomain": "decision_management",
+      "difficulty": 3,
+      "additionalNotes": "e.g., flag bankruptcy even if risk score is acceptable",
+      "source_hlj_id": "REQ 001-026",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_27-v1.0",
+      "domain": "fintech",
+      "summary": "Store original and adjusted risk score with each application",
+      "priority": "Medium",
+      "tags": [
+        "score_tracking",
+        "version_control",
+        "decision_log"
+      ],
+      "subdomain": "data_management",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied — Allows tracking changes due to business rules",
+      "source_hlj_id": "REQ 001-027",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_28-v1.0",
+      "domain": "fintech",
+      "summary": "Enable multi-factor authentication for user login",
+      "priority": "High",
+      "tags": [
+        "authentication",
+        "security",
+        "mfa"
+      ],
+      "subdomain": "security",
+      "difficulty": 2,
+      "additionalNotes": "Protects user accounts and sensitive financial data",
+      "source_hlj_id": "REQ 001-028",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_29-v1.0",
+      "domain": "fintech",
+      "summary": "Encrypt all data at rest and in transit",
+      "priority": "High",
+      "tags": [
+        "encryption",
+        "data_security",
+        "compliance"
+      ],
+      "subdomain": "security",
+      "difficulty": 3,
+      "additionalNotes": "AES-256 and TLS 1.2/1.3 for secure data handling",
+      "source_hlj_id": "REQ 001-029",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_30-v1.0",
+      "domain": "fintech",
+      "summary": "Expose dashboard for credit managers to adjust policies",
+      "priority": "Medium",
+      "tags": [
+        "policy_config",
+        "dashboard",
+        "credit_management"
+      ],
+      "subdomain": "ui_ux",
+      "difficulty": 3,
+      "additionalNotes": "Allows updates to auto-decline thresholds and scoring cutoffs",
+      "source_hlj_id": "REQ 001-030",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_31-v1.0",
+      "domain": "fintech",
+      "summary": "Enable users to simulate changes to credit rules",
+      "priority": "Medium",
+      "tags": [
+        "what_if",
+        "policy_simulation",
+        "rule_engine"
+      ],
+      "subdomain": "decision_management",
+      "difficulty": 3,
+      "additionalNotes": "origin: implied — Users can preview impact of rule tweaks before deployment",
+      "source_hlj_id": "REQ 001-031",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_32-v1.0",
+      "domain": "fintech",
+      "summary": "Retain detailed decision logs for all applications",
+      "priority": "High",
+      "tags": [
+        "decision_logging",
+        "compliance",
+        "auditability"
+      ],
+      "subdomain": "compliance",
+      "difficulty": 2,
+      "additionalNotes": "Supports post-decision analysis and compliance checks",
+      "source_hlj_id": "REQ 001-032",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_33-v1.0",
+      "domain": "fintech",
+      "summary": "Support integration of model outcome data with servicing systems",
+      "priority": "Low",
+      "tags": [
+        "loan_servicing",
+        "model_output",
+        "integration"
+      ],
+      "subdomain": "data_integration",
+      "difficulty": 3,
+      "additionalNotes": "origin: implied — Enables linking prediction data to real-world loan outcomes",
+      "source_hlj_id": "REQ 001-033",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_34-v1.0",
+      "domain": "fintech",
+      "summary": "Maintain model version history for each decision",
+      "priority": "High",
+      "tags": [
+        "model_versioning",
+        "audit_trail",
+        "risk_model"
+      ],
+      "subdomain": "model_governance",
+      "difficulty": 3,
+      "additionalNotes": "Supports compliance and rollback of past decisions",
+      "source_hlj_id": "REQ 001-034",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_35-v1.0",
+      "domain": "fintech",
+      "summary": "Monitor model drift and prediction performance",
+      "priority": "Medium",
+      "tags": [
+        "model_drift",
+        "performance_monitoring",
+        "predictive_accuracy"
+      ],
+      "subdomain": "model_governance",
+      "difficulty": 4,
+      "additionalNotes": "Tracks performance degradation and population shifts",
+      "source_hlj_id": "REQ 001-035",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_36-v1.0",
+      "domain": "fintech",
+      "summary": "Enable challenger model testing in shadow mode",
+      "priority": "Medium",
+      "tags": [
+        "ab_testing",
+        "champion_challenger",
+        "model_validation"
+      ],
+      "subdomain": "model_governance",
+      "difficulty": 4,
+      "additionalNotes": "Supports parallel testing of new models before production rollout",
+      "source_hlj_id": "REQ 001-036",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_37-v1.0",
+      "domain": "fintech",
+      "summary": "Capture underwriter override trends for model improvement",
+      "priority": "Low",
+      "tags": [
+        "human_feedback",
+        "model_refinement",
+        "overrides"
+      ],
+      "subdomain": "continuous_learning",
+      "difficulty": 3,
+      "additionalNotes": "origin: implied — Frequently overridden cases inform retraining cycles",
+      "source_hlj_id": "REQ 001-037",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_38-v1.0",
+      "domain": "fintech",
+      "summary": "Log adverse action reasons for all declined loans",
+      "priority": "High",
+      "tags": [
+        "regulatory_compliance",
+        "adverse_action",
+        "explainability"
+      ],
+      "subdomain": "compliance",
+      "difficulty": 3,
+      "additionalNotes": "Supports ECOA and FCRA obligations by storing reasons for denial",
+      "source_hlj_id": "REQ 001-038",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_39-v1.0",
+      "domain": "fintech",
+      "summary": "Generate adverse action notices from reason codes",
+      "priority": "High",
+      "tags": [
+        "notice_generation",
+        "regulatory_output",
+        "decision_reason"
+      ],
+      "subdomain": "compliance",
+      "difficulty": 3,
+      "additionalNotes": "Automates letter generation for declined applicants",
+      "source_hlj_id": "REQ 001-039",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_40-v1.0",
+      "domain": "fintech",
+      "summary": "Comply with GDPR automated decision safeguards",
+      "priority": "High",
+      "tags": [
+        "gdpr",
+        "data_protection",
+        "human_review"
+      ],
+      "subdomain": "compliance",
+      "difficulty": 4,
+      "additionalNotes": "Includes explicit consent, human override, and right to explanation",
+      "source_hlj_id": "REQ 001-040",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_41-v1.0",
+      "domain": "fintech",
+      "summary": "Store SHAP or LIME output for post-hoc explanations",
+      "priority": "Medium",
+      "tags": [
+        "explainability",
+        "ml_explanations",
+        "risk_model"
+      ],
+      "subdomain": "model_explainability",
+      "difficulty": 4,
+      "additionalNotes": "origin: implied — Provides breakdown of feature contributions for each decision",
+      "source_hlj_id": "REQ 001-041",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_42-v1.0",
+      "domain": "fintech",
+      "summary": "Support versioned business rule sets",
+      "priority": "Medium",
+      "tags": [
+        "rules_versioning",
+        "policy_management",
+        "decision_logic"
+      ],
+      "subdomain": "model_governance",
+      "difficulty": 3,
+      "additionalNotes": "Tracks configuration changes to policy rules over time",
+      "source_hlj_id": "REQ 001-042",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_43-v1.0",
+      "domain": "fintech",
+      "summary": "Visualize approval rate trends by industry sector",
+      "priority": "Low",
+      "tags": [
+        "industry_trends",
+        "analytics",
+        "portfolio_analysis"
+      ],
+      "subdomain": "reporting",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied — Dashboard shows sectors with high/low acceptance rates",
+      "source_hlj_id": "REQ 001-043",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_44-v1.0",
+      "domain": "fintech",
+      "summary": "Enable scoring recalibration based on outcome data",
+      "priority": "Medium",
+      "tags": [
+        "model_calibration",
+        "score_adjustment",
+        "data_feedback"
+      ],
+      "subdomain": "continuous_learning",
+      "difficulty": 3,
+      "additionalNotes": "Retraining or rescaling based on real-world repayment outcomes",
+      "source_hlj_id": "REQ 001-044",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_45-v1.0",
+      "domain": "fintech",
+      "summary": "Allow business users to view model changes and impact",
+      "priority": "Low",
+      "tags": [
+        "model_summary",
+        "change_log",
+        "business_visibility"
+      ],
+      "subdomain": "model_governance",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied — Communicates version changes in human-readable format",
+      "source_hlj_id": "REQ 001-045",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_46-v1.0",
+      "domain": "fintech",
+      "summary": "Configure scoring thresholds for auto-approve decisions",
+      "priority": "Medium",
+      "tags": [
+        "score_threshold",
+        "auto_decision",
+        "risk_rules"
+      ],
+      "subdomain": "decision_management",
+      "difficulty": 3,
+      "additionalNotes": "Enables customization of what score range qualifies for instant approvals",
+      "source_hlj_id": "REQ 001-046",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_47-v1.0",
+      "domain": "fintech",
+      "summary": "Route edge cases to manual review based on configured logic",
+      "priority": "Medium",
+      "tags": [
+        "manual_review",
+        "edge_case_handling",
+        "rule_engine"
+      ],
+      "subdomain": "decision_management",
+      "difficulty": 3,
+      "additionalNotes": "origin: implied — Borderline or inconsistent cases are routed to underwriters",
+      "source_hlj_id": "REQ 001-047",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_48-v1.0",
+      "domain": "fintech",
+      "summary": "Validate income data across documents and transactions",
+      "priority": "High",
+      "tags": [
+        "data_validation",
+        "income_crosscheck",
+        "document_analysis"
+      ],
+      "subdomain": "compliance",
+      "difficulty": 4,
+      "additionalNotes": "System compares submitted revenue vs. bank inflows for fraud detection",
+      "source_hlj_id": "REQ 001-048",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_49-v1.0",
+      "domain": "fintech",
+      "summary": "Offer secure data exports for auditors and regulators",
+      "priority": "Medium",
+      "tags": [
+        "regulatory_export",
+        "compliance",
+        "data_security"
+      ],
+      "subdomain": "reporting",
+      "difficulty": 2,
+      "additionalNotes": "Supports selective export with appropriate encryption and access control",
+      "source_hlj_id": "REQ 001-049",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_50-v1.0",
+      "domain": "fintech",
+      "summary": "Detect population drift in applicant financial profiles",
+      "priority": "Medium",
+      "tags": [
+        "data_drift",
+        "applicant_analysis",
+        "monitoring"
+      ],
+      "subdomain": "model_governance",
+      "difficulty": 4,
+      "additionalNotes": "origin: implied — Compares incoming applicants to model training set",
+      "source_hlj_id": "REQ 001-050",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_51-v1.0",
+      "domain": "fintech",
+      "summary": "Schedule periodic retraining of risk scoring models",
+      "priority": "Medium",
+      "tags": [
+        "model_retraining",
+        "scheduler",
+        "ml_pipeline"
+      ],
+      "subdomain": "continuous_learning",
+      "difficulty": 3,
+      "additionalNotes": "Supports quarterly or biannual updates using loan performance data",
+      "source_hlj_id": "REQ 001-051",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_52-v1.0",
+      "domain": "fintech",
+      "summary": "Display top risk indicators in dashboard summary",
+      "priority": "High",
+      "tags": [
+        "dashboard",
+        "risk_signals",
+        "summary_view"
+      ],
+      "subdomain": "ui_ux",
+      "difficulty": 2,
+      "additionalNotes": "Includes flags like low DSCR, high leverage, erratic cash flow",
+      "source_hlj_id": "REQ 001-052",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_53-v1.0",
+      "domain": "fintech",
+      "summary": "Use consistent adverse reason codes across the platform",
+      "priority": "Medium",
+      "tags": [
+        "reason_codes",
+        "compliance",
+        "standardization"
+      ],
+      "subdomain": "compliance",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied — Ensures all systems output same code set for declines",
+      "source_hlj_id": "REQ 001-053",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_54-v1.0",
+      "domain": "fintech",
+      "summary": "Link rule failures to human-readable policy descriptions",
+      "priority": "Medium",
+      "tags": [
+        "policy_explanation",
+        "rule_engine",
+        "user_clarity"
+      ],
+      "subdomain": "ui_ux",
+      "difficulty": 3,
+      "additionalNotes": "Maps technical rule violations to plain-language explanations",
+      "source_hlj_id": "REQ 001-054",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_55-v1.0",
+      "domain": "fintech",
+      "summary": "Restrict access to sensitive applicant fields via RBAC",
+      "priority": "High",
+      "tags": [
+        "access_control",
+        "field_level_security",
+        "rbac"
+      ],
+      "subdomain": "security",
+      "difficulty": 3,
+      "additionalNotes": "E.g., PII visible only to compliance or senior reviewers",
+      "source_hlj_id": "REQ 001-055",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_56-v1.0",
+      "domain": "fintech",
+      "summary": "Log all scoring model updates with timestamp and author",
+      "priority": "High",
+      "tags": [
+        "model_logging",
+        "change_tracking",
+        "compliance"
+      ],
+      "subdomain": "model_governance",
+      "difficulty": 2,
+      "additionalNotes": "Tracks changes to model logic, weightings, or assumptions",
+      "source_hlj_id": "REQ 001-056",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_57-v1.0",
+      "domain": "fintech",
+      "summary": "Store and retrieve credit decision history for each applicant",
+      "priority": "Medium",
+      "tags": [
+        "applicant_history",
+        "decision_archive",
+        "reusability"
+      ],
+      "subdomain": "data_management",
+      "difficulty": 3,
+      "additionalNotes": "origin: implied — Supports repeat borrowers and loan monitoring",
+      "source_hlj_id": "REQ 001-057",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_58-v1.0",
+      "domain": "fintech",
+      "summary": "Track model calibration over time for accuracy validation",
+      "priority": "Medium",
+      "tags": [
+        "calibration_tracking",
+        "model_validation",
+        "historical_analysis"
+      ],
+      "subdomain": "continuous_learning",
+      "difficulty": 3,
+      "additionalNotes": "origin: implied — Uses predicted vs. actual defaults for adjustment insights",
+      "source_hlj_id": "REQ 001-058",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_59-v1.0",
+      "domain": "fintech",
+      "summary": "Enable batch processing of high-volume loan applications",
+      "priority": "Medium",
+      "tags": [
+        "batch_processing",
+        "high_volume",
+        "scalability"
+      ],
+      "subdomain": "workflow",
+      "difficulty": 4,
+      "additionalNotes": "origin: implied — Required for national-scale SME programs",
+      "source_hlj_id": "REQ 001-059",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_60-v1.0",
+      "domain": "fintech",
+      "summary": "Support audit log filtering by user, event, and date",
+      "priority": "Medium",
+      "tags": [
+        "audit_filters",
+        "log_search",
+        "compliance"
+      ],
+      "subdomain": "compliance",
+      "difficulty": 3,
+      "additionalNotes": "origin: implied — Facilitates fast internal investigations and audits",
+      "source_hlj_id": "REQ 001-060",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_61-v1.0",
+      "domain": "fintech",
+      "summary": "Provide uptime SLA of at least 99.9%",
+      "priority": "High",
+      "tags": [
+        "sla",
+        "uptime",
+        "availability"
+      ],
+      "subdomain": "operations",
+      "difficulty": 2,
+      "additionalNotes": "Platform must minimize downtime and maintain business continuity",
+      "source_hlj_id": "REQ 001-061",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_62-v1.0",
+      "domain": "fintech",
+      "summary": "Implement disaster recovery with geo-redundant backups",
+      "priority": "High",
+      "tags": [
+        "disaster_recovery",
+        "backup",
+        "redundancy"
+      ],
+      "subdomain": "operations",
+      "difficulty": 3,
+      "additionalNotes": "Supports recovery from outages with minimal data loss",
+      "source_hlj_id": "REQ 001-062",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_63-v1.0",
+      "domain": "fintech",
+      "summary": "Support blue-green and rolling deployments",
+      "priority": "Medium",
+      "tags": [
+        "deployment_strategy",
+        "zero_downtime",
+        "release_management"
+      ],
+      "subdomain": "devops",
+      "difficulty": 3,
+      "additionalNotes": "origin: implied — Enables safe updates without interrupting active users",
+      "source_hlj_id": "REQ 001-063",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_64-v1.0",
+      "domain": "fintech",
+      "summary": "Monitor integration call success and failure rates",
+      "priority": "Medium",
+      "tags": [
+        "integration_monitoring",
+        "api_calls",
+        "reliability"
+      ],
+      "subdomain": "monitoring",
+      "difficulty": 3,
+      "additionalNotes": "Tracks success/failure of calls to Plaid, OCR engines, and others",
+      "source_hlj_id": "REQ 001-064",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_65-v1.0",
+      "domain": "fintech",
+      "summary": "Alert ops team on service degradation or failures",
+      "priority": "High",
+      "tags": [
+        "alerting",
+        "incident_response",
+        "system_health"
+      ],
+      "subdomain": "monitoring",
+      "difficulty": 2,
+      "additionalNotes": "Notifies staff via email or Slack when components fail or slow down",
+      "source_hlj_id": "REQ 001-065",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_66-v1.0",
+      "domain": "fintech",
+      "summary": "Enable graceful degradation for failed integrations",
+      "priority": "Medium",
+      "tags": [
+        "resilience",
+        "failover",
+        "user_fallback"
+      ],
+      "subdomain": "workflow",
+      "difficulty": 3,
+      "additionalNotes": "origin: implied — Fall back to manual uploads if API is unavailable",
+      "source_hlj_id": "REQ 001-066",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_67-v1.0",
+      "domain": "fintech",
+      "summary": "Support SOC 2 Type II compliance alignment",
+      "priority": "High",
+      "tags": [
+        "soc2",
+        "security_compliance",
+        "audit_ready"
+      ],
+      "subdomain": "security",
+      "difficulty": 4,
+      "additionalNotes": "Ensures platform security and availability meet enterprise requirements",
+      "source_hlj_id": "REQ 001-067",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_68-v1.0",
+      "domain": "fintech",
+      "summary": "Log model outcome variance between challenger and champion",
+      "priority": "Low",
+      "tags": [
+        "model_testing",
+        "variance_tracking",
+        "validation"
+      ],
+      "subdomain": "model_governance",
+      "difficulty": 3,
+      "additionalNotes": "origin: implied — Enables confidence in model switching decisions",
+      "source_hlj_id": "REQ 001-068",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_69-v1.0",
+      "domain": "fintech",
+      "summary": "Secure all user activity logs in append-only storage",
+      "priority": "High",
+      "tags": [
+        "immutability",
+        "log_integrity",
+        "security"
+      ],
+      "subdomain": "compliance",
+      "difficulty": 3,
+      "additionalNotes": "Prevents tampering with decision or user action records",
+      "source_hlj_id": "REQ 001-069",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_70-v1.0",
+      "domain": "fintech",
+      "summary": "Support ISO 27001 certification readiness",
+      "priority": "Medium",
+      "tags": [
+        "iso27001",
+        "security_framework",
+        "data_protection"
+      ],
+      "subdomain": "security",
+      "difficulty": 4,
+      "additionalNotes": "origin: implied — Indicates alignment with global security standards",
+      "source_hlj_id": "REQ 001-070",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_71-v1.0",
+      "domain": "fintech",
+      "summary": "Show summary of platform impact on loan turnaround time",
+      "priority": "Low",
+      "tags": [
+        "kpi",
+        "turnaround_metrics",
+        "performance"
+      ],
+      "subdomain": "reporting",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied — Highlights efficiency improvements in approvals",
+      "source_hlj_id": "REQ 001-071",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_72-v1.0",
+      "domain": "fintech",
+      "summary": "Simulate policy tweaks using recent data snapshots",
+      "priority": "Medium",
+      "tags": [
+        "simulation",
+        "policy_testing",
+        "decision_impact"
+      ],
+      "subdomain": "decision_management",
+      "difficulty": 3,
+      "additionalNotes": "origin: implied — What-if tools for impact analysis before rollout",
+      "source_hlj_id": "REQ 001-072",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_73-v1.0",
+      "domain": "fintech",
+      "summary": "Show flagged application trends by underwriter team",
+      "priority": "Low",
+      "tags": [
+        "team_metrics",
+        "application_flags",
+        "oversight"
+      ],
+      "subdomain": "reporting",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied — Helps managers identify outliers or inconsistencies",
+      "source_hlj_id": "REQ 001-073",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_74-v1.0",
+      "domain": "fintech",
+      "summary": "Provide versioned configuration changelog to auditors",
+      "priority": "Medium",
+      "tags": [
+        "configuration_audit",
+        "version_control",
+        "compliance"
+      ],
+      "subdomain": "compliance",
+      "difficulty": 3,
+      "additionalNotes": "origin: implied — Tracks changes to rules, thresholds, and policy logic",
+      "source_hlj_id": "REQ 001-074",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_75-v1.0",
+      "domain": "fintech",
+      "summary": "Restrict scoring model updates to authorized roles",
+      "priority": "High",
+      "tags": [
+        "role_permissions",
+        "model_update",
+        "access_control"
+      ],
+      "subdomain": "security",
+      "difficulty": 3,
+      "additionalNotes": "Prevents unvetted changes to core scoring logic",
+      "source_hlj_id": "REQ 001-075",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_76-v1.0",
+      "domain": "fintech",
+      "summary": "Export audit logs filtered by regulation or jurisdiction",
+      "priority": "Medium",
+      "tags": [
+        "jurisdiction_filter",
+        "compliance",
+        "audit_export"
+      ],
+      "subdomain": "compliance",
+      "difficulty": 3,
+      "additionalNotes": "origin: implied — Helps meet US vs. EU legal differences",
+      "source_hlj_id": "REQ 001-076",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_77-v1.0",
+      "domain": "fintech",
+      "summary": "Enable tagging of model inputs as sensitive or regulated",
+      "priority": "Medium",
+      "tags": [
+        "data_classification",
+        "regulatory_tagging",
+        "sensitive_fields"
+      ],
+      "subdomain": "security",
+      "difficulty": 3,
+      "additionalNotes": "origin: implied — Differentiates personal vs. business vs. regulated fields",
+      "source_hlj_id": "REQ 001-077",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_78-v1.0",
+      "domain": "fintech",
+      "summary": "Provide feedback mechanism for applicants disputing decisions",
+      "priority": "Medium",
+      "tags": [
+        "appeal_process",
+        "applicant_feedback",
+        "gdpr"
+      ],
+      "subdomain": "workflow",
+      "difficulty": 3,
+      "additionalNotes": "Supports GDPR Article 22 and human review requests",
+      "source_hlj_id": "REQ 001-078",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_79-v1.0",
+      "domain": "fintech",
+      "summary": "Detect bias in model outcomes across demographic segments",
+      "priority": "High",
+      "tags": [
+        "bias_detection",
+        "fair_lending",
+        "model_testing"
+      ],
+      "subdomain": "compliance",
+      "difficulty": 4,
+      "additionalNotes": "Analyzes approval disparities using protected attributes or proxies",
+      "source_hlj_id": "REQ 001-079",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_80-v1.0",
+      "domain": "fintech",
+      "summary": "Search audit logs by rule ID or scoring version",
+      "priority": "Low",
+      "tags": [
+        "log_search",
+        "rule_tracking",
+        "version_filtering"
+      ],
+      "subdomain": "compliance",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied — Supports forensic review of decisions and overrides",
+      "source_hlj_id": "REQ 001-080",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_81-v1.0",
+      "domain": "fintech",
+      "summary": "Allow export of declined applications with attached reasons",
+      "priority": "Medium",
+      "tags": [
+        "decline_export",
+        "reason_logging",
+        "reporting"
+      ],
+      "subdomain": "reporting",
+      "difficulty": 2,
+      "additionalNotes": "Supports compliance and model refinement",
+      "source_hlj_id": "REQ 001-081",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_82-v1.0",
+      "domain": "fintech",
+      "summary": "Provide feedback flow for applicants disputing automated decisions",
+      "priority": "Medium",
+      "tags": [
+        "appeal_process",
+        "human_review",
+        "gdpr_rights"
+      ],
+      "subdomain": "workflow",
+      "difficulty": 3,
+      "additionalNotes": "Supports GDPR Article 22 by allowing appeals and manual reviews of automated decisions",
+      "source_hlj_id": "REQ 001-082",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_83-v1.0",
+      "domain": "fintech",
+      "summary": "Use monotonic constraints in models to ensure logical behavior",
+      "priority": "Medium",
+      "tags": [
+        "monotonic_constraints",
+        "fairness",
+        "model_explainability"
+      ],
+      "subdomain": "model_governance",
+      "difficulty": 4,
+      "additionalNotes": "Constrains model output to align with domain knowledge and avoid perverse or biased feature interactions",
+      "source_hlj_id": "REQ 001-083",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_84-v1.0",
+      "domain": "fintech",
+      "summary": "Flag fields in application for underwriter confirmation",
+      "priority": "Low",
+      "tags": [
+        "field_validation",
+        "underwriter_workflow",
+        "dashboard_flags"
+      ],
+      "subdomain": "ui_ux",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied — e.g., OCR uncertainty prompts human double-check",
+      "source_hlj_id": "REQ 001-084",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_85-v1.0",
+      "domain": "fintech",
+      "summary": "Summarize portfolio risk trends over time",
+      "priority": "Medium",
+      "tags": [
+        "risk_trends",
+        "portfolio_view",
+        "reporting"
+      ],
+      "subdomain": "reporting",
+      "difficulty": 3,
+      "additionalNotes": "origin: implied — Shows changes in credit scores, approval rates, and risk levels",
+      "source_hlj_id": "REQ 001-085",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_86-v1.0",
+      "domain": "fintech",
+      "summary": "Identify inconsistent patterns between submitted docs and transactions",
+      "priority": "High",
+      "tags": [
+        "data_inconsistency",
+        "fraud_detection",
+        "cross_validation"
+      ],
+      "subdomain": "compliance",
+      "difficulty": 4,
+      "additionalNotes": "Flags mismatches for human review to prevent fraud",
+      "source_hlj_id": "REQ 001-086",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_87-v1.0",
+      "domain": "fintech",
+      "summary": "Label application anomalies for downstream analysis",
+      "priority": "Low",
+      "tags": [
+        "data_labeling",
+        "anomaly_tracking",
+        "model_training"
+      ],
+      "subdomain": "data_management",
+      "difficulty": 3,
+      "additionalNotes": "origin: implied — Used for retraining or alert systems",
+      "source_hlj_id": "REQ 001-087",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_88-v1.0",
+      "domain": "fintech",
+      "summary": "Tag applications with confidence scores",
+      "priority": "Low",
+      "tags": [
+        "confidence_score",
+        "uncertainty",
+        "model_output"
+      ],
+      "subdomain": "model_explainability",
+      "difficulty": 3,
+      "additionalNotes": "origin: implied — Underwriters see score certainty for further validation",
+      "source_hlj_id": "REQ 001-088",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_89-v1.0",
+      "domain": "fintech",
+      "summary": "Automatically route duplicate applications for review",
+      "priority": "Medium",
+      "tags": [
+        "deduplication",
+        "workflow_routing",
+        "application_tracking"
+      ],
+      "subdomain": "workflow",
+      "difficulty": 3,
+      "additionalNotes": "origin: implied — Detect and consolidate resubmissions or repeated attempts",
+      "source_hlj_id": "REQ 001-089",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_90-v1.0",
+      "domain": "fintech",
+      "summary": "Validate policy changes before full deployment",
+      "priority": "Medium",
+      "tags": [
+        "policy_testing",
+        "validation",
+        "uat"
+      ],
+      "subdomain": "model_governance",
+      "difficulty": 3,
+      "additionalNotes": "origin: implied — New thresholds or rules are tested in sandbox or shadow mode",
+      "source_hlj_id": "REQ 001-090",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_91-v1.0",
+      "domain": "fintech",
+      "summary": "Limit auto-approval to predefined loan size thresholds",
+      "priority": "Medium",
+      "tags": [
+        "loan_thresholds",
+        "auto_approval",
+        "risk_controls"
+      ],
+      "subdomain": "decision_management",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied — Ensures large loans always require manual or managerial review",
+      "source_hlj_id": "REQ 001-091",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_92-v1.0",
+      "domain": "fintech",
+      "summary": "Support multilingual notices for global compliance",
+      "priority": "Low",
+      "tags": [
+        "multilingual",
+        "gdpr",
+        "applicant_notifications"
+      ],
+      "subdomain": "compliance",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied — Enables adverse action letters and summaries in multiple languages",
+      "source_hlj_id": "REQ 001-092",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_93-v1.0",
+      "domain": "fintech",
+      "summary": "Track user adoption metrics across underwriter teams",
+      "priority": "Low",
+      "tags": [
+        "usage_tracking",
+        "team_performance",
+        "kpi"
+      ],
+      "subdomain": "reporting",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied — Measures how effectively teams are using the platform features",
+      "source_hlj_id": "REQ 001-093",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_94-v1.0",
+      "domain": "fintech",
+      "summary": "Display scoring logic summary to authorized users",
+      "priority": "Medium",
+      "tags": [
+        "model_summary",
+        "score_explanation",
+        "access_control"
+      ],
+      "subdomain": "model_explainability",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied — Human-readable logic overview accessible to auditors or managers",
+      "source_hlj_id": "REQ 001-094",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_95-v1.0",
+      "domain": "fintech",
+      "summary": "Capture review timestamps at each approval stage",
+      "priority": "Medium",
+      "tags": [
+        "workflow_tracking",
+        "timestamps",
+        "approval_flow"
+      ],
+      "subdomain": "workflow",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied — Allows SLA tracking and end-to-end approval timing analytics",
+      "source_hlj_id": "REQ 001-095",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_96-v1.0",
+      "domain": "fintech",
+      "summary": "Support fallback decision flow when model confidence is low",
+      "priority": "Low",
+      "tags": [
+        "fallback_logic",
+        "uncertainty_handling",
+        "decision_routing"
+      ],
+      "subdomain": "decision_management",
+      "difficulty": 3,
+      "additionalNotes": "origin: implied — Automatically reroutes uncertain cases to manual review",
+      "source_hlj_id": "REQ 001-096",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_97-v1.0",
+      "domain": "fintech",
+      "summary": "Label and log system-generated comments for decisions",
+      "priority": "Low",
+      "tags": [
+        "auto_comments",
+        "logging",
+        "reason_codes"
+      ],
+      "subdomain": "ui_ux",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied — Auto-populated summaries saved alongside scores and outcomes",
+      "source_hlj_id": "REQ 001-097",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_98-v1.0",
+      "domain": "fintech",
+      "summary": "Show compliance coverage checklist in admin dashboard",
+      "priority": "Low",
+      "tags": [
+        "compliance_summary",
+        "admin_ui",
+        "checklist"
+      ],
+      "subdomain": "compliance",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied — Helps teams validate configuration against regulatory frameworks",
+      "source_hlj_id": "REQ 001-098",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_99-v1.0",
+      "domain": "fintech",
+      "summary": "Restrict export access based on data sensitivity level",
+      "priority": "Medium",
+      "tags": [
+        "data_export",
+        "sensitivity_levels",
+        "role_based_access"
+      ],
+      "subdomain": "security",
+      "difficulty": 3,
+      "additionalNotes": "origin: implied — Ensures only authorized users can export sensitive or PII data",
+      "source_hlj_id": "REQ 001-099",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_100-v1.0",
+      "domain": "fintech",
+      "summary": "Support applicant-facing score explanations if needed",
+      "priority": "Medium",
+      "tags": [
+        "applicant_view",
+        "explainability",
+        "gdpr"
+      ],
+      "subdomain": "compliance",
+      "difficulty": 3,
+      "additionalNotes": "origin: implied — Enables GDPR-compliant disclosures when applicants request reasons",
+      "source_hlj_id": "REQ 001-100",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_101-v1.0",
+      "domain": "fintech",
+      "summary": "Enable search by business ID or tax number in dashboard",
+      "priority": "Low",
+      "tags": [
+        "search",
+        "business_id",
+        "ui_dashboard"
+      ],
+      "subdomain": "ui_ux",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied — Helps underwriters quickly locate applicants",
+      "source_hlj_id": "REQ 001-101",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_102-v1.0",
+      "domain": "fintech",
+      "summary": "Allow applicants to update or supplement documents post-submission",
+      "priority": "Low",
+      "tags": [
+        "document_upload",
+        "applicant_portal",
+        "revision"
+      ],
+      "subdomain": "workflow",
+      "difficulty": 3,
+      "additionalNotes": "origin: implied — Enables handling of incomplete or corrected submissions",
+      "source_hlj_id": "REQ 001-102",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_103-v1.0",
+      "domain": "fintech",
+      "summary": "Enable role-specific notifications for status changes",
+      "priority": "Low",
+      "tags": [
+        "notifications",
+        "role_routing",
+        "workflow"
+      ],
+      "subdomain": "workflow",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied — E.g., notify credit manager if an override is pending",
+      "source_hlj_id": "REQ 001-103",
+      "domain_id": "P-FT-004"
+    },
+    {
+      "id": "REQ-013-HLJ-Chunk_1-Item_104-v1.0",
+      "domain": "fintech",
+      "summary": "Auto-tag applicants by region for regulatory segmentation",
+      "priority": "Low",
+      "tags": [
+        "geo_tagging",
+        "regulatory_filtering",
+        "applicant_segmentation"
+      ],
+      "subdomain": "compliance",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied — Enables data segregation or rule enforcement by region",
+      "source_hlj_id": "REQ 001-104",
+      "domain_id": "P-FT-004"
+    }
+  ]
+}

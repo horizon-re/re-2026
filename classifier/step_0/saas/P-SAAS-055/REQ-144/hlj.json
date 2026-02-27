@@ -1,0 +1,79 @@
+{
+  "doc_id": "5bba2f51-a6a2-5101-a0d3-41387d1b168d",
+  "req_key": "saas::P-SAAS-055::REQ-144",
+  "req_id": "REQ-144",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-055",
+  "source": {
+    "raw_path": "02_raw_requirements/saas/P-SAAS-055/req-144_raw.txt",
+    "refined_path": "03_refined_json_normalized/saas/P-SAAS-055/req-144_refined.json",
+    "origin": "both"
+  },
+  "text": "The system shall support logging events in Mars Coordinated Time (MTC), such as \"Booting in MARS-TZ (sol 0)\", by mapping MTC to its corresponding Earth UTC offset using the `martian_tz_map` table; if no valid mapping exists, the system shall raise an alert. All extraterrestrial MTC-based log entries shall be stored in the `logs_mars` partition with a strict retention policy of seven Earth days. Additionally, the system shall integrate with Grafana to include a dashboard panel labeled “Mars Sol Lag” to visualize time synchronization discrepancies between Earth UTC and MTC.",
+  "structured_data": [
+    {
+      "id": "REQ-144-HLJ-Chunk_1-Item_1-v1.0",
+      "domain": "unknown",
+      "summary": "Support MTC log events like 'Booting in MARS-TZ'",
+      "priority": "High",
+      "tags": [
+        "mtc_logging",
+        "extraterrestrial",
+        "event_tracking"
+      ],
+      "subdomain": "logging",
+      "difficulty": 2,
+      "additionalNotes": "Enable system to parse and log events in Mars Coordinated Time (MTC) format.",
+      "source_hlj_id": "REQ 001-001",
+      "domain_id": "P-SAAS-055"
+    },
+    {
+      "id": "REQ-144-HLJ-Chunk_1-Item_2-v1.0",
+      "domain": "unknown",
+      "summary": "Map MTC to Earth UTC via martian_tz_map table",
+      "priority": "High",
+      "tags": [
+        "time_mapping",
+        "utc_conversion",
+        "mars_time"
+      ],
+      "subdomain": "time_synchronization",
+      "difficulty": 3,
+      "additionalNotes": "Use martian_tz_map for translating MTC values to Earth-based UTC offsets.",
+      "source_hlj_id": "REQ 001-002",
+      "domain_id": "P-SAAS-055"
+    },
+    {
+      "id": "REQ-144-HLJ-Chunk_1-Item_3-v1.0",
+      "domain": "unknown",
+      "summary": "Store MTC logs in logs_mars with 7-day retention",
+      "priority": "Medium",
+      "tags": [
+        "log_partitioning",
+        "data_retention",
+        "mars_data"
+      ],
+      "subdomain": "data_storage",
+      "difficulty": 2,
+      "additionalNotes": "Logs with MTC timestamps must be stored in a dedicated partition with limited retention.",
+      "source_hlj_id": "REQ 001-003",
+      "domain_id": "P-SAAS-055"
+    },
+    {
+      "id": "REQ-144-HLJ-Chunk_1-Item_4-v1.0",
+      "domain": "unknown",
+      "summary": "Add Grafana panel 'Mars Sol Lag' for time sync",
+      "priority": "Medium",
+      "tags": [
+        "grafana",
+        "dashboard",
+        "time_lag"
+      ],
+      "subdomain": "observability",
+      "difficulty": 2,
+      "additionalNotes": "Add a visualization to track and compare Mars Sol time vs Earth UTC.",
+      "source_hlj_id": "REQ 001-004",
+      "domain_id": "P-SAAS-055"
+    }
+  ]
+}

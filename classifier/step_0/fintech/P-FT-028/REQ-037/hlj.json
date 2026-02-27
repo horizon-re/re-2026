@@ -1,0 +1,14 @@
+{
+  "doc_id": "15af87a2-03b1-545e-a3ea-3d04a16fa26b",
+  "req_key": "fintech::P-FT-028::REQ-037",
+  "req_id": "REQ-037",
+  "domain": "fintech",
+  "prompt_id": "P-FT-028",
+  "source": {
+    "raw_path": "02_raw_requirements/fintech/P-FT-028/req-037_raw.txt",
+    "refined_path": null,
+    "origin": "raw_only"
+  },
+  "text": "For card issuance, Pantone 419 C has been designated as the approved \"midnight-black\" anodized metal finish for the card. Embossing depth must not exceed 0.25 mm to preserve NFC antenna functionality. All marketing renders must be updated within 48 hours of any implementation changes. Supply-chain feasibility has been confirmed with manufacturing vendor LuxMetal GmbH.",
+  "structured_data": null
+}

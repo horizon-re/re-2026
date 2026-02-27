@@ -1,0 +1,159 @@
+{
+  "doc_id": "54f0776a-affa-5dbd-bd3f-7a84e0c4eec9",
+  "req_key": "saas::P-SAAS-066::REQ-155",
+  "req_id": "REQ-155",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-066",
+  "source": {
+    "raw_path": "02_raw_requirements/saas/P-SAAS-066/req-155_raw.txt",
+    "refined_path": "03_refined_json_normalized/saas/P-SAAS-066/req-155_refined.json",
+    "origin": "both"
+  },
+  "text": "**Data Normalization Brief: Handling Inconsistent Date Formats and PII Exposure**\n\n**Problem**  \nA recently leaked CSV dataset contains sensitive personal data, including Social Security Numbers (SSNs) and full addresses, alongside non-standard date formats. Dates are recorded in two inconsistent formats: `YYYYDDMM` and Julian day format, with several instances of misalignment between the two. This inconsistency complicates parsing and creates risk in downstream processing. Moreover, the exposure of PII in its raw form violates data protection policies and compliance requirements.\n\n**Normalization Steps**  \nTo establish consistency, all date entries will be normalized to the ISO 8601 format (`YYYY-MM-DD`). Custom parsers will be implemented to correctly handle the reversed `YYYYDDMM` structure and convert Julian dates while validating parity between both formats. A null-safe parsing strategy will be applied to skip and flag corrupt or missing entries without breaking the pipeline. Each transformation will include unit verification to prevent incorrect mappings, especially across leap years.\n\n**PII Redaction**  \nTo mitigate risk, SSNs will be redacted using SHA-256 hashing with a unique, securely stored salt to preserve integrity without compromising identity. Address fields will be entirely dropped from the dataset, as they are not essential for the intended analysis.\n\n**Validation & Logging**  \nA dedicated unit test suite will cover edge cases, including 366-day leap years and Julian-to-Gregorian mismatches. All rejected or unparseable entries will be logged to a separate file, `csv_date_errors`, enabling auditability and facilitating manual review without polluting the clean dataset.",
+  "structured_data": [
+    {
+      "id": "REQ-155-HLJ-Chunk_1-Item_1-v1.0",
+      "domain": "unknown",
+      "summary": "Normalize YYYYDDMM to ISO 8601 format",
+      "priority": "High",
+      "tags": [
+        "date_format",
+        "data_normalization",
+        "iso_8601"
+      ],
+      "subdomain": "data_cleaning",
+      "difficulty": 2,
+      "additionalNotes": "Convert non-standard date format to ISO 8601 for consistency",
+      "source_hlj_id": "REQ 001-001",
+      "domain_id": "P-SAAS-066"
+    },
+    {
+      "id": "REQ-155-HLJ-Chunk_1-Item_2-v1.0",
+      "domain": "unknown",
+      "summary": "Convert Julian day format to ISO 8601",
+      "priority": "High",
+      "tags": [
+        "julian_date",
+        "iso_conversion",
+        "date_format"
+      ],
+      "subdomain": "data_cleaning",
+      "difficulty": 3,
+      "additionalNotes": "Julian dates must be accurately mapped to ISO standard",
+      "source_hlj_id": "REQ 001-002",
+      "domain_id": "P-SAAS-066"
+    },
+    {
+      "id": "REQ-155-HLJ-Chunk_1-Item_3-v1.0",
+      "domain": "unknown",
+      "summary": "Verify parity between date formats",
+      "priority": "Medium",
+      "tags": [
+        "date_consistency",
+        "validation",
+        "data_integrity"
+      ],
+      "subdomain": "data_validation",
+      "difficulty": 3,
+      "additionalNotes": "Cross-check Julian and YYYYDDMM formats to ensure alignment",
+      "source_hlj_id": "REQ 001-003",
+      "domain_id": "P-SAAS-066"
+    },
+    {
+      "id": "REQ-155-HLJ-Chunk_1-Item_4-v1.0",
+      "domain": "unknown",
+      "summary": "Implement null-safe parsing for date fields",
+      "priority": "Medium",
+      "tags": [
+        "error_handling",
+        "null_safe",
+        "parsing"
+      ],
+      "subdomain": "data_processing",
+      "difficulty": 2,
+      "additionalNotes": "Ensure parser does not fail on null or corrupt inputs",
+      "source_hlj_id": "REQ 001-004",
+      "domain_id": "P-SAAS-066"
+    },
+    {
+      "id": "REQ-155-HLJ-Chunk_1-Item_5-v1.0",
+      "domain": "unknown",
+      "summary": "Hash SSNs using SHA-256 with salt",
+      "priority": "High",
+      "tags": [
+        "pii_protection",
+        "hashing",
+        "ssn"
+      ],
+      "subdomain": "security",
+      "difficulty": 4,
+      "additionalNotes": "Protect PII by securely hashing SSNs with a unique salt",
+      "source_hlj_id": "REQ 001-005",
+      "domain_id": "P-SAAS-066"
+    },
+    {
+      "id": "REQ-155-HLJ-Chunk_1-Item_6-v1.0",
+      "domain": "unknown",
+      "summary": "Drop address fields from dataset",
+      "priority": "High",
+      "tags": [
+        "pii_removal",
+        "address",
+        "data_minimization"
+      ],
+      "subdomain": "security",
+      "difficulty": 1,
+      "additionalNotes": "Address data is non-essential and must be excluded for compliance",
+      "source_hlj_id": "REQ 001-006",
+      "domain_id": "P-SAAS-066"
+    },
+    {
+      "id": "REQ-155-HLJ-Chunk_1-Item_7-v1.0",
+      "domain": "unknown",
+      "summary": "Log unparseable entries to csv_date_errors file",
+      "priority": "Medium",
+      "tags": [
+        "logging",
+        "data_quality",
+        "error_tracking"
+      ],
+      "subdomain": "data_validation",
+      "difficulty": 2,
+      "additionalNotes": "Rejected rows must be logged for auditing and troubleshooting",
+      "source_hlj_id": "REQ 001-007",
+      "domain_id": "P-SAAS-066"
+    },
+    {
+      "id": "REQ-155-HLJ-Chunk_1-Item_8-v1.0",
+      "domain": "unknown",
+      "summary": "Create unit tests for 366-day leap years",
+      "priority": "Medium",
+      "tags": [
+        "unit_testing",
+        "leap_year",
+        "date_logic"
+      ],
+      "subdomain": "testing",
+      "difficulty": 3,
+      "additionalNotes": "Leap year logic must be covered to ensure correct date mapping",
+      "source_hlj_id": "REQ 001-008",
+      "domain_id": "P-SAAS-066"
+    },
+    {
+      "id": "REQ-155-HLJ-Chunk_1-Item_9-v1.0",
+      "domain": "unknown",
+      "summary": "Validate Julian-to-Gregorian conversion logic",
+      "priority": "Low",
+      "tags": [
+        "date_conversion",
+        "julian",
+        "gregorian"
+      ],
+      "subdomain": "data_validation",
+      "difficulty": 3,
+      "additionalNotes": "origin: implied Ensure accurate conversion from Julian to Gregorian calendar",
+      "source_hlj_id": "REQ 001-009",
+      "domain_id": "P-SAAS-066"
+    }
+  ]
+}

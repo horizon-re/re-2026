@@ -1,0 +1,181 @@
+{
+  "doc_id": "7b325d24-7f7e-55a2-8bba-ab010bbb5209",
+  "req_key": "fintech::P-FT-039::REQ-048",
+  "req_id": "REQ-048",
+  "domain": "fintech",
+  "prompt_id": "P-FT-039",
+  "source": {
+    "raw_path": "02_raw_requirements/fintech/P-FT-039/req-048_raw.txt",
+    "refined_path": "03_refined_json_normalized/fintech/P-FT-039/req-048_refined.json",
+    "origin": "both"
+  },
+  "text": "**Objective:**  \nThe goal is to implement an enhanced fraud detection threshold to improve accuracy and reduce false positives in transaction monitoring, maintaining a false-positive target of 3%. This adjustment leverages updated risk assessment scores (`risk_threshold_v2`) to balance fraud prevention effectiveness with customer impact.\n\n**Threshold Matrix:**  \n\n| Region | Threshold | False Positive Target |\n|--------|-----------|-----------------------|\n| EU     | 0.82      | 3%                    |\n| US     | 0.78      | 3%                    |\n\n**Rollout:**  \nDeployment will be controlled via the feature flag `risk_threshold_v2`. The rollout will follow a staged deployment strategy, starting at 10% of the user base, scaling progressively to 100% over five days as follows:\n\n- **Day 1:** 10%  \n- **Day 2:** 25%  \n- **Day 3:** 50%  \n- **Day 4:** 75%  \n- **Day 5:** 100%  \n\nDaily monitoring will ensure stability and threshold efficacy before proceeding to each subsequent phase.\n\n**Audit:**  \nAll manual overrides of fraud detection scores or threshold adjustments must be recorded systematically. Entries must be captured in the dedicated `fraud_score_audit` logging table, ensuring traceability and audit compliance. Logged data should include transaction identifiers, overridden values, original and adjusted scores, timestamp, and the operator's user ID. Auditing will be continuously monitored to validate policy adherence and accuracy.",
+  "structured_data": [
+    {
+      "id": "REQ-048-HLJ-Chunk_1-Item_1-v1.0",
+      "domain": "fintech",
+      "summary": "Implement enhanced fraud detection threshold",
+      "priority": "High",
+      "tags": [
+        "fraud_detection",
+        "accuracy_improvement"
+      ],
+      "subdomain": "transaction_monitoring",
+      "difficulty": 4,
+      "additionalNotes": "Use updated risk_threshold_v2 scores",
+      "source_hlj_id": "REQ 001-001",
+      "domain_id": "P-FT-039"
+    },
+    {
+      "id": "REQ-048-HLJ-Chunk_1-Item_2-v1.0",
+      "domain": "fintech",
+      "summary": "Maintain false positive rate at 3%",
+      "priority": "High",
+      "tags": [
+        "fraud_detection",
+        "false_positive_rate"
+      ],
+      "subdomain": "risk_management",
+      "difficulty": 3,
+      "additionalNotes": "Explicit target across all regions",
+      "source_hlj_id": "REQ 001-002",
+      "domain_id": "P-FT-039"
+    },
+    {
+      "id": "REQ-048-HLJ-Chunk_1-Item_3-v1.0",
+      "domain": "fintech",
+      "summary": "Apply fraud threshold 0.82 in EU region",
+      "priority": "High",
+      "tags": [
+        "region_specific",
+        "threshold_management"
+      ],
+      "subdomain": "transaction_monitoring",
+      "difficulty": 2,
+      "additionalNotes": "Threshold value defined explicitly for EU",
+      "source_hlj_id": "REQ 001-003",
+      "domain_id": "P-FT-039"
+    },
+    {
+      "id": "REQ-048-HLJ-Chunk_1-Item_4-v1.0",
+      "domain": "fintech",
+      "summary": "Apply fraud threshold 0.78 in US region",
+      "priority": "High",
+      "tags": [
+        "region_specific",
+        "threshold_management"
+      ],
+      "subdomain": "transaction_monitoring",
+      "difficulty": 2,
+      "additionalNotes": "Threshold value defined explicitly for US",
+      "source_hlj_id": "REQ 001-004",
+      "domain_id": "P-FT-039"
+    },
+    {
+      "id": "REQ-048-HLJ-Chunk_1-Item_5-v1.0",
+      "domain": "fintech",
+      "summary": "Use feature flag risk_threshold_v2",
+      "priority": "Medium",
+      "tags": [
+        "feature_flag",
+        "controlled_rollout"
+      ],
+      "subdomain": "deployment",
+      "difficulty": 2,
+      "additionalNotes": "Manage staged rollout explicitly via feature flag",
+      "source_hlj_id": "REQ 001-005",
+      "domain_id": "P-FT-039"
+    },
+    {
+      "id": "REQ-048-HLJ-Chunk_1-Item_6-v1.0",
+      "domain": "fintech",
+      "summary": "Deploy incrementally from 10% to 100%",
+      "priority": "Medium",
+      "tags": [
+        "rollout_plan",
+        "incremental_deployment"
+      ],
+      "subdomain": "deployment",
+      "difficulty": 3,
+      "additionalNotes": "Staged rollout over 5-day period",
+      "source_hlj_id": "REQ 001-006",
+      "domain_id": "P-FT-039"
+    },
+    {
+      "id": "REQ-048-HLJ-Chunk_1-Item_7-v1.0",
+      "domain": "fintech",
+      "summary": "Monitor daily during incremental rollout",
+      "priority": "Medium",
+      "tags": [
+        "monitoring",
+        "stability_check"
+      ],
+      "subdomain": "operations",
+      "difficulty": 3,
+      "additionalNotes": "Ensure stability and efficacy at each stage",
+      "source_hlj_id": "REQ 001-007",
+      "domain_id": "P-FT-039"
+    },
+    {
+      "id": "REQ-048-HLJ-Chunk_1-Item_8-v1.0",
+      "domain": "fintech",
+      "summary": "Log manual overrides in audit table",
+      "priority": "High",
+      "tags": [
+        "auditing",
+        "traceability",
+        "compliance"
+      ],
+      "subdomain": "audit_logging",
+      "difficulty": 2,
+      "additionalNotes": "Overrides logged in fraud_score_audit",
+      "source_hlj_id": "REQ 001-008",
+      "domain_id": "P-FT-039"
+    },
+    {
+      "id": "REQ-048-HLJ-Chunk_1-Item_9-v1.0",
+      "domain": "fintech",
+      "summary": "Record transaction identifiers in logs",
+      "priority": "Medium",
+      "tags": [
+        "audit_logging",
+        "data_capture"
+      ],
+      "subdomain": "audit_logging",
+      "difficulty": 1,
+      "additionalNotes": "Explicitly log transaction IDs for traceability",
+      "source_hlj_id": "REQ 001-009",
+      "domain_id": "P-FT-039"
+    },
+    {
+      "id": "REQ-048-HLJ-Chunk_1-Item_10-v1.0",
+      "domain": "fintech",
+      "summary": "Record original and adjusted fraud scores",
+      "priority": "Medium",
+      "tags": [
+        "audit_logging",
+        "data_capture"
+      ],
+      "subdomain": "audit_logging",
+      "difficulty": 1,
+      "additionalNotes": "Log both original and new scores explicitly",
+      "source_hlj_id": "REQ 001-010",
+      "domain_id": "P-FT-039"
+    },
+    {
+      "id": "REQ-048-HLJ-Chunk_1-Item_11-v1.0",
+      "domain": "fintech",
+      "summary": "Record operator user ID on overrides",
+      "priority": "Medium",
+      "tags": [
+        "audit_logging",
+        "user_tracking"
+      ],
+      "subdomain": "audit_logging",
+      "difficulty": 1,
+      "additionalNotes": "Explicitly log user IDs of operators performing overrides",
+      "source_hlj_id": "REQ 001-011",
+      "domain_id": "P-FT-039"
+    }
+  ]
+}

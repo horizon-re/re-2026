@@ -1,0 +1,111 @@
+{
+  "doc_id": "62d04eb9-d095-5ed9-96f7-e611e013ca3a",
+  "req_key": "saas::P-SAAS-039::REQ-128",
+  "req_id": "REQ-128",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-039",
+  "source": {
+    "raw_path": "02_raw_requirements/saas/P-SAAS-039/req-128_raw.txt",
+    "refined_path": "03_refined_json_normalized/saas/P-SAAS-039/req-128_refined.json",
+    "origin": "both"
+  },
+  "text": "Please implement exponential backoff logic (1s, 2s, 4s, up to 5 attempts) for all failed payment webhook deliveries. Each retry must verify the HMAC-SHA256 signature header to ensure authenticity before processing. Every attempt, regardless of outcome, should be logged in the webhook_retry_history table with the status (success/failure) and corresponding response code. Additionally, the delivery process must meet an SLA of achieving successful delivery within 2 minutes at the 95th percentile (P95). Kindly provide the expected Go-live date for this change and share a testing sandbox URL so we can validate the implementation before launch. Thank you!",
+  "structured_data": [
+    {
+      "id": "REQ-128-HLJ-Chunk_1-Item_1-v1.0",
+      "domain": "fintech",
+      "summary": "Implement exponential backoff for failed webhook deliveries",
+      "priority": "High",
+      "tags": [
+        "webhook_delivery",
+        "exponential_backoff",
+        "retry_logic"
+      ],
+      "subdomain": "payment_processing",
+      "difficulty": 3,
+      "additionalNotes": "Retry logic: 1s, 2s, 4s delays, maximum 5 attempts.",
+      "source_hlj_id": "REQ 001-001",
+      "domain_id": "P-SAAS-039"
+    },
+    {
+      "id": "REQ-128-HLJ-Chunk_1-Item_2-v1.0",
+      "domain": "fintech",
+      "summary": "Verify HMAC-SHA256 signature header on each retry",
+      "priority": "High",
+      "tags": [
+        "security",
+        "signature_verification",
+        "webhook_authentication"
+      ],
+      "subdomain": "payment_processing",
+      "difficulty": 4,
+      "additionalNotes": "Each retry must validate HMAC-SHA256 signature before processing.",
+      "source_hlj_id": "REQ 001-002",
+      "domain_id": "P-SAAS-039"
+    },
+    {
+      "id": "REQ-128-HLJ-Chunk_1-Item_3-v1.0",
+      "domain": "fintech",
+      "summary": "Log each retry attempt to webhook_retry_history",
+      "priority": "High",
+      "tags": [
+        "logging",
+        "retry_tracking",
+        "webhook_monitoring"
+      ],
+      "subdomain": "payment_processing",
+      "difficulty": 2,
+      "additionalNotes": "Log status and response code for every webhook retry.",
+      "source_hlj_id": "REQ 001-003",
+      "domain_id": "P-SAAS-039"
+    },
+    {
+      "id": "REQ-128-HLJ-Chunk_1-Item_4-v1.0",
+      "domain": "fintech",
+      "summary": "Meet delivery SLA of ≤ 2 minutes P95",
+      "priority": "High",
+      "tags": [
+        "sla_compliance",
+        "performance",
+        "latency"
+      ],
+      "subdomain": "payment_processing",
+      "difficulty": 4,
+      "additionalNotes": "Webhook delivery must achieve 95th percentile within 2 minutes.",
+      "source_hlj_id": "REQ 001-004",
+      "domain_id": "P-SAAS-039"
+    },
+    {
+      "id": "REQ-128-HLJ-Chunk_1-Item_5-v1.0",
+      "domain": "fintech",
+      "summary": "Provide Go-live date for deployment",
+      "priority": "Medium",
+      "tags": [
+        "deployment",
+        "timeline",
+        "go_live"
+      ],
+      "subdomain": "payment_processing",
+      "difficulty": 1,
+      "additionalNotes": "origin: implied — Deployment schedule confirmation requested.",
+      "source_hlj_id": "REQ 001-005",
+      "domain_id": "P-SAAS-039"
+    },
+    {
+      "id": "REQ-128-HLJ-Chunk_1-Item_6-v1.0",
+      "domain": "fintech",
+      "summary": "Share testing sandbox URL for validation",
+      "priority": "Medium",
+      "tags": [
+        "testing",
+        "sandbox",
+        "validation"
+      ],
+      "subdomain": "payment_processing",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied — Sandbox access needed for validation before go-live.",
+      "source_hlj_id": "REQ 001-006",
+      "domain_id": "P-SAAS-039"
+    }
+  ]
+}

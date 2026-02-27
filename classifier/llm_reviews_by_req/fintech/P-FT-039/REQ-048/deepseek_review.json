@@ -1,0 +1,129 @@
+{
+  "req_id": "REQ-048",
+  "doc_id": "7b325d24-7f7e-55a2-8bba-ab010bbb5209",
+  "domain": "fintech",
+  "prompt_id": "P-FT-039",
+  "model": "deepseek-r1:7b",
+  "review_timestamp": "2026-01-20T22:36:18.363369+00:00",
+  "counts": {
+    "total": 11,
+    "llm_pos": 6,
+    "pipe_pos": 6,
+    "llm_neg": 5,
+    "flip_pos_to_neg": 1,
+    "pipe_neg": 5,
+    "flip_neg_to_pos": 1
+  },
+  "reviews": [
+    {
+      "sent_id": "REQ-048::s001",
+      "order": 1,
+      "text": "**Objective:**",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-048::s002",
+      "order": 2,
+      "text": "The goal is to implement an enhanced fraud detection threshold to improve accuracy and reduce false positives in transaction monitoring, maintaining a false-positive target of 3%.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "PERFORMANCE_REQUIREMENT",
+      "reason_text": "Enhanced fraud detection threshold to reduce false positives."
+    },
+    {
+      "sent_id": "REQ-048::s003",
+      "order": 3,
+      "text": "This adjustment leverages updated risk assessment scores (`risk_threshold_v2`) to balance fraud prevention effectiveness with customer impact.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-048::s004",
+      "order": 4,
+      "text": "**Threshold Matrix:**  \n\n| Region | Threshold |",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-048::s005",
+      "order": 5,
+      "text": "False Positive Target |\n|--------|-----------|-----------------------|\n| EU     | 0.82      | 3%                    |\n| US     | 0.78      | 3%                    |\n\n**Rollout:**  \nDeployment will be controlled via the feature flag `risk_threshold_v2`.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "PERFORMANCE_REQUIREMENT",
+      "reason_text": "Deployment controlled via `risk_threshold_v2` feature flag ensures stability."
+    },
+    {
+      "sent_id": "REQ-048::s006",
+      "order": 6,
+      "text": "The rollout will follow a staged deployment strategy, starting at 10% of the user base, scaling progressively to 100% over five days as follows:\n\n- **Day 1:** 10%  \n- **Day 2:** 25%  \n- **Day 3:** 50%  \n- **Day 4:** 75%  \n- **Day 5:** 100%  \n\nDaily monitoring will ensure stability and threshold efficacy before proceeding to each subsequent phase.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "PERFORMANCE_REQUIREMENT",
+      "reason_text": "Deployment follows a staged strategy with monitoring for stability."
+    },
+    {
+      "sent_id": "REQ-048::s007",
+      "order": 7,
+      "text": "**Audit:**",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-048::s008",
+      "order": 8,
+      "text": "All manual overrides of fraud detection scores or threshold adjustments must be recorded systematically.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Manual overrides must be recorded systematically."
+    },
+    {
+      "sent_id": "REQ-048::s009",
+      "order": 9,
+      "text": "Entries must be captured in the dedicated `fraud_score_audit` logging table, ensuring traceability and audit compliance.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "COMPLIANCE_REQUIREMENT",
+      "reason_text": "Data logged ensures audit compliance."
+    },
+    {
+      "sent_id": "REQ-048::s010",
+      "order": 10,
+      "text": "Logged data should include transaction identifiers, overridden values, original and adjusted scores, timestamp, and the operator's user ID.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Data includes specific fields for logging."
+    },
+    {
+      "sent_id": "REQ-048::s011",
+      "order": 11,
+      "text": "Auditing will be continuously monitored to validate policy adherence and accuracy.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Header without content."
+    }
+  ]
+}

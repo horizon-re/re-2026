@@ -1,0 +1,46 @@
+C:\Dvip\plantric-root\venv\lib\site-packages\huggingface_hub\file_download.py:943: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+C:\Dvip\plantric-root\venv\lib\site-packages\huggingface_hub\file_download.py:143: UserWarning: `huggingface_hub` cache-system uses symlinks by default to efficiently store duplicated files but your machine does not support them in C:\Dvip\plantric-root\.hf_cache\models--microsoft--deberta-v3-base. Caching files will still work but in a degraded version that might require more space on your disk. This warning can be disabled by setting the `HF_HUB_DISABLE_SYMLINKS_WARNING` environment variable. For more details, see https://huggingface.co/docs/huggingface_hub/how-to-cache#limitations.
+To support symlinks on Windows, you either need to activate Developer Mode or to run Python as an administrator. In order to activate developer mode, see this article: https://docs.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development
+  warnings.warn(message)
+Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+[init] Working directory: C:\Dvip\plantric-root
+
+======================================================================
+[data] Loading datasets...
+======================================================================
+
+[OK] Contextual: 3284 samples
+[OK] F/NFR train: 8747 samples
+[OK] F/NFR dev: 1093 samples
+[OK] Synthetic non-req: 4961 samples
+
+[combined] train=15506 dev=2579
+
+======================================================================
+[model] microsoft/deberta-v3-base
+[lora] targets: ['query_proj', 'key_proj', 'value_proj']
+======================================================================
+
+Traceback (most recent call last):
+  File "scripts\classifier\finetune\train_multitask_deberta.py", line 681, in <module>
+    main()
+  File "scripts\classifier\finetune\train_multitask_deberta.py", line 674, in main
+    train_multitask(samples_train, samples_dev, args, run_root, args.model)
+  File "scripts\classifier\finetune\train_multitask_deberta.py", line 320, in train_multitask
+    tok = AutoTokenizer.from_pretrained(model_name)
+  File "C:\Dvip\plantric-root\venv\lib\site-packages\transformers\models\auto\tokenization_auto.py", line 709, in from_pretrained
+    return tokenizer_class_fast.from_pretrained(pretrained_model_name_or_path, *inputs, **kwargs)
+  File "C:\Dvip\plantric-root\venv\lib\site-packages\transformers\tokenization_utils_base.py", line 1825, in from_pretrained
+    return cls._from_pretrained(
+  File "C:\Dvip\plantric-root\venv\lib\site-packages\transformers\tokenization_utils_base.py", line 1988, in _from_pretrained
+    tokenizer = cls(*init_inputs, **init_kwargs)
+  File "C:\Dvip\plantric-root\venv\lib\site-packages\transformers\models\deberta_v2\tokenization_deberta_v2_fast.py", line 133, in __init__
+    super().__init__(
+  File "C:\Dvip\plantric-root\venv\lib\site-packages\transformers\tokenization_utils_fast.py", line 120, in __init__
+    raise ValueError(
+ValueError: Couldn't instantiate the backend tokenizer from one of: 
+(1) a `tokenizers` library serialization file, 
+(2) a slow tokenizer instance to convert or 
+(3) an equivalent slow tokenizer class to instantiate and convert. 
+You need to have sentencepiece installed to convert a slow tokenizer to a fast one.

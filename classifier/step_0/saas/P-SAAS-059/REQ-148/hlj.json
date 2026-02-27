@@ -1,0 +1,106 @@
+{
+  "doc_id": "11c725e3-0960-5f29-a917-750092904118",
+  "req_key": "saas::P-SAAS-059::REQ-148",
+  "req_id": "REQ-148",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-059",
+  "source": {
+    "raw_path": "02_raw_requirements/saas/P-SAAS-059/req-148_raw.txt",
+    "refined_path": "03_refined_json_normalized/saas/P-SAAS-059/req-148_refined.json",
+    "origin": "both"
+  },
+  "text": "**Feature Request: Embed GraphQL Monaco Editor in Markdown WYSIWYG**\n\nWe need to embed a GraphQL-enabled Monaco editor within the Markdown WYSIWYG editor of the dev portal. The integration must allow developers to write and test GraphQL queries seamlessly within markdown blocks. Markdown shortcuts (e.g., `**bold**`, `# headers`) must remain fully functional outside of the GraphQL code blocks. Within these code blocks, the editor should support Ctrl + Space for GraphQL schema hints and IntelliSense.\n\nEnsure the embedded editor adapts to dark mode and preserves styling consistency with the rest of the dev portal. Development should start Monday, with a working PoC ready for review by Friday. This feature will improve DX when documenting APIs that use GraphQL by enabling inline query testing and formatting.\n\n**Tags:** `backlog`, `graphql-editor`  \n**Priority:** P2",
+  "structured_data": [
+    {
+      "id": "REQ-148-HLJ-Chunk_1-Item_1-v1.0",
+      "domain": "saas",
+      "summary": "Embed GraphQL Monaco editor in Markdown WYSIWYG",
+      "priority": "High",
+      "tags": [
+        "graphql_editor",
+        "markdown_editor",
+        "wysiwyg"
+      ],
+      "subdomain": "editor_integration",
+      "difficulty": 3,
+      "additionalNotes": "The GraphQL Monaco editor must be embedded inside the markdown editor without breaking core WYSIWYG functionality.",
+      "source_hlj_id": "REQ 001-001",
+      "domain_id": "P-SAAS-059"
+    },
+    {
+      "id": "REQ-148-HLJ-Chunk_1-Item_2-v1.0",
+      "domain": "saas",
+      "summary": "Preserve markdown formatting shortcuts in editor",
+      "priority": "High",
+      "tags": [
+        "markdown_shortcuts",
+        "editor_usability"
+      ],
+      "subdomain": "editor_usability",
+      "difficulty": 2,
+      "additionalNotes": "Must support bold, headers, and common formatting syntax outside of GraphQL blocks.",
+      "source_hlj_id": "REQ 001-002",
+      "domain_id": "P-SAAS-059"
+    },
+    {
+      "id": "REQ-148-HLJ-Chunk_1-Item_3-v1.0",
+      "domain": "saas",
+      "summary": "Enable Ctrl + Space schema hinting in editor",
+      "priority": "High",
+      "tags": [
+        "graphql_editor",
+        "schema_hinting"
+      ],
+      "subdomain": "editor_features",
+      "difficulty": 3,
+      "additionalNotes": "GraphQL blocks must provide IntelliSense via schema-aware autocompletion triggered by Ctrl + Space.",
+      "source_hlj_id": "REQ 001-003",
+      "domain_id": "P-SAAS-059"
+    },
+    {
+      "id": "REQ-148-HLJ-Chunk_1-Item_4-v1.0",
+      "domain": "saas",
+      "summary": "Ensure compatibility with dark mode theme",
+      "priority": "Medium",
+      "tags": [
+        "dark_mode",
+        "theme_support"
+      ],
+      "subdomain": "ui_theme",
+      "difficulty": 2,
+      "additionalNotes": "Editor must respect dark mode toggles and match the dev portal's appearance.",
+      "source_hlj_id": "REQ 001-004",
+      "domain_id": "P-SAAS-059"
+    },
+    {
+      "id": "REQ-148-HLJ-Chunk_1-Item_5-v1.0",
+      "domain": "saas",
+      "summary": "Begin feature development on Monday",
+      "priority": "Low",
+      "tags": [
+        "development_schedule",
+        "start_date"
+      ],
+      "subdomain": "project_timeline",
+      "difficulty": 1,
+      "additionalNotes": "origin: implied – Feature implementation should begin on the specified Monday as part of internal planning.",
+      "source_hlj_id": "REQ 001-005",
+      "domain_id": "P-SAAS-059"
+    },
+    {
+      "id": "REQ-148-HLJ-Chunk_1-Item_6-v1.0",
+      "domain": "saas",
+      "summary": "Deliver proof of concept for review by Friday",
+      "priority": "Low",
+      "tags": [
+        "poc_delivery",
+        "timeline"
+      ],
+      "subdomain": "project_timeline",
+      "difficulty": 1,
+      "additionalNotes": "origin: implied – A working PoC must be available for stakeholder review by end of the work week.",
+      "source_hlj_id": "REQ 001-006",
+      "domain_id": "P-SAAS-059"
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+Automatically purge all data older than 24 months daily at 02:00 UTC, excluding records where `legal_hold=true`, and ensure each deletion run logs a summary to `data_retention.log` and sends an email notification to compliance@example.com for audit and compliance tracking.

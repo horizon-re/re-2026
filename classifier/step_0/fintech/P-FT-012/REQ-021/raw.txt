@@ -1,0 +1,34 @@
+Subject: Reimbursement Tool – Initial Thoughts & Scope Overview
+
+Hey team,
+
+Thanks again for jumping on this! Here’s a rough overview of what we’re looking to build for Reimbursely’s new expense reimbursement platform. We’re aiming to simplify the messy, manual process employees currently go through with spreadsheets and email approvals.
+
+Vision
+We want a simple, mobile-friendly tool that automates out-of-pocket expense claims, approvals, and reimbursements—while staying fully compliant with EU tax rules, GDPR, and ISO‑27001 standards.
+
+User Roles
+	•	Employees: Upload receipts (photo or PDF), fill basic details, submit.
+	•	Finance Managers: Review and approve claims, flag policy issues.
+	•	Auditors: View a read-only log of approvals, payouts, and receipts.
+
+Core Functional Requirements
+	•	Receipt upload (drag & drop, phone camera).
+	•	OCR auto-fill for merchant, date, and amount.
+	•	Real-time policy checks (e.g. taxi limit is €50/day).
+	•	Multi-currency support with auto-conversion.
+	•	Slack notifications for claim status.
+	•	Instant suggestions for reclaimable VAT.
+
+Non-Functional & Compliance
+	•	Full audit trail on every action.
+	•	All data encrypted at rest and in transit.
+	•	GDPR consent flow and data export/deletion options.
+	•	Hosted in EU-region AWS.
+
+Open Questions
+	•	Should managers get email or Slack alerts by default?
+	•	Do we need integrations with accounting tools from MVP?
+
+Let me know what’s missing!
+—Lena

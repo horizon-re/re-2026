@@ -1,0 +1,95 @@
+{
+  "doc_id": "d699bfba-3643-5dd3-889e-e7d8879c3ab3",
+  "req_key": "saas::P-SAAS-060::REQ-149",
+  "req_id": "REQ-149",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-060",
+  "source": {
+    "raw_path": "02_raw_requirements/saas/P-SAAS-060/req-149_raw.txt",
+    "refined_path": "03_refined_json_normalized/saas/P-SAAS-060/req-149_refined.json",
+    "origin": "both"
+  },
+  "text": "**Problem**  \nIn Microsoft Teams bilingual chats, machine translation between Spanish and English often misinterprets AM/PM time expressions. This is due to differences in datetime formats—Spanish commonly uses 24-hour notation or places AM/PM differently, while English relies on 12-hour formats with explicit AM/PM suffixes. The current translation API does not account for locale-specific datetime parsing, leading to incorrect message timings and potential miscommunication in scheduling or event-based conversations.\n\n**Fix**  \nIntegrate a pre-processing layer that applies locale-aware datetime regular expressions before passing messages to the translation API. This layer identifies and standardizes time expressions based on source and target language conventions. For Spanish-to-English, 24-hour times will be converted to 12-hour format with appropriate AM/PM context. For English-to-Spanish, AM/PM markers will be resolved into 24-hour equivalents. The regex module will rely on language detection and handle edge cases like \"mediodía\" (noon) and \"medianoche\" (midnight) appropriately.\n\n**Validation**  \nRun 100 unit test samples containing diverse datetime expressions across both languages. After translation and reverse-translation, validate the preservation of intended time values. If the confusion rate—defined as incorrect AM/PM interpretation—exceeds 0.5%, trigger an alert and flag the sample set for regression analysis.",
+  "structured_data": [
+    {
+      "id": "REQ-149-HLJ-Chunk_1-Item_1-v1.0",
+      "domain": "saas",
+      "summary": "Detect locale-specific datetime before translation",
+      "priority": "High",
+      "tags": [
+        "datetime",
+        "locale_detection",
+        "translation_pipeline"
+      ],
+      "subdomain": "i18n_translation",
+      "difficulty": 3,
+      "additionalNotes": "Locale-aware detection is essential to prevent AM/PM inversion in bilingual Teams chats.",
+      "source_hlj_id": "REQ 001-001",
+      "domain_id": "P-SAAS-060"
+    },
+    {
+      "id": "REQ-149-HLJ-Chunk_1-Item_2-v1.0",
+      "domain": "saas",
+      "summary": "Convert 24h times to 12h with AM/PM for Spanish→English",
+      "priority": "High",
+      "tags": [
+        "datetime_conversion",
+        "spanish_to_english",
+        "am_pm"
+      ],
+      "subdomain": "i18n_translation",
+      "difficulty": 3,
+      "additionalNotes": "Conversion must preserve contextual meaning and handle ambiguous time expressions.",
+      "source_hlj_id": "REQ 001-002",
+      "domain_id": "P-SAAS-060"
+    },
+    {
+      "id": "REQ-149-HLJ-Chunk_1-Item_3-v1.0",
+      "domain": "saas",
+      "summary": "Resolve AM/PM to 24h format for English→Spanish",
+      "priority": "High",
+      "tags": [
+        "datetime_conversion",
+        "english_to_spanish",
+        "24_hour"
+      ],
+      "subdomain": "i18n_translation",
+      "difficulty": 3,
+      "additionalNotes": "Reverse conversion required for accurate representation in target locale.",
+      "source_hlj_id": "REQ 001-003",
+      "domain_id": "P-SAAS-060"
+    },
+    {
+      "id": "REQ-149-HLJ-Chunk_1-Item_4-v1.0",
+      "domain": "saas",
+      "summary": "Handle edge cases like noon and midnight",
+      "priority": "Medium",
+      "tags": [
+        "datetime_edge_cases",
+        "noon",
+        "midnight"
+      ],
+      "subdomain": "i18n_translation",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied – Special cases like 'mediodía' and 'medianoche' need accurate handling.",
+      "source_hlj_id": "REQ 001-004",
+      "domain_id": "P-SAAS-060"
+    },
+    {
+      "id": "REQ-149-HLJ-Chunk_1-Item_5-v1.0",
+      "domain": "saas",
+      "summary": "Alert if AM/PM error rate exceeds 0.5% in tests",
+      "priority": "Medium",
+      "tags": [
+        "validation",
+        "testing",
+        "alert_threshold"
+      ],
+      "subdomain": "qa_automation",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied – Monitoring accuracy ensures regression issues are caught early.",
+      "source_hlj_id": "REQ 001-005",
+      "domain_id": "P-SAAS-060"
+    }
+  ]
+}

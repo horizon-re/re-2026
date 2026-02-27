@@ -1,0 +1,25 @@
+{
+  "req_id": "REQ-094",
+  "num_sentences": 90,
+  "num_candidates": 54,
+  "acceptance_rate": 0.6,
+  "signal_counts": {
+    "action": 71,
+    "modal": 57,
+    "system": 40
+  },
+  "top_signal_combinations": [
+    {
+      "pattern": "action+modal+system",
+      "count": 35
+    },
+    {
+      "pattern": "action+modal",
+      "count": 16
+    },
+    {
+      "pattern": "action+system",
+      "count": 3
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "doc_id": "51373314-fb0a-524b-8685-224ddef4213d",
+  "req_key": "saas::P-SAAS-057::REQ-146",
+  "req_id": "REQ-146",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-057",
+  "source": {
+    "raw_path": "02_raw_requirements/saas/P-SAAS-057/req-146_raw.txt",
+    "refined_path": "03_refined_json_normalized/saas/P-SAAS-057/req-146_refined.json",
+    "origin": "both"
+  },
+  "text": "**Incident Ticket #7432 – CloudWatch Anomaly & Spend Spike**  \n**Priority:** P1 | **Reported by:** AWS Budgets | **Triggered:** PagerDuty\n\nAt 02:13 UTC, CloudWatch reported an anomalous spend spike from $0 to $1,000,000 within 2 minutes. Associated metric value returned as `NaN`, suggesting a divide-by-zero or corrupted calculation in cost reporting pipeline. AWS Budgets alert triggered, automatically escalating via PagerDuty (P1). Immediate remediation required:\n\n- Fallback logic must replace `NaN` with last known valid datapoint.  \n- Mark `NaN` entries as null in audit logs.  \n- Engineering to deliver root-cause analysis within 4 hours.  \n- Mandatory unit test to simulate divide-by-zero scenario and validate safeguard logic.\n\nThis anomaly caused temporary billing visibility loss and alerting system overload. Until resolved, all dependent financial dashboards and budget alerts are considered unreliable. Engineering lead assigned: @cloud-metrics-eng. ETA for preliminary RCA: 06:30 UTC.",
+  "structured_data": [
+    {
+      "id": "REQ-146-HLJ-Chunk_1-Item_1-v1.0",
+      "domain": "fintech",
+      "summary": "Replace NaN with last valid datapoint",
+      "priority": "High",
+      "tags": [
+        "fallback_logic",
+        "nan_handling",
+        "data_integrity"
+      ],
+      "subdomain": "cloud_monitoring",
+      "difficulty": 3,
+      "additionalNotes": "Ensure system replaces anomalous metric values with last known good datapoint to maintain continuity.",
+      "source_hlj_id": "REQ 001-001",
+      "domain_id": "P-SAAS-057"
+    },
+    {
+      "id": "REQ-146-HLJ-Chunk_1-Item_2-v1.0",
+      "domain": "fintech",
+      "summary": "Mark NaN entries as null in audit logs",
+      "priority": "High",
+      "tags": [
+        "audit_log",
+        "data_validation",
+        "nan_handling"
+      ],
+      "subdomain": "cloud_monitoring",
+      "difficulty": 2,
+      "additionalNotes": "All NaN values must be recorded as null in logs to enable traceability and consistency.",
+      "source_hlj_id": "REQ 001-002",
+      "domain_id": "P-SAAS-057"
+    },
+    {
+      "id": "REQ-146-HLJ-Chunk_1-Item_3-v1.0",
+      "domain": "fintech",
+      "summary": "Deliver root-cause analysis within 4 hours",
+      "priority": "High",
+      "tags": [
+        "incident_response",
+        "rca",
+        "sla"
+      ],
+      "subdomain": "incident_management",
+      "difficulty": 2,
+      "additionalNotes": "Engineering must complete and submit RCA within 4-hour SLA from anomaly detection.",
+      "source_hlj_id": "REQ 001-003",
+      "domain_id": "P-SAAS-057"
+    },
+    {
+      "id": "REQ-146-HLJ-Chunk_1-Item_4-v1.0",
+      "domain": "fintech",
+      "summary": "Create unit test for divide-by-zero safeguard",
+      "priority": "High",
+      "tags": [
+        "unit_test",
+        "error_handling",
+        "validation"
+      ],
+      "subdomain": "testing",
+      "difficulty": 3,
+      "additionalNotes": "Unit test should simulate divide-by-zero conditions and validate fallback behavior.",
+      "source_hlj_id": "REQ 001-004",
+      "domain_id": "P-SAAS-057"
+    },
+    {
+      "id": "REQ-146-HLJ-Chunk_1-Item_5-v1.0",
+      "domain": "fintech",
+      "summary": "Trigger PagerDuty alert on major anomaly",
+      "priority": "Low",
+      "tags": [
+        "alerting",
+        "pagerduty",
+        "incident_response"
+      ],
+      "subdomain": "monitoring_alerting",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied – Alert escalation mechanism must integrate with PagerDuty on critical cost spikes.",
+      "source_hlj_id": "REQ 001-005",
+      "domain_id": "P-SAAS-057"
+    }
+  ]
+}

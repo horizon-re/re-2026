@@ -1,0 +1,19 @@
+Bug Title: Swagger-UI Incorrectly Accepts 0-Byte CSV Upload with Success Indicator
+
+Description:
+When uploading a 0-byte CSV file via Swagger-UI, the UI incorrectly displays a success checkmark (✅), suggesting the file was ingested successfully. However, an empty CSV is invalid input and should be rejected at the API level. This leads to misleading feedback for users and allows for invalid ingestion attempts to go unnoticed.
+
+Expected Behavior:
+	•	The backend should validate that uploaded CSV files are larger than 0 bytes.
+	•	The content-type must be explicitly validated (e.g., text/csv).
+	•	If an uploaded file is empty or improperly formatted, the API must return a 400 Bad Request response with a clear error message.
+	•	The incident should be logged in the ingest_failures log with relevant metadata (timestamp, user ID, endpoint, reason).
+
+Acceptance Criteria:
+	•	Add backend checks for file size (> 0 bytes) and correct content-type.
+	•	Update the API to respond with HTTP 400 on invalid CSV uploads.
+	•	Create a Cypress test to simulate 0-byte upload and assert failure behavior.
+	•	Ensure logs are correctly populated in ingest_failures.
+
+Priority: Medium
+Impact: Affects data integrity and user trust during ingestion.

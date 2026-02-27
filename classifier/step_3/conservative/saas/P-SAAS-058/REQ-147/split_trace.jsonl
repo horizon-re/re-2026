@@ -1,0 +1,2 @@
+{"parent_sent_id": "REQ-147::s003", "mode": "conservative", "num_units": 2, "original_text": "This creates confusion for users and may affect analytics accuracy.", "units": ["This creates confusion for users and may affect analytics accuracy .", "may affect analytics accuracy"]}
+{"parent_sent_id": "REQ-147::s010", "mode": "conservative", "num_units": 2, "original_text": "The comment count should reflect the actual number or be capped appropriately.", "units": ["The comment count should reflect the actual number or be capped appropriately .", "be capped appropriately"]}

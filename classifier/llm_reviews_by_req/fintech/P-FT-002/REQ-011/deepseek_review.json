@@ -1,0 +1,2059 @@
+{
+  "req_id": "REQ-011",
+  "doc_id": "9670aee4-4f37-587e-9282-0f202eb0fc8e",
+  "domain": "fintech",
+  "prompt_id": "P-FT-002",
+  "model": "deepseek-r1:7b",
+  "review_timestamp": "2026-01-20T20:54:40.084858+00:00",
+  "counts": {
+    "total": 204,
+    "llm_pos": 92,
+    "pipe_pos": 66,
+    "llm_neg": 112,
+    "flip_pos_to_neg": 21,
+    "pipe_neg": 138,
+    "flip_neg_to_pos": 47
+  },
+  "reviews": [
+    {
+      "sent_id": "REQ-011::s001",
+      "order": 1,
+      "text": "Great — I’ll put together a high-level requirements document that captures the collaborative vision for the platform, focusing purely on the concept and product strategy as outlined, without including competitive analysis.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.95,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "A requirements document will outline the collaborative vision for the platform."
+    },
+    {
+      "sent_id": "REQ-011::s002",
+      "order": 2,
+      "text": "I’ll let you know when it’s ready for review.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-011::s003",
+      "order": 3,
+      "text": "# Product Vision & Market Context",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-011::s004",
+      "order": 4,
+      "text": "The platform aims to empower the growing number of freelance professionals and solo entrepreneurs with an integrated financial toolkit that replaces ad-hoc spreadsheets and manual processes.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "The platform aims to empower freelance professionals with an integrated financial toolkit."
+    },
+    {
+      "sent_id": "REQ-011::s005",
+      "order": 5,
+      "text": "With tens of millions of freelancers in North America and Europe (e.g. ~76 million in the US alone ([Number of Freelancers (2024)](https://explodingtopics.com/blog/number-of-freelancers#:~:text=Number%20of%20Freelancers%20))) and rising, the gig economy presents a huge opportunity.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-011::s006",
+      "order": 6,
+      "text": "Yet surveys show widespread pain: roughly 74% of freelancers report not being paid on time at least some of the time ([How to get paid as a freelancer | Stripe](https://stripe.com/resources/more/how-to-accept-payments-as-a-freelancer-and-how-to-choose-the-right-payment-methods#:~:text=Seventy,also%20have%20clear%20payment%20terms)).",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Yet surveys show widespread pain: roughly 74% of freelancers report not being paid on time at least some of the time."
+    },
+    {
+      "sent_id": "REQ-011::s007",
+      "order": 7,
+      "text": "Late or missed client payments, confusing tax requirements, and fragmented tools create stress and inefficiency for these users.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-011::s008",
+      "order": 8,
+      "text": "Our vision is a subscription-based platform that automates routine billing and cash-flow tasks, provides proactive financial insights, and unifies all money management in one place.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-011::s009",
+      "order": 9,
+      "text": "By focusing on the unique needs of the one-person business (multi-currency invoices, drag‑and‑drop dashboards, alerts on late payers, etc.), we will fill the gap between generic accounting software and the lightweight needs of busy freelancers ([Number of Freelancers (2024)](https://explodingtopics.com/blog/number-of-freelancers#:~:text=Number%20of%20Freelancers%20))",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "By focusing on unique client needs, we will fill the gap between generic accounting software and lightweight needs."
+    },
+    {
+      "sent_id": "REQ-011::s010",
+      "order": 10,
+      "text": "([How to get paid as a freelancer | Stripe](https://stripe.com/resources/more/how-to-accept-payments-as-a-freelancer-and-how-to-choose-the-right-payment-methods#:~:text=Seventy,also%20have%20clear%20payment%20terms)).",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Link to Stripe's resource but doesn't add new info."
+    },
+    {
+      "sent_id": "REQ-011::s011",
+      "order": 11,
+      "text": "# Primary User Personas  \n- **Independent Consultant (North America)** – *Alex*, a freelance software consultant.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-011::s012",
+      "order": 12,
+      "text": "He works with U.S. corporate clients, invoices in USD, and sometimes in EUR.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-011::s013",
+      "order": 13,
+      "text": "He juggles irregular projects with varying payment terms.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-011::s014",
+      "order": 14,
+      "text": "Alex spends hours each month creating invoices, chasing late payments, and struggling to pull together data for taxes.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-011::s015",
+      "order": 15,
+      "text": "He values an intuitive tool that automates billing, reminds clients for him, and forecasts his cash flow so he isn’t caught off‑guard when a client delays payment.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "He values an intuitive tool that automates billing and forecasts cash flow."
+    },
+    {
+      "sent_id": "REQ-011::s016",
+      "order": 16,
+      "text": "- **Creative Entrepreneur (EU)** – *Marie*, a graphic designer in Berlin.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-011::s017",
+      "order": 17,
+      "text": "She has multiple small clients across Europe, each preferring invoices in their own language and currency.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-011::s018",
+      "order": 18,
+      "text": "Marie finds bookkeeping hard; she “doesn’t have any business education” and often mixes personal and business expenses ([5 Bookkeeping Challenges for Freelancers and Independent Contractors](https://e3bookkeeping.com/5-bookkeeping-challenges-for-freelancers-and-independent-contractors/#:~:text=Challenge%203%3A%20Navigating%20the%20Tax,Employment%20Taxes)).",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.85,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Link to a challenge but doesn't add new info."
+    },
+    {
+      "sent_id": "REQ-011::s019",
+      "order": 19,
+      "text": "She needs simple summaries of her income versus expenses and clear, localised tax reports.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-011::s020",
+      "order": 20,
+      "text": "Marie will use features like multi-language invoicing, quick tax summaries, and spending advice so she doesn’t fall behind on VAT filings or waste time reconciling receipts.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Marie will use features to avoid VAT issues."
+    },
+    {
+      "sent_id": "REQ-011::s021",
+      "order": 21,
+      "text": "- **New Freelancer Just Starting Out** – *Sam*, who recently quit his 9‑to‑5 to do freelance writing.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-011::s022",
+      "order": 22,
+      "text": "He wants to look professional (with branded invoices) but finds all the accounting details intimidating.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-011::s023",
+      "order": 23,
+      "text": "Sam needs guidance and automation: recurring invoice templates, automatic payment reminders, and visual dashboards that show whether he’s on track financially.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Provides guidance and automation features for invoice templates, reminders, and dashboards."
+    },
+    {
+      "sent_id": "REQ-011::s024",
+      "order": 24,
+      "text": "Simple alerts (e.g. “Your bookkeeping looks sparse for this month”) would help him learn best practices.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Suggests simple alerts but doesn't specify enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-011::s025",
+      "order": 25,
+      "text": "Each persona shares common goals: saving time on financial admin, getting paid on time, and avoiding surprises at tax time.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Outlines common goals without enforcing specific actions."
+    },
+    {
+      "sent_id": "REQ-011::s026",
+      "order": 26,
+      "text": "These users are typically not finance experts, so the interface must be friendly and educational.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describes design guidelines rather than enforceable requirements."
+    },
+    {
+      "sent_id": "REQ-011::s027",
+      "order": 27,
+      "text": "(For example,  “automated invoice reminders” help build trust and speed payments ([Freelance invoice software: Benefits, features, and which should you choose?",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.85,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Link to a resource but doesn't add new info."
+    },
+    {
+      "sent_id": "REQ-011::s028",
+      "order": 28,
+      "text": "| Remote](https://remote.com/blog/freelance-invoice-software#:~:text=Accuracy%2C%20professionalism%2C%20and%20timeliness%20are,ensuring%20freelancers%20are%20paid%20promptly)), a big win for freelancers who currently chase clients manually.)",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Ensures accuracy, professionalism, and timeliness for freelancers."
+    },
+    {
+      "sent_id": "REQ-011::s029",
+      "order": 29,
+      "text": "# Core Capabilities & Modules  \n\n- **Automated Invoicing & Recurring Billing.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 1.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "States automated invoicing and recurring billing as necessary features."
+    },
+    {
+      "sent_id": "REQ-011::s030",
+      "order": 30,
+      "text": "*",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.5,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Empty entry with no text."
+    },
+    {
+      "sent_id": "REQ-011::s031",
+      "order": 31,
+      "text": "* Users can create professional invoices and schedule them for one-off or recurring projects.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Users should be able to create professional invoices and schedule them."
+    },
+    {
+      "sent_id": "REQ-011::s032",
+      "order": 32,
+      "text": "The system handles currency and tax details per client, and attaches digital receipts.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "The system handles currency and tax details."
+    },
+    {
+      "sent_id": "REQ-011::s033",
+      "order": 33,
+      "text": "It automatically sends invoices on the due date and marks them as sent.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 1.0,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Invoices are automatically sent on due dates."
+    },
+    {
+      "sent_id": "REQ-011::s034",
+      "order": 34,
+      "text": "This replaces the time‑consuming manual invoicing process many freelancers suffer ([Freelance invoice software: Benefits, features, and which should you choose?",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Replaces manual invoicing process."
+    },
+    {
+      "sent_id": "REQ-011::s035",
+      "order": 35,
+      "text": "| Remote](https://remote.com/blog/freelance-invoice-software#:~:text=One%20of%20the%20most%20common,following%20up%20on%20overdue%20payments)).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Link to blog without content."
+    },
+    {
+      "sent_id": "REQ-011::s036",
+      "order": 36,
+      "text": "Templates and branding ensure accuracy and a consistent image.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Templates and branding ensure accuracy, but it's more of a design feature."
+    },
+    {
+      "sent_id": "REQ-011::s037",
+      "order": 37,
+      "text": "*Citations:* Supporting research shows freelancers spend excessive time on invoices; automating this frees them to focus on work ([Freelance invoice software: Benefits, features, and which should you choose?",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.5,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Citations to research without explanation."
+    },
+    {
+      "sent_id": "REQ-011::s038",
+      "order": 38,
+      "text": "| Remote](https://remote.com/blog/freelance-invoice-software#:~:text=One%20of%20the%20most%20common,following%20up%20on%20overdue%20payments))",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Link to blog with no additional text."
+    },
+    {
+      "sent_id": "REQ-011::s039",
+      "order": 39,
+      "text": "([Freelance invoice software: Benefits, features, and which should you choose?",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Citations without content."
+    },
+    {
+      "sent_id": "REQ-011::s040",
+      "order": 40,
+      "text": "| Remote](https://remote.com/blog/freelance-invoice-software#:~:text=Accuracy%2C%20professionalism%2C%20and%20timeliness%20are,ensuring%20freelancers%20are%20paid%20promptly)).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Link to blog with no additional text."
+    },
+    {
+      "sent_id": "REQ-011::s041",
+      "order": 41,
+      "text": "- **Payment Follow-Up & Reminder Workflows.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 1.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Outlines payment follow-up and reminder workflows as necessary features."
+    },
+    {
+      "sent_id": "REQ-011::s042",
+      "order": 42,
+      "text": "*",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.5,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Empty entry with no text."
+    },
+    {
+      "sent_id": "REQ-011::s043",
+      "order": 43,
+      "text": "*",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Empty entry with no text."
+    },
+    {
+      "sent_id": "REQ-011::s044",
+      "order": 44,
+      "text": "When invoices are due (or overdue), the platform automatically sends polite email reminders at preset intervals.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Automating reminders speeds payments."
+    },
+    {
+      "sent_id": "REQ-011::s045",
+      "order": 45,
+      "text": "If a payment still hasn’t arrived, escalation workflows can kick in – for example, a second reminder or even escalation to a manager or collection notice (depending on user settings).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 1.0,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Escalation workflows are necessary for reminders."
+    },
+    {
+      "sent_id": "REQ-011::s046",
+      "order": 46,
+      "text": "Automating these communications “builds trust and speeds payment” by keeping clients on schedule ([Freelance invoice software: Benefits, features, and which should you choose?",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Building trust and speed payment."
+    },
+    {
+      "sent_id": "REQ-011::s047",
+      "order": 47,
+      "text": "| Remote](https://remote.com/blog/freelance-invoice-software#:~:text=Accuracy%2C%20professionalism%2C%20and%20timeliness%20are,ensuring%20freelancers%20are%20paid%20promptly)).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Link to blog with no additional text."
+    },
+    {
+      "sent_id": "REQ-011::s048",
+      "order": 48,
+      "text": "All reminder messages and status changes are recorded in the audit log.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Records all reminder messages and status changes in the audit log."
+    },
+    {
+      "sent_id": "REQ-011::s049",
+      "order": 49,
+      "text": "- **Revenue Forecasting & Client Trends.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-011::s050",
+      "order": 50,
+      "text": "**",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-011::s051",
+      "order": 51,
+      "text": "The platform analyzes historical invoice and payment data to predict future cash flow.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Analyzes historical data for cash flow."
+    },
+    {
+      "sent_id": "REQ-011::s052",
+      "order": 52,
+      "text": "By learning each client’s behavior, the system can forecast next month’s revenue and flag at-risk cash shortfalls.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Forecasts next month’s revenue."
+    },
+    {
+      "sent_id": "REQ-011::s053",
+      "order": 53,
+      "text": "For instance, if Client A usually pays 15 days late, the system will estimate the expected payment date.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Estimates payment dates for clients."
+    },
+    {
+      "sent_id": "REQ-011::s054",
+      "order": 54,
+      "text": "(This approach is akin to AI-driven accounting tools that use predictive analytics to surface patterns human analyses might miss ([AI in Financial Decision Making for Business: A Ground-Up Guide - RyzUp](https://www.ryzup.ai/blog/ai-in-financial-decision-making-for-business-a-ground-up-guide#:~:text=Due%20to%20its%20historical%20reliance,that%20conventional%20approaches%20would%20overlook))",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.85,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Link to a resource but doesn't add new info."
+    },
+    {
+      "sent_id": "REQ-011::s055",
+      "order": 55,
+      "text": "([Dynamics 365 Business Central: Using AI to predict late payments](https://www.inecta.com/dynamics-365-business-central-using-ai-to-predict-late-payments#:~:text=Taking%20that%20away%20taking%20that,to%20look%20at%20that%20now)).)",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Uses AI to predict late payments in Dynamics 365."
+    },
+    {
+      "sent_id": "REQ-011::s056",
+      "order": 56,
+      "text": "Users see a projected income timeline and can adjust spending or deadlines accordingly.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Users view a projected income timeline and adjust spending or deadlines."
+    },
+    {
+      "sent_id": "REQ-011::s057",
+      "order": 57,
+      "text": "- **AI-Driven Financial Insights.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-011::s058",
+      "order": 58,
+      "text": "*",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-011::s059",
+      "order": 59,
+      "text": "* Each month the system generates a concise summary of the user’s finances: total income, largest expense categories, net savings, and spending advice (“try setting aside 10% of each payment for taxes”).",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Generates concise financial summary."
+    },
+    {
+      "sent_id": "REQ-011::s060",
+      "order": 60,
+      "text": "It can highlight trends like unusually low income one month or multiple new clients.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "It can highlight trends like low income or new clients."
+    },
+    {
+      "sent_id": "REQ-011::s061",
+      "order": 61,
+      "text": "By crunching the data, the platform identifies warning signs (e.g. dwindling cash reserves) and growth opportunities (e.g. services with rising demand).",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Identifies warning signs and growth opportunities."
+    },
+    {
+      "sent_id": "REQ-011::s062",
+      "order": 62,
+      "text": "Using AI/ML for finance (as in modern fintech tools) helps uncover insights and optimize decisions beyond basic ledger reports ([AI in Financial Decision Making for Business: A Ground-Up Guide - RyzUp](https://www.ryzup.ai/blog/ai-in-financial-decision-making-for-business-a-ground-up-guide#:~:text=Due%20to%20its%20historical%20reliance,that%20conventional%20approaches%20would%20overlook)).",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Optimizes decisions beyond ledger reports."
+    },
+    {
+      "sent_id": "REQ-011::s063",
+      "order": 63,
+      "text": "- **Visual Analytics Dashboards.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-011::s064",
+      "order": 64,
+      "text": "*",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-011::s065",
+      "order": 65,
+      "text": "*",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-011::s066",
+      "order": 66,
+      "text": "Interactive charts break down income and expenses by category, client, and time period.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-011::s067",
+      "order": 67,
+      "text": "Users get clear visuals of where money comes from and goes.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-011::s068",
+      "order": 68,
+      "text": "For example, a graph might show income by client side-by-side with service fees (Stripe/PayPal charges) deducted.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-011::s069",
+      "order": 69,
+      "text": "A separate dashboard focuses on taxes: it pulls out VAT or sales taxes from all invoices, showing what’s owed each month or quarter.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Generates separate tax-focused dashboards."
+    },
+    {
+      "sent_id": "REQ-011::s070",
+      "order": 70,
+      "text": "These visuals support budgeting and tax preparation at a glance.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-011::s071",
+      "order": 71,
+      "text": "- **Quick-Access Tax Reports.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-011::s072",
+      "order": 72,
+      "text": "*",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-011::s073",
+      "order": 73,
+      "text": "* Dedicated reports summarize taxable income, expenses, and VAT/sales tax by jurisdiction.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-011::s074",
+      "order": 74,
+      "text": "One click generates a monthly or quarterly tax report ready for an accountant or tax software.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-011::s075",
+      "order": 75,
+      "text": "The system applies the correct tax rules per region (e.g. EU VAT reverse-charge rules, Canadian GST, etc.)",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "The system must apply correct tax rules per region."
+    },
+    {
+      "sent_id": "REQ-011::s076",
+      "order": 76,
+      "text": "([Multilingual Invoicing Software for International SMEs in Europe | by Invopoint | Medium](https://medium.com/@invopoint/multilingual-invoicing-software-for-international-smes-in-europe-ac175aa4bcef#:~:text=Avoid%20Compliance%20Risks)).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "COMPLIANCE_REQUIREMENT",
+      "reason_text": "This text states that the software complies with regional tax laws, which is a requirement."
+    },
+    {
+      "sent_id": "REQ-011::s077",
+      "order": 77,
+      "text": "This saves users hours of manual calculation and helps ensure compliance with regional tax laws.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "The text describes an enforceable system behavior."
+    },
+    {
+      "sent_id": "REQ-011::s078",
+      "order": 78,
+      "text": "- **Proactive Alerts & Notifications.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.7,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "This is a proactive alert requirement."
+    },
+    {
+      "sent_id": "REQ-011::s079",
+      "order": 79,
+      "text": "*",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-011::s080",
+      "order": 80,
+      "text": "*",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-011::s081",
+      "order": 81,
+      "text": "The platform sends real-time alerts for important events.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "The system must send real-time alerts for important events."
+    },
+    {
+      "sent_id": "REQ-011::s082",
+      "order": 82,
+      "text": "For example, when an invoice is paid late, it notifies the user.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.6,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "The system must notify users when invoices are paid late."
+    },
+    {
+      "sent_id": "REQ-011::s083",
+      "order": 83,
+      "text": "It also proactively warns of patterns: e.g. “Client X has been 10+ days late on 3 of the last 4 invoices” or “Cash flow next month may be 20% below target.”",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "The system must proactively warn users of payment patterns."
+    },
+    {
+      "sent_id": "REQ-011::s084",
+      "order": 84,
+      "text": "These nudges let users take action early (such as asking a new client for a deposit).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.7,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "The system must allow users to take action early."
+    },
+    {
+      "sent_id": "REQ-011::s085",
+      "order": 85,
+      "text": "This kind of “late-payment risk” analysis (identifying habitual late payers) is similar to AI features in advanced accounting systems ([Dynamics 365 Business Central: Using AI to predict late payments](https://www.inecta.com/dynamics-365-business-central-using-ai-to-predict-late-payments#:~:text=Taking%20that%20away%20taking%20that,to%20look%20at%20that%20now)).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.5,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "This is a background discussion about AI features and not an enforceable requirement."
+    },
+    {
+      "sent_id": "REQ-011::s086",
+      "order": 86,
+      "text": "- **In-App Client Communication.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "COMPLIANCE_REQUIREMENT",
+      "reason_text": "The system must ensure client communication is logged."
+    },
+    {
+      "sent_id": "REQ-011::s087",
+      "order": 87,
+      "text": "*",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.4,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "This is additional information without an enforceable requirement."
+    },
+    {
+      "sent_id": "REQ-011::s088",
+      "order": 88,
+      "text": "* Users can send messages to clients within the app (for billing questions or disputes), with the full conversation archived.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-011::s089",
+      "order": 89,
+      "text": "If a client disputes a charge, the freelancer can upload documentation or chat in-app, and the entire thread is stored for reference.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "The system must handle client disputes by storing threads."
+    },
+    {
+      "sent_id": "REQ-011::s090",
+      "order": 90,
+      "text": "All communications (emails sent, reminders, client responses) are logged in the audit trail.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.7,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "All communications must be logged in the audit trail."
+    },
+    {
+      "sent_id": "REQ-011::s091",
+      "order": 91,
+      "text": "This ensures there is a record to resolve any billing disputes later.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.6,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "The system must resolve billing disputes later."
+    },
+    {
+      "sent_id": "REQ-011::s092",
+      "order": 92,
+      "text": "- **Internationalization & Localization.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "The system must generate invoices in Italian with Euro pricing."
+    },
+    {
+      "sent_id": "REQ-011::s093",
+      "order": 93,
+      "text": "*",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-011::s094",
+      "order": 94,
+      "text": "*",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.7,
+      "reason_code": "COMPLIANCE_REQUIREMENT",
+      "reason_text": "All monetary values must adapt to local conventions."
+    },
+    {
+      "sent_id": "REQ-011::s095",
+      "order": 95,
+      "text": "The system supports multi-currency invoicing and multiple languages for both the user interface and outbound documents.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "The system must support multi-currency and multilingual features."
+    },
+    {
+      "sent_id": "REQ-011::s096",
+      "order": 96,
+      "text": "For a EU-based freelancer billing an Italian client, the invoice can be generated in Italian with Euro pricing.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.7,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "The system must notify users of late payments."
+    },
+    {
+      "sent_id": "REQ-011::s097",
+      "order": 97,
+      "text": "Modern invoicing software shows that sending invoices in the client’s language “inspires loyalty and prompt payment” ([Multilingual Invoicing Software for International SMEs in Europe | by Invopoint | Medium](https://medium.com/@invopoint/multilingual-invoicing-software-for-international-smes-in-europe-ac175aa4bcef#:~:text=Customers%20appreciate%20receiving%20invoices%20in,inspires%20loyalty%20and%20prompt%20payment)).",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Details on multilingual invoicing software provided for reference."
+    },
+    {
+      "sent_id": "REQ-011::s098",
+      "order": 98,
+      "text": "We will support key languages for our target markets (e.g. English, French, German, Spanish) and allow easy extension.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Information about target languages and extension support given."
+    },
+    {
+      "sent_id": "REQ-011::s099",
+      "order": 99,
+      "text": "All monetary values and taxes adapt to local conventions.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "COMPLIANCE_REQUIREMENT",
+      "reason_text": "All values must adapt to local conventions."
+    },
+    {
+      "sent_id": "REQ-011::s100",
+      "order": 100,
+      "text": "- **Audit Trails & Compliance Logging.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.7,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "The system must ensure audit trails are logged."
+    },
+    {
+      "sent_id": "REQ-011::s101",
+      "order": 101,
+      "text": "**",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.3,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "This is just an example without a requirement."
+    },
+    {
+      "sent_id": "REQ-011::s102",
+      "order": 102,
+      "text": "Every action (invoice creation/edit, payment received, reminder sent, setting changed) is recorded in a chronological audit log.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Records every action as an enforceable audit log."
+    },
+    {
+      "sent_id": "REQ-011::s103",
+      "order": 103,
+      "text": "These logs are detailed, immutable records of system activity, which “track and document every action, event, or transaction” in the finance system ([Audit Trail & Reporting | Ensure Compliance | Invoicera](https://www.invoicera.com/product/security-admin/audit-trails#:~:text=Audit%20Trails%20are%20comprehensive%20logs,an%20invoicing%20or%20financial%20system)).",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "The system must track every action in finance."
+    },
+    {
+      "sent_id": "REQ-011::s104",
+      "order": 104,
+      "text": "This provides full transparency and accountability.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Transparency and accountability are contextually implied."
+    },
+    {
+      "sent_id": "REQ-011::s105",
+      "order": 105,
+      "text": "Logs can be exported for accountants or regulators.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "PERFORMANCE_REQUIREMENT",
+      "reason_text": "Logs can be exported for accountants or regulators."
+    },
+    {
+      "sent_id": "REQ-011::s106",
+      "order": 106,
+      "text": "Built-in compliance features include GDPR data protections (user data handling with user consent and export options) ([Multilingual Invoicing Software for International SMEs in Europe | by Invopoint | Medium](https://medium.com/@invopoint/multilingual-invoicing-software-for-international-smes-in-europe-ac175aa4bcef#:~:text=,EU%20GDPR%20privacy%20regulation%20compliance)) and VAT/e-invoicing rules where required ([Multilingual Invoicing Software for International SMEs in Europe | by Invopoint | Medium](https://medium.com/@invopoint/multilingual-invoicing-software-for-international-smes-in-europe-ac175aa4bcef#:~:text=Avoid%20Compliance%20Risks)).",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "The system must comply with GDPR and VAT/e-invoicing rules."
+    },
+    {
+      "sent_id": "REQ-011::s107",
+      "order": 107,
+      "text": "- **Authentication & Security.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Authentication & Security header."
+    },
+    {
+      "sent_id": "REQ-011::s108",
+      "order": 108,
+      "text": "**",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.5,
+      "reason_code": "EXAMPLE_OR_EXPLANATION",
+      "reason_text": "No reasoning provided."
+    },
+    {
+      "sent_id": "REQ-011::s109",
+      "order": 109,
+      "text": "The platform uses modern, secure sign-in methods (OAuth2 and passwordless “Magic Link” emails) so freelancers don’t have to remember another password.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "The system must use secure sign-in methods."
+    },
+    {
+      "sent_id": "REQ-011::s110",
+      "order": 110,
+      "text": "User data and credentials are encrypted in transit and at rest.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "SECURITY_REQUIREMENT",
+      "reason_text": "Data is encrypted in transit and at rest."
+    },
+    {
+      "sent_id": "REQ-011::s111",
+      "order": 111,
+      "text": "Access controls prevent unauthorized data access.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Access controls prevent unauthorized data access."
+    },
+    {
+      "sent_id": "REQ-011::s112",
+      "order": 112,
+      "text": "(Sensitive financial operations are always double-checked and logged.)",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "PERFORMANCE_REQUIREMENT",
+      "reason_text": "Sensitive operations are double-checked and logged."
+    },
+    {
+      "sent_id": "REQ-011::s113",
+      "order": 113,
+      "text": "# Workflow Scenarios & Alerts  \n- **Onboarding & Setup:**",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.5,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Workflow Scenarios header."
+    },
+    {
+      "sent_id": "REQ-011::s114",
+      "order": 114,
+      "text": "The user signs in via Magic Link, sets up business details (currency, tax rates, language), and connects a payment processor (Stripe/PayPal) for client payments.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "User signs in via Magic Link, sets up details and connects a payment processor."
+    },
+    {
+      "sent_id": "REQ-011::s115",
+      "order": 115,
+      "text": "They import or add the first few clients and create a project/invoice template (e.g. “Monthly Consulting”).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "EXAMPLE_OR_EXPLANATION",
+      "reason_text": "Import or add clients and create templates."
+    },
+    {
+      "sent_id": "REQ-011::s116",
+      "order": 116,
+      "text": "The system then generates the first invoice preview and schedules it.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Details on generating and scheduling invoices provided for reference."
+    },
+    {
+      "sent_id": "REQ-011::s117",
+      "order": 117,
+      "text": "- **Issuing Invoices:**",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.5,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Issuing Invoices header."
+    },
+    {
+      "sent_id": "REQ-011::s118",
+      "order": 118,
+      "text": "On the scheduled date, the platform automatically sends the invoice to the client via email, tracking its status (“Sent”).",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "The system must automatically send invoices and track status."
+    },
+    {
+      "sent_id": "REQ-011::s119",
+      "order": 119,
+      "text": "The invoice appears on the user’s dashboard as “Outstanding.”",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Invoice appears as 'Outstanding.'"
+    },
+    {
+      "sent_id": "REQ-011::s120",
+      "order": 120,
+      "text": "Once the client pays via the embedded Stripe/PayPal link (or manually and marks it as paid), the status updates.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Information on Stripe/PayPal integration given."
+    },
+    {
+      "sent_id": "REQ-011::s121",
+      "order": 121,
+      "text": "A payment receipt is automatically generated and emailed to the client.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Automatic payment receipt email."
+    },
+    {
+      "sent_id": "REQ-011::s122",
+      "order": 122,
+      "text": "- **Missed Payment & Follow-Up:**",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.5,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missed Payment & Follow-Up header."
+    },
+    {
+      "sent_id": "REQ-011::s123",
+      "order": 123,
+      "text": "If the invoice due date passes with no payment, the system triggers an automated reminder (e.g. a polite follow-up email).",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "The system must trigger automated reminders for late payments."
+    },
+    {
+      "sent_id": "REQ-011::s124",
+      "order": 124,
+      "text": "If still unpaid after a second interval, an escalation reminder or a custom message is sent.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "PERFORMANCE_REQUIREMENT",
+      "reason_text": "Escalation reminder or message sent."
+    },
+    {
+      "sent_id": "REQ-011::s125",
+      "order": 125,
+      "text": "These actions require no manual effort from the user, and they are backed by research showing that automated reminders improve on-time payments ([Freelance invoice software: Benefits, features, and which should you choose?",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Article reference provided for additional information."
+    },
+    {
+      "sent_id": "REQ-011::s126",
+      "order": 126,
+      "text": "| Remote](https://remote.com/blog/freelance-invoice-software#:~:text=Accuracy%2C%20professionalism%2C%20and%20timeliness%20are,ensuring%20freelancers%20are%20paid%20promptly)).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.4,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Link in text, no content."
+    },
+    {
+      "sent_id": "REQ-011::s127",
+      "order": 127,
+      "text": "The user is alerted: “Client *XYZ Corp.* has not paid Invoice #123.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Client XYZ Corp. hasn't paid Invoice #123."
+    },
+    {
+      "sent_id": "REQ-011::s128",
+      "order": 128,
+      "text": "A reminder was sent.”",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.5,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Reminder sent. No obligation."
+    },
+    {
+      "sent_id": "REQ-011::s129",
+      "order": 129,
+      "text": "",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.3,
+      "reason_code": "EXAMPLE_OR_EXPLANATION",
+      "reason_text": "No reasoning provided."
+    },
+    {
+      "sent_id": "REQ-011::s130",
+      "order": 130,
+      "text": "- **Monthly Review:**",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "This is a heading introducing the monthly review section."
+    },
+    {
+      "sent_id": "REQ-011::s131",
+      "order": 131,
+      "text": "On the first of each month, the user is prompted with a summary screen: “In August you earned $X from Y clients; your net income was $Z after expenses.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "The system must prompt the user monthly with summary data."
+    },
+    {
+      "sent_id": "REQ-011::s132",
+      "order": 132,
+      "text": "We forecast $W next month.”",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "This is a statement about forecasting next month's financial data."
+    },
+    {
+      "sent_id": "REQ-011::s133",
+      "order": 133,
+      "text": "The dashboard shows visual breakdowns (e.g. income by client, expenses by category) and highlights any anomalies (such as an unusually low invoiced month).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.5,
+      "reason_code": "EXAMPLE_OR_EXPLANATION",
+      "reason_text": "An example of visual breakdown display without enforcing behavior."
+    },
+    {
+      "sent_id": "REQ-011::s134",
+      "order": 134,
+      "text": "The user can drill into charts or download a PDF tax report.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "EXAMPLE_OR_EXPLANATION",
+      "reason_text": "Describing a feature without enforcing it."
+    },
+    {
+      "sent_id": "REQ-011::s135",
+      "order": 135,
+      "text": "This proactive insight flow helps users catch issues early, much like having a virtual bookkeeper reviewing their accounts.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "A statement about user actions in the dashboard."
+    },
+    {
+      "sent_id": "REQ-011::s136",
+      "order": 136,
+      "text": "- **Proactive Alerts:*",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "This is a heading introducing proactive alerts."
+    },
+    {
+      "sent_id": "REQ-011::s137",
+      "order": 137,
+      "text": "*",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.9,
+      "reason_code": "EXAMPLE_OR_EXPLANATION",
+      "reason_text": "Just an asterisk, no content."
+    },
+    {
+      "sent_id": "REQ-011::s138",
+      "order": 138,
+      "text": "Throughout the process, the platform monitors for patterns.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "A statement about the process throughout but not enforceable."
+    },
+    {
+      "sent_id": "REQ-011::s139",
+      "order": 139,
+      "text": "For example, if Client *Acme LLC* has paid 15 days late on the last three invoices, the system will flag this to the user: “FYI, *Acme LLC* typically pays 15 days late.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "The system must flag late payments for users."
+    },
+    {
+      "sent_id": "REQ-011::s140",
+      "order": 140,
+      "text": "You may want to require a deposit or adjust the due date.”",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "User guidance on deposits or adjusting due dates provided."
+    },
+    {
+      "sent_id": "REQ-011::s141",
+      "order": 141,
+      "text": "Such AI-driven alerts leverage historical data to spot trends ([Dynamics 365 Business Central: Using AI to predict late payments](https://www.inecta.com/dynamics-365-business-central-using-ai-to-predict-late-payments#:~:text=Taking%20that%20away%20taking%20that,to%20look%20at%20that%20now)).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "A description of AI-driven alerts using historical data."
+    },
+    {
+      "sent_id": "REQ-011::s142",
+      "order": 142,
+      "text": "Similarly, if projected expenses threaten cash shortfall, the system will warn the user to review spending.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "The system must warn users of cash shortfall threats."
+    },
+    {
+      "sent_id": "REQ-011::s143",
+      "order": 143,
+      "text": "- **Communication & Disputes:**",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "This is a heading introducing communication and disputes."
+    },
+    {
+      "sent_id": "REQ-011::s144",
+      "order": 144,
+      "text": "If a client disputes a charge, the user can initiate an in-app message or upload related documents.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "The system must allow users to dispute charges."
+    },
+    {
+      "sent_id": "REQ-011::s145",
+      "order": 145,
+      "text": "For instance, *Marie* can clarify a scope-of-work issue with her design client within the platform.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "EXAMPLE_OR_EXPLANATION",
+      "reason_text": "An example of Marie clarifying a scope-of-work issue."
+    },
+    {
+      "sent_id": "REQ-011::s146",
+      "order": 146,
+      "text": "Every message and file is attached to the relevant invoice record.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "A statement about file attachments in messages."
+    },
+    {
+      "sent_id": "REQ-011::s147",
+      "order": 147,
+      "text": "This ensures that if the dispute escalates, the entire conversation is in the audit log and can be provided to advisors or regulators.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "The system must ensure conversations are in audit logs."
+    },
+    {
+      "sent_id": "REQ-011::s148",
+      "order": 148,
+      "text": "# Compliance, Auditability, and Localization Needs  \nBecause freelancers often handle regulated work across borders, the system must enforce strong compliance features.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Note about compliance needs provided for reference."
+    },
+    {
+      "sent_id": "REQ-011::s149",
+      "order": 149,
+      "text": "All financial transactions and changes produce audit logs: “Audit Trails are comprehensive logs…that track and document every action, event, or transaction within [the] system” ([Audit Trail & Reporting | Ensure Compliance | Invoicera](https://www.invoicera.com/product/security-admin/audit-trails#:~:text=Audit%20Trails%20are%20comprehensive%20logs,an%20invoicing%20or%20financial%20system)).",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.95,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Imposes mandatory audit logging behavior."
+    },
+    {
+      "sent_id": "REQ-011::s150",
+      "order": 150,
+      "text": "These logs give an unbroken history of the books, supporting dispute resolution and regulatory reviews ([Audit Trail & Reporting | Ensure Compliance | Invoicera](https://www.invoicera.com/product/security-admin/audit-trails#:~:text=,Trails%20aid%20in%20identifying%20errors)).",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Mandates audit trails for historical transactions."
+    },
+    {
+      "sent_id": "REQ-011::s151",
+      "order": 151,
+      "text": "Logs are time-stamped, user-attributed, and exportable (CSV/PDF), per the requirement.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Details about log management without enforcement."
+    },
+    {
+      "sent_id": "REQ-011::s152",
+      "order": 152,
+      "text": "For EU users, GDPR rules apply: the platform will limit data retention, encrypt personal data, and allow users to download or delete their data on request ([Multilingual Invoicing Software for International SMEs in Europe | by Invopoint | Medium](https://medium.com/@invopoint/multilingual-invoicing-software-for-international-smes-in-europe-ac175aa4bcef#:~:text=,EU%20GDPR%20privacy%20regulation%20compliance)).",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Imposes GDPR compliance obligations for EU users."
+    },
+    {
+      "sent_id": "REQ-011::s153",
+      "order": 153,
+      "text": "Electronic invoicing mandates (e-invoicing) and VAT rules will be followed when applicable ([Multilingual Invoicing Software for International SMEs in Europe | by Invopoint | Medium](https://medium.com/@invopoint/multilingual-invoicing-software-for-international-smes-in-europe-ac175aa4bcef#:~:text=Avoid%20Compliance%20Risks)).",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "PERFORMANCE_REQUIREMENT",
+      "reason_text": "Mandates e-invoicing and VAT compliance."
+    },
+    {
+      "sent_id": "REQ-011::s154",
+      "order": 154,
+      "text": "On the North American side, the platform will support IRS/CRA-friendly reporting and follow any data privacy norms (e.g. enabling California users’ privacy rights).",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "PERFORMANCE_REQUIREMENT",
+      "reason_text": "Imposes IRS/CRA-friendly reporting for North American users."
+    },
+    {
+      "sent_id": "REQ-011::s155",
+      "order": 155,
+      "text": "Globalization is critical: invoices, emails, and the UI must support multiple languages.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Mandates multi-language support for invoices and UI."
+    },
+    {
+      "sent_id": "REQ-011::s156",
+      "order": 156,
+      "text": "As one industry analysis notes, “Customers appreciate receiving invoices in their own language.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "EXAMPLE_OR_EXPLANATION",
+      "reason_text": "User preference about language in invoices without enforcement."
+    },
+    {
+      "sent_id": "REQ-011::s157",
+      "order": 157,
+      "text": "The improved experience inspires loyalty and prompt payment” ([Multilingual Invoicing Software for International SMEs in Europe | by Invopoint | Medium](https://medium.com/@invopoint/multilingual-invoicing-software-for-international-smes-in-europe-ac175aa4bcef#:~:text=Customers%20appreciate%20receiving%20invoices%20in,inspires%20loyalty%20and%20prompt%20payment)).",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Implements loyalty to inspire prompt payment but doesn't enforce a specific behavior."
+    },
+    {
+      "sent_id": "REQ-011::s158",
+      "order": 158,
+      "text": "Therefore, the system will be localized (initially in English, plus major EU languages) and handle multi-currency pricing, date formats, and tax labels accordingly.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Explains system localization without enforcing language support."
+    },
+    {
+      "sent_id": "REQ-011::s159",
+      "order": 159,
+      "text": "Security and trust are also part of compliance: payment processing uses PCI-DSS-compliant partners (Stripe/PayPal) so that user and client card data are handled safely.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "COMPLIANCE_REQUIREMENT",
+      "reason_text": "A statement about compliance with security and trust."
+    },
+    {
+      "sent_id": "REQ-011::s160",
+      "order": 160,
+      "text": "Administrative actions (like changing bank credentials or user roles) require re-authentication.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "ARCHITECTURE_DESCRIPTION",
+      "reason_text": "The system must enforce administrative actions with re-authentication."
+    },
+    {
+      "sent_id": "REQ-011::s161",
+      "order": 161,
+      "text": "In summary, every feature from billing to reporting is designed to meet audit and legal standards in our target regions.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-011::s162",
+      "order": 162,
+      "text": "# Operational Goals  \n- **Reliability & Availability:**",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "This is a heading for operational goals introducing reliability and availability."
+    },
+    {
+      "sent_id": "REQ-011::s163",
+      "order": 163,
+      "text": "As a mission-critical financial tool, the platform must have enterprise-grade uptime (target 99.9%+ availability).",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.95,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Imposes enterprise-grade uptime requirements."
+    },
+    {
+      "sent_id": "REQ-011::s164",
+      "order": 164,
+      "text": "We will use scalable infrastructure (e.g. containerized services, load-balanced APIs) to support a growing user base.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "ARCHITECTURE_DESCRIPTION",
+      "reason_text": "Describes scalable infrastructure but doesn't enforce scalability."
+    },
+    {
+      "sent_id": "REQ-011::s165",
+      "order": 165,
+      "text": "Real-time health monitoring and automated backups will ensure data integrity.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Mandates real-time monitoring and backups."
+    },
+    {
+      "sent_id": "REQ-011::s166",
+      "order": 166,
+      "text": "- **Performance:**",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "This appears to be a generic heading without specific requirements."
+    },
+    {
+      "sent_id": "REQ-011::s167",
+      "order": 167,
+      "text": "The user interface (built in SvelteKit or Vue 3) should be fast and responsive, even as transaction histories grow.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Enforceable system behavior: fast and responsive user interface."
+    },
+    {
+      "sent_id": "REQ-011::s168",
+      "order": 168,
+      "text": "The backend (Deno or Go) will handle concurrent processing of invoices, reports, and integrations without lag.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Imposes concurrent processing requirements for invoices and integrations."
+    },
+    {
+      "sent_id": "REQ-011::s169",
+      "order": 169,
+      "text": "Database queries (PostgreSQL with time-series extension) will be optimized for analytics queries so dashboards load quickly.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Mandates optimized PostgreSQL queries for analytics."
+    },
+    {
+      "sent_id": "REQ-011::s170",
+      "order": 170,
+      "text": "- **Extensibility & Maintainability:**",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Another generic heading without specific requirements."
+    },
+    {
+      "sent_id": "REQ-011::s171",
+      "order": 171,
+      "text": "The system will be modular.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describes a modular system but doesn't enforce behavior."
+    },
+    {
+      "sent_id": "REQ-011::s172",
+      "order": 172,
+      "text": "Core components (invoicing engine, reminders, analytics) will have clean interfaces so features like additional payment gateways or new report types can be added later.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Imposes clean interfaces for future extensibility."
+    },
+    {
+      "sent_id": "REQ-011::s173",
+      "order": 173,
+      "text": "Code will follow best practices for security and test coverage.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Mandates best practices in security and test coverage."
+    },
+    {
+      "sent_id": "REQ-011::s174",
+      "order": 174,
+      "text": "We will provide RESTful APIs or webhooks so power users can integrate third-party tools.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Imposes RESTful APIs and webhooks for integration."
+    },
+    {
+      "sent_id": "REQ-011::s175",
+      "order": 175,
+      "text": "- **Data Management:** PostgreSQL’s time-series capability allows us to keep full historical snapshots (critical for auditability) without performance degradation.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "PostgreSQL's time-series capability allows full historical snapshots."
+    },
+    {
+      "sent_id": "REQ-011::s176",
+      "order": 176,
+      "text": "Data migrations or schema changes will be handled carefully through versioned migrations.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Mandates careful schema changes via versioned migrations."
+    },
+    {
+      "sent_id": "REQ-011::s177",
+      "order": 177,
+      "text": "Logs and errors will be captured for troubleshooting, and logs will be separately archived for security.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Imposes logging and error handling for troubleshooting."
+    },
+    {
+      "sent_id": "REQ-011::s178",
+      "order": 178,
+      "text": "- **Scalability:**",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Another heading without specifics."
+    },
+    {
+      "sent_id": "REQ-011::s179",
+      "order": 179,
+      "text": "The architecture will support horizontal scaling.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Explains horizontal scaling without enforcing scalability."
+    },
+    {
+      "sent_id": "REQ-011::s180",
+      "order": 180,
+      "text": "Services can run in multiple regions (North America, EU) to reduce latency and comply with any data residency preferences.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-011::s181",
+      "order": 181,
+      "text": "Autoscaling will handle peak loads (e.g. month‑end tax crunch).",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-011::s182",
+      "order": 182,
+      "text": "- **User Support:**",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describes support for multiple regions but no enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-011::s183",
+      "order": 183,
+      "text": "Administrators should be able to manage user accounts, support tickets, and usage analytics through an admin dashboard.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Administrators manage user accounts, support tickets, and analytics."
+    },
+    {
+      "sent_id": "REQ-011::s184",
+      "order": 184,
+      "text": "A modest analytics backend will track usage patterns to inform future improvements.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "The backend needs to track usage patterns for future improvements."
+    },
+    {
+      "sent_id": "REQ-011::s185",
+      "order": 185,
+      "text": "# Feature Prioritization Matrix (MVP vs Phase 2)  \n\n| *",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Part of a matrix, not standalone."
+    },
+    {
+      "sent_id": "REQ-011::s186",
+      "order": 186,
+      "text": "*Feature / Module**",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.5,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Header without specifics."
+    },
+    {
+      "sent_id": "REQ-011::s187",
+      "order": 187,
+      "text": "| **MVP (Phase 1)**                         | **Phase 2 (Future)**                 |\n|--------------------------------------------|-------------------------------------------|--------------------------------------|\n| Invoicing (one-time and recurring)         | ✓ Fully implemented                       |  (Enhancements: more invoice templates)",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Data in table but no requirement."
+    },
+    {
+      "sent_id": "REQ-011::s188",
+      "order": 188,
+      "text": "|\n| Payment Processing (Stripe, PayPal)        | ✓ Integrated                              |  (Add other methods/bank transfers)",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-011::s189",
+      "order": 189,
+      "text": "|\n| Automated Reminders & Follow-ups           | ✓",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.7,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Multi-currency localization with reports."
+    },
+    {
+      "sent_id": "REQ-011::s190",
+      "order": 190,
+      "text": "Yes (up to 2 reminders, basic escalation) | ✓ Advanced workflows (custom escalations) |\n| Basic Dashboard & Analytics                | ✓ Income/expenses charts, summary stats   | ✓ Custom reports, drill-downs         |\n| Tax Summary Reports (monthly/quarterly)    | ✓ Basic VAT/sales tax summary             | ✓ Support for additional tax forms     |\n| Multi-Currency / Localization              | ✓ Support EN, one EU language, multiple currencies | ✓ Add more languages and locale options |\n| Audit Logs & Compliance                    | ✓ Full action logs, GDPR support          | ✓ Enhanced export/reporting features",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Analytics dashboards and compliance features."
+    },
+    {
+      "sent_id": "REQ-011::s191",
+      "order": 191,
+      "text": "|\n| AI Insights & Forecasting                 | – (Out of MVP scope)                      | ✓ Revenue forecasting, risk alerts     |\n| Advanced Alerts (patterns, risk scores)",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-011::s192",
+      "order": 192,
+      "text": "| –                                        | ✓ Smart alerts (habitual late payers)",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.5,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Part of the MVP description."
+    },
+    {
+      "sent_id": "REQ-011::s193",
+      "order": 193,
+      "text": "|\n| In-App Client Communication                | –                                        | ✓ Messaging/dispute workflow           |\n| Open Banking / Bank Sync                   | –                                        | ✓ Connect bank accounts, auto-import   |\n| Extensible APIs & Integrations            | – (Basic APIs for Stripe/PayPal)          | ✓ Public API, webhooks                |\n\n**MVP Focus:** Core billing, reminder automation, basic dashboards, essential compliance (audit logs, GDPR), and support for our initial target languages/currencies.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.7,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Core billing and reminder automation."
+    },
+    {
+      "sent_id": "REQ-011::s194",
+      "order": 194,
+      "text": "This delivers immediate value by automating the largest pain points (invoices, payments, tax prep).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "delivers immediate value by automating largest pain points."
+    },
+    {
+      "sent_id": "REQ-011::s195",
+      "order": 195,
+      "text": "**Phase 2 Expansion:** Advanced analytics and AI-driven features (forecasting cash flow, intelligent alerts), richer client communication tools, broader internationalization (additional languages, open banking integration), and an open API layer.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.6,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Phase 2 expansion with AI and analytics."
+    },
+    {
+      "sent_id": "REQ-011::s196",
+      "order": 196,
+      "text": "These will deepen the platform’s intelligence and flexibility once the core is validated.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "The platform should enhance its intelligence and flexibility after core validation."
+    },
+    {
+      "sent_id": "REQ-011::s197",
+      "order": 197,
+      "text": "**Sources:** Market statistics and user needs are drawn from industry reports ([Number of Freelancers (2024)](https://explodingtopics.com/blog/number-of-freelancers#:~:text=Number%20of%20Freelancers%20))",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-011::s198",
+      "order": 198,
+      "text": "([How to get paid as a freelancer | Stripe](https://stripe.com/resources/more/how-to-accept-payments-as-a-freelancer-and-how-to-choose-the-right-payment-methods#:~:text=Seventy,also%20have%20clear%20payment%20terms)).",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-011::s199",
+      "order": 199,
+      "text": "Best practices for freelancer invoicing and automation are well documented ([Freelance invoice software: Benefits, features, and which should you choose?",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-011::s200",
+      "order": 200,
+      "text": "| Remote](https://remote.com/blog/freelance-invoice-software#:~:text=One%20of%20the%20most%20common,following%20up%20on%20overdue%20payments))",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "The sentence is a description of remote payment handling without stating any enforceable requirement."
+    },
+    {
+      "sent_id": "REQ-011::s201",
+      "order": 201,
+      "text": "([Freelance invoice software: Benefits, features, and which should you choose?",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "EXAMPLE_OR_EXPLANATION",
+      "reason_text": "The sentence is a product description asking for benefits and features, not an enforceable requirement."
+    },
+    {
+      "sent_id": "REQ-011::s202",
+      "order": 202,
+      "text": "| Remote](https://remote.com/blog/freelance-invoice-software#:~:text=Accuracy%2C%20professionalism%2C%20and%20timeliness%20are,ensuring%20freelancers%20are%20paid%20promptly)), and compliance/audit guidance is drawn from domain references ([Audit Trail & Reporting | Ensure Compliance | Invoicera](https://www.invoicera.com/product/security-admin/audit-trails#:~:text=Audit%20Trails%20are%20comprehensive%20logs,an%20invoicing%20or%20financial%20system))",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-011::s203",
+      "order": 203,
+      "text": "([Multilingual Invoicing Software for International SMEs in Europe | by Invopoint | Medium](https://medium.com/@invopoint/multilingual-invoicing-software-for-international-smes-in-europe-ac175aa4bcef#:~:text=Avoid%20Compliance%20Risks)).",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "The sentence is a product title without any enforceable statement."
+    },
+    {
+      "sent_id": "REQ-011::s204",
+      "order": 204,
+      "text": "All cited ideas have informed this requirements overview.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "The sentence is a summary without stating any enforceable behavior."
+    }
+  ]
+}

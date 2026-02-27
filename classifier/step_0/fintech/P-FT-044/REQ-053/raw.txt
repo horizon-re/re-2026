@@ -1,0 +1,125 @@
+User Personas
+
+1. Olivia Chen — Operations Manager
+	•	Background: 8+ years managing supply chain operations in a mid-sized manufacturing company.
+	•	Goals: Wants accurate forecasts to optimize inventory levels, minimize waste, and avoid stockouts.
+	•	Frustrations: Past tools were too rigid — she needs customization based on seasonal changes and anomalies.
+
+2. Daniel Ruiz — Financial Analyst
+	•	Background: Junior financial analyst in a fast-scaling SaaS company.
+	•	Goals: Forecast subscription revenue churn and upsells to report realistic financial plans.
+	•	Frustrations: Overly volatile forecasts from AI tools that “overreact” to minor fluctuations.
+
+3. Priya Patel — Product Manager
+	•	Background: PM for an AI-first logistics platform.
+	•	Goals: Integrate forecasting into her product to enable customers to predict delivery times and demand surges.
+	•	Frustrations: API-based tools without clean documentation or rate limits that throttle at peak times.
+
+⸻
+
+Functional Requirements
+
+Core Forecasting
+	•	Provide time-series forecasting for numeric KPIs (inventory, revenue, usage metrics).
+	•	Allow users to input historical data manually or via integrations.
+	•	Forecast horizon customizable: 7 days, 30 days, 90 days, 1 year.
+	•	Model selection: AutoML (default), with manual override options for ARIMA, Prophet, or LSTM models for advanced users.
+
+Alerting
+	•	Threshold-based alerts for forecasted metrics (e.g., stock expected to run out within 10 days).
+	•	Smart anomaly alerts: Detect deviations from forecasted trends automatically.
+	•	Alert delivery options: Email, SMS, Webhook.
+
+Reporting
+	•	Daily, weekly, monthly forecast summary reports.
+	•	Comparison reports: Forecast vs. Actual with deviation analysis.
+	•	Export formats: CSV, PDF, JSON.
+
+⸻
+
+Non‑Functional Requirements
+
+Scalability
+	•	Support 10,000+ simultaneous forecasts across multiple organizations.
+	•	Horizontal auto-scaling enabled via Kubernetes and container orchestration.
+
+Availability
+	•	99.9% uptime target (measured monthly).
+	•	Graceful degradation: read-only mode if backend services are down.
+
+Performance
+	•	Forecast generation time must not exceed 5 seconds for <100,000 data points.
+	•	Alert processing latency under 1 second after data ingestion.
+
+⸻
+
+AI Sensitivity Slider
+
+Description:
+	•	Users adjust the “sensitivity” of forecasts using a simple slider:
+	•	Conservative Mode (left side): Favors stability. Less responsive to minor data fluctuations.
+	•	Volatile Mode (right side): Hyper-reactive to recent changes, suitable for dynamic environments.
+	•	Intermediate states provide a weighted blend based on exponential smoothing factors.
+	•	Default setting is Balanced at 50%.
+
+Example:
+Olivia managing seasonal inventory sets the slider toward Conservative during stable months, then shifts it toward Volatile during unpredictable seasons (e.g., Black Friday).
+
+⸻
+
+Reporting & Dashboards
+
+Required Visualizations
+	•	Forecasted Trend Line (historical + prediction interval shading).
+	•	Anomaly Heatmaps.
+	•	Deviation Charts (Actual vs. Forecast).
+	•	Alert Frequency Graphs (over time).
+	•	Sensitivity Distribution Graphs (to monitor slider usage impact).
+
+Export Options
+	•	Scheduled email delivery of PDFs.
+	•	Direct download of CSVs with timestamps and confidence intervals.
+	•	Embed charts via iframe or JS snippets into external dashboards (with auth).
+
+⸻
+
+Integrations & API
+
+Endpoints
+	•	/api/forecast/upload – Upload historical data.
+	•	/api/forecast/generate – Trigger forecast computation.
+	•	/api/forecast/result – Retrieve forecast output.
+	•	/api/alerts/subscribe – Create new threshold-based alert.
+	•	/api/report/export – Generate downloadable reports.
+
+Authentication
+	•	OAuth 2.0 with JWT access tokens.
+	•	API keys available for service-to-service integrations.
+
+Rate Limits
+	•	Free tier: 100 API calls/hour.
+	•	Premium: 5,000 API calls/hour.
+	•	Custom enterprise plans available.
+
+Webhook Support
+	•	Outbound webhooks for real-time alert delivery to Slack, PagerDuty, custom endpoints.
+
+⸻
+
+Security & Compliance
+
+Data Encryption
+	•	At rest: AES-256 encryption on all stored data.
+	•	In transit: TLS 1.3 enforced across all APIs and frontend apps.
+
+Audit Logs
+	•	Immutable audit logs capturing:
+	•	Data upload events.
+	•	Forecast generation requests.
+	•	Alert trigger events.
+	•	Report export activities.
+	•	Logs stored for minimum 1 year; configurable up to 5 years for enterprise customers.
+
+Regulatory Compliance
+	•	GDPR, CCPA, and SOC 2 Type II alignment.
+	•	Right-to-be-forgotten workflows enabled on request.

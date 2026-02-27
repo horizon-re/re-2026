@@ -1,0 +1,14 @@
+{
+  "doc_id": "c7d7fc16-87b6-55e9-851c-7e6bc09fe70a",
+  "req_key": "fintech::P-FT-023::REQ-032",
+  "req_id": "REQ-032",
+  "domain": "fintech",
+  "prompt_id": "P-FT-023",
+  "source": {
+    "raw_path": "02_raw_requirements/fintech/P-FT-023/req-032_raw.txt",
+    "refined_path": null,
+    "origin": "raw_only"
+  },
+  "text": "Budget available: $60 000 total. We have two sprints to deliver a Plaid-style bank account aggregator MVP on our budgeting dashboard or the feature is scrapped. MVP must be PSD2-compliant in the EU sandbox and incorporate investor-demanded AI insights. Must-haves:\nBasic account aggregator integration (multi-bank linking with balances/transactions visible on the dashboard)\nPSD2 open banking compliance (EU sandbox ready)\nBasic AI-driven insight to satisfy investor expectations\nStretch goals:\nAdditional bank coverage beyond core MVP connections\nEnhanced AI insights or other UX improvements if time permits\nBoard meets Friday—confirm 2-sprint MVP.",
+  "structured_data": null
+}

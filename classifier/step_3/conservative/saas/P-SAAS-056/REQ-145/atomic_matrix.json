@@ -1,0 +1,9 @@
+{
+  "req_id": "REQ-145",
+  "mode": "conservative",
+  "num_parent_sentences": 5,
+  "num_atomic_units": 8,
+  "avg_units_per_sentence": 1.6,
+  "max_units_from_single_sentence": 2,
+  "split_rate": 0.6
+}

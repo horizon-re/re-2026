@@ -1,0 +1,12 @@
+{
+  "total_requirements": 110,
+  "total_sentences": 5501,
+  "total_candidates": 1833,
+  "global_acceptance_rate": 0.333,
+  "signal_acceptance_rates": {
+    "action": 0.439,
+    "modal": 0.916,
+    "constraint": 0.677,
+    "system": 0.957
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "req_id": "REQ-168",
+  "doc_id": "c836f946-0cc3-5328-bfb2-83e23366cfc5",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-079",
+  "model": "deepseek-r1:7b",
+  "review_timestamp": "2026-01-21T00:21:25.016514+00:00",
+  "counts": {
+    "total": 7,
+    "llm_pos": 3,
+    "pipe_pos": 4,
+    "llm_neg": 4,
+    "flip_pos_to_neg": 1,
+    "pipe_neg": 3
+  },
+  "reviews": [
+    {
+      "sent_id": "REQ-168::s001",
+      "order": 1,
+      "text": "Title: BRF Output Formatting Enhancements for Pagination and Accessibility\n\nDescription:\nUpdate the BRF (Braille Ready Format) output generator to enforce a strict limit of 40 cells per line to comply with standard tactile display and embossing device constraints.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.5,
+      "reason_code": "EXAMPLE_OR_EXPLANATION",
+      "reason_text": "Title and description for enhancement."
+    },
+    {
+      "sent_id": "REQ-168::s002",
+      "order": 2,
+      "text": "Additionally, ensure that pagination begins from page 1—page 0 must be explicitly disallowed to avoid indexing errors and alignment issues in downstream tools.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Enforce pagination starting from page 1, disallowing page 0."
+    },
+    {
+      "sent_id": "REQ-168::s003",
+      "order": 3,
+      "text": "A tactile page break marker \"⠿⠿\" must be inserted at the end of each page to assist with both manual review and automated parsing by assistive hardware.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Insert tactile marker at end of each page."
+    },
+    {
+      "sent_id": "REQ-168::s004",
+      "order": 4,
+      "text": "This marker should be consistent and placed on a new line following the final line of each page.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Marker placement constraint on new line after final page."
+    },
+    {
+      "sent_id": "REQ-168::s005",
+      "order": 5,
+      "text": "Test Plan:\nInclude a regression test case simulating a 1,000-page BRF document, ensuring no overflow occurs beyond 40 cells/line, page numbering remains sequential from 1, and all page breaks render correctly with the \"⠿⠿\" symbol.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.6,
+      "reason_code": "EXAMPLE_OR_EXPLANATION",
+      "reason_text": "Test plan with regression tests."
+    },
+    {
+      "sent_id": "REQ-168::s006",
+      "order": 6,
+      "text": "Priority: High\nImpact: Prevents tactile display overflow, improves document readability and navigability for visually impaired users, and aligns with assistive device formatting standards.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Priority and impact ratings."
+    },
+    {
+      "sent_id": "REQ-168::s007",
+      "order": 7,
+      "text": "Failure to implement may result in unreadable output and increased user error.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Potential impact from implementation."
+    }
+  ]
+}

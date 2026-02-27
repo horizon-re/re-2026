@@ -1,0 +1,63 @@
+{
+  "doc_id": "80824469-2dad-5b22-8475-25921bbb7d63",
+  "req_key": "saas::P-SAAS-075::REQ-164",
+  "req_id": "REQ-164",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-075",
+  "source": {
+    "raw_path": "02_raw_requirements/saas/P-SAAS-075/req-164_raw.txt",
+    "refined_path": "03_refined_json_normalized/saas/P-SAAS-075/req-164_refined.json",
+    "origin": "both"
+  },
+  "text": "Title: Bounding Box ID Overflow Causing Robot Collisions\n\nDescription:\nBounding box identifiers currently reset at 4,096 due to a hardcoded limit in the ID allocator. This overflow is causing ID duplication, resulting in robot collisions during path planning and shared environment tasks. The system fails to detect ID reuse under high-frequency operations, especially in dense object mapping scenarios.\n\nProposed Fix:\nIncrease the ID range to 32,767 to align with int16 safe limits. Implement a modulo-based collision check to ensure no two active bounding boxes share the same ID within the session.\n\nSeverity: Critical\nDeadline: Fix must be implemented and validated by Friday to avoid operational downtime in the fleet.\n\nImpact: Affects all robots operating in shared workspaces with more than 4,096 active objects. High risk of damage and mission failure if not addressed.",
+  "structured_data": [
+    {
+      "id": "REQ-164-HLJ-Chunk_1-Item_1-v1.0",
+      "domain": "unknown",
+      "summary": "Increase bounding box ID range to 32,767",
+      "priority": "High",
+      "tags": [
+        "id_range",
+        "bounding_box",
+        "int16_limit"
+      ],
+      "subdomain": "robotics_navigation",
+      "difficulty": 2,
+      "additionalNotes": "Prevents ID reuse and collisions by extending the allowable ID range.",
+      "source_hlj_id": "REQ 001-001",
+      "domain_id": "P-SAAS-075"
+    },
+    {
+      "id": "REQ-164-HLJ-Chunk_1-Item_2-v1.0",
+      "domain": "unknown",
+      "summary": "Implement modulo-based collision check for bounding box IDs",
+      "priority": "High",
+      "tags": [
+        "collision_check",
+        "modulo_test",
+        "id_validation"
+      ],
+      "subdomain": "robotics_navigation",
+      "difficulty": 3,
+      "additionalNotes": "Validates uniqueness of active bounding box IDs during high-frequency operation.",
+      "source_hlj_id": "REQ 001-002",
+      "domain_id": "P-SAAS-075"
+    },
+    {
+      "id": "REQ-164-HLJ-Chunk_1-Item_3-v1.0",
+      "domain": "unknown",
+      "summary": "Detect and prevent bounding box ID duplication",
+      "priority": "Low",
+      "tags": [
+        "duplicate_detection",
+        "id_tracking",
+        "system_integrity"
+      ],
+      "subdomain": "robotics_navigation",
+      "difficulty": 3,
+      "additionalNotes": "origin: implied – Enhances safety by actively scanning for reused IDs in shared workspaces.",
+      "source_hlj_id": "REQ 001-003",
+      "domain_id": "P-SAAS-075"
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+For card issuance, Pantone 419 C has been designated as the approved "midnight-black" anodized metal finish for the card. Embossing depth must not exceed 0.25 mm to preserve NFC antenna functionality. All marketing renders must be updated within 48 hours of any implementation changes. Supply-chain feasibility has been confirmed with manufacturing vendor LuxMetal GmbH.

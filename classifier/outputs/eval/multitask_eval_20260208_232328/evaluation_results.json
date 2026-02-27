@@ -1,0 +1,1026 @@
+{
+  "metadata": {
+    "timestamp": "20260208_232328",
+    "test_data": "classifier\\outputs\\splits\\train_40.jsonl",
+    "n_samples": 2213,
+    "n_models_evaluated": 13
+  },
+  "results": [
+    {
+      "model_dir": "deberta",
+      "config": {
+        "model": "microsoft/deberta-v3-base",
+        "model_type": "deberta",
+        "max_length": 128,
+        "n_context": 1,
+        "seed": 42,
+        "dev_ratio": 0.15,
+        "epochs": 10,
+        "patience": 3,
+        "batch_size": 16,
+        "lr": 2e-05,
+        "weight_decay": 0.0001,
+        "lora": {
+          "r": 16,
+          "alpha": 32,
+          "dropout": 0.1,
+          "target_modules": [
+            "query_proj",
+            "key_proj",
+            "value_proj"
+          ]
+        },
+        "n_train": 15506,
+        "n_dev": 2579,
+        "class_balance": {
+          "train_req": 10379,
+          "train_non_req": 5127,
+          "pos_weight": 0.49397823214530945
+        },
+        "tasks": {
+          "task1": "requirement vs non-requirement (primary)",
+          "task2": "functional vs non-functional (secondary)",
+          "task3": "ambiguity detection (tertiary)"
+        }
+      },
+      "metrics": {
+        "req_n": 2211,
+        "req_accuracy": 0.6056083220262325,
+        "req_precision": 0.5984732824427481,
+        "req_recall": 0.9340746624305004,
+        "req_f1": 0.7295285359801489,
+        "req_roc_auc": 0.7393635571782327,
+        "req_pr_auc": 0.772752154544045,
+        "req_tp": 1176,
+        "req_fp": 789,
+        "req_tn": 163,
+        "req_fn": 83,
+        "func_n": 0,
+        "amb_n": 2136,
+        "amb_accuracy": 0.87687265917603,
+        "amb_precision": 0.09090909090909091,
+        "amb_recall": 0.057803468208092484,
+        "amb_f1": 0.0706713780918728,
+        "amb_roc_auc": 0.6036354641798121,
+        "amb_pr_auc": 0.10663015522483726,
+        "amb_tp": 10,
+        "amb_fp": 100,
+        "amb_tn": 1863,
+        "amb_fn": 163
+      },
+      "checkpoint_used": "best.pt"
+    },
+    {
+      "model_dir": "mpnet",
+      "config": {
+        "model": "microsoft/mpnet-base",
+        "model_type": "mpnet",
+        "max_length": 128,
+        "n_context": 1,
+        "seed": 42,
+        "dev_ratio": 0.15,
+        "epochs": 10,
+        "patience": 3,
+        "batch_size": 16,
+        "lr": 2e-05,
+        "weight_decay": 0.0001,
+        "lora": {
+          "r": 16,
+          "alpha": 32,
+          "dropout": 0.1,
+          "target_modules": [
+            "q",
+            "k",
+            "v"
+          ]
+        },
+        "n_train": 15506,
+        "n_dev": 2579,
+        "class_balance": {
+          "train_req": 10379,
+          "train_non_req": 5127,
+          "pos_weight": 0.49397823214530945
+        },
+        "tasks": {
+          "task1": "requirement vs non-requirement (primary)",
+          "task2": "functional vs non-functional (secondary)",
+          "task3": "ambiguity detection (tertiary)"
+        }
+      },
+      "metrics": {
+        "req_n": 2211,
+        "req_accuracy": 0.6114880144730891,
+        "req_precision": 0.6063829787234043,
+        "req_recall": 0.9054805401111994,
+        "req_f1": 0.7263459700541575,
+        "req_roc_auc": 0.7350680144973001,
+        "req_pr_auc": 0.7949116856749976,
+        "req_tp": 1140,
+        "req_fp": 740,
+        "req_tn": 212,
+        "req_fn": 119,
+        "func_n": 0,
+        "amb_n": 2136,
+        "amb_accuracy": 0.9166666666666666,
+        "amb_precision": 0.4074074074074074,
+        "amb_recall": 0.06358381502890173,
+        "amb_f1": 0.11,
+        "amb_roc_auc": 0.6755599987043542,
+        "amb_pr_auc": 0.1916129137120195,
+        "amb_tp": 11,
+        "amb_fp": 16,
+        "amb_tn": 1947,
+        "amb_fn": 162
+      },
+      "checkpoint_used": "best.pt"
+    },
+    {
+      "model_dir": "paraphrase-mpnet",
+      "config": {
+        "model": "sentence-transformers/paraphrase-mpnet-base-v2",
+        "model_type": "paraphrase-mpnet",
+        "max_length": 128,
+        "n_context": 1,
+        "seed": 42,
+        "dev_ratio": 0.15,
+        "epochs": 10,
+        "patience": 3,
+        "batch_size": 16,
+        "lr": 2e-05,
+        "weight_decay": 0.0001,
+        "lora": {
+          "r": 16,
+          "alpha": 32,
+          "dropout": 0.1,
+          "target_modules": [
+            "q",
+            "k",
+            "v"
+          ]
+        },
+        "n_train": 15506,
+        "n_dev": 2579,
+        "class_balance": {
+          "train_req": 10379,
+          "train_non_req": 5127,
+          "pos_weight": 0.49397823214530945
+        },
+        "tasks": {
+          "task1": "requirement vs non-requirement (primary)",
+          "task2": "functional vs non-functional (secondary)",
+          "task3": "ambiguity detection (tertiary)"
+        }
+      },
+      "metrics": {
+        "req_n": 2211,
+        "req_accuracy": 0.5884215287200362,
+        "req_precision": 0.5893497183819765,
+        "req_recall": 0.9142176330420969,
+        "req_f1": 0.7166874221668742,
+        "req_roc_auc": 0.76757388817322,
+        "req_pr_auc": 0.8376751464334938,
+        "req_tp": 1151,
+        "req_fp": 802,
+        "req_tn": 150,
+        "req_fn": 108,
+        "func_n": 0,
+        "amb_n": 2136,
+        "amb_accuracy": 0.9194756554307116,
+        "amb_precision": 0.5714285714285714,
+        "amb_recall": 0.023121387283236993,
+        "amb_f1": 0.044444444444444446,
+        "amb_roc_auc": 0.6840538399700824,
+        "amb_pr_auc": 0.18841558612603243,
+        "amb_tp": 4,
+        "amb_fp": 3,
+        "amb_tn": 1960,
+        "amb_fn": 169
+      },
+      "checkpoint_used": "best.pt"
+    },
+    {
+      "model_dir": "deberta",
+      "config": {
+        "model": "microsoft/deberta-v3-base",
+        "model_type": "deberta",
+        "max_length": 128,
+        "n_context": 1,
+        "seed": 42,
+        "dev_ratio": 0.15,
+        "epochs": 10,
+        "patience": 3,
+        "batch_size": 16,
+        "lr": 2e-05,
+        "weight_decay": 0.0001,
+        "lora": {
+          "r": 8,
+          "alpha": 16,
+          "dropout": 0.1,
+          "target_modules": [
+            "query_proj",
+            "key_proj",
+            "value_proj"
+          ]
+        },
+        "n_train": 15506,
+        "n_dev": 2579,
+        "class_balance": {
+          "train_req": 10379,
+          "train_non_req": 5127,
+          "pos_weight": 0.49397823214530945
+        },
+        "tasks": {
+          "task1": "requirement vs non-requirement (primary)",
+          "task2": "functional vs non-functional (secondary)",
+          "task3": "ambiguity detection (tertiary)"
+        }
+      },
+      "metrics": {
+        "req_n": 2211,
+        "req_accuracy": 0.6331976481230213,
+        "req_precision": 0.6302325581395349,
+        "req_recall": 0.8610007942811755,
+        "req_f1": 0.7277609936220207,
+        "req_roc_auc": 0.7364058609941196,
+        "req_pr_auc": 0.7994440389193445,
+        "req_tp": 1084,
+        "req_fp": 636,
+        "req_tn": 316,
+        "req_fn": 175,
+        "func_n": 0,
+        "amb_n": 2136,
+        "amb_accuracy": 0.9068352059925093,
+        "amb_precision": 0.09375,
+        "amb_recall": 0.017341040462427744,
+        "amb_f1": 0.029268292682926828,
+        "amb_roc_auc": 0.5963253719828385,
+        "amb_pr_auc": 0.11019767090479231,
+        "amb_tp": 3,
+        "amb_fp": 29,
+        "amb_tn": 1934,
+        "amb_fn": 170
+      },
+      "checkpoint_used": "best.pt"
+    },
+    {
+      "model_dir": "deberta",
+      "config": {
+        "model": "microsoft/deberta-v3-base",
+        "model_type": "deberta",
+        "max_length": 128,
+        "n_context": 1,
+        "seed": 42,
+        "dev_ratio": 0.15,
+        "epochs": 10,
+        "patience": 3,
+        "batch_size": 16,
+        "lr": 2e-05,
+        "weight_decay": 0.0001,
+        "lora": {
+          "r": 16,
+          "alpha": 32,
+          "dropout": 0.1,
+          "target_modules": [
+            "query_proj",
+            "key_proj",
+            "value_proj"
+          ]
+        },
+        "n_train": 15506,
+        "n_dev": 2579,
+        "class_balance": {
+          "train_req": 10379,
+          "train_non_req": 5127,
+          "pos_weight": 0.49397823214530945
+        },
+        "tasks": {
+          "task1": "requirement vs non-requirement (primary)",
+          "task2": "functional vs non-functional (secondary)",
+          "task3": "ambiguity detection (tertiary)"
+        }
+      },
+      "metrics": {
+        "req_n": 2211,
+        "req_accuracy": 0.6056083220262325,
+        "req_precision": 0.5984732824427481,
+        "req_recall": 0.9340746624305004,
+        "req_f1": 0.7295285359801489,
+        "req_roc_auc": 0.7393635571782327,
+        "req_pr_auc": 0.772752154544045,
+        "req_tp": 1176,
+        "req_fp": 789,
+        "req_tn": 163,
+        "req_fn": 83,
+        "func_n": 0,
+        "amb_n": 2136,
+        "amb_accuracy": 0.87687265917603,
+        "amb_precision": 0.09090909090909091,
+        "amb_recall": 0.057803468208092484,
+        "amb_f1": 0.0706713780918728,
+        "amb_roc_auc": 0.6036354641798121,
+        "amb_pr_auc": 0.10663015522483726,
+        "amb_tp": 10,
+        "amb_fp": 100,
+        "amb_tn": 1863,
+        "amb_fn": 163
+      },
+      "checkpoint_used": "best.pt"
+    },
+    {
+      "model_dir": "deberta",
+      "config": {
+        "model": "microsoft/deberta-v3-base",
+        "model_type": "deberta",
+        "max_length": 128,
+        "n_context": 1,
+        "seed": 42,
+        "dev_ratio": 0.15,
+        "epochs": 10,
+        "patience": 3,
+        "batch_size": 16,
+        "lr": 2e-05,
+        "weight_decay": 0.0001,
+        "lora": {
+          "r": 32,
+          "alpha": 64,
+          "dropout": 0.1,
+          "target_modules": [
+            "query_proj",
+            "key_proj",
+            "value_proj"
+          ]
+        },
+        "n_train": 15506,
+        "n_dev": 2579,
+        "class_balance": {
+          "train_req": 10379,
+          "train_non_req": 5127,
+          "pos_weight": 0.49397823214530945
+        },
+        "tasks": {
+          "task1": "requirement vs non-requirement (primary)",
+          "task2": "functional vs non-functional (secondary)",
+          "task3": "ambiguity detection (tertiary)"
+        }
+      },
+      "metrics": {
+        "req_n": 2211,
+        "req_accuracy": 0.5952057892356399,
+        "req_precision": 0.591919191919192,
+        "req_recall": 0.9308975377283558,
+        "req_f1": 0.723680148193887,
+        "req_roc_auc": 0.773266097543068,
+        "req_pr_auc": 0.8249669721977091,
+        "req_tp": 1172,
+        "req_fp": 808,
+        "req_tn": 144,
+        "req_fn": 87,
+        "func_n": 0,
+        "amb_n": 2136,
+        "amb_accuracy": 0.9101123595505618,
+        "amb_precision": 0.08695652173913043,
+        "amb_recall": 0.011560693641618497,
+        "amb_f1": 0.02040816326530612,
+        "amb_roc_auc": 0.6339947997491158,
+        "amb_pr_auc": 0.12138382401886033,
+        "amb_tp": 2,
+        "amb_fp": 21,
+        "amb_tn": 1942,
+        "amb_fn": 171
+      },
+      "checkpoint_used": "best.pt"
+    },
+    {
+      "model_dir": "deberta",
+      "config": {
+        "model": "microsoft/deberta-v3-base",
+        "model_type": "deberta",
+        "max_length": 128,
+        "n_context": 1,
+        "seed": 42,
+        "dev_ratio": 0.15,
+        "epochs": 10,
+        "patience": 3,
+        "batch_size": 16,
+        "lr": 1e-05,
+        "weight_decay": 0.0001,
+        "lora": {
+          "r": 16,
+          "alpha": 32,
+          "dropout": 0.1,
+          "target_modules": [
+            "query_proj",
+            "key_proj",
+            "value_proj"
+          ]
+        },
+        "n_train": 15506,
+        "n_dev": 2579,
+        "class_balance": {
+          "train_req": 10379,
+          "train_non_req": 5127,
+          "pos_weight": 0.49397823214530945
+        },
+        "tasks": {
+          "task1": "requirement vs non-requirement (primary)",
+          "task2": "functional vs non-functional (secondary)",
+          "task3": "ambiguity detection (tertiary)"
+        }
+      },
+      "metrics": {
+        "req_n": 2211,
+        "req_accuracy": 0.6282225237449118,
+        "req_precision": 0.6151818661043753,
+        "req_recall": 0.9269261318506752,
+        "req_f1": 0.7395437262357415,
+        "req_roc_auc": 0.7605584330634558,
+        "req_pr_auc": 0.7996085067964348,
+        "req_tp": 1167,
+        "req_fp": 730,
+        "req_tn": 222,
+        "req_fn": 92,
+        "func_n": 0,
+        "amb_n": 2136,
+        "amb_accuracy": 0.8979400749063671,
+        "amb_precision": 0.058823529411764705,
+        "amb_recall": 0.017341040462427744,
+        "amb_f1": 0.02678571428571428,
+        "amb_roc_auc": 0.5991507631058984,
+        "amb_pr_auc": 0.10730364840937667,
+        "amb_tp": 3,
+        "amb_fp": 48,
+        "amb_tn": 1915,
+        "amb_fn": 170
+      },
+      "checkpoint_used": "best.pt"
+    },
+    {
+      "model_dir": "deberta",
+      "config": {
+        "model": "microsoft/deberta-v3-base",
+        "model_type": "deberta",
+        "max_length": 128,
+        "n_context": 1,
+        "seed": 42,
+        "dev_ratio": 0.15,
+        "epochs": 10,
+        "patience": 3,
+        "batch_size": 16,
+        "lr": 2e-05,
+        "weight_decay": 0.0001,
+        "lora": {
+          "r": 16,
+          "alpha": 32,
+          "dropout": 0.1,
+          "target_modules": [
+            "query_proj",
+            "key_proj",
+            "value_proj"
+          ]
+        },
+        "n_train": 15506,
+        "n_dev": 2579,
+        "class_balance": {
+          "train_req": 10379,
+          "train_non_req": 5127,
+          "pos_weight": 0.49397823214530945
+        },
+        "tasks": {
+          "task1": "requirement vs non-requirement (primary)",
+          "task2": "functional vs non-functional (secondary)",
+          "task3": "ambiguity detection (tertiary)"
+        }
+      },
+      "metrics": {
+        "req_n": 2211,
+        "req_accuracy": 0.6056083220262325,
+        "req_precision": 0.5984732824427481,
+        "req_recall": 0.9340746624305004,
+        "req_f1": 0.7295285359801489,
+        "req_roc_auc": 0.7393635571782327,
+        "req_pr_auc": 0.772752154544045,
+        "req_tp": 1176,
+        "req_fp": 789,
+        "req_tn": 163,
+        "req_fn": 83,
+        "func_n": 0,
+        "amb_n": 2136,
+        "amb_accuracy": 0.87687265917603,
+        "amb_precision": 0.09090909090909091,
+        "amb_recall": 0.057803468208092484,
+        "amb_f1": 0.0706713780918728,
+        "amb_roc_auc": 0.6036354641798121,
+        "amb_pr_auc": 0.10663015522483726,
+        "amb_tp": 10,
+        "amb_fp": 100,
+        "amb_tn": 1863,
+        "amb_fn": 163
+      },
+      "checkpoint_used": "best.pt"
+    },
+    {
+      "model_dir": "deberta",
+      "config": {
+        "model": "microsoft/deberta-v3-base",
+        "model_type": "deberta",
+        "max_length": 128,
+        "n_context": 1,
+        "seed": 42,
+        "dev_ratio": 0.15,
+        "epochs": 10,
+        "patience": 3,
+        "batch_size": 16,
+        "lr": 3e-05,
+        "weight_decay": 0.0001,
+        "lora": {
+          "r": 16,
+          "alpha": 32,
+          "dropout": 0.1,
+          "target_modules": [
+            "query_proj",
+            "key_proj",
+            "value_proj"
+          ]
+        },
+        "n_train": 15506,
+        "n_dev": 2579,
+        "class_balance": {
+          "train_req": 10379,
+          "train_non_req": 5127,
+          "pos_weight": 0.49397823214530945
+        },
+        "tasks": {
+          "task1": "requirement vs non-requirement (primary)",
+          "task2": "functional vs non-functional (secondary)",
+          "task3": "ambiguity detection (tertiary)"
+        }
+      },
+      "metrics": {
+        "req_n": 2211,
+        "req_accuracy": 0.6060606060606061,
+        "req_precision": 0.5992835209825998,
+        "req_recall": 0.9301032565528197,
+        "req_f1": 0.7289137877373172,
+        "req_roc_auc": 0.7322725952970545,
+        "req_pr_auc": 0.7683183424033722,
+        "req_tp": 1171,
+        "req_fp": 783,
+        "req_tn": 169,
+        "req_fn": 88,
+        "func_n": 0,
+        "amb_n": 2136,
+        "amb_accuracy": 0.8525280898876404,
+        "amb_precision": 0.10112359550561797,
+        "amb_recall": 0.10404624277456648,
+        "amb_f1": 0.10256410256410256,
+        "amb_roc_auc": 0.6095600988224347,
+        "amb_pr_auc": 0.11265311045120076,
+        "amb_tp": 18,
+        "amb_fp": 160,
+        "amb_tn": 1803,
+        "amb_fn": 155
+      },
+      "checkpoint_used": "best.pt"
+    },
+    {
+      "model_dir": "deberta",
+      "config": {
+        "model": "microsoft/deberta-v3-base",
+        "model_type": "deberta",
+        "max_length": 128,
+        "n_context": 1,
+        "seed": 42,
+        "dev_ratio": 0.15,
+        "epochs": 10,
+        "patience": 3,
+        "batch_size": 16,
+        "lr": 5e-05,
+        "weight_decay": 0.0001,
+        "lora": {
+          "r": 16,
+          "alpha": 32,
+          "dropout": 0.1,
+          "target_modules": [
+            "query_proj",
+            "key_proj",
+            "value_proj"
+          ]
+        },
+        "n_train": 15506,
+        "n_dev": 2579,
+        "class_balance": {
+          "train_req": 10379,
+          "train_non_req": 5127,
+          "pos_weight": 0.49397823214530945
+        },
+        "tasks": {
+          "task1": "requirement vs non-requirement (primary)",
+          "task2": "functional vs non-functional (secondary)",
+          "task3": "ambiguity detection (tertiary)"
+        }
+      },
+      "metrics": {
+        "req_n": 2211,
+        "req_accuracy": 0.602894617819991,
+        "req_precision": 0.5978428351309707,
+        "req_recall": 0.9245432883240667,
+        "req_f1": 0.7261384903306302,
+        "req_roc_auc": 0.7183292896189453,
+        "req_pr_auc": 0.7612099371344402,
+        "req_tp": 1164,
+        "req_fp": 783,
+        "req_tn": 169,
+        "req_fn": 95,
+        "func_n": 0,
+        "amb_n": 2136,
+        "amb_accuracy": 0.7930711610486891,
+        "amb_precision": 0.08359133126934984,
+        "amb_recall": 0.15606936416184972,
+        "amb_f1": 0.10887096774193548,
+        "amb_roc_auc": 0.5985883350657688,
+        "amb_pr_auc": 0.10144692611412175,
+        "amb_tp": 27,
+        "amb_fp": 296,
+        "amb_tn": 1667,
+        "amb_fn": 146
+      },
+      "checkpoint_used": "best.pt"
+    },
+    {
+      "model_dir": "deberta",
+      "config": {
+        "model": "microsoft/deberta-v3-base",
+        "model_type": "deberta",
+        "max_length": 128,
+        "n_context": 1,
+        "seed": 42,
+        "dev_ratio": 0.15,
+        "epochs": 10,
+        "patience": 3,
+        "batch_size": 16,
+        "lr": 2e-05,
+        "weight_decay": 0.0001,
+        "lora": {
+          "r": 16,
+          "alpha": 32,
+          "dropout": 0.1,
+          "target_modules": [
+            "query_proj",
+            "key_proj",
+            "value_proj"
+          ]
+        },
+        "n_train": 15506,
+        "n_dev": 2579,
+        "class_balance": {
+          "train_req": 10379,
+          "train_non_req": 5127,
+          "pos_weight": 0.49397823214530945
+        },
+        "tasks": {
+          "task1": "requirement vs non-requirement (primary)",
+          "task2": "functional vs non-functional (secondary)",
+          "task3": "ambiguity detection (tertiary)"
+        }
+      },
+      "metrics": {
+        "req_n": 2211,
+        "req_accuracy": 0.6056083220262325,
+        "req_precision": 0.5984732824427481,
+        "req_recall": 0.9340746624305004,
+        "req_f1": 0.7295285359801489,
+        "req_roc_auc": 0.7393635571782327,
+        "req_pr_auc": 0.772752154544045,
+        "req_tp": 1176,
+        "req_fp": 789,
+        "req_tn": 163,
+        "req_fn": 83,
+        "func_n": 0,
+        "amb_n": 2136,
+        "amb_accuracy": 0.87687265917603,
+        "amb_precision": 0.09090909090909091,
+        "amb_recall": 0.057803468208092484,
+        "amb_f1": 0.0706713780918728,
+        "amb_roc_auc": 0.6036354641798121,
+        "amb_pr_auc": 0.10663015522483726,
+        "amb_tp": 10,
+        "amb_fp": 100,
+        "amb_tn": 1863,
+        "amb_fn": 163
+      },
+      "checkpoint_used": "best.pt"
+    },
+    {
+      "model_dir": "deberta",
+      "config": {
+        "model": "microsoft/deberta-v3-base",
+        "model_type": "deberta",
+        "max_length": 128,
+        "n_context": 2,
+        "seed": 42,
+        "dev_ratio": 0.15,
+        "epochs": 10,
+        "patience": 3,
+        "batch_size": 16,
+        "lr": 2e-05,
+        "weight_decay": 0.0001,
+        "lora": {
+          "r": 16,
+          "alpha": 32,
+          "dropout": 0.1,
+          "target_modules": [
+            "query_proj",
+            "key_proj",
+            "value_proj"
+          ]
+        },
+        "n_train": 15506,
+        "n_dev": 2579,
+        "class_balance": {
+          "train_req": 10379,
+          "train_non_req": 5127,
+          "pos_weight": 0.49397823214530945
+        },
+        "tasks": {
+          "task1": "requirement vs non-requirement (primary)",
+          "task2": "functional vs non-functional (secondary)",
+          "task3": "ambiguity detection (tertiary)"
+        }
+      },
+      "metrics": {
+        "req_n": 2211,
+        "req_accuracy": 0.6087743102668476,
+        "req_precision": 0.6019668737060041,
+        "req_recall": 0.9237490071485306,
+        "req_f1": 0.7289251018489502,
+        "req_roc_auc": 0.6926090134226845,
+        "req_pr_auc": 0.719033781962408,
+        "req_tp": 1163,
+        "req_fp": 769,
+        "req_tn": 183,
+        "req_fn": 96,
+        "func_n": 0,
+        "amb_n": 2136,
+        "amb_accuracy": 0.8941947565543071,
+        "amb_precision": 0.1044776119402985,
+        "amb_recall": 0.04046242774566474,
+        "amb_f1": 0.05833333333333333,
+        "amb_roc_auc": 0.6008086007320399,
+        "amb_pr_auc": 0.10563259066578842,
+        "amb_tp": 7,
+        "amb_fp": 60,
+        "amb_tn": 1903,
+        "amb_fn": 166
+      },
+      "checkpoint_used": "best.pt"
+    },
+    {
+      "model_dir": "deberta",
+      "config": {
+        "model": "microsoft/deberta-v3-base",
+        "model_type": "deberta",
+        "max_length": 128,
+        "n_context": 3,
+        "seed": 42,
+        "dev_ratio": 0.15,
+        "epochs": 10,
+        "patience": 3,
+        "batch_size": 16,
+        "lr": 2e-05,
+        "weight_decay": 0.0001,
+        "lora": {
+          "r": 16,
+          "alpha": 32,
+          "dropout": 0.1,
+          "target_modules": [
+            "query_proj",
+            "key_proj",
+            "value_proj"
+          ]
+        },
+        "n_train": 15506,
+        "n_dev": 2579,
+        "class_balance": {
+          "train_req": 10379,
+          "train_non_req": 5127,
+          "pos_weight": 0.49397823214530945
+        },
+        "tasks": {
+          "task1": "requirement vs non-requirement (primary)",
+          "task2": "functional vs non-functional (secondary)",
+          "task3": "ambiguity detection (tertiary)"
+        }
+      },
+      "metrics": {
+        "req_n": 2211,
+        "req_accuracy": 0.6151062867480778,
+        "req_precision": 0.6119648737650933,
+        "req_recall": 0.8856235107227959,
+        "req_f1": 0.723790976955534,
+        "req_roc_auc": 0.7206520614600089,
+        "req_pr_auc": 0.7731135448823754,
+        "req_tp": 1115,
+        "req_fp": 707,
+        "req_tn": 245,
+        "req_fn": 144,
+        "func_n": 0,
+        "amb_n": 2136,
+        "amb_accuracy": 0.9068352059925093,
+        "amb_precision": 0.03571428571428571,
+        "amb_recall": 0.005780346820809248,
+        "amb_f1": 0.009950248756218905,
+        "amb_roc_auc": 0.5557539922084576,
+        "amb_pr_auc": 0.09372214111504049,
+        "amb_tp": 1,
+        "amb_fp": 27,
+        "amb_tn": 1936,
+        "amb_fn": 172
+      },
+      "checkpoint_used": "best.pt"
+    }
+  ],
+  "summary": [
+    {
+      "model": "deberta",
+      "architecture": "deberta",
+      "n_context": 1,
+      "lora_r": 16,
+      "lr": 1e-05,
+      "req_f1": 0.7395437262357415,
+      "req_acc": 0.6282225237449118,
+      "req_p": 0.6151818661043753,
+      "req_r": 0.9269261318506752,
+      "func_f1": 0,
+      "amb_f1": 0.02678571428571428
+    },
+    {
+      "model": "deberta",
+      "architecture": "deberta",
+      "n_context": 1,
+      "lora_r": 16,
+      "lr": 2e-05,
+      "req_f1": 0.7295285359801489,
+      "req_acc": 0.6056083220262325,
+      "req_p": 0.5984732824427481,
+      "req_r": 0.9340746624305004,
+      "func_f1": 0,
+      "amb_f1": 0.0706713780918728
+    },
+    {
+      "model": "deberta",
+      "architecture": "deberta",
+      "n_context": 1,
+      "lora_r": 16,
+      "lr": 2e-05,
+      "req_f1": 0.7295285359801489,
+      "req_acc": 0.6056083220262325,
+      "req_p": 0.5984732824427481,
+      "req_r": 0.9340746624305004,
+      "func_f1": 0,
+      "amb_f1": 0.0706713780918728
+    },
+    {
+      "model": "deberta",
+      "architecture": "deberta",
+      "n_context": 1,
+      "lora_r": 16,
+      "lr": 2e-05,
+      "req_f1": 0.7295285359801489,
+      "req_acc": 0.6056083220262325,
+      "req_p": 0.5984732824427481,
+      "req_r": 0.9340746624305004,
+      "func_f1": 0,
+      "amb_f1": 0.0706713780918728
+    },
+    {
+      "model": "deberta",
+      "architecture": "deberta",
+      "n_context": 1,
+      "lora_r": 16,
+      "lr": 2e-05,
+      "req_f1": 0.7295285359801489,
+      "req_acc": 0.6056083220262325,
+      "req_p": 0.5984732824427481,
+      "req_r": 0.9340746624305004,
+      "func_f1": 0,
+      "amb_f1": 0.0706713780918728
+    },
+    {
+      "model": "deberta",
+      "architecture": "deberta",
+      "n_context": 2,
+      "lora_r": 16,
+      "lr": 2e-05,
+      "req_f1": 0.7289251018489502,
+      "req_acc": 0.6087743102668476,
+      "req_p": 0.6019668737060041,
+      "req_r": 0.9237490071485306,
+      "func_f1": 0,
+      "amb_f1": 0.05833333333333333
+    },
+    {
+      "model": "deberta",
+      "architecture": "deberta",
+      "n_context": 1,
+      "lora_r": 16,
+      "lr": 3e-05,
+      "req_f1": 0.7289137877373172,
+      "req_acc": 0.6060606060606061,
+      "req_p": 0.5992835209825998,
+      "req_r": 0.9301032565528197,
+      "func_f1": 0,
+      "amb_f1": 0.10256410256410256
+    },
+    {
+      "model": "deberta",
+      "architecture": "deberta",
+      "n_context": 1,
+      "lora_r": 8,
+      "lr": 2e-05,
+      "req_f1": 0.7277609936220207,
+      "req_acc": 0.6331976481230213,
+      "req_p": 0.6302325581395349,
+      "req_r": 0.8610007942811755,
+      "func_f1": 0,
+      "amb_f1": 0.029268292682926828
+    },
+    {
+      "model": "mpnet",
+      "architecture": "mpnet",
+      "n_context": 1,
+      "lora_r": 16,
+      "lr": 2e-05,
+      "req_f1": 0.7263459700541575,
+      "req_acc": 0.6114880144730891,
+      "req_p": 0.6063829787234043,
+      "req_r": 0.9054805401111994,
+      "func_f1": 0,
+      "amb_f1": 0.11
+    },
+    {
+      "model": "deberta",
+      "architecture": "deberta",
+      "n_context": 1,
+      "lora_r": 16,
+      "lr": 5e-05,
+      "req_f1": 0.7261384903306302,
+      "req_acc": 0.602894617819991,
+      "req_p": 0.5978428351309707,
+      "req_r": 0.9245432883240667,
+      "func_f1": 0,
+      "amb_f1": 0.10887096774193548
+    },
+    {
+      "model": "deberta",
+      "architecture": "deberta",
+      "n_context": 3,
+      "lora_r": 16,
+      "lr": 2e-05,
+      "req_f1": 0.723790976955534,
+      "req_acc": 0.6151062867480778,
+      "req_p": 0.6119648737650933,
+      "req_r": 0.8856235107227959,
+      "func_f1": 0,
+      "amb_f1": 0.009950248756218905
+    },
+    {
+      "model": "deberta",
+      "architecture": "deberta",
+      "n_context": 1,
+      "lora_r": 32,
+      "lr": 2e-05,
+      "req_f1": 0.723680148193887,
+      "req_acc": 0.5952057892356399,
+      "req_p": 0.591919191919192,
+      "req_r": 0.9308975377283558,
+      "func_f1": 0,
+      "amb_f1": 0.02040816326530612
+    },
+    {
+      "model": "paraphrase-mpnet",
+      "architecture": "paraphrase-mpnet",
+      "n_context": 1,
+      "lora_r": 16,
+      "lr": 2e-05,
+      "req_f1": 0.7166874221668742,
+      "req_acc": 0.5884215287200362,
+      "req_p": 0.5893497183819765,
+      "req_r": 0.9142176330420969,
+      "func_f1": 0,
+      "amb_f1": 0.044444444444444446
+    }
+  ],
+  "best_model": {
+    "model": "deberta",
+    "architecture": "deberta",
+    "n_context": 1,
+    "lora_r": 16,
+    "lr": 1e-05,
+    "req_f1": 0.7395437262357415,
+    "req_acc": 0.6282225237449118,
+    "req_p": 0.6151818661043753,
+    "req_r": 0.9269261318506752,
+    "func_f1": 0,
+    "amb_f1": 0.02678571428571428
+  }
+}

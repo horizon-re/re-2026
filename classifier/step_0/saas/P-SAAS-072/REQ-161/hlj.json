@@ -1,0 +1,95 @@
+{
+  "doc_id": "af1eba10-2259-5838-97f7-5acd689d9fe5",
+  "req_key": "saas::P-SAAS-072::REQ-161",
+  "req_id": "REQ-161",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-072",
+  "source": {
+    "raw_path": "02_raw_requirements/saas/P-SAAS-072/req-161_raw.txt",
+    "refined_path": "03_refined_json_normalized/saas/P-SAAS-072/req-161_refined.json",
+    "origin": "both"
+  },
+  "text": "Directive: If pressure_kPa < 0 while altimeter=\"sea-level\", flag as PRES_ANOM. Controller must recalculate depth using backup sonar; if discrepancy (delta) exceeds 2 meters, immediately halt dive. Log full anomaly details to rov_anom_ice.csv with UTC timestamp. Notify ops via #ice-ops Slack channel.",
+  "structured_data": [
+    {
+      "id": "REQ-161-HLJ-Chunk_1-Item_1-v1.0",
+      "domain": "unknown",
+      "summary": "Flag PRES_ANOM if pressure_kPa < 0 with sea-level altimeter",
+      "priority": "High",
+      "tags": [
+        "pressure_anomaly",
+        "depth_check",
+        "ice_ops"
+      ],
+      "subdomain": "rov_operations",
+      "difficulty": 2,
+      "additionalNotes": "Triggers anomaly classification when pressure reading contradicts altimeter at sea-level.",
+      "source_hlj_id": "REQ 001-001",
+      "domain_id": "P-SAAS-072"
+    },
+    {
+      "id": "REQ-161-HLJ-Chunk_1-Item_2-v1.0",
+      "domain": "unknown",
+      "summary": "Recalculate depth using backup sonar on pressure anomaly",
+      "priority": "High",
+      "tags": [
+        "depth_validation",
+        "backup_sensor",
+        "anomaly_response"
+      ],
+      "subdomain": "rov_operations",
+      "difficulty": 3,
+      "additionalNotes": "Ensures depth accuracy by cross-validating sonar when pressure anomaly is detected.",
+      "source_hlj_id": "REQ 001-002",
+      "domain_id": "P-SAAS-072"
+    },
+    {
+      "id": "REQ-161-HLJ-Chunk_1-Item_3-v1.0",
+      "domain": "unknown",
+      "summary": "Halt dive if sonar and altimeter depth delta exceeds 2 meters",
+      "priority": "High",
+      "tags": [
+        "dive_safety",
+        "delta_threshold",
+        "auto_abort"
+      ],
+      "subdomain": "rov_operations",
+      "difficulty": 3,
+      "additionalNotes": "Dive must be aborted when depth inconsistency suggests serious navigational error.",
+      "source_hlj_id": "REQ 001-003",
+      "domain_id": "P-SAAS-072"
+    },
+    {
+      "id": "REQ-161-HLJ-Chunk_1-Item_4-v1.0",
+      "domain": "unknown",
+      "summary": "Log anomaly details to rov_anom_ice.csv with UTC timestamp",
+      "priority": "Medium",
+      "tags": [
+        "anomaly_logging",
+        "csv_output",
+        "utc_timestamp"
+      ],
+      "subdomain": "rov_operations",
+      "difficulty": 2,
+      "additionalNotes": "Anomaly data must be stored in standardized format for audit and diagnostics.",
+      "source_hlj_id": "REQ 001-004",
+      "domain_id": "P-SAAS-072"
+    },
+    {
+      "id": "REQ-161-HLJ-Chunk_1-Item_5-v1.0",
+      "domain": "unknown",
+      "summary": "Send anomaly alert to #ice-ops Slack channel",
+      "priority": "Medium",
+      "tags": [
+        "alerting",
+        "slack_integration",
+        "ice_operations"
+      ],
+      "subdomain": "rov_operations",
+      "difficulty": 2,
+      "additionalNotes": "Facilitates immediate human oversight of anomaly events via team communication channel.",
+      "source_hlj_id": "REQ 001-005",
+      "domain_id": "P-SAAS-072"
+    }
+  ]
+}

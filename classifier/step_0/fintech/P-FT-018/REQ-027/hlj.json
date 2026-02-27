@@ -1,0 +1,239 @@
+{
+  "doc_id": "41f15231-d890-55f3-b87e-cfe3d0e383f4",
+  "req_key": "fintech::P-FT-018::REQ-027",
+  "req_id": "REQ-027",
+  "domain": "fintech",
+  "prompt_id": "P-FT-018",
+  "source": {
+    "raw_path": "02_raw_requirements/fintech/P-FT-018/req-027_raw.txt",
+    "refined_path": "03_refined_json_normalized/fintech/P-FT-018/req-027_refined.json",
+    "origin": "both"
+  },
+  "text": "SLIDE 4: Localization Gaps in Billing & Messaging\n• Invoices require region‑specific phrasing for VAT/GST and local compliance (Owner?).\n• Email templates often deviate from brand voice in non-English locales.\n• Translations are outsourced, but QA is manual—leading to inconsistencies at scale.\n• [RISK: Hardcoded strings from legacy invoice templates break when translated.]\n• Our LLM-powered “Translation QA Bot” flags mismatched tone and jurisdiction-specific tax terminology.\n• Workflow for escalation of flagged content still under definition (TBC).\n\nSLIDE 5: Framework: AI-Assisted Template Governance\n• Introduce a central hub for multi-locale email and invoice templates (Owner?).\n• Leverage LLMs to suggest glossary terms and enforce tone alignment.\n• [RISK: Auto-suggestions may drift from approved brand lexicon under noisy data conditions.]\n• Translation QA Bot integrates with staging environments for pre-deployment review.\n• Governance checkpoints include human-in-the-loop reviews and audit trails (TBC).\n\nFeature\tEffort (pts)\tROI\nLLM Glossary Auto‑Suggest\t8\tHigh\nAI Brand‑Tone Checker\t5\tMed\n\t\t\n\nSLIDE 6: Roadmap & Globalization Outcomes\n• Phase 1 rollout targeting LATAM markets with invoice template variants.\n• APAC launch to include right-to-left (RTL) and CJK script template testing (TBC).\n• [RISK: Regional linguistic nuance may affect legal enforceability of translated invoices.]\n• Translation QA Bot supports rule-based checks per geography.\n• Enable real-time feedback loop from customer support on template mismatches (Owner?).\n• Business outcome: faster time to market with 70%+ reduction in localization escalations.",
+  "structured_data": [
+    {
+      "id": "REQ-027-HLJ-Chunk_1-Item_1-v1.0",
+      "domain": "saas",
+      "summary": "Support region-specific VAT/GST invoice phrasing",
+      "priority": "High",
+      "tags": [
+        "invoice_localization",
+        "vat",
+        "tax_compliance"
+      ],
+      "subdomain": "billing",
+      "difficulty": 3,
+      "additionalNotes": "Ensures legal compliance with local tax jurisdictions in LATAM/APAC.",
+      "source_hlj_id": "REQ 001-001",
+      "domain_id": "P-FT-018"
+    },
+    {
+      "id": "REQ-027-HLJ-Chunk_1-Item_2-v1.0",
+      "domain": "saas",
+      "summary": "Detect brand voice drift in localized email templates",
+      "priority": "Medium",
+      "tags": [
+        "email_localization",
+        "brand_consistency",
+        "tone_validation"
+      ],
+      "subdomain": "communication",
+      "difficulty": 3,
+      "additionalNotes": "Maintains alignment with core messaging across languages.",
+      "source_hlj_id": "REQ 001-002",
+      "domain_id": "P-FT-018"
+    },
+    {
+      "id": "REQ-027-HLJ-Chunk_1-Item_3-v1.0",
+      "domain": "saas",
+      "summary": "Automate translation QA with LLM tone and tax validation",
+      "priority": "High",
+      "tags": [
+        "translation_qa",
+        "llm",
+        "tone_validation"
+      ],
+      "subdomain": "localization",
+      "difficulty": 4,
+      "additionalNotes": "LLM-powered bot flags tone mismatch and tax-phrase inaccuracies.",
+      "source_hlj_id": "REQ 001-003",
+      "domain_id": "P-FT-018"
+    },
+    {
+      "id": "REQ-027-HLJ-Chunk_1-Item_4-v1.0",
+      "domain": "saas",
+      "summary": "Centralize multi-locale invoice and email template management",
+      "priority": "High",
+      "tags": [
+        "template_governance",
+        "multilingual",
+        "central_hub"
+      ],
+      "subdomain": "template_management",
+      "difficulty": 3,
+      "additionalNotes": "Single source of truth for localized communication assets.",
+      "source_hlj_id": "REQ 001-004",
+      "domain_id": "P-FT-018"
+    },
+    {
+      "id": "REQ-027-HLJ-Chunk_1-Item_5-v1.0",
+      "domain": "saas",
+      "summary": "Run QA Bot integration in staging environments before deployment",
+      "priority": "Medium",
+      "tags": [
+        "staging_review",
+        "qa_bot",
+        "deployment_readiness"
+      ],
+      "subdomain": "quality_assurance",
+      "difficulty": 3,
+      "additionalNotes": "Enables pre-launch review of localized content.",
+      "source_hlj_id": "REQ 001-005",
+      "domain_id": "P-FT-018"
+    },
+    {
+      "id": "REQ-027-HLJ-Chunk_1-Item_6-v1.0",
+      "domain": "saas",
+      "summary": "Escalate flagged localization issues via defined workflow",
+      "priority": "Low",
+      "tags": [
+        "issue_escalation",
+        "workflow",
+        "localization_qa"
+      ],
+      "subdomain": "quality_assurance",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied – Escalation process must exist for unresolved translation errors.",
+      "source_hlj_id": "REQ 001-006",
+      "domain_id": "P-FT-018"
+    },
+    {
+      "id": "REQ-027-HLJ-Chunk_1-Item_7-v1.0",
+      "domain": "saas",
+      "summary": "Enforce brand-tone glossary during template localization",
+      "priority": "Medium",
+      "tags": [
+        "brand_governance",
+        "glossary_enforcement",
+        "localization"
+      ],
+      "subdomain": "content_standards",
+      "difficulty": 3,
+      "additionalNotes": "Glossary helps constrain language drift during translation.",
+      "source_hlj_id": "REQ 001-007",
+      "domain_id": "P-FT-018"
+    },
+    {
+      "id": "REQ-027-HLJ-Chunk_1-Item_8-v1.0",
+      "domain": "saas",
+      "summary": "Review and approve templates through human QA checkpoints",
+      "priority": "Medium",
+      "tags": [
+        "manual_review",
+        "quality_gate",
+        "template_approval"
+      ],
+      "subdomain": "quality_assurance",
+      "difficulty": 3,
+      "additionalNotes": "Templates must be vetted before go-live.",
+      "source_hlj_id": "REQ 001-008",
+      "domain_id": "P-FT-018"
+    },
+    {
+      "id": "REQ-027-HLJ-Chunk_1-Item_9-v1.0",
+      "domain": "saas",
+      "summary": "Maintain audit logs for template revisions and approvals",
+      "priority": "Low",
+      "tags": [
+        "audit_log",
+        "template_change_tracking",
+        "governance"
+      ],
+      "subdomain": "compliance",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied – Enables accountability across localization updates.",
+      "source_hlj_id": "REQ 001-009",
+      "domain_id": "P-FT-018"
+    },
+    {
+      "id": "REQ-027-HLJ-Chunk_1-Item_10-v1.0",
+      "domain": "saas",
+      "summary": "Roll out LATAM-specific invoice templates in Phase 1",
+      "priority": "High",
+      "tags": [
+        "regional_rollout",
+        "latam",
+        "invoice_variant"
+      ],
+      "subdomain": "billing",
+      "difficulty": 3,
+      "additionalNotes": "Initial deployment for LATAM markets.",
+      "source_hlj_id": "REQ 001-010",
+      "domain_id": "P-FT-018"
+    },
+    {
+      "id": "REQ-027-HLJ-Chunk_1-Item_11-v1.0",
+      "domain": "saas",
+      "summary": "Test APAC templates for RTL and CJK scripts",
+      "priority": "Medium",
+      "tags": [
+        "rtl_support",
+        "cjk_script",
+        "apac_localization"
+      ],
+      "subdomain": "template_management",
+      "difficulty": 3,
+      "additionalNotes": "Includes right-to-left formatting and character set validation.",
+      "source_hlj_id": "REQ 001-011",
+      "domain_id": "P-FT-018"
+    },
+    {
+      "id": "REQ-027-HLJ-Chunk_1-Item_12-v1.0",
+      "domain": "saas",
+      "summary": "Enable rule-based validation per geography in QA Bot",
+      "priority": "Medium",
+      "tags": [
+        "geo_validation",
+        "qa_bot_rules",
+        "region_rules"
+      ],
+      "subdomain": "localization",
+      "difficulty": 3,
+      "additionalNotes": "Tax/language rules differ by country—QA must adapt.",
+      "source_hlj_id": "REQ 001-012",
+      "domain_id": "P-FT-018"
+    },
+    {
+      "id": "REQ-027-HLJ-Chunk_1-Item_13-v1.0",
+      "domain": "saas",
+      "summary": "Integrate support team feedback loop on localization issues",
+      "priority": "Low",
+      "tags": [
+        "support_feedback",
+        "customer_insights",
+        "template_improvement"
+      ],
+      "subdomain": "feedback_loop",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied – CS team inputs needed to catch real-world gaps.",
+      "source_hlj_id": "REQ 001-013",
+      "domain_id": "P-FT-018"
+    },
+    {
+      "id": "REQ-027-HLJ-Chunk_1-Item_14-v1.0",
+      "domain": "saas",
+      "summary": "Reduce localization escalations through proactive QA and governance",
+      "priority": "Medium",
+      "tags": [
+        "localization_efficiency",
+        "risk_reduction",
+        "governance"
+      ],
+      "subdomain": "operations",
+      "difficulty": 3,
+      "additionalNotes": "Target outcome is 70%+ fewer escalations.",
+      "source_hlj_id": "REQ 001-014",
+      "domain_id": "P-FT-018"
+    }
+  ]
+}

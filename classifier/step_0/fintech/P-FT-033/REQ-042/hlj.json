@@ -1,0 +1,111 @@
+{
+  "doc_id": "1324b678-7f34-58bc-af67-c33ed073dd29",
+  "req_key": "fintech::P-FT-033::REQ-042",
+  "req_id": "REQ-042",
+  "domain": "fintech",
+  "prompt_id": "P-FT-033",
+  "source": {
+    "raw_path": "02_raw_requirements/fintech/P-FT-033/req-042_raw.txt",
+    "refined_path": "03_refined_json_normalized/fintech/P-FT-033/req-042_refined.json",
+    "origin": "both"
+  },
+  "text": "Implement an algorithm that defaults to FIFO but dynamically switches to LIFO when it reduces tax liability by at least 5%, citing IRS Pub 551 in inline comments, logs the selected strategy per wallet-year in `tax_lot_strategy`, and operates under the `autoLotV2` feature flag (enabled by default in staging and disabled in production pending audit approval).",
+  "structured_data": [
+    {
+      "id": "REQ-042-HLJ-Chunk_1-Item_1-v1.0",
+      "domain": "fintech",
+      "summary": "Default to FIFO tax lot selection method.",
+      "priority": "High",
+      "tags": [
+        "tax_lot_selection",
+        "fifo",
+        "default_behavior"
+      ],
+      "subdomain": "tax_optimization",
+      "difficulty": 2,
+      "additionalNotes": "Ensures compliance and predictable behavior for tax calculation.",
+      "source_hlj_id": "REQ 001-001",
+      "domain_id": "P-FT-033"
+    },
+    {
+      "id": "REQ-042-HLJ-Chunk_1-Item_2-v1.0",
+      "domain": "fintech",
+      "summary": "Switch to LIFO if it reduces tax liability by 5% or more.",
+      "priority": "High",
+      "tags": [
+        "tax_lot_selection",
+        "lifo",
+        "optimization"
+      ],
+      "subdomain": "tax_optimization",
+      "difficulty": 3,
+      "additionalNotes": "Promotes strategic reduction of tax liabilities while maintaining auditability.",
+      "source_hlj_id": "REQ 001-002",
+      "domain_id": "P-FT-033"
+    },
+    {
+      "id": "REQ-042-HLJ-Chunk_1-Item_3-v1.0",
+      "domain": "fintech",
+      "summary": "Cite IRS Pub 551 in inline code comments.",
+      "priority": "Medium",
+      "tags": [
+        "irs_compliance",
+        "documentation",
+        "code_quality"
+      ],
+      "subdomain": "compliance",
+      "difficulty": 1,
+      "additionalNotes": "Supports traceability to official tax guidance for audit or review.",
+      "source_hlj_id": "REQ 001-003",
+      "domain_id": "P-FT-033"
+    },
+    {
+      "id": "REQ-042-HLJ-Chunk_1-Item_4-v1.0",
+      "domain": "fintech",
+      "summary": "Record selected tax method per wallet-year in tax_lot_strategy.",
+      "priority": "High",
+      "tags": [
+        "logging",
+        "audit_trail",
+        "wallet_tracking"
+      ],
+      "subdomain": "tax_reporting",
+      "difficulty": 2,
+      "additionalNotes": "Ensures that strategy decisions are persisted for each wallet and year combination.",
+      "source_hlj_id": "REQ 001-004",
+      "domain_id": "P-FT-033"
+    },
+    {
+      "id": "REQ-042-HLJ-Chunk_1-Item_5-v1.0",
+      "domain": "fintech",
+      "summary": "Control logic with feature flag autoLotV2.",
+      "priority": "High",
+      "tags": [
+        "feature_flag",
+        "configuration",
+        "runtime_behavior"
+      ],
+      "subdomain": "deployment_control",
+      "difficulty": 2,
+      "additionalNotes": "Feature flag allows safe rollout and staged deployment.",
+      "source_hlj_id": "REQ 001-005",
+      "domain_id": "P-FT-033"
+    },
+    {
+      "id": "REQ-042-HLJ-Chunk_1-Item_6-v1.0",
+      "domain": "fintech",
+      "summary": "Default feature flag to ON in staging and OFF in production.",
+      "priority": "Medium",
+      "tags": [
+        "feature_flag",
+        "environment_config",
+        "release_management"
+      ],
+      "subdomain": "deployment_control",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied – Implies the need for environment-specific configuration to manage rollout.",
+      "source_hlj_id": "REQ 001-006",
+      "domain_id": "P-FT-033"
+    }
+  ]
+}

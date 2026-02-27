@@ -1,0 +1,111 @@
+{
+  "doc_id": "6cbe2345-bfaf-5446-b587-797079822717",
+  "req_key": "saas::P-SAAS-056::REQ-145",
+  "req_id": "REQ-145",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-056",
+  "source": {
+    "raw_path": "02_raw_requirements/saas/P-SAAS-056/req-145_raw.txt",
+    "refined_path": "03_refined_json_normalized/saas/P-SAAS-056/req-145_refined.json",
+    "origin": "both"
+  },
+  "text": "The e-sign platform must automatically detect contradictions between contract body text and margin notes, such as discrepancies like “perpetual” vs. “3 years” in term clauses. Upon identifying a conflict, the system must set the contract’s STATUS to CONTRADICTION and prevent signature until resolved. A prompt will appear in the UI for the drafter to select the binding term from a dropdown populated with both conflicting values. Once a selection is made, the system must log both the original and selected versions to a `clause_history` audit table, ensuring traceability. Additionally, a real-time Slack alert must be triggered and sent to the `#legal-ops` channel to notify the legal operations team of the flagged contradiction. This process ensures legal consistency, maintains compliance integrity, and creates a verifiable record of contract clause edits.",
+  "structured_data": [
+    {
+      "id": "REQ-145-HLJ-Chunk_1-Item_1-v1.0",
+      "domain": "saas",
+      "summary": "Detect contradictions between contract text and margin notes",
+      "priority": "High",
+      "tags": [
+        "text_analysis",
+        "conflict_detection",
+        "contracts"
+      ],
+      "subdomain": "document_validation",
+      "difficulty": 4,
+      "additionalNotes": "Compares key terms across different text zones to identify mismatches",
+      "source_hlj_id": "REQ 001-001",
+      "domain_id": "P-SAAS-056"
+    },
+    {
+      "id": "REQ-145-HLJ-Chunk_1-Item_2-v1.0",
+      "domain": "saas",
+      "summary": "Set contract status to CONTRADICTION upon detecting conflict",
+      "priority": "High",
+      "tags": [
+        "status_update",
+        "document_workflow",
+        "contracts"
+      ],
+      "subdomain": "workflow_control",
+      "difficulty": 2,
+      "additionalNotes": "System must update contract state to reflect a blocking issue",
+      "source_hlj_id": "REQ 001-002",
+      "domain_id": "P-SAAS-056"
+    },
+    {
+      "id": "REQ-145-HLJ-Chunk_1-Item_3-v1.0",
+      "domain": "saas",
+      "summary": "Prevent contract signature while contradiction exists",
+      "priority": "High",
+      "tags": [
+        "signature_block",
+        "compliance",
+        "workflow"
+      ],
+      "subdomain": "workflow_control",
+      "difficulty": 2,
+      "additionalNotes": "No signature should be permitted if contradiction is unresolved",
+      "source_hlj_id": "REQ 001-003",
+      "domain_id": "P-SAAS-056"
+    },
+    {
+      "id": "REQ-145-HLJ-Chunk_1-Item_4-v1.0",
+      "domain": "saas",
+      "summary": "Prompt drafter to choose binding term from dropdown",
+      "priority": "Medium",
+      "tags": [
+        "ui_prompt",
+        "conflict_resolution",
+        "user_input"
+      ],
+      "subdomain": "user_interface",
+      "difficulty": 3,
+      "additionalNotes": "Dropdown should be pre-filled with conflicting clause values",
+      "source_hlj_id": "REQ 001-004",
+      "domain_id": "P-SAAS-056"
+    },
+    {
+      "id": "REQ-145-HLJ-Chunk_1-Item_5-v1.0",
+      "domain": "saas",
+      "summary": "Store both versions of clause in audit table",
+      "priority": "High",
+      "tags": [
+        "audit_logging",
+        "version_control",
+        "contracts"
+      ],
+      "subdomain": "compliance_tracking",
+      "difficulty": 3,
+      "additionalNotes": "Log original and resolved clause values for traceability",
+      "source_hlj_id": "REQ 001-005",
+      "domain_id": "P-SAAS-056"
+    },
+    {
+      "id": "REQ-145-HLJ-Chunk_1-Item_6-v1.0",
+      "domain": "saas",
+      "summary": "Send Slack alert to legal-ops when conflict is flagged",
+      "priority": "Medium",
+      "tags": [
+        "notifications",
+        "slack_integration",
+        "legal_teams"
+      ],
+      "subdomain": "third_party_integrations",
+      "difficulty": 2,
+      "additionalNotes": "Alert should include contract ID and contradiction summary",
+      "source_hlj_id": "REQ 001-006",
+      "domain_id": "P-SAAS-056"
+    }
+  ]
+}

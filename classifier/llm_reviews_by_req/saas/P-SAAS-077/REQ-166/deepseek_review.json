@@ -1,0 +1,128 @@
+{
+  "req_id": "REQ-166",
+  "doc_id": "d578a973-641c-54d3-af31-94b0c193f417",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-077",
+  "model": "deepseek-r1:7b",
+  "review_timestamp": "2026-01-21T00:20:32.550365+00:00",
+  "counts": {
+    "total": 11,
+    "llm_pos": 6,
+    "pipe_pos": 2,
+    "llm_neg": 5,
+    "pipe_neg": 9,
+    "flip_neg_to_pos": 4
+  },
+  "reviews": [
+    {
+      "sent_id": "REQ-166::s001",
+      "order": 1,
+      "text": "**Problem / Fix / Test**\n\n**Problem**",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-166::s002",
+      "order": 2,
+      "text": "The Morse message queue intermittently stalls during local Daylight Saving Time (DST) transitions, specifically when clocks advance from 02:00 to 03:00.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-166::s003",
+      "order": 3,
+      "text": "This occurs because local timestamping introduces a non-monotonic jump, causing messages with timestamps during the skipped hour to appear out of order or invalid.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-166::s004",
+      "order": 4,
+      "text": "As a result, the queue halts processing until manual intervention or timeout recovery, disrupting time-critical telemetry operations.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Imposes queue halting until intervention or timeout."
+    },
+    {
+      "sent_id": "REQ-166::s005",
+      "order": 5,
+      "text": "**Fix**  \nAll message timestamps will be converted to Coordinated Universal Time (UTC) at the point of queue insertion, eliminating reliance on system-local time.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Enforces conversion of timestamps to UTC for queue insertion."
+    },
+    {
+      "sent_id": "REQ-166::s006",
+      "order": 6,
+      "text": "A DST flag will be added to the message header for diagnostic transparency, allowing downstream systems to detect whether the message originated during a DST transition.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Imposes a constraint to detect DST transitions in headers."
+    },
+    {
+      "sent_id": "REQ-166::s007",
+      "order": 7,
+      "text": "This ensures temporal consistency across all regions and avoids ambiguity during clock changes.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Ensures temporal consistency across regions to prevent ambiguity."
+    },
+    {
+      "sent_id": "REQ-166::s008",
+      "order": 8,
+      "text": "**Test**  \nImplement a simulation that toggles the system clock across a DST boundary (02:00 → 03:00) in a controlled environment.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-166::s009",
+      "order": 9,
+      "text": "Enqueue messages at 01:59:59, 02:00:00 (skipped), and 03:00:01.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Sets the behavior of enqueuing at specific timestamps."
+    },
+    {
+      "sent_id": "REQ-166::s010",
+      "order": 10,
+      "text": "Verify that messages are timestamped in UTC without interruption, and the queue processes all entries in chronological order.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Enforces correct timestamping and processing order."
+    },
+    {
+      "sent_id": "REQ-166::s011",
+      "order": 11,
+      "text": "Confirm that maximum observed delay does not exceed one second during the transition.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    }
+  ]
+}

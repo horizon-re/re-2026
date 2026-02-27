@@ -1,0 +1,8 @@
+**Feature Request: Embed GraphQL Monaco Editor in Markdown WYSIWYG**
+
+We need to embed a GraphQL-enabled Monaco editor within the Markdown WYSIWYG editor of the dev portal. The integration must allow developers to write and test GraphQL queries seamlessly within markdown blocks. Markdown shortcuts (e.g., `**bold**`, `# headers`) must remain fully functional outside of the GraphQL code blocks. Within these code blocks, the editor should support Ctrl + Space for GraphQL schema hints and IntelliSense.
+
+Ensure the embedded editor adapts to dark mode and preserves styling consistency with the rest of the dev portal. Development should start Monday, with a working PoC ready for review by Friday. This feature will improve DX when documenting APIs that use GraphQL by enabling inline query testing and formatting.
+
+**Tags:** `backlog`, `graphql-editor`  
+**Priority:** P2

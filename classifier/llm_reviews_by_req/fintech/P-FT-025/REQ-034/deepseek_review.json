@@ -1,0 +1,118 @@
+{
+  "req_id": "REQ-034",
+  "doc_id": "831a33c9-b861-5c1a-bf98-07733b491b36",
+  "domain": "fintech",
+  "prompt_id": "P-FT-025",
+  "model": "deepseek-r1:7b",
+  "review_timestamp": "2026-01-20T22:31:03.333109+00:00",
+  "counts": {
+    "total": 10,
+    "llm_pos": 5,
+    "pipe_pos": 2,
+    "pipe_neg": 8,
+    "flip_neg_to_pos": 3,
+    "llm_neg": 5
+  },
+  "reviews": [
+    {
+      "sent_id": "REQ-034::s001",
+      "order": 1,
+      "text": "Feature Request: JSON Integration with ClearScan.ai\nContext\nClearScan.ai, a key integration partner, is transitioning from XML to JSON for all invoice data exchanges and requires InvoiceBuddy’s immediate adoption of a JSON endpoint.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Adoption of JSON endpoint due to ClearScan.ai transition"
+    },
+    {
+      "sent_id": "REQ-034::s002",
+      "order": 2,
+      "text": "Finance stakeholders also want AI-driven field tagging (vendor, tax, due-date), while operations is concerned about meeting a 200 requests/minute SLA given ClearScan’s volume of ~10 million invoices per month and projected 3× growth next quarter.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-034::s003",
+      "order": 3,
+      "text": "Sample JSON",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-034::s004",
+      "order": 4,
+      "text": "For example, a JSON response payload may look like the following (one value is null): { \"vendor\": \"ACME Corp\", \"due_date\": null, \"tax\": 125.00, \"tag_confidence\": 0.98 }\nRequirements\nSupport OCR parsing of invoice content (extract text and key fields from scans).",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 1.0,
+      "reason_code": "PERFORMANCE_REQUIREMENT",
+      "reason_text": "OCR parsing of invoice content (extract text and key fields from scans)"
+    },
+    {
+      "sent_id": "REQ-034::s005",
+      "order": 5,
+      "text": "Include a tag_confidence field as a float, indicating the AI tagging confidence score.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Include a tag_confidence field as a float"
+    },
+    {
+      "sent_id": "REQ-034::s006",
+      "order": 6,
+      "text": "Ensure the API supports a sustained 200 requests/minute throughput (SLA requirement).",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 1.0,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Sustained 200 requests/minute throughput"
+    },
+    {
+      "sent_id": "REQ-034::s007",
+      "order": 7,
+      "text": "Use JWT for authentication and AES-256 encryption at rest to secure all data.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 1.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Use JWT for authentication and AES-256 encryption"
+    },
+    {
+      "sent_id": "REQ-034::s008",
+      "order": 8,
+      "text": "AI Stretch\nConsider implementing UNSPSC code tagging at the line-item level as a future AI-driven enhancement to meet the board’s request for standardized item classification.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-034::s009",
+      "order": 9,
+      "text": "Deadline:",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    },
+    {
+      "sent_id": "REQ-034::s010",
+      "order": 10,
+      "text": "May 15.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Missing from LLM output; defaulted."
+    }
+  ]
+}

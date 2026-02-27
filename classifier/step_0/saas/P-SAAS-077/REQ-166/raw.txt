@@ -1,0 +1,10 @@
+**Problem / Fix / Test**
+
+**Problem**  
+The Morse message queue intermittently stalls during local Daylight Saving Time (DST) transitions, specifically when clocks advance from 02:00 to 03:00. This occurs because local timestamping introduces a non-monotonic jump, causing messages with timestamps during the skipped hour to appear out of order or invalid. As a result, the queue halts processing until manual intervention or timeout recovery, disrupting time-critical telemetry operations.
+
+**Fix**  
+All message timestamps will be converted to Coordinated Universal Time (UTC) at the point of queue insertion, eliminating reliance on system-local time. A DST flag will be added to the message header for diagnostic transparency, allowing downstream systems to detect whether the message originated during a DST transition. This ensures temporal consistency across all regions and avoids ambiguity during clock changes.
+
+**Test**  
+Implement a simulation that toggles the system clock across a DST boundary (02:00 → 03:00) in a controlled environment. Enqueue messages at 01:59:59, 02:00:00 (skipped), and 03:00:01. Verify that messages are timestamped in UTC without interruption, and the queue processes all entries in chronological order. Confirm that maximum observed delay does not exceed one second during the transition.

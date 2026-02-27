@@ -1,0 +1,109 @@
+{
+  "req_id": "REQ-148",
+  "doc_id": "11c725e3-0960-5f29-a917-750092904118",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-059",
+  "model": "deepseek-r1:7b",
+  "review_timestamp": "2026-01-20T23:54:58.923486+00:00",
+  "counts": {
+    "total": 9,
+    "llm_pos": 5,
+    "pipe_pos": 5,
+    "llm_neg": 4,
+    "flip_pos_to_neg": 1,
+    "pipe_neg": 4,
+    "flip_neg_to_pos": 1
+  },
+  "reviews": [
+    {
+      "sent_id": "REQ-148::s001",
+      "order": 1,
+      "text": "**Feature Request:",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.5,
+      "reason_code": "EXAMPLE_OR_EXPLANATION",
+      "reason_text": "Only contains the title without a detailed requirement."
+    },
+    {
+      "sent_id": "REQ-148::s002",
+      "order": 2,
+      "text": "Embed GraphQL Monaco Editor in Markdown WYSIWYG**\n\nWe need to embed a GraphQL-enabled Monaco editor within the Markdown WYSIWYG editor of the dev portal.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Imposes that the embedded editor must adapt to dark mode and maintain styling consistency."
+    },
+    {
+      "sent_id": "REQ-148::s003",
+      "order": 3,
+      "text": "The integration must allow developers to write and test GraphQL queries seamlessly within markdown blocks.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Imposes enforceable system behavior by specifying how GraphQL queries can be written and tested within markdown blocks."
+    },
+    {
+      "sent_id": "REQ-148::s004",
+      "order": 4,
+      "text": "Markdown shortcuts (e.g., `**bold**`, `# headers`) must remain fully functional outside of the GraphQL code blocks.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Imposes that markdown shortcuts must remain functional outside of GraphQL code blocks."
+    },
+    {
+      "sent_id": "REQ-148::s005",
+      "order": 5,
+      "text": "Within these code blocks, the editor should support Ctrl + Space for GraphQL schema hints and IntelliSense.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Imposes that Ctrl + Space and IntelliSense support should be added for GraphQL schema hints in code blocks."
+    },
+    {
+      "sent_id": "REQ-148::s006",
+      "order": 6,
+      "text": "Ensure the embedded editor adapts to dark mode and preserves styling consistency with the rest of the dev portal.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Explains implementation details rather than enforcing a behavior."
+    },
+    {
+      "sent_id": "REQ-148::s007",
+      "order": 7,
+      "text": "Development should start Monday, with a working PoC ready for review by Friday.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Schedules project start and mentions a working PoC for review, which is background context."
+    },
+    {
+      "sent_id": "REQ-148::s008",
+      "order": 8,
+      "text": "This feature will improve DX when documenting APIs that use GraphQL by enabling inline query testing and formatting.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Imposes that the feature will improve DX by enabling inline query testing and formatting for API documentation."
+    },
+    {
+      "sent_id": "REQ-148::s009",
+      "order": 9,
+      "text": "**Tags:** `backlog`, `graphql-editor`  \n**Priority:** P2",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.5,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Contains tags and priority metadata without being a requirement itself."
+    }
+  ]
+}

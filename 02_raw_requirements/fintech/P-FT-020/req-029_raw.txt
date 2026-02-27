@@ -1,0 +1,34 @@
+# Session Meta
+Date: 2025‑04‑18  
+Participants: AO‑01, AO‑02, AO‑03  
+Prototype Version: v0.7  
+
+# Verbatim Highlights
+• “It guessed ‘Catering’ instead of ‘Office Lunch’—close, but not perfect.” {highlight}  
+• “Why does the OCR freak out when the receipt is wrinkled?” {pain}  
+• “Great job auto-categorising Amazon receipts; that saved me so much time!” {delight}  
+• “Took forever to process a blurry receipt—made me retry three times.” {pain}  
+• “Confused parking fees with transport expenses—not intuitive enough.” {pain}  
+• “Wish I could easily edit the category after it's processed—too many taps.” {pain}  
+• “Loved the simplicity of the overview dashboard.” {highlight}  
+• “It doesn’t recognize handwritten tips—annoying.” {pain}  
+• “Super handy to get instant totals by category at month-end.” {highlight}  
+
+# Observed Behaviours
+1. User dragged PDF instead of JPEG (auto‑converted?)  
+2. Spammed **“Re‑scan”** button 4× after mis‑tag.  
+3. Couldn’t quickly locate manual edit option; visibly frustrated.  
+4. AO‑02 repeatedly pressed category dropdown hoping for auto-suggestions.  
+5. Skipped the onboarding tips instantly.  
+6. Leave one step blank: “____ (TBD)”.  
+
+# Quick‑Win Ideas
+- AI “fuzzy‑match” to map ‘Starbucs’→‘Starbucks’.  
+- Smart rules engine suggests GL code ✅/❌.  
+- Allow one-tap edits directly from category results screen. [OPEN Q]  
+
+# Next Steps
+☐ Validate OCR edge cases (Owner: Dev)  
+☐ Heuristic categorisation accuracy ≥ 90 % (Owner: Data)  
+☐ Improve UI visibility for manual category edits (Owner: UX)  
+☐ – leave one checkbox line empty

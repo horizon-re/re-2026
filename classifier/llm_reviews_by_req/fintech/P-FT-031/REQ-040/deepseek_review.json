@@ -1,0 +1,56 @@
+{
+  "req_id": "REQ-040",
+  "doc_id": "73921b3e-2bd4-5588-9287-874154e2206b",
+  "domain": "fintech",
+  "prompt_id": "P-FT-031",
+  "model": "deepseek-r1:7b",
+  "review_timestamp": "2026-01-20T22:33:20.530454+00:00",
+  "counts": {
+    "total": 4,
+    "llm_pos": 4,
+    "pipe_neg": 4,
+    "flip_neg_to_pos": 4
+  },
+  "reviews": [
+    {
+      "sent_id": "REQ-040::s001",
+      "order": 1,
+      "text": "Implement nightly auto-conversion of rewards point balances under 1 FX-adjusted USD to cash, applying local currency rounding rules.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Implements specified behavior with defined steps."
+    },
+    {
+      "sent_id": "REQ-040::s002",
+      "order": 2,
+      "text": "Credit resulting amounts to users’ wallets using a ledger entry of type='micro_cashout'.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Specifies exact ledger entry type for credit."
+    },
+    {
+      "sent_id": "REQ-040::s003",
+      "order": 3,
+      "text": "Additionally, expose a user-facing setting `autoCashout=true` in account preferences to enable or disable this feature.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.95,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Adds user-facing feature setting."
+    },
+    {
+      "sent_id": "REQ-040::s004",
+      "order": 4,
+      "text": "Ensure the process respects real-time FX rates and updates user balances accordingly while maintaining full auditability in the ledger.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Ensures real-time data handling and auditing."
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "req_id": "REQ-170",
+  "doc_id": "4d2207dd-cea1-59c3-8073-ef1103dcd131",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-081",
+  "model": "deepseek-r1:7b",
+  "review_timestamp": "2026-01-21T00:22:57.749155+00:00",
+  "counts": {
+    "total": 11,
+    "llm_pos": 11,
+    "pipe_pos": 5,
+    "pipe_neg": 6,
+    "flip_neg_to_pos": 6
+  },
+  "reviews": [
+    {
+      "sent_id": "REQ-170::s001",
+      "order": 1,
+      "text": "**Header Normalization**  \nTo ensure consistent data handling, the ETL process will first normalize headers by stripping emojis and mapping Demotic characters to their corresponding UNICODE names.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Normalization of headers by stripping emojis and mapping Demotic characters."
+    },
+    {
+      "sent_id": "REQ-170::s002",
+      "order": 2,
+      "text": "This step aims to eliminate potential encoding discrepancies and improve data clarity throughout the transformation pipeline.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Eliminating encoding discrepancies during transformation."
+    },
+    {
+      "sent_id": "REQ-170::s003",
+      "order": 3,
+      "text": "Emojis will be replaced with their textual descriptions where applicable, and Demotic characters will be mapped using standard UNICODE representations.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Emojis being replaced with textual descriptions."
+    },
+    {
+      "sent_id": "REQ-170::s004",
+      "order": 4,
+      "text": "**Conversion**",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Conversion from CSV to TSV format."
+    },
+    {
+      "sent_id": "REQ-170::s005",
+      "order": 5,
+      "text": "The next phase involves converting CSV (Comma-Separated Values) files to TSV (Tab-Separated Values) format to facilitate better compatibility with downstream systems and tools.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "TSV conversion for downstream compatibility."
+    },
+    {
+      "sent_id": "REQ-170::s006",
+      "order": 6,
+      "text": "Special care will be taken to escape any existing tab characters within fields to prevent misinterpretation during parsing.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Tab characters escaped during parsing."
+    },
+    {
+      "sent_id": "REQ-170::s007",
+      "order": 7,
+      "text": "This conversion ensures that data integrity is maintained while accommodating systems that require tab-delimited formats for efficient processing.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Ensuring data integrity during conversion."
+    },
+    {
+      "sent_id": "REQ-170::s008",
+      "order": 8,
+      "text": "**Validation**  \nPost-conversion, each row will undergo checksum validation to verify data integrity and detect any potential transmission errors or data corruption.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "PERFORMANCE_REQUIREMENT",
+      "reason_text": "Checksum validation for data integrity."
+    },
+    {
+      "sent_id": "REQ-170::s009",
+      "order": 9,
+      "text": "Rows failing the checksum validation will be logged to the `hieroglyph_etl.err` file for further investigation and remediation.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "PERFORMANCE_REQUIREMENT",
+      "reason_text": "Logging failed validation rows."
+    },
+    {
+      "sent_id": "REQ-170::s010",
+      "order": 10,
+      "text": "This validation step is crucial in maintaining the reliability and accuracy of the transformed data, ensuring that only consistent and error-free information proceeds to subsequent stages of processing.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "PERFORMANCE_REQUIREMENT",
+      "reason_text": "Validation step crucial for reliability."
+    },
+    {
+      "sent_id": "REQ-170::s011",
+      "order": 11,
+      "text": "This ETL remediation plan aims to enhance the robustness and reliability of the data transformation process, addressing key normalization, conversion, and validation requirements to meet operational standards effectively.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Robustness and reliability of data transformation."
+    }
+  ]
+}

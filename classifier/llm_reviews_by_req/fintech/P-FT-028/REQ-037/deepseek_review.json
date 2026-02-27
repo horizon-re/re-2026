@@ -1,0 +1,58 @@
+{
+  "req_id": "REQ-037",
+  "doc_id": "15af87a2-03b1-545e-a3ea-3d04a16fa26b",
+  "domain": "fintech",
+  "prompt_id": "P-FT-028",
+  "model": "deepseek-r1:7b",
+  "review_timestamp": "2026-01-20T22:32:37.349532+00:00",
+  "counts": {
+    "total": 4,
+    "llm_pos": 3,
+    "pipe_pos": 2,
+    "pipe_neg": 2,
+    "flip_neg_to_pos": 1,
+    "llm_neg": 1
+  },
+  "reviews": [
+    {
+      "sent_id": "REQ-037::s001",
+      "order": 1,
+      "text": "For card issuance, Pantone 419 C has been designated as the approved \"midnight-black\" anodized metal finish for the card.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Enforces a specific finish for card issuance."
+    },
+    {
+      "sent_id": "REQ-037::s002",
+      "order": 2,
+      "text": "Embossing depth must not exceed 0.25 mm to preserve NFC antenna functionality.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_CONSTRAINT",
+      "reason_text": "Imposes an enforced limit on embossing depth."
+    },
+    {
+      "sent_id": "REQ-037::s003",
+      "order": 3,
+      "text": "All marketing renders must be updated within 48 hours of any implementation changes.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "PERFORMANCE_REQUIREMENT",
+      "reason_text": "Sets a required timeframe for updating marketing renders."
+    },
+    {
+      "sent_id": "REQ-037::s004",
+      "order": 4,
+      "text": "Supply-chain feasibility has been confirmed with manufacturing vendor LuxMetal GmbH.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.5,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Provides information about supply-chain feasibility without enforcing behavior."
+    }
+  ]
+}

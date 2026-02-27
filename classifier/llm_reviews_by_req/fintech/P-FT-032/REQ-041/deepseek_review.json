@@ -1,0 +1,25 @@
+{
+  "req_id": "REQ-041",
+  "doc_id": "7024ebe6-a12e-5771-9252-dfafeed5a264",
+  "domain": "fintech",
+  "prompt_id": "P-FT-032",
+  "model": "deepseek-r1:7b",
+  "review_timestamp": "2026-01-20T22:33:44.814171+00:00",
+  "counts": {
+    "total": 1,
+    "llm_pos": 1,
+    "pipe_pos": 1
+  },
+  "reviews": [
+    {
+      "sent_id": "REQ-041::s001",
+      "order": 1,
+      "text": "The micro-investing app must implement an AI-powered feature (flagged as aiPicksV1) launching 1 June 2025, that surfaces no more than five plain-language, emoji-free stock ideas daily—each passing FINRA “communication with the public” standards and logged in compliance_feed_audit—with the feed accessible exclusively to verified users aged 18–30.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.95,
+      "reason_code": "PERFORMANCE_REQUIREMENT",
+      "reason_text": "Imposes enforceable launch behavior with specific date and feature details."
+    }
+  ]
+}

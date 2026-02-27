@@ -1,0 +1,16 @@
+C:\Dvip\plantric-root\venv\lib\site-packages\transformers\utils\hub.py:128: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+[init] Working directory: C:\Dvip\plantric-root
+
+======================================================================
+[data] Loading datasets...
+======================================================================
+
+Traceback (most recent call last):
+  File "scripts\classifier\finetune\train_multitask_deberta.py", line 666, in <module>
+    main()
+  File "scripts\classifier\finetune\train_multitask_deberta.py", line 603, in main
+    print(f"[\u2713] Contextual: {len(samples_contextual)} samples")
+  File "C:\Users\Farza\AppData\Local\Programs\Python\Python38\lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2713' in position 1: character maps to <undefined>

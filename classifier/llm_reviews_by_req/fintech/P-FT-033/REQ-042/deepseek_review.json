@@ -1,0 +1,25 @@
+{
+  "req_id": "REQ-042",
+  "doc_id": "1324b678-7f34-58bc-af67-c33ed073dd29",
+  "domain": "fintech",
+  "prompt_id": "P-FT-033",
+  "model": "deepseek-r1:7b",
+  "review_timestamp": "2026-01-20T22:33:58.046739+00:00",
+  "counts": {
+    "total": 1,
+    "llm_pos": 1,
+    "pipe_pos": 1
+  },
+  "reviews": [
+    {
+      "sent_id": "REQ-042::s001",
+      "order": 1,
+      "text": "Implement an algorithm that defaults to FIFO but dynamically switches to LIFO when it reduces tax liability by at least 5%, citing IRS Pub 551 in inline comments, logs the selected strategy per wallet-year in `tax_lot_strategy`, and operates under the `autoLotV2` feature flag (enabled by default in staging and disabled in production pending audit approval).",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "The algorithm's dynamic switch between FIFO and LIFO based on tax liability reduction creates enforceable system behavior."
+    }
+  ]
+}

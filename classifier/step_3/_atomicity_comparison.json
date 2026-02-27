@@ -1,0 +1,12 @@
+{
+  "conservative": {
+    "total_units": 2872,
+    "avg_units_per_req": 29.917,
+    "split_rate": 0.36
+  },
+  "aggressive": {
+    "total_units": 6908,
+    "avg_units_per_req": 71.958,
+    "split_rate": 0.847
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "doc_id": "6d705cb3-4200-5b93-af41-c7db05780382",
+  "req_key": "fintech::P-FT-034::REQ-043",
+  "req_id": "REQ-043",
+  "domain": "fintech",
+  "prompt_id": "P-FT-034",
+  "source": {
+    "raw_path": "02_raw_requirements/fintech/P-FT-034/req-043_raw.txt",
+    "refined_path": "03_refined_json_normalized/fintech/P-FT-034/req-043_refined.json",
+    "origin": "both"
+  },
+  "text": "Subject: Update on CAD Round-Up Feature and Beta Opt-In Opportunity\n\nHi Karen,\n\nThanks so much for your patience regarding the rollout of our CAD round-up feature—I apologize for the unexpected delay. Your feedback has been invaluable, and we sincerely appreciate your understanding as we work diligently to get everything right.\n\nI'm happy to share that we’re firmly committed to enabling CAD round-up accounts by 1 July 2025. To ensure a smooth transition, we’ll be offering early beta access starting next week, and we’d love to have you participate. You’ll receive a follow-up email with detailed instructions on how to opt in. Migrating your existing funds will be straightforward—simply confirm the transfer within your account dashboard when prompted, and your current savings will automatically carry over to the new CAD account. If you have any further questions or need assistance during this process, feel free to reach out.\n\nWarm regards,  \nThe SaveRound Team  \nsupport@saveround.io",
+  "structured_data": [
+    {
+      "id": "REQ-043-HLJ-Chunk_1-Item_1-v1.0",
+      "domain": "fintech",
+      "summary": "Enable CAD round-up accounts by 1 July 2025",
+      "priority": "High",
+      "tags": [
+        "cad_account",
+        "feature_rollout",
+        "deadline"
+      ],
+      "subdomain": "accounts_management",
+      "difficulty": 3,
+      "additionalNotes": "Firm commitment to customer communicated via email.",
+      "source_hlj_id": "REQ 001-001",
+      "domain_id": "P-FT-034"
+    },
+    {
+      "id": "REQ-043-HLJ-Chunk_1-Item_2-v1.0",
+      "domain": "fintech",
+      "summary": "Offer beta opt-in access starting next week",
+      "priority": "High",
+      "tags": [
+        "beta_access",
+        "user_engagement",
+        "early_access"
+      ],
+      "subdomain": "customer_onboarding",
+      "difficulty": 2,
+      "additionalNotes": "Optional participation with instructions provided via email.",
+      "source_hlj_id": "REQ 001-002",
+      "domain_id": "P-FT-034"
+    },
+    {
+      "id": "REQ-043-HLJ-Chunk_1-Item_3-v1.0",
+      "domain": "fintech",
+      "summary": "Send follow-up email with detailed opt-in instructions",
+      "priority": "Medium",
+      "tags": [
+        "email_notification",
+        "customer_support"
+      ],
+      "subdomain": "customer_communication",
+      "difficulty": 2,
+      "additionalNotes": "Communication necessary for beta access engagement.",
+      "source_hlj_id": "REQ 001-003",
+      "domain_id": "P-FT-034"
+    },
+    {
+      "id": "REQ-043-HLJ-Chunk_1-Item_4-v1.0",
+      "domain": "fintech",
+      "summary": "Enable fund migration via account dashboard confirmation",
+      "priority": "High",
+      "tags": [
+        "fund_migration",
+        "user_dashboard"
+      ],
+      "subdomain": "funds_transfer",
+      "difficulty": 4,
+      "additionalNotes": "Explicitly mentioned mechanism for seamless fund transition.",
+      "source_hlj_id": "REQ 001-004",
+      "domain_id": "P-FT-034"
+    },
+    {
+      "id": "REQ-043-HLJ-Chunk_1-Item_5-v1.0",
+      "domain": "fintech",
+      "summary": "Automatic carry-over of existing savings to CAD accounts",
+      "priority": "High",
+      "tags": [
+        "automatic_transfer",
+        "cad_accounts"
+      ],
+      "subdomain": "funds_transfer",
+      "difficulty": 4,
+      "additionalNotes": "Savings migration is automated upon user confirmation.",
+      "source_hlj_id": "REQ 001-005",
+      "domain_id": "P-FT-034"
+    },
+    {
+      "id": "REQ-043-HLJ-Chunk_1-Item_6-v1.0",
+      "domain": "fintech",
+      "summary": "Provide customer support during the migration process",
+      "priority": "Low",
+      "tags": [
+        "customer_support",
+        "user_assistance"
+      ],
+      "subdomain": "customer_service",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied; support availability indicated if needed by user.",
+      "source_hlj_id": "REQ 001-006",
+      "domain_id": "P-FT-034"
+    }
+  ]
+}

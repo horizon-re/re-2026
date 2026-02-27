@@ -1,0 +1,11 @@
+**Incident Ticket #7432 – CloudWatch Anomaly & Spend Spike**  
+**Priority:** P1 | **Reported by:** AWS Budgets | **Triggered:** PagerDuty
+
+At 02:13 UTC, CloudWatch reported an anomalous spend spike from $0 to $1,000,000 within 2 minutes. Associated metric value returned as `NaN`, suggesting a divide-by-zero or corrupted calculation in cost reporting pipeline. AWS Budgets alert triggered, automatically escalating via PagerDuty (P1). Immediate remediation required:
+
+- Fallback logic must replace `NaN` with last known valid datapoint.  
+- Mark `NaN` entries as null in audit logs.  
+- Engineering to deliver root-cause analysis within 4 hours.  
+- Mandatory unit test to simulate divide-by-zero scenario and validate safeguard logic.
+
+This anomaly caused temporary billing visibility loss and alerting system overload. Until resolved, all dependent financial dashboards and budget alerts are considered unreliable. Engineering lead assigned: @cloud-metrics-eng. ETA for preliminary RCA: 06:30 UTC.

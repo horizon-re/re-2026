@@ -1,0 +1,78 @@
+{
+  "req_id": "REQ-128",
+  "doc_id": "62d04eb9-d095-5ed9-96f7-e611e013ca3a",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-039",
+  "model": "deepseek-r1:7b",
+  "review_timestamp": "2026-01-20T23:30:47.678903+00:00",
+  "counts": {
+    "total": 6,
+    "llm_pos": 4,
+    "pipe_pos": 3,
+    "pipe_neg": 3,
+    "flip_neg_to_pos": 1,
+    "llm_neg": 2
+  },
+  "reviews": [
+    {
+      "sent_id": "REQ-128::s001",
+      "order": 1,
+      "text": "Please implement exponential backoff logic (1s, 2s, 4s, up to 5 attempts) for all failed payment webhook deliveries.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Implementing backoff logic ensures reliable retries."
+    },
+    {
+      "sent_id": "REQ-128::s002",
+      "order": 2,
+      "text": "Each retry must verify the HMAC-SHA256 signature header to ensure authenticity before processing.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Verifying headers ensures data authenticity."
+    },
+    {
+      "sent_id": "REQ-128::s003",
+      "order": 3,
+      "text": "Every attempt, regardless of outcome, should be logged in the webhook_retry_history table with the status (success/failure) and corresponding response code.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Logging attempts enforces consistent error reporting."
+    },
+    {
+      "sent_id": "REQ-128::s004",
+      "order": 4,
+      "text": "Additionally, the delivery process must meet an SLA of achieving successful delivery within 2 minutes at the 95th percentile (P95).",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "PERFORMANCE_REQUIREMENT",
+      "reason_text": "SLA for successful delivery within time."
+    },
+    {
+      "sent_id": "REQ-128::s005",
+      "order": 5,
+      "text": "Kindly provide the expected Go-live date for this change and share a testing sandbox URL so we can validate the implementation before launch.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Requesting dates and URLs is not enforceable."
+    },
+    {
+      "sent_id": "REQ-128::s006",
+      "order": 6,
+      "text": "Thank you!",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.5,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Acknowledgment of thanks is non-actionable."
+    }
+  ]
+}

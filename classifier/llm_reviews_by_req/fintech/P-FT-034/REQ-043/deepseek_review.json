@@ -1,0 +1,109 @@
+{
+  "req_id": "REQ-043",
+  "doc_id": "6d705cb3-4200-5b93-af41-c7db05780382",
+  "domain": "fintech",
+  "prompt_id": "P-FT-034",
+  "model": "deepseek-r1:7b",
+  "review_timestamp": "2026-01-20T22:34:23.163579+00:00",
+  "counts": {
+    "total": 9,
+    "llm_neg": 8,
+    "pipe_pos": 1,
+    "flip_pos_to_neg": 1,
+    "pipe_neg": 8,
+    "llm_pos": 1,
+    "flip_neg_to_pos": 1
+  },
+  "reviews": [
+    {
+      "sent_id": "REQ-043::s001",
+      "order": 1,
+      "text": "Subject: Update on CAD Round-Up Feature and Beta Opt-In Opportunity",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Subject line indicates context but not a requirement."
+    },
+    {
+      "sent_id": "REQ-043::s002",
+      "order": 2,
+      "text": "Hi Karen,\n\nThanks so much for your patience regarding the rollout of our CAD round-up feature—I apologize for the unexpected delay.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.85,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Thank you note is context without requirements."
+    },
+    {
+      "sent_id": "REQ-043::s003",
+      "order": 3,
+      "text": "Your feedback has been invaluable, and we sincerely appreciate your understanding as we work diligently to get everything right.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Appreciation and thanks are communication, not requirements."
+    },
+    {
+      "sent_id": "REQ-043::s004",
+      "order": 4,
+      "text": "I'm happy to share that we’re firmly committed to enabling CAD round-up accounts by 1 July 2025.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.85,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Commitment statement is context without enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-043::s005",
+      "order": 5,
+      "text": "To ensure a smooth transition, we’ll be offering early beta access starting next week, and we’d love to have you participate.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.95,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Obligation to enable CAD accounts by a date."
+    },
+    {
+      "sent_id": "REQ-043::s006",
+      "order": 6,
+      "text": "You’ll receive a follow-up email with detailed instructions on how to opt in.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.85,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Beta access offer is context without requirements."
+    },
+    {
+      "sent_id": "REQ-043::s007",
+      "order": 7,
+      "text": "Migrating your existing funds will be straightforward—simply confirm the transfer within your account dashboard when prompted, and your current savings will automatically carry over to the new CAD account.",
+      "pipeline_label": "candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.9,
+      "reason_code": "EXAMPLE_OR_EXPLANATION",
+      "reason_text": "Follow-up email instructions are procedural examples."
+    },
+    {
+      "sent_id": "REQ-043::s008",
+      "order": 8,
+      "text": "If you have any further questions or need assistance during this process, feel free to reach out.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.9,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Support line is context without enforceable behavior."
+    },
+    {
+      "sent_id": "REQ-043::s009",
+      "order": 9,
+      "text": "Warm regards,  \nThe SaveRound Team  \nsupport@saveround.io",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 1.0,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Contact information only provides contact details."
+    }
+  ]
+}

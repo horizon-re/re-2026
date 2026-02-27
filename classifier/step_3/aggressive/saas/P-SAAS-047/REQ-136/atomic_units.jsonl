@@ -1,0 +1,7 @@
+{"unit_id": "REQ-136::au001", "req_id": "REQ-136", "doc_id": "40f92fb0-9cee-59ed-8660-b0def183f696", "parent_sent_id": "REQ-136::s013", "order": 1, "text": "This system logs cryptographic hashes of metadata related to each data - sharing operation ."}
+{"unit_id": "REQ-136::au002", "req_id": "REQ-136", "doc_id": "40f92fb0-9cee-59ed-8660-b0def183f696", "parent_sent_id": "REQ-136::s013", "order": 2, "text": "related to each data - sharing operation"}
+{"unit_id": "REQ-136::au003", "req_id": "REQ-136", "doc_id": "40f92fb0-9cee-59ed-8660-b0def183f696", "parent_sent_id": "REQ-136::s013", "order": 3, "text": "data - sharing"}
+{"unit_id": "REQ-136::au004", "req_id": "REQ-136", "doc_id": "40f92fb0-9cee-59ed-8660-b0def183f696", "parent_sent_id": "REQ-136::s021", "order": 4, "text": "Although the system maintains immutable logs on - chain"}
+{"unit_id": "REQ-136::au005", "req_id": "REQ-136", "doc_id": "40f92fb0-9cee-59ed-8660-b0def183f696", "parent_sent_id": "REQ-136::s021", "order": 5, "text": "Although the system maintains immutable logs on - chain , actual data is never stored on the blockchain ."}
+{"unit_id": "REQ-136::au006", "req_id": "REQ-136", "doc_id": "40f92fb0-9cee-59ed-8660-b0def183f696", "parent_sent_id": "REQ-136::s025", "order": 6, "text": "* : \n   - The system automatically logs data processing activities ( who shared what , when , and with whom ) ."}
+{"unit_id": "REQ-136::au007", "req_id": "REQ-136", "doc_id": "40f92fb0-9cee-59ed-8660-b0def183f696", "parent_sent_id": "REQ-136::s025", "order": 7, "text": "who shared what , when , and with whom"}

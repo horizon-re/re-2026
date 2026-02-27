@@ -1,0 +1,303 @@
+{
+  "doc_id": "40f92fb0-9cee-59ed-8660-b0def183f696",
+  "req_key": "saas::P-SAAS-047::REQ-136",
+  "req_id": "REQ-136",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-047",
+  "source": {
+    "raw_path": "02_raw_requirements/saas/P-SAAS-047/req-136_raw.txt",
+    "refined_path": "03_refined_json_normalized/saas/P-SAAS-047/req-136_refined.json",
+    "origin": "both"
+  },
+  "text": "**Feasibility Study: Secure Sharing with Verifiable Logs**\n\n---\n\n### **Objective – Secure Sharing with Verifiable Logs**\n\nThis feasibility study explores the development and deployment of a secure data-sharing system with verifiable audit logs, tailored to highly regulated environments. The primary objective is to enable entities (e.g., enterprises, healthcare providers, government agencies) to share sensitive data across organizational boundaries without compromising confidentiality, integrity, or regulatory compliance. The solution ensures that:\n\n- Data is encrypted before leaving the client’s environment.\n- Access and sharing actions are logged in a tamper-proof manner.\n- Regulatory frameworks such as GDPR are upheld.\n- Stakeholders retain cryptographic proof of compliance activities.\n\n---\n\n### **Encryption Model – Client-Side AES-GCM with Key Escrow via KMS-Backed HSM**\n\nTo ensure end-to-end confidentiality, all data is encrypted on the client side using **AES-GCM (Advanced Encryption Standard in Galois/Counter Mode)** before transmission or storage. This authenticated encryption algorithm ensures both data confidentiality and integrity, guarding against unauthorized access and tampering.\n\nKey characteristics of the encryption model include:\n\n- **Client-side encryption**: Data is encrypted before it leaves the user’s device or service boundary.\n- **AES-GCM**: Offers authenticated encryption with additional data (AEAD), ensuring integrity in transit and at rest.\n- **Key Management**: Keys are not stored with the data. Instead, they are escrowed via a **cloud-based Key Management Service (KMS)** integrated with **Hardware Security Modules (HSMs)** for secure generation, rotation, and access control.\n- **Access Control Policies**: Access to the keys is governed by strict Identity and Access Management (IAM) roles and time-based constraints.\n- **Auditability**: Every key retrieval attempt is logged and monitored within the KMS system.\n\nThis model effectively mitigates the risks of insider threats, data breaches, and unauthorized key access.\n\n---\n\n### **Blockchain Logging – Append-Only Hash to Hyperledger; On-Chain Proof Every 10 Minutes**\n\nFor verifiable, tamper-evident logging of data-sharing events, an **append-only audit trail** is constructed using a **Hyperledger Fabric** blockchain network. This system logs cryptographic hashes of metadata related to each data-sharing operation.\n\n**Mechanics of the logging model:**\n\n- **Off-chain event processing**: Every data-sharing event (including metadata like sender, recipient, and timestamp) is hashed (e.g., SHA-256) and temporarily stored in an event buffer.\n- **Hash chaining**: Events are grouped and sequentially hashed to form a Merkle tree.\n- **On-chain commitment**: Every **10 minutes**, a Merkle root representing the last batch of events is written to the blockchain.\n- **Hyperledger Fabric**: Chosen for its enterprise readiness, fine-grained access controls, and support for private channels between consortium members.\n- **Auditability**: Any external auditor or regulatory authority can verify an event’s inclusion by validating the Merkle proof against the on-chain hash.\n\nThis ensures non-repudiation, tamper evidence, and cryptographic traceability for all shared events.\n\n---\n\n### **GDPR Alignment – Right-to-Erasure via Off-Chain Pointer Deletion; Article 30 Mapping**\n\nThe solution is engineered to comply with the **General Data Protection Regulation (GDPR)**, focusing on data subject rights and controller obligations.\n\n**Key Compliance Mechanisms:**\n\n- **Right-to-Erasure**: Although the system maintains immutable logs on-chain, actual data is never stored on the blockchain. Instead:\n  - All personally identifiable information (PII) resides off-chain in encrypted form.\n  - On-chain entries merely reference **pseudonymous pointers** or **non-PII metadata**.\n  - When a right-to-erasure request is granted, the corresponding off-chain data and its reference pointer are deleted. This ensures data is no longer accessible or re-identifiable, satisfying Article 17 obligations.\n\n- **Article 30 Mapping (Records of Processing Activities)**:\n  - The system automatically logs data processing activities (who shared what, when, and with whom).\n  - These logs can be exported in a structured format to facilitate compliance audits.\n\n- **Data Minimization and Purpose Limitation**:\n  - Only metadata essential for compliance is retained.\n  - Data sharing is purpose-bound and access-controlled.\n\nThis hybrid on/off-chain architecture supports both GDPR-compliant data deletion and audit integrity.\n\n---\n\n### **Cost-Benefit Analysis – Infra Cost vs Compliance Gains**\n\n#### **Costs:**\n\n- **Cloud Infrastructure**:\n  - Encrypted object storage (e.g., Amazon S3, Azure Blob).\n  - HSM-backed KMS usage charges (per key, per operation).\n  - Blockchain node hosting and inter-peer communication (compute and bandwidth).\n\n- **Development and Integration**:\n  - Initial setup of encryption and logging modules.\n  - Smart contract development and Hyperledger deployment.\n  - IAM, GDPR compliance tooling, and auditing dashboards.\n\n- **Ongoing Maintenance**:\n  - Key lifecycle management.\n  - Blockchain network updates.\n  - Compliance updates for evolving regulations.\n\nEstimated infrastructure cost: $5,000–$8,000/month for a medium-sized enterprise setup.\n\n#### **Benefits:**\n\n- **Regulatory Assurance**:\n  - Native GDPR compliance mechanisms reduce audit overhead.\n  - Automated Article 30 documentation streamlines regulator communication.\n\n- **Operational Integrity**:\n  - Zero-trust design and immutable audit logs reduce insider threat exposure.\n  - Easier dispute resolution with on-chain cryptographic proof.\n\n- **Market Differentiation**:\n  - Transparent data handling practices enhance customer trust and competitive advantage.\n\n- **Long-Term Savings**:\n  - Reduced risk of non-compliance fines (up to €20M or 4% of global turnover under GDPR).\n  - Minimized cost of incident response due to verifiable audit trail.\n\nOverall, the long-term **compliance assurance and reputational gains** significantly outweigh the moderate recurring infrastructure cost.\n\n---\n\n### **Conclusion**\n\nThis feasibility study confirms that a secure sharing framework incorporating **client-side AES-GCM encryption**, **KMS-backed key escrow**, **Hyperledger-based logging**, and **GDPR-aligned controls** is both technically and economically viable. The solution addresses core challenges in secure data exchange—confidentiality, auditability, and compliance—while offering scalable deployment options and tangible risk mitigation for privacy-centric organizations.",
+  "structured_data": [
+    {
+      "id": "REQ-136-HLJ-Chunk_1-Item_1-v1.0",
+      "domain": "unknown",
+      "summary": "Encrypt data client-side before transmission",
+      "priority": "High",
+      "tags": [
+        "client_side_encryption",
+        "data_protection",
+        "confidentiality"
+      ],
+      "subdomain": "data_security",
+      "difficulty": 3,
+      "additionalNotes": "Ensures data is protected before it leaves the user's environment",
+      "source_hlj_id": "REQ 001-001",
+      "domain_id": "P-SAAS-047"
+    },
+    {
+      "id": "REQ-136-HLJ-Chunk_1-Item_2-v1.0",
+      "domain": "unknown",
+      "summary": "Log access and sharing actions tamper-proof",
+      "priority": "High",
+      "tags": [
+        "audit_logging",
+        "tamper_proof",
+        "data_sharing"
+      ],
+      "subdomain": "auditability",
+      "difficulty": 4,
+      "additionalNotes": "Logs must support regulatory audit and dispute resolution",
+      "source_hlj_id": "REQ 001-002",
+      "domain_id": "P-SAAS-047"
+    },
+    {
+      "id": "REQ-136-HLJ-Chunk_1-Item_3-v1.0",
+      "domain": "unknown",
+      "summary": "Maintain GDPR compliance throughout data lifecycle",
+      "priority": "High",
+      "tags": [
+        "gdpr",
+        "compliance",
+        "privacy"
+      ],
+      "subdomain": "compliance",
+      "difficulty": 5,
+      "additionalNotes": "Covers data subject rights and controller obligations",
+      "source_hlj_id": "REQ 001-003",
+      "domain_id": "P-SAAS-047"
+    },
+    {
+      "id": "REQ-136-HLJ-Chunk_1-Item_4-v1.0",
+      "domain": "unknown",
+      "summary": "Enable cryptographic proof of data compliance",
+      "priority": "Medium",
+      "tags": [
+        "cryptographic_proof",
+        "compliance",
+        "auditability"
+      ],
+      "subdomain": "compliance",
+      "difficulty": 3,
+      "additionalNotes": "Proof includes who accessed or shared data and when",
+      "source_hlj_id": "REQ 001-004",
+      "domain_id": "P-SAAS-047"
+    },
+    {
+      "id": "REQ-136-HLJ-Chunk_1-Item_5-v1.0",
+      "domain": "unknown",
+      "summary": "Store encryption keys in KMS with HSM support",
+      "priority": "High",
+      "tags": [
+        "key_management",
+        "kms",
+        "hsm"
+      ],
+      "subdomain": "data_security",
+      "difficulty": 4,
+      "additionalNotes": "Keys are securely escrowed and separated from data",
+      "source_hlj_id": "REQ 001-005",
+      "domain_id": "P-SAAS-047"
+    },
+    {
+      "id": "REQ-136-HLJ-Chunk_1-Item_6-v1.0",
+      "domain": "unknown",
+      "summary": "Restrict key access using IAM roles and constraints",
+      "priority": "Medium",
+      "tags": [
+        "access_control",
+        "iam",
+        "kms"
+      ],
+      "subdomain": "access_management",
+      "difficulty": 3,
+      "additionalNotes": "origin: implied – Secure key access through identity roles",
+      "source_hlj_id": "REQ 001-006",
+      "domain_id": "P-SAAS-047"
+    },
+    {
+      "id": "REQ-136-HLJ-Chunk_1-Item_7-v1.0",
+      "domain": "unknown",
+      "summary": "Log every encryption key retrieval attempt",
+      "priority": "Medium",
+      "tags": [
+        "audit_logging",
+        "kms",
+        "security_monitoring"
+      ],
+      "subdomain": "auditability",
+      "difficulty": 3,
+      "additionalNotes": "Supports key usage tracking and security audits",
+      "source_hlj_id": "REQ 001-007",
+      "domain_id": "P-SAAS-047"
+    },
+    {
+      "id": "REQ-136-HLJ-Chunk_1-Item_8-v1.0",
+      "domain": "unknown",
+      "summary": "Log hashed metadata of data-sharing events",
+      "priority": "High",
+      "tags": [
+        "metadata_logging",
+        "hashing",
+        "blockchain"
+      ],
+      "subdomain": "auditability",
+      "difficulty": 4,
+      "additionalNotes": "Includes sender, recipient, timestamp",
+      "source_hlj_id": "REQ 001-008",
+      "domain_id": "P-SAAS-047"
+    },
+    {
+      "id": "REQ-136-HLJ-Chunk_1-Item_9-v1.0",
+      "domain": "unknown",
+      "summary": "Commit Merkle root to blockchain every 10 minutes",
+      "priority": "High",
+      "tags": [
+        "blockchain_logging",
+        "merkle_tree",
+        "periodic_commit"
+      ],
+      "subdomain": "auditability",
+      "difficulty": 4,
+      "additionalNotes": "Ensures frequent verifiable logs on-chain",
+      "source_hlj_id": "REQ 001-009",
+      "domain_id": "P-SAAS-047"
+    },
+    {
+      "id": "REQ-136-HLJ-Chunk_1-Item_10-v1.0",
+      "domain": "unknown",
+      "summary": "Use Hyperledger Fabric for enterprise-grade logging",
+      "priority": "Medium",
+      "tags": [
+        "hyperledger",
+        "blockchain",
+        "audit_logging"
+      ],
+      "subdomain": "blockchain_integration",
+      "difficulty": 4,
+      "additionalNotes": "Chosen for fine-grained access control and private channels",
+      "source_hlj_id": "REQ 001-010",
+      "domain_id": "P-SAAS-047"
+    },
+    {
+      "id": "REQ-136-HLJ-Chunk_1-Item_11-v1.0",
+      "domain": "unknown",
+      "summary": "Provide verifiable Merkle proof for event validation",
+      "priority": "Medium",
+      "tags": [
+        "merkle_proof",
+        "auditing",
+        "blockchain"
+      ],
+      "subdomain": "auditability",
+      "difficulty": 4,
+      "additionalNotes": "External entities can verify events cryptographically",
+      "source_hlj_id": "REQ 001-011",
+      "domain_id": "P-SAAS-047"
+    },
+    {
+      "id": "REQ-136-HLJ-Chunk_1-Item_12-v1.0",
+      "domain": "unknown",
+      "summary": "Retain only essential metadata for compliance",
+      "priority": "Low",
+      "tags": [
+        "data_minimization",
+        "compliance",
+        "metadata"
+      ],
+      "subdomain": "data_governance",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied – Avoid retaining unnecessary user data",
+      "source_hlj_id": "REQ 001-012",
+      "domain_id": "P-SAAS-047"
+    },
+    {
+      "id": "REQ-136-HLJ-Chunk_1-Item_13-v1.0",
+      "domain": "unknown",
+      "summary": "Delete off-chain PII and reference upon erasure request",
+      "priority": "High",
+      "tags": [
+        "gdpr",
+        "right_to_erasure",
+        "data_deletion"
+      ],
+      "subdomain": "compliance",
+      "difficulty": 3,
+      "additionalNotes": "Supports GDPR Article 17 without violating on-chain immutability",
+      "source_hlj_id": "REQ 001-013",
+      "domain_id": "P-SAAS-047"
+    },
+    {
+      "id": "REQ-136-HLJ-Chunk_1-Item_14-v1.0",
+      "domain": "unknown",
+      "summary": "Reference on-chain data with pseudonymous pointers",
+      "priority": "Medium",
+      "tags": [
+        "pseudonymization",
+        "blockchain",
+        "privacy"
+      ],
+      "subdomain": "data_security",
+      "difficulty": 3,
+      "additionalNotes": "Prevents direct storage of PII on blockchain",
+      "source_hlj_id": "REQ 001-014",
+      "domain_id": "P-SAAS-047"
+    },
+    {
+      "id": "REQ-136-HLJ-Chunk_1-Item_15-v1.0",
+      "domain": "unknown",
+      "summary": "Export processing logs for Article 30 documentation",
+      "priority": "Medium",
+      "tags": [
+        "gdpr",
+        "article_30",
+        "log_export"
+      ],
+      "subdomain": "compliance",
+      "difficulty": 3,
+      "additionalNotes": "Helps automate regulator-facing compliance reporting",
+      "source_hlj_id": "REQ 001-015",
+      "domain_id": "P-SAAS-047"
+    },
+    {
+      "id": "REQ-136-HLJ-Chunk_1-Item_16-v1.0",
+      "domain": "unknown",
+      "summary": "Support purpose-bound data access policies",
+      "priority": "Low",
+      "tags": [
+        "purpose_limitation",
+        "access_control",
+        "compliance"
+      ],
+      "subdomain": "access_management",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied – Access must align with declared purpose",
+      "source_hlj_id": "REQ 001-016",
+      "domain_id": "P-SAAS-047"
+    },
+    {
+      "id": "REQ-136-HLJ-Chunk_1-Item_17-v1.0",
+      "domain": "unknown",
+      "summary": "Provide dashboard for auditing and compliance oversight",
+      "priority": "Low",
+      "tags": [
+        "compliance_dashboard",
+        "monitoring",
+        "gdpr"
+      ],
+      "subdomain": "compliance",
+      "difficulty": 3,
+      "additionalNotes": "origin: implied – Helps users and regulators monitor activities",
+      "source_hlj_id": "REQ 001-017",
+      "domain_id": "P-SAAS-047"
+    },
+    {
+      "id": "REQ-136-HLJ-Chunk_1-Item_18-v1.0",
+      "domain": "unknown",
+      "summary": "Ensure IAM-based restrictions on compliance tool access",
+      "priority": "Low",
+      "tags": [
+        "iam",
+        "access_control",
+        "compliance_tools"
+      ],
+      "subdomain": "access_management",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied – Only authorized users should operate compliance functions",
+      "source_hlj_id": "REQ 001-018",
+      "domain_id": "P-SAAS-047"
+    }
+  ]
+}

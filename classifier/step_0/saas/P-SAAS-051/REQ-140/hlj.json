@@ -1,0 +1,95 @@
+{
+  "doc_id": "951b75df-a0d4-59e2-9a84-0f6622c127d0",
+  "req_key": "saas::P-SAAS-051::REQ-140",
+  "req_id": "REQ-140",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-051",
+  "source": {
+    "raw_path": "02_raw_requirements/saas/P-SAAS-051/req-140_raw.txt",
+    "refined_path": "03_refined_json_normalized/saas/P-SAAS-051/req-140_refined.json",
+    "origin": "both"
+  },
+  "text": "🚨 P1-non-negotiable: Ensure all AR overlay UI call-outs support right-to-left Arabic (🇸🇦) layout before next week’s trade show. The layout must fully mirror all anchor positions for RTL orientation—emoji 🎉 remains at the end of the line regardless of direction. Figma mock-ups are due by Friday 12:00 UTC, and QA testing must be completed on HoloLens 2.",
+  "structured_data": [
+    {
+      "id": "REQ-140-HLJ-Chunk_1-Item_1-v1.0",
+      "domain": "unknown",
+      "summary": "Support RTL Arabic UI call-outs in AR overlay",
+      "priority": "High",
+      "tags": [
+        "rtl_support",
+        "ar_overlay",
+        "localization"
+      ],
+      "subdomain": "ar_ui",
+      "difficulty": 3,
+      "additionalNotes": "Ensure compatibility with Arabic script for Saudi market display",
+      "source_hlj_id": "REQ 001-001",
+      "domain_id": "P-SAAS-051"
+    },
+    {
+      "id": "REQ-140-HLJ-Chunk_1-Item_2-v1.0",
+      "domain": "unknown",
+      "summary": "Mirror anchor positions for RTL layout",
+      "priority": "High",
+      "tags": [
+        "rtl_layout",
+        "anchor_mirroring",
+        "ui_positioning"
+      ],
+      "subdomain": "ar_ui",
+      "difficulty": 3,
+      "additionalNotes": "Anchor mirroring required for accurate spatial rendering in RTL",
+      "source_hlj_id": "REQ 001-002",
+      "domain_id": "P-SAAS-051"
+    },
+    {
+      "id": "REQ-140-HLJ-Chunk_1-Item_3-v1.0",
+      "domain": "unknown",
+      "summary": "Keep emoji 🎉 at end of line in RTL layout",
+      "priority": "Medium",
+      "tags": [
+        "rtl_text",
+        "emoji_position",
+        "ui_consistency"
+      ],
+      "subdomain": "text_rendering",
+      "difficulty": 2,
+      "additionalNotes": "Special case to maintain emoji at line-end in bidirectional text rendering",
+      "source_hlj_id": "REQ 001-003",
+      "domain_id": "P-SAAS-051"
+    },
+    {
+      "id": "REQ-140-HLJ-Chunk_1-Item_4-v1.0",
+      "domain": "unknown",
+      "summary": "Deliver Figma mock-ups by Friday 12:00 UTC",
+      "priority": "High",
+      "tags": [
+        "figma",
+        "mockup_deadline",
+        "ui_design"
+      ],
+      "subdomain": "design_prototyping",
+      "difficulty": 2,
+      "additionalNotes": "Required to unblock QA and development for trade show demo",
+      "source_hlj_id": "REQ 001-004",
+      "domain_id": "P-SAAS-051"
+    },
+    {
+      "id": "REQ-140-HLJ-Chunk_1-Item_5-v1.0",
+      "domain": "unknown",
+      "summary": "Complete QA testing on HoloLens 2",
+      "priority": "High",
+      "tags": [
+        "qa_testing",
+        "hololens_2",
+        "ar_device"
+      ],
+      "subdomain": "device_testing",
+      "difficulty": 3,
+      "additionalNotes": "Target device for AR overlay validation before trade show delivery",
+      "source_hlj_id": "REQ 001-005",
+      "domain_id": "P-SAAS-051"
+    }
+  ]
+}

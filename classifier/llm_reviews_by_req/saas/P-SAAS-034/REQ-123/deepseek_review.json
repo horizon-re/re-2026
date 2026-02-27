@@ -1,0 +1,78 @@
+{
+  "req_id": "REQ-123",
+  "doc_id": "53006f51-c770-53b2-a826-c3298b2eb7bd",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-034",
+  "model": "deepseek-r1:7b",
+  "review_timestamp": "2026-01-20T23:28:42.799441+00:00",
+  "counts": {
+    "total": 6,
+    "llm_pos": 4,
+    "pipe_pos": 2,
+    "llm_neg": 2,
+    "pipe_neg": 4,
+    "flip_neg_to_pos": 2
+  },
+  "reviews": [
+    {
+      "sent_id": "REQ-123::s001",
+      "order": 1,
+      "text": "Noted — this is the third merge-tag failure this month.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Status update about merge-tag failures."
+    },
+    {
+      "sent_id": "REQ-123::s002",
+      "order": 2,
+      "text": "We need to address this head-on: please implement regression tests specifically for the merge-tag parser to prevent recurrence.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Imposes the necessity to implement regression tests."
+    },
+    {
+      "sent_id": "REQ-123::s003",
+      "order": 3,
+      "text": "Also set up real-time monitoring of email render errors, with auto-alerts to #email-ops if the failure rate exceeds 0.1%.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Imposes real-time monitoring and alerting behavior."
+    },
+    {
+      "sent_id": "REQ-123::s004",
+      "order": 4,
+      "text": "This will ensure rapid awareness and triage.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Ensures rapid awareness and triage behavior."
+    },
+    {
+      "sent_id": "REQ-123::s005",
+      "order": 5,
+      "text": "Finally, the fix must be developed, tested, and deployed no later than Friday 18:00 UTC.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "PERFORMANCE_REQUIREMENT",
+      "reason_text": "Imposes a performance constraint by the deadline."
+    },
+    {
+      "sent_id": "REQ-123::s006",
+      "order": 6,
+      "text": "Let’s close this loop properly — confirm ownership and ETA by EOD.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Instruction on task completion without enforceable action."
+    }
+  ]
+}

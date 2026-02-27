@@ -1,0 +1,14 @@
+{
+  "doc_id": "c61b5d5d-e3ed-5999-9889-e3083494dca8",
+  "req_key": "fintech::P-FT-029::REQ-038",
+  "req_id": "REQ-038",
+  "domain": "fintech",
+  "prompt_id": "P-FT-029",
+  "source": {
+    "raw_path": "02_raw_requirements/fintech/P-FT-029/req-038_raw.txt",
+    "refined_path": null,
+    "origin": "raw_only"
+  },
+  "text": "For all BNPL transactions globally, the system shall, in compliance with CFPB Reg Z and EU PSD2, assess a late fee calculated as max(USD 5, 3% of the overdue principal), with any fractional cent rounded up; log all such fee calculations in the txn_fees table with fee_origin='BNPL_LATE'; and ensure that the feature flag late_fee_v2 is enabled in production by 23:59 UTC tonight, with an audit trail.",
+  "structured_data": null
+}

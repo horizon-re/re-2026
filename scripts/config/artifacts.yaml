@@ -1,0 +1,44 @@
+# config/artifacts.yaml
+
+runs:
+  - run_id: "2025-09-24T10-15-22Z"
+    uuid: "a8b0d6f2-41ab-43f9-9a8c-1234abcd5678"
+    steps:
+      ingest:
+        manifest: "keyword_extraction/a8b0d6f2/00_ingest/manifest.parquet"
+      segmentation:
+        sentences: "keyword_extraction/a8b0d6f2/01_segmentation/sentences.jsonl"
+        spine: "keyword_extraction/a8b0d6f2/01_segmentation/spine.parquet"
+      candidates:
+        spacy_chunks: "keyword_extraction/a8b0d6f2/11_candidates/spacy.jsonl"
+        stanza_dep: "keyword_extraction/a8b0d6f2/12_candidates/stanza.jsonl"
+      dictionary:
+        canonical_map: "keyword_extraction/a8b0d6f2/21_dictionary/canonical_map.parquet"
+        entries: "keyword_extraction/a8b0d6f2/22_dictionary/entries.parquet"
+      graphs:
+        cooc: "keyword_extraction/a8b0d6f2/31_graphs/cooc.edgelist"
+        tdm: "keyword_extraction/a8b0d6f2/32_graphs/tdm.npz"
+      clustering:
+        global: "keyword_extraction/a8b0d6f2/42_clusters/global.assignments.parquet"
+        descriptors: "keyword_extraction/a8b0d6f2/44_clusters/descriptors.parquet"
+      kg:
+        linking: "keyword_extraction/a8b0d6f2/51_kg/linking.parquet"
+        short_paths: "keyword_extraction/a8b0d6f2/52_kg/short_paths.index"
+      features:
+        full: "keyword_extraction/a8b0d6f2/71_features/features.parquet"
+      scores:
+        logreg: "keyword_extraction/a8b0d6f2/72_scores/logreg.parquet"
+        ebm: "keyword_extraction/a8b0d6f2/73_scores/ebm.parquet"
+        calibrated: "keyword_extraction/a8b0d6f2/75_scores/calibrated.parquet"
+      decisions:
+        final: "keyword_extraction/a8b0d6f2/76_decisions/decisions.jsonl"
+        explanations: "keyword_extraction/a8b0d6f2/77_decisions/explanations.jsonl"
+      mapping:
+        edges: "keyword_extraction/a8b0d6f2/81_mapping/edges.parquet"
+        ledger: "keyword_extraction/a8b0d6f2/83_mapping/ledger.parquet"
+      hitl:
+        queue: "keyword_extraction/a8b0d6f2/111_hitl/queue.parquet"
+        events: "keyword_extraction/a8b0d6f2/113_hitl/events.jsonl"
+      reports:
+        core_metrics: "keyword_extraction/a8b0d6f2/121_reports/core_metrics.md"
+        drift_metrics: "keyword_extraction/a8b0d6f2/123_reports/drift_metrics.md"

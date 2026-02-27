@@ -1,0 +1,111 @@
+{
+  "doc_id": "17a73e56-676b-55a7-8ad7-273f24201530",
+  "req_key": "fintech::P-FT-037::REQ-046",
+  "req_id": "REQ-046",
+  "domain": "fintech",
+  "prompt_id": "P-FT-037",
+  "source": {
+    "raw_path": "02_raw_requirements/fintech/P-FT-037/req-046_raw.txt",
+    "refined_path": "03_refined_json_normalized/fintech/P-FT-037/req-046_refined.json",
+    "origin": "both"
+  },
+  "text": "The system must enable merchants to supply a `brandColor` in hexadecimal format and a `logoUrl` pointing to an image asset when generating payment links, validating that the provided image is either PNG or JPG format and does not exceed 100 KB, explicitly rejecting images outside these criteria; ensure that payment link pages load branded assets within a 95th percentile latency of less than 300 milliseconds, rolled out behind the feature flag `paylink_branding_v1`, enabled by default for organizations created after 1 May 2025, and automatically triggering an SLA breach alert to the `#payments-oncall` channel in case of latency violations or validation failures.",
+  "structured_data": [
+    {
+      "id": "REQ-046-HLJ-Chunk_1-Item_1-v1.0",
+      "domain": "fintech",
+      "summary": "Enable brandColor and logoUrl input for merchant pay-links",
+      "priority": "High",
+      "tags": [
+        "merchant_customization",
+        "paylink_generation",
+        "branding"
+      ],
+      "subdomain": "payments",
+      "difficulty": 2,
+      "additionalNotes": "Merchants must be able to pass branding details during pay-link creation.",
+      "source_hlj_id": "REQ 001-001",
+      "domain_id": "P-FT-037"
+    },
+    {
+      "id": "REQ-046-HLJ-Chunk_1-Item_2-v1.0",
+      "domain": "fintech",
+      "summary": "Validate logo image format as PNG or JPG",
+      "priority": "High",
+      "tags": [
+        "image_validation",
+        "format_check",
+        "branding"
+      ],
+      "subdomain": "payments",
+      "difficulty": 2,
+      "additionalNotes": "Images not in PNG or JPG format must be explicitly rejected.",
+      "source_hlj_id": "REQ 001-002",
+      "domain_id": "P-FT-037"
+    },
+    {
+      "id": "REQ-046-HLJ-Chunk_1-Item_3-v1.0",
+      "domain": "fintech",
+      "summary": "Reject logo images exceeding 100 KB",
+      "priority": "High",
+      "tags": [
+        "image_validation",
+        "file_size_check",
+        "branding"
+      ],
+      "subdomain": "payments",
+      "difficulty": 2,
+      "additionalNotes": "Uploaded logo images must be ≤100 KB or rejected.",
+      "source_hlj_id": "REQ 001-003",
+      "domain_id": "P-FT-037"
+    },
+    {
+      "id": "REQ-046-HLJ-Chunk_1-Item_4-v1.0",
+      "domain": "fintech",
+      "summary": "Load branded assets within 300ms at 95th percentile",
+      "priority": "High",
+      "tags": [
+        "performance",
+        "branding",
+        "latency_sla"
+      ],
+      "subdomain": "payments",
+      "difficulty": 4,
+      "additionalNotes": "Applies to branded asset load times on pay-link page; 300ms P95 latency SLA.",
+      "source_hlj_id": "REQ 001-004",
+      "domain_id": "P-FT-037"
+    },
+    {
+      "id": "REQ-046-HLJ-Chunk_1-Item_5-v1.0",
+      "domain": "fintech",
+      "summary": "Enable paylink_branding_v1 flag by default after 1 May 2025",
+      "priority": "Medium",
+      "tags": [
+        "feature_flag",
+        "rollout",
+        "versioning"
+      ],
+      "subdomain": "platform",
+      "difficulty": 3,
+      "additionalNotes": "Feature flag controls branding logic and is enabled by default for new orgs post-1 May 2025.",
+      "source_hlj_id": "REQ 001-005",
+      "domain_id": "P-FT-037"
+    },
+    {
+      "id": "REQ-046-HLJ-Chunk_1-Item_6-v1.0",
+      "domain": "fintech",
+      "summary": "Trigger SLA breach alert to #payments-oncall",
+      "priority": "High",
+      "tags": [
+        "alerting",
+        "sla_monitoring",
+        "observability"
+      ],
+      "subdomain": "devops",
+      "difficulty": 3,
+      "additionalNotes": "On SLA violations or validation failures, notify the on-call team in Slack channel #payments-oncall.",
+      "source_hlj_id": "REQ 001-006",
+      "domain_id": "P-FT-037"
+    }
+  ]
+}

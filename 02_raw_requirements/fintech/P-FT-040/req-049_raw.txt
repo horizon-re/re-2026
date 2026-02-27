@@ -1,0 +1,15 @@
+## Capture  
+The system shall require users to submit a selfie video not exceeding 5 seconds in length. This video must adhere to quality standards suitable for biometric verification and identity validation processes.
+
+## Liveness  
+The submitted selfie video must pass a biometric liveness detection test conforming to ISO/IEC 30107-3 standards, achieving a spoof detection score of 0.2 or lower. Videos failing to meet this criterion shall be rejected, and users prompted to resubmit until compliance is achieved.
+
+## AML Check  
+The identity verification workflow must integrate mandatory checks against sanctioned individuals, specifically referencing OFAC and EU sanctions lists. Verification will fail immediately upon a positive match, requiring manual escalation for compliance review and further action.
+
+## Privacy  
+All biometric templates generated from user videos shall be securely stored using AES-256-GCM encryption. To ensure adherence to GDPR Article 5(1)(e), all stored biometric templates must be purged after a retention period of 5 years, or sooner if explicitly requested by the user, in compliance with relevant data protection guidelines.
+
+---
+
+**Go-Live:** 15 July 2025

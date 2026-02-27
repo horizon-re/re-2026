@@ -1,0 +1,12 @@
+Feature Request: JSON Integration with ClearScan.ai
+Context
+ClearScan.ai, a key integration partner, is transitioning from XML to JSON for all invoice data exchanges and requires InvoiceBuddy’s immediate adoption of a JSON endpoint. Finance stakeholders also want AI-driven field tagging (vendor, tax, due-date), while operations is concerned about meeting a 200 requests/minute SLA given ClearScan’s volume of ~10 million invoices per month and projected 3× growth next quarter.
+Sample JSON
+For example, a JSON response payload may look like the following (one value is null): { "vendor": "ACME Corp", "due_date": null, "tax": 125.00, "tag_confidence": 0.98 }
+Requirements
+Support OCR parsing of invoice content (extract text and key fields from scans).
+Include a tag_confidence field as a float, indicating the AI tagging confidence score.
+Ensure the API supports a sustained 200 requests/minute throughput (SLA requirement).
+Use JWT for authentication and AES-256 encryption at rest to secure all data.
+AI Stretch
+Consider implementing UNSPSC code tagging at the line-item level as a future AI-driven enhancement to meet the board’s request for standardized item classification. Deadline: May 15.

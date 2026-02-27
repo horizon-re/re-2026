@@ -1,0 +1,2 @@
+{"unit_id": "REQ-026::cu001", "req_id": "REQ-026", "doc_id": "e3727013-306b-5a68-8f10-26c831e5883f", "parent_sent_id": "REQ-026::s015", "order": 1, "text": "However, we must navigate potential risks, including legacy ERP API latency, data migration complexities, and stakeholder adoption challenges."}
+{"unit_id": "REQ-026::cu002", "req_id": "REQ-026", "doc_id": "e3727013-306b-5a68-8f10-26c831e5883f", "parent_sent_id": "REQ-026::s020", "order": 2, "text": "What strategies will ensure smooth ERP integration amidst legacy system constraints?\n3."}

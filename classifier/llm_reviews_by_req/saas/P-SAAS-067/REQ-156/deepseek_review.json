@@ -1,0 +1,148 @@
+{
+  "req_id": "REQ-156",
+  "doc_id": "55d71eb6-438c-52d5-8989-32d5351ddbfe",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-067",
+  "model": "deepseek-r1:7b",
+  "review_timestamp": "2026-01-20T23:59:59.419303+00:00",
+  "counts": {
+    "total": 13,
+    "llm_pos": 6,
+    "pipe_pos": 1,
+    "llm_neg": 7,
+    "pipe_neg": 12,
+    "flip_neg_to_pos": 5
+  },
+  "reviews": [
+    {
+      "sent_id": "REQ-156::s001",
+      "order": 1,
+      "text": "**Incident Report**\n\n**Summary:**  \nOn April 22, 2025, during a routine export from the chatbot analytics system, data from multiple tenants was inadvertently combined into a single export file.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Incident report summarizing an event."
+    },
+    {
+      "sent_id": "REQ-156::s002",
+      "order": 2,
+      "text": "The issue resulted in the exposure of chatbot interaction data involving 17 patients across different healthcare tenants.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Describes the consequences of an incident without imposing behavior."
+    },
+    {
+      "sent_id": "REQ-156::s003",
+      "order": 3,
+      "text": "The export file was accessed via a shared link distributed to one intended recipient, but due to the mixed content, it posed a privacy risk.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Explains the issue with a shared link but doesn't impose behavior."
+    },
+    {
+      "sent_id": "REQ-156::s004",
+      "order": 4,
+      "text": "**Root Cause:**",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Identifies the root cause of an issue."
+    },
+    {
+      "sent_id": "REQ-156::s005",
+      "order": 5,
+      "text": "The incident was caused by a faulty `JOIN` clause in the export cron job script, which failed to properly filter records based on the correct `tenant_id`.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Explains the measures taken after incident detection."
+    },
+    {
+      "sent_id": "REQ-156::s006",
+      "order": 6,
+      "text": "As a result, rows belonging to different tenants were joined and included in the same export payload.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "Details an action taken to prevent unauthorized access but doesn't impose behavior."
+    },
+    {
+      "sent_id": "REQ-156::s007",
+      "order": 7,
+      "text": "**Immediate Mitigation:**  \nUpon detection, the exported file was immediately purged from the server, and the public link was revoked to prevent further access.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.8,
+      "reason_code": "BACKGROUND_CONTEXT",
+      "reason_text": "States a requirement for purging files upon detection."
+    },
+    {
+      "sent_id": "REQ-156::s008",
+      "order": 8,
+      "text": "Access tokens associated with the chatbot export system were rotated to ensure no additional unauthorized access could occur.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "PERFORMANCE_REQUIREMENT",
+      "reason_text": "Imposes token rotation to prevent unauthorized access."
+    },
+    {
+      "sent_id": "REQ-156::s009",
+      "order": 9,
+      "text": "The recipient was promptly notified and confirmed deletion of the file on their end.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "COMPLIANCE_REQUIREMENT",
+      "reason_text": "Ensures data privacy for healthcare tenants."
+    },
+    {
+      "sent_id": "REQ-156::s010",
+      "order": 10,
+      "text": "**Long-Term Fix:**",
+      "pipeline_label": "non_candidate",
+      "llm_label": "not_requirement",
+      "confidence": 0.7,
+      "reason_code": "DESIGN_RATIONALE",
+      "reason_text": "Explains the long-term fix but doesn't impose behavior."
+    },
+    {
+      "sent_id": "REQ-156::s011",
+      "order": 11,
+      "text": "A tenant filter has been explicitly added to the export query to ensure only data from the requesting tenant is included.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Imposes a tenant filter to include only requested data."
+    },
+    {
+      "sent_id": "REQ-156::s012",
+      "order": 12,
+      "text": "Additionally, a per-row tenant ID validation policy has been enforced during the export process.",
+      "pipeline_label": "non_candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.85,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Imposes tenant ID validation during export."
+    },
+    {
+      "sent_id": "REQ-156::s013",
+      "order": 13,
+      "text": "To further safeguard against such occurrences, a post-export differential integrity test will be run before any file is shared, comparing expected tenant data boundaries against the actual export contents.",
+      "pipeline_label": "candidate",
+      "llm_label": "requirement_candidate",
+      "confidence": 0.9,
+      "reason_code": "SYSTEM_BEHAVIOR",
+      "reason_text": "Imposes running a post-export test to safeguard against data exposure."
+    }
+  ]
+}

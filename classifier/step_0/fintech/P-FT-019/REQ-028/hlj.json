@@ -1,0 +1,165 @@
+{
+  "doc_id": "f8963c2a-a761-583d-90d9-148b2b3c2d62",
+  "req_key": "fintech::P-FT-019::REQ-028",
+  "req_id": "REQ-028",
+  "domain": "fintech",
+  "prompt_id": "P-FT-019",
+  "source": {
+    "raw_path": "02_raw_requirements/fintech/P-FT-019/req-028_raw.txt",
+    "refined_path": "03_refined_json_normalized/fintech/P-FT-019/req-028_refined.json",
+    "origin": "both"
+  },
+  "text": "## Interview Meta\nDate: 2025-04-18  \nParticipants: Julia (CSM), Dylan (COO)  \nPlan Tier: Enterprise-Annual\n\n## Raw Notes\n- So, um, the main thing we're seeing, uh, {pain-point} is that upgrading, you know, it's just too complicated right now. I mean, users, they gotta jump through, like, hoops to even find where to do it.\n- Like, [OPEN QUESTION] How are users supposed to know where to go when they want to upgrade their plan? There's gotta be a simpler way.\n- And cancellations? Yeah, {pain-point}, they shouldn't have to call support just to cancel. It's like we're making them jump through hoops again, you know?\n- Sometimes users actually get stuck between plans, and, um, they end up paying for both. {delight} Fixing that could really make their day.\n- We've been thinking, for upgrades, maybe we could just put a big button right on the dashboard. Like, \"Upgrade Now\" or something. Keep it simple, you know?\n- And for cancellations, maybe a self-serve option right there, no need to hunt for it. Just straightforward, click, and done.\n- The AI stuff? Yeah, we're exploring ML for predicting when someone might churn. It's like, preemptively giving them reasons to stay, you know? {pain-point}\n- Oh, and this LLM FAQ thing, yeah, it could be huge. Imagine the time saved if customers could just get answers right away, without calling in.\n\n## Emerging Themes\n1. Upgrades\n   - Users struggle to find upgrade options easily.\n   - Simplify with a prominent \"Upgrade Now\" button.\n   \n2. Cancellations\n   - Current process requires unnecessary steps.\n   - Implement straightforward self-serve cancellation.\n   \n3. AI Opportunities\n   - ML \"Churn Predictor\" to anticipate customer departures.\n   - LLM FAQ Generator for instant customer support.\n\n## Action Items\n- [ ] Draft journey map (Owner: UX)\n- [ ] Validate churn model inputs (Owner: Data)\n- [ ] ... leave one checkbox blank",
+  "structured_data": [
+    {
+      "id": "REQ-028-HLJ-Chunk_1-Item_1-v1.0",
+      "domain": "saas",
+      "summary": "simplify upgrade navigation flow",
+      "priority": "High",
+      "tags": [
+        "upgrade_navigation",
+        "user_experience"
+      ],
+      "subdomain": "ux",
+      "difficulty": 3,
+      "additionalNotes": "Users currently struggle to locate upgrade option {pain-point}",
+      "source_hlj_id": "REQ 001-001",
+      "domain_id": "P-FT-019"
+    },
+    {
+      "id": "REQ-028-HLJ-Chunk_1-Item_2-v1.0",
+      "domain": "saas",
+      "summary": "provide self-serve cancellation capability",
+      "priority": "High",
+      "tags": [
+        "self_serve",
+        "cancellation_flow"
+      ],
+      "subdomain": "self_service",
+      "difficulty": 3,
+      "additionalNotes": "Remove need for support call to cancel {pain-point}",
+      "source_hlj_id": "REQ 001-002",
+      "domain_id": "P-FT-019"
+    },
+    {
+      "id": "REQ-028-HLJ-Chunk_1-Item_3-v1.0",
+      "domain": "saas",
+      "summary": "prevent users from being stuck between plans",
+      "priority": "Medium",
+      "tags": [
+        "plan_switch",
+        "error_handling"
+      ],
+      "subdomain": "reliability",
+      "difficulty": 3,
+      "additionalNotes": "Fix scenario where users pay for both plans accidentally {pain-point}",
+      "source_hlj_id": "REQ 001-003",
+      "domain_id": "P-FT-019"
+    },
+    {
+      "id": "REQ-028-HLJ-Chunk_1-Item_4-v1.0",
+      "domain": "saas",
+      "summary": "add prominent Upgrade Now button on dashboard",
+      "priority": "Medium",
+      "tags": [
+        "ux",
+        "upgrade_button"
+      ],
+      "subdomain": "ux",
+      "difficulty": 2,
+      "additionalNotes": "Dashboard needs clear call-to-action",
+      "source_hlj_id": "REQ 001-004",
+      "domain_id": "P-FT-019"
+    },
+    {
+      "id": "REQ-028-HLJ-Chunk_1-Item_5-v1.0",
+      "domain": "saas",
+      "summary": "add self-serve Cancel Plan button on dashboard",
+      "priority": "Medium",
+      "tags": [
+        "ux",
+        "cancel_button"
+      ],
+      "subdomain": "ux",
+      "difficulty": 2,
+      "additionalNotes": "Users expect cancellation without support contact",
+      "source_hlj_id": "REQ 001-005",
+      "domain_id": "P-FT-019"
+    },
+    {
+      "id": "REQ-028-HLJ-Chunk_1-Item_6-v1.0",
+      "domain": "saas",
+      "summary": "implement ML Churn Predictor for risk scoring",
+      "priority": "Low",
+      "tags": [
+        "churn_predictor",
+        "ml"
+      ],
+      "subdomain": "ai",
+      "difficulty": 4,
+      "additionalNotes": "origin: implied – proactively identify likely churners",
+      "source_hlj_id": "REQ 001-006",
+      "domain_id": "P-FT-019"
+    },
+    {
+      "id": "REQ-028-HLJ-Chunk_1-Item_7-v1.0",
+      "domain": "saas",
+      "summary": "implement LLM FAQ Generator for contextual help",
+      "priority": "Low",
+      "tags": [
+        "llm_faq",
+        "ai_support"
+      ],
+      "subdomain": "ai",
+      "difficulty": 4,
+      "additionalNotes": "origin: implied – auto-generate answers to common plan questions",
+      "source_hlj_id": "REQ 001-007",
+      "domain_id": "P-FT-019"
+    },
+    {
+      "id": "REQ-028-HLJ-Chunk_1-Item_8-v1.0",
+      "domain": "saas",
+      "summary": "reduce support call volume for plan changes",
+      "priority": "Low",
+      "tags": [
+        "support_reduction",
+        "self_service"
+      ],
+      "subdomain": "operations",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied – fewer calls means lower support costs",
+      "source_hlj_id": "REQ 001-008",
+      "domain_id": "P-FT-019"
+    },
+    {
+      "id": "REQ-028-HLJ-Chunk_1-Item_9-v1.0",
+      "domain": "saas",
+      "summary": "improve visibility of plan management options",
+      "priority": "Low",
+      "tags": [
+        "ui_visibility",
+        "ux"
+      ],
+      "subdomain": "ux",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied – users often miss hidden controls",
+      "source_hlj_id": "REQ 001-009",
+      "domain_id": "P-FT-019"
+    },
+    {
+      "id": "REQ-028-HLJ-Chunk_1-Item_10-v1.0",
+      "domain": "saas",
+      "summary": "ensure immediate contextual help to reduce frustration",
+      "priority": "Low",
+      "tags": [
+        "contextual_help",
+        "user_experience"
+      ],
+      "subdomain": "ux",
+      "difficulty": 2,
+      "additionalNotes": "origin: implied – inline help lowers drop-off",
+      "source_hlj_id": "REQ 001-010",
+      "domain_id": "P-FT-019"
+    }
+  ]
+}

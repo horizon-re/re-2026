@@ -1,0 +1,29 @@
+14:03  
+Maya: Hey both, thanks for jumping on. We need to talk about the rounding issues. Auditors flagged some net pay mismatches, especially in our EU and India payrolls.  
+
+14:04  
+Jonas: Yeah, the €0.83 discrepancy in France was what triggered it. It’s minor, but they’re calling it a “systemic risk.”  
+
+14:05  
+Carla: I’ve looked into this. The problem is we’re using fixed rounding logic in some regions, and manual overrides in others. No consistency.  
+
+14:06  
+Maya: So what’s the fix? We need something reliable—and audit-proof.  
+
+14:06  
+Carla: I’m proposing a rule engine that learns from historical payroll. It can detect regional patterns and suggest rounding rules automatically.  
+
+14:07  
+Jonas: And what happens when it gets it wrong? We’re not risking a €1+ variance on net pay.  
+
+14:08  
+Carla: That’s built in. Anything over €1 gets flagged and logged. We can even force a manual review for those.  
+
+14:08  
+Maya: Okay, but I need payslip transparency. If HR or the employee checks, they should see exactly what was rounded and why.  
+
+14:09  
+Carla: We’ll surface that in the payslip viewer. Change history too, for audit. But I need firm specs—what counts as an “exception”?  
+
+14:10  
+Jonas: Let’s define that this week. But I’m aligned—this engine needs to be bulletproof.

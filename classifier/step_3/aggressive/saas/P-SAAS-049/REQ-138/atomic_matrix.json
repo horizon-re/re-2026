@@ -1,0 +1,9 @@
+{
+  "req_id": "REQ-138",
+  "mode": "aggressive",
+  "num_parent_sentences": 10,
+  "num_atomic_units": 65,
+  "avg_units_per_sentence": 6.5,
+  "max_units_from_single_sentence": 13,
+  "split_rate": 1.0
+}

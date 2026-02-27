@@ -1,0 +1,79 @@
+{
+  "doc_id": "e6135316-a662-58fe-b2c1-892d34ee3c13",
+  "req_key": "saas::P-SAAS-031::REQ-120",
+  "req_id": "REQ-120",
+  "domain": "saas",
+  "prompt_id": "P-SAAS-031",
+  "source": {
+    "raw_path": "02_raw_requirements/saas/P-SAAS-031/req-120_raw.txt",
+    "refined_path": "03_refined_json_normalized/saas/P-SAAS-031/req-120_refined.json",
+    "origin": "both"
+  },
+  "text": "Roll out intelligent auto-scaling across all prod clusters now. Target: CPU <= 65% for 95% uptime, scale-out within 60s of breach. Slack alert #infra-alerts on scale failure. ETA for hotfix by 07:00 local.",
+  "structured_data": [
+    {
+      "id": "REQ-120-HLJ-Chunk_1-Item_1-v1.0",
+      "domain": "saas",
+      "summary": "Roll out intelligent auto-scaling across prod clusters",
+      "priority": "High",
+      "tags": [
+        "auto_scaling",
+        "production",
+        "infrastructure"
+      ],
+      "subdomain": "cloud_infrastructure",
+      "difficulty": 3,
+      "additionalNotes": "Urgent directive issued by CTO for immediate deployment across all production clusters",
+      "source_hlj_id": "REQ 001-001",
+      "domain_id": "P-SAAS-031"
+    },
+    {
+      "id": "REQ-120-HLJ-Chunk_1-Item_2-v1.0",
+      "domain": "saas",
+      "summary": "Maintain CPU <= 65% for 95% of uptime",
+      "priority": "High",
+      "tags": [
+        "performance_sla",
+        "cpu_threshold",
+        "uptime"
+      ],
+      "subdomain": "cloud_infrastructure",
+      "difficulty": 4,
+      "additionalNotes": "Explicit SLA target for resource usage to prevent overutilization",
+      "source_hlj_id": "REQ 001-002",
+      "domain_id": "P-SAAS-031"
+    },
+    {
+      "id": "REQ-120-HLJ-Chunk_1-Item_3-v1.0",
+      "domain": "saas",
+      "summary": "Trigger scale-out within 60 seconds of CPU breach",
+      "priority": "High",
+      "tags": [
+        "autoscaling",
+        "latency",
+        "resource_management"
+      ],
+      "subdomain": "cloud_infrastructure",
+      "difficulty": 4,
+      "additionalNotes": "Latency requirement for dynamic scaling response to CPU load spikes",
+      "source_hlj_id": "REQ 001-003",
+      "domain_id": "P-SAAS-031"
+    },
+    {
+      "id": "REQ-120-HLJ-Chunk_1-Item_4-v1.0",
+      "domain": "saas",
+      "summary": "Send Slack alert to #infra-alerts on scale failure",
+      "priority": "High",
+      "tags": [
+        "alerting",
+        "slack_notification",
+        "failure_detection"
+      ],
+      "subdomain": "monitoring_alerting",
+      "difficulty": 2,
+      "additionalNotes": "Slack integration required to notify infra team of autoscaling issues",
+      "source_hlj_id": "REQ 001-004",
+      "domain_id": "P-SAAS-031"
+    }
+  ]
+}
