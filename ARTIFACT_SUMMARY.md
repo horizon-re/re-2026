@@ -10,7 +10,6 @@ This repository now contains a complete, well-documented research artifact for t
 re-2026/
 ├── README.md                          # Main project overview
 ├── ARTIFACT_SUMMARY.md               # This file
-├── main.tex                          # Research paper (LaTeX)
 ├── LICENSE                           # MIT License
 │
 ├── docs/                             # Complete documentation
@@ -18,9 +17,8 @@ re-2026/
 │   ├── PIPELINE.md                   # Data processing pipeline (6 stages)
 │   ├── SCRIPTS.md                    # All scripts documented
 │   ├── DATASET.md                    # Dataset guide and specifications
-│   ├── TRAINING.md                   # Model training guide (to be created)
-│   ├── EVALUATION.md                 # Evaluation guide (to be created)
-│   └── API.md                        # API reference (to be created)
+│   ├── TRAINING.md                   # Model training guide
+│   ├── EVALUATION.md                 # Evaluation guide
 │
 ├── 02_raw_requirements/              # Raw requirement documents
 │   ├── fintech/                      # 44 FinTech documents
@@ -60,7 +58,7 @@ re-2026/
     └── llm_clients.py              # LLM API clients
 ```
 
-## 📚 Documentation Created
+## 📚 Documentation 
 
 ### 1. Main README.md
 **Comprehensive project overview including:**
@@ -219,8 +217,8 @@ python scripts/classifier/eval/eval_deberta_comp.py
 # 1. Review script documentation
 cat docs/SCRIPTS.md
 
-# 2. Check API reference
-cat docs/API.md
+# 2. Check training guide
+cat docs/TRAINING.md
 
 # 3. Understand data formats
 cat docs/DATASET.md
@@ -273,119 +271,4 @@ cat docs/DATASET.md
 - OpenAI GPT-4.1 (optional)
 - Claude Opus 4 (optional)
 
-## 📝 Documentation Quality
 
-### Coverage
-✅ All scripts documented  
-✅ All data formats specified  
-✅ All stages explained  
-✅ Usage examples provided  
-✅ Configuration options listed  
-
-### Accessibility
-✅ Clear navigation  
-✅ Topic-based organization  
-✅ Task-based finding  
-✅ Code examples  
-✅ Troubleshooting guides  
-
-### Completeness
-✅ Input/output specifications  
-✅ File format details  
-✅ Configuration options  
-✅ Error handling  
-✅ Performance tips  
-
-## 🎓 Educational Value
-
-### For Students
-- Learn requirements engineering
-- Understand NLP pipelines
-- Practice with real data
-- Reproduce research results
-
-### For Researchers
-- Baseline for comparison
-- Methodology reference
-- Dataset for experiments
-- Reproducible results
-
-### For Practitioners
-- Production-ready pipeline
-- Best practices
-- Quality assurance
-- Performance optimization
-
-## 🔄 Next Steps
-
-### Remaining Documentation
-1. **TRAINING.md**: Complete model training guide
-2. **EVALUATION.md**: Comprehensive evaluation guide
-3. **API.md**: Service integration reference
-
-### Potential Enhancements
-1. Add Jupyter notebooks for exploration
-2. Create visualization scripts
-3. Add more usage examples
-4. Create video tutorials
-
-### Community Engagement
-1. Publish to GitHub
-2. Share on research forums
-3. Present at conferences
-4. Engage with users
-
-## 📞 Support
-
-### Documentation
-- **Main README**: Project overview
-- **docs/**: Complete documentation
-- **Paper**: main.tex
-
-### Code
-- **Scripts**: All documented in docs/SCRIPTS.md
-- **Examples**: Usage examples throughout
-- **Tests**: Quality assurance built-in
-
-### Community
-- **GitHub Issues**: Bug reports and questions
-- **Pull Requests**: Contributions welcome
-- **Discussions**: Research questions
-
-## 🏆 Quality Assurance
-
-### Code Quality
-✅ Documented functions  
-✅ Type hints  
-✅ Error handling  
-✅ Logging  
-✅ Configuration  
-
-### Data Quality
-✅ Validation checks  
-✅ Quality metrics  
-✅ Audit trails  
-✅ Checksums  
-✅ Provenance tracking  
-
-### Documentation Quality
-✅ Complete coverage  
-✅ Clear examples  
-✅ Consistent formatting  
-✅ Cross-references  
-✅ Index and navigation  
-
-## 📜 License
-
-MIT License - See LICENSE file for details.
-
-## 🙏 Acknowledgments
-
-This artifact was created to support reproducible research in requirements engineering and to facilitate future work in context-aware requirements identification.
-
----
-
-**Created**: February 2026  
-**Version**: 1.0  
-**Status**: Research Artifact for RE 2026 Submission  
-**Repository**: https://github.com/horizon-re/re-2026

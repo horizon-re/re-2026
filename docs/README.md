@@ -25,22 +25,15 @@ Welcome to the complete documentation for the Context-Aware Requirements Identif
    - Usage guidelines
 
 4. **[TRAINING.md](TRAINING.md)** - Model Training Guide
-   - Training configurations
-   - Hyperparameters
-   - Best practices
-   - Reproducibility
+   - Frozen encoder, LoRA, and full fine-tuning
+   - Hyperparameter configurations
+   - Training monitoring and troubleshooting
 
 5. **[EVALUATION.md](EVALUATION.md)** - Evaluation Guide
-   - Metrics and protocols
-   - Result interpretation
-   - Comparison guidelines
+   - Metrics definitions and protocols
+   - Ablation study methodology
+   - Reproducing paper results
    - Error analysis
-
-6. **[API.md](API.md)** - API Reference
-   - Service integrations
-   - LLM clients
-   - Utility functions
-   - Configuration
 
 ## 🚀 Quick Start
 
@@ -49,24 +42,20 @@ Welcome to the complete documentation for the Context-Aware Requirements Identif
 1. Start with the main [README.md](../README.md) for project overview
 2. Read [PIPELINE.md](PIPELINE.md) to understand the workflow
 3. Check [DATASET.md](DATASET.md) for data format details
-4. Follow [TRAINING.md](TRAINING.md) to train models
-5. Use [EVALUATION.md](EVALUATION.md) to evaluate results
 
 ### For Researchers
 
-1. Review the research paper: [main.tex](../main.tex)
-2. Understand the methodology: [PIPELINE.md](PIPELINE.md)
-3. Explore the dataset: [DATASET.md](DATASET.md)
-4. Reproduce experiments: [TRAINING.md](TRAINING.md)
-5. Analyze results: [EVALUATION.md](EVALUATION.md)
+1. Understand the methodology: [PIPELINE.md](PIPELINE.md)
+2. Explore the dataset: [DATASET.md](DATASET.md)
+3. Train models: [TRAINING.md](TRAINING.md)
+4. Evaluate results: [EVALUATION.md](EVALUATION.md)
 
 ### For Developers
 
 1. Check [SCRIPTS.md](SCRIPTS.md) for script documentation
-2. Review [API.md](API.md) for service integrations
-3. See [PIPELINE.md](PIPELINE.md) for workflow details
-4. Use [TRAINING.md](TRAINING.md) for model training
-5. Refer to [EVALUATION.md](EVALUATION.md) for metrics
+2. See [PIPELINE.md](PIPELINE.md) for workflow details
+3. Review [TRAINING.md](TRAINING.md) for model training
+4. Check [EVALUATION.md](EVALUATION.md) for evaluation protocols
 
 ## 📖 Documentation by Topic
 
@@ -76,12 +65,14 @@ Welcome to the complete documentation for the Context-Aware Requirements Identif
 - [DATASET.md](DATASET.md) - Data formats
 
 ### Model Training
-- [TRAINING.md](TRAINING.md) - Training guide
+- [TRAINING.md](TRAINING.md) - Training configurations and hyperparameters
 - [SCRIPTS.md](SCRIPTS.md) - Training scripts
-- [EVALUATION.md](EVALUATION.md) - Evaluation metrics
+
+### Evaluation
+- [EVALUATION.md](EVALUATION.md) - Metrics, ablation studies, error analysis
+- [SCRIPTS.md](SCRIPTS.md) - Evaluation scripts
 
 ### Service Integration
-- [API.md](API.md) - API reference
 - [SCRIPTS.md](SCRIPTS.md) - Service scripts
 
 ## 🔍 Finding Information
@@ -92,11 +83,10 @@ Welcome to the complete documentation for the Context-Aware Requirements Identif
 
 - **Process raw documents** → [PIPELINE.md](PIPELINE.md) Stage 0-3
 - **Annotate data** → [PIPELINE.md](PIPELINE.md) Stage 4
-- **Train a model** → [TRAINING.md](TRAINING.md)
-- **Evaluate results** → [EVALUATION.md](EVALUATION.md)
 - **Understand data format** → [DATASET.md](DATASET.md)
+- **Train models** → [TRAINING.md](TRAINING.md)
+- **Evaluate models** → [EVALUATION.md](EVALUATION.md)
 - **Use a specific script** → [SCRIPTS.md](SCRIPTS.md)
-- **Integrate LLM services** → [API.md](API.md)
 
 ### By Component
 
@@ -107,8 +97,6 @@ Welcome to the complete documentation for the Context-Aware Requirements Identif
 - **Semantic filtering** → [PIPELINE.md](PIPELINE.md) Stage 3
 - **LLM annotation** → [PIPELINE.md](PIPELINE.md) Stage 4
 - **Dataset splits** → [DATASET.md](DATASET.md) Experimental Tracks
-- **Context windows** → [TRAINING.md](TRAINING.md) Context Construction
-- **Evaluation metrics** → [EVALUATION.md](EVALUATION.md) Metrics
 
 ### By File Type
 
@@ -117,21 +105,12 @@ Welcome to the complete documentation for the Context-Aware Requirements Identif
 - **Raw documents** → [DATASET.md](DATASET.md) Raw Document Format
 - **JSONL files** → [DATASET.md](DATASET.md) Data Format Specifications
 - **Training splits** → [DATASET.md](DATASET.md) Training Split Format
-- **Model checkpoints** → [TRAINING.md](TRAINING.md) Model Outputs
-- **Evaluation results** → [EVALUATION.md](EVALUATION.md) Results Format
 
 ## 📊 Research Artifacts
-
-### Paper
-- **LaTeX Source**: [main.tex](../main.tex)
-- **Methodology**: Section 3 of paper
-- **Evaluation**: Section 4 of paper
-- **Results**: Section 4 of paper
 
 ### Code
 - **Scripts**: [SCRIPTS.md](SCRIPTS.md)
 - **Pipeline**: [PIPELINE.md](PIPELINE.md)
-- **Training**: [TRAINING.md](TRAINING.md)
 
 ### Data
 - **Primary Corpus**: [DATASET.md](DATASET.md) Primary Corpus
@@ -181,21 +160,12 @@ Default configurations are shown. Adjust as needed for your environment.
 
 ## 🔗 External Resources
 
-### Research Paper
-- **Main Paper**: [main.tex](../main.tex)
-- **Related Work**: Section 2 of paper
-- **Methodology**: Section 3 of paper
-- **Evaluation**: Section 4 of paper
-
 ### Dependencies
 - **spaCy**: https://spacy.io/
 - **Stanza**: https://stanfordnlp.github.io/stanza/
 - **Transformers**: https://huggingface.co/docs/transformers/
 - **Sentence-Transformers**: https://www.sbert.net/
 
-### Datasets
-- **DOSSPRE**: https://github.com/dosspre/dataset
-- **HuggingFace**: https://huggingface.co/datasets
 
 ## 📧 Support
 
@@ -215,28 +185,6 @@ When reporting issues, include:
 - Error messages (if any)
 - Environment details
 
-## 🤝 Contributing
-
-### Documentation Improvements
-
-We welcome documentation improvements:
-- Clarifications
-- Additional examples
-- Error corrections
-- New sections
-
-Submit via GitHub pull request.
-
 ## 📜 License
 
 Documentation is released under MIT License. See [LICENSE](../LICENSE).
-
-## 🙏 Acknowledgments
-
-This documentation was created to support reproducible research in requirements engineering.
-
----
-
-**Last Updated**: February 2026  
-**Version**: 1.0  
-**Status**: Research Artifact for RE 2026

@@ -678,11 +678,3 @@ export SENTENCE_TRANSFORMERS_HOME=.cache/sentence_transformers
 ```
 
 ---
-
-## Next Steps
-
-After completing the pipeline:
-1. Review quality metrics in manifest files
-2. Inspect sample outputs for correctness
-3. Proceed to model training (see [TRAINING.md](TRAINING.md))
-4. Evaluate results (see [EVALUATION.md](EVALUATION.md))

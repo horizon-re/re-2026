@@ -74,7 +74,6 @@ re-2026/
 │   └── llm_clients.py          # LLM API clients (OpenAI, DeepSeek, etc.)
 │
 ├── docs/                        # Detailed documentation (see below)
-├── main.tex                     # Research paper (LaTeX)
 ├── LICENSE                      # MIT License
 └── README.md                    # This file
 ```
@@ -136,7 +135,6 @@ Detailed documentation is available in the `docs/` folder:
 - **[Dataset Guide](docs/DATASET.md)**: Dataset structure and format specifications
 - **[Model Training](docs/TRAINING.md)**: Training configurations and hyperparameters
 - **[Evaluation Guide](docs/EVALUATION.md)**: Metrics and evaluation protocols
-- **[API Reference](docs/API.md)**: Service integrations and LLM clients
 
 ## 🔬 Research Methodology
 
@@ -254,26 +252,6 @@ export OPENAI_API_KEY="your-key"
 export DEEPSEEK_API_KEY="your-key"
 ```
 
-## 🤝 Contributing
-
-This is a research artifact repository. For questions or issues:
-
-1. Check the [documentation](docs/)
-2. Review the [paper](main.tex)
-3. Open a GitHub issue
-
-## 📄 Citation
-
-If you use this artifact, please cite:
-
-```bibtex
-@inproceedings{re2026context,
-  title={Towards Improving Sentence-Level Requirements Identification through Explicit Local Context Modeling},
-  author={[Authors]},
-  booktitle={Proceedings of the 2026 IEEE International Requirements Engineering Conference},
-  year={2026}
-}
-```
 
 ## 📜 License
 
@@ -286,15 +264,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **NLP Tools**: spaCy, Stanza
 - **LLM Services**: OpenAI, DeepSeek
 
-## 📞 Contact
-
-For questions about the research or dataset:
-- Open a GitHub issue
-- Contact authors through the paper submission system
-
 ## 🔗 Links
 
-- **Paper**: [main.tex](main.tex)
 - **Documentation**: [docs/](docs/)
 - **Dataset**: Available in this repository
 - **Permanent Archive**: Will be provided upon acceptance

@@ -61,6 +61,9 @@ python scripts/classifier/finetune/finetune_deberta.py \
 **Train models**
 → Read [docs/TRAINING.md](docs/TRAINING.md)
 
+**Evaluate models**
+→ Read [docs/EVALUATION.md](docs/EVALUATION.md)
+
 **Understand the dataset**
 → Read [docs/DATASET.md](docs/DATASET.md)
 
@@ -131,7 +134,9 @@ re-2026/
 │   ├── README.md               ← Documentation index
 │   ├── PIPELINE.md             ← Data processing
 │   ├── SCRIPTS.md              ← Script reference
-│   └── DATASET.md              ← Dataset guide
+│   ├── DATASET.md              ← Dataset guide
+│   ├── TRAINING.md             ← Model training
+│   └── EVALUATION.md           ← Evaluation guide
 ├── 02_raw_requirements/        ← Raw documents
 ├── classifier/                 ← Pipeline outputs
 │   ├── outputs/splits/         ← Training data
@@ -201,13 +206,6 @@ import time
 time.sleep(0.5)
 ```
 
-## 📞 Getting Help
-
-1. **Check Documentation**: [docs/](docs/)
-2. **Search Issues**: GitHub issues
-3. **Ask Questions**: Open new issue
-4. **Read Paper**: [main.tex](main.tex)
-
 ## 🎓 Learning Path
 
 ### Beginner
@@ -232,9 +230,8 @@ time.sleep(0.5)
 
 After quick start:
 1. Read full documentation in [docs/](docs/)
-2. Explore the research paper [main.tex](main.tex)
-3. Try different configurations
-4. Experiment with your own data
+2. Try different configurations
+3. Experiment with your own data
 
 ## 📝 Cheat Sheet
 
@@ -270,22 +267,15 @@ scripts/classifier/finetune/finetune_deberta.py         # Training
 scripts/classifier/eval/eval_deberta_comp.py            # Evaluation
 ```
 
-## 🎯 Success Criteria
-
-You're ready to proceed when you can:
-- ✅ Load and inspect the dataset
-- ✅ Understand the label taxonomy
-- ✅ Run a training script
-- ✅ Evaluate model performance
-- ✅ Navigate the documentation
 
 ## 📚 Additional Resources
 
 - **Full Documentation**: [docs/](docs/)
-- **Research Paper**: [main.tex](main.tex)
 - **Dataset Guide**: [docs/DATASET.md](docs/DATASET.md)
 - **Script Reference**: [docs/SCRIPTS.md](docs/SCRIPTS.md)
 - **Pipeline Guide**: [docs/PIPELINE.md](docs/PIPELINE.md)
+- **Training Guide**: [docs/TRAINING.md](docs/TRAINING.md)
+- **Evaluation Guide**: [docs/EVALUATION.md](docs/EVALUATION.md)
 
 ---
 

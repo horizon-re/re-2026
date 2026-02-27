@@ -899,9 +899,3 @@ def get_embedding(text):
 ```
 
 ---
-
-## Next Steps
-
-- See [PIPELINE.md](PIPELINE.md) for workflow details
-- See [TRAINING.md](TRAINING.md) for training guide
-- See [EVALUATION.md](EVALUATION.md) for evaluation guide

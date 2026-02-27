@@ -135,8 +135,6 @@ The complete dataset comprises approximately **15,000 labeled instances** from t
 
 ### DOSSPRE Corpus
 
-**Source**: [DOSSPRE Dataset](https://github.com/dosspre/dataset)
-
 **Size**: ~3,000 sentences
 
 **Content**:
@@ -144,15 +142,6 @@ The complete dataset comprises approximately **15,000 labeled instances** from t
 - Functional and non-functional requirements
 - Well-structured, formal language
 - Explicit modal verbs (shall, must, should)
-
-**Label Distribution**:
-- Functional: 65%
-- Non-functional: 35%
-
-**Usage in This Work**:
-- Included in Track B (mixed-source)
-- Provides canonical requirement examples
-- Helps with FR/NFR classification
 
 ### HuggingFace FR/NFR Dataset
 
@@ -165,15 +154,6 @@ The complete dataset comprises approximately **15,000 labeled instances** from t
 - Pre-labeled as functional or non-functional
 - Mix of formal and informal language
 
-**Label Distribution**:
-- Functional: 70%
-- Non-functional: 30%
-
-**Quality Notes**:
-- Some label noise (~5-10%)
-- Varying sentence quality
-- Useful for scale but not distribution alignment
-
 ### Kaggle Requirements Dataset
 
 **Source**: Kaggle Datasets
@@ -184,15 +164,6 @@ The complete dataset comprises approximately **15,000 labeled instances** from t
 - Software requirements from academic projects
 - Student-written requirements
 - Varying quality and structure
-
-**Label Distribution**:
-- Requirements: 80%
-- Non-requirements: 20%
-
-**Quality Notes**:
-- Higher noise level (~15%)
-- Less domain-specific
-- Useful for robustness testing
 
 ---
 
@@ -220,87 +191,87 @@ Output format: JSON array of strings
 
 #### Semantic Non-Requirements (9 categories)
 
-1. **BACKGROUND_CONTEXT** (~550 samples)
+1. **BACKGROUND_CONTEXT**
    - Industry statistics
    - Market analysis
    - Historical context
    - Example: "In a recent UK study, 87% of SMB users report better visibility."
 
-2. **CAPABILITY_DESCRIPTION** (~550 samples)
+2. **CAPABILITY_DESCRIPTION** 
    - General system capabilities
    - Feature descriptions without obligations
    - Example: "The platform emphasizes ease-of-use for non-technical users."
 
-3. **ARCHITECTURE_EXPLANATION** (~550 samples)
+3. **ARCHITECTURE_EXPLANATION** 
    - System architecture descriptions
    - Technology stack explanations
    - Example: "The system uses a microservices architecture."
 
-4. **RATIONALE_JUSTIFICATION** (~550 samples)
+4. **RATIONALE_JUSTIFICATION**
    - Business justifications
    - Design rationale
    - Example: "This approach reduces development time."
 
-5. **FEASIBILITY_ANALYSIS** (~550 samples)
+5. **FEASIBILITY_ANALYSIS**
    - Technical feasibility discussions
    - Risk assessments
    - Example: "Implementation is feasible within 6 months."
 
-6. **ROADMAP_PLANNING** (~550 samples)
+6. **ROADMAP_PLANNING** 
    - Future plans
    - Roadmap items
    - Example: "Phase 2 will include mobile support."
 
-7. **STAKEHOLDER_DESCRIPTION** (~550 samples)
+7. **STAKEHOLDER_DESCRIPTION** 
    - User personas
    - Stakeholder descriptions
    - Example: "Target users are small business owners."
 
-8. **MARKETING_LANGUAGE** (~550 samples)
+8. **MARKETING_LANGUAGE** 
    - Marketing copy
    - Value propositions
    - Example: "Revolutionary platform for modern businesses."
 
-9. **AMBIGUOUS_HYBRID** (~550 samples)
+9. **AMBIGUOUS_HYBRID** 
    - Borderline cases
    - Mixed content
    - Example: "The system should ideally support multiple languages."
 
 #### Noise/Artifacts (9 categories)
 
-10. **RANDOM_SINGLE_WORDS** (~280 samples)
+10. **RANDOM_SINGLE_WORDS** 
     - Single words
     - Example: "Payment"
 
-11. **BROKEN_PHRASES** (~280 samples)
+11. **BROKEN_PHRASES** 
     - Incomplete sentences
     - Example: "when the user clicks"
 
-12. **MARKDOWN_ARTIFACTS** (~280 samples)
+12. **MARKDOWN_ARTIFACTS** 
     - Markdown syntax
     - Example: "### 1.2.3"
 
-13. **BULLET_FRAGMENTS** (~280 samples)
+13. **BULLET_FRAGMENTS** 
     - Bullet point fragments
     - Example: "- and then"
 
-14. **HEADINGS_TITLES** (~280 samples)
+14. **HEADINGS_TITLES** 
     - Section headings
     - Example: "User Authentication"
 
-15. **LINKS_REFERENCES** (~280 samples)
+15. **LINKS_REFERENCES** 
     - URLs and references
     - Example: "[See documentation](https://...)"
 
-16. **CODE_SNIPPET_NOISE** (~280 samples)
+16. **CODE_SNIPPET_NOISE** 
     - Code fragments
     - Example: "function() { return; }"
 
-17. **TABLE_ROW_FRAGMENTS** (~280 samples)
+17. **TABLE_ROW_FRAGMENTS** 
     - Table cells
     - Example: "| Column 1 | Column 2 |"
 
-18. **SEPARATORS_DIVIDERS** (~280 samples)
+18. **SEPARATORS_DIVIDERS** 
     - Divider lines
     - Example: "---"
 
@@ -851,19 +822,6 @@ ls classifier/outputs/splits/
 
 ---
 
-## Citation
-
-If you use this dataset, please cite:
-
-```bibtex
-@inproceedings{re2026context,
-  title={Towards Improving Sentence-Level Requirements Identification through Explicit Local Context Modeling},
-  author={[Authors]},
-  booktitle={Proceedings of the 2026 IEEE International Requirements Engineering Conference},
-  year={2026}
-}
-```
-
 ---
 
 ## License
@@ -871,9 +829,3 @@ If you use this dataset, please cite:
 Dataset is released under MIT License. See [LICENSE](../LICENSE) for details.
 
 ---
-
-## Contact
-
-For questions about the dataset:
-- Open a GitHub issue
-- Contact authors through paper submission system
