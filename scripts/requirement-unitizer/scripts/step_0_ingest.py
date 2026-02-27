@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Step 0 — Ingestion & Canonicalization (Plantric Unitization Pipeline)
+Step 0 — Ingestion & Canonicalization (req_pipeline Unitization Pipeline)
 --------------------------------------------------------------------
 Creates lossless, traceable per-requirement packets under classifier/step_0/.
 

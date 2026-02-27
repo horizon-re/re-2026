@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Plantric — MPNet Context Classifier (LoRA) Trainer (n=1,2,3)
+req_pipeline — MPNet Context Classifier (LoRA) Trainer (n=1,2,3)
 ------------------------------------------------------------
 
 Trains 3 LoRA-finetuned MPNet encoders for contextual requirement classification:

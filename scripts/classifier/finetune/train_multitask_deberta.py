@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Plantric — Multi-Task DeBERTa Classifier (LoRA)
+req_pipeline — Multi-Task DeBERTa Classifier (LoRA)
 ------------------------------------------------
 
 Multi-task learning for requirement classification:

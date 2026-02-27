@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Plantric — MPNet Training Dataset Merger
+MPNet Training Dataset Merger
 --------------------------------------
 
 Merges and normalizes sentence-level samples for MPNet fine-tuning
@@ -9,7 +9,7 @@ Merges and normalizes sentence-level samples for MPNet fine-tuning
 Sources:
 - Synthetic non-requirements (JSONL)
 - External normalized requirements (CSV)
-- Plantric mixed dataset (JSONL with llm_labels)
+- req_pipeline mixed dataset (JSONL with llm_labels)
 
 Output:
 - classifier/datasets/mpnet/train_merged.jsonl
@@ -36,7 +36,7 @@ print(f"[init] project root: {PROJECT_ROOT}")
 # ---------------------------------------------------------------------
 SYNTHETIC_NR = Path("classifier/synthetic/non_requirements/synthetic_non_requirements.jsonl")
 EXTRA_REQS = Path("11_extra_requirements/normalized/requirements_normalized.csv")
-PLANTRIC_TRAIN = Path("classifier/outputs/splits/train_40.jsonl")
+req_pipeline_TRAIN = Path("classifier/outputs/splits/train_40.jsonl")
 
 OUT_DIR = Path("classifier/datasets/mpnet")
 OUT_FILE = OUT_DIR / "train_merged.jsonl"
@@ -127,9 +127,9 @@ def load_extra_requirements(seen: Set[str]) -> List[Dict[str, Any]]:
             })
     return rows
 
-def load_plantric_mixed(seen: Set[str]) -> List[Dict[str, Any]]:
+def load_req_pipeline_mixed(seen: Set[str]) -> List[Dict[str, Any]]:
     rows = []
-    with open(PLANTRIC_TRAIN, "r", encoding="utf-8") as f:
+    with open(req_pipeline_TRAIN, "r", encoding="utf-8") as f:
         for line in f:
             obj = json.loads(line)
             labels = obj.get("llm_labels", [])
@@ -154,7 +154,7 @@ def load_plantric_mixed(seen: Set[str]) -> List[Dict[str, Any]]:
                 "uid": uid,
                 "text": text,
                 "label": label,
-                "source": "plantric",
+                "source": "req_pipeline",
                 "domain": obj.get("domain", "unknown"),
                 "granularity": "sentence",
                 "meta": {
@@ -181,8 +181,8 @@ def main():
     print("[load] external requirements")
     merged += load_extra_requirements(seen)
 
-    print("[load] plantric mixed dataset")
-    merged += load_plantric_mixed(seen)
+    print("[load] req_pipeline mixed dataset")
+    merged += load_req_pipeline_mixed(seen)
 
     with open(OUT_FILE, "w", encoding="utf-8") as f:
         for r in merged:

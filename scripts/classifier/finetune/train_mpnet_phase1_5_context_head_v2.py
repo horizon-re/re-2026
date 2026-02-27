@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Plantric — MPNet Phase 1.5 (Context Head) Trainer
+req_pipeline — MPNet Phase 1.5 (Context Head) Trainer
 -------------------------------------------------
 Context window fixed to:
   - 2 sentences before

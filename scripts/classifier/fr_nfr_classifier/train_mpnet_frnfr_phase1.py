@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 """
-Plantric — MPNet FR/NFR Phase 1 Trainer (with Ablations)
+req_pipeline — MPNet FR/NFR Phase 1 Trainer (with Ablations)
 -------------------------------------------------------
 This is the FIRST-stage classifier for Functional vs Non-Functional Requirements.
 
 - No dependency on any prior phase
 - All experiment configuration declared INSIDE the script
 - Multiple ablation runs executed sequentially
-- Fully reproducible, cache-backed, Plantric-style runs
+- Fully reproducible, cache-backed, req_pipeline-style runs
 """
 
 from __future__ import annotations

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Step 2 — Embedding Chunker (Plantric Classifier Pipeline)
+Step 2 — Embedding Chunker
 ---------------------------------------------------------
 Generates sentence-level and document-level embeddings
 for each requirement under classifier/step_1/.

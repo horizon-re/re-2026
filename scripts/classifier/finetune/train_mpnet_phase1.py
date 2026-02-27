@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Plantric — MPNet Phase 1 (Sentence-only) Trainer
+req_pipeline — MPNet Phase 1 (Sentence-only) Trainer
 ------------------------------------------------
 
 Trains a sentence-level requirement classifier on top of a frozen MPNet encoder.
@@ -46,7 +46,7 @@ from sklearn.metrics import roc_auc_score, accuracy_score
 # SMART ROOT DETECTION
 # ---------------------------------------------------------------------
 CURRENT_FILE = Path(__file__).resolve()
-PROJECT_ROOT = CURRENT_FILE.parents[3]  # scripts/classifier/dataset_normalization/ -> plantric-root
+PROJECT_ROOT = CURRENT_FILE.parents[3]  # scripts/classifier/dataset_normalization/ -> req_pipeline-root
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 os.chdir(PROJECT_ROOT)

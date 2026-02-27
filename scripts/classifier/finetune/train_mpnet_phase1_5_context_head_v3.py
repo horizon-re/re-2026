@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Plantric — MPNet Phase 1.5 Ablation Trainer
+req_pipeline — MPNet Phase 1.5 Ablation Trainer
 --------------------------------------------
 Supports different context window sizes and feature combinations.
 

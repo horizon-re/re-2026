@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Select 40% of main (Plantric) requirements by req_id
+Select 40% of main (req_pipeline) requirements by req_id
 ---------------------------------------------------
 - Samples req_ids, not sentences
 - Keeps all other datasets intact
@@ -19,7 +19,7 @@ INPUT_CSV  = ROOT / "classifier" / "llm_reviews" / "requirements_all.csv"
 OUTPUT_CSV = ROOT / "classifier" / "classifier_dataset_unitization" / "requirements_all_filtered.csv"
 STATS_JSON = ROOT / "classifier" / "classifier_dataset_unitization" / "subset_stats.json"
 
-MAIN_SOURCE = "plantric_real"
+MAIN_SOURCE = "req_pipeline_real"
 SELECTION_RATIO = 0.40
 RANDOM_SEED = 42
 

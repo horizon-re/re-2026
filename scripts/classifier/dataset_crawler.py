@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 """
-Plantric — Raw Requirements Output Generator (Classifier Only)
 --------------------------------------------------------------
 
 Generates structured output files in classifier/step_1/ directory:
@@ -23,7 +22,7 @@ from typing import Dict, List, Optional, Tuple, Any
 # SMART ROOT DETECTION
 # ---------------------------------------------------------------------
 CURRENT_FILE = Path(__file__).resolve()
-PROJECT_ROOT = CURRENT_FILE.parents[2]  # -> plantric-dataset/
+PROJECT_ROOT = CURRENT_FILE.parents[2]  # -> req_pipeline-dataset/
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 os.chdir(PROJECT_ROOT)

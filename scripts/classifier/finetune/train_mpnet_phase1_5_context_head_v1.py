@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Plantric — MPNet Phase 1.5 (Context Head) Trainer
+req_pipeline — MPNet Phase 1.5 (Context Head) Trainer
 -------------------------------------------------
 
 Trains a context correction head on top of frozen MPNet encoder outputs.

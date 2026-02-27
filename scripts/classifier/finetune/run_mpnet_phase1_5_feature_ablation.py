@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Plantric — MPNet Phase-1.5 Full Ablation Grid Trainer
+req_pipeline — MPNet Phase-1.5 Full Ablation Grid Trainer
 
 Trains all required combinations for:
 - Context window sizes: n = 1, 2, 3

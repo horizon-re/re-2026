@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Plantric — FR/NFR Data Normalization + Split Builder
+req_pipeline — FR/NFR Data Normalization + Split Builder
 ----------------------------------------------------
 Inputs:
   1) 11_extra_requirements/DOSSPRE 1.0Original.csv

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Plantric — Phase 1 Holdout Evaluation
+req_pipeline — Phase 1 Holdout Evaluation
 ------------------------------------
 
 Evaluates the sentence-only Phase-1 MPNet requirement classifier

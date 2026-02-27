@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Step 3.5 — Semantic Quality Aggregator (Plantric Classifier Pipeline)
+Step 3.5 — Semantic Quality Aggregator 
 ---------------------------------------------------------------------
 Consumes Step 2 sentence splits, encodes with MPNet + MiniLM,
 evaluates structural and semantic quality, and produces refined embeddings.

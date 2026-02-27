@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Plantric — MPNet Step 2 (Autonomous Encoder Fine-tuning)
+req_pipeline — MPNet Step 2 (Autonomous Encoder Fine-tuning)
 -------------------------------------------------------
 
 - Loads Step-1 checkpoint READ-ONLY
