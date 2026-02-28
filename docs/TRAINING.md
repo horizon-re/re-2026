@@ -1,5 +1,7 @@
 # Model Training Guide
 
+This guide documents the training methodology used in the study. Full replication may require GPUs, local models, external APIs, and environment configurations beyond the scope of anonymous review. The documentation is provided for transparency rather than out-of-the-box execution.
+
 Complete guide for training context-aware requirements identification models.
 
 ## Table of Contents

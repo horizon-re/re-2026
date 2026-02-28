@@ -1,5 +1,7 @@
 # Research Artifact Summary
 
+This guide documents the training methodology used in the study. Full replication may require GPUs, local models, external APIs, and environment configurations beyond the scope of anonymous review. The documentation is provided for transparency rather than out-of-the-box execution.
+
 ## 📦 What Has Been Created
 
 This repository now contains a complete, well-documented research artifact for the paper **"Towards Improving Sentence-Level Requirements Identification through Explicit Local Context Modeling"** (RE 2026).
